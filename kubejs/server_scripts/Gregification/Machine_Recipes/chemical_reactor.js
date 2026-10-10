@@ -19,6 +19,17 @@ ServerEvents.recipes(allthemods => {
 
     };
 
+    //copper oxide
+    addChemical(
+        '#forge:dusts/copper',
+        '#forge:oxygen 1000',
+        '5x gtceu:copper_oxide_dust',
+        null,
+        IV,
+        600,
+        'copper_oxide'
+    );
+
     //bismuth oxide
     addChemical(
         '2x #forge:dusts/bismuth',
@@ -129,10 +140,21 @@ ServerEvents.recipes(allthemods => {
         'titanium_dioxide'
     );
 
+    //cyclohexanone
+    addChemical(
+        null,
+        ['#forge:cyclohexane 1000', '#forge:oxygen 1000'],
+        null,
+        'gtceu:cyclohexanone 2000',
+        IV,
+        600,
+        'cyclohexanone'
+    );
+
     //adipic acid
     addChemical(
         null,
-        ['#forge:cyclohexane 1000', '#forge:nitric_acid 2000'],
+        ['#forge:cyclohexanone  1000', '#forge:nitric_acid 2000'],
         '3x gtceu:adipic_acid_dust',
         null,
         IV,

@@ -757,7 +757,7 @@
     "material.gtceu.germanium_oxide": "Germanium Oxide",
     "material.gtceu.bismuth_germanate": "Bismuth Germanate",
     "material.gtceu.copper_oxide": "Copper Oxide",
-    "material.gtceu.bismuth_strontium_calcium_copper_oxide": "Bismuth Strontium Calcium Copper Oxide",
+    "material.gtceu.bismuth_strontium_calcium_copper_oxide": "Bismuth Strontium Calcium Copper Oxide (BSCCO)",
     "material.gtceu.adipic_acid": "Adipic Acid",
     "material.gtceu.hexamethylenediamine": "Hexamethylenediamine",
     "material.gtceu.nylon": "Nylon",
@@ -766,7 +766,9 @@
     "material.gtceu.polyimide": "Polyimide (Kapron)",
     "material.gtceu.chloroprene": "Chloroprene",
     "material.gtceu.adiponitrile": "Adiponitrile",
-    "material.gtceu.oxydianiline": "Oxydianiline"    
+    "material.gtceu.oxydianiline": "Oxydianiline",
+    "material.gtceu.zirconium_lattice": "Zirconium Lattice",
+    "material.gtceu.cyclohexanone": "Cyclohexanone"
 }
 
  

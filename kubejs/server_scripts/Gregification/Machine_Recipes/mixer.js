@@ -34,6 +34,14 @@ ServerEvents.recipes(allthemods => {
     addMixer(
         ['4x #forge:dusts/titanium_carbonitride', '2x #forge:dusts/nickel', '1x #forge:dusts/molybdenum'],'7x gtceu:cermet_blend_dust',EV, 600)
 
+    //zirconium_lattice    
+    addMixer(
+        ['4x #forge:dusts/zirconium', '#forge:dusts/niobium', '#forge:dusts/iridium'],
+        '6x gtceu:zirconium_lattice_dust',
+        EV,
+        600
+    );
+
     //hepatizon
     addMixer(
         [

@@ -144,6 +144,50 @@ const modifyElement = (materialO, materialN, bTemp, volts, gem, polymer, ingot) 
 
 
 };
+const getCoilVoltage = (coil) => {
+    switch (coil) {
+        case 1800: return 128;
+        case 2700: return 512;
+        case 3600: return 2048;
+        case 4500: return 8192;
+        case 5400: return 32768;
+        case 7200: return 131072;
+        case 9000: return 524288;
+        case 10800: return 2097152;
+        default: return 8388608;
+    }
+};
+const getVoltage = (v) => {
+    if (v <= 8) return GTValues.V[GTValues.ULV];
+    if (v <= 32) return GTValues.V[GTValues.LV];
+    if (v <= 128) return GTValues.V[GTValues.MV];
+    if (v <= 512) return GTValues.V[GTValues.HV];
+    if (v <= 2048) return GTValues.V[GTValues.EV];
+    if (v <= 8192) return GTValues.V[GTValues.IV];
+    if (v <= 32768) return GTValues.V[GTValues.LuV];
+    if (v <= 131072) return GTValues.V[GTValues.ZPM];
+    if (v <= 524288) return GTValues.V[GTValues.UV];
+    if (v <= 2097152) return GTValues.V[GTValues.UHV];
+    if (v <= 8388608) return GTValues.V[GTValues.UEV];
+    if (v <= 33554432) return GTValues.V[GTValues.UIV];
+    if (v <= 134217728) return GTValues.V[GTValues.UXV];
+    if (v <= 536870912) return GTValues.V[GTValues.OpV];
+    return GTValues.V[GTValues.MAX];
+};
+const getGasTier = (voltage) => {
+    if (voltage <= 512) return GasTier.LOW;       // LV - MV
+    if (voltage <= 8192) return GasTier.MID;      // HV - IV
+    if (voltage <= 32768) return GasTier.HIGH;    // LuV - ZPM
+    if (voltage <= 131072) return GasTier.HIGHER; // UV - UHV
+    return GasTier.HIGHEST;                       // UEV+
+};
+
+const polymers = [
+    { name: "chaos_plastic", color: 0x222222 },
+    { name: "organic_polymer", color: 0x647B82 },
+    { name: 'fluorozirconic_composite', color: 0x4DD0E1, components: '1x zirconium, 6x fluorine, 2x carbon' },
+    { name: 'fifth_element', components: '1x elemental_water, 1x elemental_fire, 1x elemental_air, 1x elemental_earth', color: 0xFF6600 },
+];
 
 
 //needs proper unification
@@ -365,73 +409,52 @@ const fluids = [
     { name: 'necrotic_acid', components:'4x witherite, 1x nether_star, 4x aqua_regia', color: 0x6B7A3A, iconSet: 'FLUID' },
     
     
-    { name: 'chloroprene', components: '1x butadiene, 1x chlorine', color: 0xE0E8C8, iconSet: 'FLUID' },        
-    { name: 'adiponitrile', components: '1x adipic_acid, 2x ammonia', color: 0xD9D3E0, iconSet: 'FLUID' },    
-    { name: 'oxydianiline', components: '2x aniline, 1x oxygen', color: 0xD9C7A8, iconSet: 'FLUID' },
+    { name: 'chloroprene', components: '1x butadiene, 1x chlorine', color: 0xE0E8C8, iconSet: 'FLUID', noDecomp: true },
+    { name: 'adiponitrile', components: '1x adipic_acid, 2x ammonia', color: 0xD9D3E0, iconSet: 'FLUID', noDecomp: true },    
+    { name: 'oxydianiline', components: '2x aniline, 1x oxygen', color: 0xD9C7A8, iconSet: 'FLUID', noDecomp: true },
+    { name: 'cyclohexanone', components: '1x cyclohexane, 1x oxygen', color: 0xE0D8C0, iconSet: 'FLUID', noDecomp: true }
+];
+
+const kevlarFluids = [
+    // --- Aniline branch ---
+    { name: 'aniline', components: '1x nitrobenzene, 3x hydrogen', color: 0xC9A876, iconSet: 'FLUID', formula: 'C6H5NH2' },
+    //{ name: 'acetic_anhydride', color: 0xD8C8A0, iconSet: 'FLUID', formula: '(CH3CO)2O' },
+    { name: 'nitroaniline', components: '1x aniline, 1x nitration_mixture', color: 0xE0B840, iconSet: 'FLUID', formula: 'C6H6N2O2' },
+    //{ name: 'nitration_mixture', components: '1x sulfuric_acid, 1x nitric_acid', color: 0xF0E060, iconSet: 'FLUID', noDecomp: true },
+    { name: 'para_phenylenediamine', dust: true, components: '1x nitroaniline, 3x hydrogen', color: 0xB89060, iconSet: 'FLUID', formula: 'C6H8N2' },
+
+    // --- Terephthaloyl Chloride branch ---
+    { name: 'p_xylene', color: 0xEBD078, iconSet: 'FLUID', formula: 'C8H10' }, // isolated from your existing xylene via isomerization step
+    { name: 'cobalt_naphthenate', color: 0x6E5A30, iconSet: 'FLUID', noDecomp: true }, // catalyst
+    { name: 'terephthalic_acid', components: '1x p_xylene, 3x oxygen', color: 0xF0F0E8, iconSet: 'FLUID', formula: 'C8H6O4' },
+    { name: 'dimethyl_terephthalate', components: '1x terephthalic_acid, 2x methanol', color: 0xE8E0C8, iconSet: 'FLUID', formula: 'C10H10O4' },
+    { name: 'sulfur_dichloride', components: '1x sulfur, 2x chlorine', color: 0xC8A840, iconSet: 'FLUID', formula: 'SCl2' },
+    { name: 'thionyl_chloride', components: '1x sulfur_trioxide, 1x sulfur_dichloride', color: 0xE8D8A0, iconSet: 'FLUID', formula: 'SOCl2', noDecomp: true },
+    { name: 'terephthaloyl_chloride', dust: true, components: '1x dimethyl_terephthalate, 1x thionyl_chloride', color: 0xD8D0C0, iconSet: 'FLUID', formula: 'C8H4Cl2O2', noDecomp: true },
+
+    // --- NMP solvent branch ---
+    { name: 'methylamine', components: '1x ammonia', color: 0xE0E0D0, iconSet: 'FLUID', formula: 'CH5N' },
+    { name: 'gamma_butyrolactone', color: 0xEEE8D0, iconSet: 'FLUID', formula: 'C4H6O2' },
+    { name: 'n_methylpyrrolidone', components: '1x methylamine, 1x gamma_butyrolactone', color: 0xF5EED8, iconSet: 'FLUID', formula: 'C5H9NO' },
+    { name: 'tetrahydrofuran', components: '1x gamma_butyrolactone, 1x water', formula: 'C4H8O', iconSet: 'FLUID', color: 0xE8F4F8, noDecomp: true },
+
+    // --- Final polymer ---
+    { name: 'liquid_crystal_kevlar', components: '1x para_phenylenediamine, 1x terephthaloyl_chloride', color: 0xC8A030, iconSet: 'FLUID', noDecomp: true },
+
+    // --- Polyurethane Resin branch ---
+    { name: 'diaminodiphenylmethane', components: '1x aniline, 1x formaldehyde', color: 0xC8B090, iconSet: 'FLUID', noDecomp: true }, // MDA
+    { name: 'phosgene', components: '1x carbon_monoxide, 1x chlorine', color: 0xC0C8C0, iconSet: 'FLUID', formula: 'COCl2', noDecomp: true },
+    { name: 'diphenylmethane_diisocyanate', dust: true, components: '1x diaminodiphenylmethane, 1x phosgene', color: 0xD0C8B8, iconSet: 'FLUID', noDecomp: true }, // MDI    
+    { name: 'ethylene_glycol', components: '1x ethylene, 2x oxygen, 2x hydrogen', color: 0xEEE0C0, iconSet: 'FLUID', formula: 'C2H6O2' },
+    { name: 'pentaerythritol', dust: true, components: '4x formaldehyde', color: 0xF8F8F0, iconSet: 'DULL', formula: 'C5H12O4' },
+    { name: 'kevlar_catalyst', dust: true, color: 0x707888, iconSet: 'DULL', noDecomp: true }, // abstracted catalyst, flavor material
+    { name: 'polyurethane_resin', components: '1x diphenylmethane_diisocyanate, 1x ethylene_glycol', color: 0xB09850, iconSet: 'FLUID', noDecomp: true },
+    { name: 'maleic_anhydride', components: '1x benzene, 3x oxygen', color: 0xE8D040, iconSet: 'FLUID', formula: 'C4H2O3', noDecomp: true },
+    { name: 'butanol', color: 0xEBDCA0, iconSet: 'FLUID', formula: 'C4H9OH' },
 ];
 
 
-const getCoilVoltage = (coil) => {
-    switch (coil) {
-        case 1800: return 128;
-        case 2700: return 512;
-        case 3600: return 2048;
-        case 4500: return 8192;
-        case 5400: return 32768;
-        case 7200: return 131072;
-        case 9000: return 524288;
-        case 10800: return 2097152;
-        default: return 8388608;
-    }
-};
-const getVoltage = (v) => {
-    if (v <= 8) return GTValues.V[GTValues.ULV];
-    if (v <= 32) return GTValues.V[GTValues.LV];
-    if (v <= 128) return GTValues.V[GTValues.MV];
-    if (v <= 512) return GTValues.V[GTValues.HV];
-    if (v <= 2048) return GTValues.V[GTValues.EV];
-    if (v <= 8192) return GTValues.V[GTValues.IV];
-    if (v <= 32768) return GTValues.V[GTValues.LuV];
-    if (v <= 131072) return GTValues.V[GTValues.ZPM];
-    if (v <= 524288) return GTValues.V[GTValues.UV];
-    if (v <= 2097152) return GTValues.V[GTValues.UHV];
-    if (v <= 8388608) return GTValues.V[GTValues.UEV];
-    if (v <= 33554432) return GTValues.V[GTValues.UIV];
-    if (v <= 134217728) return GTValues.V[GTValues.UXV];
-    if (v <= 536870912) return GTValues.V[GTValues.OpV];
-    return GTValues.V[GTValues.MAX];
-};
-const getGasTier = (voltage) => {
-    if (voltage <= 512) return GasTier.LOW;       // LV - MV
-    if (voltage <= 8192) return GasTier.MID;      // HV - IV
-    if (voltage <= 32768) return GasTier.HIGH;    // LuV - ZPM
-    if (voltage <= 131072) return GasTier.HIGHER; // UV - UHV
-    return GasTier.HIGHEST;                       // UEV+
-};
-
-const polymers = [
-    { name: "chaos_plastic", color: 0x222222 },
-    { name: "organic_polymer", color: 0x647B82 },
-    { name: 'fluorozirconic_composite', color: 0x4DD0E1, components: '1x zirconium, 6x fluorine, 2x carbon' },
-    { name: 'fifth_element', components: '1x elemental_water, 1x elemental_fire, 1x elemental_air, 1x elemental_earth', color: 0xFF6600 },
-];
-
-const dusts = [
-    { name: 'bismuth_oxide', components: '2x bismuth, 3x oxygen', color: 0xE8D27A, iconSet: 'DULL' },
-    { name: 'germanium_oxide', components: '1x germanium, 2x oxygen', color: 0xE3E6E6, iconSet: 'DULL' },    
-    { name: 'bismuth_germanate', components: '2x bismuth_oxide, 3x germanium_oxide', color: 0xD9D9A8, iconSet: 'SHINY' },
-        
-    { name: 'copper_oxide', components: '1x copper, 1x oxygen', color: 0x3B2F2F, iconSet: 'DULL' },
-    { name: 'bismuth_strontium_calcium_copper_oxide', components: '1x bismuth_oxide, 2x strontium_carbonate, 1x quicklime, 2x copper_oxide', color: 0x3A3A42, iconSet: 'ROUGH' },    
-    
-    { name: 'adipic_acid', components: '1x cyclohexanone, 2x nitric_acid', color: 0xDED1A0, iconSet: 'DULL' },
-    { name: 'hexamethylenediamine', components: '1x adiponitrile, 4x hydrogen', color: 0xDDE8D0, iconSet: 'DULL' },
-    { name: 'nylon', components: '1x adipic_acid, 1x hexamethylenediamine', color: 0xE8DFC8, iconSet: 'DULL' },    
-    { name: 'neoprene', components: '4x chloroprene', color: 0xA67C52, iconSet: 'DULL' },
-
-    { name: 'pyromellitic_dianhydride', components: '10x carbon, 2x hydrogen, 6x oxygen', color: 0xE8DFC0, iconSet: 'DULL' },    
-    { name: 'polyimide', components: '1x pyromellitic_dianhydride, 1x oxydianiline', color: 0xB8631E, iconSet: 'DULL' },        
-
+const dusts = [    
     { name: 'zirconium_lattice', components: '4x zirconium, 1x niobium, 1x iridium', color: 0x8C9A9E, iconSet: 'METALLIC' },
     { name: 'lanthanum_fluoride', components: '1x lanthanum, 3x fluorine', color: 0xE8E8E8, formula: 'LaF3', iconSet: 'DULL', noDecomp: true },
     { name: 'lanthanum_hydroxide', components: '1x lanthanum, 3x oxygen, 3x hydrogen', color: 0xE8E0F0, formula: 'La(OH)3', iconSet: 'DULL', noDecomp: true },
@@ -546,7 +569,22 @@ const dusts = [
     { name: 'silver_bio_ash', color: 0x8C8E92, iconSet: 'DULL', noDecomp: true },
     { name: 'iron_bio_ash', color: 0x7A5E50, iconSet: 'DULL', noDecomp: true },
     { name: 'titanium_bio_ash', color: 0x7E7A86, iconSet: 'DULL', noDecomp: true },
-    { name: 'witherite', components: '1x barium, 1x carbon, 3x oxygen, 3x netherite', color: 0xD8D4B8, iconSet: 'ROUGH' }
+    { name: 'witherite', components: '1x barium, 1x carbon, 3x oxygen, 3x netherite', color: 0xD8D4B8, iconSet: 'ROUGH' },
+    { name: 'bismuth_oxide', components: '2x bismuth, 3x oxygen', color: 0xE8D27A, iconSet: 'DULL' },
+    { name: 'germanium_oxide', components: '1x germanium, 2x oxygen', color: 0xE3E6E6, iconSet: 'DULL' },    
+    { name: 'bismuth_germanate', components: '2x bismuth_oxide, 3x germanium_oxide', color: 0xD9D9A8, iconSet: 'SHINY' },
+        
+    { name: 'copper_oxide', components: '1x copper, 1x oxygen', color: 0x3B2F2F, iconSet: 'DULL' },
+    { name: 'bismuth_strontium_calcium_copper_oxide', components: '1x bismuth_oxide, 2x strontium_carbonate, 1x quicklime, 2x copper_oxide', color: 0x3A3A42, iconSet: 'ROUGH' },    
+    
+    { name: 'pyromellitic_dianhydride', components: '10x carbon, 2x hydrogen, 6x oxygen', color: 0xE8DFC0, iconSet: 'DULL' },    
+    
+    { name: 'polyimide', color: 0xB8631E, iconSet: 'DULL', noDecomp: true },        
+    { name: 'adipic_acid', color: 0xDED1A0, iconSet: 'DULL', noDecomp: true },
+    { name: 'hexamethylenediamine', color: 0xDDE8D0, iconSet: 'DULL', noDecomp: true },
+    { name: 'neoprene', color: 0xA67C52, iconSet: 'DULL', noDecomp: true },
+    { name: 'nylon', components: '1x adipic_acid, 1x hexamethylenediamine', color: 0xE8DFC8, iconSet: 'DULL', noDecomp: true }
+    
     
 
 ];
@@ -886,6 +924,19 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         if (mat.flags && mat.flags.length > 0) {
             mat.flags.forEach(flag => builder.flags(flag));
         }
+    });
+
+    kevlarFluids.forEach(mat => {
+        const materialBuilder = event.create(mat.name)        
+            .fluid()
+            .color(mat.color)
+            .iconSet(GTMaterialIconSet[mat.iconSet || GTMaterialIconSet.FLUID]);
+        if (mat.components) {
+            materialBuilder.components(mat.components.split(', '));
+        }
+        if (mat.formula) { materialBuilder.formula(mat.formula); }        
+        if (mat.noDecomp) { materialBuilder.flags(GTMaterialFlags.DISABLE_DECOMPOSITION); }
+        if (mat.dust) { materialBuilder.dust(); }
     });
 
     gasses.forEach(mat => {
@@ -1672,6 +1723,24 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('darmstadtium').addFlags(GTMaterialFlags.GENERATE_GEAR);
 
 
+    GTMaterials.get('polyimide').setComponents(
+        GTMaterials.get('pyromellitic_dianhydride').multiply(1),
+        GTMaterials.get('oxydianiline').multiply(1)
+    );
+
+    GTMaterials.get('adipic_acid').setComponents(
+        GTMaterials.get('cyclohexanone').multiply(1),
+        GTMaterials.get('nitric_acid').multiply(2)
+    );
+
+    GTMaterials.get('hexamethylenediamine').setComponents(
+        GTMaterials.get('adiponitrile').multiply(1),
+        GTMaterials.get('hydrogen').multiply(4)
+    );
+
+    GTMaterials.get('neoprene').setComponents(
+        GTMaterials.get('chloroprene').multiply(4)
+    );
 
 });
 
