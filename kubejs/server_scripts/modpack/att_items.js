@@ -72,8 +72,8 @@ ServerEvents.recipes(allthemods => {
       E: 'ae2:singularity',
       C: 'immersiveengineering:railgun',
       G: 'exchangers:end_exchanger',
-	  S: 'kubejs:quantum_sentient_circuit',
-	  Q: 'kubejs:entropy_manifold'
+	  S: 'minecraft:barrier',
+	  Q: 'minecraft:barrier'
     }).id('allthemods:allthetweaks/nexium_emitter')
 
   // Pulsating Black Hole

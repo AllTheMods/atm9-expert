@@ -80,6 +80,71 @@ const materialsGem = [
 ];
 
 
+const modifyElement = (materialO, materialN, bTemp, volts, gem, polymer, ingot) => {
+    let mrp = GTMaterials.get(materialN).getFlags()
+    let mmaterialClass = mrp.getClass()
+    // @ts-ignore
+    let flagsFieldM = mmaterialClass.getDeclaredField("flags")
+    flagsFieldM.setAccessible(true)
+    let activeFlagsM = flagsFieldM.get(mrp)
+    activeFlagsM.remove(GTMaterialFlags.NO_SMELTING)
+    activeFlagsM.remove(GTMaterialFlags.FLAMMABLE)
+    let material = materialO
+    if (bTemp) {
+        let bVolts = getCoilVoltage(bTemp);
+        let mbp = new BlastProperty
+        mbp.setBlastTemperature(bTemp);
+        mbp.setDurationOverride(1200);
+        mbp.setEUtOverride(bVolts);
+        mbp.setGasTier(getGasTier(bVolts));
+        mbp.setVacuumDurationOverride(120);
+        mbp.setVacuumEUtOverride(bVolts);
+        material.setProperty(PropertyKey.BLAST, mbp)
+    }
+
+    // @ts-ignore
+    if (volts) { material.setProperty(PropertyKey.WIRE, new WireProperties(volts, 1, 0)) }
+    if (polymer == true) { material.setProperty(PropertyKey.POLYMER, new PolymerProperty()) }
+    if (ingot == true) {
+        if (!material.hasProperty(PropertyKey.INGOT)) {
+            material.setProperty(PropertyKey.INGOT, new IngotProperty())
+        }
+
+    }
+
+    material.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()))
+
+    if (gem == true) {
+        if (!material.hasProperty(PropertyKey.INGOT)) {
+            material.setProperty(PropertyKey.GEM, new GemProperty())
+        }
+
+    }
+    if (ingot == true || gem == true || polymer == true) {
+        material.addFlags(
+            GTMaterialFlags.GENERATE_PLATE,
+            GTMaterialFlags.GENERATE_DENSE,
+            GTMaterialFlags.GENERATE_ROD,
+            GTMaterialFlags.GENERATE_LONG_ROD,
+            GTMaterialFlags.GENERATE_GEAR,
+            GTMaterialFlags.GENERATE_SMALL_GEAR,
+            GTMaterialFlags.GENERATE_BOLT_SCREW,
+            GTMaterialFlags.GENERATE_FOIL,
+            GTMaterialFlags.GENERATE_FRAME,
+            GTMaterialFlags.GENERATE_RING,
+            GTMaterialFlags.GENERATE_SPRING,
+            GTMaterialFlags.GENERATE_SPRING_SMALL,
+            GTMaterialFlags.GENERATE_ROTOR,
+            GTMaterialFlags.GENERATE_ROUND,
+            GTMaterialFlags.GENERATE_FINE_WIRE,
+            // @ts-ignore
+            //CMMEMaterialFlags.GENERATE_SINGULARITY
+        )
+    }
+
+
+};
+
 
 //needs proper unification
 const otherElements = [
@@ -298,72 +363,13 @@ const fluids = [
     { name: 'hydrogenated_pinene_dimer', components: '20x carbon, 36x hydrogen', formula: 'C20H36', color: 0xF0E6B8, iconSet: 'FLUID', noDecomp: true },
     { name: 'isobornyl_acetate', components: '12x carbon, 20x hydrogen, 2x oxygen', formula: 'C12H20O2', color: 0xEDE8D0, iconSet: 'FLUID', noDecomp: true },
     { name: 'necrotic_acid', components:'4x witherite, 1x nether_star, 4x aqua_regia', color: 0x6B7A3A, iconSet: 'FLUID' },
+    
+    
+    { name: 'chloroprene', components: '1x butadiene, 1x chlorine', color: 0xE0E8C8, iconSet: 'FLUID' },        
+    { name: 'adiponitrile', components: '1x adipic_acid, 2x ammonia', color: 0xD9D3E0, iconSet: 'FLUID' },    
+    { name: 'oxydianiline', components: '2x aniline, 1x oxygen', color: 0xD9C7A8, iconSet: 'FLUID' },
 ];
 
-const modifyElement = (materialO, materialN, bTemp, volts, gem, polymer, ingot) => {
-    let mrp = GTMaterials.get(materialN).getFlags()
-    let mmaterialClass = mrp.getClass()
-    // @ts-ignore
-    let flagsFieldM = mmaterialClass.getDeclaredField("flags")
-    flagsFieldM.setAccessible(true)
-    let activeFlagsM = flagsFieldM.get(mrp)
-    activeFlagsM.remove(GTMaterialFlags.NO_SMELTING)
-    activeFlagsM.remove(GTMaterialFlags.FLAMMABLE)
-    let material = materialO
-    if (bTemp) {
-        let bVolts = getCoilVoltage(bTemp);
-        let mbp = new BlastProperty
-        mbp.setBlastTemperature(bTemp);
-        mbp.setDurationOverride(1200);
-        mbp.setEUtOverride(bVolts);
-        mbp.setGasTier(getGasTier(bVolts));
-        mbp.setVacuumDurationOverride(120);
-        mbp.setVacuumEUtOverride(bVolts);
-        material.setProperty(PropertyKey.BLAST, mbp)
-    }
-
-    // @ts-ignore
-    if (volts) { material.setProperty(PropertyKey.WIRE, new WireProperties(volts, 1, 0)) }
-    if (polymer == true) { material.setProperty(PropertyKey.POLYMER, new PolymerProperty()) }
-    if (ingot == true) {
-        if (!material.hasProperty(PropertyKey.INGOT)) {
-            material.setProperty(PropertyKey.INGOT, new IngotProperty())
-        }
-
-    }
-
-    material.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()))
-
-    if (gem == true) {
-        if (!material.hasProperty(PropertyKey.INGOT)) {
-            material.setProperty(PropertyKey.GEM, new GemProperty())
-        }
-
-    }
-    if (ingot == true || gem == true || polymer == true) {
-        material.addFlags(
-            GTMaterialFlags.GENERATE_PLATE,
-            GTMaterialFlags.GENERATE_DENSE,
-            GTMaterialFlags.GENERATE_ROD,
-            GTMaterialFlags.GENERATE_LONG_ROD,
-            GTMaterialFlags.GENERATE_GEAR,
-            GTMaterialFlags.GENERATE_SMALL_GEAR,
-            GTMaterialFlags.GENERATE_BOLT_SCREW,
-            GTMaterialFlags.GENERATE_FOIL,
-            GTMaterialFlags.GENERATE_FRAME,
-            GTMaterialFlags.GENERATE_RING,
-            GTMaterialFlags.GENERATE_SPRING,
-            GTMaterialFlags.GENERATE_SPRING_SMALL,
-            GTMaterialFlags.GENERATE_ROTOR,
-            GTMaterialFlags.GENERATE_ROUND,
-            GTMaterialFlags.GENERATE_FINE_WIRE,
-            // @ts-ignore
-            //CMMEMaterialFlags.GENERATE_SINGULARITY
-        )
-    }
-
-
-};
 
 const getCoilVoltage = (coil) => {
     switch (coil) {
@@ -411,10 +417,29 @@ const polymers = [
 ];
 
 const dusts = [
+    { name: 'bismuth_oxide', components: '2x bismuth, 3x oxygen', color: 0xE8D27A, iconSet: 'DULL' },
+    { name: 'germanium_oxide', components: '1x germanium, 2x oxygen', color: 0xE3E6E6, iconSet: 'DULL' },    
+    { name: 'bismuth_germanate', components: '2x bismuth_oxide, 3x germanium_oxide', color: 0xD9D9A8, iconSet: 'SHINY' },
+        
+    { name: 'copper_oxide', components: '1x copper, 1x oxygen', color: 0x3B2F2F, iconSet: 'DULL' },
+    { name: 'bismuth_strontium_calcium_copper_oxide', components: '1x bismuth_oxide, 2x strontium_carbonate, 1x quicklime, 2x copper_oxide', color: 0x3A3A42, iconSet: 'ROUGH' },    
+    
+    { name: 'adipic_acid', components: '1x cyclohexanone, 2x nitric_acid', color: 0xDED1A0, iconSet: 'DULL' },
+    { name: 'hexamethylenediamine', components: '1x adiponitrile, 4x hydrogen', color: 0xDDE8D0, iconSet: 'DULL' },
+    { name: 'nylon', components: '1x adipic_acid, 1x hexamethylenediamine', color: 0xE8DFC8, iconSet: 'DULL' },    
+    { name: 'neoprene', components: '4x chloroprene', color: 0xA67C52, iconSet: 'DULL' },
+
+    { name: 'pyromellitic_dianhydride', components: '10x carbon, 2x hydrogen, 6x oxygen', color: 0xE8DFC0, iconSet: 'DULL' },    
+    { name: 'polyimide', components: '1x pyromellitic_dianhydride, 1x oxydianiline', color: 0xB8631E, iconSet: 'DULL' },        
+
+    { name: 'zirconium_lattice', components: '4x zirconium, 1x niobium, 1x iridium', color: 0x8C9A9E, iconSet: 'METALLIC' },
     { name: 'lanthanum_fluoride', components: '1x lanthanum, 3x fluorine', color: 0xE8E8E8, formula: 'LaF3', iconSet: 'DULL', noDecomp: true },
     { name: 'lanthanum_hydroxide', components: '1x lanthanum, 3x oxygen, 3x hydrogen', color: 0xE8E0F0, formula: 'La(OH)3', iconSet: 'DULL', noDecomp: true },
     { name: 'uranium_trioxide', components: '1x uranium, 3x oxygen', color: 0xB8860B, formula: 'UO3', iconSet: 'RADIOACTIVE', noDecomp: true },
     { name: 'titanium_hydroxide', components: '1x titanium, 4x oxygen, 4x hydrogen', color: 0xF0F0F0, formula: 'Ti(OH)4', iconSet: 'DULL', noDecomp: true },
+    { name: 'titanium_dioxide', components: '1x titanium, 2x oxygen', color: 0xCCD6DA, iconSet: 'DULL' },
+    { name: 'titanium_carbonitride', components: '1x titanium_dioxide, 3x carbon, 1x nitrogen', color: 0x8A7F5C, iconSet: 'METALLIC' },
+    { name: 'cermet_blend', components: '4x titanium_carbonitride, 2x nickel, 1x molybdenum', color: 0x9C9690, iconSet: 'METALLIC' },
     { name: 'neutrino', color: 0xFF990F, iconSet: 'METALLIC' },
     { name: 'phantom_membrane', color: 0xC1B79F, iconSet: 'DULL' },
     { name: 'cerium_chloride', components: '1x cerium, 2x chlorine', color: 0xE0DED0, iconSet: 'METALLIC' },
@@ -422,7 +447,7 @@ const dusts = [
 
     { name: 'strontium_sulfide', components: '1x strontium, 1x sulfur', color: 0xD1D7DC, iconSet: 'METALLIC', noDecomp: true },
     { name: 'strontium_chloride', components: '1x strontium, 2x chlorine', color: 0xD1D7DC, iconSet: 'METALLIC' },
-    { name: 'strontium_carbonate', components: '1x strontium, 1x carbonate', color: 0xE2E5DC, iconSet: 'DULL', noDecomp: true },
+    { name: 'strontium_carbonate', components: '1x strontium, 1x carbon, 3x oxygen', color: 0xE2E5DC, iconSet: 'DULL', noDecomp: true },
     { name: 'sodium_tellurite', components: '2x sodium, 1x tellurium, 3x oxygen', color: 0xF0F8FF, formula: 'Na2TeO3', noDecomp: true, iconSet: 'DULL' },
     { name: 'tellurium_dioxide', components: '1x tellurium, 2x oxygen', color: 0xDEDFE1, formula: 'TeO2', noDecomp: true, iconSet: 'DULL' },
     { name: 'sodium_sulfate', components: '2x sodium, 1x sulfur, 4x oxygen', color: 0xF5F5F5, formula: 'Na2SO4', iconSet: 'DULL' },
@@ -530,11 +555,10 @@ const modalloys = [
     // --- Magic Gating Materials ---
     { name: 'hellforged', ore: true, element: 'hellforged', color: 0xC1D5EC, iconSet: 'METALLIC', voltage: 512, loss: 2 },
     { name: 'iesnium', ore: true, element: 'iesnium', color: 0x9FD1FF, iconSet: 'METALLIC', voltage: 512, loss: 1 },
-
-    // --- AllTheModium End-Game Gating ---
-    { name: 'allthemodium', ore: true, element: 'allthemodium', color: 0xFAD64A, iconSet: 'METALLIC', voltage: 32768, loss: 1, cBlast: { temp: 5400, duration: 1200, volts: 8192 } },
-    { name: 'vibranium', ore: true, element: 'vibranium', color: 0x6DFF6D, iconSet: 'METALLIC', voltage: 131072, loss: 1, cBlast: { temp: 5400, duration: 1200, volts: 8192 } },
-    { name: 'unobtainium', ore: true, element: 'unobtainium', color: 0xA336FF, iconSet: 'METALLIC', voltage: 524288, loss: 1, cBlast: { temp: 5400, duration: 1200, volts: 8192 } },
+    
+    { name: 'allthemodium', noSmelting: true, ore: true, element: 'allthemodium', color: 0xFAD64A, iconSet: 'METALLIC', voltage: 8192, loss: 1, cBlast: { temp: 5400, duration: 1200, volts: 8192 } },
+    { name: 'vibranium', noSmelting: true, ore: true, element: 'vibranium', color: 0x6DFF6D, iconSet: 'METALLIC', voltage: 32768, loss: 1, cBlast: { temp: 5400, duration: 1200, volts: 32768 } },
+    { name: 'unobtainium', noSmelting: true, ore: true, element: 'unobtainium', color: 0xA336FF, iconSet: 'METALLIC', voltage: 131072, loss: 1, cBlast: { temp: 5400, duration: 1200, volts: 131072 } },
 
     // --- EnderIO Alloys ---
     { name: 'copper_alloy', components: '1x copper, 1x silicon', color: 0x935B3B, iconSet: 'METALLIC', voltage: 32, loss: 2, cBlast: { temp: 1700, duration: 400, volts: 128 } },
@@ -1017,7 +1041,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
             .ingot()
             .fluid()
             .color(mat.color)
-            .iconSet(GTMaterialIconSet[mat.iconSet])
+            .iconSet(GTMaterialIconSet[mat.iconSet])            
             .flags(
                 GTMaterialFlags.GENERATE_PLATE,
                 GTMaterialFlags.GENERATE_DENSE,
@@ -1039,7 +1063,10 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
                 // @ts-ignore
                 //CMMEMaterialFlags.GENERATE_SINGULARITY
             );
-
+            
+        if (mat.noSmelting) {
+            materialBuilder.flags(GTMaterialFlags.NO_SMELTING);
+        }    
         if (mat.formula)
             materialBuilder.formula(mat.formula);
         if (mat.magnetic) {

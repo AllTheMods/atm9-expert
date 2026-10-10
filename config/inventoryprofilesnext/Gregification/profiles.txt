@@ -104,7 +104,7 @@ profile Saved activate HOT1
 
 profile Saved activate HOT2
 	HOT1
-		"allthemodium:vibranium_sword" -> "Enchantments" : [{id:"minecraft:looting",lvl:5},{id:"minecraft:sharpness",lvl:10},{id:"apotheosis:scavenger",lvl:2},{id:"apotheosis:capturing",lvl:2},{id:"tombstone:decrepitude",lvl:9}]
+		"allthemodium:vibranium_sword" -> "Enchantments" : [{id:"minecraft:looting",lvl:5},{id:"minecraft:sharpness",lvl:1},{id:"apotheosis:scavenger",lvl:2},{id:"apotheosis:capturing",lvl:2},{id:"tombstone:decrepitude",lvl:9}]
 	HOT2
 		"allthemodium:vibranium_pickaxe" -> "Enchantments" : [{id:"minecraft:fortune",lvl:5}]
 	HOT3
@@ -117,6 +117,32 @@ profile Saved activate HOT2
 		"evilcraft:dark_tank"
 	HOT7
 		"evilcraft:dark_tank"
+	HEAD
+		"allthemodium:vibranium_helmet"
+	CHEST
+		"allthemodium:vibranium_chestplate"
+	LEGS
+		"allthemodium:vibranium_leggings"
+	FEET
+		"allthemodium:vibranium_boots"
+
+profile Saved activate HOT8
+	HOT1
+		"allthemodium:vibranium_sword" -> "Enchantments" : [{id:"minecraft:looting",lvl:5},{id:"minecraft:sharpness",lvl:10},{id:"apotheosis:scavenger",lvl:2},{id:"apotheosis:capturing",lvl:2},{id:"tombstone:decrepitude",lvl:9}]
+	HOT2
+		"allthemodium:vibranium_pickaxe" -> "Enchantments" : [{id:"minecraft:fortune",lvl:5}]
+	HOT3
+		"evilcraft:blood_extractor"
+	HOT4
+		"gtceu:hv_titanium_wire_cutter"
+	HOT5
+		"gtceu:hv_titanium_wrench"
+	HOT6
+		"gtceu:hv_titanium_screwdriver"
+	HOT7
+		"sanguine_networks:wrench"
+	HOT9
+		"hostilenetworks:deep_learner"
 	HEAD
 		"allthemodium:vibranium_helmet"
 	CHEST

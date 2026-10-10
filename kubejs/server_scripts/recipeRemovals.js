@@ -20,6 +20,7 @@ ServerEvents.recipes(allthemods => {
     
     
     let beeRemoves = [];
+    let removeColored = [];
 
     let beeMaterials = [
         'arsenic', 'gallium', 'hafnium', 'chromium', 'samarium', 'lanthanum', 'lutetium',
@@ -54,7 +55,21 @@ ServerEvents.recipes(allthemods => {
         beeRemoves.push('productivebees:centrifuge/honeycomb_' + mat + '_block');
     });
 
-
+    const colors = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue', 'brown', 'green', 'red', 'black'];
+    colors.forEach(function(color) {
+        removeColored.push(`botanypots:botanypots/crafting/${color}_terracotta_botany_pot`);
+        removeColored.push(`botanypots:botanypots/crafting/${color}_terracotta_compact_hopper_botany_pot`);
+        removeColored.push(`botanypots:botanypots/crafting/${color}_terracotta_hopper_botany_pot`);
+        removeColored.push(`botanypots:botanypots/crafting/${color}_concrete_botany_pot`);
+        removeColored.push(`botanypots:botanypots/crafting/${color}_concrete_compact_hopper_botany_pot`);
+        removeColored.push(`botanypots:botanypots/crafting/${color}_concrete_hopper_botany_pot`);
+        removeColored.push(`botanypots:botanypots/crafting/${color}_glazed_terracotta_botany_pot`);
+        removeColored.push(`botanypots:botanypots/crafting/${color}_glazed_terracotta_compact_hopper_botany_pot`);
+        removeColored.push(`botanypots:botanypots/crafting/${color}_glazed_terracotta_hopper_botany_pot`);
+    });
+    removeColored.push('botanypots:botanypots/crafting/terracotta_botany_pot');
+    removeColored.push('botanypots:botanypots/crafting/terracotta_compact_hopper_botany_pot');
+    removeColored.push('botanypots:botanypots/crafting/terracotta_hopper_botany_pot');
 
     const beeRemovals = beeRemoves.map(recipeId => ({ id: recipeId }));    
     allthemods.remove(beeRemovals);
@@ -124,6 +139,7 @@ ServerEvents.recipes(allthemods => {
 
     ]
     const globalRemoves3 = [
+        'simplemagnets:basic_demagnetization_coil', 'simplemagnets:advanced_demagnetization_coil','simplemagnets:basicmagnet','simplemagnets:advancedmagnet',
         // --- Mob Grinding Utils ---
         'mob_grinding_utils:recipe_fan', 'mob_grinding_utils:recipe_saw_upgrade_looting', 'mob_grinding_utils:recipe_saw_upgrade_sharpness',
         'mob_grinding_utils:recipe_fan_upgrade_height', 'mob_grinding_utils:recipe_fan_upgrade_width', 'mob_grinding_utils:recipe_fan_upgrade_speed',
@@ -174,7 +190,8 @@ ServerEvents.recipes(allthemods => {
         'chemlib:rubidium_ingot_from_blasting_rubidium_dust',
         'enderio:smelting/chemlib/rubidium_ingot_from_smelting_rubidium_dust',        
 
-        'bloodmagic:blood_rune_blank', 'rftoolsutility:screen_controller', 'integrateddynamics:crafting/part_display_panel',
+        'bloodmagic:blood_rune_blank', 'rftoolsutility:screen_controller', 'integrateddynamics:crafting/part_display_panel', 
+
         
         
         'industrialforegoing:fluid_extractor', 'industrialforegoing:hydroponic_simulation_processor',
@@ -495,17 +512,20 @@ ServerEvents.recipes(allthemods => {
             console.error("Failed to remove recipe ID: " + recipeId);
         }
     });*/
-    const removalObjects = globalRemoves.map(recipeId => ({ id: recipeId }));
+    let removalObjects = removeColored.map(recipeId => ({ id: recipeId }));
     allthemods.remove(removalObjects);
 
-    const removalObjects2 = globalRemoves2.map(recipeId => ({ id: recipeId }));
-    allthemods.remove(removalObjects2);
+    removalObjects = globalRemoves.map(recipeId => ({ id: recipeId }));
+    allthemods.remove(removalObjects);
 
-    const removalObjects3 = globalRemoves3.map(recipeId => ({ id: recipeId }));
-    allthemods.remove(removalObjects3);
+    removalObjects = globalRemoves2.map(recipeId => ({ id: recipeId }));
+    allthemods.remove(removalObjects);
 
-    const powahObjects = powahRemoves.map(recipeId => ({ id: recipeId }));
-    allthemods.remove(powahObjects);
+    removalObjects = globalRemoves3.map(recipeId => ({ id: recipeId }));
+    allthemods.remove(removalObjects);
+
+    removalObjects = powahRemoves.map(recipeId => ({ id: recipeId }));
+    allthemods.remove(removalObjects);
 
     // 2. --- DYNAMIC MATERIAL REMOVALS (Optimized) ---
 
@@ -566,6 +586,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.remove({ type: 'elementalcraft:crystallization' });
     allthemods.remove({ type: 'mysticalagriculture:awakening' });
     allthemods.remove({ type: 'evilcraft:blood_infuser' });
+    
 
     // Input Removals
     allthemods.remove({ input: '#alltheores:ore_hammers' });

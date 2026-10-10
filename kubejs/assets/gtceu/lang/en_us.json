@@ -748,7 +748,25 @@
     "gtcoilemi.text.temperature": "Temp: %s K",
     "gtcoilemi.text.level": "Level: %s",
     "gtcoilemi.text.tier": "Tier: %s",
-    "gtcoilemi.text.coil": "Coil: %s"
+    "gtcoilemi.text.coil": "Coil: %s",
+
+    "material.gtceu.titanium_dioxide": "Titanium Dioxide",
+    "material.gtceu.titanium_carbonitride": "Titanium Carbonitride",
+    "material.gtceu.cermet_blend": "Cermet Blend",
+    "material.gtceu.bismuth_oxide": "Bismuth Oxide",
+    "material.gtceu.germanium_oxide": "Germanium Oxide",
+    "material.gtceu.bismuth_germanate": "Bismuth Germanate",
+    "material.gtceu.copper_oxide": "Copper Oxide",
+    "material.gtceu.bismuth_strontium_calcium_copper_oxide": "Bismuth Strontium Calcium Copper Oxide",
+    "material.gtceu.adipic_acid": "Adipic Acid",
+    "material.gtceu.hexamethylenediamine": "Hexamethylenediamine",
+    "material.gtceu.nylon": "Nylon",
+    "material.gtceu.neoprene": "Neoprene",
+    "material.gtceu.pyromellitic_dianhydride": "Pyromellitic Dianhydride",
+    "material.gtceu.polyimide": "Polyimide (Kapron)",
+    "material.gtceu.chloroprene": "Chloroprene",
+    "material.gtceu.adiponitrile": "Adiponitrile",
+    "material.gtceu.oxydianiline": "Oxydianiline"    
 }
 
  

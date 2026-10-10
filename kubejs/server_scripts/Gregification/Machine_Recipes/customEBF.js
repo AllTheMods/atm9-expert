@@ -18,9 +18,11 @@ ServerEvents.recipes(allthemods => {
     };
 
    
+    addEBF('#forge:dusts/allthemodium','#forge:necrotic_acid 1000','gtceu:hot_allthemodium_ingot',null,4500,2400,IV);
+    addEBF(['#forge:dusts/vibranium', '#forge:dusts/stabilized_clathrate'],'#forge:necrotic_acid 1000','gtceu:hot_vibranium_ingot',null,4500,2400,IV);
+    addEBF(['#forge:dusts/vibranium', '#forge:dusts/zirconium_lattice'],'#forge:necrotic_acid 1000','gtceu:hot_vibranium_ingot',null,4500,2400,IV);
 
     // EBF
-
 
     //steel
     addEBF(

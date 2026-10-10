@@ -5,13 +5,40 @@ ServerEvents.recipes(allthemods => {
         allthemods.shaped(itemID || recipeID, schema, ingredients).id(recipeID);
     }
   
+    //'simplemagnets:basic_demagnetization_coil', 'simplemagnets:advanced_demagnetization_coil','simplemagnets:basicmagnet','simplemagnets:advancedmagnet',
+    allthemods.shapeless('simplemagnets:basic_demagnetization_coil', ['simplemagnets:basicmagnet', 'gtceu:iv_machine_hull']).id('gregification:basic_demagnetization_coil');
+
+    allthemods.shapeless('simplemagnets:advanced_demagnetization_coil', ['simplemagnets:advancedmagnet', 'gtceu:luv_machine_hull']).id('gregification:advanced_demagnetization_coil');
+
+    allthemods.shaped('simplemagnets:basicmagnet', [
+        'T L',
+        'ERE',
+        'ECE'
+    ], {
+        R: "#forge:rods/magnetic_smaarium_cobalt",
+        E: "#forge:plates/enderium",
+        T: "#forge:dusts/redstone",
+        L: "#forge:gems/lapis",
+        C: "#gtceu:circuits/ev"
+    }).id('gregification:basicmagnet');
+
+    allthemods.shaped('simplemagnets:advancedmagnet', [
+        'T L',
+        'ERE',
+        'ECE'
+    ], {
+        R: "gtceu:samarium_cobalt_magnetic_rotor",
+        E: "#forge:plates/enderium",
+        T: "#forge:dusts/redstone",
+        L: "#forge:gems/lapis",
+        C: "#gtceu:circuits/ev"
+    }).id('gregification:advancedmagnet');
 
     allthemods.shaped('gtceu:element_fire', [
 		' E ',
 		'EBE',
 		' E '
-	], {
-		// We use .weakNBT() so it doesn't matter if the energy levels don't match exactly
+	], {	
 		E: 'gtceu:elemental_fire_singularity',
 		B: 'gtceu:element_blank'
 	}).id('gregification:element_fire');
@@ -20,8 +47,7 @@ ServerEvents.recipes(allthemods => {
 		' E ',
 		'EBE',
 		' E '
-	], {
-		// We use .weakNBT() so it doesn't matter if the energy levels don't match exactly
+	], {		
 		E: 'gtceu:elemental_water_singularity',
 		B: 'gtceu:element_blank'
 	}).id('gregification:element_water');
@@ -30,8 +56,7 @@ ServerEvents.recipes(allthemods => {
 		' E ',
 		'EBE',
 		' E '
-	], {
-		// We use .weakNBT() so it doesn't matter if the energy levels don't match exactly
+	], {		
 		E: 'gtceu:elemental_air_singularity',
 		B: 'gtceu:element_blank'
 	}).id('gregification:element_air');
@@ -40,8 +65,7 @@ ServerEvents.recipes(allthemods => {
 		' E ',
 		'EBE',
 		' E '
-	], {
-		// We use .weakNBT() so it doesn't matter if the energy levels don't match exactly
+	], {		
 		E: 'gtceu:elemental_earth_singularity',
 		B: 'gtceu:element_blank'
 	}).id('gregification:element_earth');

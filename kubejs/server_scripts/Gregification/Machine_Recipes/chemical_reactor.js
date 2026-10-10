@@ -19,6 +19,148 @@ ServerEvents.recipes(allthemods => {
 
     };
 
+    //bismuth oxide
+    addChemical(
+        '2x #forge:dusts/bismuth',
+        '#forge:oxygen 3000',
+        '5x gtceu:bismuth_oxide_dust',
+        null,
+        IV,
+        600,
+        'bismuth_oxide'
+    );
+
+    //nylon
+    addChemical(
+        ['#forge:dusts/adipic_acid', '#forge:dusts/hexamethylenediamine'],
+        null,
+        '2x gtceu:nylon_dust',
+        null,
+        IV,
+        600,
+        'nylon'
+    );
+    
+    //neoprene
+    addChemical(
+        null,
+        '#forge:chloroprene 4000',
+        'gtceu:neoprene_dust',
+        null,
+        IV,
+        600,
+        'neoprene'
+    );
+
+    //pyromellitic dianhydride
+    addChemical(
+        '10x #forge:dusts/carbon',
+        ['#forge:hydrogen 2000', '#forge:oxygen 6000'],
+        '18x gtceu:pyromellitic_dianhydride_dust',
+        null,
+        IV,
+        600,
+        'pyromellitic_dianhydride'
+    );
+
+    //polyimide
+    addChemical(
+        '#forge:dusts/pyromellitic_dianhydride',
+        '#forge:oxydianiline 1000',
+        '2x gtceu:polyimide_dust',
+        null,
+        IV,
+        600,
+        'polyimide'
+    );
+    
+    //chloroprene
+    addChemical(
+        null,
+        ['#forge:butadiene 1000', '#forge:chlorine 1000'],
+        null,
+        'gtceu:chloroprene 2000',
+        IV,
+        600,
+        'chloroprene'
+    );
+
+    //adiponitrile
+    addChemical(
+        '#forge:dusts/adipic_acid',
+        '#forge:ammonia 2000',
+        null,
+        'gtceu:adiponitrile 3000',
+        IV,
+        600,
+        'adiponitrile'
+    );
+
+    //oxydianiline
+    addChemical(
+        null,
+        ['#forge:aniline 2000','#forge:oxygen 1000'],
+        null,
+        'gtceu:oxydianiline 3000',
+        IV,
+        600,
+        'oxydianiline'
+    );
+
+    //germanium oxide
+    addChemical(
+        '#forge:dusts/germanium',
+        '#forge:oxygen 2000',
+        '3x gtceu:germanium_oxide_dust',
+        null,
+        IV,
+        600,
+        'germanium_oxide'
+    );
+
+    //titanium dioxide
+    addChemical(
+        '#forge:dusts/titanium',
+        '#forge:oxygen 1000',
+        'gtceu:titanium_dioxide_dust',
+        null,
+        HV,
+        600,
+        'titanium_dioxide'
+    );
+
+    //adipic acid
+    addChemical(
+        null,
+        ['#forge:cyclohexane 1000', '#forge:nitric_acid 2000'],
+        '3x gtceu:adipic_acid_dust',
+        null,
+        IV,
+        600,
+        'adipic_acid'
+    );
+
+    //hexamethylenediamine
+    addChemical(
+        null,
+        ['#forge:adiponitrile 1000', '#forge:hydrogen 4000'],
+        '5x gtceu:hexamethylenediamine_dust',
+        null,
+        IV,
+        600,
+        'hexamethylenediamine'
+    );
+
+    //titanium carbonitride
+    addChemical(
+        ['#forge:dusts/titanium_dioxide','3x #forge:dusts/carbon'],
+        '#forge:nitrogen 1000',
+        'gtceu:titanium_carbonitride_dust',
+        null,
+        HV,
+        600,
+        'titanium_carbonitride'
+    );
 
     addChemical(
         'gtceu:atm_star_dust',
