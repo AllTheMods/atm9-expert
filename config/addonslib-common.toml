@@ -1,5 +1,0 @@
-
-["AddonsLib Config !"]
-	#Filter the logs error for blockstate and model
-	"Define log filter" = true
-

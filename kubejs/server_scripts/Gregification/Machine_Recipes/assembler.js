@@ -163,12 +163,13 @@ ServerEvents.recipes(allthemods => {
             '2x #gtceu:circuits/hv',
             '4x #forge:plates/elementium',
             '8x #forge:screws/soularium',
-            '#forge:frames/hellforged'
+            '#forge:frames/hellforged',
+            '4x #forge:plates/bismuth_strontium_calcium_copper_oxide'
 
         ],
         'gtceu:polyethylene 144',
         'hostilenetworks:sim_chamber',
-        HV,                                        // HV Voltage
+        EV,
         600
     );
 

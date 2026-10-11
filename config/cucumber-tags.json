@@ -1,12 +1,5 @@
 {
   "__comment": "Instructions: https://blakesmods.com/docs/cucumber/tags-config",
-  "forge:dusts/niter": "chemlib:potassium_nitrate_dust",
-  "forge:silicon": "tinyredstone:silicon",
-  "forge:gems/apatite": "gtceu:apatite_gem",
-  "forge:ingots/titanium": "chemlib:titanium_ingot",
-  "forge:ingots/chrome": "null",
-  "forge:ingots/graphite": "bigreactors:graphite_ingot",
-  "forge:dusts/saltpeter": "gtceu:saltpeter_dust",
-  "forge:ingots/mithril": "null",
-  "forge:rubber": "industrialforegoing:dryrubber"
+  "forge:dusts/saltpeter": "railcraft:saltpeter_dust",
+  "forge:dusts/niter": "chemlib:potassium_nitrate_dust"
 }

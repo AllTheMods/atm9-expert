@@ -187,6 +187,7 @@ const polymers = [
     { name: "organic_polymer", color: 0x647B82 },
     { name: 'fluorozirconic_composite', color: 0x4DD0E1, components: '1x zirconium, 6x fluorine, 2x carbon' },
     { name: 'fifth_element', components: '1x elemental_water, 1x elemental_fire, 1x elemental_air, 1x elemental_earth', color: 0xFF6600 },
+    { name: 'polyimide', color: 0xB8631E, iconSet: 'DULL', noDecomp: true },
 ];
 
 
@@ -454,8 +455,10 @@ const kevlarFluids = [
 ];
 
 
-const dusts = [    
-    { name: 'zirconium_lattice', components: '4x zirconium, 1x niobium, 1x iridium', color: 0x8C9A9E, iconSet: 'METALLIC' },
+const dusts = [   
+    { name: 'magebloom', dust: true, color: 0xc14bfc, iconSet: 'DULL' },
+    { name: 'zirconium_lattice', components: '4x zirconium, 1x niobium, 1x iridium', color: 0x9FAFB5, iconSet: 'METALLIC' },
+    { name: 'plascrete', color: 0xCED4D5, iconSet: 'DULL' },
     { name: 'lanthanum_fluoride', components: '1x lanthanum, 3x fluorine', color: 0xE8E8E8, formula: 'LaF3', iconSet: 'DULL', noDecomp: true },
     { name: 'lanthanum_hydroxide', components: '1x lanthanum, 3x oxygen, 3x hydrogen', color: 0xE8E0F0, formula: 'La(OH)3', iconSet: 'DULL', noDecomp: true },
     { name: 'uranium_trioxide', components: '1x uranium, 3x oxygen', color: 0xB8860B, formula: 'UO3', iconSet: 'RADIOACTIVE', noDecomp: true },
@@ -574,12 +577,11 @@ const dusts = [
     { name: 'germanium_oxide', components: '1x germanium, 2x oxygen', color: 0xE3E6E6, iconSet: 'DULL' },    
     { name: 'bismuth_germanate', components: '2x bismuth_oxide, 3x germanium_oxide', color: 0xD9D9A8, iconSet: 'SHINY' },
         
-    { name: 'copper_oxide', components: '1x copper, 1x oxygen', color: 0x3B2F2F, iconSet: 'DULL' },
-    { name: 'bismuth_strontium_calcium_copper_oxide', components: '1x bismuth_oxide, 2x strontium_carbonate, 1x quicklime, 2x copper_oxide', color: 0x3A3A42, iconSet: 'ROUGH' },    
+    { name: 'copper_oxide', components: '1x copper, 1x oxygen', color: 0x3B2F2F, iconSet: 'DULL' },    
     
     { name: 'pyromellitic_dianhydride', components: '10x carbon, 2x hydrogen, 6x oxygen', color: 0xE8DFC0, iconSet: 'DULL' },    
     
-    { name: 'polyimide', color: 0xB8631E, iconSet: 'DULL', noDecomp: true },        
+    
     { name: 'adipic_acid', color: 0xDED1A0, iconSet: 'DULL', noDecomp: true },
     { name: 'hexamethylenediamine', color: 0xDDE8D0, iconSet: 'DULL', noDecomp: true },
     { name: 'neoprene', color: 0xA67C52, iconSet: 'DULL', noDecomp: true },
@@ -597,6 +599,7 @@ const modalloys = [
     { name: 'allthemodium', noSmelting: true, ore: true, element: 'allthemodium', color: 0xFAD64A, iconSet: 'METALLIC', voltage: 8192, loss: 1, cBlast: { temp: 5400, duration: 1200, volts: 8192 } },
     { name: 'vibranium', noSmelting: true, ore: true, element: 'vibranium', color: 0x6DFF6D, iconSet: 'METALLIC', voltage: 32768, loss: 1, cBlast: { temp: 5400, duration: 1200, volts: 32768 } },
     { name: 'unobtainium', noSmelting: true, ore: true, element: 'unobtainium', color: 0xA336FF, iconSet: 'METALLIC', voltage: 131072, loss: 1, cBlast: { temp: 5400, duration: 1200, volts: 131072 } },
+    { name: 'bismuth_strontium_calcium_copper_oxide', noSmelting: true, color: 0x3A3A42, iconSet: 'ROUGH', cBlast: { temp: 5400, duration: 1200, volts: 8192 } },
 
     // --- EnderIO Alloys ---
     { name: 'copper_alloy', components: '1x copper, 1x silicon', color: 0x935B3B, iconSet: 'METALLIC', voltage: 32, loss: 2, cBlast: { temp: 1700, duration: 400, volts: 128 } },
@@ -780,7 +783,7 @@ const newOres = [
 ];
 
 const customMatsToRegister = [
-    
+            
     { name: 'bedrockium', color: 0x101010, iconSet: 'METALLIC', ingot: true, ore: true, dust: true, flags: [GTMaterialFlags.NO_SMELTING, CMMEMaterialFlags.GENERATE_SINGULARITY, GTMaterialFlags.DISABLE_DECOMPOSITION, GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FOIL] },
     { name: 'debris', color: 0x6E5A52, iconSet: 'METALLIC', ore: true },
     { name: 'crimson_iron', color: 0xee4f7f, iconSet: 'METALLIC', ore: true },
@@ -897,10 +900,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     customMatsToRegister.forEach(mat => {
         let icon = GTMaterialIconSet[mat.iconSet];
+        
         let builder = event.create(mat.name)
             .color(mat.color)
             .iconSet(icon);
         if (mat.dust) builder.dust();
+        
         if (mat.ingot) builder.ingot();
         if (mat.gem) builder.gem();
         if (mat.fluid) builder.fluid();
@@ -924,6 +929,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         if (mat.flags && mat.flags.length > 0) {
             mat.flags.forEach(flag => builder.flags(flag));
         }
+        if (mat.noSmelting) {
+            builder.flags(GTMaterialFlags.NO_SMELTING);
+        } 
     });
 
     kevlarFluids.forEach(mat => {
@@ -1741,6 +1749,13 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('neoprene').setComponents(
         GTMaterials.get('chloroprene').multiply(4)
     );
+    
+    GTMaterials.get('bismuth_strontium_calcium_copper_oxide').setComponents(
+        GTMaterials.get('bismuth_oxide').multiply(1),
+        GTMaterials.get('strontium_carbonate').multiply(2),
+        GTMaterials.get('quicklime').multiply(1),
+        GTMaterials.get('copper_oxide').multiply(2)
+    )
 
 });
 

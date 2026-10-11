@@ -91,7 +91,8 @@ GTCEuServerEvents.oreVeins(event => {
         ['thortveitite', 'kolbeckite', 'bazzite'],       // scandium minerals
         ['fergusonite', 'samarskite', 'lanthanite'],                   // Nb + rare-earth minerals
         ['cerite', 'gadolinite', 'yttrialite', 'xenotime'], // Y/Ce/REE silicates & phosphates        
-        ['drenched_iron', 'swift_alloy', 'fireite']
+        ['drenched_iron', 'swift_alloy', 'fireite'],
+        ['rhenite', 'tarkianite'],                        // rhenium minerals
     ];
 
     const mercuryOreGroups = [
@@ -106,8 +107,7 @@ GTCEuServerEvents.oreVeins(event => {
     ];
 
     const glacioOreGroups = [
-        ['germanite', 'renierite', 'argyrodite'],        // germanium minerals
-        ['rhenite', 'tarkianite'],                        // rhenium minerals
+        ['germanite', 'renierite', 'argyrodite'],        // germanium minerals        
         ['rubicline', 'rhodizite'],                
         ['tenebrius', 'etrium', 'chaotic']                // flavor/lore ores
     ];

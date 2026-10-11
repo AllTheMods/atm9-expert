@@ -1,1 +1,0 @@
-{"name":"tombstone:sniffer_digging","rolls":1.0,"bonus_rolls":0.0,"entries":[{"type":"minecraft:item","weight":10,"functions":[{"function":"tombstone:check_enabled"}],"name":"tombstone:grave_dust"},{"type":"minecraft:empty","weight":90}]}

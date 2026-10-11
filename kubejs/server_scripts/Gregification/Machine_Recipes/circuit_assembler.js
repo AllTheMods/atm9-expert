@@ -20,9 +20,9 @@ ServerEvents.recipes(allthemods => {
             'gtceu:soc',
             'ae2:printed_calculation_processor'
         ],
-        'gtceu:soldering_alloy 72',
+        '#forge:soldering_alloy 72',
         '4x ae2:calculation_processor',
-        IV,
+        HV,
         120
     )
 
@@ -31,9 +31,9 @@ ServerEvents.recipes(allthemods => {
             'gtceu:soc',
             'ae2:printed_logic_processor'
         ],
-        'gtceu:soldering_alloy 72',
+        '#forge:soldering_alloy 72',
         '4x ae2:logic_processor',
-        IV,
+        HV,
         120
     )
 
@@ -42,9 +42,9 @@ ServerEvents.recipes(allthemods => {
             'gtceu:soc',
             'ae2:printed_engineering_processor'
         ],
-        'gtceu:soldering_alloy 72',
+        '#forge:soldering_alloy 72',
         '4x ae2:engineering_processor',
-        IV,
+        HV,
         120
     )
 
@@ -56,7 +56,7 @@ ServerEvents.recipes(allthemods => {
             '#gtceu:circuits/lv'
 
         ],
-        'gtceu:soldering_alloy 72',
+        '#forge:soldering_alloy 72',
         'ae2:cell_component_1k',
         LV,
         120
@@ -65,13 +65,13 @@ ServerEvents.recipes(allthemods => {
     //4k cell
     addCircuitAssembler(
         [
-            '2x #forge:plates/red_alloy',
+            '2x #forge:plates/signalum',
             '3x ae2:cell_component_1k',
             'ae2:calculation_processor',
             'ae2:quartz_glass'
 
         ],
-        'gtceu:soldering_alloy 72',
+        '#forge:soldering_alloy 72',
         'ae2:cell_component_4k',
         LV,
         120
@@ -86,7 +86,7 @@ ServerEvents.recipes(allthemods => {
             'ae2:quartz_glass'
 
         ],
-        'gtceu:soldering_alloy 72',
+        '#forge:soldering_alloy 72',
         'ae2:cell_component_16k',
         MV,
         120
@@ -95,14 +95,14 @@ ServerEvents.recipes(allthemods => {
     //64k cell
     addCircuitAssembler(
         [
-            '2x #forge:plates/energetic_alloy',
+            '2x #forge:plates/lumium',
             '3x ae2:cell_component_16k',
             'ae2:calculation_processor',
             'ae2:quartz_glass',
             '8x #forge:fine_wires/selenium'
 
         ],
-        'gtceu:soldering_alloy 72',
+        '#forge:soldering_alloy 72',
         'ae2:cell_component_64k',
         MV,
         120
@@ -118,9 +118,47 @@ ServerEvents.recipes(allthemods => {
             '8x #forge:fine_wires/selenium'
 
         ],
-        'gtceu:soldering_alloy 72',
+        '#forge:soldering_alloy 72',
         'ae2:cell_component_256k',
         HV,
         120
     )
+
+    //soc circuits
+    addCircuitAssembler(
+        [
+            'gtceu:soc',
+            'ae2:printed_calculation_processor',
+            '2x #forge:plates/tungsten_carbide'
+        ],
+        '#forge:polyimide 144',
+        '8x ae2:calculation_processor',
+        IV,
+        120
+    )
+
+    addCircuitAssembler(
+        [
+            'gtceu:soc',
+            'ae2:printed_logic_processor',
+            '2x #forge:plates/tungsten_carbide'
+        ],
+        '#forge:polyimide 144',
+        '8x ae2:logic_processor',
+        IV,
+        120
+    )
+
+    addCircuitAssembler(
+        [
+            'gtceu:soc',
+            'ae2:printed_engineering_processor',
+            '2x #forge:plates/tungsten_carbide'
+        ],
+        '#forge:polyimide 144',
+        '8x ae2:engineering_processor',
+        IV,
+        120
+    )
+    
 });

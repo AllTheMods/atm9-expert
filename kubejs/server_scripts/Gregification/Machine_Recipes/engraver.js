@@ -1,7 +1,6 @@
 ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
 
-    const tierValues = [32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
 
     const addLaserEngraver = (itemIn, lensIn, itemOut, duration, eu, oID) => {
         // Sanitize ID based on output

@@ -138,7 +138,15 @@ ServerEvents.recipes(allthemods => {
 
 
     ]
-    const globalRemoves3 = [
+    const globalRemoves3 = [      
+        'ae2:decorative/quartz_glass',
+        'projecte:condenser_mk1', 'ars_nouveau:magebloom_fiber',
+        'ars_nouveau:arcane_pedestal', 'ars_nouveau:sourcestone', 'ars_nouveau:enchanting_apparatus', 'ars_nouveau:imbuement_chamber',
+        'tconstruct:smeltery/seared/grout_multiple', 'tconstruct:smeltery/seared/grout', 
+        'integrateddynamics:crafting/squeezer', 'integrateddynamics:crafting/mechanical_squeezer', 'integrateddynamics:crafting/energy_battery',
+        'integrateddynamics:crafting/cable', 'integrateddynamics:crafting/cable_rotated',
+        'integrateddynamics:crafting/variablestore', 'integrateddynamics:crafting/logic_programmer', 
+
         'simplemagnets:basic_demagnetization_coil', 'simplemagnets:advanced_demagnetization_coil','simplemagnets:basicmagnet','simplemagnets:advancedmagnet',
         // --- Mob Grinding Utils ---
         'mob_grinding_utils:recipe_fan', 'mob_grinding_utils:recipe_saw_upgrade_looting', 'mob_grinding_utils:recipe_saw_upgrade_sharpness',
@@ -213,7 +221,7 @@ ServerEvents.recipes(allthemods => {
 
         'industrialforegoing:wither_builder', 'industrialforegoing:black_hole_controller', 
         'fluxnetworks:flux_dust', 'mob_grinding_utils:recipe_mob_swab',
-        'waystones:warp_stone', 'waystones:sharestone', 'advanced_ae:quantumcore'
+        'waystones:warp_stone', 'waystones:sharestone', 'advanced_ae:quantumcore', 'waystones:warp_dust'
 
     ];
     
@@ -444,8 +452,8 @@ ServerEvents.recipes(allthemods => {
         'advanced_ae:reactionchamber', 'advanced_ae:quantumcrafter', 'expatternprovider:wireless_connector',
         'expatternprovider:circuit_cutter', 'expatternprovider:assembler_matrix_frame', 'expatternprovider:assembler_matrix_wall',
 
-        // --- Integrated Dynamics & XNet ---
-        'integrateddynamics:crafting/variable_store', 'integrateddynamics:crafting/logic_programmer', 'xnet:controller',
+        
+        'xnet:controller',
 
         // --- Alchemistry ---
         'alchemistry:atomizer', 'alchemistry:compactor', 'alchemistry:combiner', 'alchemistry:dissolver', 'alchemistry:liquifier',

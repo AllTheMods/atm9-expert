@@ -631,4 +631,11 @@ ServerEvents.recipes(allthemods => {
         'strigeors_higher_binding',
         120
     );    
+
+    addRitual(
+        ['#forge:dusts/nylon', '#forge:dusts/magebloom', '#forge:string'],
+        'ars_nouveau:magebloom_fiber',
+        'strigeors_higher_binding',
+        120
+    );    
 });

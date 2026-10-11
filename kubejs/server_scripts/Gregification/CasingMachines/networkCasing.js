@@ -360,7 +360,7 @@ ServerEvents.recipes(allthemods => {
 		],
 		'gtceu:polyethylene 144',
 		'integrateddynamics:variablestore',
-		EV,
+		MV,
 		400
 	);
 	
@@ -374,9 +374,35 @@ ServerEvents.recipes(allthemods => {
 		],
 		'gtceu:soldering_alloy 144',
 		'integrateddynamics:logic_programmer',
-		EV,
+		MV,
 		600
 	);
+
+    addAssembler(
+		[
+			'3x #gtceu:wires/double/cadmium_copper',
+            '2x #forge:foils/polyethylene'
+		],
+		'integrateddynamics:menril_resin 1000',
+		'6x integrateddynamics:cable',
+		MV,
+		600
+	);
+
+    addAssembler(
+		[
+			'gtceu:network_casing',
+            '2x #gtceu:circuits/mv',
+            '8x #forge:plates/signalum',
+            'botania:rune_mana',
+            'occultism:research_fragment_dust'
+		],
+        '#forge:ethylene 576',
+		'sophisticatedstorage:controller',		
+		MV,
+		600
+	);
+    
 
     //gtceu - ae2 quartize conversion
     allthemods.recipes.gtceu.autoclave('quartzite_to_certus_conversion')

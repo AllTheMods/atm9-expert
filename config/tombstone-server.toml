@@ -27,20 +27,6 @@
 	enable_enchantment_blessing = true
 	#Enables the enchantment Frostbite [false/true|default:true]
 	enable_enchantment_frostbite = true
-	#Allows Soulbound at enchanting table [false/true|default:false]
-	soulbound_enchanting_table = true
-	#Allows Spectral Bite at enchanting table [false/true|default:false]
-	spectral_bite_enchanting_table = false
-	#Allows Magic Siphon at enchanting table [false/true|default:false]
-	magic_siphon_enchanting_table = false
-	#Allows Plague Bringer at enchanting table [false/true|default:false]
-	plague_bringer_enchanting_table = false
-	#Allows Curse of Bones at enchanting table [false/true|default:false]
-	curse_of_bones_enchanting_table = false
-	#Allows Blessing at enchanting table [false/true|default:false]
-	blessing_enchanting_table = false
-	#Allows Frostbite at enchanting table [false/true|default:false]
-	frostbite_enchanting_table = false
 	#Enables the enchantment Spectral Conjurer [false/true|default:true]
 	enable_enchantment_spectral_conjurer = true
 	#Enables the enchantment Incurable Wounds [false/true|default:true]
@@ -51,6 +37,20 @@
 	enable_enchantment_sanctified = true
 	#Enables the enchantment Ruthless Strike [false/true|default:true]
 	enable_enchantment_ruthless_strike = true
+	#Allows Soulbound at enchanting table [false/true|default:false]
+	soulbound_enchanting_table = true
+	#Allows Spectral Bite at enchanting table [false/true|default:false]
+	spectral_bite_enchanting_table = true
+	#Allows Magic Siphon at enchanting table [false/true|default:false]
+	magic_siphon_enchanting_table = true
+	#Allows Plague Bringer at enchanting table [false/true|default:false]
+	plague_bringer_enchanting_table = true
+	#Allows Curse of Bones at enchanting table [false/true|default:false]
+	curse_of_bones_enchanting_table = true
+	#Allows Blessing at enchanting table [false/true|default:false]
+	blessing_enchanting_table = true
+	#Allows Frostbite at enchanting table [false/true|default:false]
+	frostbite_enchanting_table = true
 	#Allows Spectral Conjurer at enchanting table [false/true|default:false]
 	spectral_conjurer_enchanting_table = true
 	#Allows Incurable Wounds at enchanting table [false/true|default:false]
@@ -62,8 +62,28 @@
 	#Allows Ruthless Strike at enchanting table [false/true|default:false]
 	ruthless_strike_enchanting_table = true
 
+#Allows to customize or disable the potions
+[potions]
+	#Allows Earthly Garden [false/true|default:true]
+	allow_earthly_garden = true
+	#Allows Bait [false/true|default:true]
+	allow_bait = true
+	#Allows Frostbite [false/true|default:true]
+	allow_frostbite = true
+	#Allows Darkness [false/true|default:true]
+	allow_darkness = true
+	#Allows Discretion [false/true|default:true]
+	allow_discretion = true
+	#Allows Restoration [false/true|default:true]
+	allow_restoration = true
+
 #For settings related to magic items
 [magic_item]
+	#Chance for players to obtain an enchanted Grave's Key on death (-1 disables the Perk Jailer) [-1..100|default:0]
+	#Range: -1 ~ 100
+	chance_enchanted_grave_key = 0
+	#Prevents to craft Enchanted Grave Key [false/true|default:false]
+	disable_enchanted_grave_key_recipe = false
 	#Scroll duration [1200..120000|default:12000]
 	#Range: 1200 ~ 120000
 	scroll_duration = 12000
@@ -73,17 +93,12 @@
 	#Cooldown in second after using a tablet [60..1200|default:300]
 	#Range: 60 ~ 1200
 	tablet_cooldown = 300
-	#Chance for players to obtain an enchanted Grave's Key on death (-1 disables the Perk Jailer) [-1..100|default:0]
-	#Range: -1 ~ 100
-	chance_enchanted_grave_key = 0
-	#Prevents to craft Enchanted Grave Key [false/true|default:false]
-	disable_enchanted_grave_key_recipe = false
-	#The cooldown in minutes to reset the perks with the Book of Oblivion [20..1440|default:120]
-	#Range: 20 ~ 1440
-	cooldown_reset_perk = 120
 	#Maximum level for Magic Scrolls [0..255|default:4]
 	#Range: 0 ~ 255
 	level_max_magic_scrolls = 4
+	#The cooldown in minutes to reset the perks with the Book of Oblivion [20..1440|default:120]
+	#Range: 20 ~ 1440
+	cooldown_reset_perk = 120
 
 #For settings related to decorative tombs and magic items
 [decorative_grave]
@@ -95,6 +110,8 @@
 [allowedMagicItems]
 	#Voodoo Poppet [false/true|default:true]
 	allow_voodoo_poppet = true
+	#Receptacle of Familiar [false/true|default:true]
+	allow_receptacle_of_familiar = true
 	#Book of Disenchantment [false/true|default:true]
 	allow_book_of_disenchantment = true
 	#Scroll of Preservation [false/true|default:true]
@@ -109,6 +126,8 @@
 	allow_tablet_of_home = true
 	#Tablet of Assistance [false/true|default:true]
 	allow_tablet_of_assistance = true
+	#Tablet of Guard [false/true|default:true]
+	allow_tablet_of_guard = true
 	#Tablet of Cupidity [false/true|default:true]
 	allow_tablet_of_cupidity = true
 	#Scroll of Unstable Intangibility [false/true|default:true]
@@ -138,13 +157,17 @@
 	#Enchanted Bundle [false/true|default:true]
 	allow_enchanted_bundle = true
 	#Book of Recycling [false/true|default:true]
-	allow_book_of_recycling = false
+	allow_book_of_recycling = true
 	#Book of Repairing [false/true|default:true]
 	allow_book_of_repairing = true
 	#Book of Magic Impregnation [false/true|default:true]
 	allow_book_of_magic_impregnation = true
 	#Book of Scribe [false/true|default:true]
 	allow_book_of_scribe = true
+	#Book of Soulbound [false/true|default:true]
+	allow_book_of_soulbound = true
+	#Book of Oblivion [false/true|default:true]
+	allow_book_of_oblivion = true
 	#Smoke Ball [false/true|default:true]
 	allow_smoke_ball = true
 	#Seeker Rod [false/true|default:true]
@@ -155,14 +178,6 @@
 	allow_bag_of_seeds = true
 	#Magic Scroll [false/true|default:true]
 	allow_magic_scroll = true
-	#Receptacle of Familiar [false/true|default:true]
-	allow_receptacle_of_familiar = true
-	#Tablet of Guard [false/true|default:true]
-	allow_tablet_of_guard = true
-	#Book of Soulbound [false/true|default:true]
-	allow_book_of_soulbound = true
-	#Book of Oblivion [false/true|default:true]
-	allow_book_of_oblivion = true
 	#Gemstone of Familiar [false/true|default:true]
 	allow_gemstone_of_familiar = true
 	#Gemstone of Merchant [false/true|default:true]
@@ -176,19 +191,4 @@
 [compatibility]
 	#fix the RepairCost:0 added by the anvil & grindstone in nbt preventing theses items to stack [false/true|default:true]
 	fix_repair_cost_zero = true
-
-#Allows to customize or disable the potions
-[potions]
-	#Allows Earthly Garden [false/true|default:true]
-	allow_earthly_garden = true
-	#Allows Bait [false/true|default:true]
-	allow_bait = true
-	#Allows Frostbite [false/true|default:true]
-	allow_frostbite = true
-	#Allows Darkness [false/true|default:true]
-	allow_darkness = true
-	#Allows Discretion [false/true|default:true]
-	allow_discretion = true
-	#Allows Restoration [false/true|default:true]
-	allow_restoration = true
 

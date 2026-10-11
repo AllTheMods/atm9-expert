@@ -32,5 +32,5 @@
 	potion_time = 15
 	#Extend time duration, in ticks
 	#Range: > 0
-	extend_time = 5
+	extend_time = 100
 

@@ -20,9 +20,20 @@ ServerEvents.recipes(allthemods => {
    
     addEBF('#forge:dusts/allthemodium','#forge:necrotic_acid 1000','gtceu:hot_allthemodium_ingot',null,4500,2400,IV);
     addEBF(['#forge:dusts/vibranium', '#forge:dusts/stabilized_clathrate'],'#forge:necrotic_acid 1000','gtceu:hot_vibranium_ingot',null,4500,2400,IV);
-    addEBF(['#forge:dusts/unobtainium', '#forge:dusts/zirconium_lattice'],'#forge:necrotic_acid 1000','gtceu:hot_unobtainium_ingot',null,4500,2400,IV);
+    addEBF(['#forge:dusts/unobtainium', '#forge:dusts/zirconium_lattice'],'#forge:necrotic_acid 1000','gtceu:hot_unobtainium_ingot',null,4500,2400,IV);    
+    addEBF('#forge:dusts/bismuth_strontium_calcium_copper_oxide','#forge:terephthalic_acid 1000','gtceu:hot_bismuth_strontium_calcium_copper_oxide_ingot',null,4500,2400,IV);
 
-    // EBF
+    const stage4cooling = ['gtceu:hot_allthemodium_ingot', 'gtceu:hot_vibranium_ingot', 'gtceu:hot_unobtainium_ingot', 'gtceu:hot_bismuth_strontium_calcium_copper_oxide_ingot']
+    stage4cooling.forEach(item => {
+        allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/${item.replace(/[^a-z0-9]/gi, '_')}_freezing`)
+            .itemInputs(item)
+            .itemOutputs(item.replace('hot_', ''))
+            .inputFluids('#forge:water_stage_4 1000')
+            .duration(500)
+            .EUt(IV);
+    });
+
+    
 
     //steel
     addEBF(

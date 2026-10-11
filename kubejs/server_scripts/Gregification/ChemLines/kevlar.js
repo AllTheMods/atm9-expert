@@ -17,6 +17,14 @@ ServerEvents.recipes(allthemods => {
         .duration(900)
         .EUt(EV); // EV
 
+    // Nitrobenzene + Hydrogen + Palladium (catalyst) -> Aniline + Water
+    allthemods.recipes.gtceu.chemical_reactor('gregification:kevlar/aniline')
+        .notConsumable('#forge:dusts/nickel')
+        .inputFluids('#forge:nitrobenzene 1000', '#forge:hydrogen 6000')
+        .outputFluids('gtceu:aniline 500', 'minecraft:water 2000')
+        .duration(1000)
+        .EUt(HV); // HV
+
     // Aniline + Acetic Anhydride + Nitration Mixture -> 4-Nitroaniline + Diluted Sulfuric Acid
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:kevlar/nitroaniline')
         .inputFluids('#forge:aniline 1000', '#forge:acetic_anhydride 100', '#forge:nitration_mixture 2000')

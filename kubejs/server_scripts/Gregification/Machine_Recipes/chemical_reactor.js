@@ -25,7 +25,7 @@ ServerEvents.recipes(allthemods => {
         '#forge:oxygen 1000',
         '5x gtceu:copper_oxide_dust',
         null,
-        IV,
+        HV,
         600,
         'copper_oxide'
     );
@@ -36,7 +36,7 @@ ServerEvents.recipes(allthemods => {
         '#forge:oxygen 3000',
         '5x gtceu:bismuth_oxide_dust',
         null,
-        IV,
+        HV,
         600,
         'bismuth_oxide'
     );
@@ -47,7 +47,7 @@ ServerEvents.recipes(allthemods => {
         null,
         '2x gtceu:nylon_dust',
         null,
-        IV,
+        HV,
         600,
         'nylon'
     );
@@ -58,7 +58,7 @@ ServerEvents.recipes(allthemods => {
         '#forge:chloroprene 4000',
         'gtceu:neoprene_dust',
         null,
-        IV,
+        HV,
         600,
         'neoprene'
     );
@@ -69,7 +69,7 @@ ServerEvents.recipes(allthemods => {
         ['#forge:hydrogen 2000', '#forge:oxygen 6000'],
         '18x gtceu:pyromellitic_dianhydride_dust',
         null,
-        IV,
+        HV,
         600,
         'pyromellitic_dianhydride'
     );
@@ -80,7 +80,7 @@ ServerEvents.recipes(allthemods => {
         '#forge:oxydianiline 1000',
         '2x gtceu:polyimide_dust',
         null,
-        IV,
+        HV,
         600,
         'polyimide'
     );
@@ -91,7 +91,7 @@ ServerEvents.recipes(allthemods => {
         ['#forge:butadiene 1000', '#forge:chlorine 1000'],
         null,
         'gtceu:chloroprene 2000',
-        IV,
+        HV,
         600,
         'chloroprene'
     );
@@ -102,7 +102,7 @@ ServerEvents.recipes(allthemods => {
         '#forge:ammonia 2000',
         null,
         'gtceu:adiponitrile 3000',
-        IV,
+        HV,
         600,
         'adiponitrile'
     );
@@ -113,7 +113,7 @@ ServerEvents.recipes(allthemods => {
         ['#forge:aniline 2000','#forge:oxygen 1000'],
         null,
         'gtceu:oxydianiline 3000',
-        IV,
+        HV,
         600,
         'oxydianiline'
     );
@@ -146,7 +146,7 @@ ServerEvents.recipes(allthemods => {
         ['#forge:cyclohexane 1000', '#forge:oxygen 1000'],
         null,
         'gtceu:cyclohexanone 2000',
-        IV,
+        HV,
         600,
         'cyclohexanone'
     );
@@ -157,7 +157,7 @@ ServerEvents.recipes(allthemods => {
         ['#forge:cyclohexanone  1000', '#forge:nitric_acid 2000'],
         '3x gtceu:adipic_acid_dust',
         null,
-        IV,
+        HV,
         600,
         'adipic_acid'
     );
@@ -168,7 +168,7 @@ ServerEvents.recipes(allthemods => {
         ['#forge:adiponitrile 1000', '#forge:hydrogen 4000'],
         '5x gtceu:hexamethylenediamine_dust',
         null,
-        IV,
+        HV,
         600,
         'hexamethylenediamine'
     );

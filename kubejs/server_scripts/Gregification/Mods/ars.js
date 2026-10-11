@@ -77,4 +77,29 @@ ServerEvents.recipes(allthemods => {
         .EUt(EV)
         .circuit(10)
         .duration(300);
+    
+    allthemods.recipes.gtceu.assembler('gregification:ars/sourcestone')
+        .itemInputs('#forge:dusts/source', '#forge:frames/aluminium', '2x bloodmagic:reinforcedslate', '2x #forge:dusts/plascrete')
+        .inputFluids('#forge:steel 288 ')
+        .itemOutputs('4x ars_nouveau:sourcestone')
+        .duration(500)
+        .EUt(MV);
+
+    allthemods.recipes.gtceu.assembler('gregification:ars/arcane_pedestal')
+        .itemInputs('gtceu:mv_machine_hull','2x ars_nouveau:sourcestone', '#forge:exquisite_gems/source', '4x #forge:plates/gold')
+        .itemOutputs('ars_nouveau:arcane_pedestal')
+        .duration(500)
+        .EUt(MV);    
+
+    allthemods.recipes.gtceu.assembler('gregification:ars/enchanting_apparatus')
+        .itemInputs('gtceu:mv_machine_hull','2x ars_nouveau:sourcestone', '#forge:exquisite_gems/diamond', '4x #forge:plates/gold')
+        .itemOutputs('ars_nouveau:enchanting_apparatus')
+        .duration(500)
+        .EUt(MV);    
+
+    allthemods.recipes.gtceu.assembler('gregification:ars/imbuement_chamber')
+        .itemInputs('gtceu:mv_machine_hull', '4x #forge:plates/gold', '#evilcraft:gems/dark_power', '6x #forge:planks/archwood')
+        .itemOutputs('ars_nouveau:imbuement_chamber')
+        .duration(500)
+        .EUt(MV);    
 });

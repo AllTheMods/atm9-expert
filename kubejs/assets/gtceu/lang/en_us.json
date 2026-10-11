@@ -500,7 +500,7 @@
     "gtceu.jei.ore_vein.venus_calaverite_kurilite_telluride": "Telluride Deposit",
     "gtceu.jei.ore_vein.venus_laurite": "Laurite Deposit",
     "gtceu.jei.ore_vein.glacio_germanite_renierite_argyrodite": "Germanium Deposit",
-    "gtceu.jei.ore_vein.glacio_rhenite_tarkianite": "Rhenium Deposit",
+    "gtceu.jei.ore_vein.mars_rhenite_tarkianite": "Rhenium Deposit",
     "gtceu.jei.ore_vein.glacio_rubicline_rhodizite": "Rubicline-Rhodizite Deposit",
     "gtceu.jei.ore_vein.moon_radio_thoric_phosphate": "Radio-Thoric Phosphate Deposit",
     "gtceu.jei.ore_vein.glacio_tenebrius_etrium_chaotic": "Tenebrius-Etrium Deposit",
@@ -768,7 +768,9 @@
     "material.gtceu.adiponitrile": "Adiponitrile",
     "material.gtceu.oxydianiline": "Oxydianiline",
     "material.gtceu.zirconium_lattice": "Zirconium Lattice",
-    "material.gtceu.cyclohexanone": "Cyclohexanone"
+    "material.gtceu.cyclohexanone": "Cyclohexanone",
+    "material.gtceu.plascrete": "Plascrete",
+    "material.gtceu.magebloom": "Magebloom"
 }
 
  
