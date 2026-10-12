@@ -129,7 +129,7 @@ ServerEvents.recipes(allthemods => {
         [
             'gtceu:soc',
             'ae2:printed_calculation_processor',
-            '2x #forge:plates/tungsten_carbide'
+            '2x #forge:screws/tungsten_carbide'
         ],
         '#forge:polyimide 144',
         '8x ae2:calculation_processor',
@@ -141,7 +141,7 @@ ServerEvents.recipes(allthemods => {
         [
             'gtceu:soc',
             'ae2:printed_logic_processor',
-            '2x #forge:plates/tungsten_carbide'
+            '2x #forge:screws/tungsten_carbide'
         ],
         '#forge:polyimide 144',
         '8x ae2:logic_processor',
@@ -153,12 +153,12 @@ ServerEvents.recipes(allthemods => {
         [
             'gtceu:soc',
             'ae2:printed_engineering_processor',
-            '2x #forge:plates/tungsten_carbide'
+            '2x #forge:screws/tungsten_carbide'
         ],
         '#forge:polyimide 144',
         '8x ae2:engineering_processor',
         IV,
         120
     )
-    
+
 });
