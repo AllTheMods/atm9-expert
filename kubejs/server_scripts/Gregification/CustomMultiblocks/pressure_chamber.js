@@ -1,6 +1,16 @@
 ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
-    const addPC = (itemsIn, itemOut, fluidIn, fluidOut, eu, duration, customID, program) => {
+    const tempTiers = [1800, 2700, 3600, 4500, 5400, 7200, 9001, 10800];
+    const energyTiers = [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ];
+    
+    allthemods.recipes.gtceu.air_compressor('gregification:mv_compressed_air')
+        .inputFluids('gtceu:air 1000')
+        .outputFluids('gtceu:compressed_air 1000')
+        .circuit(5)
+        .duration(20)
+        .EUt(LV);
+
+    const addPC = (itemsIn, itemOut, fluidIn, fluidOut, tier, program, customID) => {    
 
         let outputID = '';
 
@@ -16,22 +26,20 @@ ServerEvents.recipes(allthemods => {
         } else {
             outputID = 'dissolution_' + Math.floor(Math.random() * 1000);
         }
-
-        let voltage = eu;
+        
 
         let recipe = allthemods.recipes.gtceu.industrial_pressure_chamber(`gregification:dissolution/${outputID}`)
-            .duration(duration)
-            .EUt(voltage);
+            .duration((tier+1)*400)
+            .EUt(energyTiers[tier+1])
+            .inputFluids(`#forge:compressed_air ${tier+1}0000`)
+            .addData('ebf_temp', tempTiers[tier]);
 
         // Safety check for inputs
-        if (program) {
-            recipe.circuit(program); 
-        }	
-
+        if (program) recipe.circuit(program);
         if (itemsIn) recipe.itemInputs(itemsIn);
         if (fluidIn) recipe.inputFluids(fluidIn);
         if (itemOut) recipe.itemOutputs(itemOut);
-        if (fluidOut) recipe.outputFluids(fluidOut);        
+        if (fluidOut) recipe.outputFluids(fluidOut);
 
     };
 
@@ -39,11 +47,9 @@ ServerEvents.recipes(allthemods => {
     addPC(
         '4x #forge:storage_blocks/iron',
         '4x pneumaticcraft:compressed_iron_block',
-        'gtceu:compressed_air 2000',
         null,
-        EV,
-        200,
         null,
+        1,        
         1
     );
 
@@ -51,11 +57,9 @@ ServerEvents.recipes(allthemods => {
     addPC(
         '32x #forge:ingots/iron',
         '32x pneumaticcraft:ingot_iron_compressed',
-        'gtceu:compressed_air 2000',
         null,
-        EV,
-        200,
-        null,
+        null,        
+        0,        
         1
     );
 
@@ -63,11 +67,9 @@ ServerEvents.recipes(allthemods => {
     addPC(
         '4x #forge:storage_blocks/iron',
         '4x gtceu:wrought_iron_block',
-        'gtceu:compressed_air 2000',
         null,
-        EV,
-        200,
-        null,
+        null,        
+        2,        
         2
     );
 
@@ -75,11 +77,9 @@ ServerEvents.recipes(allthemods => {
     addPC(
         '32x #forge:ingots/iron',
         '32x gtceu:wrought_iron_ingot',
-        'gtceu:compressed_air 2000',
         null,
-        EV,
-        200,
-        null,
+        null,        
+        1,        
         2
     );
    
@@ -87,10 +87,10 @@ ServerEvents.recipes(allthemods => {
     addPC(
         Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:iron"}}').strongNBT(),
         Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:compressed_iron"}}').strongNBT(),
-        'gtceu:compressed_air 1000',
         null,
-        EV,
-        2000,
+        null,        
+        4,
+        null,
         'compressed_bee'
     );
 
@@ -98,40 +98,36 @@ ServerEvents.recipes(allthemods => {
     addPC(
         '4x #forge:dyes/green',
         '4x minecraft:slime_ball',
-        ['gtceu:compressed_air 100', '#forge:milk 100'],
+        '#forge:milk 100',
         null,
-        EV,
-        20,
+        1
     );
 
     //ice
     addPC(
         '64x minecraft:snow_block',
         '16x minecraft:ice',
-        'gtceu:compressed_air 100',
         null,
-        EV,
-        40,
+        null,
+        1
     );
 
     //packed ice
     addPC(
         '64x minecraft:ice',
         '16x minecraft:packed_ice',
-        'gtceu:compressed_air 100',
         null,
-        EV,
-        40,
+        null,
+        1
     );
 
     //blue ice
     addPC(
         '16x minecraft:packed_ice',
         '4x minecraft:blue_ice',
-        'gtceu:compressed_air 100',
         null,
-        EV,
-        40,
+        null,
+        2
     );
 
 
@@ -139,50 +135,45 @@ ServerEvents.recipes(allthemods => {
     addPC(
         '8x #forge:grain/wheat',
         '24x pneumaticcraft:wheat_flour',
-        'gtceu:compressed_air 1000',
         null,
-        EV,
-        10,
+        null,
+        0
     );
 
     //sourdough - using forge flour dust
     addPC(
         '24x #forge:dusts/flour',
         '24x pneumaticcraft:sourdough',
-        ['pneumaticcraft:yeast_culture 4000', 'gtceu:compressed_air 1000'],
+        'pneumaticcraft:yeast_culture 4000',
         null,
-        EV,
-        10,
+        1
     );
 
     //compressed stone
     addPC(
         '32x #forge:stone',
         '32x pneumaticcraft:compressed_stone',
-        'gtceu:compressed_air 1000',
         null,
-        EV,
-        80,
+        null,
+        1
     );
 
     //transistor
     addPC(
-        ['8x #forge:plates/plastic', '32x #forge:fine_wires/tin'],
+        ['8x #forge:plates/plastic', '8x #forge:fine_wires/tin', '2x #forge:dusts/redstone', '2x #forge:foils/aluminium'],
         '8x pneumaticcraft:transistor',
-        'gtceu:compressed_air 1000',
         null,
-        EV,
-        80,
+        null,
+        2
     );
 
     //capacitor
     addPC(
-        ['8x #forge:plates/plastic', '32x #forge:fine_wires/gold'],
+        ['8x #forge:plates/plastic', '8x #forge:fine_wires/gold', '2x #forge:dusts/redstone', '2x #forge:plates/silicon'],
         '8x pneumaticcraft:capacitor',
-        'gtceu:compressed_air 1000',
         null,
-        EV,
-        80,
+        null,
+        2
     );
 
     //pulsating black hole
@@ -197,10 +188,10 @@ ServerEvents.recipes(allthemods => {
             'ae2:quantum_ring',
             Item.of('pneumaticcraft:micromissiles', '{Damage:0}').strongNBT()],
         'allthetweaks:pulsating_black_hole',
-        'gtceu:compressed_air 10000',
         null,
-        IV,
-        4000,
+        null,
+        5,
+        null,
         'pulsating_black_hole'
     );
 
@@ -208,20 +199,18 @@ ServerEvents.recipes(allthemods => {
     addPC(
         '#forge:dusts/gunpowder',
         null,
-        ['gtceu:iron_iii_chloride 1000', '#forge:plastic 2000', 'gtceu:hydrochloric_acid 2000', 'gtceu:compressed_air 1000'],
+        ['gtceu:iron_iii_chloride 1000', '#forge:plastic 2000', 'gtceu:hydrochloric_acid 2000'],
         'pneumaticcraft:etching_acid 1000',
-        EV,
-        40,
+        1
     );
 
     //empty pcb
     addPC(
         ['8x #forge:plates/plastic', '32x #forge:fine_wires/platinum', '32x #forge:fine_wires/copper'],
         '8x pneumaticcraft:empty_pcb',
-        'gtceu:compressed_air 1000',
         null,
-        EV,
-        80,
+        null,
+        1
     );
 
 
@@ -229,29 +218,26 @@ ServerEvents.recipes(allthemods => {
     addPC(
         ['#forge:ingots/gold', '2x #forge:dusts/redstone'],
         'pneumaticcraft:turbine_blade',
-        'gtceu:compressed_air 100',
         null,
-        EV,
-        40,
+        null,
+        2
     );
 
     //diamond
     addPC(
         '8x #forge:storage_blocks/coal',
         'minecraft:diamond',
-        'gtceu:compressed_air 1000',
         null,
-        EV,
-        80,
+        null,
+        2
     );
 
     //solar wafer
     addPC(
         ['pneumaticcraft:upgrade_matrix', 'minecraft:amethyst_shard'],
         'pneumaticcraft:solar_wafer',
-        'gtceu:compressed_air 500',
         null,
-        EV,
-        40,
+        null,
+        2,
     );
 });

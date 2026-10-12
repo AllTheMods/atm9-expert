@@ -53,13 +53,28 @@ ServerEvents.recipes(allthemods => {
         { input: ['#forge:storage_blocks/amethyst'], output: 'ars_nouveau:source_gem_block', source: 2000, c: 2 }
     ]
     recipes.forEach(mat => {
-        allthemods.recipes.gtceu.imbument_chamber(`gregification:craft_${mat.output.split(":")[1]}${mat.c}`)
+        let rID = mat.c ? `gregification:craft_${mat.output.split(":")[1]}_${mat.c}` : `gregification:craft_${mat.output.split(":")[1]}`;
+        allthemods.recipes.gtceu.imbument_chamber()
             .itemInputs(mat.input)
             .inputFluids(`#forge:source ${mat.source}`,)
             .itemOutputs(mat.output)
             .EUt(EV)            
             .duration(300)
     });
+    //jar
+    allthemods.shaped('ars_nouveau:source_jar',
+        [
+            'STS',
+            'G G',
+            'STS'
+
+        ],
+        {
+            S: 'ars_nouveau:sourcestone',
+            T: 'ars_nouveau:archwood_slab',
+            G: 'gtceu:tempered_glass'
+
+        }).id(`gregification:ars/source_jar`);
 
     //ars essences
     const essences = ['abjuration', 'conjuration', 'manipulation', 'air', 'water', 'earth', 'fire']
@@ -71,6 +86,14 @@ ServerEvents.recipes(allthemods => {
             .circuit(index + 1)
             .duration(300)
     });
+
+    allthemods.recipes.gtceu.imbument_chamber(`gregification:mob_jar`)
+        .itemInputs('#forge:exquisite_gems/vengeful', '#forge:exquisite_gems/destructive', '5x gtceu:laminated_glass', '3x ars_nouveau:sourcestone')
+        .inputFluids('#forge:source 16000',)
+        .itemOutputs('ars_nouveau:mob_jar')
+        .EUt(IV)
+        .duration(5000);
+
     allthemods.recipes.gtceu.imbument_chamber(`gregification:craft_anima`)
         .inputFluids('#forge:source 3500',)
         .itemOutputs('ars_elemental:anima_essence')

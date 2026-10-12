@@ -150,7 +150,7 @@ ServerEvents.recipes(allthemods => {
         let bPool = `gtceu:${tData.tier}_mana_pool`;
         let aChamber = `gtceu:${tData.tier}_imbument_chamber`;
         let baChamber = `gtceu:${tData.tier}_alchemical_workbench`;
-        
+        let airCompressor = `gtceu:${tData.tier}_air_compressor`;
 
         let machineR = `gtceu:${tData.tier}_reconstructor`;
         let machineL = `gtceu:${tData.tier}_liquifier`;
@@ -168,6 +168,19 @@ ServerEvents.recipes(allthemods => {
         let magnetic = 'gtceu:long_magnetic_eternium_rod';        
         let magnetic2 = 'gtceu:magnetic_eternium_rod';        
 
+        if (tData.t >= 1 && tData.t <= 8) {
+            allthemods.shaped(airCompressor, [
+                'PUP',
+                'CHC',
+                'PUP'
+            ], {
+                P: plate,
+                C: circuit,
+                H: hull,                
+                U: pump
+            }).id(`gregification:${airCompressor.split(':')[1]}`); 
+
+        }
         if (tData.t == 3) {
             addAssembler(
                 [

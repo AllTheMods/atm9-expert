@@ -196,6 +196,19 @@ ServerEvents.recipes(allthemods => {
         .duration(100)
         .EUt(24)
 
+        
+    const createStones = ['asurine', 'ochrum', 'veridium', 'crimsite'];
+    createStones.forEach(stone => {
+        allthemods.recipes.gtceu.rock_breaker(`gregification:create_${stone}`)
+            .notConsumable(`create:${stone}`)
+            .itemOutputs(`create:${stone}`)
+            .addDataString('fluidA', 'minecraft:lava')
+            .addDataString('fluidB', 'minecraft:water')
+            .duration(80)
+            .EUt(EV)
+    });
+        
+
     // Rock Breaker recipes for End Stone and Netherrack
     allthemods.recipes.gtceu.rock_breaker('netherrack')
         .notConsumable('minecraft:netherrack')

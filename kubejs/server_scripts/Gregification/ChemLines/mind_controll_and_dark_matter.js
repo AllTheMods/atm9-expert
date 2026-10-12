@@ -1,7 +1,7 @@
 ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA;
     const EUSimple = EV;
-    const EUComplex = ZPM; //UV Tier
+    const EUComplex = LuV; //UV Tier
 
 allthemods.recipes.gtceu.mixer('gregification:soul_essence_synthesis')
         .itemInputs('#forge:dusts/soul', '#forge:dusts/source', '#forge:dusts/mana_essence', '#forge:dusts/sculk')

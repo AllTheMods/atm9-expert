@@ -15,13 +15,13 @@
 	[TurbineFuel.FuelEfficiency]
 		#Base value
 		#Range: 0.0 ~ 100.0
-		Base = 1.100000023841858
+		Base = 1.350000023841858
 		#With tier 1 upgrade
 		#Range: 0.0 ~ 100.0
-		Tier1 = 1.350000023841858
+		Tier1 = 1.850000023841858
 		#With tier 2 upgrade
 		#Range: 0.0 ~ 100.0
-		Tier2 = 1.850000023841858
+		Tier2 = 2
 
 [TurbineSteam]
 	#Required modules for the machine to function
@@ -33,7 +33,7 @@
 	MaxRPM = 5000.0
 	#FE/mB
 	#Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
-	SteamEnergyDensity = 2.0
+	SteamEnergyDensity = 5.0
 	#Internal steam capacity (mB)
 	#Range: > 1
 	InternalSteamCapacity = 16000
@@ -135,7 +135,7 @@
 		[Modules.Turbines.Tier1]
 			#Maximum FE generated per tick
 			#Range: > 1
-			MaxFEPerTick = 100
+			MaxFEPerTick = 250
 			#Maximum FE generated per tick
 			#Range: 0.0 ~ 100.0
 			Inertia = 1.0
@@ -144,7 +144,7 @@
 		[Modules.Turbines.Tier2]
 			#Maximum FE generated per tick
 			#Range: > 1
-			MaxFEPerTick = 150
+			MaxFEPerTick = 500
 			#Maximum FE generated per tick
 			#Range: 0.0 ~ 100.0
 			Inertia = 1.1
@@ -153,7 +153,7 @@
 		[Modules.Turbines.Tier3]
 			#Maximum FE generated per tick
 			#Range: > 1
-			MaxFEPerTick = 250
+			MaxFEPerTick = 750
 			#Maximum FE generated per tick
 			#Range: 0.0 ~ 100.0
 			Inertia = 1.2
@@ -162,7 +162,7 @@
 		[Modules.Turbines.Tier4]
 			#Maximum FE generated per tick
 			#Range: > 1
-			MaxFEPerTick = 500
+			MaxFEPerTick = 1000
 			#Maximum FE generated per tick
 			#Range: 0.0 ~ 100.0
 			Inertia = 1.25
@@ -171,7 +171,7 @@
 		[Modules.Turbines.Tier5]
 			#Maximum FE generated per tick
 			#Range: > 1
-			MaxFEPerTick = 1000
+			MaxFEPerTick = 1500
 			#Maximum FE generated per tick
 			#Range: 0.0 ~ 100.0
 			Inertia = 1.4

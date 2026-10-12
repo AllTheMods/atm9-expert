@@ -164,7 +164,7 @@ ServerEvents.recipes(allthemods => {
             '4x #forge:plates/elementium',
             '8x #forge:screws/soularium',
             '#forge:frames/hellforged',
-            '4x #forge:plates/bismuth_strontium_calcium_copper_oxide'
+            '4x #gtceu:wires/octal/bismuth_strontium_calcium_copper_oxide'
 
         ],
         'gtceu:polyethylene 144',
@@ -186,6 +186,15 @@ ServerEvents.recipes(allthemods => {
         'sanguine_networks:virtual_sacrificer',
         HV,                                        // HV Voltage
         600
+    );
+
+    //undead sapling
+    addAssembler(
+        'minecraft:dead_bush',
+        '#forge:sanguine_concentrate 1000',
+        'evilcraft:undead_sapling',
+        LV,                                        // LV Voltage
+        2000
     );
 
 
@@ -668,12 +677,13 @@ ServerEvents.recipes(allthemods => {
         [
             '4x pneumaticcraft:turbine_rotor',
             '#forge:frames/plastic',
-            '2x #gtceu:circuits/iv',
+            '2x #gtceu:circuits/ev',
             'gtceu:titanium_crate',
-            '4x #forge:gears/plastic'
+            '4x #forge:gears/plastic',
+            '#gtceu:batteries/ev'
         ],
         [
-            '#forge:lubricant 4000'            
+            '#forge:lubricant 1000'
         ],
         'pneumaticcraft:collector_drone',
         IV, 600

@@ -139,9 +139,13 @@ ServerEvents.recipes(allthemods => {
 
     ]
     const globalRemoves3 = [      
-        'ae2:decorative/quartz_glass',
+        'pneumaticcraft:flux_compressor',
+        'projecte:relay_mk1', 'mob_grinding_utils:recipe_entity_conveyor', 'mekanism:geiger_counter', 'mekanism:module_geiger_unit',
+        'integrateddynamics:special/part_connector_omni_directional_copy', 'integrateddynamics:special/part_connector_omni_directional', 'integrateddynamics:crafting/part_connector_mono_directional',
+        'draconicevolution:dislocator_pedestal','draconicevolution:tools/dislocator',
+        'ae2:decorative/quartz_glass', 'ars_nouveau:mob_jar',
         'projecte:condenser_mk1', 'ars_nouveau:magebloom_fiber',
-        'ars_nouveau:arcane_pedestal', 'ars_nouveau:sourcestone', 'ars_nouveau:enchanting_apparatus', 'ars_nouveau:imbuement_chamber',
+        'ars_nouveau:arcane_pedestal', 'ars_nouveau:sourcestone', 'ars_nouveau:enchanting_apparatus', 'ars_nouveau:imbuement_chamber', 'ars_nouveau:source_jar',
         'tconstruct:smeltery/seared/grout_multiple', 'tconstruct:smeltery/seared/grout', 
         'integrateddynamics:crafting/squeezer', 'integrateddynamics:crafting/mechanical_squeezer', 'integrateddynamics:crafting/energy_battery',
         'integrateddynamics:crafting/cable', 'integrateddynamics:crafting/cable_rotated',
@@ -594,6 +598,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.remove({ type: 'elementalcraft:crystallization' });
     allthemods.remove({ type: 'mysticalagriculture:awakening' });
     allthemods.remove({ type: 'evilcraft:blood_infuser' });
+    allthemods.remove({ type: 'pneumaticcraft:pressure_chamber' });
     
 
     // Input Removals

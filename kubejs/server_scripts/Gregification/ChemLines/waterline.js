@@ -119,19 +119,25 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.baryonic_separator('gregification:preon_separation')
         .itemInputs(['#forge:small_dusts/protactinium', '#forge:small_dusts/francium'])
-        .chancedOutput('gtceu:preon', 50, 0)
+        .chancedOutput('gtceu:preon', 1500, 0)
         .duration(duration)
         .EUt(EUStage5);
 
     allthemods.recipes.gtceu.baryonic_separator('gregification:tachyon_separation')
         .itemInputs(['#forge:small_dusts/neutronium', '#forge:small_dusts/tenebrium'])
-        .chancedOutput('gtceu:tachyon', 50, 0)
+        .chancedOutput('gtceu:tachyon', 1500, 0)
+        .duration(duration)
+        .EUt(EUStage5);
+
+    allthemods.recipes.gtceu.baryonic_separator('gregification:neutrino_separation')
+        .itemInputs(['#forge:small_dusts/infinity', '#forge:small_dusts/tenebrium'])
+        .chancedOutput('gtceu:neutrino', 1500, 0)
         .duration(duration)
         .EUt(EUStage5);
     
     allthemods.recipes.gtceu.baryonic_separator('gregification:plutonic_quark_separation')
         .itemInputs(['#forge:small_dusts/tenebrium', '#forge:small_dusts/bedrockium'])
-        .chancedOutput('gtceu:plutonic_quark', 250, 0)
+        .chancedOutput('gtceu:plutonic_quark', 2500, 0)
         .duration(duration)
         .EUt(EUStage5);
 

@@ -61,6 +61,8 @@
     "gtceu.industrial_spirit_infuser": "Industrial Spirit Infuser",
     "block.gtceu.bio_electrical_infuser": "Bio-Electrical Infuser",
     "gtceu.bio_electrical_infuser": "Bio-Electrical Infuser",
+    "block.gtceu.air_compressor": "Air Compressor",
+    "gtceu.air_compressor": "Air Compressor",
     "material.gtceu.copper_alloy": "Copper Alloy",
     "material.gtceu.conductive_alloy": "Conductive Alloy",
     "material.gtceu.energetic_alloy": "Energetic Alloy",
@@ -770,7 +772,12 @@
     "material.gtceu.zirconium_lattice": "Zirconium Lattice",
     "material.gtceu.cyclohexanone": "Cyclohexanone",
     "material.gtceu.plascrete": "Plascrete",
-    "material.gtceu.magebloom": "Magebloom"
+    "material.gtceu.magebloom": "Magebloom",
+    "material.gtceu.blazing_pyrotheum": "Blazing Pyrotheum",
+    "material.gtceu.gelid_cryotheum": "Gelid Cryotheum",
+    "material.gtceu.zephyrean_aerotheum": "Zephyrean Aerotheum",
+    "material.gtceu.tectonic_petrotheum": "Tectonic Petrotheum",
+    "material.gtceu.thermal_coolant": "Thermal Coolant"
 }
 
  

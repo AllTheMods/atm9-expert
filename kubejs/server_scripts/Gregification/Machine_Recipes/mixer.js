@@ -315,6 +315,28 @@ ServerEvents.recipes(allthemods => {
         EV,
         250
     )
+    const theumDusts = [            
+        {name: 'gtceu:blazing_pyrotheum_dust', components: ['#forge:dusts/blaze','#forge:dusts/redstone', '#forge:dusts/carbon', '#forge:dusts/sulfur']},
+        {name: 'gtceu:gelid_cryotheum_dust', components: ['thermal:blizz_powder','#forge:dusts/redstone', '#forge:dusts/niter', '#forge:dusts/blue_ice']},
+        {name: 'gtceu:zephyrean_aerotheum_dust', components: ['thermal:blitz_powder', '#forge:dusts/redstone', '#forge:dusts/apatite', '#forge:dusts/silicon']},
+        {name: 'gtceu:tectonic_petrotheum_dust', components: ['thermal:basalz_powder', '#forge:dusts/redstone', '#forge:dusts/obsidian', '#forge:dusts/clay']}
+    ];
+
+    theumDusts.forEach(dust => {
+        addMixer(
+            dust.components,
+            `4x ${dust.name}`,
+            IV,
+            400
+        );
+    });
+
+    allthemods.recipes.gtceu.mixer('gregification:thermal_coolant')
+        .inputFluids('#forge:water_stage_4 1000')
+        .itemInputs('#forge:dusts/gelid_cryotheum')
+        .outputFluids('gtceu:thermal_coolant 1000')
+        .duration(400)
+        .EUt(IV);
 
     //dielectric paste
     allthemods.recipes.gtceu.mixer('gregification:dielectric_paste')
@@ -347,7 +369,7 @@ ServerEvents.recipes(allthemods => {
         .itemInputs(['#forge:dusts/cadmium', '9x #forge:dusts/copper'])
         .itemOutputs('10x gtceu:cadmium_copper_dust')
         .duration(200)
-        .EUt(ZPM);
+        .EUt(LV);
 
     //samarium cobalt
     allthemods.recipes.gtceu.mixer('gregification:samarium_cobalt_dust')
@@ -388,7 +410,7 @@ ServerEvents.recipes(allthemods => {
     //witherite
     allthemods.recipes.gtceu.mixer('gregification:witherite')
         .itemInputs(['#forge:dusts/barium', '#forge:dusts/carbon', '3x #forge:dusts/netherite'])
-        .itemOutputs('gtceu:witherite_dust')
+        .itemOutputs('8x gtceu:witherite_dust')
         .inputFluids('#forge:oxygen 3000')
         .duration(600)
         .EUt(IV);

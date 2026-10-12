@@ -261,14 +261,6 @@ ServerEvents.recipes(allthemods => {
         "exoflame": false
     }).id('gregification:thermo/plastic');
 	
-	allthemods.recipes.gtceu.chemical_reactor('gregification:mv_compressed_air')
-        .inputFluids('gtceu:air 100')
-        .outputFluids('gtceu:compressed_air 100')
-        .circuit(5)
-        .duration(200)
-        .EUt(MV);
-
-	
 	rotary('kubejs:saturated_tau_gas', 'gtceu:saturated_tau', 1);
 	rotary('kubejs:compressed_air_gas', 'gtceu:compressed_air', 1);
 	rotary('mekanism:polonium', 'gtceu:polonium', 1)

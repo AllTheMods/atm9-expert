@@ -26,6 +26,18 @@ ServerEvents.recipes(allthemods => {
         IV,
         1200
     );
+
+    addAssembler(
+        [
+            'gtceu:mv_conveyor_module',
+            'gtceu:mv_machine_hull',
+            '4x #forge:plates/iron'
+        ],
+        '#forge:lubricant 100', 
+        'mob_grinding_utils:entity_conveyor',
+        MV,
+        200
+    );
     	
 	addAssembler(
         [

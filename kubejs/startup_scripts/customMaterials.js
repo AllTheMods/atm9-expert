@@ -76,6 +76,7 @@ const materialsGem = [
     { name: 'atm_star', color: 0xFFC107, iconSet: 'SHINY', voltage: 2097152, loss: 2, superconductor: false },
     { name: 'dark_matter', color: 0x3b173f, iconSet: 'NETHERSTAR', simple: true},
     { name: 'red_matter', color: 0x7a0606, iconSet: 'NETHERSTAR', simple: true}
+
     
 ];
 
@@ -299,7 +300,7 @@ const chalks = [
     { name: 'black_chalk', color: 0x000000, iconSet: 'FLUID' }
 ];
 
-const fluids = [
+const fluids = [    
     { name: 'sugar_water', components: '4x sugar, 1x distilled_water', color: 0xE8D9A0, iconSet: 'FLUID' },
 
     { name: 'cognizant_sanguine_ichor', color: 0x6A0DAD, temp: 300, iconSet: 'FLUID' },
@@ -413,7 +414,8 @@ const fluids = [
     { name: 'chloroprene', components: '1x butadiene, 1x chlorine', color: 0xE0E8C8, iconSet: 'FLUID', noDecomp: true },
     { name: 'adiponitrile', components: '1x adipic_acid, 2x ammonia', color: 0xD9D3E0, iconSet: 'FLUID', noDecomp: true },    
     { name: 'oxydianiline', components: '2x aniline, 1x oxygen', color: 0xD9C7A8, iconSet: 'FLUID', noDecomp: true },
-    { name: 'cyclohexanone', components: '1x cyclohexane, 1x oxygen', color: 0xE0D8C0, iconSet: 'FLUID', noDecomp: true }
+    { name: 'cyclohexanone', components: '1x cyclohexane, 1x oxygen', color: 0xE0D8C0, iconSet: 'FLUID', noDecomp: true },
+    { name: 'thermal_coolant', components: '1x water_stage_4, 1x gelid_cryotheum', color: 0x8EE3F0, iconSet: 'FLUID' },
 ];
 
 const kevlarFluids = [
@@ -465,8 +467,7 @@ const dusts = [
     { name: 'titanium_hydroxide', components: '1x titanium, 4x oxygen, 4x hydrogen', color: 0xF0F0F0, formula: 'Ti(OH)4', iconSet: 'DULL', noDecomp: true },
     { name: 'titanium_dioxide', components: '1x titanium, 2x oxygen', color: 0xCCD6DA, iconSet: 'DULL' },
     { name: 'titanium_carbonitride', components: '1x titanium_dioxide, 3x carbon, 1x nitrogen', color: 0x8A7F5C, iconSet: 'METALLIC' },
-    { name: 'cermet_blend', components: '4x titanium_carbonitride, 2x nickel, 1x molybdenum', color: 0x9C9690, iconSet: 'METALLIC' },
-    { name: 'neutrino', color: 0xFF990F, iconSet: 'METALLIC' },
+    { name: 'cermet_blend', components: '4x titanium_carbonitride, 2x nickel, 1x molybdenum', color: 0x9C9690, iconSet: 'METALLIC' },    
     { name: 'phantom_membrane', color: 0xC1B79F, iconSet: 'DULL' },
     { name: 'cerium_chloride', components: '1x cerium, 2x chlorine', color: 0xE0DED0, iconSet: 'METALLIC' },
     { name: 'carbonate', components: '1x carbon, 3x oxygen', color: 0xF4F4F4, iconSet: 'DULL' },
@@ -599,7 +600,7 @@ const modalloys = [
     { name: 'allthemodium', noSmelting: true, ore: true, element: 'allthemodium', color: 0xFAD64A, iconSet: 'METALLIC', voltage: 8192, loss: 1, cBlast: { temp: 5400, duration: 1200, volts: 8192 } },
     { name: 'vibranium', noSmelting: true, ore: true, element: 'vibranium', color: 0x6DFF6D, iconSet: 'METALLIC', voltage: 32768, loss: 1, cBlast: { temp: 5400, duration: 1200, volts: 32768 } },
     { name: 'unobtainium', noSmelting: true, ore: true, element: 'unobtainium', color: 0xA336FF, iconSet: 'METALLIC', voltage: 131072, loss: 1, cBlast: { temp: 5400, duration: 1200, volts: 131072 } },
-    { name: 'bismuth_strontium_calcium_copper_oxide', noSmelting: true, color: 0x3A3A42, iconSet: 'ROUGH', cBlast: { temp: 5400, duration: 1200, volts: 8192 } },
+    { name: 'bismuth_strontium_calcium_copper_oxide', voltage: 32768, superconductor: true, noSmelting: true, color: 0x3A3A42, iconSet: 'METALLIC', cBlast: { temp: 5400, duration: 1200, volts: 8192 } },
 
     // --- EnderIO Alloys ---
     { name: 'copper_alloy', components: '1x copper, 1x silicon', color: 0x935B3B, iconSet: 'METALLIC', voltage: 32, loss: 2, cBlast: { temp: 1700, duration: 400, volts: 128 } },
@@ -658,8 +659,8 @@ const modalloys = [
     { name: 'enderium', pipe: true, color: 0x0B6156, iconSet: 'METALLIC', voltage: 2048, loss: 1, components: '1x diamond, 3x lead, 2x ender_pearl', cBlast: { temp: 2700, duration: 800, volts: 8192 } },
 
     // --- Draconic Evolution ---
-    { name: 'draconium', ore: true, element: 'draconium', color: 0x502C6C, iconSet: 'SHINY', voltage: 8192, loss: 1, cBlast: { temp: 4500, duration: 1200, volts: 8192 } },
-    { name: 'draconium_awakened', element: 'draconium_awakened', color: 0xFF6600, iconSet: 'BRIGHT', voltage: 2097152, superconductor: true },
+    { name: 'draconium', noSmelting: true, ore: true, element: 'draconium', color: 0x502C6C, iconSet: 'SHINY', voltage: 8192, loss: 1, cBlast: { temp: 4500, duration: 1200, volts: 8192 } },
+    { name: 'draconium_awakened', noSmelting: true, element: 'draconium_awakened', color: 0xFF6600, iconSet: 'BRIGHT', voltage: 2097152, superconductor: true },
 
     // --- Tech Automation Basics ---
     { name: 'compressed_iron', components: '1x iron', color: 0x474747, cDust: true, iconSet: 'METALLIC', voltage: 128, loss: 1 },
@@ -783,7 +784,10 @@ const newOres = [
 ];
 
 const customMatsToRegister = [
-            
+    { name: 'blazing_pyrotheum', color: 0xF0AA3E, iconSet: 'GLASS', dust: true, gem: true, fluid: true },
+    { name: 'gelid_cryotheum', color: 0x28C4EF, iconSet: 'QUARTZ', dust: true, gem: true, fluid: true },
+    { name: 'zephyrean_aerotheum', color: 0xACA485, iconSet: 'GEM_HORIZONTAL', dust: true, gem: true, fluid: true },
+    { name: 'tectonic_petrotheum', color: 0x352821, iconSet: 'GEM_VERTICAL', dust: true, gem: true, fluid: true },
     { name: 'bedrockium', color: 0x101010, iconSet: 'METALLIC', ingot: true, ore: true, dust: true, flags: [GTMaterialFlags.NO_SMELTING, CMMEMaterialFlags.GENERATE_SINGULARITY, GTMaterialFlags.DISABLE_DECOMPOSITION, GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FOIL] },
     { name: 'debris', color: 0x6E5A52, iconSet: 'METALLIC', ore: true },
     { name: 'crimson_iron', color: 0xee4f7f, iconSet: 'METALLIC', ore: true },
@@ -1361,6 +1365,8 @@ const ignoredItems = {
         niotic_crystal: 'powah:niotic_crystal_block',
         spirited_crystal: 'powah:spirited_crystal_block',
         nitro_crystal: 'powah:nitro_crystal_block',
+        dark_matter: 'projecte:dark_matter_block',
+        red_matter: 'projecte:red_matter_block',
     },
     dust: {
         refined_obsidian: 'mekanism:dust_refined_obsidian',

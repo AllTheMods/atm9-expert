@@ -41,6 +41,33 @@ ServerEvents.recipes(allthemods => {
         600
     );
 
+    addAssembler(
+        [
+            '5x #forge:dusts/bismuth_germanate',
+            '#forge:circuits/basic',
+            '4x #forge:plates/lead'
+
+        ],
+        '#forge:soldering_alloy 288',
+        'mekanism:geiger_counter',
+        IV,
+        600
+    );
+
+    addAssembler(
+        [
+            'mekanism:module_base',
+            'mekanism:geiger_counter',
+            '4x #forge:ingots/alloy_infused',
+            '3x mekanism:hdpe_sheet'
+
+        ],
+        '#forge:soldering_alloy 288',
+        'mekanism:module_geiger_unit',
+        LuV,
+        600
+    );
+
     //basic tier
     addAssembler(
         [

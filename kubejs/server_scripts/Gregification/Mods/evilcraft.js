@@ -46,7 +46,7 @@ ServerEvents.recipes(allthemods => {
         'RMR',
         'PGP'
     ], {        
-        M: 'gregifgtceuication:magical_bio_composite',        
+        M: 'gtceu:magical_bio_composite',        
         P: 'gtceu:mv_electric_pump',
 		R: 'gtceu:mv_robot_arm',
 		F: 'gtceu:mv_field_generator',

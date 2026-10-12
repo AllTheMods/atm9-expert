@@ -37,7 +37,7 @@ ServerEvents.recipes(allthemods => {
             'gtceu:liquid_chaos 72'
         ],
         'gtceu:naquadria_stage_2 72',
-        LuV,
+        IV,
         20,
         stages[1]
     )
@@ -49,7 +49,7 @@ ServerEvents.recipes(allthemods => {
             'gtceu:liquid_chaos 72'
         ],
         'gtceu:naquadria_stage_3 72',
-        ZPM,
+        LuV,
         20,
         stages[2]
     )
@@ -61,7 +61,7 @@ ServerEvents.recipes(allthemods => {
             'gtceu:polonium 72'
         ],
         'gtceu:naquadria_stage_4 72',
-        UV,
+        ZPM,
         20,
         stages[3]
     )
@@ -73,7 +73,7 @@ ServerEvents.recipes(allthemods => {
             'gtceu:antimatter 72'
         ],
         'gtceu:naquadria_awakened 72',
-        UIV,
+        UV,
         20,
         stages[3]
     )

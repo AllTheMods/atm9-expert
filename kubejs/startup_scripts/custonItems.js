@@ -102,6 +102,10 @@ StartupEvents.registry('item', event => {
         .displayName('Tachyon')
         .rarity('ie_masterwork')
 
+    event.create('gtceu:neutrino')
+        .displayName('Neutrino')
+        .rarity('ie_masterwork')
+
     event.create('gtceu:plutonic_quark')
         .displayName('Plutonic Quark')
         .rarity('ie_masterwork')

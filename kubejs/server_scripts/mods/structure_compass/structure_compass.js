@@ -8,8 +8,8 @@ ServerEvents.recipes(allthemods => {
     'ACA',
     'NAN'
   ], {
-    A: 'allthemodium:allthemodium_ingot',
-    N: 'minecraft:netherite_ingot',
+    A: '#forge:ingots/lumium',
+    N: '#forge:ingots/netherite',
     C: 'naturescompass:naturescompass',
   })
   })
