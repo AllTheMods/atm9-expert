@@ -32,7 +32,7 @@ ServerEvents.recipes(allthemods => {
 
                 $SizedIngredient.create(cellIngredient, 3),
                 `6x #forge:plates/${tier.tier}`,
-                `2x #gtceu:circuits/${tier.prefix}`,
+                `#gtceu:batteries/${tier.prefix}`,
                 `4x gtceu:${tier.wire}_quadruple_wire`
             )                         
             .itemOutputs(Item.of('ironjetpacks:capacitor', { Id: `ironjetpacks:${tier.tier}` }).strongNBT())
@@ -45,7 +45,7 @@ ServerEvents.recipes(allthemods => {
                 `3x ${tier.coil}`,
                 cellIngredient,
                 `4x #forge:plates/${tier.tier}`,
-                `2x #gtceu:circuits/${tier.prefix}`
+                //`2x #gtceu:circuits/${tier.prefix}`
             )
             .itemOutputs(Item.of('ironjetpacks:thruster', { Id: `ironjetpacks:${tier.tier}` }).strongNBT())
             .inputFluids(`${tier.fluid} 1000`)

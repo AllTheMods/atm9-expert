@@ -197,7 +197,7 @@ ServerEvents.recipes(allthemods => {
         .EUt(UV);
 
 
-    const drone = Item.of('pneumaticcraft:collector_drone', 4, '{"pneumaticcraft:air":120000}').strongNBT();
+    const drone = Item.of('pneumaticcraft:collector_drone').weakNBT();    
 
     allthemods.recipes.gtceu.drone_station('gregification:tier_1_rocket_schematic_from_drone')        
         .chancedInput(drone, 2500,-500)

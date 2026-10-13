@@ -15,7 +15,7 @@ ServerEvents.recipes(allthemods => {
         'ERE',
         'ECE'
     ], {
-        R: "#forge:rods/magnetic_smaarium_cobalt",
+        R: "#forge:rods/magnetic_samarium_cobalt",
         E: "#forge:plates/enderium",
         T: "#forge:dusts/redstone",
         L: "#forge:gems/lapis",

@@ -8,7 +8,7 @@ ServerEvents.recipes(allthemods => {
         .EUt(HV);
 
     allthemods.recipes.gtceu.mega_chemical_reactor('gregification:dark_matter')
-        .itemInputs('mekanism:pellet_antimatter')
+        .itemInputs('gtceu:neutrino')
         .inputFluids('#forge:naquadria_awakened 144')
         .itemOutputs('projecte:dark_matter')
         .duration(2600)
