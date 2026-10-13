@@ -1,0 +1,11 @@
+{
+    "mysticalagradditions:gaia_spirit": {
+        "enabled": true,
+        "tier": "mysticalcustomization:divinium",
+        "recipes": {
+            "crafting": false,
+            "infusion": false,
+            "reprocessor": false
+        }
+    }
+}

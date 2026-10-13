@@ -1,0 +1,16 @@
+{
+    "name": "Bedrockium",
+    "type": "mysticalagriculture:resource",
+    "tier": "mysticalcustomization:extremium",
+    "ingredient": { "tag": "forge:storage_blocks/bedrockium" },
+    "color": "1C1C22",
+    "textures": {
+        "flower": "mysticalagriculture:block/flower_ingot",
+        "essence": "mysticalagriculture:item/essence_ingot"
+    },
+    "recipes": {
+        "crafting": false,
+        "infusion": false,
+        "reprocessor": false
+    }
+}

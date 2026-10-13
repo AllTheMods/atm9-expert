@@ -303,6 +303,7 @@ ServerEvents.recipes(allthemods => {
         .inputFluids('#forge:chlorine 4000')
         .outputFluids('gtceu:tetrachloroethylene 3000')
         .duration(250)
+        .circuit(1)
         .EUt(HV);
 
 

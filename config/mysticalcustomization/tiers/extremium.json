@@ -1,0 +1,8 @@
+{
+    "name": "§6Extremium",
+    "value": 8,
+    "farmland": "mysticalagradditions:insanium_farmland",
+    "essence": "mysticalexpansion:extremium_essence",
+    "fertilizable": false,
+    "secondarySeedDrop": false
+}

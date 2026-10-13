@@ -12,7 +12,10 @@
 		"deepslate",
 		"allthemodium",
 		"azure_silver",
+		"bedrockium",
 		"crimson_iron",
+		"infinity",
+		"neutronium",
 		"unobtainium",
 		"vibranium",
 		"nature",
@@ -147,7 +150,6 @@
 		"starmetal",
 		"rock_crystal",
 		"yellorium",
-		"gaia_spirit",
-		"neutronium"
+		"gaia_spirit"
 	]
 }

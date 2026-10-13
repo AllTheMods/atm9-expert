@@ -1,0 +1,8 @@
+{
+    "name": "§3Etherium",
+    "value": 9,
+    "farmland": "mysticalagradditions:insanium_farmland",
+    "essence": "mysticalexpansion:etherium_essence",
+    "fertilizable": false,
+    "secondarySeedDrop": false
+}

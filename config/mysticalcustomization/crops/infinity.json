@@ -1,0 +1,16 @@
+{
+    "name": "Infinity",
+    "type": "mysticalagriculture:resource",
+    "tier": "mysticalcustomization:divinium",
+    "ingredient": { "tag": "forge:storage_blocks/infinity" },
+    "color": "C77DFF",
+    "textures": {
+        "flower": "mysticalagriculture:block/flower_ingot",
+        "essence": "mysticalagriculture:item/essence_ingot"
+    },
+    "recipes": {
+        "crafting": false,
+        "infusion": false,
+        "reprocessor": false
+    }
+}
