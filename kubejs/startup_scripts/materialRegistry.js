@@ -504,37 +504,53 @@ const materials = [
 
     new MaterialDef('terrazine').fluid().gas().color(0x4B0082).iconSet('RADIOACTIVE'),
 
-    new MaterialDef('white_chalk').fluid().gem().color(0xF2EEE4).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_white' }),
+    new MaterialDef('white_chalk').fluid().gem().color(0xF2EEE4).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_white' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('yellow_chalk').fluid().gem().color(0xFFD700).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_gold' }),
+    new MaterialDef('yellow_chalk').fluid().gem().color(0xFFD700).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_gold' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('purple_chalk').fluid().gem().color(0x9D00FF).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_purple' }),
+    new MaterialDef('purple_chalk').fluid().gem().color(0x9D00FF).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_purple' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('red_chalk').fluid().gem().color(0xFF0000).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_red' }),
+    new MaterialDef('red_chalk').fluid().gem().color(0xFF0000).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_red' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('orange_chalk').fluid().gem().color(0xFFA500).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_orange' }),
+    new MaterialDef('orange_chalk').fluid().gem().color(0xFFA500).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_orange' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('magenta_chalk').fluid().gem().color(0xFF00FF).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_magenta' }),
+    new MaterialDef('magenta_chalk').fluid().gem().color(0xFF00FF).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_magenta' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('light_blue_chalk').fluid().gem().color(0xADD8E6).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_light_blue' }),
+    new MaterialDef('light_blue_chalk').fluid().gem().color(0xADD8E6).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_light_blue' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('lime_chalk').fluid().gem().color(0x00FF00).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_lime' }),
+    new MaterialDef('lime_chalk').fluid().gem().color(0x00FF00).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_lime' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('pink_chalk').fluid().gem().color(0xFFC0CB).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_pink' }),
+    new MaterialDef('pink_chalk').fluid().gem().color(0xFFC0CB).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_pink' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('gray_chalk').fluid().gem().color(0x808080).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_gray' }),
+    new MaterialDef('gray_chalk').fluid().gem().color(0x808080).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_gray' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('light_gray_chalk').fluid().gem().color(0xD3D3D3).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_light_gray' }),
+    new MaterialDef('light_gray_chalk').fluid().gem().color(0xD3D3D3).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_light_gray' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('cyan_chalk').fluid().gem().color(0x00FFFF).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_cyan' }),
+    new MaterialDef('cyan_chalk').fluid().gem().color(0x00FFFF).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_cyan' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('blue_chalk').fluid().gem().color(0x0000FF).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_blue' }),
+    new MaterialDef('blue_chalk').fluid().gem().color(0x0000FF).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_blue' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('brown_chalk').fluid().gem().color(0x8B4513).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_brown' }),
+    new MaterialDef('brown_chalk').fluid().gem().color(0x8B4513).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_brown' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('green_chalk').fluid().gem().color(0x008000).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_green' }),
+    new MaterialDef('green_chalk').fluid().gem().color(0x008000).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_green' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('black_chalk').fluid().gem().color(0x000000).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_black' }),
+    new MaterialDef('black_chalk').fluid().gem().color(0x000000).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_black' })
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
     new MaterialDef('sugar_water').fluid().color(0xE8D9A0).iconSet('FLUID').formula('C48H90O45').components('4x sugar, 1x distilled_water'),
 
@@ -1488,7 +1504,7 @@ const materials = [
 
     new MaterialDef('coagulite').gem().ore().color(0x5C0A0A).iconSet('METALLIC').noDecomp()
         .byproducts(['demon', 'source'])
-        .unify({ gem: 'evilcraft:condensed_blood' }),
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'evilcraft:condensed_blood' }),
 
     new MaterialDef('azure_silver').ore().color(0xDE81E6).iconSet('METALLIC')
         .unify({ ingot: 'silentgear:azure_silver_ingot', block: 'silentgear:azure_silver_block', nugget: 'silentgear:azure_silver_nugget', dust: 'silentgear:azure_silver_dust', rawOre: 'silentgear:raw_azure_silver', oreEndstone: 'silentgear:azure_silver_ore' })
@@ -1507,13 +1523,13 @@ const materials = [
         .unify({ dust: 'thermal_extra:soul_sand_dust' }),
 
     new MaterialDef('tachyon').gem().dust().color(0x394d55).iconSet('SHINY')
-        .unify({ gem: 'gtceu:tachyon' }),
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'gtceu:tachyon' }),
 
     new MaterialDef('pulsating_crystal').gem().dust().color(0x79ffff).iconSet('SHINY')
-        .unify({ gem: 'enderio:pulsating_crystal' }),
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'enderio:pulsating_crystal' }),
 
     new MaterialDef('vibrant_crystal').gem().dust().color(0xa4ffaf).iconSet('SHINY')
-        .unify({ gem: 'enderio:vibrant_crystal' }),
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'enderio:vibrant_crystal' }),
 
     new MaterialDef('aureal').fluid().gem().color(0xA1C2F7).iconSet('SHINY'),
 
@@ -1616,7 +1632,7 @@ const materials = [
     new MaterialDef('refined_tenebrius').dust().fluid().gem().element('tenebrium').color(0x101010).iconSet('RADIOACTIVE'),
 
     new MaterialDef('garmonbozia').gem().dust().fluid().element('garmonbozia').color(0xFFFBD0).iconSet('SHINY').singularity()
-        .unify({ dust: 'evilcraft:garmonbozia' }),
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, dust: 'evilcraft:garmonbozia' }),
 
     new MaterialDef('thorn_rose').dust().color(0xAB3236).iconSet('WOOD'),
 
@@ -1633,8 +1649,8 @@ const materials = [
 
     new MaterialDef('recycled_organic_matter').fluid().color(0x6E6259).iconSet('FLUID'),
 
-    new MaterialDef('niter').dust().gem().color(0xF7F5F0).iconSet('DIAMOND').formula('KNO3').components('1x potassium, 1x nitrogen, 3x oxygen')
-        .unify({ dust: 'thermal:niter_dust', gem: 'thermal:niter', block: 'thermal:niter_block' }),
+    new MaterialDef('niter').dust().gem().color(0xF7F5F0).iconSet('DIAMOND').formula('KNO3').components('1x potassium, 1x nitrogen, 3x oxygen')        
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true,dust: 'thermal:niter_dust', gem: 'thermal:niter', block: 'thermal:niter_block' }),
 
     new MaterialDef('cadmium_copper').ingot().dust().fluid().color(0xC97A4A).iconSet('METALLIC').formula('Cu9Cd').components('9x copper, 1x cadmium')
         .flags(GTMaterialFlags.GENERATE_FINE_WIRE)
@@ -1710,7 +1726,12 @@ const materials = [
         .unify({ dust: 'thermal_extra:abyssal_dust', nugget: 'thermal_extra:abyssal_nugget', ingot: 'thermal_extra:abyssal_ingot', block: 'thermal_extra:abyssal_block', rod: 'thermal_extra:abyssal_rod', plate: 'thermal_extra:abyssal_plate', gear: 'thermal_extra:abyssal_gear'}),
         
     new MaterialDef('necrotic').dust().color(0x1A1C1E).iconSet('DULL').components('5x calcium, 3x phosphorus, 3x sulfur'),
+
+    new MaterialDef('necrotic').dust().color(0x1A1C1E).iconSet('DULL').components('5x calcium, 3x phosphorus, 3x sulfur'),
     
+    new MaterialDef('tattered').color(0x9A9290).singularity().iconSet('DULL'),
+
+
     //modifications
     new MaterialDef('netherite').modify().materialsBasic(),
         //.unify({ plate: 'thermal:netherite_plate' }) seems like thermal removed its own plate without the need for unification once this was registered.
@@ -1741,7 +1762,8 @@ const materials = [
         .unify({ rawOre: 'alltheores:raw_osmium' })
         .ignoreAllOrePrefixes(),
 
-    new MaterialDef('glycerol').modify().gem().flags(GTMaterialFlags.CRYSTALLIZABLE),
+    new MaterialDef('glycerol').modify().gem().flags(GTMaterialFlags.CRYSTALLIZABLE)
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true}),
 
     new MaterialDef('cadmium').modify().ingot().flags(GTMaterialFlags.GENERATE_ROD),
 
@@ -1810,7 +1832,8 @@ const materials = [
     new MaterialDef('nether_star').modify().ore().color(0xD8D8C0).iconSet('SHINY')
         .byproducts(['nether_quartz', 'glowstone', 'sulfur']),
 
-    new MaterialDef('kevlar_carbon_fiber_mesh').gem().color(0x8A7A46).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE),
+    new MaterialDef('kevlar_carbon_fiber_mesh').gem().color(0x8A7A46).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE)
+        .unify({ block: true, gemFlawless: true, gemExquisite: true}),
 
     new MaterialDef('kevlar').dust().color(0x76683C).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE),
     
