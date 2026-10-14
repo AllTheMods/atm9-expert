@@ -17,7 +17,17 @@ ServerEvents.recipes(allthemods => {
     });*/
 
     allthemods.remove({ output: /^ironjetpacks:.*/ })
+ 
     
+    let removeSmelting = [];
+    let smeltMaterials = ['soul_infused', 'shellite', 'twinite', 'dragonsteel', 'abyssal']
+    smeltMaterials.forEach(function(mat) {
+        removeSmelting.push(`thermal_extra:smelting/${mat}_ingot_from_dust_smelting`);
+        removeSmelting.push(`thermal_extra:smelting/${mat}_ingot_from_dust_blasting`);
+        removeSmelting.push(`enderio:smelting/thermal_extra/smelting/${mat}_ingot_from_dust_smelting`);
+    });
+    const smeltingRemovals = removeSmelting.map(recipeId => ({ id: recipeId }));    
+    allthemods.remove(smeltingRemovals);
     
     let beeRemoves = [];
     let removeColored = [];
@@ -75,6 +85,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.remove(beeRemovals);
 
     const powahRemoves = [
+        'thermal_extra:soul_infused_dust', 'thermal_extra:shellite_dust', 'thermal_extra:twinite_dust', 'thermal_extra:dragonsteel_dust', 'thermal_extra:abyssal_dust',
         'powah:crafting/energy_cell_starter', 'powah:crafting/energy_cell_basic', 'powah:crafting/energy_cell_hardened',
         'powah:crafting/energy_cell_blazing', 'powah:crafting/energy_cell_niotic', 'powah:crafting/energy_cell_spirited', 
         'powah:crafting/energy_cell_nitro', 'powah:crafting/energy_cell_basic_2',

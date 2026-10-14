@@ -22,7 +22,13 @@ ServerEvents.recipes(allthemods => {
             .EUt(voltage);
         if (program) recipe.circuit(program);
     };
-    
+
+    addMixer(['2x #forge:dusts/soul_sand', '#forge:dusts/iron', '#forge:dusts/copper'], '4x thermal_extra:soul_infused_dust', HV, 600);
+    addMixer(['2x #forge:dusts/shellite', '#forge:dusts/lead', '#forge:dusts/nickel'], '4x thermal_extra:shellite_dust', EV, 600);
+    addMixer(['2x #forge:dusts/twinite', '#forge:dusts/iron', '#forge:dusts/copper'], '4x thermal_extra:twinite_dust', EV, 600);
+    addMixer(['2x #forge:dusts/dragonsteel', '#forge:dusts/ancient', '#forge:dusts/cinnabar'], '4x thermal_extra:dragonsteel_dust', LuV, 600);
+    addMixer(['2x #forge:dusts/abyssal', '#forge:dusts/ancient', '#forge:dusts/netherite', '#forge:dusts/echo_shard'], '4x thermal_extra:abyssal_dust', ZPM, 600);
+
     addMixer(['2x #forge:dusts/bismuth', '3x #forge:dusts/tellurium'],'5x gtceu:bismuth_telluride_dust',ZPM,600);
     addMixer(['2x #forge:dusts/antimony', '#forge:dusts/tellurium'],'3x gtceu:antimony_telluride_dust',ZPM,600);
     addMixer(['2x #forge:dusts/bismuth_oxide', '3x #forge:dusts/germanium_dioxide'],'5x gtceu:bismuth_germanate_dust',IV,600);    

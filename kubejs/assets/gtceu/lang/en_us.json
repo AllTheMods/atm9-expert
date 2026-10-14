@@ -781,7 +781,15 @@
     "material.gtceu.bismuth_telluride": "Bismuth Telluride",
     "material.gtceu.cubic_zirconia": "Cubic Zirconia",
     "material.gtceu.adamantium": "Adamantium",
-    "material.gtceu.antimony_telluride": "Antimony Telluride"
+    "material.gtceu.antimony_telluride": "Antimony Telluride",
+    "material.gtceu.ancient": "Ancient",
+    "material.gtceu.shulker": "Shulker",
+    "material.gtceu.soul_infused": "Soul Infused",
+    "material.gtceu.shellite": "Shellite",
+    "material.gtceu.twinite": "Twinite",
+    "material.gtceu.dragonsteel": "Dragonsteel",
+    "material.gtceu.abyssal": "Abyssal",
+    "material.gtceu.necrotic": "Necrotic"
 }
 
  

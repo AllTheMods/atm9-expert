@@ -250,7 +250,7 @@ ServerEvents.recipes(allthemods => {
         .EUt(EV);
 
     allthemods.recipes.gtceu.chemical_reactor('gregification:necrotic_acid')
-        .itemInputs('4x #forge:dusts/witherite', '#forge:dusts/nether_star')
+        .itemInputs('4x #forge:dusts/witherite', '#forge:dusts/nether_star', '#forge:dusts/necrotic')
         .inputFluids('#forge:aqua_regia 4000')
         .outputFluids('gtceu:necrotic_acid 1000')
         .duration(500)

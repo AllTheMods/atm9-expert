@@ -17,6 +17,8 @@ const MaterialStack = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.ma
 const ArrayList = Java.loadClass('java.util.ArrayList');
 const ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty');
 
+const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+
 MaterialDef.COIL_TEMPS = {
     CUPRONICKEL: 1800,
     KANTHAL: 2700,
@@ -722,7 +724,7 @@ const materials = [
 
     new MaterialDef('isobornyl_acetate').fluid().color(0xEDE8D0).iconSet('FLUID').noDecomp().formula('C12H20O2').components('12x carbon, 20x hydrogen, 2x oxygen'),
 
-    new MaterialDef('necrotic_acid').fluid().color(0x6B7A3A).iconSet('FLUID').components('4x witherite, 1x nether_star, 4x aqua_regia'),
+    new MaterialDef('necrotic_acid').fluid().color(0x6B7A3A).iconSet('FLUID').components('4x witherite, 1x nether_star, 4x aqua_regia, 1x necrotic'),
 
     new MaterialDef('chloroprene').fluid().color(0xE0E8C8).iconSet('FLUID').noDecomp().formula('C4H6Cl').components('1x butadiene, 1x chlorine'),
 
@@ -1068,63 +1070,63 @@ const materials = [
     new MaterialDef('allthemodium').noSmelting().ore().element('allthemodium').color(0xFAD64A).iconSet('METALLIC').ingot().fluid().materialsAll().singularity()
         //.cable({ voltage: 8192, loss: 1 })
         .byproducts(['gold', 'diamond', 'allthemodium'])
-        .blast({ temp: COIL_TEMPS.HSS_G, eut: 8192, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 })
         .unify({ ore: 'allthemodium:allthemodium_ore', oreDeepslate: 'allthemodium:allthemodium_slate_ore', dust: 'allthemodium:allthemodium_dust', nugget: 'allthemodium:allthemodium_nugget', rod: 'allthemodium:allthemodium_rod', gear: 'allthemodium:allthemodium_gear', plate: 'allthemodium:allthemodium_plate', ingot: 'allthemodium:allthemodium_ingot', block: 'allthemodium:allthemodium_block' }),
 
     new MaterialDef('vibranium').noSmelting().ore().element('vibranium').color(0x6DFF6D).iconSet('METALLIC').ingot().fluid().materialsAll().singularity()
         //.cable({ voltage: 32768, loss: 1 })
         .byproducts(['allthemodium', 'emerald', 'vibranium'])
-        .blast({ temp: COIL_TEMPS.HSS_G, eut: 32768, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.HSS_G, eut: LuV, duration: 1200 })
         .unify({ oreNetherrack: 'allthemodium:vibranium_ore', dust: 'allthemodium:vibranium_dust', nugget: 'allthemodium:vibranium_nugget', rod: 'allthemodium:vibranium_rod', gear: 'allthemodium:vibranium_gear', plate: 'allthemodium:vibranium_plate', ingot: 'allthemodium:vibranium_ingot', block: 'allthemodium:vibranium_block' }),
 
     new MaterialDef('unobtainium').noSmelting().ore().element('unobtainium').color(0xA336FF).iconSet('METALLIC').ingot().fluid().materialsAll().singularity()
         //.cable({ voltage: 131072, loss: 1 })
         .byproducts(['vibranium', 'amethyst', 'unobtainium'])
-        .blast({ temp: COIL_TEMPS.HSS_G, eut: 131072, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.HSS_G, eut: ZPM, duration: 1200 })
         .unify({ oreEndstone: 'allthemodium:unobtainium_ore', dust: 'allthemodium:unobtainium_dust', nugget: 'allthemodium:unobtainium_nugget', ingot: 'allthemodium:unobtainium_ingot', block: 'allthemodium:unobtainium_block' }),
 
     new MaterialDef('bismuth_strontium_calcium_copper_oxide').color(0x3A3A42).iconSet('METALLIC').formula('Bi2Sr2CaCu2(CO3)2O6').components('1x bismuth_oxide, 2x strontium_carbonate, 1x quicklime, 2x copper_oxide').noSmelting().ingot().fluid().materialsAll()
         .cable({ voltage: 32768, superconductor: true })
-        .blast({ temp: COIL_TEMPS.HSS_G, eut: 8192, duration: 1200 }),
+        .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 }),
 
     new MaterialDef('copper_alloy').components('1x copper, 1x silicon').color(0x935B3B).iconSet('METALLIC').ingot().fluid().materialsAll()
         .cable({ voltage: 32, loss: 2 })
-        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: 128, duration: 400 })
+        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: MV, duration: 400 })
         .unify({ ingot: 'enderio:copper_alloy_ingot', block: 'enderio:copper_alloy_block', nugget: 'enderio:copper_alloy_nugget' }),
 
     new MaterialDef('conductive_alloy').components('1x iron, 1x redstone').color(0xF7B066).iconSet('METALLIC').ingot().fluid().materialsAll()
         .cable({ voltage: 128, loss: 1 })
-        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: 128, duration: 400 })
+        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: MV, duration: 400 })
         .unify({ ingot: 'enderio:conductive_alloy_ingot', block: 'enderio:conductive_alloy_block', nugget: 'enderio:conductive_alloy_nugget' }),
 
     new MaterialDef('energetic_alloy').components('1x gold, 1x redstone, 1x glowstone').color(0xFFB933).iconSet('METALLIC').ingot().fluid().materialsAll()
         .cable({ voltage: 512, loss: 2 })
-        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: 128, duration: 400 })
+        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: MV, duration: 400 })
         .unify({ ingot: 'enderio:energetic_alloy_ingot', block: 'enderio:energetic_alloy_block', nugget: 'enderio:energetic_alloy_nugget' }),
 
     new MaterialDef('vibrant_alloy').components('1x energetic_alloy, 1x ender_pearl').color(0xB6F132).iconSet('METALLIC').ingot().fluid().materialsAll()
         .cable({ voltage: 2048, loss: 1 })
-        .blast({ temp: COIL_TEMPS.KANTHAL, eut: 512, duration: 400 })
+        .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
         .unify({ ingot: 'enderio:vibrant_alloy_ingot', block: 'enderio:vibrant_alloy_block', nugget: 'enderio:vibrant_alloy_nugget' }),
 
     new MaterialDef('pulsating_alloy').components('1x iron, 1x ender_pearl').color(0x66FF82).iconSet('METALLIC').ingot().fluid().materialsAll()
         .cable({ voltage: 2048, loss: 2 })
-        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: 512, duration: 400 })
+        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: HV, duration: 400 })
         .unify({ ingot: 'enderio:pulsating_alloy_ingot', block: 'enderio:pulsating_alloy_block', nugget: 'enderio:pulsating_alloy_nugget' }),
 
     new MaterialDef('soularium').components('1x gold, 1x soul_sand').color(0x56402C).iconSet('METALLIC').ingot().fluid().materialsAll()
         .cable({ voltage: 128, loss: 0 })
-        .blast({ temp: COIL_TEMPS.KANTHAL, eut: 512, duration: 400 })
+        .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
         .unify({ ingot: 'enderio:soularium_ingot', block: 'enderio:soularium_block', nugget: 'enderio:soularium_nugget' }),
 
     new MaterialDef('dark_steel').components('1x steel, 1x carbon, 1x obsidian').color(0x3D3D3D).iconSet('METALLIC').ingot().fluid().materialsAll()
         .cable({ voltage: 512, loss: 2 })
-        .blast({ temp: COIL_TEMPS.KANTHAL, eut: 512, duration: 400 })
+        .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
         .unify({ ingot: 'enderio:dark_steel_ingot', block: 'enderio:dark_steel_block', nugget: 'enderio:dark_steel_nugget' }),
 
     new MaterialDef('end_steel').components('1x dark_steel, 1x endstone, 1x obsidian').color(0xE6F1A8).iconSet('METALLIC').ingot().fluid().materialsAll()
         .cable({ voltage: 2048, loss: 0 })
-        .blast({ temp: COIL_TEMPS.NICHROME, eut: 2048, duration: 400 })
+        .blast({ temp: COIL_TEMPS.NICHROME, eut: EV, duration: 400 })
         .unify({ ingot: 'enderio:end_steel_ingot', block: 'enderio:end_steel_block', nugget: 'enderio:end_steel_nugget' }),
 
     new MaterialDef('manasteel').element('manasteel').color(0x47CCFF).dust().iconSet('METALLIC').ingot().fluid().materialsAll()
@@ -1163,7 +1165,7 @@ const materials = [
 
     new MaterialDef('ferrognetic').components('1x garmonbozia, 1x dark_steel, 1x pink_slime, 1x alfsteel, 1x hellforged, 1x iesnium').pipe().dust()
         .color(0xD1D1D1).iconSet('METALLIC').ingot().fluid().materialsAll().cable({ voltage: 131072, loss: 1 })
-        .blast({ temp: COIL_TEMPS.HSS_G, eut: 8192, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 })
         .unify({ dust: 'forbidden_arcanus:ferrognetic_mixture' }),
 
     new MaterialDef('refined_obsidian').components('1x obsidian, 1x diamond').color(0x5C3854).iconSet('SHINY').ingot().fluid().materialsAll()
@@ -1187,78 +1189,78 @@ const materials = [
 
     new MaterialDef('naquamodium').color(0xF8FF40).iconSet('METALLIC').dust().components('5x naquadah, 3x allthemodium').ingot().fluid().materialsAll()
         //.cable({ voltage: 32768, superconductor: true })
-        .blast({ temp: COIL_TEMPS.KANTHAL, eut: 512, duration: 1200 }),
+        .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 1200 }),
 
     new MaterialDef('naquabranium').color(0x00FF00).iconSet('METALLIC').dust().components('5x naquadah, 3x vibranium').ingot().fluid().materialsAll()
         //.cable({ voltage: 131072, superconductor: true })
-        .blast({ temp: COIL_TEMPS.NICHROME, eut: 2048, duration: 1200 }),
+        .blast({ temp: COIL_TEMPS.NICHROME, eut: EV, duration: 1200 }),
 
     new MaterialDef('naquatainium').color(0x9D40FF).iconSet('METALLIC').dust().components('5x naquadria, 3x unobtainium').ingot().fluid().materialsAll()
         //.cable({ voltage: 524288, superconductor: true })
-        .blast({ temp: COIL_TEMPS.RTM, eut: 8192, duration: 1200 }),
+        .blast({ temp: COIL_TEMPS.RTM, eut: IV, duration: 1200 }),
 
     new MaterialDef('rhenium_nickel_alloy').color(0xEAEAEA).iconSet('METALLIC').components('3x rhenium, 2x nickel').ingot().fluid().materialsAll()
         //.cable({ voltage: 524288, loss: 2 })
-        .blast({ temp: COIL_TEMPS.HSS_G, eut: 524288, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.HSS_G, eut: UV, duration: 1200 })
         .rotor({ speed: 800, power: 500, efficiency: 10.0, durability: 163840 }),
 
     new MaterialDef('rheni_zirconium_alloy').color(0x7B1FA2).iconSet('METALLIC').components('1x rhenium_nickel_alloy, 1x zirconium').ingot().fluid().materialsAll()
-        .blast({ temp: COIL_TEMPS.HSS_G, eut: 524288, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.HSS_G, eut: UV, duration: 1200 })
         .rotor({ speed: 1000, power: 750, efficiency: 15.0, durability: 327680 }),
 
     new MaterialDef('thorium_berkelium_alloy').color(0x7B1FA2).iconSet('METALLIC').components('2x thorium, 1x berkelium').ingot().fluid().materialsAll()
         .cable({ voltage: 131072, superconductor: true })
-        .blast({ temp: COIL_TEMPS.NAQUADAH, eut: 131072, duration: 1200 }),
+        .blast({ temp: COIL_TEMPS.NAQUADAH, eut: ZPM, duration: 1200 }),
 
     new MaterialDef('potassium_calcium_orthosilicate').color(0xDAA520).iconSet('METALLIC').components('2x potassium, 1x calcium, 1x silicon, 4x oxygen').ingot().fluid().materialsAll()
-        .blast({ temp: COIL_TEMPS.NAQUADAH, eut: 131072, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.NAQUADAH, eut: ZPM, duration: 1200 })
         .rotor({ speed: 1200, power: 850, efficiency: 17.0, durability: 400000 }),
 
 
     new MaterialDef('alltheneutronium').pipe().color(0xfcfc3d).iconSet('METALLIC').components('2x naquamodium, 2x neutronium, 1x alloy_infused, 3x corrosive').ingot().fluid().materialsAll()
         .cable({ voltage: 8388608, loss: 0 })
-        .blast({ temp: COIL_TEMPS.TRITANIUM, eut: 32768, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.TRITANIUM, eut: LuV, duration: 1200 })
         .rotor({ speed: 1200, power: 300, efficiency: 13.0, durability: 655360 }),
 
     new MaterialDef('vibtronium').pipe().color(0x72fcb7).iconSet('METALLIC').components('2x naquabranium, 2x alltheneutronium, 1x alloy_reinforced, 3x destructive').ingot().fluid().materialsAll()
         .cable({ voltage: 33554432, loss: 0 })
-        .blast({ temp: COIL_TEMPS.DRACONIUM, eut: 131072, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.DRACONIUM, eut: ZPM, duration: 1200 })
         .rotor({ speed: 1400, power: 400, efficiency: 14.0, durability: 2621440 }),
 
     new MaterialDef('unobtronium').pipe().color(0xe782f2).iconSet('METALLIC').components('2x naquatainium, 2x vibtronium, 1x alloy_atomic, 3x vengeful').ingot().fluid().materialsAll()
         .cable({ voltage: 134217728, loss: 0 })
-        .blast({ temp: COIL_TEMPS.DRACONIUM, eut: 524288, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.DRACONIUM, eut: UV, duration: 1200 })
         .rotor({ speed: 1600, power: 500, efficiency: 16.0, durability: 10485760 }),
 
     new MaterialDef('deorum_alloy').pipe().color(0xCCDD22).iconSet('METALLIC').components('3x naquadria, 2x deorum, 2x trinium, 3x steadfast').ingot().fluid().materialsAll()
         .cable({ voltage: 536870912, loss: 0 })
-        .blast({ temp: COIL_TEMPS.DRACONIUM_AWAKENED, eut: 524288, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.DRACONIUM_AWAKENED, eut: UV, duration: 1200 })
         .rotor({ speed: 1800, power: 600, efficiency: 18.0, durability: 41943040 }),
 
     new MaterialDef('demonic_alloy').components('3x demon, 3x tenebrium, 3x caesium, 3x tritanium, 3x gaia').pipe().color(0x22DDCC).iconSet('METALLIC').ingot().fluid().materialsAll()
         .cable({ voltage: 2147483647, loss: 0 })
-        .blast({ temp: COIL_TEMPS.DRACONIUM_AWAKENED, eut: 524288, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.DRACONIUM_AWAKENED, eut: UV, duration: 1200 })
         .rotor({ speed: 2000, power: 800, efficiency: 20.0, durability: 167772160 }),
 
     new MaterialDef('signalum').pipe().color(0xFF5500).iconSet('METALLIC').components('1x silver, 3x copper, 4x redstone').ingot().fluid().materialsAll()
         .cable({ voltage: 128, loss: 1 })
-        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: 512, duration: 400 })
+        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: HV, duration: 400 })
         .unify({ rod: 'alltheores:signalum_rod', gear: 'alltheores:signalum_gear', plate: 'alltheores:signalum_plate', nugget: 'alltheores:signalum_nugget', block: 'alltheores:signalum_block', dust: 'alltheores:signalum_dust', ingot: 'alltheores:signalum_ingot' }),
 
     new MaterialDef('lumium').pipe().color(0xFFFFAA).iconSet('METALLIC').components('1x silver, 3x tin, 2x glowstone').ingot().fluid().materialsAll()
         .cable({ voltage: 512, loss: 1 })
-        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: 2048, duration: 600 })
+        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: EV, duration: 600 })
         .unify({ rod: 'alltheores:lumium_rod', gear: 'alltheores:lumium_gear', plate: 'alltheores:lumium_plate', nugget: 'alltheores:lumium_nugget', block: 'alltheores:lumium_block', dust: 'alltheores:lumium_dust', ingot: 'alltheores:lumium_ingot' }),
 
     new MaterialDef('enderium').pipe().color(0x0B6156).iconSet('METALLIC').components('1x diamond, 3x lead, 2x ender_pearl').ingot().fluid().materialsAll()
         .cable({ voltage: 2048, loss: 1 })
-        .blast({ temp: COIL_TEMPS.KANTHAL, eut: 8192, duration: 800 })
+        .blast({ temp: COIL_TEMPS.KANTHAL, eut: IV, duration: 800 })
         .unify({ rod: 'alltheores:enderium_rod', gear: 'alltheores:enderium_gear', plate: 'alltheores:enderium_plate', nugget: 'alltheores:enderium_nugget', block: 'alltheores:enderium_block', dust: 'alltheores:enderium_dust', ingot: 'alltheores:enderium_ingot' }),
 
     new MaterialDef('draconium').noSmelting().ore().element('draconium').color(0x502C6C).iconSet('SHINY').ingot().fluid().materialsAll()
         .cable({ voltage: 8192, loss: 1 })
         .byproducts(['ender_pearl', 'obsidian', 'draconium'])
-        .blast({ temp: COIL_TEMPS.RTM, eut: 8192, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.RTM, eut: IV, duration: 1200 })
         .unify({ block: 'draconicevolution:draconium_block', dust: 'draconicevolution:draconium_dust', ingot: 'draconicevolution:draconium_ingot', nugget: 'draconicevolution:draconium_nugget', ore: 'draconicevolution:overworld_draconium_ore', oreDeepslate: 'draconicevolution:deepslate_draconium_ore', oreNetherrack: 'draconicevolution:nether_draconium_ore', oreEndstone: 'draconicevolution:end_draconium_ore' }),
 
     new MaterialDef('draconium_awakened').noSmelting().element('draconium_awakened').color(0xFF6600).iconSet('BRIGHT').ingot().fluid().materialsAll()
@@ -1275,23 +1277,23 @@ const materials = [
 
     new MaterialDef('eternium').pipe().magnetic().color(0x2d7d69).iconSet('METALLIC').components('2x eternal, 4x sculk, 2x ferrognetic, 3x netherite, 5x neutronium').ingot().fluid().materialsAll()
         //.cable({ voltage: 8388608, loss: 16 })
-        .blast({ temp: COIL_TEMPS.TRINIUM, eut: 2097152, duration: 1200 }),
+        .blast({ temp: COIL_TEMPS.TRINIUM, eut: UHV, duration: 1200 }),
 
     new MaterialDef('cosmic_alloy').pipe().color(0xe4ac29).iconSet('METALLIC').components('3x cosmic_matter, 4x alfsteel, 3x americium, 2x naquadria, 2x nether_star').ingot().fluid().materialsAll()
         //.cable({ voltage: 33554432, loss: 16 })
-        .blast({ temp: COIL_TEMPS.DRACONIUM, eut: 8388608, duration: 1500 }),
+        .blast({ temp: COIL_TEMPS.DRACONIUM, eut: UEV, duration: 1500 }),
 
     new MaterialDef('antimatter_alloy').pipe().color(0x8a3947).iconSet('METALLIC').components('3x antimatter, 3x duranium, 2x darmstadtium, 4x iridium, 5x etrium').ingot().fluid().materialsAll()
         //.cable({ voltage: 134217728, loss: 16 })
-        .blast({ temp: COIL_TEMPS.DRACONIUM_AWAKENED, eut: 33554432, duration: 2000 }),
+        .blast({ temp: COIL_TEMPS.DRACONIUM_AWAKENED, eut: UIV, duration: 2000 }),
 
     new MaterialDef('singularity_alloy').pipe().color(0xab24a2).iconSet('METALLIC').components('8x bedrockium, 5x stabilized_clathrate, 4x thorium_berkelium_alloy, 1x tachyon, 7x californium').ingot().fluid().materialsAll()
         //.cable({ voltage: 536870912, loss: 16 })
-        .blast({ temp: COIL_TEMPS.ETRIUM, eut: 134217728, duration: 2500 }),
+        .blast({ temp: COIL_TEMPS.ETRIUM, eut: UXV, duration: 2500 }),
 
     new MaterialDef('absolute_alloy').pipe().color(0xE6F2FF).iconSet('METALLIC').components('3x strontium, 2x unobtronium, 4x tellurium, 4x radium, 8x tenebrium').ingot().fluid().materialsAll()
         //.cable({ voltage: 2147483647, loss: 16 })
-        .blast({ temp: COIL_TEMPS.INFINITY, eut: 536870912, duration: 3000 }),
+        .blast({ temp: COIL_TEMPS.INFINITY, eut: OpV, duration: 3000 }),
 
     new MaterialDef('caliche').dust().ore().color(0xE0D8B8).iconSet('DULL').formula('NaIO3').components('1x sodium, 1x iodine, 3x oxygen')
         .byproducts(['caliche', 'iodine', 'sodium']),
@@ -1493,12 +1495,12 @@ const materials = [
         .byproducts(['silver', 'lapis', 'ender_pearl']),
 
     new MaterialDef('mithril').dust().ingot().ore().color(0x99D9D9).iconSet('METALLIC').noSmelting().materialsBasic()
-        .blast({ temp: COIL_TEMPS.HSS_G, eut: 8192, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 })
         .unify({ ingot: 'irons_spellbooks:mithril_ingot', rawOre: 'irons_spellbooks:raw_mithril', ore: 'irons_spellbooks:mithril_ore', oreDeepslate: 'irons_spellbooks:deepslate_mithril_ore' })
         .byproducts(['adamantium']),
 
     new MaterialDef('adamantium').dust().ingot().ore().color(0x4E5B3C).iconSet('METALLIC').noSmelting().materialsBasic()
-        .blast({ temp: COIL_TEMPS.HSS_G, eut: 8192, duration: 1200 })
+        .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 })
         .byproducts(['mithril']),
 
     new MaterialDef('soul_sand').dust().color(0x5A4232).iconSet('DULL')
@@ -1671,7 +1673,8 @@ const materials = [
     new MaterialDef('samarium_cobalt').dust().ingot().fluid().magnetic().color(0x8C7B4A).iconSet('METALLIC').formula('SmCo5').components('1x samarium, 5x cobalt').materialsBasic(),
 
     new MaterialDef('antimatter').dust().fluid().element('antimatter').color(0x7d4d88).iconSet('RADIOACTIVE')
-        .unify({ dust: 'mekanism:pellet_antimatter' }),
+        //.unify({ dust: 'mekanism:pellet_antimatter' }), trying the new unification method
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'mekanism:pellet_antimatter' }),
 
     new MaterialDef('cosmic_matter').dust().ingot().fluid().element('cosmic').color(0x3b004f).iconSet('METALLIC'),
 
@@ -1679,7 +1682,39 @@ const materials = [
 
     new MaterialDef('mana_essence').gem().fluid().color(0x0099FF).iconSet('RADIOACTIVE').singularity(),
 
+    new MaterialDef('ancient').dust().color(0x9085A3).iconSet('SHINY'),
+
+    //new MaterialDef('shulker').dust().ingot().color(0x906291).iconSet('SHINY').flags(GTMaterialFlags.GENERATE_PLATE),
+    //trying to block gem alternatives
+    new MaterialDef('shulker').dust().gem().color(0x906291).iconSet('SHINY').flags(GTMaterialFlags.GENERATE_PLATE)
+        .unify({ plate: true, block: true, gem: 'minecraft:shulker_shell', gemFlawless: true, gemExquisite: true }),
+
+    new MaterialDef('soul_infused').dust().fluid().color(0xAB6F53).iconSet('METALLIC').noSmelting().materialsBasic().components('2x soul_sand, 1x iron, 1x copper')
+        .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 1200 })        
+        .unify({ dust: 'thermal_extra:soul_infused_dust', nugget: 'thermal_extra:soul_infused_nugget', ingot: 'thermal_extra:soul_infused_ingot', block: 'thermal_extra:soul_infused_block', rod: 'thermal_extra:soul_infused_rod', plate: 'thermal_extra:soul_infused_plate', gear: 'thermal_extra:soul_infused_gear'}),
+    
+    new MaterialDef('shellite').dust().fluid().color(0x8643A2).iconSet('METALLIC').noSmelting().materialsBasic().components('2x shulker, 1x lead, 1x nickel')
+        .blast({ temp: COIL_TEMPS.NICHROME, eut: EV, duration: 1200 })        
+        .unify({ dust: 'thermal_extra:shellite_dust', nugget: 'thermal_extra:shellite_nugget', ingot: 'thermal_extra:shellite_ingot', block: 'thermal_extra:shellite_block', rod: 'thermal_extra:shellite_rod', plate: 'thermal_extra:shellite_plate', gear: 'thermal_extra:shellite_gear'}),
+
+    new MaterialDef('twinite').dust().fluid().color(0xAB6F53).iconSet('METALLIC').noSmelting().materialsBasic().components('2x tin, 1x blaze, 1x obsidian')
+        .blast({ temp: COIL_TEMPS.RTM, eut: IV, duration: 1200 })        
+        .unify({ dust: 'thermal_extra:twinite_dust', nugget: 'thermal_extra:twinite_nugget', ingot: 'thermal_extra:twinite_ingot', block: 'thermal_extra:twinite_block', rod: 'thermal_extra:twinite_rod', plate: 'thermal_extra:twinite_plate', gear: 'thermal_extra:twinite_gear'}),
+
+    new MaterialDef('dragonsteel').dust().fluid().color(0xAB6F53).iconSet('METALLIC').noSmelting().materialsBasic().components('2x ancient, 1x cinnabar, 1x enderium')
+        .blast({ temp: COIL_TEMPS.HSS_G, eut: LuV, duration: 1200 })        
+        .unify({ dust: 'thermal_extra:dragonsteel_dust', nugget: 'thermal_extra:dragonsteel_nugget', ingot: 'thermal_extra:dragonsteel_ingot', block: 'thermal_extra:dragonsteel_block', rod: 'thermal_extra:dragonsteel_rod', plate: 'thermal_extra:dragonsteel_plate', gear: 'thermal_extra:dragonsteel_gear'}),
+
+    new MaterialDef('abyssal').dust().fluid().color(0x62825D).iconSet('METALLIC').noSmelting().materialsBasic().singularity().components('2x ancient, 1x netherite, 1x echo_shard')
+        .blast({ temp: COIL_TEMPS.NAQUADAH, eut: ZPM, duration: 1200 })        
+        .unify({ dust: 'thermal_extra:abyssal_dust', nugget: 'thermal_extra:abyssal_nugget', ingot: 'thermal_extra:abyssal_ingot', block: 'thermal_extra:abyssal_block', rod: 'thermal_extra:abyssal_rod', plate: 'thermal_extra:abyssal_plate', gear: 'thermal_extra:abyssal_gear'}),
+        
+    new MaterialDef('necrotic').dust().color(0x1A1C1E).iconSet('DULL').components('5x calcium, 3x phosphorus, 3x sulfur'),
+    
     //modifications
+    new MaterialDef('netherite').modify().materialsBasic(),
+        //.unify({ plate: 'thermal:netherite_plate' }) seems like thermal removed its own plate without the need for unification once this was registered.
+
     new MaterialDef('osmiridium').modify()
         .byproducts(['ruthenium']),
 
@@ -1778,6 +1813,7 @@ const materials = [
     new MaterialDef('kevlar_carbon_fiber_mesh').gem().color(0x8A7A46).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE),
 
     new MaterialDef('kevlar').dust().color(0x76683C).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE),
+    
 ];
 
 

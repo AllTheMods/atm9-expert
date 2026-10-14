@@ -903,7 +903,7 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:soldering_alloy 288',
         'thermal:upgrade_augment_1',
-        EV,
+        HV,
         200
     );
 
@@ -919,7 +919,7 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:soldering_alloy 288',
         'thermal:upgrade_augment_2',
-        IV,
+        EV,
         200
     );
 
@@ -935,7 +935,7 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:soldering_alloy 288',
         'thermal:upgrade_augment_3',
-        LuV,
+        IV,
         200
     );
 
@@ -951,7 +951,7 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:soldering_alloy 288',
         'thermal_extra:upgrade_augment',
-        ZPM,
+        LuV,
         200
     );
 

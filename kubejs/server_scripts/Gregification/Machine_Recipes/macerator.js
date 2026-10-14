@@ -48,4 +48,10 @@ ServerEvents.recipes(allthemods => {
                 .duration(100)
                 .EUt(HV);
 
+        allthemods.recipes.gtceu.macerator('gregification:necrotic_dust')
+                .itemInputs('#forge:wither_bones')
+                .itemOutputs('gtceu:necrotic_dust')
+                .duration(100)
+                .EUt(HV);
+
 });
