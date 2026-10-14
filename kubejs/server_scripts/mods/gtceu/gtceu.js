@@ -202,7 +202,7 @@ ServerEvents.recipes(allthemods => {
         //'minecraft:granite',
         //'gtceu:red_granite_cobblestone',
         //'gtceu:marble_cobblestone',
-        'minecraft:cobbled_deepslate',
+        'minecraft:deepslate',
         //'minecraft:blackstone',
         'minecraft:mossy_cobblestone',
         'create:scorchia',
