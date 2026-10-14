@@ -15,6 +15,7 @@
 		"bedrockium",
 		"crimson_iron",
 		"infinity",
+		"neutronium",
 		"unobtainium",
 		"vibranium",
 		"nature",
@@ -149,7 +150,6 @@
 		"chrome",
 		"starmetal",
 		"rock_crystal",
-		"yellorium",
-		"neutronium"
+		"yellorium"
 	]
 }

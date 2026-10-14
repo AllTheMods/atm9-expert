@@ -101,15 +101,49 @@ ServerEvents.recipes(allthemods => {
                 ingredient = catalyst.withCount(4);
             }
         }
-        //let water = Fluid.of(`gtceu:water_stage_1`, tKey * 1000);
-        let water = Fluid.of(`gtceu:water_stage_${tKey}`, 1000);
-        let fluids = [Fluid.of('gtceu:saturated_tau', 1000), Fluid.of('gtceu:saturated_life_fertilizer', 1000), water]
+        //let water = Fluid.of(`gtceu:water_stage_1`, tKey * 1000);\
+        let water;
+        switch(tKey)
+        {
+            case 1:
+                water = '#forge:water_stage_1 1000';
+                break;
+            case 2:
+                water = '#forge:water_stage_2 1000';
+                break;
+            case 3:
+                water = '#forge:water_stage_3 1000';
+                break;
+            case 4:
+                water = '#forge:water_stage_4 1000';
+                break;
+            case 5:
+                water = '#forge:water_stage_5 1000';
+                break;
+            case 6:
+                water = '#forge:water_stage_6 1000';
+                break;
+            case 7:
+                water = '#forge:purest_water 1000';
+                break;
+            case 8:
+                water = '#forge:dark_matter 1000';
+                break;
+            case 9:
+                water = '#forge:red_matter 1000';
+                break;
+            default:
+                break;
+        }
+        
+        
 
         // --- STEP 4: Register Recipe ---
         allthemods.recipes.gtceu.seed_fabricator(recipeId)
             .itemInputs(b, `4x ${t.item}`, ingredient)
-            //.inputFluids(Fluid.of('gtceu:saturated_tau', 2000))
-            .inputFluids(fluids)
+            .inputFluids('#forge:saturated_tau 1000')
+            .inputFluids('#forge:saturated_life_fertilizer 1000')
+            .inputFluids(water)
             .itemOutputs(seedItem)
             .duration(t.dur)
             .EUt(t.eu);

@@ -198,12 +198,12 @@ ServerEvents.recipes(allthemods => {
 
 
     const stoneInputs = [
-        'minecraft:basalt',
-        'minecraft:granite',
-        'gtceu:red_granite_cobblestone',
-        'gtceu:marble_cobblestone',
+        //'minecraft:basalt',
+        //'minecraft:granite',
+        //'gtceu:red_granite_cobblestone',
+        //'gtceu:marble_cobblestone',
         'minecraft:cobbled_deepslate',
-        'minecraft:blackstone',
+        //'minecraft:blackstone',
         'minecraft:mossy_cobblestone',
         'create:scorchia',
         'create:scoria',
@@ -212,10 +212,10 @@ ServerEvents.recipes(allthemods => {
         'create:veridium',
         'create:crimsite'
     ];
-    stoneInputs.forEach(stone => {
-        allthemods.recipes.gtceu.rock_breaker(`gregification:create_${stone}`)
-            .notConsumable(`create:${stone}`)
-            .itemOutputs(`create:${stone}`)
+    stoneInputs.forEach(stone => {        
+        allthemods.recipes.gtceu.rock_breaker(`gregification:rock_breaker/${stone.replace(':', '_')}`)
+            .notConsumable(`${stone}`)
+            .itemOutputs(`${stone}`)
             .addDataString('fluidA', 'minecraft:lava')
             .addDataString('fluidB', 'minecraft:water')
             .duration(120)

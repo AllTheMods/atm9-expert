@@ -973,28 +973,28 @@ ServerEvents.recipes(allthemods => {
     );
 
     allthemods.recipes.gtceu.assembler('gregification:coil/draconium')
-        .itemInputs('8x #forge:double_wires/draconium', '8x #forge:foils/gaia')
+        .itemInputs('8x #gtceu:wires/double/draconium', '8x #forge:foils/gaia')
         .inputFluids('#forge:darmstadtium 144')
         .itemOutputs('kubejs:draconium_coil_block')
         .duration(200)
         .EUt(UHV);
 
     allthemods.recipes.gtceu.assembler('gregification:coil/draconium_awakened')
-        .itemInputs('8x #forge:double_wires/draconium_awakened', '8x #forge:foils/insanite')
+        .itemInputs('8x #gtceu:wires/double/draconium_awakened', '8x #forge:foils/insanite')
         .inputFluids('#forge:neutronium 144')        
         .itemOutputs('kubejs:draconium_awakened_coil_block')
         .duration(200)
         .EUt(UEV);
 
     allthemods.recipes.gtceu.assembler('gregification:coil/etrium')
-        .itemInputs('8x #forge:double_wires/etrium', '8x #forge:foils/organic_polymer')
+        .itemInputs('8x #gtceu:wires/double/etrium', '8x #forge:foils/organic_polymer')
         .inputFluids('#forge:dark_matter 144')
         .itemOutputs('kubejs:etrium_coil_block')
         .duration(200)
         .EUt(UIV);
 
     allthemods.recipes.gtceu.assembler('gregification:coil/infinity')
-        .itemInputs('8x #forge:double_wires/infinity', '8x #forge:foils/chaos_plastic')
+        .itemInputs('8x #gtceu:wires/double/infinity', '8x #forge:foils/chaos_plastic')
         .inputFluids('#forge:red_matter 144')
         .itemOutputs('kubejs:infinity_coil_block')
         .duration(200)
