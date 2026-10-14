@@ -271,13 +271,13 @@ ServerEvents.recipes(allthemods => {
         .chancedInput(drone, 2500,-500)
         .itemInputs('forbidden_arcanus:dark_nether_star')
         .chancedOutput('forbidden_arcanus:artisan_relic', 1000, 1000)
-        .chancedOutput('forbidden_arcanus:crescent_moon', 1000, 1000)
+        .chancedOutput('forbidden_arcanus:crescent_moon', 100, 100)
         .chancedOutput('forbidden_arcanus:crimson_stone', 1000, 1000)
-        .chancedOutput('forbidden_arcanus:elementarium', 1000, 1000)
+        .chancedOutput('forbidden_arcanus:elementarium', 2000, 1000)
         .chancedOutput('forbidden_arcanus:divine_pact', 1000, 1000)
         .chancedOutput('forbidden_arcanus:maledictus_pact', 1000, 1000)
         .inputFluids('#forge:kerosene 10000')
-        .duration(10000)
+        .duration(8000)
         .EUt(EV)
         .circuit(5);
 

@@ -1,5 +1,5 @@
 ServerEvents.recipes(allthemods => {
-    const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+    const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
     const stage1 = 'gtceu:water_stage_1'
     const stage2 = 'gtceu:water_stage_2'
     const stage3 = 'gtceu:water_stage_3'
@@ -35,7 +35,7 @@ ServerEvents.recipes(allthemods => {
         .addData('ebf_temp', 3600)
         .circuit(1)
         .duration(1600)
-    
+
 
 
     allthemods.recipes.gtceu.mana_burner('coal_to_source')
@@ -45,7 +45,7 @@ ServerEvents.recipes(allthemods => {
         .addData('ebf_temp', 3600)
         .circuit(2)
         .duration(1600)
-    
+
 
     allthemods.recipes.gtceu.mana_burner('cake_to_liquid_mana')
         .itemInputs('minecraft:cake')
@@ -53,7 +53,7 @@ ServerEvents.recipes(allthemods => {
         .outputFluids('gtceu:mana_essence 10800')
         .circuit(1)
         .duration(14400)
-    
+
 
     allthemods.recipes.gtceu.mana_burner('cake_to_source')
         .itemInputs('minecraft:cake')
@@ -61,7 +61,7 @@ ServerEvents.recipes(allthemods => {
         .outputFluids('gtceu:source 1800')
         .circuit(2)
         .duration(14400)
-    
+
 
     allthemods.recipes.gtceu.mana_burner('lava_to_liquid_mana')
         .inputFluids('minecraft:lava 1000')
@@ -69,7 +69,7 @@ ServerEvents.recipes(allthemods => {
         .outputFluids('gtceu:mana_essence 320')
         .circuit(1)
         .duration(400)
-    
+
 
     allthemods.recipes.gtceu.mana_burner('lava_to_source')
         .inputFluids('minecraft:lava 1000')
@@ -77,7 +77,7 @@ ServerEvents.recipes(allthemods => {
         .outputFluids('gtceu:source 50')
         .circuit(2)
         .duration(400)
-    
+
 
     const petalDuration = 300;
     const runicDuration = 600;
@@ -227,7 +227,7 @@ ServerEvents.recipes(allthemods => {
     const alfBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:alfsteel"}}').strongNBT();
     const manaSteel = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:manasteel"}}').strongNBT();
     const ironBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:iron"}}').strongNBT();
-            
+
 
     allthemods.recipes.gtceu.petal_apothecary('pure_bee')
         .itemInputs(['minecraft:bee_spawn_egg', '3x #botania:petals/white', 'productivebees:honey_treat', 'minecraft:bee_spawn_egg'])
@@ -319,7 +319,7 @@ ServerEvents.recipes(allthemods => {
         5: 'bloodmagic:archmagebloodorb',
         6: 'gtceu:technomancy_orb'
     };
-     const EUTiers = {
+    const EUTiers = {
         1: LV,     //lv
         2: MV,    //mv
         3: HV,    //hv
@@ -499,7 +499,7 @@ ServerEvents.recipes(allthemods => {
     });
 
     allthemods.recipes.gtceu.alchemical_workbench('gregification:thermal_spark')
-        .itemInputs('botania:corporea_spark','#forge:exquisite_gems/nitro_crystal','4x #forge:rounds/pink_slime','#forge:rings/draconium_awakened')
+        .itemInputs('botania:corporea_spark', '#forge:exquisite_gems/nitro_crystal', '4x #forge:rounds/pink_slime', '#forge:rings/draconium_awakened')
         .notConsumable('gtceu:technomancy_orb')
         .itemOutputs('gtceu:thermal_spark')
         .duration(1000)
@@ -509,19 +509,19 @@ ServerEvents.recipes(allthemods => {
         'botania:alchemy_catalyst': 'botania:alchemy_catalyst',
         'botania:conjuration_catalyst': 'botania:conjuration_catalyst'
     };
- 
+
 
     allthemods.forEachRecipe({ type: 'botania:mana_infusion' }, rawRecipe => {
         let baseSafeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
         try {
             let recipe = JSON.parse(rawRecipe.json);
- 
+
             // --- Skip NBT-based recipes (e.g. bee spawn eggs) - handled manually below ---
             if ((recipe.input && recipe.input.type === 'forge:nbt') ||
                 (recipe.output && recipe.output.type === 'forge:nbt')) {
                 return;
             }
- 
+
             // --- Output item (shared across every alternative input) ---
             let outObj = recipe.output;
             let outputItem = 'minecraft:air';
@@ -529,14 +529,14 @@ ServerEvents.recipes(allthemods => {
                 let count = outObj.count || 1;
                 outputItem = count > 1 ? `${count}x ${outObj.item}` : outObj.item;
             }
- 
+
             let manaCost = recipe.mana || 0;
- 
+
             // --- Input: normalize to an array of alternatives (single-item input becomes a 1-length array) ---
             let rawInput = recipe.input;
             let inputEntries = Array.isArray(rawInput) ? rawInput : [rawInput];
- 
-            inputEntries.forEach(function(inputEntry, index) {
+
+            inputEntries.forEach(function (inputEntry, index) {
                 let inputItem = null;
                 if (inputEntry) {
                     if (inputEntry.item) {
@@ -546,17 +546,17 @@ ServerEvents.recipes(allthemods => {
                     }
                 }
                 if (!inputItem) return;
- 
+
                 // one recipe ID per alternative - suffix only added when there's more than one
                 let safeID = inputEntries.length > 1 ? `${baseSafeID}_alt${index}` : baseSafeID;
- 
+
                 let builder = allthemods.recipes.gtceu.mana_pool(safeID)
                     .itemInputs([inputItem])
                     .itemOutputs(outputItem)
                     .inputFluids(`gtceu:mana_essence ${manaCost}`)
                     .duration(10)
                     .EUt(HV);
- 
+
                 // --- Catalyst (Alchemy/Conjuration) as a non-consumed second input ---
                 if (recipe.catalyst && recipe.catalyst.block) {
                     let catalystItem = CATALYST_ITEM_IDS[recipe.catalyst.block];
@@ -569,14 +569,14 @@ ServerEvents.recipes(allthemods => {
                     }
                 }
             });
- 
+
         } catch (err) {
             console.error(`FAILED recipe ID: ${baseSafeID} — ${err}`);
         }
     });
 
-    
- 
+
+
     // --- Manasteel bee - manual, NBT-based, excluded from the automated loop above ---
     allthemods.recipes.gtceu.mana_pool('bacteria_mana_pool_manasteel_bee')
         .itemInputs(ironBee)
@@ -585,35 +585,49 @@ ServerEvents.recipes(allthemods => {
         .duration(10)
         .EUt(HV);
 
-    
-    let alfheimRecipes = 
-    [    
-        {id: 'elementium_ingot', input: '2x #forge:ingots/manasteel', output: 'botania:elementium_ingot', cost: 100},
-        {id: 'elementium_block', input: '2x #forge:storage_blocks/manasteel', output: 'botania:elementium_block', cost: 900},
-        {id: 'dragonstone', input: '#forge:gems/mana_diamond', output: 'botania:dragonstone', cost: 100},
-        {id: 'dragonstone_block', input: '#forge:storage_blocks/mana_diamond', output: 'botania:dragonstone_block', cost: 900},
-        {id: 'pixie_dust', input: 'botania:mana_pearl', output: 'botania:pixie_dust', cost: 100},
-        {id: 'quartz_elven', input: '#forge:gems/quartz', output: 'botania:quartz_elven', cost: 100},
-        {id: 'elf_glass', input: 'botania:mana_glass', output: 'botania:elf_glass', cost: 100},
-        {id: 'livingwood_log', input: 'botania:livingwood_log', output: 'botania:dreamwood_log', cost: 100},
-        {id: 'livingwood', input: 'botania:livingwood', output: 'botania:dreamwood', cost: 100},
-        {id: 'dreamwood_leaves', input: '#minecraft:leaves', output: 'mythicbotany:dreamwood_leaves', cost: 100},
-        {id: 'elementium_bee', input: manaSteel, output: elementiumBee, cost: 10000},
-    ];
+
+    let alfheimRecipes =
+        [
+            { id: 'elementium_ingot', input: '2x #forge:ingots/manasteel', output: 'botania:elementium_ingot', cost: 100 },
+            { id: 'elementium_block', input: '2x #forge:storage_blocks/manasteel', output: 'botania:elementium_block', cost: 900 },
+            { id: 'dragonstone', input: '#forge:gems/mana_diamond', output: 'botania:dragonstone', cost: 100 },
+            { id: 'dragonstone_block', input: '#forge:storage_blocks/mana_diamond', output: 'botania:dragonstone_block', cost: 900 },
+            { id: 'pixie_dust', input: 'botania:mana_pearl', output: 'botania:pixie_dust', cost: 100 },
+            { id: 'quartz_elven', input: '#forge:gems/quartz', output: 'botania:quartz_elven', cost: 100 },
+            { id: 'elf_glass', input: 'botania:mana_glass', output: 'botania:elf_glass', cost: 100 },
+            { id: 'livingwood_log', input: 'botania:livingwood_log', output: 'botania:dreamwood_log', cost: 100 },
+            { id: 'livingwood', input: 'botania:livingwood', output: 'botania:dreamwood', cost: 100 },
+            { id: 'dreamwood_leaves', input: '#minecraft:leaves', output: 'mythicbotany:dreamwood_leaves', cost: 100 },
+            { id: 'elementium_bee', input: manaSteel, output: elementiumBee, cost: 10000 },
+        ];
 
     alfheimRecipes.forEach(recipe => {
         allthemods.recipes.gtceu.alfheim_trader('gregification/' + recipe.id)
-        .itemInputs(recipe.input)
-        .itemOutputs(recipe.output)
+            .itemInputs(recipe.input)
+            .itemOutputs(recipe.output)
+            .inputFluids('#forge:alfheim_portal_fluid 1000')
+            .duration(10)
+            .EUt(IV);
+    });
+
+    allthemods.recipes.gtceu.alfheim_trader('gregification:crescent_moon')
+        .itemInputs('#forge:singularities/tattered')
+        .itemOutputs('forbidden_arcanus:crescent_moon')
         .inputFluids('#forge:alfheim_portal_fluid 1000')
         .duration(10)
         .EUt(IV);
-    });
-    
+
+    allthemods.recipes.gtceu.mana_infuser('gregification:cresent_infusion/terrasteel')
+        .notConsumable('forbidden_arcanus:crescent_moon')
+        .itemInputs('#forge:gems/mana_diamond', 'botania:mana_pearl', '#forge:ingots/manasteel')
+        .itemOutputs('botania:terrasteel_ingot')
+        .duration(infusionDuration)
+        .EUt(infusionVoltage);
+
     allthemods.recipes.gtceu.assembler('gregification/mana_infuser')
-        .itemInputs('gtceu:iv_machine_hull', '2x gtceu:iv_electric_pump', '2x gtceu:iv_electric_piston', '2x #gtceu:circuits/iv', '8x #forge:plates/semi_stable_clathrate')                    
+        .itemInputs('gtceu:iv_machine_hull', '2x gtceu:iv_electric_pump', '2x gtceu:iv_electric_piston', '2x #gtceu:circuits/iv', '8x #forge:plates/semi_stable_clathrate')
         .itemOutputs('gtceu:mana_infuser')
         .inputFluids('#forge:mana_essence 9200')
         .duration(600)
-        .EUt(IV);            
+        .EUt(IV);
 });

@@ -477,12 +477,12 @@ const materials = [
         .unify({ gem: 'allthetweaks:atm_star' }),
 
     new MaterialDef('dark_matter')
-        .color(0x3b173f).iconSet('NETHERSTAR').lens()
-        .unify({ block: 'projecte:dark_matter_block', gem: 'projecte:dark_matter' }),
+        .color(0x3b173f).iconSet('NETHERSTAR').lens()        
+        .unify({ plate: true, gemFlawless: true, gemExquisite: true,block: 'projecte:dark_matter_block', gem: 'projecte:dark_matter' }),
 
     new MaterialDef('red_matter')
         .color(0x7a0606).iconSet('NETHERSTAR').lens()
-        .unify({ block: 'projecte:red_matter_block', gem: 'projecte:red_matter' }),
+        .unify({ plate: true, gemFlawless: true, gemExquisite: true,block: 'projecte:red_matter_block', gem: 'projecte:red_matter' }),
 
     new MaterialDef('chaos_plastic').color(0x222222).iconSet('SHINY').polymer(),
 
@@ -1607,18 +1607,15 @@ const materials = [
 
     new MaterialDef('elemental_earth').color(0x289C2B).iconSet('SHINY').singularity(),
 
-    new MaterialDef('drenched_iron').ingot().dust().fluid().ore().element('iron').color(0x5490CF).iconSet('METALLIC')
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FOIL)
+    new MaterialDef('drenched_iron').ingot().dust().fluid().ore().element('iron').color(0x5490CF).iconSet('METALLIC').materialsBasic()        
         .byproducts(['iron', 'cobalt'])
         .unify({ ingot: 'elementalcraft:drenched_iron_ingot', block: 'elementalcraft:drenched_iron_block', nugget: 'elementalcraft:drenched_iron_nugget' }),
 
-    new MaterialDef('swift_alloy').ingot().dust().fluid().ore().color(0xEBB760).iconSet('METALLIC')
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FOIL)
+    new MaterialDef('swift_alloy').ingot().dust().fluid().ore().color(0xEBB760).iconSet('METALLIC').materialsBasic()        
         .byproducts(['drenched_iron', 'gold', 'copper'])
         .unify({ ingot: 'elementalcraft:swift_alloy_ingot', block: 'elementalcraft:swift_alloy_block', nugget: 'elementalcraft:swift_alloy_nugget' }),
 
-    new MaterialDef('fireite').ingot().dust().fluid().ore().color(0x5C0A0A).iconSet('METALLIC')
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FOIL)        
+    new MaterialDef('fireite').ingot().dust().fluid().ore().color(0x5C0A0A).iconSet('METALLIC').materialsBasic()        
         .byproducts(['swift_alloy', 'netherite'])
         .unify({ ingot: 'elementalcraft:fireite_ingot', block: 'elementalcraft:fireite_block', nugget: 'elementalcraft:fireite_nugget' }),
 

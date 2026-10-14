@@ -90,9 +90,9 @@ ServerEvents.recipes(allthemods => {
 
     thermalExtra.forEach((material, index) => {
         addEBF(
-            [`#forge:dusts/${material}`],
-            null,
-            `gtceu:hot_${material}_ingot`,
+            [`#forge:dusts/${material.name}`],
+            'industrialforegoing:ether_gas 1000',
+            `gtceu:hot_${material.name}_ingot`,
             null,
             material.temp,
             material.duration,
@@ -100,7 +100,7 @@ ServerEvents.recipes(allthemods => {
         );
         allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/${material.name}_ingot`)
             .itemInputs(`#forge:hot_ingots/${material.name}`)
-            .itemOutputs(`gtceu:${material.name}_ingot`)
+            .itemOutputs(`thermal_extra:${material.name}_ingot`)
             .inputFluids('#forge:thermal_coolant 1000')
             .duration(1200)
             .EUt(HV);
