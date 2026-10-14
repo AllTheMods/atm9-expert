@@ -1,5 +1,5 @@
 ServerEvents.recipes(allthemods => {
-    const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+    const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
     /*const tiers = {
         ULV: 8,
         LV: 32,
@@ -65,7 +65,7 @@ ServerEvents.recipes(allthemods => {
         'gtceu:slate_casing',
         LV, 200
     );
-    
+
     //ritual stone
     addAssembler(
         [
@@ -180,7 +180,7 @@ ServerEvents.recipes(allthemods => {
             '2x #gtceu:circuits/hv',
             '2x bloodmagic:reagentbinding',
             '2x bloodmagic:infusedslate',
-            'bloodmagic:daggerofsacrifice'           
+            'bloodmagic:daggerofsacrifice'
         ],
         'gtceu:polyethylene 144',
         'sanguine_networks:virtual_sacrificer',
@@ -200,7 +200,7 @@ ServerEvents.recipes(allthemods => {
 
     //soul surge
     addAssembler(
-        [            
+        [
             '4x #forge:plastic',
             '2x minecraft:echo_shard',
             '2x gtceu:iv_electric_piston',
@@ -217,11 +217,11 @@ ServerEvents.recipes(allthemods => {
 
     //soul pipe
     addAssembler(
-        [            
+        [
             '2x #forge:plastic',
             '2x minecraft:echo_shard',
             '6x #forge:plates/hafnium',
-            '2x #forge:small_gears/selenium'            
+            '2x #forge:small_gears/selenium'
         ],
         'gtceu:polyethylene 144',
         '8x industrialforegoingsouls:soul_network_pipe',
@@ -233,13 +233,13 @@ ServerEvents.recipes(allthemods => {
     addAssembler(
         [
             '4x #forge:plastic',
-            'minecraft:sculk_shrieker',            
+            'minecraft:sculk_shrieker',
             '#industrialforegoing:machine_frame/advanced',
             '2x #forge:gears/unobtainium',
             '2x #forge:gears/selenium',
             '#forge:frames/hafnium',
-            'minecraft:sculk_catalyst',            
-            '4x #gtceu:circuits/iv'           
+            'minecraft:sculk_catalyst',
+            '4x #gtceu:circuits/iv'
         ],
         'gtceu:polytetrafluoroethylene 288',
         'industrialforegoingsouls:soul_laser_base',
@@ -732,9 +732,9 @@ ServerEvents.recipes(allthemods => {
             '4x #forge:plates/stainless_steel',
             '2x #gtceu:circuits/hv',
             'gtceu:hv_field_generator'
-        ], 
-        null, 
-        'wirelesschargers:basic_wireless_player_charger', 
+        ],
+        null,
+        'wirelesschargers:basic_wireless_player_charger',
         HV, 200, 1);
 
     //wirelesschargers:advanced_wireless_player_charger
@@ -745,9 +745,9 @@ ServerEvents.recipes(allthemods => {
             '4x #forge:plates/titanium',
             '2x #gtceu:circuits/ev',
             'gtceu:ev_field_generator'
-        ], 
-        null, 
-        'wirelesschargers:advanced_wireless_player_charger', 
+        ],
+        null,
+        'wirelesschargers:advanced_wireless_player_charger',
         EV, 600, 2);
 
     //wirelesschargers:basic_wireless_block_charger
@@ -758,9 +758,9 @@ ServerEvents.recipes(allthemods => {
             '4x #forge:plates/stainless_steel',
             '2x #gtceu:circuits/hv',
             'gtceu:hv_field_generator'
-        ], 
-        null, 
-        'wirelesschargers:basic_wireless_block_charger', 
+        ],
+        null,
+        'wirelesschargers:basic_wireless_block_charger',
         HV, 200, 1);
 
     //wirelesschargers:advanced_wireless_block_charger
@@ -771,21 +771,21 @@ ServerEvents.recipes(allthemods => {
             '4x #forge:plates/titanium',
             '2x #gtceu:circuits/ev',
             'gtceu:ev_field_generator'
-        ], 
-        null, 
-        'wirelesschargers:advanced_wireless_block_charger', 
+        ],
+        null,
+        'wirelesschargers:advanced_wireless_block_charger',
         EV, 600, 2);
 
     addAssembler(
         [
-            'rftoolsbase:machine_frame',            
+            'rftoolsbase:machine_frame',
             '4x #forge:dusts/redstone',
             '4x gtceu:tempered_glass',
             '4x #forge:plates/cadmium_selenide'
-            
-        ], 
-        'gtceu:polytetrafluoroethylene 144', 
-        'rftoolsutility:screen_controller', 
+
+        ],
+        'gtceu:polytetrafluoroethylene 144',
+        'rftoolsutility:screen_controller',
         EV, 200);
 
     addAssembler(
@@ -793,41 +793,41 @@ ServerEvents.recipes(allthemods => {
             '2x integrateddynamics:part_static_light_panel',
             '2x integrateddynamics:variable_transformer_output',
             '4x #forge:foils/cadmium_selenide'
-            
-        ], 
-        'gtceu:polytetrafluoroethylene 144', 
-        'integrateddynamics:part_display_panel', 
+
+        ],
+        'gtceu:polytetrafluoroethylene 144',
+        'integrateddynamics:part_display_panel',
         EV, 200);
 
     addAssembler(
         [
-            
+
             '4x #forge:foils/cadmium_selenide',
             '2x #forge:gears/diamond',
             '4x #forge:plates/gadolinium',
             '4x #forge:plastic',
             '2x #gtceu:circuits/iv'
-            
-        ], 
-        'gtceu:polytetrafluoroethylene 288', 
-        'industrialforegoing:hydroponic_simulation_processor', 
+
+        ],
+        'gtceu:polytetrafluoroethylene 288',
+        'industrialforegoing:hydroponic_simulation_processor',
         IV, 200);
 
     addAssembler(
         [
-            
+
             'gtceu:long_magnetic_samarium_cobalt_rod',
             '4x #forge:rings/strontium_ferrite',
-            '64x #forge:fine_wires/cadmium_copper'            
-        ], 
-        '#forge:polybenzimidazole 288', 
-        'gtceu:samarium_cobalt_magnetic_rotor', 
+            '64x #forge:fine_wires/cadmium_copper'
+        ],
+        '#forge:polybenzimidazole 288',
+        'gtceu:samarium_cobalt_magnetic_rotor',
         IV, 60);
 
     //soul extractor
     addAssembler(
         [
-            "gtceu:hexagonal_bio_composite",            
+            "gtceu:hexagonal_bio_composite",
             "4x #forge:plates/stabilized_clathrate",
             "#forge:frames/draconium",
             "2x #gtceu:circuits/iv",
@@ -835,7 +835,7 @@ ServerEvents.recipes(allthemods => {
             "2x gtceu:iv_electric_piston",
             'forbidden_arcanus:soul_extractor'
 
-        ],            
+        ],
         "#forge:polytetrafluoroethylene 576",
         "gtceu:soul_extractor",
         EV,
@@ -846,7 +846,7 @@ ServerEvents.recipes(allthemods => {
     //hephaestus forge
     addAssembler(
         [
-            "gtceu:hexagonal_bio_composite",            
+            "gtceu:hexagonal_bio_composite",
             "4x #forge:plates/stabilized_clathrate",
             "#forge:frames/draconium",
             "2x #gtceu:circuits/iv",
@@ -862,7 +862,7 @@ ServerEvents.recipes(allthemods => {
         1
     );
 
-     //rf coil
+    //rf coil
     addAssembler(
         [
             '4x #forge:plates/redstone',
@@ -876,8 +876,8 @@ ServerEvents.recipes(allthemods => {
         200
     );
 
-    
-    
+
+
     //redstone servo
     addAssembler(
         [
@@ -971,5 +971,33 @@ ServerEvents.recipes(allthemods => {
         ZPM,
         200
     );
+
+    allthemods.recipes.gtceu.assembler('gregification:coil/draconium')
+        .itemInputs('8x #forge:double_wires/draconium', '8x #forge:foils/gaia')
+        .inputFluids('#forge:darmstadtium 144')
+        .itemOutputs('kubejs:draconium_coil_block')
+        .duration(200)
+        .EUt(UHV);
+
+    allthemods.recipes.gtceu.assembler('gregification:coil/draconium_awakened')
+        .itemInputs('8x #forge:double_wires/draconium_awakened', '8x #forge:foils/insanite')
+        .inputFluids('#forge:neutronium 144')        
+        .itemOutputs('kubejs:draconium_awakened_coil_block')
+        .duration(200)
+        .EUt(UEV);
+
+    allthemods.recipes.gtceu.assembler('gregification:coil/etrium')
+        .itemInputs('8x #forge:double_wires/etrium', '8x #forge:foils/organic_polymer')
+        .inputFluids('#forge:dark_matter 144')
+        .itemOutputs('kubejs:etrium_coil_block')
+        .duration(200)
+        .EUt(UIV);
+
+    allthemods.recipes.gtceu.assembler('gregification:coil/infinity')
+        .itemInputs('8x #forge:double_wires/infinity', '8x #forge:foils/chaos_plastic')
+        .inputFluids('#forge:red_matter 144')
+        .itemOutputs('kubejs:infinity_coil_block')
+        .duration(200)
+        .EUt(UXV);
 
 });

@@ -130,7 +130,7 @@ ServerEvents.recipes(allthemods => {
         .outputFluids(Fluid.of('gtceu:molten_piglich_heart', 1296))
         .duration(101250)
         .EUt(LV)
-    
+
     // atmium vib unob alloys
     allthemods.recipes.gtceu.chemical_reactor('unobtainium_allthemodium_alloy_ingot')
         .itemInputs(['allthemodium:allthemodium_ingot', 'allthemodium:unobtainium_ingot'])
@@ -138,7 +138,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('allthemodium:unobtainium_allthemodium_alloy_ingot')
         .duration(7800000)
         .EUt(LV)
-    
+
     allthemods.recipes.gtceu.chemical_reactor('unobtainium_allthemodium_alloy_block')
         .itemInputs(['allthemodium:allthemodium_block', 'allthemodium:unobtainium_block'])
         .inputFluids(Fluid.of('gtceu:molten_piglich_heart', 1296))
@@ -152,7 +152,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('allthemodium:unobtainium_vibranium_alloy_ingot')
         .duration(7800000)
         .EUt(LV)
-    
+
     allthemods.recipes.gtceu.chemical_reactor('unobtainium_vibranium_alloy_block')
         .itemInputs(['allthemodium:vibranium_block', 'allthemodium:unobtainium_block'])
         .inputFluids(Fluid.of('gtceu:molten_piglich_heart', 1296))
@@ -166,7 +166,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('allthemodium:vibranium_allthemodium_alloy_ingot')
         .duration(7800000)
         .EUt(LV)
-    
+
     allthemods.recipes.gtceu.chemical_reactor('vibranium_allthemodium_alloy_block')
         .itemInputs(['allthemodium:allthemodium_block', 'allthemodium:vibranium_block'])
         .inputFluids(Fluid.of('gtceu:molten_piglich_heart', 1296))
@@ -196,18 +196,32 @@ ServerEvents.recipes(allthemods => {
         .duration(100)
         .EUt(24)
 
-        
-    const createStones = ['asurine', 'ochrum', 'veridium', 'crimsite'];
-    createStones.forEach(stone => {
+
+    const stoneInputs = [
+        'minecraft:basalt',
+        'minecraft:granite',
+        'gtceu:red_granite_cobblestone',
+        'gtceu:marble_cobblestone',
+        'minecraft:cobbled_deepslate',
+        'minecraft:blackstone',
+        'minecraft:mossy_cobblestone',
+        'create:scorchia',
+        'create:scoria',
+        'create:asurine',
+        'create:ochrum',
+        'create:veridium',
+        'create:crimsite'
+    ];
+    stoneInputs.forEach(stone => {
         allthemods.recipes.gtceu.rock_breaker(`gregification:create_${stone}`)
             .notConsumable(`create:${stone}`)
             .itemOutputs(`create:${stone}`)
             .addDataString('fluidA', 'minecraft:lava')
             .addDataString('fluidB', 'minecraft:water')
-            .duration(80)
+            .duration(120)
             .EUt(EV)
     });
-        
+
 
     // Rock Breaker recipes for End Stone and Netherrack
     allthemods.recipes.gtceu.rock_breaker('netherrack')

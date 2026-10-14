@@ -1840,6 +1840,8 @@ const materials = [
 GTCEuStartupEvents.registry('gtceu:material', allthemods => {
     materials.forEach(m => m.register(allthemods));
     let materialBuilder = allthemods.create("infinity")
+    //
+        .cableProperties(134217728, 0, true)
         .ingot()
         .liquid(new GTFluidBuilder().state(GTFluidState.LIQUID).customStill())
         .element('infinity')

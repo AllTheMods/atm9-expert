@@ -40,8 +40,12 @@ ServerEvents.recipes(allthemods => {
         3: { eu: IV, dur: 200, item: 'mysticalagriculture:tertium_essence' },
         4: { eu: LuV, dur: 300, item: 'mysticalagriculture:imperium_essence' },
         5: { eu: ZPM, dur: 400, item: 'mysticalagriculture:supremium_essence' },
-        6: { eu: UV, dur: 600, item: 'mysticalagradditions:insanium_essence' }
+        6: { eu: UV, dur: 600, item: 'mysticalagradditions:insanium_essence' },
+        7: { eu: UHV, dur: 800, item: 'mysticalexpansion:extremium_essence' },
+        8: { eu: UEV, dur: 1000, item: 'mysticalexpansion:etherium_essence' },
+        9: { eu: UIV, dur: 1200, item: 'mysticalexpansion:divinium_essence' }      
     };
+
     const BASE = {
         r: 'mysticalagriculture:prosperity_seed_base',
         s: 'mysticalagriculture:soulium_seed_base'
@@ -241,6 +245,15 @@ ServerEvents.recipes(allthemods => {
     gregifySeed('nitro_crystal', 'r', 6, 'powah:nitro_crystal_block');
     gregifySeed('iridium', 'r', 6, '#forge:storage_blocks/iridium');
     gregifySeed('awakened_draconium', 'r', 6, '#forge:storage_blocks/draconium_awakened');
+        
+    // Tier 7
+    gregifySeed('bedrockium', 'r', 7, '#forge:storage_blocks/bedrockium');
+
+    // Tier 8
+    gregifySeed('neutronium', 'r', 8, '#forge:storage_blocks/neutronium');
+
+    // Tier 9
+    gregifySeed('infinity', 'r', 9, '#forge:storage_blocks/infinity');
 
     // --- Mob Seeds ---    
     gregifySeed('chicken', 's', 2, Item.of('mysticalagriculture:soul_jar', '{Souls:8.0d,Type:"mysticalagriculture:chicken"}').weakNBT());
@@ -263,5 +276,32 @@ ServerEvents.recipes(allthemods => {
     gregifySeed('blizz', 's', 4, Item.of('mysticalagriculture:soul_jar', '{Souls:6.0d,Type:"mysticalagriculture:blizz"}').weakNBT());
     gregifySeed('blitz', 's', 4, Item.of('mysticalagriculture:soul_jar', '{Souls:6.0d,Type:"mysticalagriculture:blitz"}').weakNBT());
     gregifySeed('basalz', 's', 4, Item.of('mysticalagriculture:soul_jar', '{Souls:6.0d,Type:"mysticalagriculture:basalz"}').weakNBT());
+
+    allthemods.shaped('gtceu:small_bedrockium_dust',[
+        'AAA',
+        'AAA',
+        'AAA'
+    ],{
+            A: 'mysticalagriculture:bedrockium_essence'
+        }
+    ).id('gregification:seeds/bedrockium_dust');
+    
+    allthemods.shaped('gtceu:small_neutronium_dust',[
+        'AAA',
+        'AAA',
+        'AAA'
+    ],{
+            A: 'mysticalagriculture:neutronium_essence'
+        }
+    ).id('gregification:seeds/neutronium_dust');
+
+    allthemods.shaped('gtceu:small_infinity_dust',[
+        'AAA',
+        'AAA',
+        'AAA'
+    ],{
+            A: 'mysticalagriculture:infinity_essence'
+        }
+    ).id('gregification:seeds/infinity_dust');
 
 });
