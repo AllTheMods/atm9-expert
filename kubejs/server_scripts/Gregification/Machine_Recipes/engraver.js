@@ -1,7 +1,10 @@
 ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+    
     function nextTier(base) {
-        return VOLTAGE_TIERS[VOLTAGE_TIERS.indexOf(base) + 1];
+        let VA_JS = Array.from(GTValues.VA);
+        let next = VA_JS[VA_JS.indexOf(base) + 1];
+        return next !== undefined ? next : base;
     }
 
     const addLaserEngraver = (itemIn, lensIn, itemOut, duration, eu, oID) => {
@@ -20,7 +23,7 @@ ServerEvents.recipes(allthemods => {
 
     addLaserEngraver(
         'gtceu:empowered_wafer',
-        '#forge:lenses/destructive',
+        '#forge:lenses/eternal',
         'gtceu:empowered_ram_wafer',
         900,
         UV
@@ -28,7 +31,7 @@ ServerEvents.recipes(allthemods => {
 
     addLaserEngraver(
         'gtceu:germanium_wafer',
-        '#forge:lenses/destructive',
+        '#forge:lenses/eternal',
         'gtceu:germanium_diode_wafer',
         900,
         ZPM
@@ -36,7 +39,7 @@ ServerEvents.recipes(allthemods => {
 
     addLaserEngraver(
         'gtceu:atomic_wafer',
-        '#forge:lenses/destructive',
+        '#forge:lenses/eternal',
         'gtceu:atomic_clock_wafer',
         900,
         ZPM
@@ -58,7 +61,7 @@ ServerEvents.recipes(allthemods => {
         { lens: 'light_blue', wafer: 'cpu',                  baseEU: EV, wafers: TIER4 },
         { lens: 'green',      wafer: 'ram',                  baseEU: HV, wafers: TIER4 },
         { lens: 'red',        wafer: 'ilc',                  baseEU: HV, wafers: TIER4 },
-        { lens: 'cyan',       wafer: 'simple',               baseEU: EV, wafers: TIER4 },
+        { lens: 'cyan',       wafer: 'simple_soc',           baseEU: EV, wafers: TIER4 },
         { lens: 'yellow',     wafer: 'soc',                  baseEU: EV, wafers: TIER3 },
         { lens: 'purple',     wafer: 'advanced_soc',         baseEU: IV, wafers: TIER2 },
         { lens: 'black',      wafer: 'highly_advanced_soc',  baseEU: IV, wafers: TIER1 },

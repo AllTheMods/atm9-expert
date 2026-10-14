@@ -25,7 +25,7 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.assembly_line('gregification:craft_thorium_reactor')
         .itemInputs(
-            'gtceu:zpm_machine_hull',
+            'gtceu:luv_machine_hull',
             '2x #gtceu:circuits/luv',
             '2x gtceu:luv_electric_pump',
             '2x gtceu:luv_electric_motor',

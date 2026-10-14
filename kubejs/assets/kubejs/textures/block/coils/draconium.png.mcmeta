@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/coils/draconium_ctm"		
+    }    
+}

@@ -380,6 +380,8 @@ MaterialDef.prototype.applyModification = function () {
 
 
 const materials = [
+    new MaterialDef('antimony_telluride').dust().color(0xB8A8C8).components('2x antimony, 3x tellurium'),
+
     new MaterialDef('blutonium')
         .color(0x14147b).iconSet('RADIOACTIVE').ingot().dust().materialsBasic()
         .unify({ ingot: 'bigreactors:blutonium_ingot', dust: 'bigreactors:blutonium_dust', block: 'bigreactors:blutonium_block' }),

@@ -23,7 +23,8 @@ ServerEvents.recipes(allthemods => {
         if (program) recipe.circuit(program);
     };
     
-    //addMixer(['2x #forge:dusts/bismuth', '3x #forge:dusts/tellurium'],'5x gtceu:bismuth_telluride_dust',ZPM,600);
+    addMixer(['2x #forge:dusts/bismuth', '3x #forge:dusts/tellurium'],'5x gtceu:bismuth_telluride_dust',ZPM,600);
+    addMixer(['2x #forge:dusts/antimony', '#forge:dusts/tellurium'],'3x gtceu:antimony_telluride_dust',ZPM,600);
     addMixer(['2x #forge:dusts/bismuth_oxide', '3x #forge:dusts/germanium_dioxide'],'5x gtceu:bismuth_germanate_dust',IV,600);    
     addMixer(['#forge:dusts/bismuth_oxide','2x #forge:dusts/strontium_carbonate','#forge:dusts/quicklime','2x #forge:dusts/copper_oxide'], '6x gtceu:bismuth_strontium_calcium_copper_oxide_dust', IV, 600);
 

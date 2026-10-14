@@ -1,6 +1,6 @@
 {  
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "kubejs:block/coils/cosmic_alloy"
+    "all": "kubejs:block/coils/draconium"
   }
 }

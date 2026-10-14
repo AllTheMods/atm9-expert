@@ -1,6 +1,6 @@
-{
+{  
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "kubejs:block/coil/omnic_matrix/coil"
+    "all": "kubejs:block/coils/draconium_bloom"
   }
 }

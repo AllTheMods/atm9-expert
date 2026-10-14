@@ -15,7 +15,6 @@
 		"bedrockium",
 		"crimson_iron",
 		"infinity",
-		"neutronium",
 		"unobtainium",
 		"vibranium",
 		"nature",
@@ -135,11 +134,11 @@
 		"uraninite",
 		"nether_star",
 		"dragon_egg",
+		"gaia_spirit",
 		"awakened_draconium",
-		"nitro_crystal",
-		"gaia_spirit"
+		"nitro_crystal"
 	],
-	"disabled": [		
+	"disabled": [
 		"marble",
 		"basalt",
 		"aquamarine",
@@ -150,6 +149,7 @@
 		"chrome",
 		"starmetal",
 		"rock_crystal",
-		"yellorium"
+		"yellorium",
+		"neutronium"
 	]
 }

@@ -1,6 +1,6 @@
 {
     "ldlib": {
-        "connection": "kubejs:block/coils/antimatter_alloy_bloom_ctm",
+        "connection": "kubejs:block/coils/draconium_bloom_ctm",
         "emissive": true
     },
     "shimmer": {
