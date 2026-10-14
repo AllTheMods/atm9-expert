@@ -478,11 +478,11 @@ const materials = [
 
     new MaterialDef('dark_matter')
         .color(0x3b173f).iconSet('NETHERSTAR').lens()        
-        .unify({ plate: true, gemFlawless: true, gemExquisite: true,block: 'projecte:dark_matter_block', gem: 'projecte:dark_matter' }),
+        .unify({ gemFlawless: true, gemExquisite: true,block: 'projecte:dark_matter_block', gem: 'projecte:dark_matter' }),
 
     new MaterialDef('red_matter')
         .color(0x7a0606).iconSet('NETHERSTAR').lens()
-        .unify({ plate: true, gemFlawless: true, gemExquisite: true,block: 'projecte:red_matter_block', gem: 'projecte:red_matter' }),
+        .unify({ gemFlawless: true, gemExquisite: true,block: 'projecte:red_matter_block', gem: 'projecte:red_matter' }),
 
     new MaterialDef('chaos_plastic').color(0x222222).iconSet('SHINY').polymer(),
 
@@ -1695,7 +1695,9 @@ const materials = [
 
     new MaterialDef('mana_essence').gem().fluid().color(0x0099FF).iconSet('RADIOACTIVE').singularity(),
 
-    new MaterialDef('ancient').dust().color(0x9085A3).iconSet('SHINY'),
+    new MaterialDef('ancient').dust().color(0x9085A3).iconSet('SHINY')
+        .unify({dust: 'thermal_extra:ancient_dust'}),
+
 
     //new MaterialDef('shulker').dust().ingot().color(0x906291).iconSet('SHINY').flags(GTMaterialFlags.GENERATE_PLATE),
     //trying to block gem alternatives

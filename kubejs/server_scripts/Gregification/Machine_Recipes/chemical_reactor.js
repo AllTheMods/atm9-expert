@@ -236,15 +236,23 @@ ServerEvents.recipes(allthemods => {
     addChemical('gtceu:crystallized_seed', 'gtceu:refined_seed_oil 1000', null, 'gtceu:crystallized_oil 1000', EV, 600, 'refined_seed_oil')
     addChemical('gtceu:empowered_seed', 'gtceu:crystallized_oil 1000', null, 'gtceu:empowered_oil 1000', EV, 600, 'empowered_seed_oil')
 
+    
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:ancient_dust')
+        .itemInputs('#forge:dusts/ancient')
+        .inputFluids('#forge:necrotic_acid 500')
+        .itemOutputs('thermal_extra:ancient_dust')
+        .duration(100)
+        .EUt(HV);
+
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:saturated_life_fertilizer')
         .itemInputs('#forge:dusts/picolinic_acid')
-        .inputFluids('gtceu:liquid_fertilizer 500', 'gtceu:sanguine_concentrate 500', 'gtceu:copper_ii_sulfate 432')
+        .inputFluids('#forge:liquid_fertilizer 500', '#forge:sanguine_concentrate 500', '#forge:copper_ii_sulfate 432')
         .outputFluids('gtceu:saturated_life_fertilizer 1000')
         .duration(100)
         .EUt(HV);
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:recycled_organic_matter')
-        .inputFluids('gtceu:rotten_flesh 1000', '#forge:meat 1000', 'gtceu:water_stage_2 1000')
+        .inputFluids('#forge:rotten_flesh 1000', '#forge:meat 1000', '#forge:water_stage_2 1000')
         .outputFluids('gtceu:recycled_organic_matter 2000')
         .duration(600)
         .EUt(EV);

@@ -86,6 +86,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.remove(beeRemovals);
 
     const powahRemoves = [
+        'thermal_extra:machine/crystallizer/ancient_dust',
         'thermal_extra:soul_infused_dust', 'thermal_extra:shellite_dust', 'thermal_extra:twinite_dust', 'thermal_extra:dragonsteel_dust', 'thermal_extra:abyssal_dust',
         'powah:crafting/energy_cell_starter', 'powah:crafting/energy_cell_basic', 'powah:crafting/energy_cell_hardened',
         'powah:crafting/energy_cell_blazing', 'powah:crafting/energy_cell_niotic', 'powah:crafting/energy_cell_spirited', 

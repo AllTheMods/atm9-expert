@@ -68,7 +68,7 @@ ServerEvents.recipes(allthemods => {
         .EUt(LuV);
     
     allthemods.recipes.gtceu.crystal_growth_chamber('gaia_growth')
-        .itemInputs(['16x #forge:rounds/fireite', 'bloodmagic:demonslate', 'evilcraft:garmonbozia', 'elementalcraft:purecrystal'])
+        .itemInputs(['16x #forge:tiny_dusts/fireite', 'bloodmagic:demonslate', 'evilcraft:garmonbozia', 'elementalcraft:purecrystal'])
         .inputFluids(['#forge:mana_essence 16000', '#forge:soul 16000', '#forge:sanguine_concentrate 16000'])
         .itemOutputs('16x botania:life_essence')
         .duration(750)
