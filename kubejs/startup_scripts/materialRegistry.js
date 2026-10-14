@@ -1725,9 +1725,7 @@ const materials = [
         .blast({ temp: COIL_TEMPS.NAQUADAH, eut: ZPM, duration: 1200 })        
         .unify({ dust: 'thermal_extra:abyssal_dust', nugget: 'thermal_extra:abyssal_nugget', ingot: 'thermal_extra:abyssal_ingot', block: 'thermal_extra:abyssal_block', rod: 'thermal_extra:abyssal_rod', plate: 'thermal_extra:abyssal_plate', gear: 'thermal_extra:abyssal_gear'}),
         
-    new MaterialDef('necrotic').dust().color(0x1A1C1E).iconSet('DULL').components('5x calcium, 3x phosphorus, 3x sulfur'),
-
-    new MaterialDef('necrotic').dust().color(0x1A1C1E).iconSet('DULL').components('5x calcium, 3x phosphorus, 3x sulfur'),
+    new MaterialDef('necrotic').dust().color(0x1A1C1E).iconSet('DULL').components('5x calcium, 3x phosphorus, 3x sulfur'),    
     
     new MaterialDef('tattered').color(0x9A9290).singularity().iconSet('DULL'),
 

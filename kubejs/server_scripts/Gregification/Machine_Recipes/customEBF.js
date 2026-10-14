@@ -2,6 +2,13 @@
 // priority: -1000
 ServerEvents.recipes(allthemods => {
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
+    
+    function nextTier(base) {
+        let VA_JS = Array.from(GTValues.VA);
+        let next = VA_JS[VA_JS.indexOf(base) + 1];
+        return next !== undefined ? next : base;
+    }
+
     const addEBF = (itemsIn, fluidIn, itemsOut, fluidOut, temp, duration, eu, program, rID) => {
         const source = Array.isArray(itemsOut) ? itemsOut[0] : itemsOut;
         const outputID = String(source || "unknown").replace(/[^a-z0-9]/gi, '_');
@@ -71,6 +78,33 @@ ServerEvents.recipes(allthemods => {
         .inputFluids('#forge:thermal_coolant 1000')
         .duration(500)
         .EUt(IV);
+        
+    
+    const thermalExtra = [
+        {name :'soul_infused', temp: 2700, EUt: HV, duration: 800}, 
+        {name :'shellite', temp: 3600, EUt: EV, duration: 1200}, 
+        {name :'twinite', temp: 4500, EUt:  IV, duration: 1600}, 
+        {name :'dragonsteel', temp: 5400, EUt: LuV, duration: 2000}, 
+        {name :'abyssal', temp: 7200, EUt: ZPM, duration: 2400}];
+    
+
+    thermalExtra.forEach((material, index) => {
+        addEBF(
+            [`#forge:dusts/${material}`],
+            null,
+            `gtceu:hot_${material}_ingot`,
+            null,
+            material.temp,
+            material.duration,
+            material.EUt
+        );
+        allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/${material.name}_ingot`)
+            .itemInputs(`#forge:hot_ingots/${material.name}`)
+            .itemOutputs(`gtceu:${material.name}_ingot`)
+            .inputFluids('#forge:thermal_coolant 1000')
+            .duration(1200)
+            .EUt(HV);
+    });
 
 
 

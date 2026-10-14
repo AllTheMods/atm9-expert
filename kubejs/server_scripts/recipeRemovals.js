@@ -25,6 +25,7 @@ ServerEvents.recipes(allthemods => {
         removeSmelting.push(`thermal_extra:smelting/${mat}_ingot_from_dust_smelting`);
         removeSmelting.push(`thermal_extra:smelting/${mat}_ingot_from_dust_blasting`);
         removeSmelting.push(`enderio:smelting/thermal_extra/smelting/${mat}_ingot_from_dust_smelting`);
+        removeSmelting.push(`thermal_extra:machine/smelter/${mat}_ingot_from_dust`);
     });
     const smeltingRemovals = removeSmelting.map(recipeId => ({ id: recipeId }));    
     allthemods.remove(smeltingRemovals);

@@ -124,6 +124,9 @@ ServerEvents.recipes(allthemods => {
     )
 
 
+    //for alfheim trader
+    blackHole(['#forge:singularities/core', '4000x eidolon:tattered_cloth'], null, 'gtceu:tattered_singularity', null, ZPM, 1200, 'tattered_singularity')
+
     blackHole(['#forge:singularities/core', '4000x #forge:gems/carminite'], null, 'gtceu:carminite_singularity', null, ZPM, 1200, 'carminite_singularity')
     blackHole(['#forge:singularities/core', '4000x #forge:ingots/steeleaf'], null, 'gtceu:steeleaf_singularity', null, ZPM, 1200, 'steeleaf_singularity')
     blackHole(['#forge:singularities/core', '4000x #forge:ingots/fiery'], null, 'gtceu:fiery_singularity', null, ZPM, 1200, 'fiery_singularity')
