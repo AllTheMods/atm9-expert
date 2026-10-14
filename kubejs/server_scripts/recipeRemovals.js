@@ -141,10 +141,11 @@ ServerEvents.recipes(allthemods => {
     const globalRemoves3 = [      
         'pneumaticcraft:flux_compressor',
         'projecte:relay_mk1', 'mob_grinding_utils:recipe_entity_conveyor', 'mekanism:geiger_counter', 'mekanism:module_geiger_unit',
+        'projecte:collector_mk1', 'projecte:collector_mk2', 'projecte:collector_mk3',
         'integrateddynamics:special/part_connector_omni_directional_copy', 'integrateddynamics:special/part_connector_omni_directional', 'integrateddynamics:crafting/part_connector_mono_directional',
         'draconicevolution:dislocator_pedestal','draconicevolution:tools/dislocator',
         'ae2:decorative/quartz_glass', 'ars_nouveau:mob_jar',
-        'projecte:condenser_mk1', 'ars_nouveau:magebloom_fiber',
+        'projecte:condenser_mk1', 'projecte:condenser_mk2', 'ars_nouveau:magebloom_fiber',
         'ars_nouveau:arcane_pedestal', 'ars_nouveau:sourcestone', 'ars_nouveau:enchanting_apparatus', 'ars_nouveau:imbuement_chamber', 'ars_nouveau:source_jar',
         'tconstruct:smeltery/seared/grout_multiple', 'tconstruct:smeltery/seared/grout', 
         'integrateddynamics:crafting/squeezer', 'integrateddynamics:crafting/mechanical_squeezer', 'integrateddynamics:crafting/energy_battery',

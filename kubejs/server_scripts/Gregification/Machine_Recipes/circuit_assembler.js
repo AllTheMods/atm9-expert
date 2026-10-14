@@ -99,7 +99,7 @@ ServerEvents.recipes(allthemods => {
             '3x ae2:cell_component_16k',
             'ae2:calculation_processor',
             'ae2:quartz_glass',
-            '8x #forge:fine_wires/selenium'
+            '8x #forge:fine_wires/draconium'
 
         ],
         '#forge:soldering_alloy 72',
@@ -115,7 +115,7 @@ ServerEvents.recipes(allthemods => {
             '3x ae2:cell_component_64k',
             'ae2:calculation_processor',
             'ae2:quartz_glass',
-            '8x #forge:fine_wires/selenium'
+            '8x #forge:fine_wires/draconium_awakened'
 
         ],
         '#forge:soldering_alloy 72',

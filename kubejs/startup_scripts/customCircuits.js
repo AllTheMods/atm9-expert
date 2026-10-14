@@ -1,6 +1,6 @@
 // Priority: 0
 
-StartupEvents.registry('item', event => {
+StartupEvents.registry('item', allthemods => {
     function getTierCode(id) {
         const codes = {
             'zpm': '7ZPM', 'uv': 'eUV', 'uhv': '4UHV', 
@@ -12,15 +12,15 @@ StartupEvents.registry('item', event => {
     // Full list for math (ZPM is index 0)
     const masterTiers = ['zpm', 'uv', 'uhv', 'uev', 'uiv', 'uxv', 'opv', 'max'];
     
-    event.create('gtceu:selenium_rectifier')
+    allthemods.create('gtceu:selenium_rectifier')
         .texture('gtceu:item/selenium_rectifier')
         .displayName('Selenium Rectifier')
 
-    event.create('gtceu:polishing_wheel')
+    allthemods.create('gtceu:polishing_wheel')
         .texture('gtceu:item/polishing_wheel')
         .displayName('Polishing Wheel')
 
-    event.create(`gtceu:eternium_grinding_head`)
+    allthemods.create(`gtceu:eternium_grinding_head`)
             .texture('gtceu:item/eternium_grinding_head')
 
     const tiers = [
@@ -52,7 +52,7 @@ StartupEvents.registry('item', event => {
                 let effectiveIndex = Math.max(0, tier.baseIdx - type.sub);
                 let effectiveTierId = masterTiers[effectiveIndex];
 
-                event.create(`gtceu:${tier.id}_${type.id}`)
+                allthemods.create(`gtceu:${tier.id}_${type.id}`)
                     .displayName(`${tier.name} ${type.suffix}`)                    
                     .tooltip(`${grade[type.sub]} §${getTierCode(effectiveTierId)}§7-Tier Circuit`)
                     .texture(`gtceu:item/${type.file}`)
@@ -61,87 +61,114 @@ StartupEvents.registry('item', event => {
         })
         
         // Components (Boules/Wafers/SoCs) usually match the Mainframe tier
-        event.create(`gtceu:${tier.id}_soc`)
+        allthemods.create(`gtceu:${tier.id}_soc`)
             .texture('gtceu:item/crystal_soc')
             .color(0, tier.color)
             .displayName(`${tier.name} SoC Chip`)
             .tooltip(`§${getTierCode(mainframeTierId)}§7-Tier SoC Chip`)        
 
-        event.create(`gtceu:${tier.id}_voltage_coil`)
+        allthemods.create(`gtceu:${tier.id}_voltage_coil`)
             .texture('gtceu:item/ulv_voltage_coil')
             .color(0, tier.color)
             .displayName(`${tier.name} Voltage Coil`)
             .tooltip(`§${getTierCode(mainframeTierId)}§7-Tier Voltage Coil`)
-    })    
+    })
 
-    event.create(`gtceu:empowered_boule`)
+    
+    allthemods.create('gtceu:cubic_zirconia_boule')
+        .displayName('Zirconia Raw Circuit')
+        .tooltip('Cubic Zirconia Boule')
+        .rarity('ie_masterwork')
+        .texture('gtceu:item/neutronium_boule')
+        .color(0, 0xD8ECF2)
+
+    allthemods.create(`gtceu:cubic_zirconia_wafer`)
+        .texture('gtceu:item/neutronium_wafer')
+        .color(0, 0xD8ECF2)
+        .displayName(`Cubic Zirconia Wafer`)
+        .tooltip(`Cubic Zirconia Raw Circuit`);
+
+    allthemods.create('gtceu:bismuth_telluride_boule')
+        .displayName('Bismuth Telluride Raw Circuit')
+        .tooltip('Bismuth Telluride Boule')
+        .rarity('ie_masterwork')
+        .texture('gtceu:item/neutronium_boule')
+        .color(0, 0x4B4F5C)
+
+    allthemods.create(`gtceu:bismuth_telluride_wafer`)
+        .texture('gtceu:item/neutronium_wafer')
+        .color(0, 0x4B4F5C)
+        .displayName(`Bismuth Telluride Wafer`)
+        .tooltip(`Bismuth Telluride Raw Circuit`);
+
+    allthemods.create(`gtceu:empowered_boule`)
         .texture('gtceu:item/neutronium_boule')
         .color(0, 0xC7C7C7)
         .displayName(`Empowered Boule`)
         .tooltip(`Empowered Raw Circuit`);
 
-    event.create(`gtceu:empowered_wafer`)
+    allthemods.create(`gtceu:empowered_wafer`)
         .texture('gtceu:item/neutronium_wafer')
         .color(0, 0xC7C7C7)
         .displayName(`Empowered Wafer`)
         .tooltip(`Empowered Raw Circuit`);
     
-    event.create(`gtceu:empowered_ram_wafer`)
+    allthemods.create(`gtceu:empowered_ram_wafer`)
         .texture('gtceu:item/ram_wafer')
         .color(0, 0xC7C7C7)
         .displayName(`Empowered Ram Wafer`)
         .tooltip(`Empowered Raw Memory`);
     
-    event.create(`gtceu:empowered_ram_chip`)
+    allthemods.create(`gtceu:empowered_ram_chip`)
         .texture('gtceu:item/ram_chip')
         .color(0, 0xC7C7C7)
         .displayName(`Empowered Ram Chip`)
         .tooltip(`Empowered Random Access Memory`);
 
-    event.create('gtceu:germanium_boule')
+    allthemods.create('gtceu:germanium_boule')
         .displayName('Germanium Boule')
         // Using the existing GT silicon boule texture as a base
         .texture('gtceu:item/neutronium_boule')
         .color(0, 0x333333) // Tints the boule to Germanium's dark grey/black
         .tooltip('Germanium doped boule');
 
-    event.create('gtceu:germanium_wafer')
+    allthemods.create('gtceu:germanium_wafer')
         .displayName('Germanium Wafer')
         .texture('gtceu:item/neutronium_wafer')
         .color(0, 0x333333) // Tints the wafer to the same dark tone
         .tooltip('Germanium doped wafer');
 
-    event.create('gtceu:germanium_diode_wafer')
+    allthemods.create('gtceu:germanium_diode_wafer')
         .displayName('Germanium Diode Wafer')
         .texture('gtceu:item/ilc_chip')
         .color(0, 0x333333) // Tints the wafer to the same dark tone
         .tooltip('Germanium doped wafer');    
 
-    event.create('gtceu:germanium_diode')
+    allthemods.create('gtceu:germanium_diode')
         .texture('kubejs:item/germanium_diode') 
         .displayName('Germanium Diode')
         .tooltip('Advanced semiconductor component')
 
-    event.create('gtceu:atomic_boule')
+    allthemods.create('gtceu:atomic_boule')
         .displayName('Atomic Boule')
         // Using the existing GT silicon boule texture as a base
         .texture('gtceu:item/neutronium_boule')
         .color(0, 0xFFD700) // Tints the boule to Germanium's dark grey/black
         .tooltip('Atomic Clock Boule');
 
-    event.create('gtceu:atomic_wafer')
+    allthemods.create('gtceu:atomic_wafer')
         .displayName('Atomic Wafer')
         .texture('gtceu:item/neutronium_wafer')
         .color(0, 0xFFD700) // Tints the wafer to the same dark tone
         .tooltip('Atomic Clock Wafer');
 
-    event.create('gtceu:atomic_clock_wafer')
+    allthemods.create('gtceu:atomic_clock_wafer')
         .displayName('Atomic Clock IC Wafer')
         .texture('gtceu:item/ilc_chip')
         .color(0, 0xFFD700) // Tints the wafer to the same dark tone
         .tooltip('Atomic Clock IC Wafer');    
 
-    event.create('gtceu:atomic_clock')
+    allthemods.create('gtceu:atomic_clock')
         .displayName('Atomic Clock')
         .texture('gtceu:item/cpu_chip')
         .color(0, 0xFFD700) // Tints the wafer to the same dark tone

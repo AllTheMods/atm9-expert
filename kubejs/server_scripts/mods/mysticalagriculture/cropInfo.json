@@ -136,9 +136,10 @@
 		"nether_star",
 		"dragon_egg",
 		"awakened_draconium",
-		"nitro_crystal"
+		"nitro_crystal",
+		"gaia_spirit"
 	],
-	"disabled": [
+	"disabled": [		
 		"marble",
 		"basalt",
 		"aquamarine",
@@ -149,7 +150,6 @@
 		"chrome",
 		"starmetal",
 		"rock_crystal",
-		"yellorium",
-		"gaia_spirit"
+		"yellorium"
 	]
 }

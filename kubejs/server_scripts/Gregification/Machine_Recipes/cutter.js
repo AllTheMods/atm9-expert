@@ -48,10 +48,13 @@ ServerEvents.recipes(allthemods => {
         });
     };
 
-    addCutter('gtceu:empowered_boule', '128x gtceu:empowered_wafer', UV, 6000, 1500, null, CleanroomType.STERILE_CLEANROOM)
-    addCutter('gtceu:germanium_boule', '4x gtceu:germanium_wafer', ZPM, 6000, 1500, null, CleanroomType.STERILE_CLEANROOM)
-    addCutter('gtceu:atomic_boule', '4x gtceu:atomic_wafer', ZPM, 6000, 1500, null, CleanroomType.STERILE_CLEANROOM)
-    addCutter('gtceu:empowered_ram_wafer', '6x gtceu:empowered_ram_chip', UV, 900, 150, null, CleanroomType.STERILE_CLEANROOM)
+    addCutter('gtceu:cubic_zirconia_boule', '64x gtceu:cubic_zirconia_wafer', IV, 3200, 800, null, CleanroomType.CLEANROOM)
+    addCutter('gtceu:bismuth_telluride_boule', '96x gtceu:bismuth_telluride_wafer', IV, 4800, 1200, null, CleanroomType.CLEANROOM)
+
+    addCutter('gtceu:empowered_boule', '128x gtceu:empowered_wafer', ZPM, 6000, 1500, null, CleanroomType.STERILE_CLEANROOM)
+    addCutter('gtceu:germanium_boule', '4x gtceu:germanium_wafer', IV, 6000, 1500, null, CleanroomType.CLEANROOM)
+    addCutter('gtceu:atomic_boule', '4x gtceu:atomic_wafer', LuV, 6000, 1500, null, CleanroomType.CLEANROOM)
+    addCutter('gtceu:empowered_ram_wafer', '6x gtceu:empowered_ram_chip', ZPM, 900, 150, null, CleanroomType.STERILE_CLEANROOM)
 
     //blank slate
     addCutter('gtceu:slate_casing', '9x gtceu:blank_slate_casing', LV, 500, 250)

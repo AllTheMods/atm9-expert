@@ -122,11 +122,11 @@ ServerEvents.recipes(allthemods => {
     addChemical(
         '#forge:dusts/germanium',
         '#forge:oxygen 2000',
-        '3x gtceu:germanium_oxide_dust',
+        '3x gtceu:germanium_dioxide_dust',
         null,
         IV,
         600,
-        'germanium_oxide'
+        'germanium_dioxide'
     );
 
     //titanium dioxide

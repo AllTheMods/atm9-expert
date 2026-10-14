@@ -777,7 +777,10 @@
     "material.gtceu.gelid_cryotheum": "Gelid Cryotheum",
     "material.gtceu.zephyrean_aerotheum": "Zephyrean Aerotheum",
     "material.gtceu.tectonic_petrotheum": "Tectonic Petrotheum",
-    "material.gtceu.thermal_coolant": "Thermal Coolant"
+    "material.gtceu.thermal_coolant": "Thermal Coolant",
+    "material.gtceu.bismuth_telluride": "Bismuth Telluride",
+    "material.gtceu.cubic_zirconia": "Cubic Zirconia",
+    "material.gtceu.adamantium": "Adamantium"
 }
 
  

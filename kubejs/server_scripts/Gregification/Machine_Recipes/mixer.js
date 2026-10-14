@@ -22,8 +22,9 @@ ServerEvents.recipes(allthemods => {
             .EUt(voltage);
         if (program) recipe.circuit(program);
     };
-
-    addMixer(['2x gtceu:bismuth_oxide_dust', '3x gtceu:germanium_oxide_dust'],'5x gtceu:bismuth_germanate_dust',IV,600);    
+    
+    //addMixer(['2x #forge:dusts/bismuth', '3x #forge:dusts/tellurium'],'5x gtceu:bismuth_telluride_dust',ZPM,600);
+    addMixer(['2x #forge:dusts/bismuth_oxide', '3x #forge:dusts/germanium_dioxide'],'5x gtceu:bismuth_germanate_dust',IV,600);    
     addMixer(['#forge:dusts/bismuth_oxide','2x #forge:dusts/strontium_carbonate','#forge:dusts/quicklime','2x #forge:dusts/copper_oxide'], '6x gtceu:bismuth_strontium_calcium_copper_oxide_dust', IV, 600);
 
     addMixer(['#forge:dusts/arcane_crystal', 'minecraft:redstone', 'minecraft:bone_meal', 'minecraft:gunpowder', '#forge:dusts/phantom_membrane', 'minecraft:blaze_powder'], '6x forbidden_arcanus:mundabitur_dust', LV, 200)

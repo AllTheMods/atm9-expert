@@ -30,13 +30,13 @@ ServerEvents.recipes(allthemods => {
     //AA - empowered gems
     empowerer(
         [
-            'gtceu:restonia_gem',
-            '4x #forge:storage_blocks/redstone',            
+            '#forge:storage_blocks/restonia',
+            '4x #forge:storage_blocks/redstone',
             '4x #forge:storage_blocks/enderium',
             '4x #forge:storage_blocks/elementium'
         ],
         'gtceu:empowered_oil 4000',
-        'gtceu:empowered_restonia_gem',        
+        'gtceu:empowered_restonia_block',        
         null,
         LuV,
         300, null
@@ -44,13 +44,13 @@ ServerEvents.recipes(allthemods => {
 
     empowerer(
         [
-            'gtceu:palis_gem',
+            '#forge:storage_blocks/palis',
             '4x #forge:storage_blocks/lapis',
             '4x #forge:storage_blocks/enderium',
             '4x #forge:storage_blocks/elementium'
         ],
         'gtceu:empowered_oil 4000',
-        'gtceu:empowered_palis_gem',
+        'gtceu:empowered_palis_block',
         null,
         LuV,
         300, null
@@ -58,13 +58,13 @@ ServerEvents.recipes(allthemods => {
 
     empowerer(
         [
-            'gtceu:enori_gem',
+            '#forge:storage_blocks/enori',
             '4x #forge:storage_blocks/iron',
             '4x #forge:storage_blocks/enderium',
             '4x #forge:storage_blocks/elementium'
         ],
         'gtceu:empowered_oil 4000',
-        'gtceu:empowered_enori_gem',
+        'gtceu:empowered_enori_block',
         null,
         LuV,
         300, null
@@ -72,13 +72,13 @@ ServerEvents.recipes(allthemods => {
 
     empowerer(
         [
-            'gtceu:void_crystal_gem',
+            '#forge:storage_blocks/void_crystal',
             '4x #forge:storage_blocks/coal',
             '4x #forge:storage_blocks/enderium',
             '4x #forge:storage_blocks/elementium'
         ],
         'gtceu:empowered_oil 4000',
-        'gtceu:empowered_void_crystal_gem',
+        'gtceu:empowered_void_crystal_block',
         null,
         LuV,
         300, null
@@ -86,13 +86,13 @@ ServerEvents.recipes(allthemods => {
 
     empowerer(
         [
-            'gtceu:diamatine_gem',
+            '#forge:storage_blocks/diamatine',
             '4x #forge:storage_blocks/diamond',
             '4x #forge:storage_blocks/enderium',
             '4x #forge:storage_blocks/elementium'
         ],
         'gtceu:empowered_oil 4000',
-        'gtceu:empowered_diamatine_gem',
+        'gtceu:empowered_diamatine_block',
         null,
         LuV,
         300, null
@@ -100,13 +100,13 @@ ServerEvents.recipes(allthemods => {
 
     empowerer(
         [
-            'gtceu:emeradic_gem',
+            '#forge:storage_blocks/emeradic',
             '4x #forge:storage_blocks/emerald',
             '4x #forge:storage_blocks/enderium',
             '4x #forge:storage_blocks/elementium'
         ],
         'gtceu:empowered_oil 4000',
-        'gtceu:empowered_emeradic_gem',
+        'gtceu:empowered_emeradic_block',
         null,
         LuV,
         300, null

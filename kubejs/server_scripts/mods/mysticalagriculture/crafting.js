@@ -141,7 +141,7 @@ ServerEvents.recipes(allthemods => {
   }).id('allthemods:minecraft/verdant_froglight')
 
   // remove gaia crux
-  allthemods.remove({ id: "mysticalagradditions:gaia_spirit_crux" })
+  //allthemods.remove({ id: "mysticalagradditions:gaia_spirit_crux" })
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9.
