@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/coils/etrium_ctm"		
+    }    
+}
