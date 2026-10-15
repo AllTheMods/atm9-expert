@@ -111,7 +111,7 @@ ServerEvents.recipes(allthemods => {
             '2x gtceu:luv_electric_motor',
             '8x gtceu:long_magnetic_samarium_cobalt_rod',
             '64x #forge:fine_wires/allthemodium',
-            '8x #gtceu:circuits/LuV'
+            '8x #gtceu:circuits/luv'
         ],
         [
             '#forge:lubricant 2880',
@@ -123,8 +123,14 @@ ServerEvents.recipes(allthemods => {
         64
     )
 
-
     const compressionDuration = 1200;
+
+    const bulkSingularities = ['sunnarium','lunarium', 'bedrockium'];
+    bulkSingularities.forEach(singularity => {
+        blackHole(['#forge:singularities/core', `4000x #forge:ingots/${singularity}`], null, `gtceu:${singularity}_singularity`, null, ZPM, compressionDuration, `${singularity}_singularity`);
+    });
+
+    
 
     //for alfheim trader    
     blackHole(['#forge:singularities/core', 'tombstone:essence_of_undeath', '1000x #forge:bones', '1000x #forge:ingots/rotten_flesh', 'minecraft:dragon_egg'], null, 'gtceu:undeath_singularity', null, LuV, compressionDuration, 'undeath_singularity')

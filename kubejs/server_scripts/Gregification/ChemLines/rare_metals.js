@@ -5,29 +5,19 @@ ServerEvents.recipes(allthemods => {
     const mithrilEU = IV;
     const adamantiumEU = ZPM;
 
-    allthemods.recipes.gtceu.chemical_reactor('gregification:sunnarium/dust')
-        .itemInputs('8x #forge:dusts/glowstone')
-        .notConsumable('gtceu:solar_relic')
-        .itemOutputs('gtceu:sunnarium_dust')
-        .duration(400).EUt(sunnariumEU)
+
 
     allthemods.recipes.gtceu.electric_blast_furnace('gregification:sunnarium/ingot')
         .itemInputs('#forge:dusts/sunnarium')
-        .inputFluids('#forge: 1000')
+        .inputFluids('#forge:gold 1296')
         .itemOutputs('gtceu:sunnarium_ingot')
         .blastFurnaceTemp(sunnariumTemp)
         .duration(1200).EUt(sunnariumEU)
 
-    
-    allthemods.recipes.gtceu.chemical_reactor('gregification:lunarium/dust')
-        .itemInputs('8x #forge:dusts/moon_stone')
-        .notConsumable('forbidden_arcanus:crescent_moon')
-        .itemOutputs('gtceu:lunarium_dust')
-        .duration(400).EUt(sunnariumEU)
 
     allthemods.recipes.gtceu.electric_blast_furnace('gregification:lunarium/ingot')
         .itemInputs('#forge:dusts/lunarium')
-        .inputFluids('#forge: 1000')
+        .inputFluids('#forge:platinum 1296')
         .itemOutputs('gtceu:lunarium_ingot')
         .blastFurnaceTemp(sunnariumTemp)
         .duration(1200).EUt(sunnariumEU)

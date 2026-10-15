@@ -1524,7 +1524,7 @@ const materials = [
     
     new MaterialDef('moon_stone').dust().color(0x5A4232).iconSet('DULL'),
 
-    new MaterialDef('undeath').dust().color(0xd9b6b2).iconSet('DULL'),
+    new MaterialDef('undeath').dust().color(0xd9b6b2).iconSet('DULL').singularity(),
 
     new MaterialDef('tachyon').gem().dust().color(0x394d55).iconSet('SHINY')
         .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'gtceu:tachyon' }),
@@ -1551,7 +1551,7 @@ const materials = [
 
     new MaterialDef('spent_nuclear_waste').fluid().color(0x53D74C).iconSet('RADIOACTIVE'),
 
-    new MaterialDef('semi_stable_clathrate').dust().ingot().color(0x8FFFD7).iconSet('METALLIC').noSmelting().singularity().noDecomp()
+    new MaterialDef('semi_stable_clathrate').dust().ingot().color(0x8FFFD7).iconSet('METALLIC').noSmelting().noDecomp()
         .flags(GTMaterialFlags.GENERATE_PLATE),
 
     new MaterialDef('stabilized_clathrate').dust().ingot().color(0xB1AAA6).iconSet('METALLIC').noSmelting().singularity().noDecomp()

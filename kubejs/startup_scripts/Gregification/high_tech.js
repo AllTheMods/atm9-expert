@@ -18,7 +18,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create('environmental_accumulator')
         .category('environmental_accumulator')
         .setEUIO('in') // Machine takes power IN
-        .setMaxIOSize(3, 1, 1, 0) // Item In, Item Out, Fluid In, Fluid Out
+        .setMaxIOSize(6, 1, 1, 0) // Item In, Item Out, Fluid In, Fluid Out
         .setProgressBar(GuiTextures.COMPRESSOR_OVERLAY, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.SCIENCE)
 

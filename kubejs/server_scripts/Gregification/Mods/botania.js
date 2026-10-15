@@ -646,7 +646,7 @@ ServerEvents.recipes(allthemods => {
         .duration(600)
         .EUt(IV);
 
-    allthemods.recipes.gtceu.assembler('gregification/elven_forge/mithril_ingot')
+    allthemods.recipes.gtceu.elven_forge('gregification/elven_forge/mithril_ingot')
         .notConsumable('forbidden_arcanus:crimson_stone')
         .itemInputs('#forge:dusts/mithril', '64x irons_spellbooks:arcane_essence')
         .itemOutputs('irons_spellbooks:mithril_ingot')
@@ -654,7 +654,7 @@ ServerEvents.recipes(allthemods => {
         .duration(1000)
         .EUt(LuV);
 
-    allthemods.recipes.gtceu.assembler('gregification/elven_forge/adamantium_ingot')
+    allthemods.recipes.gtceu.elven_forge('gregification/elven_forge/adamantium_ingot')
         .notConsumable('forbidden_arcanus:crimson_stone')
         .itemInputs('#forge:dusts/adamantium', '64x #forge:dusts/tungsten_carbide', '64x #forge:dusts/netherite', '64x #forge:dusts/rhenium', '16x #forge:dusts/mithril')
         .itemOutputs('gtceu:adamantium_ingot')

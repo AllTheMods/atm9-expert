@@ -6,7 +6,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .category('elven_forge')
         .setMaxIOSize(6, 3, 1, 0)
         .setSound(GTSoundEntries.FURNACE)
-        .setSlotOverlay(false, false, GuiTextures.FURNACE_OVERLAY_STEAM)
+        .setSlotOverlay(false, false, GuiTextures.FURNACE_OVERLAY_1)
         .setSlotOverlay(false, true, GuiTextures.FLUID_TANK_OVERLAY)
         .setSlotOverlay(true, false, GuiTextures.BREWER_OVERLAY)
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT);
@@ -101,7 +101,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where('K', Predicates.controller(Predicates.blocks(definition.get())))
             .where('F', Predicates.blocks('gtceu:vibranium_frame'))
             .where('R', Predicates.blocks('irons_spellbooks:arcane_anvil'))
-            .where('C', Predicates.blocks(GTBlocks.MACHINE_CASING_LuV)
+            .where('C', Predicates.blocks('gtceu:luv_machine_casing')
                 .or(Predicates.autoAbilities(definition.getRecipeTypes()))
 				.or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
                 .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setExactLimit(1))                
