@@ -73,7 +73,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.electrolyzer('gregification:electrolyze_radioactive_bioresidue')
         .itemInputs('7x #forge:dusts/carbon')
         .inputFluids('#forge:radioactive_bioresidue 8000')
-        .itemOutputs('8x gtceu:thorium_dust', '4x gtceu:phosphorus_pentoxide_dust')
+        .itemOutputs('2x gtceu:protactinium_dust', '6x gtceu:thorium_dust', '4x gtceu:phosphorus_pentoxide_dust')
         .outputFluids('gtceu:carbon_tetroxide 7000')
         .duration(400).EUt(RadioEUComplex);
 });

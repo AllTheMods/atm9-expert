@@ -22,6 +22,7 @@ ServerEvents.recipes(allthemods => {
             .EUt(stone.eu)
     });
 
+    //prismarine
     const stoneCrush = [
         ['minecraft:basalt', [{ output: 'gtceu:basalt_dust', chance: 1 },               { output: 'gtceu:olivine_dust', chance: 0.2 }, { output: 'minecraft:iron_nugget', chance: 0.4 }, { output: 'gtceu:calcite_dust', chance: 0.4 }], 250],
         ['minecraft:granite', [{ output: 'gtceu:granite_dust', chance: 1 },             { output: 'gtceu:red_sand_dust', chance: 0.4 }, { output: 'create:crushed_raw_copper', chance: 0.4 }, { output: 'minecraft:gold_nugget', chance: 0.2 }], 250],

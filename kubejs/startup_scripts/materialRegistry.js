@@ -1803,6 +1803,8 @@ const materials = [
 
     new MaterialDef('zirconium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic(),
 
+    new MaterialDef('dysprosium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().noSmelting(),
+
     new MaterialDef('promethium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().noSmelting(),
 
     new MaterialDef('terbium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().noSmelting(),
@@ -1820,6 +1822,8 @@ const materials = [
     new MaterialDef('rhodium_plated_palladium').modify().flags(GTMaterialFlags.GENERATE_GEAR),
 
     new MaterialDef('darmstadtium').modify().flags(GTMaterialFlags.GENERATE_GEAR),
+
+    new MaterialDef('depleted_thorium_fuel').dust().color(0x5E6B4A).iconSet('RADIOACTIVE').noDecomp().components('3x thorium, 2x protactinium, 1x uranium'),
 
     new MaterialDef('beryllium').modify().singularity(),
 

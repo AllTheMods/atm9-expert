@@ -11,12 +11,14 @@ ServerEvents.recipes(allthemods => {
     ];
 
     thoriumCells.forEach(cell => {
-        let gasAmount = cell.outputCount * 500;
+        let gasAmount = cell.outputCount * 4000;
         let bioresidueAmount = cell.outputCount * 1000;
+
+        let depleted = `gtceu:depleted_${cell.input.split('_').pop()}`;
 
         allthemods.recipes.gtceu.thorium_reactor(`allthemods:thorium_reactor/${cell.id}`)
             .itemInputs(cell.input)
-            .itemOutputs(`${cell.outputCount}x gtceu:protactinium_dust`)
+            .itemOutputs(`${cell.outputCount}x gtceu:protactinium_dust`, depleted)
             .inputFluids('gtceu:distilled_water 16000')
             .outputFluids([`${cell.gas} ${gasAmount}`, `gtceu:radioactive_bioresidue ${bioresidueAmount}`])
             .duration(cell.duration)

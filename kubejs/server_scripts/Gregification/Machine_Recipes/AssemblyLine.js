@@ -1093,7 +1093,7 @@ ServerEvents.recipes(allthemods => {
         ],
         1200,
         ZPM,
-        "#forge:dusts/thorium_berkelium_alloy",32
+        "#forge:dusts/thorium_berkelium_alloy",16
     );
 
     addAssemblyLine(

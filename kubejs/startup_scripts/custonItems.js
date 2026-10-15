@@ -15,10 +15,20 @@ StartupEvents.registry('item', event => {
         .displayName('Camphor Incense')
         .tooltip('Incense made from camphor.')
         .rarity('ie_masterwork')
-
+        
     event.create('gtceu:solar_relic')
         .displayName('Solar Relic')
         .tooltip('A relic imbued with the power of the sun.')
+        .rarity('ie_masterwork')
+
+    event.create('gtceu:sunnarium_core')
+        .displayName('Sunnarium Core')
+        .tooltip('A core imbued with the power of the sun.')
+        .rarity('ie_masterwork')
+
+    event.create('gtceu:lunarium_core')
+        .displayName('Lunarium Core')
+        .tooltip('A core imbued with the power of the moon.')
         .rarity('ie_masterwork')
 
     event.create('gtceu:atomic_core')        
@@ -184,7 +194,7 @@ StartupEvents.registry('item', event => {
     event.create('gtceu:thorium_quad')
         .displayName('Quad Thorium Fuel Cell')
         .rarity('RARE')
-        .tooltip('§7A Quad thorium fuel cell.')
+        .tooltip('§7A Quad thorium fuel cell.')    
 
     event.create('gtceu:thorium_berkelium_single')
         .displayName('Single Thorium Berkelium Fuel Cell')
@@ -204,6 +214,21 @@ StartupEvents.registry('item', event => {
     event.create('gtceu:samarium_cobalt_magnetic_rotor')
         .displayName('Samarium Cobalt Magnetic Rotor')
         .tooltip('§7A Samarium Cobalt Magnetic Rotor.')
+
+    event.create('gtceu:depleted_single')
+        .displayName('Single Depleted Thorium Fuel Cell')
+        .rarity('RARE')
+        .tooltip('§7A Single depleted fuel cell.')
+
+    event.create('gtceu:depleted_double')
+        .displayName('Double Depleted Thorium Fuel Cell')
+        .rarity('RARE')
+        .tooltip('§7A Double depleted fuel cell.')
+
+    event.create('gtceu:depleted_quad')
+        .displayName('Quad Depleted Thorium Fuel Cell')
+        .rarity('RARE')
+        .tooltip('§7A Quad depleted fuel cell.')
 
 })
 

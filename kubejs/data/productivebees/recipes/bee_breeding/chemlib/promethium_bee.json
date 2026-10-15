@@ -1,0 +1,14 @@
+{
+  "type": "productivebees:bee_breeding",
+  "parent1": "productivebees:neodymium",
+  "parent2": "productivebees:samarium",
+  "offspring": [
+    "productivebees:promethium"
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}
