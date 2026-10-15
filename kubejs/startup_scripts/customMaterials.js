@@ -139,6 +139,6 @@ GTCEuStartupEvents.registry("gtceu:dimension_marker", allthemods => {
 
 GTCEuStartupEvents.registry("gtceu:material_icon_set", allthemods => {
 
-    allthemods.create("infinity").parent(GTMaterialIconSet.SHINY)
+    allthemods.create("infinity").parent(GTMaterialIconSet.DULL)
 
 })

@@ -11,7 +11,14 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create('drone_station')
         .category('drone_station')
         .setEUIO('in') // Machine takes power IN
-        .setMaxIOSize(6, 6, 6, 6) // Item In, Item Out, Fluid In, Fluid Out
+        .setMaxIOSize(6, 9, 3, 3) // Item In, Item Out, Fluid In, Fluid Out
+        .setProgressBar(GuiTextures.COMPRESSOR_OVERLAY, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.SCIENCE)
+
+    allthemods.create('environmental_accumulator')
+        .category('environmental_accumulator')
+        .setEUIO('in') // Machine takes power IN
+        .setMaxIOSize(3, 1, 1, 0) // Item In, Item Out, Fluid In, Fluid Out
         .setProgressBar(GuiTextures.COMPRESSOR_OVERLAY, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.SCIENCE)
 
@@ -72,6 +79,30 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
         .pattern(definition => FactoryBlockPattern.start()            
             .aisle('K')            
             .where('K', Predicates.controller(Predicates.blocks(definition.get())))                                    
+            .build()
+        )
+        .workableCasingModel(
+            'gtceu:block/casings/solid/machine_casing_frost_proof',
+            'gtceu:block/multiblock/vacuum_freezer'            
+        )
+
+     allthemods.create('environmental_accumulator', 'multiblock')
+        .rotationState(RotationState.NON_Y_AXIS)
+        .recipeType('environmental_accumulator')        
+        .appearanceBlock(() => Block.getBlock('gtceu:gadolinium_casing'))        
+        .recipeModifiers([GTRecipeModifiers.OC_PERFECT])
+        .pattern(definition => FactoryBlockPattern.start()
+            .aisle('CCCCC', '     ', '     ', 'CCCCC', '     ', 'CCCCC', '     ', 'CCCCC', '     ', '     ', 'CCCCC')
+            .aisle('CCCCC', ' FFF ', ' FFF ', 'CFFFC', ' FFF ', 'CFFFC', ' FFF ', 'CFFFC', ' FFF ', ' FFF ', 'CCCCC')
+            .aisle('CCCCC', ' FFF ', ' FFF ', 'CFFFC', ' FFF ', 'CFFFC', ' FFF ', 'CFFFC', ' FFF ', ' FFF ', 'CCCCC')
+            .aisle('CCCCC', ' FFF ', ' FFF ', 'CFFFC', ' FFF ', 'CFFFC', ' FFF ', 'CFFFC', ' FFF ', ' FFF ', 'CCCCC')
+            .aisle('CCCCC', '     ', '     ', 'CCCCC', '     ', 'CCKCC', '     ', 'CCCCC', '     ', '     ', 'CCCCC')            
+            .where('K', Predicates.controller(Predicates.blocks(definition.get())))
+            .where('F', Predicates.blocks('gtceu:frostproof_machine_casing'))
+            .where('C', Predicates.blocks('gtceu:gadolinium_casing')
+                .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))                
+            )
             .build()
         )
         .workableCasingModel(

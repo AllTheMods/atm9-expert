@@ -1521,6 +1521,10 @@ const materials = [
 
     new MaterialDef('soul_sand').dust().color(0x5A4232).iconSet('DULL')
         .unify({ dust: 'thermal_extra:soul_sand_dust' }),
+    
+    new MaterialDef('moon_stone').dust().color(0x5A4232).iconSet('DULL'),
+
+    new MaterialDef('undeath').dust().color(0xd9b6b2).iconSet('DULL'),
 
     new MaterialDef('tachyon').gem().dust().color(0x394d55).iconSet('SHINY')
         .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'gtceu:tachyon' }),
@@ -1727,7 +1731,12 @@ const materials = [
     new MaterialDef('necrotic').dust().color(0x1A1C1E).iconSet('DULL').components('5x calcium, 3x phosphorus, 3x sulfur'),    
     
     new MaterialDef('tattered').color(0x9A9290).singularity().iconSet('DULL'),
+    
+    new MaterialDef('wraith_heart').color(0x9ccfe3).singularity().iconSet('DULL'),
+    
+    new MaterialDef('sunnarium').dust().ingot().fluid().element('sunarium').color(0xF4A028).iconSet('SHINY').materialsBasic().singularity().noSmelting(),
 
+    new MaterialDef('lunarium').dust().ingot().fluid().element('lunarium').color(0x7C8DD0).iconSet('SHINY').materialsBasic().singularity().noSmelting(),
 
     //modifications
     new MaterialDef('netherite').modify().materialsBasic(),
@@ -1770,7 +1779,7 @@ const materials = [
     new MaterialDef('gadolinium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic()
         .unify({ ingot: 'chemlib:gadolinium_ingot', block: 'chemlib:gadolinium_block', nugget: 'chemlib:gadolinium_nugget', dust: 'chemlib:gadolinium_dust', plate: 'chemlib:gadolinium_plate' }),
 
-    new MaterialDef('rhenium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRINIUM)
+    new MaterialDef('rhenium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH)
         .unify({ ingot: 'chemlib:rhenium_ingot', block: 'chemlib:rhenium_block', nugget: 'chemlib:rhenium_nugget', dust: 'chemlib:rhenium_dust', plate: 'chemlib:rhenium_plate' }),
 
     new MaterialDef('astatine').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH)

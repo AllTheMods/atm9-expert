@@ -54,4 +54,10 @@ ServerEvents.recipes(allthemods => {
                 .duration(100)
                 .EUt(HV);
 
+        allthemods.recipes.gtceu.macerator('gregification:moon_stone_dust')
+                .itemInputs('ad_astra:moon_stone')
+                .itemOutputs('gtceu:moon_stone_dust')
+                .duration(100)
+                .EUt(HV);
+
 });

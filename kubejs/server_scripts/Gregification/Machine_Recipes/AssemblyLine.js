@@ -93,7 +93,25 @@ ServerEvents.recipes(allthemods => {
     );
 
     
-
+    addAssemblyLine(
+        'gtceu:elven_forge',
+        [
+            'gtceu:luv_machine_hull',
+            '8x #forge:plates/vibranium',
+            '8x #forge:rods/long/desh',
+            '#forge:frames/ferrognetic',
+            '2x #gtceu:circuits/luv',            
+            '32x gtceu:plascrete'
+        ],
+        [
+            '#forge:terrasteel 576',
+            '#forge:selenium 576',
+            '#forge:gaia 576'
+        ],
+        mekLong,
+        LuV,
+        '#forge:ingots/gaia'
+    );
     
 
     
@@ -878,7 +896,7 @@ ServerEvents.recipes(allthemods => {
     //here
     addAssemblyLine('gtceu:gadolinium_casing',
         [
-            'gtceu:uv_machine_hull',
+            'gtceu:luv_machine_hull',
             'gtceu:samarium_cobalt_magnetic_rotor',
             '12x #forge:plates/gadolinium',
             '12x #forge:plates/strontium_ferrite'
@@ -889,8 +907,28 @@ ServerEvents.recipes(allthemods => {
             '#forge:soldering_alloy 1440'
         ],
         mekLong,
-        UV,
+        LuV,
         'gtceu:samarium_cobalt_magnetic_rotor'
+    );
+    //environmental_accumulator
+    addAssemblyLine(
+        'gtceu:environmental_accumulator',
+        [
+            'gtceu:zpm_machine_hull',
+            '#forge:frames/mithril',
+            'evilcraft:environmental_accumulation_core',
+            '16x #forge:plates/ostrum',
+            '4x #gtceu:circuits/zpm',
+            '8x #forge:rods/long/hafnium'
+        ],
+        [
+            'gtceu:polybenzimidazole 1440',
+            '#forge:lubricant 1440',
+            '#forge:soldering_alloy 1440'
+        ],
+        mekLong,
+        LuV,
+        'evilcraft:environmental_accumulation_core'
     );
 
     //3d printer

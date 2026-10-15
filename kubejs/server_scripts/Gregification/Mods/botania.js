@@ -617,6 +617,21 @@ ServerEvents.recipes(allthemods => {
         .duration(10)
         .EUt(IV);
 
+    allthemods.recipes.gtceu.alfheim_trader('gregification:solar_relic')
+        .itemInputs('#forge:singularities/wraith_heart')
+        .itemOutputs('gtceu:solar_relic')
+        .inputFluids('#forge:alfheim_portal_fluid 1000')
+        .duration(10)
+        .EUt(IV);
+
+    allthemods.recipes.gtceu.alfheim_trader('gregification:undeath_singularity')
+        .itemInputs('#forge:singularities/undeath')
+        .itemOutputs('forbidden_arcanus:crimson_stone')
+        .inputFluids('#forge:alfheim_portal_fluid 1000')
+        .duration(10)
+        .EUt(IV);
+
+
     allthemods.recipes.gtceu.mana_infuser('gregification:cresent_infusion/terrasteel')
         .notConsumable('forbidden_arcanus:crescent_moon')
         .itemInputs('#forge:gems/mana_diamond', 'botania:mana_pearl', '#forge:ingots/manasteel')
@@ -630,4 +645,21 @@ ServerEvents.recipes(allthemods => {
         .inputFluids('#forge:mana_essence 9200')
         .duration(600)
         .EUt(IV);
+
+    allthemods.recipes.gtceu.assembler('gregification/elven_forge/mithril_ingot')
+        .notConsumable('forbidden_arcanus:crimson_stone')
+        .itemInputs('#forge:dusts/mithril', '64x irons_spellbooks:arcane_essence')
+        .itemOutputs('irons_spellbooks:mithril_ingot')
+        .inputFluids('allthemodium:soul_lava 1000')
+        .duration(1000)
+        .EUt(LuV);
+
+    allthemods.recipes.gtceu.assembler('gregification/elven_forge/adamantium_ingot')
+        .notConsumable('forbidden_arcanus:crimson_stone')
+        .itemInputs('#forge:dusts/adamantium', '64x #forge:dusts/tungsten_carbide', '64x #forge:dusts/netherite', '64x #forge:dusts/rhenium', '16x #forge:dusts/mithril')
+        .itemOutputs('gtceu:adamantium_ingot')
+        .inputFluids('allthemodium:soul_lava 1000')
+        .duration(1000)
+        .EUt(ZPM);
+
 });

@@ -16,6 +16,11 @@ StartupEvents.registry('item', event => {
         .tooltip('Incense made from camphor.')
         .rarity('ie_masterwork')
 
+    event.create('gtceu:solar_relic')
+        .displayName('Solar Relic')
+        .tooltip('A relic imbued with the power of the sun.')
+        .rarity('ie_masterwork')
+
     event.create('gtceu:atomic_core')        
         .displayName('Atomic Core')
         .tooltip('Atomic Core')

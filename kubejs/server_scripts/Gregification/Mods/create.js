@@ -58,35 +58,7 @@ ServerEvents.recipes(allthemods => {
         crushDust(metal.ingot, metal.dust);
     });
 
-    // [input, [{output, chance}], processingTime]
-    const stoneCrush = [
-        ['minecraft:basalt', [{ output: 'gtceu:basalt_dust', chance: 1 }, { output: 'gtceu:olivine_dust', chance: 0.3 }, { output: 'minecraft:iron_nugget', chance: 0.2 }, { output: 'gtceu:calcite_dust', chance: 0.2 }], 350],
-        ['minecraft:granite', [{ output: 'gtceu:granite_dust', chance: 1 }, { output: 'gtceu:red_sand_dust', chance: 0.8 }, { output: 'create:crushed_raw_copper', chance: 0.4 }, { output: 'minecraft:gold_nugget', chance: 0.2 }], 350],
-        ['gtceu:red_granite', [{ output: 'gtceu:granite_red_dust', chance: 1 }, { output: 'create:crushed_raw_aluminum', chance: 0.6 }, { output: 'gtceu:potassium_feldspar_dust', chance: 0.1 }, { output: 'gtceu:aluminium_nugget', chance: 0.2 }], 350],
-        ['gtceu:marble', [{ output: 'gtceu:marble_dust', chance: 1 }, { output: 'gtceu:magnesium_dust', chance: 0.2 }, { output: 'gtceu:calcite_dust', chance: 0.2 }, { output: 'alltheores:zinc_nugget', chance: 0.2 }], 350],
-        ['minecraft:deepslate', [{ output: 'gtceu:deepslate_dust', chance: 1 }, { output: 'gtceu:silicon_dioxide_dust', chance: 0.6 }, { output: 'gtceu:biotite_dust', chance: 0.1 }, { output: 'alltheores:aluminium_nugget', chance: 0.4 }], 350],
-        ['minecraft:blackstone', [{ output: 'gtceu:blackstone_dust', chance: 1 }, { output: 'create:crushed_raw_lead', chance: 0.4 }, { output: 'alltheores:lead_nugget', chance: 0.2 }], 350],
-        ['minecraft:mossy_cobblestone', [{ output: 'gtceu:stone_dust', chance: 1 }, { output: 'gtceu:bio_chaff', chance: 0.8 }, { output: 'create:crushed_raw_nickel', chance: 0.4 }, { output: 'alltheores:tin_nugget', chance: 0.2 }], 350],
-        ['create:scorchia', [{ output: 'gtceu:stone_dust', chance: 1 }, { output: 'create:crushed_raw_lead', chance: 0.6 }, { output: 'alltheores:silver_nugget', chance: 0.2 }], 350],
-        ['create:scoria', [{ output: 'gtceu:stone_dust', chance: 1 }, { output: 'create:crushed_raw_silver', chance: 0.6 }, { output: 'alltheores:tin_nugget', chance: 0.2 }], 350],
-
-        ['tconstruct:earth_slime_crystal_block', [{ output: 'gtceu:malachite_dust',          chance: 0.6 }, { output: 'create:crushed_raw_nickel',    chance: 0.4 }, { output: 'alltheores:zinc_nugget',     chance: 0.4 }], 250],
-        ['tconstruct:sky_slime_crystal_block',   [{ output: 'gtceu:lapis_dust',              chance: 0.6 }, { output: 'create:crushed_raw_silver',   chance: 0.4 }, { output: 'alltheores:aluminum_nugget', chance: 0.4 }], 250],
-        ['tconstruct:ichor_slime_crystal_block', [{ output: 'minecraft:magma_cream',         chance: 0.5 }, { output: 'minecraft:blaze_powder',      chance: 0.4 }, { output: 'gtceu:sulfur_dust', chance: 0.4 }, { output: 'minecraft:gold_nugget', chance: 0.3 }], 250],
-        ['tconstruct:ender_slime_crystal_block', [{ output: 'gtceu:ender_pearl_dust',        chance: 0.4 }, { output: 'minecraft:chorus_fruit',      chance: 0.4 }, { output: 'create:crushed_raw_platinum', chance: 0.3 }], 250]
-    ];
-
-    stoneCrush.forEach(([input, outputs]) => {
-        const name = input.replace(/^#/, '').replace(':', '_');
-        allthemods.custom({
-            type: 'create:crushing',
-            ingredients: [input.startsWith('#')
-                ? { tag: input.slice(1) }
-                : { item: input }],
-            processingTime: 250,
-            results: outputs.map(o => ({ item: o.output, chance: o.chance }))
-        }).id(`gregification:crushing/${name}`);
-    });
-
+    
+    
 
 })

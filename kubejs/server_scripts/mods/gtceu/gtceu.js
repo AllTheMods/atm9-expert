@@ -197,32 +197,6 @@ ServerEvents.recipes(allthemods => {
         .EUt(24)
 
 
-    const stoneInputs = [
-        //'minecraft:basalt',
-        //'minecraft:granite',
-        //'gtceu:red_granite_cobblestone',
-        //'gtceu:marble_cobblestone',
-        'minecraft:deepslate',
-        //'minecraft:blackstone',
-        'minecraft:mossy_cobblestone',
-        'create:scorchia',
-        'create:scoria',
-        'create:asurine',
-        'create:ochrum',
-        'create:veridium',
-        'create:crimsite'
-    ];
-    stoneInputs.forEach(stone => {        
-        allthemods.recipes.gtceu.rock_breaker(`gregification:rock_breaker/${stone.replace(':', '_')}`)
-            .notConsumable(`${stone}`)
-            .itemOutputs(`${stone}`)
-            .addDataString('fluidA', 'minecraft:lava')
-            .addDataString('fluidB', 'minecraft:water')
-            .duration(120)
-            .EUt(EV)
-    });
-
-
     // Rock Breaker recipes for End Stone and Netherrack
     allthemods.recipes.gtceu.rock_breaker('netherrack')
         .notConsumable('minecraft:netherrack')

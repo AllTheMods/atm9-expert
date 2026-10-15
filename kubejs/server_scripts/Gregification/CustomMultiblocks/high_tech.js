@@ -92,6 +92,43 @@ ServerEvents.recipes(allthemods => {
         );
     });
 
+    allthemods.recipes.gtceu.environmental_accumulator('gregification:environmental_accumulator/sunnarium')
+        .notConsumable('gtceu:solar_relic')
+        .itemInputs('#forge:dusts/glowstone')
+        .itemOutputs('gtceu:sunnarium_dust')
+        .daytime()        
+        .circuit(1)
+        .duration(3600)
+        .EUt(ZPM);
+
+    allthemods.recipes.gtceu.environmental_accumulator('gregification:environmental_accumulator/sunnarium_tachyon')
+        .notConsumable('gtceu:solar_relic')
+        .itemInputs('#forge:dusts/glowstone', 'gtceu:tachyon')
+        .itemOutputs('gtceu:sunnarium_dust')
+        .daytime()
+        .circuit(2)       
+        .duration(360)
+        .EUt(ZPM);
+
+    allthemods.recipes.gtceu.environmental_accumulator('gregification:environmental_accumulator/lunarium')
+        .notConsumable('forbidden_arcanus:crescent_moon')
+        .itemInputs('#forge:dusts/moon_stone')
+        .itemOutputs('gtceu:lunarium_dust')
+        .daytime(true)        
+        .circuit(1)
+        .duration(3600)
+        .EUt(ZPM);
+
+    allthemods.recipes.gtceu.environmental_accumulator('gregification:environmental_accumulator/lunarium_tachyon')
+        .notConsumable('forbidden_arcanus:crescent_moon')
+        .itemInputs('#forge:dusts/moon_stone', 'gtceu:tachyon')
+        .itemOutputs('gtceu:lunarium_dust')
+        .daytime(true)
+        .circuit(2)       
+        .duration(360)
+        .EUt(ZPM);
+
+
 
     const gtRecipeResearch = (recipeType, outputs, inputs, fluids, duration, eu, researchItem, CWUt, customID, rID) => {
 
@@ -272,7 +309,8 @@ ServerEvents.recipes(allthemods => {
         .itemInputs('forbidden_arcanus:dark_nether_star')
         .chancedOutput('forbidden_arcanus:artisan_relic', 1000, 1000)
         .chancedOutput('forbidden_arcanus:crescent_moon', 100, 100)
-        .chancedOutput('forbidden_arcanus:crimson_stone', 1000, 1000)
+        .chancedOutput('gtceu:solar_relic', 100, 100)
+        .chancedOutput('forbidden_arcanus:crimson_stone', 1000, 1000)        
         .chancedOutput('forbidden_arcanus:elementarium', 2000, 1000)
         .chancedOutput('forbidden_arcanus:divine_pact', 1000, 1000)
         .chancedOutput('forbidden_arcanus:maledictus_pact', 1000, 1000)

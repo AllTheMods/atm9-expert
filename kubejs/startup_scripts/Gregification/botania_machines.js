@@ -2,6 +2,14 @@
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     
+    event.create ('elven_forge')
+        .category('elven_forge')
+        .setMaxIOSize(6, 3, 1, 0)
+        .setSound(GTSoundEntries.FURNACE)
+        .setSlotOverlay(false, false, GuiTextures.FURNACE_OVERLAY_STEAM)
+        .setSlotOverlay(false, true, GuiTextures.FLUID_TANK_OVERLAY)
+        .setSlotOverlay(true, false, GuiTextures.BREWER_OVERLAY)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT);
     
     event.create('mana_burner')
         .category('mana_burner')        
@@ -79,6 +87,34 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
  
 
 GTCEuStartupEvents.registry("gtceu:machine", event => {
+     event.create('elven_forge', 'multiblock')              
+        .rotationState(RotationState.NON_Y_AXIS)
+        .recipeTypes('elven_forge')
+        .appearanceBlock(GTBlocks.MACHINE_CASING_LuV)
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
+        .pattern(definition => FactoryBlockPattern.start()
+            .aisle('CCCCC', 'F   F', 'F   F', 'F   F', 'CCCCC')
+            .aisle('CCCCC', '     ', '     ', '     ', 'CCCCC')
+            .aisle('CCCCC', '  R  ', '     ', '     ', 'CCCCC')
+            .aisle('CCCCC', '     ', '     ', '     ', 'CCCCC')
+            .aisle('CCKCC', 'F   F', 'F   F', 'F   F', 'CCCCC')
+            .where('K', Predicates.controller(Predicates.blocks(definition.get())))
+            .where('F', Predicates.blocks('gtceu:vibranium_frame'))
+            .where('R', Predicates.blocks('irons_spellbooks:arcane_anvil'))
+            .where('C', Predicates.blocks(GTBlocks.MACHINE_CASING_LuV)
+                .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+				.or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
+                .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setExactLimit(1))                
+			)
+            .where(' ', Predicates.any()) 
+            .build()
+        )
+        
+		.workableCasingModel(
+            'gtceu:block/casings/voltage/luv/side',
+            'gtceu:block/multiblock/assembly_line'
+        )
+
     event.create('botanical_factory', 'multiblock')              
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('petal_apothecary', 'runic_altar', 'mana_infuser', 'mana_pool', 'alfheim_trader')

@@ -381,6 +381,10 @@
     "material.gtceu.telluride": "Telluride",
     "block.gtceu.magnetic_containment_chamber": "Magnetic Containment Chamber",
     "gtceu.magnetic_containment_chamber": "Magnetic Containment Chamber",
+    "block.gtceu.elven_forge": "Elven Forge",
+    "gtceu.elven_forge": "Elven Forge",
+    "block.gtceu.environmental_accumulator": "Environmental Accumulator",
+    "gtceu.environmental_accumulator": "Environmental Accumulator",
     "block.gtceu.drone_station": "Drone Station",
     "gtceu.drone_station": "Drone Station",
     "block.gtceu.gene_sequencer": "Gene Sequencer",
@@ -789,7 +793,11 @@
     "material.gtceu.twinite": "Twinite",
     "material.gtceu.dragonsteel": "Dragonsteel",
     "material.gtceu.abyssal": "Abyssal",
-    "material.gtceu.necrotic": "Necrotic"
+    "material.gtceu.necrotic": "Necrotic",
+    "material.gtceu.wraith_heart": "Wraith Heart",
+    "material.gtceu.sunnarium": "Sunnarium",
+    "material.gtceu.lunarium": "Lunarium",
+    "material.gtceu.undeath": "Undeath"
 }
 
  
