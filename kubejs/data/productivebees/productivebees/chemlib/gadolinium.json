@@ -1,0 +1,12 @@
+{
+  "primaryColor": "#d4b7be",
+  "particleColor": "#655a5f",
+  "beeTexture": "productivebees:textures/entity/bee/gadolinium/bee",
+  "flowerTag": "forge:storage_blocks/gadolinium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

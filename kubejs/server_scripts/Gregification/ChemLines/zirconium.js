@@ -38,7 +38,7 @@ ServerEvents.recipes(allthemods => {
     // Recipe 4: Final Zirconium Reduction (5x Batch)
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:zirconium_reduction')
         .itemInputs('#forge:dusts/potassium_hexafluorozirconate', '2x #forge:dusts/calcium')
-        .itemOutputs('chemlib:zirconium_dust', '2x gtceu:potassium_fluoride_dust', '2x gtceu:calcium_fluoride_dust')
+        .itemOutputs('gtceu:zirconium_dust', '2x gtceu:potassium_fluoride_dust', '2x gtceu:calcium_fluoride_dust')
         .duration(400)
         .EUt(zEU);
 

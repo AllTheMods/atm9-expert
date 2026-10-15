@@ -34,21 +34,21 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.centrifuge('gregification:decompose_radium_acetate')
         .inputFluids('#forge:radium_acetate 3000', '#forge:oxygen 3000')
         .outputFluids('gtceu:diluted_acetic_acid 3000', 'gtceu:carbon_monoxide 6000')
-        .itemOutputs('3x chemlib:radium_dust')
+        .itemOutputs('3x gtceu:radium_dust')
         .duration(200).EUt(RadioEUComplex);        
 
     // Astatine Acetate -> Diluted Acetic Acid + Astatine Dust
     allthemods.recipes.gtceu.centrifuge('gregification:decompose_astatine_acetate')
         .inputFluids('#forge:astatine_acetate 3000', '#forge:oxygen 3000')
         .outputFluids('gtceu:diluted_acetic_acid 3000', 'gtceu:carbon_monoxide 6000')
-        .itemOutputs('3x chemlib:astatine_dust')
+        .itemOutputs('3x gtceu:astatine_dust')
         .duration(200).EUt(RadioEUComplex);
 
     // Francium Acetate -> Diluted Acetic Acid + Francium Dust
     allthemods.recipes.gtceu.centrifuge('gregification:decompose_francium_acetate')
         .inputFluids('#forge:francium_acetate 3000', '#forge:oxygen 3000')
         .outputFluids('gtceu:diluted_acetic_acid 3000', 'gtceu:carbon_monoxide 6000')
-        .itemOutputs('3x chemlib:francium_dust')
+        .itemOutputs('3x gtceu:francium_dust')
         .duration(200).EUt(RadioEUComplex);
 
 

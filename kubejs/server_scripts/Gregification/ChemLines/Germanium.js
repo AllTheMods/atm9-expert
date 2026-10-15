@@ -63,7 +63,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:germanium_reduction')
         .itemInputs('#forge:dusts/germanium_dioxide', '2x #forge:dusts/sodium')
         .inputFluids('#forge:hydrogen 2000')
-        .itemOutputs('chemlib:germanium_dust', '2x gtceu:sodium_hydroxide_dust')
+        .itemOutputs('gtceu:germanium_dust', '2x gtceu:sodium_hydroxide_dust')
         .duration(200).EUt(GermaniumEUComplex);
     
         // Electrolyze the Sodium Sulfate from the Germanium line to recover acid and base

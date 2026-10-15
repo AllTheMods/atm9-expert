@@ -1,12 +1,12 @@
 {
-    "primaryColor": "#bfb1e6",
-    "particleColor": "#c3beea",
-    "beeTexture": "productivebees:textures/entity/bee/niobium/bee",    
-    "flowerTag": "forge:storage_blocks/niobium",
-    "conditions": [
-      {
-        "type": "forge:mod_loaded",
-        "modid": "chemlib"
-      }
-    ]
-  }
+  "primaryColor": "#bfb1e6",
+  "particleColor": "#c3beea",
+  "beeTexture": "productivebees:textures/entity/bee/niobium/bee",
+  "flowerTag": "forge:storage_blocks/niobium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

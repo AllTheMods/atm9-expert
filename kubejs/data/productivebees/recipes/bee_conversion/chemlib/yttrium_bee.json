@@ -1,14 +1,9 @@
 {
-    "type": "productivebees:bee_conversion",
-    "source": "productivebees:potassium",
-    "result": "productivebees:yttrium",
-    "item": {
-      "tag": "chemlib:yttrium_metal_block"
-    },
-    "conditions": [
-      {
-        "type": "productivebees:bee_exists",
-        "bee": "productivebees:yttrium"
-      }
-    ]
-  }
+  "type": "productivebees:bee_conversion",
+  "source": "productivebees:potassium",
+  "result": "productivebees:yttrium",
+  "item": { "tag": "forge:storage_blocks/yttrium" },
+  "conditions": [
+    { "type": "forge:mod_loaded", "modid": "gtceu" }
+  ]
+}

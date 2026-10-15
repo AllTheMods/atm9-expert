@@ -41,6 +41,32 @@ ServerEvents.recipes(allthemods => {
         return returnString
     }
 
+    // chemlib is gone: the bee data this script reads still names chemlib flowers, so remap to GT
+    let lastFlower = '?'
+    function plain(v) { return String(v).replace(/^"|"$/g, '') }
+    function gtFlower(beeType, id, isFluid) {
+        let str = plain(id)
+        lastFlower = str
+        if (str.startsWith('chemlib:')) return isFluid ? 'gtceu:' + beeType : 'gtceu:' + beeType + '_block'
+        return str
+    }
+
+    // no GT block for this material: use its GT fluid if it has one, else its dust tag
+    // (the flower is only a non-consumed machine input). Returns the flower, or null if neither exists.
+    function flowerFallback(beeType, recipeBuilder) {
+        let fluid = Fluid.of('gtceu:' + beeType, 1000)
+        if (!fluid.isEmpty()) {
+            recipeBuilder.notConsumableFluid(fluid)
+            return fluid
+        }
+        let tag = '#forge:dusts/' + beeType
+        if (!Ingredient.of(tag).getItemIds().isEmpty()) {
+            recipeBuilder.notConsumable(Ingredient.of(tag))
+            return Ingredient.of(tag)
+        }
+        return null
+    }
+
     function addOutputs(recipeBuilder, output, count) {
         let i = count
         while (i > 127) {
@@ -140,9 +166,13 @@ ServerEvents.recipes(allthemods => {
 
     //////////////// apiary_i recipes ////////////////
     allthemods.forEachRecipe({ type: 'productivebees:advanced_beehive' }, rawRecipe => {
+      let dbgBee = '?'
+      lastFlower = '?'
+      try {
         let recipe = JSON.parse(rawRecipe.json)
         let duration = 5250 / 2 
         let beeType = recipe.ingredient.split(':')[1] 
+        dbgBee = beeType
 
         if (beeType != "rancher_bee" && beeType != "ether_gas" && beeType != "hematophagous") {
             let input
@@ -219,7 +249,7 @@ ServerEvents.recipes(allthemods => {
                     flower = "minecraft:experience_bottle"
                 }                
                 else if (beeData.hasOwnProperty('flowerFluid')) {
-                    flower = beeData.flowerFluid
+                    flower = gtFlower(beeType, beeData.flowerFluid, true)
                     if (beeType == "oily") { 
                         flower = "thermal:crude_oil"
                         flowerArray = [Fluid.of(flower, 1000), Fluid.of("pneumaticcraft:oil", 1000)]
@@ -234,7 +264,7 @@ ServerEvents.recipes(allthemods => {
                         flowerThing = Fluid.of(flower, 1000)
                     }
                 } else if (beeData.hasOwnProperty('flowerBlock')) {
-                    flower = beeData.flowerBlock
+                    flower = gtFlower(beeType, beeData.flowerBlock, false)
                     if (beeType == "chocolate") { 
                         flower = "minecraft:cocoa_beans"
                     } else if (beeType == "molybdenum") {
@@ -244,22 +274,37 @@ ServerEvents.recipes(allthemods => {
                     } else if (beeType == "neodymium") {
                         flower = "gtceu:neodymium_block"
                     }
-                    recipeBuilder.notConsumable(Item.of(flower))
-                    flowerThing = Item.of(flower)
+                    if (Item.of(flower).isEmpty()) {
+                        flowerThing = flowerFallback(beeType, recipeBuilder) || undefined
+                        if (flowerThing == undefined) {
+                            console.error('[apiary] unknown flower block for ' + beeType + ': ' + flower + ' (no gtceu:' + beeType + ' fluid or #forge:dusts/' + beeType + ' either)')
+                        }
+                    } else {
+                        recipeBuilder.notConsumable(Item.of(flower))
+                        flowerThing = Item.of(flower)
+                    }
                 } else if (beeData.hasOwnProperty('flowerTag')) {
                     if (beeType=="lepidolite") {
                         flower = "gtceu:raw_lepidolite_block"                        
                         recipeBuilder.notConsumable(Item.of(flower))
                         flowerThing = Item.of(flower)                        
                     } else {                    
-                        flower = beeData.flowerTag                                       
-                        recipeBuilder.notConsumable(Ingredient.of(Tags.item(flower)))                    
-                        flowerThing = Ingredient.of(Tags.item(flower))                    
+                        flower = beeData.flowerTag
+                        lastFlower = plain(flower)
+                        recipeBuilder.notConsumable(Ingredient.of(Tags.item(flower)))
+                        flowerThing = Ingredient.of(Tags.item(flower))
                     }                    
                 } else if (beeData.hasOwnProperty('flowerItem')) {
-                    flower = beeData.flowerItem
-                    recipeBuilder.notConsumable(Item.of(flower))
-                    flowerThing = Item.of(flower)
+                    flower = gtFlower(beeType, beeData.flowerItem, false)
+                    if (Item.of(flower).isEmpty()) {
+                        flowerThing = flowerFallback(beeType, recipeBuilder) || undefined
+                        if (flowerThing == undefined) {
+                            console.error('[apiary] unknown flower item for ' + beeType + ': ' + flower + ' (no gtceu:' + beeType + ' fluid or #forge:dusts/' + beeType + ' either)')
+                        }
+                    } else {
+                        recipeBuilder.notConsumable(Item.of(flower))
+                        flowerThing = Item.of(flower)
+                    }
                 } else {
                     if (beeType == "pepto_bismol" || beeType == "zombie" || beeType == "plastic" || beeType == "sticky_resin" || beeType == "menril" || beeType == "energized_glowstone") {
                         flower = 'kubejs:bee/' + beeType + '/flowers'
@@ -283,6 +328,9 @@ ServerEvents.recipes(allthemods => {
                 makeCircuitRecipes('kubejs:gtceu/apiary_ii/' + beeType, input_ii, flowerThing, outputs)
             }
         } 
+      } catch (e) {
+        console.error('[apiary] FAILED bee=' + dbgBee + ' flower=' + lastFlower + ' -> ' + e)
+      }
     }) 
 
     let lumberBlocks = Ingredient.of('#productivebees:flowers/lumber').getItemIds()

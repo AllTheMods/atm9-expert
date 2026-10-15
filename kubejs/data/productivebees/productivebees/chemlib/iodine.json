@@ -1,12 +1,12 @@
 {
   "primaryColor": "#be9dc8",
   "particleColor": "#c9aacb",
-  "flowerTag": "forge:dusts/iodine",
   "beeTexture": "productivebees:textures/entity/bee/iodine/bee",
+  "flowerTag": "forge:dusts/iodine",
   "conditions": [
     {
-      "modid": "chemlib",
-      "type": "forge:mod_loaded"
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
     }
   ]
 }

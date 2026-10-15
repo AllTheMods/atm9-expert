@@ -232,7 +232,7 @@ ServerEvents.recipes(allthemods => {
         .chancedOutput('gtceu:caesium_dust', 2000, 0)
         .chancedOutput('gtceu:thorium_dust', 2000, 0)
         .chancedOutput('gtceu:uranium_dust', 3000, 0)
-        .chancedOutput('chemlib:protactinium_dust', 2500, 0)
+        .chancedOutput('gtceu:protactinium_dust', 2500, 0)
         .chancedOutput('gtceu:strontium_sulfide_dust', 1000, 0)
         .chancedOutput('gtceu:plutonium_241_dust', 500, 0)
         .duration(600)

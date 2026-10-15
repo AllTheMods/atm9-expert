@@ -16,7 +16,7 @@ ServerEvents.recipes(allthemods => {
 
         allthemods.recipes.gtceu.thorium_reactor(`allthemods:thorium_reactor/${cell.id}`)
             .itemInputs(cell.input)
-            .itemOutputs(`${cell.outputCount}x chemlib:protactinium_dust`)
+            .itemOutputs(`${cell.outputCount}x gtceu:protactinium_dust`)
             .inputFluids('gtceu:distilled_water 16000')
             .outputFluids([`${cell.gas} ${gasAmount}`, `gtceu:radioactive_bioresidue ${bioresidueAmount}`])
             .duration(cell.duration)

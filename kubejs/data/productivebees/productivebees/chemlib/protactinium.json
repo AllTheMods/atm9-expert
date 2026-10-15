@@ -1,12 +1,12 @@
 {
   "primaryColor": "#c6ccd3",
   "particleColor": "#c1cdd4",
-  "flowerTag": "forge:storage_blocks/protactinium",
   "beeTexture": "productivebees:textures/entity/bee/protactinium/bee",
+  "flowerTag": "forge:storage_blocks/protactinium",
   "conditions": [
     {
-      "modid": "chemlib",
-      "type": "forge:mod_loaded"
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
     }
   ]
 }

@@ -1,14 +1,9 @@
 {
-    "type": "productivebees:bee_conversion",
-    "source": "productivebees:lanthanum",
-    "result": "productivebees:lutetium",
-    "item": {
-      "item": "chemlib:lutetium_metal_block"
-    },
-    "conditions": [
-      {
-        "type": "productivebees:bee_exists",
-        "bee": "productivebees:yttrium"
-      }
-    ]
-  }
+  "type": "productivebees:bee_conversion",
+  "source": "productivebees:lanthanum",
+  "result": "productivebees:lutetium",
+  "item": { "item": "gtceu:lutetium_block" },
+  "conditions": [
+    { "type": "forge:mod_loaded", "modid": "gtceu" }
+  ]
+}

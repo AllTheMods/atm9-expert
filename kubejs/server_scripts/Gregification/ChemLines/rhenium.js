@@ -33,7 +33,7 @@
     allthemods.recipes.gtceu.electric_blast_furnace('gregification:rhenium_reduction')
         .itemInputs('#forge:dusts/rhenium_heptasulfide')
         .inputFluids('#forge:hydrogen 14000')
-        .itemOutputs('2x chemlib:rhenium_dust') 
+        .itemOutputs('2x gtceu:rhenium_dust') 
         .outputFluids('gtceu:hydrogen_sulfide 7000')
         .blastFurnaceTemp(3200)
         .duration(600).EUt(RheniumEUComplex); 

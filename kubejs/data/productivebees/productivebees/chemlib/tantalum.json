@@ -1,12 +1,12 @@
 {
   "primaryColor": "#b9bbde",
   "particleColor": "#bfc2e7",
-  "flowerTag": "forge:storage_blocks/tantalum",
   "beeTexture": "productivebees:textures/entity/bee/tantalum/bee",
+  "flowerTag": "forge:storage_blocks/tantalum",
   "conditions": [
     {
-      "modid": "chemlib",
-      "type": "forge:mod_loaded"
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
   "__comment": "Instructions: https://blakesmods.com/docs/cucumber/tags-config",
   "forge:dusts/saltpeter": "railcraft:saltpeter_dust",
-  "forge:dusts/niter": "chemlib:potassium_nitrate_dust"
+  "forge:dusts/niter": "railcraft:saltpeter_dust"
 }

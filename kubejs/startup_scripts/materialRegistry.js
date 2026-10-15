@@ -1773,59 +1773,49 @@ const materials = [
 
     new MaterialDef('cadmium').modify().ingot().flags(GTMaterialFlags.GENERATE_ROD),
 
-    new MaterialDef('radium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRITANIUM)
-        .unify({ ingot: 'chemlib:radium_ingot', block: 'chemlib:radium_block', nugget: 'chemlib:radium_nugget', dust: 'chemlib:radium_dust', plate: 'chemlib:radium_plate' }),
+    new MaterialDef('bismuth').modify().flags(GTMaterialFlags.GENERATE_PLATE),
 
-    new MaterialDef('gadolinium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic()
-        .unify({ ingot: 'chemlib:gadolinium_ingot', block: 'chemlib:gadolinium_block', nugget: 'chemlib:gadolinium_nugget', dust: 'chemlib:gadolinium_dust', plate: 'chemlib:gadolinium_plate' }),
+    new MaterialDef('radium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRITANIUM),
 
-    new MaterialDef('rhenium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH)
-        .unify({ ingot: 'chemlib:rhenium_ingot', block: 'chemlib:rhenium_block', nugget: 'chemlib:rhenium_nugget', dust: 'chemlib:rhenium_dust', plate: 'chemlib:rhenium_plate' }),
+    new MaterialDef('gadolinium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic(),        
 
-    new MaterialDef('astatine').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH)
-        .unify({ dust: 'chemlib:astatine_dust' }),
+    new MaterialDef('rhenium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),
+
+    new MaterialDef('astatine').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),
 
     new MaterialDef('graphite').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NICHROME).wireMod(2048).flags(GTMaterialFlags.GENERATE_ROTOR),
 
-    new MaterialDef('strontium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsAll().blastCoil(COIL_TEMPS.NAQUADAH)
-        .unify({ ingot: 'chemlib:strontium_ingot', block: 'chemlib:strontium_block', nugget: 'chemlib:strontium_nugget', dust: 'chemlib:strontium_dust', plate: 'chemlib:strontium_plate' }),
+    new MaterialDef('strontium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsAll().blastCoil(COIL_TEMPS.NAQUADAH),
 
-    new MaterialDef('tellurium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.DRACONIUM)
-        .unify({ dust: 'chemlib:tellurium_dust' }),
+    new MaterialDef('tellurium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.DRACONIUM),
 
     new MaterialDef('californium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
 
     new MaterialDef('berkelium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),
 
-    new MaterialDef('polonium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid()
-        .unify({ ingot: 'chemlib:polonium_ingot', block: 'chemlib:polonium_block', nugget: 'chemlib:polonium_nugget', dust: 'chemlib:polonium_dust', plate: 'chemlib:polonium_plate' }),
+    new MaterialDef('polonium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid(),
 
-    new MaterialDef('selenium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().polymerMod().materialsBasic()
-        .unify({ dust: 'chemlib:selenium_dust' }),
+    new MaterialDef('selenium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().polymerMod().materialsBasic(),
 
-    new MaterialDef('francium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRINIUM)
-        .unify({ ingot: 'chemlib:francium_ingot', block: 'chemlib:francium_block', nugget: 'chemlib:francium_nugget', dust: 'chemlib:francium_dust', plate: 'chemlib:francium_plate' }),
+    new MaterialDef('francium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRINIUM),
 
-    new MaterialDef('germanium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic()
-        .unify({ dust: 'chemlib:germanium_dust' }),
+    new MaterialDef('germanium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic(),
 
-    new MaterialDef('zirconium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic()
-        .unify({ ingot: 'chemlib:zirconium_ingot', block: 'chemlib:zirconium_block', nugget: 'chemlib:zirconium_nugget', dust: 'chemlib:zirconium_dust', plate: 'chemlib:zirconium_plate' }),
+    new MaterialDef('zirconium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic(),
 
-    new MaterialDef('scandium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH)
-        .unify({ ingot: 'chemlib:scandium_ingot', block: 'chemlib:scandium_block', nugget: 'chemlib:scandium_nugget', dust: 'chemlib:scandium_dust', plate: 'chemlib:scandium_plate' }),
+    new MaterialDef('promethium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().noSmelting(),
 
-    new MaterialDef('hafnium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsAll().blastCoil(COIL_TEMPS.HSS_G)
-        .unify({ ingot: 'chemlib:hafnium_ingot', block: 'chemlib:hafnium_block', nugget: 'chemlib:hafnium_nugget', dust: 'chemlib:hafnium_dust', plate: 'chemlib:hafnium_plate' }),
+    new MaterialDef('terbium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().noSmelting(),
 
-    new MaterialDef('rubidium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH)
-        .unify({ ingot: 'chemlib:rubidium_ingot', block: 'chemlib:rubidium_block', nugget: 'chemlib:rubidium_nugget', dust: 'chemlib:rubidium_dust', plate: 'chemlib:rubidium_plate' }),
+    new MaterialDef('scandium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),
 
-    new MaterialDef('thallium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRINIUM)
-        .unify({ ingot: 'chemlib:thallium_ingot', block: 'chemlib:thallium_block', nugget: 'chemlib:thallium_nugget', dust: 'chemlib:thallium_dust', plate: 'chemlib:thallium_plate' }),
+    new MaterialDef('hafnium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsAll().blastCoil(COIL_TEMPS.HSS_G),
 
-    new MaterialDef('protactinium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH)
-        .unify({ ingot: 'chemlib:protactinium_ingot', block: 'chemlib:protactinium_block', nugget: 'chemlib:protactinium_nugget', dust: 'chemlib:protactinium_dust', plate: 'chemlib:protactinium_plate' }),
+    new MaterialDef('rubidium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),
+
+    new MaterialDef('thallium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRINIUM),
+
+    new MaterialDef('protactinium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),
 
     new MaterialDef('rhodium_plated_palladium').modify().flags(GTMaterialFlags.GENERATE_GEAR),
 

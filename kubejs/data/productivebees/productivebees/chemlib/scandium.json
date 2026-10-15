@@ -1,12 +1,12 @@
 {
   "primaryColor": "#d5d3ca",
   "particleColor": "#dedbd0",
-  "flowerTag": "forge:storage_blocks/scandium",
   "beeTexture": "productivebees:textures/entity/bee/scandium/bee",
+  "flowerTag": "forge:storage_blocks/scandium",
   "conditions": [
     {
-      "modid": "chemlib",
-      "type": "forge:mod_loaded"
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
     }
   ]
 }

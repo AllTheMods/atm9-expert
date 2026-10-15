@@ -143,7 +143,7 @@ ServerEvents.recipes(allthemods => {
         'powah:crafting/energy_discharger_blazing', 'powah:crafting/energy_discharger_niotic', 'powah:crafting/energy_discharger_spirited', 
         'powah:crafting/energy_discharger_nitro',
 
-        'alltheores:smelting_dust/osmium_ingot', 'chemlib:osmium_ingot_from_blasting_osmium_dust',
+        'alltheores:smelting_dust/osmium_ingot', 
         'enderio:smelting/alltheores/smelting_dust/osmium_ingot',
         'tconstruct:smeltery/melting/metal/osmium/dust',
 
@@ -200,25 +200,9 @@ ServerEvents.recipes(allthemods => {
         'ad_astra:rocket_fin', 'ad_astra:rocket_nose_cone', 'ad_astra:engine_frame',
         'ad_astra:steel_engine', 'ad_astra:desh_engine', 'ad_astra:ostrum_engine', 'ad_astra:calorite_engine',
         'ad_astra:steel_tank', 'ad_astra:desh_tank', 'ad_astra:ostrum_tank', 'ad_astra:calorite_tank',
-        'chemlib:lutetium_ingot_from_smelting_lutetium_dust', 'chemlib:lutetium_ingot_from_blasting_lutetium_dust',
-        'enderio:smelting/chemlib/lutetium_ingot_from_smelting_lutetium_dust',
-        
-        'chemlib:protactinium_ingot_from_smelting_protactinium_dust',
-        'chemlib:protactinium_ingot_from_blasting_protactinium_dust',
-        'enderio:smelting/chemlib/protactinium_ingot_from_smelting_protactinium_dust',
-        
-        'chemlib:germanium_ingot_from_smelting_germanium_dust',
-        'chemlib:germanium_ingot_from_blasting_germanium_dust',
-        'enderio:smelting/chemlib/germanium_ingot_from_smelting_germanium_dust',
+                
         'enderio:smelting/gtceu/smelting/smelt_dust_germanium_to_ingot',
-
-        'chemlib:rubidium_ingot_from_smelting_rubidium_dust',
-        'chemlib:rubidium_ingot_from_blasting_rubidium_dust',
-        'enderio:smelting/chemlib/rubidium_ingot_from_smelting_rubidium_dust',        
-
         'bloodmagic:blood_rune_blank', 'rftoolsutility:screen_controller', 'integrateddynamics:crafting/part_display_panel', 
-
-        
         
         'industrialforegoing:fluid_extractor', 'industrialforegoing:hydroponic_simulation_processor',
         'industrialforegoing:latex_processing_unit', 'industrialforegoing:dissolution_chamber', 'industrialforegoing:plant_gatherer',
@@ -473,10 +457,6 @@ ServerEvents.recipes(allthemods => {
         
         'xnet:controller',
 
-        // --- Alchemistry ---
-        'alchemistry:atomizer', 'alchemistry:compactor', 'alchemistry:combiner', 'alchemistry:dissolver', 'alchemistry:liquifier',
-        'alchemistry:fission_chamber_controller', 'alchemistry:fusion_chamber_controller', 'alchemistry:reactor_casing',
-        'alchemistry:reactor_output', 'alchemistry:reactor_input', 'alchemistry:reactor_energy', 'alchemistry:fission_core', 'alchemistry:fusion_core',
 
         // --- Productive Bees ---
         'productivebees:centrifuge', 'productivebees:centrifuge_cauldron', 'productivebees:powered_centrifuge/thermal', 'productivebees:powered_centrifuge/mekanism',
@@ -553,18 +533,6 @@ ServerEvents.recipes(allthemods => {
     removalObjects = powahRemoves.map(recipeId => ({ id: recipeId }));
     allthemods.remove(removalObjects);
 
-    // 2. --- DYNAMIC MATERIAL REMOVALS (Optimized) ---
-
-    // Chemlib Materials
-    const materialsToGregify = ['radium', 'rhenium', 'astatine', 'strontium', 'francium', 'zirconium'];
-    let chemRemoves = [];
-    materialsToGregify.forEach(mat => {
-        chemRemoves.push(`chemlib:${mat}_ingot_from_blasting_${mat}_dust`);
-        chemRemoves.push(`chemlib:${mat}_ingot_from_smelting_${mat}_dust`);
-        chemRemoves.push(`enderio:smelting/chemlib/${mat}_ingot_from_smelting_${mat}_dust`);
-    });
-    const chemRemovalObjects = chemRemoves.map(recipeId => ({ id: recipeId }));
-    allthemods.remove(chemRemovalObjects);
 
     // Blast Materials (Dusts and Raw)
     const blastMaterials = [

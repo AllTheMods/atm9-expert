@@ -1,14 +1,9 @@
 {
-    "type": "productivebees:bee_conversion",
-    "source": "productivebees:lanthanum",
-    "result": "productivebees:protactinium",
-    "item": {
-      "item": "chemlib:protactinium_metal_block"
-    },
-    "conditions": [
-      {
-        "type": "productivebees:bee_exists",
-        "bee": "productivebees:protactinium"
-      }
-    ]
-  }
+  "type": "productivebees:bee_conversion",
+  "source": "productivebees:lanthanum",
+  "result": "productivebees:protactinium",
+  "item": { "item": "gtceu:protactinium_block" },
+  "conditions": [
+    { "type": "forge:mod_loaded", "modid": "gtceu" }
+  ]
+}
