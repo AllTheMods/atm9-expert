@@ -3,11 +3,15 @@ ServerEvents.recipes(allthemods => {
     
     const minerDuration = 600;
 
-
-
     allthemods.recipes.gtceu.void_miner('gregification:deeper_darker/bedrockium')
         .itemOutputs('gtceu:bedrockium_ore')
         .inputFluids('#forge:drilling_fluid 1000')
         .circuit(13)
         .duration(minerDuration).EUt(UV).dimension('deeperdarker:otherside'); 
+
+    allthemods.recipes.gtceu.void_miner('gregification:deeper_darker/adamantite')
+        .itemOutputs('gtceu:adamantite_ore')
+        .inputFluids('#forge:drilling_fluid 1000')
+        .circuit(13)
+        .duration(minerDuration).EUt(ZPM).dimension('deeperdarker:otherside'); 
 })

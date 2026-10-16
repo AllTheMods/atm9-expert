@@ -16,19 +16,32 @@ ServerEvents.recipes(allthemods => {
     stoneInputs.forEach(stone => {
         allthemods.recipes.gtceu.rock_breaker(`gregification:rock_breaker/${stone.stone.replace(':', '_')}`)
             .notConsumable(`${stone.stone}`)
-            .itemOutputs(`${stone.stone}`)
-            .addDataString('fluidA', stone.fluidA ?? 'minecraft:lava')
-            .addDataString('fluidB', stone.fluidB ?? 'minecraft:water')
+            .itemOutputs(`${stone.stone}`)            
+            .adjacentFluidTag(stone.fluidA ?? 'minecraft:lava',stone.fluidB ?? 'minecraft:water')
             .duration(120)
             .EUt(stone.eu)
         if (stone.macerate) {
             allthemods.recipes.gtceu.macerator(`gregification:macerate_${stone.stone.replace(':', '_')}`)
                 .itemInputs(`${stone.stone}`)
                 .itemOutputs(`gtceu:${stone.stone.split(':')[1]}_dust`)
-                .duration(100)
+                .duration(120)
                 .EUt(stone.eu);
         }
     });
+
+    allthemods.recipes.gtceu.rock_breaker('netherrack')
+        .notConsumable('minecraft:netherrack')
+        .itemOutputs('minecraft:netherrack')
+        .adjacentFluids('minecraft:lava', 'minecraft:water')
+        .duration(16)
+        .EUt(EV)
+
+    allthemods.recipes.gtceu.rock_breaker('end_stone')
+        .notConsumable('minecraft:end_stone')
+        .itemOutputs('minecraft:end_stone')
+        .adjacentFluids('minecraft:lava', 'minecraft:water')
+        .duration(16)
+        .EUt(IV)
 
     //prismarine
     const stoneCrush = [
