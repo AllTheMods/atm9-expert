@@ -814,7 +814,14 @@
     "material.gtceu.kreep_liquor": "Kreep Liquor",
     "material.gtceu.sodium_formate": "Sodium Formate",
     "material.gtceu.sodium_oxalate": "Sodium Oxalate",
-    "material.gtceu.oxalic_acid": "Oxalic Acid"
+    "material.gtceu.oxalic_acid": "Oxalic Acid",
+    "material.gtceu.prismarine_chloride_slurry": "Prismarine Chloride Slurry",
+    "material.gtceu.halogen_brine": "Halogen Brine",
+    "material.gtceu.limed_brine": "Limed Brine",
+    "material.gtceu.lithium_stripped_brine": "Lithium Stripped Brine",
+    "material.gtceu.prismarine_nodule_residue": "Prismarine Nodule Residue",
+    "material.gtceu.prismarine_magnesia_cake": "Prismarine Magnesia Cake",
+    "material.gtceu.lithium_carbonate": "Lithium Carbonate"
 }
 
  

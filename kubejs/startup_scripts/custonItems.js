@@ -103,6 +103,11 @@ StartupEvents.registry('item', event => {
     event.create('gtceu:preon')
         .displayName('Preon')
         .rarity('ie_masterwork')
+        .tooltip('§7A fundamental constituent of matter.');
+        
+    event.create('gtceu:betavoltai_microcell')
+        .displayName('Betavoltai Microcell')
+        .rarity('ie_masterwork');
 
     event.create('gtceu:dna')
         .displayName('DNA Strand')

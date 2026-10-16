@@ -44,8 +44,8 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('4x gtceu:silicon_dioxide_dust')
         .chancedOutput('2x gtceu:iron_dust', 3500, 500)            // nanophase iron
         .chancedOutput('gtceu:nickel_dust', 1200, 1000)
-        .chancedOutput('gtceu:platinum_dust', 300, 500)
-        .chancedOutput('gtceu:iridium_dust', 100, 100)
+        .chancedOutput('gtceu:platinum_dust', 500, 500)
+        .chancedOutput('gtceu:iridium_dust', 500, 500)
         .chancedOutput('gtceu:lunarium_dust', 100, 100)           // ~1% per sift
         .duration(durationSimple)
         .EUt(EUComplex);

@@ -162,7 +162,7 @@ ServerEvents.recipes(allthemods => {
     blackHole(['#forge:singularities/core', '4000x #forge:ingots/unobtainium'], null, 'gtceu:unobtainium_singularity', null, ZPM, compressionDuration, 'unobtainium_singularity')
     blackHole(['#forge:singularities/core', '4000x #forge:ingots/compressed_iron'], null, 'gtceu:compressed_iron_singularity', null, ZPM, compressionDuration, 'compressed_iron_singularity')    
     
-    blackHole(['allthecompressed:diamond_block_3x', '#forge:frames/alfsteel', '6x #forge:plates/strontium_aluminate', '12x #forge:plates/fluorozirconic_composite'], null , 'gtceu:bedrockium_dust', null, ZPM, compressionDuration, 'bedrockium_compression')
+    blackHole(['allthecompressed:diamond_block_3x', '#forge:frames/alfsteel', '6x #forge:plates/strontium_aluminate', '12x #forge:plates/fluorozirconic_composite'], null , '16x gtceu:bedrockium_dust', null, ZPM, compressionDuration, 'bedrockium_compression')
     blackHole(['#forge:frames/bedrockium', '6x #forge:plates/rheni_zirconium_alloy', '12x #forge:rods/potassium_calcium_orthosilicate'], null , 'gtceu:core_singularity', null, ZPM, compressionDuration, 'core_singularity')
 
     blackHole(['#forge:singularities/core', '4000x gtceu:beryllium_ingot'], null, 'gtceu:beryllium_singularity', null, ZPM, compressionDuration, 'beryllium_singularity')

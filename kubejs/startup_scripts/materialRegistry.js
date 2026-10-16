@@ -1533,11 +1533,13 @@ const materials = [
     new MaterialDef('mithril').dust().ingot().ore().color(0x99D9D9).iconSet('METALLIC').noSmelting().materialsBasic()
         .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 })
         .unify({ ingot: 'irons_spellbooks:mithril_ingot', rawOre: 'irons_spellbooks:raw_mithril', ore: 'irons_spellbooks:mithril_ore', oreDeepslate: 'irons_spellbooks:deepslate_mithril_ore' })
-        .byproducts(['adamantium']),
+        .byproducts(['adamantite', 'bedrockium']),
 
-    new MaterialDef('adamantium').dust().ingot().ore().color(0x4E5B3C).iconSet('METALLIC').noSmelting().materialsBasic()
-        .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 })
-        .byproducts(['mithril']),
+    new MaterialDef('adamantite').dust().color(0x4E5B3C).iconSet('METALLIC').noSmelting().ore()
+        .byproducts(['mithril', 'bedrockium']),
+
+    new MaterialDef('adamantium').dust().ingot().color(0x4E5B3C).iconSet('METALLIC').noSmelting().materialsBasic().components('1x adamantite, 64x tungsten_carbide, 64x netherite, 16x bedrockium, 16x mithril')
+        .blast({ temp: COIL_TEMPS.NAQUADAH, eut: IV, duration: 1200 }),
 
     new MaterialDef('soul_sand').dust().color(0x5A4232).iconSet('DULL')
         .unify({ dust: 'thermal_extra:soul_sand_dust' }),
@@ -1860,17 +1862,27 @@ const materials = [
     new MaterialDef('kevlar').dust().color(0x76683C).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE),
 
     //new chemlines
+
+    //moon stone line
     new MaterialDef('sodium_formate').dust().color(0xE3DCCB).iconSet('DULL').formula('HCOONa').components('1x sodium, 1x carbon, 1x hydrogen, 2x oxygen'),    
     new MaterialDef('sodium_oxalate').dust().color(0xDDD5C2).iconSet('DULL').formula('Na2C2O4').components('2x sodium, 2x carbon, 4x oxygen'),    
     new MaterialDef('oxalic_acid').fluid().color(0xD8CFA8).iconSet('FLUID').formula('H2C2O4').components('2x hydrogen, 2x carbon, 4x oxygen'),
-    new MaterialDef('muddy_moon_stone').fluid().color(0x6E5E50).iconSet('FLUID'),
-    new MaterialDef('diluted_moon_stone_mud').fluid().color(0x8C7D6B).iconSet('FLUID'),
+    new MaterialDef('muddy_moon_stone').fluid().color(0x6E5E50).iconSet('FLUID').noDecomp(),
+    new MaterialDef('diluted_moon_stone_mud').fluid().color(0x8C7D6B).iconSet('FLUID').noDecomp(),
     new MaterialDef('moon_hydroxide_cake').dust().color(0xA89886).iconSet('DULL').noDecomp(),    
-    new MaterialDef('clarified_moon_mud').fluid().color(0x9A8C7A).iconSet('FLUID'),
-    new MaterialDef('moon_brine').fluid().color(0x8C8296).iconSet('FLUID'),
+    new MaterialDef('clarified_moon_mud').fluid().color(0x9A8C7A).iconSet('FLUID').noDecomp(),
+    new MaterialDef('moon_brine').fluid().color(0x8C8296).iconSet('FLUID').noDecomp(),
     new MaterialDef('kreep_concentrate').dust().color(0xA67C6E).iconSet('DULL').noDecomp(),
     new MaterialDef('moon_silica_residue').dust().color(0xB7B1A6).iconSet('DULL').noDecomp(),
     
+    //prismarine line        
+    new MaterialDef('prismarine_chloride_slurry').fluid().color(0x4F8F8A).iconSet('FLUID').noDecomp(),
+    new MaterialDef('halogen_brine').fluid().color(0x7FA67A).iconSet('FLUID').noDecomp(),
+    new MaterialDef('limed_brine').fluid().color(0x8FB5A8).iconSet('FLUID').noDecomp(),
+    new MaterialDef('lithium_stripped_brine').fluid().color(0x9BB8C4).iconSet('FLUID').noDecomp(),
+    new MaterialDef('prismarine_nodule_residue').dust().color(0x3E4A4F).iconSet('DULL').noDecomp(),
+    new MaterialDef('prismarine_magnesia_cake').dust().color(0xB8C9C2).iconSet('DULL').noDecomp(),
+    new MaterialDef('lithium_carbonate').dust().color(0xDCD9E6).iconSet('DULL').formula('Li2CO3').components('2x lithium, 1x carbon, 3x oxygen'),
     
 ];
 

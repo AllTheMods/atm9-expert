@@ -654,12 +654,27 @@ ServerEvents.recipes(allthemods => {
         .duration(1000)
         .EUt(LuV);
 
-    allthemods.recipes.gtceu.elven_forge('gregification/elven_forge/adamantium_ingot')
+    allthemods.recipes.gtceu.elven_forge('gregification/elven_forge/adamantium_dust')
         .notConsumable('forbidden_arcanus:crimson_stone')
-        .itemInputs('#forge:dusts/adamantium', '64x #forge:dusts/tungsten_carbide', '64x #forge:dusts/netherite', '64x #forge:dusts/rhenium', '16x #forge:dusts/mithril')
-        .itemOutputs('gtceu:adamantium_ingot')
+        .itemInputs('#forge:dusts/adamantite', '64x #forge:dusts/tungsten_carbide', '64x #forge:dusts/netherite', '16x #forge:dusts/bedrockium', '16x #forge:dusts/mithril')
+        .itemOutputs('gtceu:adamantium_dust')
         .inputFluids('allthemodium:soul_lava 1000')
         .duration(1000)
+        .EUt(ZPM);
+
+    allthemods.recipes.gtceu.electric_blast_furnace(`gregification:blasting_adamantium_dust`)
+        .itemInputs('#forge:dusts/adamantium')
+        .itemOutputs('gtceu:hot_adamantium_ingot')
+        .inputFluids('#forge:bromine 2000')
+        .blastFurnaceTemp(7200)
+        .duration(1200)
+        .EUt(ZPM);
+
+    allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing_adamantium_ingot`)
+        .itemInputs('#forge:hot_ingots/adamantium')
+        .itemOutputs('gtceu:adamantium_ingot')
+        .inputFluids('#forge:thermal_coolant 1000')
+        .duration(1200)
         .EUt(ZPM);
 
 });
