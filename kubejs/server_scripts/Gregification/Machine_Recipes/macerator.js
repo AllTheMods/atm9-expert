@@ -39,9 +39,9 @@ ServerEvents.recipes(allthemods => {
         allthemods.recipes.gtceu.forge_hammer('gregification:blue_ice_dust')
                 .itemInputs('#forge:ices/blue')
                 .itemOutputs('2x gtceu:blue_ice_dust')
-                .duration(60)                
+                .duration(60)
                 .EUt(LV);
-        
+
         allthemods.recipes.gtceu.macerator('gregification:magebloom_dust')
                 .itemInputs('ars_nouveau:magebloom')
                 .itemOutputs('2x gtceu:magebloom_dust')
@@ -54,6 +54,10 @@ ServerEvents.recipes(allthemods => {
                 .duration(100)
                 .EUt(HV);
 
-
+        allthemods.recipes.gtceu.macerator('gregification:yttrium_aluminium_garnet_dust')
+                .itemInputs('gtceu:yttrium_aluminium_garnet_boule')
+                .itemOutputs('gtceu:yttrium_aluminium_garnet_dust')
+                .duration(100)
+                .EUt(LuV);
 
 });

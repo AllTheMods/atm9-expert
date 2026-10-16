@@ -978,9 +978,7 @@ const materials = [
 
     new MaterialDef('tantalum_dioxide').dust().color(0xC0C0C0).iconSet('METALLIC').noDecomp().formula('Ta2O2').components('2x tantalum, 2x oxygen'),
 
-    new MaterialDef('manganese_heptoxide').dust().color(0x2F4F2F).iconSet('DULL').noDecomp().formula('Mn2O7').components('2x manganese, 7x oxygen'),
-
-    new MaterialDef('yttrium_oxide').dust().color(0xF6F2E8).iconSet('DULL').noDecomp().formula('Y2O3').components('2x yttrium, 3x oxygen'),
+    new MaterialDef('manganese_heptoxide').dust().color(0x2F4F2F).iconSet('DULL').noDecomp().formula('Mn2O7').components('2x manganese, 7x oxygen'),    
 
     new MaterialDef('lead_oxide').dust().color(0xE8DED1).iconSet('DULL').formula('PbO').components('1x lead, 1x oxygen'),
 
@@ -1825,13 +1823,35 @@ const materials = [
 
     new MaterialDef('zirconium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic(),
 
-    new MaterialDef('dysprosium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRINIUM),
+    new MaterialDef('dysprosium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().blastCoil(COIL_TEMPS.NAQUADAH),
+
+    new MaterialDef('neodymium_praseodymium').dust().ingot().color(0x8F8C7A).iconSet('METALLIC').components('3x neodymium, 1x praseodymium').formula('Nd3Pr'),
+
+    new MaterialDef('neodymium_dysprosium').dust().ingot().magnetic().color(0x5A5A66).iconSet('METALLIC').components('1x neodymium_praseodymium, 1x dysprosium, 14x iron, 1x boron').formula('NdPrDyFe14B').blastCoil(COIL_TEMPS.NAQUADAH).materialsBasic(),
+
+    new MaterialDef('neodymium_terbium').dust().ingot().magnetic().color(0x66605A).iconSet('METALLIC').components('1x neodymium_praseodymium, 1x terbium, 14x iron, 1x boron').formula('NdPrTbFe14B').blastCoil(COIL_TEMPS.TRINIUM).materialsBasic(),
 
     new MaterialDef('promethium').modify().dust().fluid(),
     
-    new MaterialDef('praseodymium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRINIUM),
+    new MaterialDef('praseodymium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().blastCoil(COIL_TEMPS.NAQUADAH),
 
-    new MaterialDef('terbium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRINIUM),
+    new MaterialDef('aluminium_oxide').dust().color(0xE8E8E8).components('2x aluminium, 3x oxygen').formula('Al2O3'),
+    
+    new MaterialDef('neodymium_oxide').dust().color(0x5C7A9E).components('2x neodymium, 3x oxygen').formula('Nd2O3'),
+
+    new MaterialDef('praseodymium_oxide').dust().color(0xC8D46A).components('2x praseodymium, 3x oxygen').formula('Pr2O3'),        
+
+    new MaterialDef('yttrium_oxide').dust().color(0xF6F2E8).iconSet('DULL').formula('Y2O3').components('2x yttrium, 3x oxygen'),
+
+    new MaterialDef('yttrium_aluminium_garnet').dust().color(0xE8E8F0).components('3x yttrium_oxide, 5x aluminium_oxide').formula('Y3Al5O12').noDecomp(),
+        
+    new MaterialDef('neodymium_doped_yttrium_aluminium_garnet').lens().color(0xC9A8E0).components('2x yttrium_oxide, 5x aluminium_oxide, 1x neodymium_oxide').formula('NdY2Al5O12').noDecomp()
+    .unify({ block: true, gem: true, gemFlawless: true, gemExquisite: true }),
+    
+    new MaterialDef('praseodymium_doped_yttrium_aluminium_garnet').lens().color(0xC8D46A).components('2x yttrium_oxide, 5x aluminium_oxide, 1x praseodymium_oxide').formula('PrY2Al5O12').noDecomp()
+    .unify({ block: true, gem: true, gemFlawless: true, gemExquisite: true }),
+
+    new MaterialDef('terbium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().blastCoil(COIL_TEMPS.NAQUADAH),
 
     new MaterialDef('scandium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),
 

@@ -74,7 +74,27 @@ StartupEvents.registry('item', allthemods => {
             .tooltip(`§${getTierCode(mainframeTierId)}§7-Tier Voltage Coil`)
     })
 
+    allthemods.create('gtceu:yttrium_aluminium_garnet_boule')
+        .displayName('Yttrium Aluminium Garnet Raw Circuit')
+        .tooltip('Yttrium Aluminium Garnet Boule')
+        .rarity('ie_masterwork')
+        .texture('gtceu:item/neutronium_boule')
+        .color(0, 0xE8E8F0)
     
+    allthemods.create('gtceu:neodymium_doped_yttrium_aluminium_garnet_boule')
+        .displayName('Neodymium Doped Yttrium Aluminium Garnet Raw Circuit')
+        .tooltip('Neodymium Doped Yttrium Aluminium Garnet Boule')
+        .rarity('ie_masterwork')
+        .texture('gtceu:item/neutronium_boule')
+        .color(0, 0xC9A8E0)
+
+    allthemods.create('gtceu:praseodymium_doped_yttrium_aluminium_garnet_boule')
+        .displayName('Praseodymium Doped Yttrium Aluminium Garnet Raw Circuit')
+        .tooltip('Praseodymium Doped Yttrium Aluminium Garnet Boule')
+        .rarity('ie_masterwork')
+        .texture('gtceu:item/neutronium_boule')
+        .color(0, 0xC8D46A)
+
     allthemods.create('gtceu:cubic_zirconia_boule')
         .displayName('Zirconia Raw Circuit')
         .tooltip('Cubic Zirconia Boule')

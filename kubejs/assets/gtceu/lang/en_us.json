@@ -868,7 +868,12 @@
     "material.gtceu.lead_sulfate_cake": "Lead Sulfate Cake",
     "material.gtceu.purified_indium_liquor": "Purified Indium Liquor",
     "material.gtceu.indium_loaded_extractant": "Indium Loaded Extractant",
-    "material.gtceu.zinc_raffinate": "Zinc Raffinate"
+    "material.gtceu.zinc_raffinate": "Zinc Raffinate",
+    "material.gtceu.yttrium_aluminium_garnet": "Yttrium Aluminium Garnet (YAG Precursor)",
+    "material.gtceu.neodymium_doped_yttrium_aluminium_garnet": "Neodymium Doped Yttrium Aluminium Garnet (Nd:YAG)",
+    "material.gtceu.neodymium_praseodymium": "Neodymium Praseodymium",
+    "material.gtceu.neodymium_dysprosium": "Neodymium Dysprosium",
+    "material.gtceu.neodymium_terbium": "Neodymium Terbium",
+    "material.gtceu.aluminium_oxide": "Aluminium Oxide",
+    "material.gtceu.neodymium_oxide": "Neodymium Oxide"
 }
-
- 

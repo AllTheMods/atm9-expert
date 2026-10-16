@@ -105,8 +105,8 @@ StartupEvents.registry('item', event => {
         .rarity('ie_masterwork')
         .tooltip('§7A fundamental constituent of matter.');
         
-    event.create('gtceu:betavoltai_microcell')
-        .displayName('Betavoltai Microcell')
+    event.create('gtceu:betavoltaic_microcell')
+        .displayName('Betavoltaic Microcell')
         .rarity('ie_masterwork');
 
     event.create('gtceu:dna')

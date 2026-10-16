@@ -6,11 +6,25 @@ const TIME = {
     very_long: 1200
 };
 
+const COIL_TEMPS = {
+    CUPRONICKEL: 1800,
+    KANTHAL: 2700,
+    NICHROME: 3600,
+    RTM: 4500,
+    HSS_G: 5400,
+    NAQUADAH: 7200,
+    TRINIUM: 9000,
+    TRITANIUM: 10800,
+    DRACONIUM: 11200,
+    DRACONIUM_AWAKENED: 12800,
+    ETRIUM: 13500,
+    INFINITY: 15000
+};
 
 const $ResearchManager = Java.loadClass('com.gregtechceu.gtceu.utils.ResearchManager');
 
 ServerEvents.recipes(allthemods => {
-    const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+    const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
     let t = GTRecipeTypes.get('prototype_assembler');
     if (t) {
         t.setHasResearchSlot(true);
@@ -92,11 +106,33 @@ ServerEvents.recipes(allthemods => {
         );
     });
 
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/yag_dope')
+        .itemInputs('3x #forge:dusts/yttrium_oxide', '5x #forge:dusts/aluminium_oxide')        
+        .itemOutputs('gtceu:yttrium_aluminium_garnet_boule')
+        .addData('ebf_temp', COIL_TEMPS.NAQUADAH)
+        .EUt(LuV).duration(1200);
+
+
+    allthemods.recipes.gtceu.crystal_growth_chamber('gregification:crystal_growth/nd_yag_boule')
+        .itemInputs('#forge:dusts/neodymium_doped_yttrium_aluminium_garnet')
+        .inputFluids('#forge:neodymium_doped_yttrium_aluminium_garnet 1296')
+        .itemOutputs('gtceu:neodymium_doped_yttrium_aluminium_garnet_boule')
+        .addData('ebf_temp', COIL_TEMPS.TRINIUM)
+        .EUt(ZPM).duration(1200)
+
+    allthemods.recipes.gtceu.crystal_growth_chamber('gregification:crystal_growth/pr_yag_boule')
+        .itemInputs('#forge:dusts/praseodymium_doped_yttrium_aluminium_garnet')
+        .inputFluids('#forge:praseodymium_doped_yttrium_aluminium_garnet 1296')
+        .itemOutputs('gtceu:praseodymium_doped_yttrium_aluminium_garnet_boule')
+        .addData('ebf_temp', COIL_TEMPS.NAQUADAH)
+        .EUt(LuV).duration(1200);
+
+
     allthemods.recipes.gtceu.environmental_accumulator('gregification:environmental_accumulator/sunnarium')
         .notConsumable('gtceu:solar_relic')
         .itemInputs('#forge:dusts/glowstone')
         .itemOutputs('gtceu:sunnarium_dust')
-        .daytime()        
+        .daytime()
         .circuit(1)
         .duration(3600)
         .EUt(ZPM);
@@ -106,7 +142,7 @@ ServerEvents.recipes(allthemods => {
         .itemInputs('#forge:dusts/glowstone', 'gtceu:tachyon')
         .itemOutputs('gtceu:sunnarium_dust')
         .daytime()
-        .circuit(2)       
+        .circuit(2)
         .duration(360)
         .EUt(ZPM);
 
@@ -114,7 +150,7 @@ ServerEvents.recipes(allthemods => {
         .notConsumable('forbidden_arcanus:crescent_moon')
         .itemInputs('#forge:dusts/moon_stone')
         .itemOutputs('gtceu:lunarium_dust')
-        .daytime(true)        
+        .daytime(true)
         .circuit(1)
         .duration(3600)
         .EUt(ZPM);
@@ -124,7 +160,7 @@ ServerEvents.recipes(allthemods => {
         .itemInputs('#forge:dusts/moon_stone', 'gtceu:tachyon')
         .itemOutputs('gtceu:lunarium_dust')
         .daytime(true)
-        .circuit(2)       
+        .circuit(2)
         .duration(360)
         .EUt(ZPM);
 
@@ -134,7 +170,7 @@ ServerEvents.recipes(allthemods => {
 
 
         let firstOutput = Array.isArray(outputs) ? outputs[0] : outputs;
-        let generatedId = customID || `gregification:${firstOutput.toString().replace(/^\d+[x ]\s*/, '').split(':').pop().replace(/[^a-zA-Z0-9_]/g, '_').toLowerCase()}`;        
+        let generatedId = customID || `gregification:${firstOutput.toString().replace(/^\d+[x ]\s*/, '').split(':').pop().replace(/[^a-zA-Z0-9_]/g, '_').toLowerCase()}`;
         let recipe = allthemods.recipes.gtceu[recipeType](generatedId)
             .itemOutputs(outputs)
             .itemInputs(inputs)
@@ -161,7 +197,7 @@ ServerEvents.recipes(allthemods => {
     };
 
 
-    
+
     allthemods.shaped(
         'gtceu:gene_sequencer',
         [
@@ -234,10 +270,10 @@ ServerEvents.recipes(allthemods => {
         .EUt(UV);
 
 
-    const drone = Item.of('pneumaticcraft:collector_drone').weakNBT();    
+    const drone = Item.of('pneumaticcraft:collector_drone').weakNBT();
 
-    allthemods.recipes.gtceu.drone_station('gregification:tier_1_rocket_schematic_from_drone')        
-        .chancedInput(drone, 2500,-500)
+    allthemods.recipes.gtceu.drone_station('gregification:tier_1_rocket_schematic_from_drone')
+        .chancedInput(drone, 2500, -500)
         .chancedOutput('gtceu:tier_1_rocket_schematic', 2500, 1000)
         .inputFluids('#forge:kerosene 4000')
         .duration(10000)
@@ -245,7 +281,7 @@ ServerEvents.recipes(allthemods => {
         .circuit(1);
 
     allthemods.recipes.gtceu.drone_station('gregification:tier_2_rocket_schematic_from_drone')
-        .chancedInput(drone, 2500,-500)
+        .chancedInput(drone, 2500, -500)
         .chancedOutput('gtceu:tier_2_rocket_schematic', 2500, 1000)
         .inputFluids(['#forge:kerosene 4000', '#forge:hafnium 1440'])
         .duration(10000)
@@ -253,7 +289,7 @@ ServerEvents.recipes(allthemods => {
         .circuit(2);
 
     allthemods.recipes.gtceu.drone_station('gregification:tier_3_rocket_schematic_from_drone')
-        .chancedInput(drone, 2500,-500)
+        .chancedInput(drone, 2500, -500)
         .chancedOutput('gtceu:tier_3_rocket_schematic', 2500, 1000)
         .inputFluids(['#forge:kerosene 4000', '#forge:scandium 1440'])
         .duration(10000)
@@ -261,7 +297,7 @@ ServerEvents.recipes(allthemods => {
         .circuit(3);
 
     allthemods.recipes.gtceu.drone_station('gregification:tier_4_rocket_schematic_from_drone')
-        .chancedInput(drone, 2500,-500)
+        .chancedInput(drone, 2500, -500)
         .chancedOutput('gtceu:tier_4_rocket_schematic', 2500, 1000)
         .inputFluids(['#forge:kerosene 4000', '#forge:thallium 1440'])
         .duration(10000)
@@ -277,7 +313,7 @@ ServerEvents.recipes(allthemods => {
 
 
     allthemods.recipes.gtceu.drone_station('gregification:allthemodium_upgrade')
-        .chancedInput(drone, 2500,-500)
+        .chancedInput(drone, 2500, -500)
         .itemInputs('2x #forge:storage_blocks/allthemodium')
         .chancedOutput('allthemodium:allthemodium_upgrade_smithing_template', 1500, 1000)
         .inputFluids(['#forge:kerosene 4000', '#forge:hafnium 1440'])
@@ -286,7 +322,7 @@ ServerEvents.recipes(allthemods => {
         .circuit(11);
 
     allthemods.recipes.gtceu.drone_station('gregification:vibranium_upgrade')
-        .chancedInput(drone, 2500,-500)
+        .chancedInput(drone, 2500, -500)
         .itemInputs('4x #forge:storage_blocks/vibranium')
         .chancedOutput('allthemodium:vibranium_upgrade_smithing_template', 1500, 1000)
         .inputFluids(['#forge:kerosene 4000', '#forge:scandium 1440'])
@@ -295,7 +331,7 @@ ServerEvents.recipes(allthemods => {
         .circuit(12);
 
     allthemods.recipes.gtceu.drone_station('gregification:unobtainium_upgrade')
-        .chancedInput(drone, 2500,-500)
+        .chancedInput(drone, 2500, -500)
         .itemInputs('8x #forge:storage_blocks/unobtainium')
         .chancedOutput('allthemodium:unobtainium_upgrade_smithing_template', 1500, 1000)
         .inputFluids(['#forge:kerosene 4000', '#forge:thallium 1440'])
@@ -305,12 +341,12 @@ ServerEvents.recipes(allthemods => {
 
 
     allthemods.recipes.gtceu.drone_station('gregification:forbidden_search')
-        .chancedInput(drone, 2500,-500)
+        .chancedInput(drone, 2500, -500)
         .itemInputs('forbidden_arcanus:dark_nether_star')
         .chancedOutput('forbidden_arcanus:artisan_relic', 1000, 1000)
         .chancedOutput('forbidden_arcanus:crescent_moon', 100, 100)
         .chancedOutput('gtceu:solar_relic', 100, 100)
-        .chancedOutput('forbidden_arcanus:crimson_stone', 1000, 1000)        
+        .chancedOutput('forbidden_arcanus:crimson_stone', 1000, 1000)
         .chancedOutput('forbidden_arcanus:elementarium', 2000, 1000)
         .chancedOutput('forbidden_arcanus:divine_pact', 1000, 1000)
         .chancedOutput('forbidden_arcanus:maledictus_pact', 1000, 1000)
@@ -333,14 +369,14 @@ ServerEvents.recipes(allthemods => {
         let firstOutput = Array.isArray(outputs) ? outputs[0] : outputs;
         let generatedId = customID || `gregification:${firstOutput.toString().replace(/^\d+[x ]\s*/, '').split(':').pop().replace(/[^a-zA-Z0-9_]/g, '_').toLowerCase()}`;
 
-        let cModel        
+        let cModel
         if (skipBlueprints != 1) {
 
             //self aware model            
-            if (creature[0] == '~') {cModel = `twilightforest/${creature.slice(1)}`;}
-            else if (creature[0] == '-') {cModel = `allthemodium/${creature.slice(1)}`;}
-            else {cModel = creature;}
-                                      
+            if (creature[0] == '~') { cModel = `twilightforest/${creature.slice(1)}`; }
+            else if (creature[0] == '-') { cModel = `allthemodium/${creature.slice(1)}`; }
+            else { cModel = creature; }
+
             const model = Item.of('hostilenetworks:data_model', `{data_model:{data:1254,id:"hostilenetworks:${cModel}"}}`).strongNBT();
 
             //model predicate for scanner
@@ -349,7 +385,7 @@ ServerEvents.recipes(allthemods => {
                 NBTPredicates.gte('data_model.data', 1254)
             );
 
-            if (creature[0] == '~' || creature[0] == '-') {creature = creature.slice(1);}                        
+            if (creature[0] == '~' || creature[0] == '-') { creature = creature.slice(1); }
 
             let createDisplayParts = creature.split('_');
             let createDisplay = '';
@@ -388,7 +424,7 @@ ServerEvents.recipes(allthemods => {
                 .duration(fraculatorDuration)
                 .EUt(fraculatorEU);
         };
-        
+
         //just creating the blueprint, skipping the rest of the process if skipBlueprints is not 0
         if (skipBlueprints != 2) {
             gtRecipeResearch(
@@ -421,7 +457,7 @@ ServerEvents.recipes(allthemods => {
         '#forge:europium 720',
         6000,
         ZPM,
-        16,null,0
+        16, null, 0
     );
 
     createModelBlueprints('prototype_assembler', 'warden', 'mekasuit', ['mekanism:mekasuit_bodyarmor'],
@@ -499,7 +535,7 @@ ServerEvents.recipes(allthemods => {
         ],
         null,
         600,
-        ZPM,null,0
+        ZPM, null, 0
     );
 
     createModelBlueprints('prototype_assembler', 'drowned', 'creative_container', ['elementalcraft:creative_container'],
@@ -514,7 +550,7 @@ ServerEvents.recipes(allthemods => {
         null,
         6000,
         ZPM,
-        32,null,0
+        32, null, 0
     );
 
     createModelBlueprints('prototype_assembler', 'enderman', 'waystone', ['waystones:waystone'],
@@ -529,7 +565,7 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:argon 6000',
         600,
-        LuV, null,null,0
+        LuV, null, null, 0
     );
 
     createModelBlueprints('prototype_assembler', 'enderman', 'waystone', ['waystones:warp_stone'],
@@ -561,7 +597,7 @@ ServerEvents.recipes(allthemods => {
             ZPM,
             'elementalcraft:creative_container',
             32,
-            `gregification:creative_container_${element}`,'creative_container'
+            `gregification:creative_container_${element}`, 'creative_container'
         );
     })
 
@@ -578,7 +614,7 @@ ServerEvents.recipes(allthemods => {
         ],
         ['#forge:polybenzimidazole 1000', 'industrialforegoing:ether_gas 1000'],
         6000,
-        ZPM, 8,null,0
+        ZPM, 8, null, 0
     );
 
     createModelBlueprints('prototype_assembler', 'wither', 'laser_drill', ['industrialforegoing:ore_laser_base'],
@@ -627,7 +663,7 @@ ServerEvents.recipes(allthemods => {
         ],
         ['advanced_ae:quantum_infusion_source 10000', '#forge:polybenzimidazole 1440'],
         6000,
-        LuV, 8,null,0
+        LuV, 8, null, 0
     );
 
 
@@ -669,7 +705,7 @@ ServerEvents.recipes(allthemods => {
         ],
         null,
         6000,
-        LuV, 16, 'creative_jetpack',0
+        LuV, 16, 'creative_jetpack', 0
     );
 
     createModelBlueprints('prototype_assembler', 'blaze', 'cake', 'create:creative_blaze_cake',
@@ -680,7 +716,7 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:chocolate 1024000',
         6000,
-        LuV, 16,'creative_blaze_cake',0
+        LuV, 16, 'creative_blaze_cake', 0
     );
 
     createModelBlueprints('prototype_assembler', '~death_tome', 'font', 'botania:creative_pool',
@@ -697,7 +733,7 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:mana_essence 1024000',
         6000,
-        LuV, 16,null,0
+        LuV, 16, null, 0
     );
 
     const fullTablet = Item.of('botania:mana_tablet', '{mana:500000}').strongNBT();
@@ -729,14 +765,14 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:mana_essence 1024000',
         6000,
-        LuV, 16,null,1
+        LuV, 16, null, 1
     );
 
     createModelBlueprints('prototype_assembler', '~death_tome', 'font', 'bloodmagic:activationcrystalcreative',
         [
             '#forge:singularities/hellforged',
             'bloodmagic:activationcrystalweak',
-            '64x bloodmagic:etherealslate',            
+            '64x bloodmagic:etherealslate',
             '64x #forge:exquisite_gems/demon',
             '64x #forge:exquisite_gems/corrosive',
             '64x #forge:exquisite_gems/destructive',
@@ -756,7 +792,7 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:plastic 1024000',
         6000,
-        LuV, 16,null,0
+        LuV, 16, null, 0
     );
     createModelBlueprints('prototype_assembler', 'iron_golem', 'crux', 'pneumaticcraft:creative_compressor',
         [
@@ -804,7 +840,7 @@ ServerEvents.recipes(allthemods => {
         LuV, 16, null, 1
     );
 
-    
+
     createModelBlueprints('prototype_assembler', 'witch', 'thermal', 'thermal:rf_coil_creative_augment',
         [
             '16x thermal_extra:abyssal_rf_coil_augment',
@@ -813,7 +849,7 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:lubricant 1024000',
         6000,
-        LuV,8,null,0
+        LuV, 8, null, 0
     );
 
     createModelBlueprints('prototype_assembler', 'witch', 'thermal', 'thermal:machine_efficiency_creative_augment',
@@ -824,7 +860,7 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:lubricant 1024000',
         6000,
-        LuV,8,null,1
+        LuV, 8, null, 1
     );
 
     /*
@@ -847,22 +883,22 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:lubricant 1024000',
         6000,
-        LuV,8,null,1
+        LuV, 8, null, 1
     );
 
     createModelBlueprints('prototype_assembler', 'spider', 'blood', 'evilcraft:creative_blood_drop',
         [
-            '#forge:singularities/garmonbozia',            
+            '#forge:singularities/garmonbozia',
             'allthetweaks:atm_star'
         ],
         '#forge:sanguine_concentrate 1024000',
         6000,
-        LuV,8,null,0
+        LuV, 8, null, 0
     );
-    
-    
+
+
     let cube = Item.of('mekanism:creative_energy_cube', '{mekData:{EnergyContainers:[{Container:0b,stored:"18446744073709551615.9999"}]}}').strongNBT();
-    
+
     createModelBlueprints('prototype_assembler', '-piglich', 'energy_core', cube,
         [
             'allthetweaks:atm_star',
@@ -875,7 +911,7 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:etrium 1024000',
         6000,
-        LuV,32,'mekanism_cube',0
+        LuV, 32, 'mekanism_cube', 0
     );
 
     createModelBlueprints('prototype_assembler', '-piglich', 'energy_core', 'createaddition:creative_energy',
@@ -890,7 +926,7 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:etrium 1024000',
         6000,
-        LuV,32,null,1
+        LuV, 32, null, 1
     );
 
     createModelBlueprints('prototype_assembler', '-piglich', 'energy_core', 'ae2:creative_energy_cell',
@@ -905,7 +941,7 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:etrium 1024000',
         6000,
-        LuV,32,null,1
+        LuV, 32, null, 1
     );
 
     createModelBlueprints('prototype_assembler', '-piglich', 'energy_core', 'integrateddynamics:energy_battery_creative',
@@ -920,11 +956,11 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:etrium 1024000',
         6000,
-        LuV,32,null,1
+        LuV, 32, null, 1
     );
 
     createModelBlueprints('prototype_assembler', '-piglich', 'energy_core', 'powah:energy_cell_creative',
-        [            
+        [
             'allthetweaks:atm_star',
             'powah:energy_cell_nitro',
             '4x #forge:singularities/lapotron',
@@ -935,14 +971,14 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:etrium 1024000',
         6000,
-        LuV,32,null,1
+        LuV, 32, null, 1
     );
 
     createModelBlueprints('prototype_assembler', 'ender_dragon', 'outworld', null,
         null,
         null,
         6000,
-        LuV,32,"chaotic_blueprint",2 //just make a blueprint
+        LuV, 32, "chaotic_blueprint", 2 //just make a blueprint
     );
 
 
