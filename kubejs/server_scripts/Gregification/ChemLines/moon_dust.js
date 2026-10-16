@@ -50,7 +50,7 @@ ServerEvents.recipes(allthemods => {
         .duration(durationSimple)
         .EUt(EUComplex);
 
-    allthemods.recipes.gtceu.dissolution_tank('gregification:moon_stone/oxalate_strip')
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:moon_stone/oxalate_strip')
         .inputFluids('#forge:diluted_moon_stone_mud 40000', '#forge:oxalic_acid 2000')
         .itemOutputs('2x gtceu:kreep_concentrate_dust')
         .chancedOutput('2x gtceu:kreep_concentrate_dust', 5000, 1000)

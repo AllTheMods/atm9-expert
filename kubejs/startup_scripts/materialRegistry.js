@@ -1825,11 +1825,13 @@ const materials = [
 
     new MaterialDef('zirconium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic(),
 
-    new MaterialDef('dysprosium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().noSmelting(),
+    new MaterialDef('dysprosium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRINIUM),
 
-    new MaterialDef('promethium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().noSmelting(),
+    new MaterialDef('promethium').modify().dust().fluid(),
+    
+    new MaterialDef('praseodymium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRINIUM),
 
-    new MaterialDef('terbium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().noSmelting(),
+    new MaterialDef('terbium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRINIUM),
 
     new MaterialDef('scandium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),
 
@@ -1883,6 +1885,35 @@ const materials = [
     new MaterialDef('prismarine_nodule_residue').dust().color(0x3E4A4F).iconSet('DULL').noDecomp(),
     new MaterialDef('prismarine_magnesia_cake').dust().color(0xB8C9C2).iconSet('DULL').noDecomp(),
     new MaterialDef('lithium_carbonate').dust().color(0xDCD9E6).iconSet('DULL').formula('Li2CO3').components('2x lithium, 1x carbon, 3x oxygen'),
+
+    //bastnasite line
+    new MaterialDef('bastnasite_sulfate_slurry').fluid().color(0x8A6F5C).iconSet('FLUID').noDecomp(),
+    new MaterialDef('rare_earth_sulfate_liquor').fluid().color(0xA88C6E).iconSet('FLUID').noDecomp(),
+    new MaterialDef('heavy_rare_earth_liquor').fluid().color(0xB09A78).iconSet('FLUID').noDecomp(),
+    new MaterialDef('rare_earth_chloride_liquor').fluid().color(0xA6B07C).iconSet('FLUID').noDecomp(),
+    new MaterialDef('rare_earth_extractant').fluid().color(0xC4A85C).iconSet('FLUID').noDecomp(),
+    new MaterialDef('loaded_extractant').fluid().color(0x9C7CA8).iconSet('FLUID').noDecomp(),
+    new MaterialDef('lanthanum_raffinate').fluid().color(0xB8B8D0).iconSet('FLUID').noDecomp(),
+    new MaterialDef('neodymium_praseodymium_chloride').fluid().color(0x9AA8C4).iconSet('FLUID').noDecomp(),
+    new MaterialDef('bastnasite_gangue').dust().color(0x5C5248).iconSet('DULL').noDecomp(),
+    new MaterialDef('light_rare_earth_double_sulfate').dust().color(0xC4B49C).iconSet('DULL').noDecomp(),
+    new MaterialDef('light_rare_earth_hydroxide').dust().color(0xBCAEC8).iconSet('DULL').noDecomp(),
+    new MaterialDef('neodymium_praseodymium_oxide').dust().color(0x8C8CA8).iconSet('DULL').noDecomp(),
+    
+    //monazite line
+    new MaterialDef('caustic_soda_solution').fluid().color(0xB4C0A8).iconSet('FLUID'),
+    new MaterialDef('monazite_hydroxide_slurry').fluid().color(0x7C6A58).iconSet('FLUID'),
+    new MaterialDef('phosphate_liquor').fluid().color(0xC8B888).iconSet('FLUID'),
+    new MaterialDef('rare_earth_chloride_solution').fluid().color(0xB8C48C).iconSet('FLUID'),
+    new MaterialDef('rare_earth_nitrate_liquor').fluid().color(0xC8B070).iconSet('FLUID'),
+    new MaterialDef('heavy_rare_earth_nitrate').fluid().color(0xD0A868).iconSet('FLUID'),
+    new MaterialDef('monazite_loaded_extractant').fluid().color(0xA88CB8).iconSet('FLUID'),
+    new MaterialDef('monazite_hydroxide_cake').dust().color(0x8C7C68).iconSet('DULL').noDecomp(),
+    new MaterialDef('thorium_cake').dust().color(0x6C7058).iconSet('DULL').noDecomp(),
+    new MaterialDef('rare_earth_oxalate').dust().color(0xC8BCA0).iconSet('DULL').noDecomp(),
+    new MaterialDef('mixed_rare_earth_oxide').dust().color(0xB09470).iconSet('DULL').noDecomp(),
+    new MaterialDef('heavy_rare_earth_fluoride').dust().color(0xC8B8C0).iconSet('DULL').noDecomp(),
+    new MaterialDef('heavy_rare_earth_metal_mix').dust().color(0x908C98).iconSet('METALLIC').noDecomp(),
     
 ];
 

@@ -50,7 +50,7 @@ ServerEvents.recipes(allthemods => {
         .EUt(EUSimple);
 
     
-    allthemods.recipes.gtceu.dissolution_tank('gregification:prismarine/lime')
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:prismarine/lime')
         .inputFluids('#forge:halogen_brine 50000')
         .itemInputs('20x #forge:dusts/calcium_hydroxide')
         .itemOutputs('12x gtceu:prismarine_magnesia_cake_dust')
@@ -68,9 +68,9 @@ ServerEvents.recipes(allthemods => {
         .duration(durationSimple)
         .EUt(EUSimple);
     
-    allthemods.recipes.gtceu.dissolution_tank('gregification:prismarine/soda_ash')
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:prismarine/soda_ash')
         .inputFluids('#forge:limed_brine 50000')
-        .itemInputs('8x #forge:dusts/gtceu:soda_ash_dust')
+        .itemInputs('8x #forge:dusts/soda_ash')
         .itemOutputs('6x gtceu:calcite_dust', '1x gtceu:lithium_carbonate_dust')
         .chancedOutput('2x gtceu:lithium_carbonate_dust', 4000, 1000)
         .outputFluids('gtceu:lithium_stripped_brine 45000')
