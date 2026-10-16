@@ -216,17 +216,17 @@ StartupEvents.registry('item', event => {
         .tooltip('§7A Samarium Cobalt Magnetic Rotor.')
 
     event.create('gtceu:depleted_single')
-        .displayName('Single Depleted Thorium Fuel Cell')
+        .displayName('Single Depleted Fuel Cell')
         .rarity('RARE')
         .tooltip('§7A Single depleted fuel cell.')
 
     event.create('gtceu:depleted_double')
-        .displayName('Double Depleted Thorium Fuel Cell')
+        .displayName('Double Depleted Fuel Cell')
         .rarity('RARE')
         .tooltip('§7A Double depleted fuel cell.')
 
     event.create('gtceu:depleted_quad')
-        .displayName('Quad Depleted Thorium Fuel Cell')
+        .displayName('Quad Depleted Fuel Cell')
         .rarity('RARE')
         .tooltip('§7A Quad depleted fuel cell.')
 

@@ -59,6 +59,8 @@
     "gtceu.acid_brewing_vat": "Acid Brewing",
     "block.gtceu.industrial_leacher": "Industrial Leacher",
     "gtceu.industrial_leacher": "Industrial Leacher",
+    "block.gtceu.dissolution_tank": "Dissolution Tank",
+    "gtceu.dissolution_tank": "Dissolution Tank",
     "block.gtceu.industrial_ritual_machine": "Industrial Ritual Machine",
     "gtceu.industrial_ritual_machine": "Industrial Ritual Machine",
     "block.gtceu.industrial_spirit_infuser": "Industrial Spirit Infuser",
@@ -799,10 +801,20 @@
     "material.gtceu.abyssal": "Abyssal",
     "material.gtceu.necrotic": "Necrotic",
     "material.gtceu.wraith_heart": "Wraith Heart",
+    "material.gtceu.tattered": "Tattered",
     "material.gtceu.sunnarium": "Sunnarium",
     "material.gtceu.lunarium": "Lunarium",
     "material.gtceu.undeath": "Undeath",
-    "material.gtceu.moon_stone": "Moon Stone"
+    "material.gtceu.moon_stone": "Moon Stone",
+    "material.gtceu.prismarine": "Prismarine",
+    "material.gtceu.depleted_thorium_fuel": "Depleted Thorium Fuel",
+    "material.gtceu.muddy_moon_stone": "Muddy Moon Stone",
+    "material.gtceu.diluted_moon_stone_mud": "Diluted Moon Stone Mud",
+    "material.gtceu.moon_hydroxide_cake": "Moon Hydroxide Cake",    
+    "material.gtceu.kreep_liquor": "Kreep Liquor",
+    "material.gtceu.sodium_formate": "Sodium Formate",
+    "material.gtceu.sodium_oxalate": "Sodium Oxalate",
+    "material.gtceu.oxalic_acid": "Oxalic Acid"
 }
 
  

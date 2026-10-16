@@ -159,6 +159,8 @@ MaterialDef.prototype.flags = function () {
     return this;
 };
 MaterialDef.prototype.noDecomp = function () { return this.flags(GTMaterialFlags.DISABLE_DECOMPOSITION); };
+MaterialDef.prototype.electroDecomp = function () { return this.flags(GTMaterialFlags.DECOMPOSITION_BY_ELECTROLYZING); };   // optional: force the electrolyzer
+MaterialDef.prototype.centrifugeDecomp = function () { return this.flags(GTMaterialFlags.DECOMPOSITION_BY_CENTRIFUGING); }; // optional: force the centrifuge
 MaterialDef.prototype.noSmelting = function () { return this.flags(GTMaterialFlags.NO_SMELTING); };
 MaterialDef.prototype.noBlocks = function () { return this.flags(GTMaterialFlags.EXCLUDE_BLOCK_CRAFTING_RECIPES); };
 MaterialDef.prototype.singularity = function () { return this.flags(CMMEMaterialFlags.GENERATE_SINGULARITY); };
@@ -381,6 +383,24 @@ MaterialDef.prototype.applyModification = function () {
 };
 
 
+
+// ---- decomposition (phase 4, runs after every property modification) ----
+// GT only picks a decomposition type when a material is created, before our components exist, so we do it here.
+// Rule: a material with components decomposes unless it has .noDecomp(). Centrifuge if every component has an ingot, electrolyzer otherwise (GT's own rule).
+MaterialDef.prototype.applyDecomposition = function () {
+    if (!this.traits.components || this.traits.isModification) return;
+    let mat = GTMaterials.get(this.name);
+    if (!mat) return;
+    if (mat.hasFlag(GTMaterialFlags.DISABLE_DECOMPOSITION)) return;
+    if (mat.hasFlag(GTMaterialFlags.DECOMPOSITION_BY_ELECTROLYZING) || mat.hasFlag(GTMaterialFlags.DECOMPOSITION_BY_CENTRIFUGING)) return;
+    let list = mat.getMaterialComponents();
+    let allIngots = true;
+    for (let i = 0; i < list.size(); i++) {
+        if (!list.get(i).material().hasProperty(PropertyKey.INGOT)) allIngots = false;
+    }
+    mat.addFlags(allIngots ? GTMaterialFlags.DECOMPOSITION_BY_CENTRIFUGING : GTMaterialFlags.DECOMPOSITION_BY_ELECTROLYZING);
+};
+
 const materials = [
     new MaterialDef('antimony_telluride').dust().color(0xB8A8C8).components('2x antimony, 3x tellurium'),
 
@@ -465,7 +485,7 @@ const materials = [
     new MaterialDef('soul').color(0x3A4F6D).iconSet('GLASS').lens()
         .unify({ gem: 'occultism:soul_gem' }),
 
-    new MaterialDef('fluix')
+    new MaterialDef('fluix').noDecomp()
         .dust().fluid().ingot().color(0x8F5CCB).iconSet('SHINY')
         .cable({ voltage: 32, loss: 2, superconductor: false })
         .components('1x redstone, 1x certus_quartz, 1x nether_quartz')
@@ -488,15 +508,15 @@ const materials = [
 
     new MaterialDef('organic_polymer').color(0x647B82).iconSet('SHINY').polymer(),
 
-    new MaterialDef('fluorozirconic_composite').color(0x4DD0E1).iconSet('SHINY').polymer().components('1x zirconium, 6x fluorine, 2x carbon').formula('ZrF6C2'),
+    new MaterialDef('fluorozirconic_composite').noDecomp().color(0x4DD0E1).iconSet('SHINY').polymer().components('1x zirconium, 6x fluorine, 2x carbon').formula('ZrF6C2'),
 
-    new MaterialDef('fifth_element').color(0xFF6600).iconSet('SHINY').polymer().components('1x elemental_water, 1x elemental_fire, 1x elemental_air, 1x elemental_earth'),
+    new MaterialDef('fifth_element').noDecomp().color(0xFF6600).iconSet('SHINY').polymer().components('1x elemental_water, 1x elemental_fire, 1x elemental_air, 1x elemental_earth'),
 
     new MaterialDef('polyimide').color(0xB8631E).iconSet('DULL').polymer().noDecomp().components('1x pyromellitic_dianhydride, 1x oxydianiline').formula('C22H16N2O7'),
 
     new MaterialDef('hydrogen_selenide').fluid().gas().color(0xDCDCDC).iconSet('METALLIC').components('2x hydrogen, 1x selenium').formula('H2Se'),
 
-    new MaterialDef('ozone').fluid().gas().color(0x3366FF).iconSet('FLUID').components('3x oxygen').formula('O3'),
+    new MaterialDef('ozone').noDecomp().fluid().gas().color(0x3366FF).iconSet('FLUID').components('3x oxygen').formula('O3'),
 
     new MaterialDef('carbon_tetroxide').fluid().gas().color(0x36454F).iconSet('METALLIC').noDecomp().components('1x carbon, 4x oxygen').formula('CO4'),
 
@@ -552,7 +572,7 @@ const materials = [
     new MaterialDef('black_chalk').fluid().gem().color(0x000000).iconSet('FLUID').noDecomp().noBlocks().unify({ gem: 'occultism:chalk_black' })
         .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('sugar_water').fluid().color(0xE8D9A0).iconSet('FLUID').formula('C48H90O45').components('4x sugar, 1x distilled_water'),
+    new MaterialDef('sugar_water').noDecomp().fluid().color(0xE8D9A0).iconSet('FLUID').formula('C48H90O45').components('4x sugar, 1x distilled_water'),
 
     new MaterialDef('cognizant_sanguine_ichor').fluid().color(0x6A0DAD).iconSet('FLUID'),
 
@@ -580,9 +600,9 @@ const materials = [
 
     new MaterialDef('picoline').fluid().color(0x9E9B54).iconSet('FLUID').formula('C6H7N').components('6x carbon, 7x hydrogen, 1x nitrogen'),
 
-    new MaterialDef('cyanopyridine').fluid().color(0x4A6B82).iconSet('FLUID').formula('C6H4N2').components('6x carbon, 4x hydrogen, 2x nitrogen'),
+    new MaterialDef('cyanopyridine').noDecomp().fluid().color(0x4A6B82).iconSet('FLUID').formula('C6H4N2').components('6x carbon, 4x hydrogen, 2x nitrogen'),
 
-    new MaterialDef('acetaldehyde').fluid().color(0xC2B280).iconSet('FLUID').formula('C2H4O').components('1x ethylene, 1x oxygen'),
+    new MaterialDef('acetaldehyde').noDecomp().fluid().color(0xC2B280).iconSet('FLUID').formula('C2H4O').components('1x ethylene, 1x oxygen'),
 
     new MaterialDef('primordial_sanguine_plasma').fluid().color(0x2E2E2E).iconSet('FLUID'),
 
@@ -630,11 +650,11 @@ const materials = [
 
     new MaterialDef('tellurous_acid').fluid().color(0x9FB6CD).iconSet('FLUID').noDecomp().formula('H2TeO3').components('2x hydrogen, 1x tellurium, 3x oxygen'),
 
-    new MaterialDef('sodium_tellurite_solution').fluid().color(0xEEF2F5).iconSet('FLUID').formula('(Na2TeO3)(H2O)').components('2x sodium, 1x tellurium, 3x oxygen, 1x water'),
+    new MaterialDef('sodium_tellurite_solution').noDecomp().fluid().color(0xEEF2F5).iconSet('FLUID').formula('(Na2TeO3)(H2O)').components('2x sodium, 1x tellurium, 3x oxygen, 1x water'),
 
     new MaterialDef('peroxodisulfuric_acid').fluid().color(0xCCDDFF).iconSet('FLUID').formula('H2S2O8').components('2x sulfur, 6x oxygen, 2x hydrogen_peroxide'),
 
-    new MaterialDef('sodium_germanate_solution').fluid().color(0xE8DCC8).iconSet('FLUID').formula('(Na2GeO3)(H2O)').components('2x sodium, 1x germanium, 3x oxygen, 1x water'),
+    new MaterialDef('sodium_germanate_solution').noDecomp().fluid().color(0xE8DCC8).iconSet('FLUID').formula('(Na2GeO3)(H2O)').components('2x sodium, 1x germanium, 3x oxygen, 1x water'),
 
     new MaterialDef('perrhenic_acid').fluid().color(0xDCD0FF).iconSet('FLUID').noDecomp().formula('HReO4').components('1x hydrogen, 1x rhenium, 4x oxygen'),
 
@@ -660,23 +680,23 @@ const materials = [
 
     new MaterialDef('paralytic_agent').fluid().color(0x2D0C35).iconSet('FLUID').noDecomp(),
 
-    new MaterialDef('mind_control_serum').fluid().color(0x00FFFF).iconSet('FLUID').components('1x terrazine, 1x mind_numbing_agent'),
+    new MaterialDef('mind_control_serum').noDecomp().fluid().color(0x00FFFF).iconSet('FLUID').components('1x terrazine, 1x mind_numbing_agent'),
 
     new MaterialDef('concentrated_dark_matter').fluid().color(0x1A0033).iconSet('FLUID').noDecomp().formula('CsH2O').components('1x caesium, 1x water'),
 
-    new MaterialDef('activated_carbon_slurry').fluid().color(0x1A1A1A).iconSet('DULL').formula('CZnHCl').components('1x activated_carbon, 1x zinc, 1x hydrochloric_acid'),
+    new MaterialDef('activated_carbon_slurry').noDecomp().fluid().color(0x1A1A1A).iconSet('DULL').formula('CZnHCl').components('1x activated_carbon, 1x zinc, 1x hydrochloric_acid'),
 
-    new MaterialDef('water_stage_1').fluid().color(0x33A1DE).iconSet('FLUID').formula('H2O').components('1x water'),
+    new MaterialDef('water_stage_1').noDecomp().fluid().color(0x33A1DE).iconSet('FLUID').formula('H2O').components('1x water'),
 
-    new MaterialDef('water_stage_2').fluid().color(0x3366FF).iconSet('FLUID').formula('H2O').components('1x water'),
+    new MaterialDef('water_stage_2').noDecomp().fluid().color(0x3366FF).iconSet('FLUID').formula('H2O').components('1x water'),
 
-    new MaterialDef('water_stage_3').fluid().color(0x4682B4).iconSet('FLUID').formula('H2O').components('1x water'),
+    new MaterialDef('water_stage_3').noDecomp().fluid().color(0x4682B4).iconSet('FLUID').formula('H2O').components('1x water'),
 
-    new MaterialDef('water_stage_4').fluid().color(0x5F9EA0).iconSet('FLUID').formula('H2O').components('1x water'),
+    new MaterialDef('water_stage_4').noDecomp().fluid().color(0x5F9EA0).iconSet('FLUID').formula('H2O').components('1x water'),
 
-    new MaterialDef('water_stage_5').fluid().color(0xAFEEEE).iconSet('FLUID').formula('H2O').components('1x water'),
+    new MaterialDef('water_stage_5').noDecomp().fluid().color(0xAFEEEE).iconSet('FLUID').formula('H2O').components('1x water'),
 
-    new MaterialDef('water_stage_6').fluid().color(0x87CEEB).iconSet('FLUID').formula('H2O').components('1x water'),
+    new MaterialDef('water_stage_6').noDecomp().fluid().color(0x87CEEB).iconSet('FLUID').formula('H2O').components('1x water'),
 
     new MaterialDef('polyaluminium_chloride').fluid().color(0xCCCCCC).iconSet('DULL').noDecomp().formula('Al2(OH)3Cl3').components('2x aluminium_hydroxide, 3x hydrochloric_acid'),
 
@@ -684,7 +704,7 @@ const materials = [
 
     new MaterialDef('super_coolant').fluid().color(0x82C4E5).iconSet('FLUID'),
 
-    new MaterialDef('purest_water').fluid().color(0x00BFFF).iconSet('FLUID').formula('H2O').components('1x water'),
+    new MaterialDef('purest_water').noDecomp().fluid().color(0x00BFFF).iconSet('FLUID').formula('H2O').components('1x water'),
 
     new MaterialDef('inert_gas_mixture').fluid().color(0x8899A6).iconSet('FLUID'),
 
@@ -714,9 +734,9 @@ const materials = [
 
     new MaterialDef('rocket_fuel_stage_4').fluid().color(0xFFF176).iconSet('FLUID'),
 
-    new MaterialDef('ethylene_oxide').fluid().color(0xEAF2F8).iconSet('FLUID').formula('C2H4O').components('1x ethylene, 1x oxygen'),
+    new MaterialDef('ethylene_oxide').noDecomp().fluid().color(0xEAF2F8).iconSet('FLUID').formula('C2H4O').components('1x ethylene, 1x oxygen'),
 
-    new MaterialDef('phenylacetaldehyde').fluid().color(0xFFF5D6).iconSet('FLUID').formula('C8H8O').components('1x phenyl, 1x acetaldehyde'),
+    new MaterialDef('phenylacetaldehyde').noDecomp().fluid().color(0xFFF5D6).iconSet('FLUID').formula('C8H8O').components('1x phenyl, 1x acetaldehyde'),
 
     new MaterialDef('phenylalanine_nitrile').fluid().color(0xD4A373).iconSet('FLUID').noDecomp().formula('C9H10N2').components('9x carbon, 10x hydrogen, 2x nitrogen'),
 
@@ -724,9 +744,9 @@ const materials = [
 
     new MaterialDef('eucalyptus_oil').fluid().color(0xD4E8A8).iconSet('FLUID').noDecomp(),
 
-    new MaterialDef('cineole').fluid().color(0xEAF6E4).iconSet('FLUID').formula('C10H18O').components('10x carbon, 18x hydrogen, 1x oxygen'),
+    new MaterialDef('cineole').noDecomp().fluid().color(0xEAF6E4).iconSet('FLUID').formula('C10H18O').components('10x carbon, 18x hydrogen, 1x oxygen'),
 
-    new MaterialDef('pinene').fluid().color(0xF2F0D8).iconSet('FLUID').formula('C10H16').components('10x carbon, 16x hydrogen'),
+    new MaterialDef('pinene').noDecomp().fluid().color(0xF2F0D8).iconSet('FLUID').formula('C10H16').components('10x carbon, 16x hydrogen'),
 
     new MaterialDef('exo_pinane_dimer').fluid().color(0xF7EFC8).iconSet('FLUID').noDecomp().formula('C20H36').components('20x carbon, 36x hydrogen'),
 
@@ -750,21 +770,21 @@ const materials = [
 
     new MaterialDef('cyclohexanone').fluid().color(0xE0D8C0).iconSet('FLUID').noDecomp().formula('C6H12O').components('1x cyclohexane, 1x oxygen'),
 
-    new MaterialDef('thermal_coolant').fluid().color(0x8EE3F0).iconSet('FLUID').components('1x water_stage_4, 1x gelid_cryotheum'),
+    new MaterialDef('thermal_coolant').noDecomp().fluid().color(0x8EE3F0).iconSet('FLUID').components('1x water_stage_4, 1x gelid_cryotheum'),
 
-    new MaterialDef('aniline').fluid().color(0xC9A876).iconSet('FLUID').formula('C6H5NH2').components('1x nitrobenzene, 3x hydrogen'),
+    new MaterialDef('aniline').noDecomp().fluid().color(0xC9A876).iconSet('FLUID').formula('C6H5NH2').components('1x nitrobenzene, 3x hydrogen'),
 
-    new MaterialDef('nitroaniline').fluid().color(0xE0B840).iconSet('FLUID').formula('C6H6N2O2').components('1x aniline, 1x nitration_mixture'),
+    new MaterialDef('nitroaniline').noDecomp().fluid().color(0xE0B840).iconSet('FLUID').formula('C6H6N2O2').components('1x aniline, 1x nitration_mixture'),
 
-    new MaterialDef('para_phenylenediamine').dust().fluid().color(0xB89060).iconSet('FLUID').formula('C6H8N2').components('1x nitroaniline, 3x hydrogen'),
+    new MaterialDef('para_phenylenediamine').noDecomp().dust().fluid().color(0xB89060).iconSet('FLUID').formula('C6H8N2').components('1x nitroaniline, 3x hydrogen'),
 
     new MaterialDef('p_xylene').fluid().color(0xEBD078).iconSet('FLUID').formula('C8H10'),
 
     new MaterialDef('cobalt_naphthenate').fluid().color(0x6E5A30).iconSet('FLUID').noDecomp(),
 
-    new MaterialDef('terephthalic_acid').fluid().color(0xF0F0E8).iconSet('FLUID').formula('C8H6O4').components('1x p_xylene, 3x oxygen'),
+    new MaterialDef('terephthalic_acid').noDecomp().fluid().color(0xF0F0E8).iconSet('FLUID').formula('C8H6O4').components('1x p_xylene, 3x oxygen'),
 
-    new MaterialDef('dimethyl_terephthalate').fluid().color(0xE8E0C8).iconSet('FLUID').formula('C10H10O4').components('1x terephthalic_acid, 2x methanol'),
+    new MaterialDef('dimethyl_terephthalate').noDecomp().fluid().color(0xE8E0C8).iconSet('FLUID').formula('C10H10O4').components('1x terephthalic_acid, 2x methanol'),
 
     new MaterialDef('sulfur_dichloride').fluid().color(0xC8A840).iconSet('FLUID').formula('SCl2').components('1x sulfur, 2x chlorine'),
 
@@ -772,11 +792,11 @@ const materials = [
 
     new MaterialDef('terephthaloyl_chloride').dust().fluid().color(0xD8D0C0).iconSet('FLUID').noDecomp().formula('C8H4Cl2O2').components('1x dimethyl_terephthalate, 1x thionyl_chloride'),
 
-    new MaterialDef('methylamine').fluid().color(0xE0E0D0).iconSet('FLUID').formula('CH5N').components('1x ammonia'),
+    new MaterialDef('methylamine').noDecomp().fluid().color(0xE0E0D0).iconSet('FLUID').formula('CH5N').components('1x ammonia'),
 
     new MaterialDef('gamma_butyrolactone').fluid().color(0xEEE8D0).iconSet('FLUID').formula('C4H6O2'),
 
-    new MaterialDef('n_methylpyrrolidone').fluid().color(0xF5EED8).iconSet('FLUID').formula('C5H9NO').components('1x methylamine, 1x gamma_butyrolactone'),
+    new MaterialDef('n_methylpyrrolidone').noDecomp().fluid().color(0xF5EED8).iconSet('FLUID').formula('C5H9NO').components('1x methylamine, 1x gamma_butyrolactone'),
 
     new MaterialDef('tetrahydrofuran').fluid().color(0xE8F4F8).iconSet('FLUID').noDecomp().formula('C4H8O').components('1x gamma_butyrolactone, 1x water'),
 
@@ -788,9 +808,9 @@ const materials = [
 
     new MaterialDef('diphenylmethane_diisocyanate').dust().fluid().color(0xD0C8B8).iconSet('FLUID').noDecomp().formula('C8H9NO2Cl2').components('1x diaminodiphenylmethane, 1x phosgene'),
 
-    new MaterialDef('ethylene_glycol').fluid().color(0xEEE0C0).iconSet('FLUID').formula('C2H6O2').components('1x ethylene, 2x oxygen, 2x hydrogen'),
+    new MaterialDef('ethylene_glycol').noDecomp().fluid().color(0xEEE0C0).iconSet('FLUID').formula('C2H6O2').components('1x ethylene, 2x oxygen, 2x hydrogen'),
 
-    new MaterialDef('pentaerythritol').dust().fluid().color(0xF8F8F0).iconSet('DULL').formula('C5H12O4').components('4x formaldehyde'),
+    new MaterialDef('pentaerythritol').noDecomp().dust().fluid().color(0xF8F8F0).iconSet('DULL').formula('C5H12O4').components('4x formaldehyde'),
 
     new MaterialDef('kevlar_catalyst').dust().fluid().color(0x707888).iconSet('DULL').noDecomp(),
 
@@ -828,7 +848,7 @@ const materials = [
 
     new MaterialDef('magebloom').dust().color(0xc14bfc).iconSet('DULL'),
 
-    new MaterialDef('zirconium_lattice').dust().color(0x9FAFB5).iconSet('METALLIC').formula('Zr4NbIr').components('4x zirconium, 1x niobium, 1x iridium'),
+    new MaterialDef('zirconium_lattice').noDecomp().dust().color(0x9FAFB5).iconSet('METALLIC').formula('Zr4NbIr').components('4x zirconium, 1x niobium, 1x iridium'),
 
     new MaterialDef('plascrete').dust().color(0xCED4D5).iconSet('DULL'),
 
@@ -844,13 +864,13 @@ const materials = [
 
     new MaterialDef('titanium_carbonitride').dust().color(0x8A7F5C).iconSet('METALLIC').formula('TiO2C3N').components('1x titanium_dioxide, 3x carbon, 1x nitrogen'),
 
-    new MaterialDef('cermet_blend').dust().color(0x9C9690).iconSet('METALLIC').formula('Ti4O8C12N4Ni2Mo').components('4x titanium_carbonitride, 2x nickel, 1x molybdenum'),
+    new MaterialDef('cermet_blend').noDecomp().dust().color(0x9C9690).iconSet('METALLIC').formula('Ti4O8C12N4Ni2Mo').components('4x titanium_carbonitride, 2x nickel, 1x molybdenum'),
 
     new MaterialDef('phantom_membrane').dust().color(0xC1B79F).iconSet('DULL'),
 
     new MaterialDef('cerium_chloride').dust().color(0xE0DED0).iconSet('METALLIC').formula('CeCl2').components('1x cerium, 2x chlorine'),
 
-    new MaterialDef('carbonate').dust().color(0xF4F4F4).iconSet('DULL').formula('CO3').components('1x carbon, 3x oxygen'),
+    new MaterialDef('carbonate').noDecomp().dust().color(0xF4F4F4).iconSet('DULL').formula('CO3').components('1x carbon, 3x oxygen'),
 
     new MaterialDef('strontium_sulfide').dust().color(0xD1D7DC).iconSet('METALLIC').noDecomp().formula('SrS').components('1x strontium, 1x sulfur'),
 
@@ -906,7 +926,7 @@ const materials = [
 
     new MaterialDef('aluminium_hydroxide').dust().color(0xEEEEEE).iconSet('DULL').formula('Al(OH)3').components('1x aluminium, 3x oxygen, 3x hydrogen'),
 
-    new MaterialDef('picolinic_acid').dust().color(0x7E57C2).iconSet('DULL').formula('C6H5NO2').components('6x carbon, 5x hydrogen, 1x nitrogen, 2x oxygen'),
+    new MaterialDef('picolinic_acid').noDecomp().dust().color(0x7E57C2).iconSet('DULL').formula('C6H5NO2').components('6x carbon, 5x hydrogen, 1x nitrogen, 2x oxygen'),
 
     new MaterialDef('copper_ii_sulfate').dust().fluid().color(0x0F52BA).iconSet('METALLIC').formula('CuSO4').components('1x copper, 1x sulfur, 4x oxygen'),
 
@@ -940,7 +960,7 @@ const materials = [
 
     new MaterialDef('scandium_oxide').dust().color(0xEEF0F4).iconSet('DULL').formula('Sc2O3').components('2x scandium, 3x oxygen'),
 
-    new MaterialDef('beryllium_oxide').dust().color(0xEEF4EE).iconSet('DULL').noDecomp().formula('BeO').components('1x beryllium, 1x oxygen'),
+    new MaterialDef('beryllium_oxide').dust().color(0xEEF4EE).iconSet('DULL').formula('BeO').components('1x beryllium, 1x oxygen'),
 
     new MaterialDef('potassium_selenide').dust().color(0xE8E8E8).iconSet('DULL').formula('K2Se').components('2x potassium, 1x selenium'),
 
@@ -972,7 +992,7 @@ const materials = [
 
     new MaterialDef('thorium_oxide').dust().color(0xe8e8e8).iconSet('DULL').formula('ThO2').components('1x thorium, 2x oxygen'),
 
-    new MaterialDef('phenyl').dust().color(0x3A3A3A).iconSet('DULL').formula('C6H5').components('6x carbon, 5x hydrogen'),
+    new MaterialDef('phenyl').noDecomp().dust().color(0x3A3A3A).iconSet('DULL').formula('C6H5').components('6x carbon, 5x hydrogen'),
 
     new MaterialDef('phenylalanine').dust().color(0xF8F9FA).iconSet('DULL').noDecomp().formula('C9H11NO2').components('9x carbon, 11x hydrogen, 1x nitrogen, 2x oxygen'),
 
@@ -1050,7 +1070,7 @@ const materials = [
 
     new MaterialDef('titanium_bio_ash').dust().color(0x7E7A86).iconSet('DULL').noDecomp(),
 
-    new MaterialDef('witherite').dust().color(0xD8D4B8).iconSet('ROUGH').components('1x barium, 1x carbon, 3x oxygen, 3x netherite'),
+    new MaterialDef('witherite').noDecomp().dust().color(0xD8D4B8).iconSet('ROUGH').components('1x barium, 1x carbon, 3x oxygen, 3x netherite'),
 
     new MaterialDef('bismuth_oxide').dust().color(0xE8D27A).iconSet('DULL').formula('Bi2O3').components('2x bismuth, 3x oxygen'),
 
@@ -1058,7 +1078,7 @@ const materials = [
 
     new MaterialDef('copper_oxide').dust().color(0x3B2F2F).iconSet('DULL').formula('CuO').components('1x copper, 1x oxygen'),
 
-    new MaterialDef('pyromellitic_dianhydride').dust().color(0xE8DFC0).iconSet('DULL').formula('C10H2O6').components('10x carbon, 2x hydrogen, 6x oxygen'),
+    new MaterialDef('pyromellitic_dianhydride').noDecomp().dust().color(0xE8DFC0).iconSet('DULL').formula('C10H2O6').components('10x carbon, 2x hydrogen, 6x oxygen'),
 
     new MaterialDef('adipic_acid').dust().color(0xDED1A0).iconSet('DULL').noDecomp().formula('C6H14N2O7').components('1x cyclohexanone, 2x nitric_acid'),
 
@@ -1283,11 +1303,11 @@ const materials = [
         .cable({ voltage: 2097152, superconductor: true })
         .unify({ block: 'draconicevolution:awakened_draconium_block', dust: 'draconicevolution:awakened_draconium_dust', ingot: 'draconicevolution:awakened_draconium_ingot', nugget: 'draconicevolution:awakened_draconium_nugget' }),
 
-    new MaterialDef('compressed_iron').components('1x iron').color(0x474747).dust().iconSet('METALLIC').ingot().fluid().materialsAll().singularity()
+    new MaterialDef('compressed_iron').noDecomp().components('1x iron').color(0x474747).dust().iconSet('METALLIC').ingot().fluid().materialsAll().singularity()
         //.cable({ voltage: 128, loss: 1 })
         .unify({ block: 'pneumaticcraft:compressed_iron_block', gear: 'pneumaticcraft:compressed_iron_gear', ingot: 'pneumaticcraft:ingot_iron_compressed' }),
 
-    new MaterialDef('hop_graphite').components('8x carbon').color(0x1C1C1C).iconSet('DULL').ingot().fluid().materialsAll()
+    new MaterialDef('hop_graphite').noDecomp().components('8x carbon').color(0x1C1C1C).iconSet('DULL').ingot().fluid().materialsAll()
         //.cable({ voltage: 8192, loss: 1 })
         .unify({ dust: 'immersiveengineering:dust_hop_graphite', ingot: 'immersiveengineering:ingot_hop_graphite' }),
 
@@ -1728,7 +1748,7 @@ const materials = [
         .blast({ temp: COIL_TEMPS.NAQUADAH, eut: ZPM, duration: 1200 })        
         .unify({ dust: 'thermal_extra:abyssal_dust', nugget: 'thermal_extra:abyssal_nugget', ingot: 'thermal_extra:abyssal_ingot', block: 'thermal_extra:abyssal_block', rod: 'thermal_extra:abyssal_rod', plate: 'thermal_extra:abyssal_plate', gear: 'thermal_extra:abyssal_gear'}),
         
-    new MaterialDef('necrotic').dust().color(0x1A1C1E).iconSet('DULL').components('5x calcium, 3x phosphorus, 3x sulfur'),    
+    new MaterialDef('necrotic').noDecomp().dust().color(0x1A1C1E).iconSet('DULL').components('5x calcium, 3x phosphorus, 3x sulfur'),    
     
     new MaterialDef('tattered').color(0x9A9290).singularity().iconSet('DULL'),
     
@@ -1823,7 +1843,9 @@ const materials = [
 
     new MaterialDef('darmstadtium').modify().flags(GTMaterialFlags.GENERATE_GEAR),
 
-    new MaterialDef('depleted_thorium_fuel').dust().color(0x5E6B4A).iconSet('RADIOACTIVE').noDecomp().components('3x thorium, 2x protactinium, 1x uranium'),
+    new MaterialDef('depleted_thorium_fuel').dust().color(0x5E6B4A).iconSet('RADIOACTIVE').components('3x thorium, 2x protactinium, 1x uranium'),
+
+    new MaterialDef('prismarine').dust().color(0x529680).iconSet('DULL').noDecomp(),
 
     new MaterialDef('beryllium').modify().singularity(),
 
@@ -1836,6 +1858,19 @@ const materials = [
         .unify({ block: true, gemFlawless: true, gemExquisite: true}),
 
     new MaterialDef('kevlar').dust().color(0x76683C).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE),
+
+    //new chemlines
+    new MaterialDef('sodium_formate').dust().color(0xE3DCCB).iconSet('DULL').formula('HCOONa').components('1x sodium, 1x carbon, 1x hydrogen, 2x oxygen'),    
+    new MaterialDef('sodium_oxalate').dust().color(0xDDD5C2).iconSet('DULL').formula('Na2C2O4').components('2x sodium, 2x carbon, 4x oxygen'),    
+    new MaterialDef('oxalic_acid').fluid().color(0xD8CFA8).iconSet('FLUID').formula('H2C2O4').components('2x hydrogen, 2x carbon, 4x oxygen'),
+    new MaterialDef('muddy_moon_stone').fluid().color(0x6E5E50).iconSet('FLUID'),
+    new MaterialDef('diluted_moon_stone_mud').fluid().color(0x8C7D6B).iconSet('FLUID'),
+    new MaterialDef('moon_hydroxide_cake').dust().color(0xA89886).iconSet('DULL').noDecomp(),    
+    new MaterialDef('clarified_moon_mud').fluid().color(0x9A8C7A).iconSet('FLUID'),
+    new MaterialDef('moon_brine').fluid().color(0x8C8296).iconSet('FLUID'),
+    new MaterialDef('kreep_concentrate').dust().color(0xA67C6E).iconSet('DULL').noDecomp(),
+    new MaterialDef('moon_silica_residue').dust().color(0xB7B1A6).iconSet('DULL').noDecomp(),
+    
     
 ];
 
@@ -1872,6 +1907,7 @@ StartupEvents.postInit(allthemods => {
 GTCEuStartupEvents.materialModification(event => {
     materials.forEach(m => m.applyUnification()); 
     materials.forEach(m => m.applyModification());
+    materials.forEach(m => m.applyDecomposition());
     overwriteToolStats('allthemodium', 16.0, 6.0, 0, 5);
     overwriteToolStats('vibranium', 20.0, 8.0, 0, 6);
     overwriteToolStats('unobtainium', 24.0, 10.0, 0, 7);

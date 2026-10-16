@@ -1,12 +1,7 @@
 ServerEvents.recipes(allthemods => {
     // --- 1. VOLTAGE MAP ---
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
-
-
-    // --- 2. HELPER: LATEX SYNTHESIZER ---    
-
-
-    // --- 3. HELPER: DISSOLUTION CHAMBER ---    
+   
     const addDissolution = (itemsIn, itemOut, fluidIn, fluidOut, eu, duration, customID) => {
         let outputID = '';
 

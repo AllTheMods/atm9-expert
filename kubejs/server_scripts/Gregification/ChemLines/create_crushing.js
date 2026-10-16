@@ -10,16 +10,24 @@ ServerEvents.recipes(allthemods => {
         {stone: 'create:ochrum', eu: EV},
         {stone: 'create:veridium', eu: EV},
         {stone: 'create:crimsite', eu: EV},
-        {stone: 'ad_astra:moon_stone', eu: IV}
+        {stone: 'ad_astra:moon_stone', eu: IV, macerate: true, fluidA: 'allthemodium:soul_lava'},
+        {stone: 'minecraft:prismarine', eu: IV, macerate: true, fluidA: 'allthemodium:soul_lava'}
     ];
     stoneInputs.forEach(stone => {
         allthemods.recipes.gtceu.rock_breaker(`gregification:rock_breaker/${stone.stone.replace(':', '_')}`)
             .notConsumable(`${stone.stone}`)
             .itemOutputs(`${stone.stone}`)
-            .addDataString('fluidA', 'minecraft:lava')
-            .addDataString('fluidB', 'minecraft:water')
+            .addDataString('fluidA', stone.fluidA ?? 'minecraft:lava')
+            .addDataString('fluidB', stone.fluidB ?? 'minecraft:water')
             .duration(120)
             .EUt(stone.eu)
+        if (stone.macerate) {
+            allthemods.recipes.gtceu.macerator(`gregification:macerate_${stone.stone.replace(':', '_')}`)
+                .itemInputs(`${stone.stone}`)
+                .itemOutputs(`gtceu:${stone.stone.split(':')[1]}_dust`)
+                .duration(100)
+                .EUt(stone.eu);
+        }
     });
 
     //prismarine
@@ -45,6 +53,12 @@ ServerEvents.recipes(allthemods => {
             { output: 'alltheores:aluminum_dust',  chance: 0.25 },
             { output: 'gtceu:nether_quartz_dust',         chance: 0.20 },            
             { output: 'alltheores:iridium_nugget', chance: 0.05 } 
+        ], 250],
+         ['minecraft:prismarine', [
+            { output: 'gtceu:prismarine_dust',            chance: 1 },            
+            { output: 'gtceu:salt_dust',                  chance: 0.6 },
+            { output: 'gtceu:magnesium_dust',             chance: 0.2 },
+            { output: 'gtceu:barium_dust',                chance: 0.2 }
         ], 250],
     ];
 

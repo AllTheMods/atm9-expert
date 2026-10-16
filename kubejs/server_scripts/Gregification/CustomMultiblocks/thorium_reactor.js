@@ -41,5 +41,23 @@ ServerEvents.recipes(allthemods => {
         .scannerResearch('gtceu:thorium_single')
         .duration(600)
         .EUt(LuV);
+
+    allthemods.recipes.gtceu.macerator('gregification:macerate_depleted_thorium_fuel')
+        .itemInputs('gtceu:depleted_single')
+        .itemOutputs('6x gtceu:depleted_thorium_fuel_dust')
+        .duration(400)
+        .EUt(IV);
+
+    allthemods.recipes.gtceu.macerator('gregification:macerate_depleted_thorium_double')
+        .itemInputs('gtceu:depleted_double')
+        .itemOutputs('12x gtceu:depleted_thorium_fuel_dust')
+        .duration(400)
+        .EUt(IV);
+
+    allthemods.recipes.gtceu.macerator('gregification:macerate_depleted_thorium_quad')
+        .itemInputs('gtceu:depleted_quad')
+        .itemOutputs('24x gtceu:depleted_thorium_fuel_dust')
+        .duration(400)
+        .EUt(IV);
 });
 
