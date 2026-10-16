@@ -25,7 +25,7 @@ ServerEvents.recipes(allthemods => {
         .itemInputs('64x #forge:dusts/prismarine')
         .inputFluids('#forge:hydrochloric_acid 40000')
         .outputFluids('gtceu:prismarine_chloride_slurry 40000')
-        .addData('ebf_temp', COIL_TEMPS.NICHROME)
+        .addData('ebf_temp', COIL_TEMPS.RTM)
         .duration(durationComplex)
         .EUt(EUComplex);
     
@@ -34,7 +34,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('16x gtceu:prismarine_nodule_residue_dust')
         .chancedOutput('4x gtceu:prismarine_nodule_residue_dust', 6000, 500)
         .outputFluids('gtceu:halogen_brine 50000')
-        .addData('ebf_temp', COIL_TEMPS.NICHROME)
+        .addData('ebf_temp', COIL_TEMPS.RTM)
         .duration(durationComplex)
         .EUt(EUComplex);
     
@@ -55,7 +55,7 @@ ServerEvents.recipes(allthemods => {
         .itemInputs('20x #forge:dusts/calcium_hydroxide')
         .itemOutputs('12x gtceu:prismarine_magnesia_cake_dust')
         .outputFluids('gtceu:limed_brine 50000')
-        .addData('ebf_temp', COIL_TEMPS.NICHROME)
+        .addData('ebf_temp', COIL_TEMPS.RTM)
         .duration(durationComplex)
         .EUt(EUComplex);
 
@@ -74,7 +74,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('6x gtceu:calcite_dust', '1x gtceu:lithium_carbonate_dust')
         .chancedOutput('2x gtceu:lithium_carbonate_dust', 4000, 1000)
         .outputFluids('gtceu:lithium_stripped_brine 45000')
-        .addData('ebf_temp', COIL_TEMPS.NICHROME)
+        .addData('ebf_temp', COIL_TEMPS.RTM)
         .duration(durationComplex)
         .EUt(EUComplex);
     

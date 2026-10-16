@@ -1914,6 +1914,31 @@ const materials = [
     new MaterialDef('mixed_rare_earth_oxide').dust().color(0xB09470).iconSet('DULL').noDecomp(),
     new MaterialDef('heavy_rare_earth_fluoride').dust().color(0xC8B8C0).iconSet('DULL').noDecomp(),
     new MaterialDef('heavy_rare_earth_metal_mix').dust().color(0x908C98).iconSet('METALLIC').noDecomp(),
+
+    //pgm line
+    new MaterialDef('pgm_calcine').dust().color(0x8C7B6A).iconSet('DULL').noDecomp().components('1x platinum, 1x palladium, 2x oxygen'),
+    new MaterialDef('pgm_chloride_liquor').fluid().color(0xC9822B).noDecomp(),
+    new MaterialDef('palladous_ammine_liquor').fluid().color(0xB5A46B).noDecomp(),
+    new MaterialDef('palladium_tetraammine_liquor').fluid().color(0xD8C18A).noDecomp(),
+    new MaterialDef('platinum_salt').dust().color(0xE0A24A).iconSet('DULL').noDecomp().components('2x ammonium_chloride, 1x platinum, 4x chlorine'),
+    new MaterialDef('pgm_residue_cake').dust().color(0x5E5448).iconSet('DULL').noDecomp(),
+    new MaterialDef('pgm_leach_residue').dust().color(0x6F6A5E).iconSet('DULL').noDecomp(),
+    new MaterialDef('ruthenium_tetroxide_solution').fluid().color(0x7A8F5A).noDecomp(),
+    new MaterialDef('rhodium_sponge').dust().color(0xA9AFB8).iconSet('METALLIC').noDecomp().components('1x rhodium'),
+    new MaterialDef('rhodium_salt').dust().color(0xC25A5A).iconSet('DULL').noDecomp().components('1x rhodium, 3x chlorine'),
+    new MaterialDef('zinc_sulfate').dust().color(0xBFC9C2).iconSet('DULL').noDecomp().components('1x zinc, 1x sulfur, 4x oxygen'),
+    new MaterialDef('iridium_dioxide').dust().color(0x2F3A4A).iconSet('DULL').noDecomp().components('1x iridium, 2x oxygen'),
+    new MaterialDef('fused_pgm_melt').dust().color(0x8A4F2E).iconSet('DULL').noDecomp(),
+    new MaterialDef('sodium_ruthenate_liquor').fluid().color(0x3F7A55).noDecomp(),
+    new MaterialDef('pgm_oxide_cake').dust().color(0x4A3F44).iconSet('DULL').noDecomp(),
+
+    //indium line
+    new MaterialDef('sulfated_zinc_slurry').fluid().color(0xB59A5E).noDecomp(),
+    new MaterialDef('zinc_indium_liquor').fluid().color(0x9DB8A8).noDecomp(),
+    new MaterialDef('lead_sulfate_cake').dust().color(0x8F8A94).iconSet('DULL').noDecomp().components('1x lead, 1x sulfur, 4x oxygen'),
+    new MaterialDef('purified_indium_liquor').fluid().color(0xA9C7C0).noDecomp(),
+    new MaterialDef('indium_loaded_extractant').fluid().color(0xC2A66A).noDecomp(),
+    new MaterialDef('zinc_raffinate').fluid().color(0xB9C2B0).noDecomp(),
     
 ];
 

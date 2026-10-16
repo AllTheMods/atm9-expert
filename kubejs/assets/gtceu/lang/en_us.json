@@ -847,7 +847,28 @@
     "material.gtceu.rare_earth_oxalate": "Rare Earth Oxalate",
     "material.gtceu.mixed_rare_earth_oxide": "Mixed Rare Earth Oxide",
     "material.gtceu.heavy_rare_earth_fluoride": "Heavy Rare Earth Fluoride",
-    "material.gtceu.heavy_rare_earth_metal_mix": "Heavy Rare Earth Metal Mix"
+    "material.gtceu.heavy_rare_earth_metal_mix": "Heavy Rare Earth Metal Mix",
+    "material.gtceu.pgm_calcine": "PGM Calcine",
+    "material.gtceu.pgm_chloride_liquor": "PGM Chloride Liquor",
+    "material.gtceu.palladous_ammine_liquor": "Palladous Ammine Liquor",
+    "material.gtceu.palladium_tetraammine_liquor": "Palladium Tetraammine Liquor",
+    "material.gtceu.platinum_salt": "Platinum Salt",
+    "material.gtceu.pgm_residue_cake": "PGM Residue Cake",
+    "material.gtceu.pgm_leach_residue": "PGM Leach Residue",
+    "material.gtceu.ruthenium_tetroxide_solution": "Ruthenium Tetroxide Solution",
+    "material.gtceu.rhodium_sponge": "Rhodium Sponge",
+    "material.gtceu.rhodium_salt": "Rhodium Salt",
+    "material.gtceu.zinc_sulfate": "Zinc Sulfate",
+    "material.gtceu.iridium_dioxide": "Iridium Dioxide",
+    "material.gtceu.fused_pgm_melt": "Fused PGM Melt",
+    "material.gtceu.sodium_ruthenate_liquor": "Sodium Ruthenate Liquor",
+    "material.gtceu.pgm_oxide_cake": "PGM Oxide Cake",
+    "material.gtceu.sulfated_zinc_slurry": "Sulfated Zinc Slurry",
+    "material.gtceu.zinc_indium_liquor": "Zinc Indium Liquor",
+    "material.gtceu.lead_sulfate_cake": "Lead Sulfate Cake",
+    "material.gtceu.purified_indium_liquor": "Purified Indium Liquor",
+    "material.gtceu.indium_loaded_extractant": "Indium Loaded Extractant",
+    "material.gtceu.zinc_raffinate": "Zinc Raffinate"
 }
 
  

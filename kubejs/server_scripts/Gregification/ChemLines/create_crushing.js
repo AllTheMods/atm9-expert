@@ -10,16 +10,16 @@ ServerEvents.recipes(allthemods => {
         {stone: 'create:ochrum', eu: EV},
         {stone: 'create:veridium', eu: EV},
         {stone: 'create:crimsite', eu: EV},
-        {stone: 'ad_astra:moon_stone', eu: IV, macerate: true, fluidA: 'allthemodium:soul_lava'},
-        {stone: 'minecraft:prismarine', eu: IV, macerate: true, fluidA: 'allthemodium:soul_lava'}
+        {stone: 'ad_astra:moon_stone', eu: IV, macerate: true, fluidA: 'allthemodium:soul_lava', fluidB: 'gtceu:water_stage_3'},
+        {stone: 'minecraft:prismarine', eu: IV, macerate: true, fluidA: 'allthemodium:soul_lava', fluidB: 'gtceu:water_stage_3'}
     ];
     stoneInputs.forEach(stone => {
-        allthemods.recipes.gtceu.rock_breaker(`gregification:rock_breaker/${stone.stone.replace(':', '_')}`)
+        let result = allthemods.recipes.gtceu.rock_breaker(`gregification:rock_breaker/${stone.stone.replace(':', '_')}`)
             .notConsumable(`${stone.stone}`)
             .itemOutputs(`${stone.stone}`)            
-            .adjacentFluidTag(stone.fluidA ?? 'minecraft:lava',stone.fluidB ?? 'minecraft:water')
+            .adjacentFluids(stone.fluidA ?? 'minecraft:lava',stone.fluidB ?? 'minecraft:water')
             .duration(120)
-            .EUt(stone.eu)
+            .EUt(stone.eu)        
         if (stone.macerate) {
             allthemods.recipes.gtceu.macerator(`gregification:macerate_${stone.stone.replace(':', '_')}`)
                 .itemInputs(`${stone.stone}`)
