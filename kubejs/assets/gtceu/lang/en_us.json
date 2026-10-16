@@ -821,7 +821,32 @@
     "material.gtceu.lithium_stripped_brine": "Lithium Stripped Brine",
     "material.gtceu.prismarine_nodule_residue": "Prismarine Nodule Residue",
     "material.gtceu.prismarine_magnesia_cake": "Prismarine Magnesia Cake",
-    "material.gtceu.lithium_carbonate": "Lithium Carbonate"
+    "material.gtceu.lithium_carbonate": "Lithium Carbonate",
+    "material.gtceu.bastnasite_sulfate_slurry": "Bastnasite Sulfate Slurry",
+    "material.gtceu.rare_earth_sulfate_liquor": "Rare Earth Sulfate Liquor",
+    "material.gtceu.heavy_rare_earth_liquor": "Heavy Rare Earth Liquor",
+    "material.gtceu.rare_earth_chloride_liquor": "Rare Earth Chloride Liquor",
+    "material.gtceu.rare_earth_extractant": "Rare Earth Extractant",
+    "material.gtceu.loaded_extractant": "Loaded Extractant",
+    "material.gtceu.lanthanum_raffinate": "Lanthanum Raffinate",
+    "material.gtceu.neodymium_praseodymium_chloride": "Neodymium Praseodymium Chloride",
+    "material.gtceu.bastnasite_gangue": "Bastnasite Gangue",
+    "material.gtceu.light_rare_earth_double_sulfate": "Light Rare Earth Double Sulfate",
+    "material.gtceu.light_rare_earth_hydroxide": "Light Rare Earth Hydroxide",
+    "material.gtceu.neodymium_praseodymium_oxide": "Neodymium Praseodymium Oxide",
+    "material.gtceu.caustic_soda_solution": "Caustic Soda Solution",
+    "material.gtceu.monazite_hydroxide_slurry": "Monazite Hydroxide Slurry",
+    "material.gtceu.phosphate_liquor": "Phosphate Liquor",
+    "material.gtceu.rare_earth_chloride_solution": "Rare Earth Chloride Solution",
+    "material.gtceu.rare_earth_nitrate_liquor": "Rare Earth Nitrate Liquor",
+    "material.gtceu.heavy_rare_earth_nitrate": "Heavy Rare Earth Nitrate",
+    "material.gtceu.monazite_loaded_extractant": "Monazite Loaded Extractant",
+    "material.gtceu.monazite_hydroxide_cake": "Monazite Hydroxide Cake",
+    "material.gtceu.thorium_cake": "Thorium Cake",
+    "material.gtceu.rare_earth_oxalate": "Rare Earth Oxalate",
+    "material.gtceu.mixed_rare_earth_oxide": "Mixed Rare Earth Oxide",
+    "material.gtceu.heavy_rare_earth_fluoride": "Heavy Rare Earth Fluoride",
+    "material.gtceu.heavy_rare_earth_metal_mix": "Heavy Rare Earth Metal Mix"
 }
 
  
