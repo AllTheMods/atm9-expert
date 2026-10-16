@@ -16,4 +16,45 @@ ServerEvents.recipes(allthemods => {
         ETRIUM: 13500,
         INFINITY: 15000
     };
+        
+    allthemods.shaped('gtceu:industrial_leacher', [
+        'TCT',
+        'OHO',
+        'PWP'
+    ], {
+        H: 'gtceu:iv_machine_hull',
+        O: '#forge:frames/draconium',
+        C: '#gtceu:circuits/iv',
+        T: '#forge:plates/tungsten_carbide',
+        P: 'gtceu:iv_electric_pump',
+        W: 'gtceu:tungsten_steel_normal_fluid_pipe'
+    }).id('gregification:controllers/industrial_leacher')
+
+    
+    allthemods.shaped('gtceu:dissolution_tank', [
+        'ECE',
+        'MHM',
+        'TPT'
+    ], {
+        H: 'gtceu:iv_machine_hull',
+        C: '#gtceu:circuits/iv',
+        E: '#forge:plates/end_steel',
+        M: 'gtceu:iv_electric_motor',
+        T: '#forge:plates/tungsten_carbide',
+        P: 'gtceu:iv_electric_pump'
+    }).id('gregification:controllers/dissolution_tank')
+
+    
+    allthemods.shaped('gtceu:acid_brewing_vat', [
+        'NCN',
+        'PHP',
+        'TOT'
+    ], {
+        H: 'gtceu:iv_machine_hull',
+        C: '#gtceu:circuits/iv',
+        N: '#forge:plates/enderium',
+        P: 'gtceu:iv_electric_pump',
+        T: '#forge:plates/tungsten_carbide',
+        O: '#forge:frames/vibranium'
+    }).id('gregification:controllers/acid_brewing_vat')
 });
