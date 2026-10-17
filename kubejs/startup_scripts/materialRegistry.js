@@ -1271,7 +1271,7 @@ const materials = [
         .blast({ temp: COIL_TEMPS.DRACONIUM_AWAKENED, eut: UV, duration: 1200 })
         .rotor({ speed: 1800, power: 600, efficiency: 18.0, durability: 41943040 }),
 
-    new MaterialDef('demonic_alloy').components('3x demon, 3x tenebrium, 3x caesium, 3x tritanium, 3x gaia').pipe().color(0x22DDCC).iconSet('METALLIC').ingot().fluid().materialsAll()
+    new MaterialDef('demonic_alloy').components('3x demon, 3x tenebrium, 3x caesium, 3x tritanium, 3x gaia').noDecomp().pipe().color(0x22DDCC).iconSet('METALLIC').ingot().fluid().materialsAll()
         .cable({ voltage: 2147483647, loss: 0 })
         .blast({ temp: COIL_TEMPS.DRACONIUM_AWAKENED, eut: UV, duration: 1200 })
         .rotor({ speed: 2000, power: 800, efficiency: 20.0, durability: 167772160 }),
@@ -1850,12 +1850,10 @@ const materials = [
 
     new MaterialDef('yttrium_aluminium_garnet').dust().color(0xE8E8F0).components('3x yttrium_oxide, 5x aluminium_oxide').formula('Y3Al5O12').noDecomp(),
         
-    new MaterialDef('neodymium_doped_yttrium_aluminium_garnet').lens().color(0xC9A8E0).components('2x yttrium_oxide, 5x aluminium_oxide, 1x neodymium_oxide').formula('NdY2Al5O12').noDecomp()
-    .unify({ block: true, gem: true, gemFlawless: true, gemExquisite: true }),
+    new MaterialDef('neodymium_doped_yttrium_aluminium_garnet').lens().color(0xC9A8E0).components('2x yttrium_oxide, 5x aluminium_oxide, 1x neodymium_oxide').formula('NdY2Al5O12').noDecomp(),
+        
+    new MaterialDef('praseodymium_doped_yttrium_aluminium_garnet').lens().color(0xC8D46A).components('2x yttrium_oxide, 5x aluminium_oxide, 1x praseodymium_oxide').formula('PrY2Al5O12').noDecomp(),
     
-    new MaterialDef('praseodymium_doped_yttrium_aluminium_garnet').lens().color(0xC8D46A).components('2x yttrium_oxide, 5x aluminium_oxide, 1x praseodymium_oxide').formula('PrY2Al5O12').noDecomp()
-    .unify({ block: true, gem: true, gemFlawless: true, gemExquisite: true }),
-
     new MaterialDef('terbium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().blastCoil(COIL_TEMPS.NAQUADAH),
 
     new MaterialDef('scandium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),
