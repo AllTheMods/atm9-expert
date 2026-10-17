@@ -1,0 +1,51 @@
+{
+    "conditions": [
+        { "modid": "eidolon", "type": "forge:mod_loaded" },
+        { "modid": "botania", "type": "forge:mod_loaded" }
+    ],
+    "entity": "eidolon:wraith",
+    "variants": [],
+    "name": "entity.eidolon.wraith",
+    "name_color": "#76aab1",
+    "gui_scale": 1.0,
+    "gui_x_offset": 0.0,
+    "gui_y_offset": 0.0,
+    "gui_z_offset": 0.0,
+    "sim_cost": 256,
+    "input": {
+        "item": "hostilenetworks:prediction_matrix",
+        "count": 1
+    },
+    "base_drop": {
+        "item": "hostilenetworks:nether_prediction",
+        "count": 1
+    },
+    "trivia": "hostilenetworks.trivia.wraith",
+    "fabricator_drops": [
+        {
+            "item": "eidolon:tattered_cloth",
+            "count": 4
+        },
+        {
+            "item": "eidolon:wraith_heart",
+            "count": 1
+        },
+        {
+            "optional": true,
+            "item": "botania:blacker_lotus",
+            "count": 1
+        }
+    ],
+    "tier_data": [
+        6,
+        54,
+        354,
+        1254
+    ],
+    "data_per_kill": [
+        1,
+        4,
+        10,
+        18
+    ]
+}

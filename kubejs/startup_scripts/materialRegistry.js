@@ -1197,7 +1197,7 @@ const materials = [
         //.cable({ voltage: 128, loss: 1 })
         .unify({ ingot: 'forbidden_arcanus:deorum_ingot', block: 'forbidden_arcanus:deorum_block', nugget: 'forbidden_arcanus:deorum_nugget' }),
 
-    new MaterialDef('ferrognetic').components('1x garmonbozia, 1x dark_steel, 1x pink_slime, 1x alfsteel, 1x hellforged, 1x iesnium').pipe().dust()
+    new MaterialDef('ferrognetic').components('1x garmonbozia, 1x dark_steel, 1x pink_slime, 1x alfsteel, 1x hellforged, 1x iesnium').pipe().dust().noDecomp()
         .color(0xD1D1D1).iconSet('METALLIC').ingot().fluid().materialsAll().cable({ voltage: 131072, loss: 1 })
         .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 })
         .unify({ dust: 'forbidden_arcanus:ferrognetic_mixture' }),

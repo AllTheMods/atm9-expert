@@ -10,13 +10,10 @@
 	#Global maximum heat level for all heat-related devices. Default 2000.0
 	#Range: 100.0 ~ 10000.0
 	max_heat = 2000.0
-	#Global maximum radiation level for all nuclear-related devices & players. Default 0.0
-	#Range: 0.0 ~ 10000.0
-	max_radiation = 0.0
 
 #Multiblock settings shared by every machine built on Immersive Convergence, Immersive Engineering's and Immersive Petroleum's included
 [multiblocks]
 	#How a machine comes apart. PROCESS_QUEUE breaks it down block by block over a few ticks and drops all its materials at the broken block; TEMPLATE_BLOCKS instantly reverts it to its placed blocks. Sneaking while breaking always uses TEMPLATE_BLOCKS.
 	#Allowed Values: PROCESS_QUEUE, TEMPLATE_BLOCKS
-	disassemblyMode = "PROCESS_QUEUE"
+	disassembly_mode = "PROCESS_QUEUE"
 

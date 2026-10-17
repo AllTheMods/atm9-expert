@@ -1,15 +1,15 @@
 
 #Render options
 [render]
-	#This modifies the distance a special multiblock renderer is visible from (Default: 2.5).
-	#Range: 0.0 ~ 1.7976931348623157E308
-	multiblockSpecialRenderDistanceModifier = 2.5
 	#This controls if the animations and special client rendering applies to the Gas Turbine (Default: true).
 	gas_turbine_renderer = true
 	#This controls if the animations and special client rendering applies to the Steam Turbine (Default: true).
 	steam_turbine_renderer = true
 	#This controls if the animations and special client rendering applies to the Solar Reflector (Default: true).
 	solar_reflector_renderer = true
+	#This modifies the distance a special multiblock renderer is visible from (Default: 2.5).
+	#Range: 0.0 ~ 1.7976931348623157E308
+	multiblock_special_render_distance_modifier = 2.5
 
 #Solar Reflector options
 [solar_reflector]
