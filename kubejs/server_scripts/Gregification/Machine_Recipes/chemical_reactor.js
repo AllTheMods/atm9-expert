@@ -240,12 +240,12 @@ ServerEvents.recipes(allthemods => {
     
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/pr_yag_dope')
         .itemInputs('#forge:dusts/yttrium_aluminium_garnet', '#forge:dusts/praseodymium_oxide')
-        .itemOutputs('gtceu:praseodymium_doped_yttrium_aluminium_garnet_dust', 'gtceu:yttrium_oxide')
+        .itemOutputs('gtceu:praseodymium_doped_yttrium_aluminium_garnet_dust', 'gtceu:yttrium_oxide_dust')
         .EUt(LuV).duration(300);
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/nd_yag_dope')
         .itemInputs('#forge:dusts/yttrium_aluminium_garnet', '#forge:dusts/neodymium_oxide')
-        .itemOutputs('gtceu:neodymium_doped_yttrium_aluminium_garnet_dust', 'gtceu:yttrium_oxide')
+        .itemOutputs('gtceu:neodymium_doped_yttrium_aluminium_garnet_dust', 'gtceu:yttrium_oxide_dust')
         .EUt(ZPM).duration(300);    
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/aluminium_oxide_synthesis')

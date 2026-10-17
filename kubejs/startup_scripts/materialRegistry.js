@@ -1825,11 +1825,16 @@ const materials = [
 
     new MaterialDef('dysprosium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().blastCoil(COIL_TEMPS.NAQUADAH),
 
-    new MaterialDef('neodymium_praseodymium').dust().ingot().color(0x8F8C7A).iconSet('METALLIC').components('3x neodymium, 1x praseodymium').formula('Nd3Pr'),
+    new MaterialDef('neodymium_praseodymium').dust().ingot().color(0x8F8C7A).iconSet('METALLIC').components('3x neodymium, 1x praseodymium').formula('Nd3Pr').noDecomp(),
 
-    new MaterialDef('neodymium_dysprosium').dust().ingot().magnetic().color(0x5A5A66).iconSet('METALLIC').components('1x neodymium_praseodymium, 1x dysprosium, 14x iron, 1x boron').formula('NdPrDyFe14B').blastCoil(COIL_TEMPS.NAQUADAH).materialsBasic(),
+    new MaterialDef('neodymium_dysprosium').dust().ingot().magnetic().color(0x5A5A66).iconSet('METALLIC').noDecomp().components('1x dysprosium', '1x neodymium_praseodymium_iron_boron').formula('NdPrDyFe14B').materialsBasic()
+    .blast({ temp: COIL_TEMPS.NAQUADAH, eut: LuV, duration: 1200 }),
 
-    new MaterialDef('neodymium_terbium').dust().ingot().magnetic().color(0x66605A).iconSet('METALLIC').components('1x neodymium_praseodymium, 1x terbium, 14x iron, 1x boron').formula('NdPrTbFe14B').blastCoil(COIL_TEMPS.TRINIUM).materialsBasic(),
+    new MaterialDef('neodymium_terbium').dust().ingot().magnetic().color(0x66605A).iconSet('METALLIC').noDecomp().components('1x terbium', '1x neodymium_praseodymium_iron_boron').formula('NdPrTbFe14B').materialsBasic()
+    .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
+
+    new MaterialDef('neodymium_praseodymium_iron_boron').noSmelting().dust().ingot().color(0x4A4A52).iconSet('METALLIC').noDecomp().components('1x neodymium_praseodymium, 14x iron, 1x boron').formula('NdPrFe14B')
+    .blast({ temp: COIL_TEMPS.NAQUADAH, eut: LuV, duration: 1200 }),
 
     new MaterialDef('promethium').modify().dust().fluid(),
     

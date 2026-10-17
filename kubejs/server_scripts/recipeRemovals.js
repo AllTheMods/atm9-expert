@@ -86,6 +86,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.remove(beeRemovals);
 
     const powahRemoves = [
+        'gtceu:lathe/lathe_neodymium_doped_yttrium_aluminium_garnet_plate_to_lens', 'gtceu:lathe/lathe_praseodymium_doped_yttrium_aluminium_garnet_plate_to_lens',
         'thermal_extra:machine/crystallizer/ancient_dust',
         'thermal_extra:soul_infused_dust', 'thermal_extra:shellite_dust', 'thermal_extra:twinite_dust', 'thermal_extra:dragonsteel_dust', 'thermal_extra:abyssal_dust',
         'powah:crafting/energy_cell_starter', 'powah:crafting/energy_cell_basic', 'powah:crafting/energy_cell_hardened',

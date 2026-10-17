@@ -871,9 +871,14 @@
     "material.gtceu.zinc_raffinate": "Zinc Raffinate",
     "material.gtceu.yttrium_aluminium_garnet": "Yttrium Aluminium Garnet (YAG Precursor)",
     "material.gtceu.neodymium_doped_yttrium_aluminium_garnet": "Neodymium Doped Yttrium Aluminium Garnet (Nd:YAG)",
+    "material.gtceu.praseodymium_doped_yttrium_aluminium_garnet": "Praseodymium Doped Yttrium Aluminium Garnet (Pr:YAG)",
     "material.gtceu.neodymium_praseodymium": "Neodymium Praseodymium",
     "material.gtceu.neodymium_dysprosium": "Neodymium Dysprosium",
     "material.gtceu.neodymium_terbium": "Neodymium Terbium",
     "material.gtceu.aluminium_oxide": "Aluminium Oxide",
-    "material.gtceu.neodymium_oxide": "Neodymium Oxide"
+    "material.gtceu.neodymium_oxide": "Neodymium Oxide",
+    "material.gtceu.neodymium_praseodymium_iron_boron": "Neodymium Praseodymium Iron Boron (Standard NdFeB)",
+    "material.gtceu.magnetic_neodymium_dysprosium": "Magnetic Neodymium Dysprosium",
+    "material.gtceu.magnetic_neodymium_terbium": "Magnetic Neodymium Terbium"
+    
 }

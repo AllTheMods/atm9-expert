@@ -6,25 +6,26 @@ const TIME = {
     very_long: 1200
 };
 
-const COIL_TEMPS = {
-    CUPRONICKEL: 1800,
-    KANTHAL: 2700,
-    NICHROME: 3600,
-    RTM: 4500,
-    HSS_G: 5400,
-    NAQUADAH: 7200,
-    TRINIUM: 9000,
-    TRITANIUM: 10800,
-    DRACONIUM: 11200,
-    DRACONIUM_AWAKENED: 12800,
-    ETRIUM: 13500,
-    INFINITY: 15000
-};
 
 const $ResearchManager = Java.loadClass('com.gregtechceu.gtceu.utils.ResearchManager');
 
 ServerEvents.recipes(allthemods => {
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
+    const COIL_TEMPS = {
+        CUPRONICKEL: 1800,
+        KANTHAL: 2700,
+        NICHROME: 3600,
+        RTM: 4500,
+        HSS_G: 5400,
+        NAQUADAH: 7200,
+        TRINIUM: 9000,
+        TRITANIUM: 10800,
+        DRACONIUM: 11200,
+        DRACONIUM_AWAKENED: 12800,
+        ETRIUM: 13500,
+        INFINITY: 15000
+    };
+
     let t = GTRecipeTypes.get('prototype_assembler');
     if (t) {
         t.setHasResearchSlot(true);
@@ -109,6 +110,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/yag_dope')
         .itemInputs('3x #forge:dusts/yttrium_oxide', '5x #forge:dusts/aluminium_oxide')        
         .itemOutputs('gtceu:yttrium_aluminium_garnet_boule')
+        .inputFluids('#forge:oxygen 54000','#forge:aluminium 2592', '#forge:yttrium 2592')
         .addData('ebf_temp', COIL_TEMPS.NAQUADAH)
         .EUt(LuV).duration(1200);
 

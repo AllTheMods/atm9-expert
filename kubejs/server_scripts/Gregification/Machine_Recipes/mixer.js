@@ -39,8 +39,8 @@ ServerEvents.recipes(allthemods => {
     addMixer(['2x #forge:dusts/sculk', '5x #forge:dusts/enderium', '2x #forge:dusts/nether_star', '3x #forge:dusts/redstone'], '12x fluxnetworks:flux_dust', HV, 400)
 
 
-    addMixer(
-        ['4x #forge:dusts/titanium_carbonitride', '2x #forge:dusts/nickel', '1x #forge:dusts/molybdenum'],'7x gtceu:cermet_blend_dust',EV, 600)
+    addMixer(['4x #forge:dusts/titanium_carbonitride', '2x #forge:dusts/nickel', '1x #forge:dusts/molybdenum'],'7x gtceu:cermet_blend_dust',EV, 600)
+    addMixer(['3x #forge:dusts/neodymium', '1x #forge:dusts/praseodymium'], 'gtceu:neodymium_praseodymium_dust', LuV, 600);
 
     //zirconium_lattice    
     addMixer(

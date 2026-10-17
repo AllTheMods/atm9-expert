@@ -2,7 +2,22 @@
 // priority: -1000
 ServerEvents.recipes(allthemods => {
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
-    
+    const COIL_TEMPS = {
+        CUPRONICKEL: 1800,
+        KANTHAL: 2700,
+        NICHROME: 3600,
+        RTM: 4500,
+        HSS_G: 5400,
+        NAQUADAH: 7200,
+        TRINIUM: 9000,
+        TRITANIUM: 10800,
+        DRACONIUM: 11200,
+        DRACONIUM_AWAKENED: 12800,
+        ETRIUM: 13500,
+        INFINITY: 15000
+    };
+
+
     function nextTier(base) {
         let VA_JS = Array.from(GTValues.VA);
         let next = VA_JS[VA_JS.indexOf(base) + 1];
@@ -24,9 +39,17 @@ ServerEvents.recipes(allthemods => {
         if (fluidOut) { recipe.outputFluids(fluidOut) }
     };
 
-
-
     addEBF('#forge:dusts/bismuth_strontium_calcium_copper_oxide', '#forge:terephthalic_acid 1000', 'gtceu:hot_bismuth_strontium_calcium_copper_oxide_ingot', null, 4500, 2400, IV);
+    addEBF(['#forge:dusts/neodymium_praseodymium', '14x #forge:dusts/iron', '1x #forge:dusts/boron'], 'industrialforegoing:ether_gas 1000', 'gtceu:hot_neodymium_praseodymium_iron_boron_ingot', null, COIL_TEMPS.NAQUADAH, 2400, LuV);
+
+    allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/neodymium_praseodymium_iron_boron_ingot`)
+        .itemInputs('gtceu:hot_neodymium_praseodymium_iron_boron_ingot')
+        .itemOutputs('gtceu:neodymium_praseodymium_iron_boron_ingot')
+        .inputFluids('#forge:thermal_coolant 1000')
+        .duration(600)
+        .EUt(LuV);
+
+
 
     const stage4cooling = ['gtceu:hot_allthemodium_ingot', 'gtceu:hot_vibranium_ingot', 'gtceu:hot_unobtainium_ingot']
     stage4cooling.forEach(item => {
@@ -78,15 +101,15 @@ ServerEvents.recipes(allthemods => {
         .inputFluids('#forge:thermal_coolant 1000')
         .duration(500)
         .EUt(IV);
-        
-    
+
+
     const thermalExtra = [
-        {name :'soul_infused', temp: 2700, EUt: HV, duration: 800}, 
-        {name :'shellite', temp: 3600, EUt: EV, duration: 1200}, 
-        {name :'twinite', temp: 4500, EUt:  IV, duration: 1600}, 
-        {name :'dragonsteel', temp: 5400, EUt: LuV, duration: 2000}, 
-        {name :'abyssal', temp: 7200, EUt: ZPM, duration: 2400}];
-    
+        { name: 'soul_infused', temp: 2700, EUt: HV, duration: 800 },
+        { name: 'shellite', temp: 3600, EUt: EV, duration: 1200 },
+        { name: 'twinite', temp: 4500, EUt: IV, duration: 1600 },
+        { name: 'dragonsteel', temp: 5400, EUt: LuV, duration: 2000 },
+        { name: 'abyssal', temp: 7200, EUt: ZPM, duration: 2400 }];
+
 
     thermalExtra.forEach((material, index) => {
         addEBF(
@@ -236,8 +259,5 @@ ServerEvents.recipes(allthemods => {
         2,
         'stabilized_clathrate_2'
     );
-
-
-
 
 });
