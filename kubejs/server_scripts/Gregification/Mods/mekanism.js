@@ -26,6 +26,33 @@ ServerEvents.recipes(allthemods => {
         .duration(200)
         .EUt(HV);
 
+    
+    addAssembler(
+        [
+            'mekanism:steel_casing',
+            '3x #forge:plates/alloy_reinforced',
+            '#forge:lenses/praseodymium_doped_yttrium_aluminium_garnet',
+            '#gtceu:circuits/luv'
+        ],
+        '#forge:polyimide 144',
+        'mekanism:laser',
+        LuV,
+        400
+    )
+
+    addAssembler(
+        [
+            'mekanism:steel_casing',
+            '#forge:frames/strontium',
+            '4x #gtceu:wires/bismuth_strontium_calcium_copper_oxide',
+            '3x #forge:plates/alloy_atomic',            
+            'mekanism:laser'
+        ],
+        '#forge:polyimide 288',
+        'mekanism:laser_amplifier',
+        LuV,
+        400
+    )
 
     //module base
     addAssembler(

@@ -37,7 +37,8 @@ ServerEvents.recipes(allthemods => {
 			'gtceu:ev_machine_casing',           
 			'4x #forge:plates/titanium',         
 			'2x gtceu:ev_electric_motor',
-			'gtceu:ev_field_generator'	
+			'gtceu:ev_field_generator',
+			'gtceu:betavoltaic_microcell'
 		],
 		'gtceu:polytetrafluoroethylene 144',     
 		'modularrouters:modular_router',

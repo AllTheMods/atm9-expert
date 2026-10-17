@@ -1825,7 +1825,7 @@ const materials = [
 
     new MaterialDef('dysprosium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().blastCoil(COIL_TEMPS.NAQUADAH),
 
-    new MaterialDef('neodymium_praseodymium').dust().ingot().color(0x8F8C7A).iconSet('METALLIC').components('3x neodymium, 1x praseodymium').formula('Nd3Pr').noDecomp(),
+    new MaterialDef('neodymium_praseodymium').dust().color(0x8F8C7A).iconSet('METALLIC').components('3x neodymium, 1x praseodymium').formula('Nd3Pr').noDecomp(),
 
     new MaterialDef('neodymium_dysprosium').dust().ingot().magnetic().color(0x5A5A66).iconSet('METALLIC').noDecomp().components('1x dysprosium', '1x neodymium_praseodymium_iron_boron').formula('NdPrDyFe14B').materialsBasic()
     .blast({ temp: COIL_TEMPS.NAQUADAH, eut: LuV, duration: 1200 }),

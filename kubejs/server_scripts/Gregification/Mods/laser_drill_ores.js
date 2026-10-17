@@ -1,5 +1,40 @@
 ServerEvents.recipes(event => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+    //need to check these make sure they work
+        // ---- Rare earths ----
+    event.recipes.industrialforegoing.laser_drill_ore(
+        'gtceu:raw_bastnasite',
+        'gtceu:neodymium_doped_yttrium_aluminium_garnet_lens',
+        [
+            {
+                whitelist: {},
+                blacklist: {
+                    type: 'minecraft:worldgen/biome',
+                    values: ['minecraft:the_end', 'minecraft:the_void', 'minecraft:small_end_islands', 'minecraft:end_barrens', 'minecraft:end_highlands', 'minecraft:end_midlands']
+                },
+                depth_min: 0,
+                depth_max: 120,
+                weight: 6
+            },
+        ]
+    )
+
+    event.recipes.industrialforegoing.laser_drill_ore(
+        'gtceu:raw_monazite',
+        'gtceu:praseodymium_doped_yttrium_aluminium_garnet_lens',
+        [
+            {
+                whitelist: {},
+                blacklist: {
+                    type: 'minecraft:worldgen/biome',
+                    values: ['minecraft:the_end', 'minecraft:the_void', 'minecraft:small_end_islands', 'minecraft:end_barrens', 'minecraft:end_highlands', 'minecraft:end_midlands']
+                },
+                depth_min: 0,
+                depth_max: 120,
+                weight: 6
+            },
+        ]
+    )
     // ---- Moon ----
     event.recipes.industrialforegoing.laser_drill_ore(
         'gtceu:raw_clausthalite',

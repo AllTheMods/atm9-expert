@@ -1,18 +1,35 @@
 ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
-    const addCircuitAssembler = (itemsIn, fluidIn, itemsOut, eu, duration) => {
+    const addCircuitAssembler = (itemsIn, fluidIn, itemsOut, eu, duration, clean) => {
         const outputID = itemsOut.replace(/[^a-z0-9]/gi, '_');
 
         let recipe = allthemods.recipes.gtceu.circuit_assembler(`gregification:circuit_assembler/${outputID}`)
             .itemInputs(itemsIn)
             .itemOutputs(itemsOut)
-            .duration(duration)
+            .duration(duration)            
             .EUt(eu);
 
         if (fluidIn) {
             recipe.inputFluids(fluidIn);
         }
+        if (clean) {
+            recipe.cleanroom(clean);
+        }
     };
+
+    addCircuitAssembler(
+        [
+            'gtceu:advanced_soc_wafer',
+            '4x #forge:dusts/promethium',
+            '8x #forge:foils/draconium_awakened',
+            '8x #gtceu:wires/single/bismuth_strontium_calcium_copper_oxide'
+        ],
+        '#forge:polyimide 288',
+        '8x gtceu:betavoltaic_microcell',
+        IV,
+        240,
+        CleanroomType.CLEANROOM
+    )
 
     //soc circuits
     addCircuitAssembler(

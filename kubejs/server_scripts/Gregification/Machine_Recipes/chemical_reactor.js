@@ -236,8 +236,6 @@ ServerEvents.recipes(allthemods => {
     addChemical('gtceu:crystallized_seed', 'gtceu:refined_seed_oil 1000', null, 'gtceu:crystallized_oil 1000', EV, 600, 'refined_seed_oil')
     addChemical('gtceu:empowered_seed', 'gtceu:crystallized_oil 1000', null, 'gtceu:empowered_oil 1000', EV, 600, 'empowered_seed_oil')
 
-
-    
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/pr_yag_dope')
         .itemInputs('#forge:dusts/yttrium_aluminium_garnet', '#forge:dusts/praseodymium_oxide')
         .itemOutputs('gtceu:praseodymium_doped_yttrium_aluminium_garnet_dust', 'gtceu:yttrium_oxide_dust')
@@ -251,19 +249,19 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/aluminium_oxide_synthesis')
         .itemInputs('2x #forge:dusts/aluminium')
         .inputFluids('#forge:oxygen 3000')
-        .itemOutputs('gtceu:aluminium_oxide_dust')
+        .itemOutputs('5x gtceu:aluminium_oxide_dust')
         .EUt(IV).duration(200);
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/neodymium_oxide_synthesis')
         .itemInputs('2x #forge:dusts/neodymium')
         .inputFluids('#forge:oxygen 3000')
-        .itemOutputs('gtceu:neodymium_oxide_dust')
+        .itemOutputs('5x gtceu:neodymium_oxide_dust')
         .EUt(IV).duration(200);
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/praseodymium_oxide_synthesis')
         .itemInputs('2x #forge:dusts/praseodymium')
         .inputFluids('#forge:oxygen 3000')
-        .itemOutputs('gtceu:praseodymium_oxide_dust')
+        .itemOutputs('5x gtceu:praseodymium_oxide_dust')
         .EUt(IV).duration(200);
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/ancient_dust')

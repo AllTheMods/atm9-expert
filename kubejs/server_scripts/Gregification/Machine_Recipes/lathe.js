@@ -1,0 +1,13 @@
+ServerEvents.recipes(allthemods => {
+    const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+
+    allthemods.recipes.gtceu.lathe('gregification:lathe/praseodymium_doped_yttrium_aluminium_garnet')
+        .itemInputs('gtceu:praseodymium_doped_yttrium_aluminium_garnet_boule')
+        .itemOutputs('gtceu:praseodymium_doped_yttrium_aluminium_garnet_lens', 'gtceu:praseodymium_doped_yttrium_aluminium_garnet_dust')
+        .EUt(LuV).duration(600);
+        
+    allthemods.recipes.gtceu.lathe('gregification:lathe/neodymium_doped_yttrium_aluminium_garnet')
+        .itemInputs('gtceu:neodymium_doped_yttrium_aluminium_garnet_boule')
+        .itemOutputs('gtceu:neodymium_doped_yttrium_aluminium_garnet_lens', 'gtceu:neodymium_doped_yttrium_aluminium_garnet_dust')
+        .EUt(ZPM).duration(600);    
+});

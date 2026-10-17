@@ -107,7 +107,7 @@ ServerEvents.recipes(allthemods => {
         );
     });
 
-    allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/yag_dope')
+    allthemods.recipes.gtceu.crystal_growth_chamber('gregification:chemical_reactor/yag_dope')
         .itemInputs('3x #forge:dusts/yttrium_oxide', '5x #forge:dusts/aluminium_oxide')        
         .itemOutputs('gtceu:yttrium_aluminium_garnet_boule')
         .inputFluids('#forge:oxygen 54000','#forge:aluminium 2592', '#forge:yttrium 2592')
@@ -612,9 +612,9 @@ ServerEvents.recipes(allthemods => {
             '6x #forge:double_plates/cadmium_selenide',
             '16x #gtceu:wires/quadruple/cadmium_copper',
             'laserio:laser_connector_advanced',
-            '64x gtceu:germanium_diode'
+            'gtceu:betavoltaic_microcell'
         ],
-        ['#forge:polybenzimidazole 1000', 'industrialforegoing:ether_gas 1000'],
+        ['#forge:polybenzimidazole 1000', '#forge:bromine 1000'],
         6000,
         ZPM, 8, null, 0
     );

@@ -156,8 +156,8 @@ ServerEvents.recipes(allthemods => {
         {
             P: "#forge:plates/lumium",
             C: "laserio:logic_chip",
-            F: "gtceu:iv_field_generator",
-            A: "gtceu:iv_machine_hull",
+            F: "gtceu:hv_field_generator",
+            A: "gtceu:hv_machine_hull",
             G: "gtceu:laminated_glass"            
         }
     )
@@ -173,7 +173,7 @@ ServerEvents.recipes(allthemods => {
             L: "laserio:laser_connector",
             P: "#forge:plates/enderium",
             W: "#forge:foils/cadmium_selenide",
-            D: "#forge:lenses/diamond"
+            D: "#forge:lenses/praseodymium_doped_yttrium_aluminium_garnet"
             
         }
     )
@@ -200,7 +200,7 @@ ServerEvents.recipes(allthemods => {
         ],
         {
             P: "#forge:plates/vibrant_alloy",                        
-            A: "#gtceu:circuits/ev",
+            A: "#gtceu:circuits/mv",
             G: "#forge:dusts/redstone",
             B: "#forge:plates/plastic"
         }

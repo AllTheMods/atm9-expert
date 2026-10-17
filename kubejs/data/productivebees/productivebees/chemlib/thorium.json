@@ -1,0 +1,8 @@
+{
+  "primaryColor": "#e6e6ea",
+  "particleColor": "#ffffff",
+  "flowerTag": "forge:storage_blocks/palladium",
+  "beeTexture": "productivebees:textures/entity/bee/thorium/bee",
+  "breedingItem": "gtceu:thorium_block",
+  "conditions": [{ "modid": "chemlib", "type": "forge:mod_loaded" }]
+}

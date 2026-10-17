@@ -222,7 +222,7 @@ ServerEvents.recipes(allthemods => {
         'SRS'
     ], {
         E: 'gtceu:ev_emitter',
-        R: 'gtceu:ev_sensor',
+        R: 'gtceu:betavoltaic_microcell',
         P: '#forge:plates/vibrant_alloy',
         L: '#gtceu:circuits/ev',
         N: 'gtceu:network_casing',
