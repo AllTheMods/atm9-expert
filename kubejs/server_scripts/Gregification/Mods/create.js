@@ -72,6 +72,6 @@ ServerEvents.recipes(allthemods => {
         .duration(300)
         .EUt(MV);
     
-    allthemods.shapeless('create:andesite_alloy', ['4x #forge:dusts/andesite', '4x #forge:dusts/zinc']).id('gregification:andesite_alloy');    
+    allthemods.shapeless('gtceu:andesite_alloy_dust', ['4x #forge:dusts/andesite', '4x #forge:dusts/zinc']).id('gregification:andesite_alloy_dust');    
 
 })

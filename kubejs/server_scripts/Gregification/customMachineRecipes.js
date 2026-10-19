@@ -700,7 +700,7 @@ ServerEvents.recipes(allthemods => {
         { id: 'oil_processing_plant', tier: 'zpm', fluid: true, extra: ['16x gtceu:rubidium_foil', '4x gtceu:laminated_glass'], extraFluids: ['#forge:polybenzimidazole 2000', '#forge:selenium 2000'] },
  
         // UV tier -> assembly_line (2 extra fluids)
-        { id: 'cryogenic_unit', tier: 'uv', fluid: true, extra: ['2x #forge:rotors/strontium', '4x ad_astra:ice_shard', '4x #forge:gears/gadolinium'], extraFluids: ['#forge:blue_ice 16000', '#forge:tellurium 2000'] },
+        { id: 'cryogenic_unit', tier: 'uv', fluid: true, extra: ['2x #forge:rotors/strontium', '4x ad_astra:ice_shard', '4x #forge:gears/gadolinium'], extraFluids: ['#forge:blue_ice 16000', '#forge:tellurium 2000'] },        
  
         // UHV tier -> assembly_line (2 extra fluids)
         { id: 'baryonic_separator', tier: 'uhv', fluid: false, extra: ['4x gtceu:superconducting_coil', '4x #forge:plates/rubidium'], extraFluids: ['#forge:naquadria 2000', '#forge:rubidium 2000'] },
