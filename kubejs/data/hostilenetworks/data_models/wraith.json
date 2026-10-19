@@ -27,14 +27,15 @@
             "count": 4
         },
         {
-            "item": "eidolon:wraith_heart",
-            "count": 1
-        },
-        {
             "optional": true,
             "item": "botania:blacker_lotus",
             "count": 1
+        },
+        {
+            "item": "eidolon:wraith_heart",
+            "count": 1
         }
+        
     ],
     "tier_data": [
         6,

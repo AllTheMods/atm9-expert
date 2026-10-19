@@ -64,7 +64,7 @@ ServerEvents.recipes(allthemods => {
         }).id(`bloodmagic:blood_rune_${rID}_2`);
     });
     // Rune casing 
-    const bloodAltar = (event, input, output, altarTier, syphon, consumption, drain) => {
+    const bloodAltar = (input, output, altarTier, syphon, consumption, drain) => {
         allthemods.custom({
             "type": "bloodmagic:altar",
             "input": { "item": input },
@@ -73,7 +73,7 @@ ServerEvents.recipes(allthemods => {
             "altarSyphon": syphon,
             "consumptionRate": consumption,
             "drainRate": drain
-        }).id(`allthemods:bloodmagic/altar/${output.replace(':', '/')}`);
+        }).id(`allthemods:bloodmagic/altar/${output.replace(':', '_')}`);
     };
     const addAssembler = (itemsIn, fluidIn, itemsOut, eu, duration, program, rID) => {
 
@@ -116,7 +116,8 @@ ServerEvents.recipes(allthemods => {
     });
     
     
-    bloodAltar(allthemods, 'gtceu:blank_slate_casing', 'bloodmagic:blankslate', 0, 1000, 5, 5)
+    bloodAltar( 'gtceu:blank_slate_casing', 'bloodmagic:blankslate', 0, 1000, 25, 25)
+    bloodAltar( 'gtceu:hot_blazing_soularium_ingot', 'enderio:soularium_ingot', 1, 10000, 25, 25)
 
     let recipe;
     recipe = allthemods.recipes.gtceu.alchemical_workbench('gregification:alchemical_workbench/gilded_blackstone')

@@ -20,6 +20,12 @@
         .duration(1200)
         .EUt(IV)
 
+    allthemods.recipes.gtceu.liquifier('blacker_lotus_liquification')
+        .itemInputs('botania:blacker_lotus')        
+        .outputFluids('gtceu:mana_essence 100000')
+        .duration(1200)
+        .EUt(IV)
+
     allthemods.recipes.gtceu.liquifier('source_gem_block_to_source')
         .itemInputs('#forge:storage_blocks/source')
         .inputFluids('gtceu:distilled_water 2000')

@@ -1153,6 +1153,11 @@ const materials = [
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
         .unify({ ingot: 'enderio:soularium_ingot', block: 'enderio:soularium_block', nugget: 'enderio:soularium_nugget' }),
 
+    new MaterialDef('blazing_soularium').color(0x56402C).iconSet('METALLIC').ingot()
+        .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
+        .unify({ ingot: true, dust: true, block: true, nugget: true, dustSmall: true, dustTiny: true  }),
+        
+
     new MaterialDef('dark_steel').components('1x steel, 1x carbon, 1x obsidian').color(0x3D3D3D).iconSet('METALLIC').ingot().fluid().materialsAll()
         .cable({ voltage: 512, loss: 2 })
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
