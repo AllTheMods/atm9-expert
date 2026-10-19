@@ -1,5 +1,8 @@
 {
   "__comment": "Instructions: https://blakesmods.com/docs/cucumber/tags-config",
   "forge:dusts/saltpeter": "railcraft:saltpeter_dust",
-  "forge:dusts/niter": "railcraft:saltpeter_dust"
+  "forge:dusts/niter": "railcraft:saltpeter_dust",
+  "forge:ingots/chrome": "null",
+  "forge:ingots/titanium": "null",
+  "forge:ingots/mithril": "null"
 }

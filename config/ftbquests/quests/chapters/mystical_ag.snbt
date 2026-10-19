@@ -3829,7 +3829,7 @@
 			}]
 			tasks: [{
 				id: "40E4F2B59C8ADF60"
-				item: "kubejs:magical_soil"
+				item: "gtceu:magical_soil"
 				type: "item"
 			}]
 			title: "{atm9.quest.ma.magic}"

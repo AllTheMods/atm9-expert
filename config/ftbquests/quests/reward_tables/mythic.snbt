@@ -9,7 +9,7 @@
 		{ item: "mysticalagriculture:allthemodium_seeds", weight: 3.0f }
 		{ item: "mysticalagriculture:vibranium_seeds", weight: 3.0f }
 		{ item: "mysticalagriculture:unobtainium_seeds", weight: 3.0f }
-		{ item: "kubejs:magical_soil", random_bonus: 2, weight: 3.0f }
+		{ item: "gtceu:magical_soil", random_bonus: 2, weight: 3.0f }
 		{ item: "allthecompressed:nether_star_block_2x" }
 		{ item: "allthemodium:unobtainium_allthemodium_alloy_block", random_bonus: 1, weight: 3.0f }
 		{ item: "mekanism:ultimate_induction_cell", weight: 2.0f }

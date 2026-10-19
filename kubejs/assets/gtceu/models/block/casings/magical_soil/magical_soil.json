@@ -1,0 +1,9 @@
+   {
+     "parent": "minecraft:block/cube_bottom_top",
+     "textures": {
+       "top": "gtceu:block/casings/magical_soil/magical_soil_top",
+       "side": "gtceu:block/casings/magical_soil/magical_soil_side",
+       "bottom": "gtceu:block/casings/magical_soil/magical_soil_side",
+       "particle": "gtceu:block/casings/magical_soil/magical_soil_side"
+     }
+   }

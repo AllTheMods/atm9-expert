@@ -1905,6 +1905,9 @@ const materials = [
 
     new MaterialDef('kevlar').dust().color(0x76683C).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE),
 
+    new MaterialDef('andesite_alloy').dust().ingot().color(0x7d9284).components('2x andesite, 2x zinc').iconSet('SHINY').flags(GTMaterialFlags.GENERATE_PLATE)
+        .unify({ plate: 'create:andesite_alloy'}),        
+
     //new chemlines
 
     //bromine

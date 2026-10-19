@@ -223,7 +223,7 @@ ServerEvents.recipes(allthemods => {
         let inp = 'mysticalagriculture:' + base + '_seeds'
         let crux = ''
         if (base.includes('allthemodium') || base.includes('unobtainium') || base.includes('vibranium')) {
-            crux = 'kubejs:magical_soil'
+            crux = 'gtceu:magical_soil'
         } else {
             crux = 'mysticalagradditions:' + base + '_crux'
         }

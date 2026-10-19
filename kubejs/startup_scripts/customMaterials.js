@@ -34,7 +34,7 @@ StartupEvents.registry('block', allthemods => {
 
     ]
 
-    let block = allthemods.create(`gtceu:gadolinium_casing`)
+    allthemods.create(`gtceu:gadolinium_casing`)
         // @ts-ignore
         .displayName('Gadolinium Casing')
         .textureAll(`gtceu:block/casings/gadolinium_casing/gadolinium_casing`)
@@ -43,7 +43,7 @@ StartupEvents.registry('block', allthemods => {
         .soundType('metal')
         .tagBlock('gtceu:casings');
 
-    let block = allthemods.create(`gtceu:heat_exchange_casing`)
+    allthemods.create(`gtceu:heat_exchange_casing`)
         // @ts-ignore
         .displayName('Heat Exchange Casing')
         .textureAll(`gtceu:block/casings/heat_exchange_casing/heat_exchange_casing`)
@@ -51,6 +51,15 @@ StartupEvents.registry('block', allthemods => {
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
+
+    allthemods.create('gtceu:magical_soil')
+        .textureAll('gtceu:block/casings/magical_soil/magical_soil_side')
+        .texture('up', 'gtceu:block/casings/magical_soil/magical_soil_top')
+        .texture('down', 'gtceu:block/casings/magical_soil/magical_soil_side')
+        .displayName('§bMagical Soil')
+        .grassSoundType()
+        .mapColor('grass')
+        .hardness(0.6);
 
     coils.forEach(coil => {
         let block = allthemods.create(`gtceu:${coil.name}_casing`)

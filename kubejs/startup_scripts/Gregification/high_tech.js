@@ -4,7 +4,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create('super_critical_heat_exchanger')
         .category('super_critical_heat_exchanger')
         .setEUIO('in')
-        .setMaxIOSize(0, 0, 1, 1) // Item In, Item Out, Fluid In, Fluid Out
+        .setMaxIOSize(0, 0, 2, 2) // Item In, Item Out, Fluid In, Fluid Out
         .setSlotOverlay(false, true, GuiTextures.FLUID_TANK_OVERLAY)
         .setSlotOverlay(true, true, GuiTextures.BREWER_OVERLAY)
         .setProgressBar(GuiTextures.COMPRESSOR_OVERLAY, FillDirection.LEFT_TO_RIGHT)
@@ -82,18 +82,19 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
             .aisle('CCCCCCCCC', 'F       F', 'F  GGG  F', 'F       F', 'F  GGG  F', 'F       F', 'F  GGG  F', 'F       F', 'CCCCCCCCC')
             .aisle('CCCCCCCCC', '         ', '  GG GG  ', '         ', '  GG GG  ', '         ', '  GG GG  ', '         ', 'CCCCCCCCC')
             .aisle('CCCCCCCCC', ' H     H ', ' HG   GH ', ' H     H ', ' HG   GH ', ' H     H ', ' HG   GH ', ' H     H ', 'CCCCCCCCC')
-            .aisle('CCCCCCCCC', 'HHH   HHH', 'H H   H H', 'H H   H H', 'H H   H H', 'H H   H H', 'H H   H H', 'HhH   HhH', 'CCCCCCCCC')
+            .aisle('CCCCCCCCC', 'HHH   HHH', 'H H   H H', 'H H   H H', 'H H   H H', 'H H   H H', 'H H   H H', 'HHH   HHH', 'CCCCCCCCC')
             .aisle('CCCCCCCCC', ' H     H ', ' HG   GH ', ' H     H ', ' HG   GH ', ' H     H ', ' HG   GH ', ' H     H ', 'CCCCCCCCC')
             .aisle('CCCCCCCCC', '         ', '  GG GG  ', '         ', '  GG GG  ', '         ', '  GG GG  ', '         ', 'CCCCCCCCC')
             .aisle('CCCCKCCCC', 'F       F', 'F  GGG  F', 'F       F', 'F  GGG  F', 'F       F', 'F  GGG  F', 'F       F', 'CCCCCCCCC')
             .where('K', Predicates.controller(Predicates.blocks(definition.get())))
             .where('G', Predicates.blocks('gtceu:gadolinium_casing'))
             .where('H', Predicates.blocks('gtceu:heat_exchange_casing'))
-            .where('F', Predicates.blocks('#forge:frames/draconium_awakened'))
+            .where('F', Predicates.blocks('gtceu:draconium_awakened_frame'))
             .where('C', Predicates.blocks('gtceu:uv_machine_casing')
                 .or(Predicates.autoAbilities(definition.getRecipeTypes()))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))                
             )
+            .where(' ', Predicates.any())
             .build()
         )
         .workableCasingModel(
@@ -118,6 +119,7 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
                 .or(Predicates.autoAbilities(definition.getRecipeTypes()))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))                
             )
+            .where(' ', Predicates.any())
             .build()
         )
         .workableCasingModel(

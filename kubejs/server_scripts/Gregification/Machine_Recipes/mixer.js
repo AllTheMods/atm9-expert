@@ -26,7 +26,7 @@ ServerEvents.recipes(allthemods => {
     
     addMixer(['1x #forge:dusts/dysprosium', '1x #forge:dusts/neodymium_praseodymium_iron_boron'], '2x gtceu:neodymium_dysprosium_dust', LuV, 600);
     addMixer(['1x #forge:dusts/terbium', '1x #forge:dusts/neodymium_praseodymium_iron_boron'], '2x gtceu:neodymium_terbium_dust', ZPM, 600);
-
+    addMixer(['2x #forge:dusts/andesite', '2x #forge:dusts/zinc'], 'gtceu:andesite_alloy_dust', LV, 60);
     addMixer(['2x #forge:dusts/soul_sand', '#forge:dusts/iron', '#forge:dusts/copper'], '4x thermal_extra:soul_infused_dust', HV, 600);
     addMixer(['2x #forge:dusts/shulker', '#forge:dusts/lead', '#forge:dusts/nickel'], '4x thermal_extra:shellite_dust', EV, 600);
     addMixer(['2x #forge:dusts/tin', '#forge:dusts/blaze', '#forge:dusts/obsidian'], '4x thermal_extra:twinite_dust', EV, 600);
