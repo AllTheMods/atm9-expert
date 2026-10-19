@@ -74,8 +74,8 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
 
     allthemods.create('super_critical_heat_exchanger', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeType('super_critical_heat_exchanger')        
-        .appearanceBlock(() => GTBlocks.MACHINE_CASING_UV)
+        .recipeType('super_critical_heat_exchanger')                
+        .appearanceBlock(GTBlocks.MACHINE_CASING_UV)
         .recipeModifiers([GTRecipeModifiers.OC_PERFECT])
         .pattern(definition => FactoryBlockPattern.start()            
 
