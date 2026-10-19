@@ -121,13 +121,12 @@ ServerEvents.recipes(allthemods => {
     addAssembler(
         [
             "gtceu:magical_bio_composite",
-            "gtceu:aluminium_drum",
+            "2x gtceu:aluminium_drum",
             "#forge:frames/terrasteel",
             "4x #forge:plates/pink_slime",
             "4x minecraft:blaze_rod",
             "#minecraft:wool",
-            "3x minecraft:obsidian",
-            "gtceu:aluminium_drum"
+            "3x minecraft:obsidian"
 
         ],
         null,

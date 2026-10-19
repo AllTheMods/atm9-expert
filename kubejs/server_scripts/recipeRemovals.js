@@ -11,6 +11,10 @@ ServerEvents.tags('block_entity_type', event => {
 
 ServerEvents.recipes(allthemods => {
 
+    allthemods.remove({ id: /^productivebees:bee_produce\/chemlib\/.*/ })
+    allthemods.remove({ id: /^productivebees:bee_breeding\/chemlib\/.*/ })
+
+
     /*allthemods.forEachRecipe({ type: 'productivebees:centrifuge' }, recipe => {        
         console.error(recipe.json);
         console.error(String(recipe.id));    

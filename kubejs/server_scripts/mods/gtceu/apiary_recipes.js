@@ -426,7 +426,7 @@ ServerEvents.recipes(allthemods => {
                     else if (output.fluid.tag == 'forge:pink_slime') { fluidId = 'industrialforegoing:pink_slime' }
                     else if (output.fluid.tag == 'forge:redstone') { fluidId = 'gtceu:redstone' }
                 }
-
+                if (fluidId == 'productivebees:honey' && outputs.some(o => o.hasOwnProperty('fluid') && o.fluid.fluid && o.fluid.fluid != 'productivebees:honey')) return
                 if(fluidId != '') {
                     let fBase = Fluid.of(fluidId, amount)
                     let fBlock = Fluid.of(fluidId, amount * 4)

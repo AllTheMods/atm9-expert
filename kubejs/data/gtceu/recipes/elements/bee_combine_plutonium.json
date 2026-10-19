@@ -10,11 +10,7 @@
           "ingredient": {
             "type": "forge:nbt",
             "item": "productivebees:spawn_egg_configurable_bee",
-            "nbt": {
-              "EntityTag": {
-                "type": "productivebees:radioactive"
-              }
-            }
+            "nbt": { "EntityTag": { "type": "productivebees:radioactive" } }
           }
         },
         "chance": 10000,
@@ -24,10 +20,18 @@
       {
         "content": {
           "type": "gtceu:sized",
+          "count": 16,
+          "ingredient": { "tag": "forge:dusts/uranium" }
+        },
+        "chance": 10000,
+        "maxChance": 10000,
+        "tierChanceBoost": 0
+      },
+      {
+        "content": {
+          "type": "gtceu:sized",
           "count": 1,
-          "ingredient": {
-            "item": "gtceu:dna"
-          }
+          "ingredient": { "item": "gtceu:dna" }
         },
         "chance": 10000,
         "maxChance": 10000,
@@ -37,12 +41,8 @@
     "fluid": [
       {
         "content": {
-          "amount": 16000,
-          "value": [
-            {
-              "tag": "forge:oxygen"
-            }
-          ]
+          "amount": 2000,
+          "value": [{ "tag": "forge:helium" }]
         },
         "chance": 10000,
         "maxChance": 10000,
@@ -59,11 +59,7 @@
           "ingredient": {
             "type": "forge:nbt",
             "item": "productivebees:spawn_egg_configurable_bee",
-            "nbt": {
-              "EntityTag": {
-                "type": "productivebees:plutonium"
-              }
-            }
+            "nbt": { "EntityTag": { "type": "productivebees:plutonium" } }
           }
         },
         "chance": 10000,

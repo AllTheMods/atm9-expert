@@ -11,13 +11,12 @@ ServerEvents.recipes(allthemods => {
 
     colors.forEach(function (color) {
         variants.forEach(function (variant, index) {
-            allthemods.recipes.gtceu.electric_blast_furnace(`gregification:botanypots/${color}_${variant}_botany_pot`)                
-                .itemInputs(`5x ${plate}`, pot, `#forge:dyes/${color}`)
+            allthemods.recipes.gtceu.electric_blast_furnace(`gregification:botanypots/${color}_${variant}_botany_pot`)
+                .itemInputs(`5x ${plate}`, pot, `minecraft:${color}_${variant}`)
                 .itemOutputs(`botanypots:${color}_${variant}_botany_pot`)
                 .inputFluids(`#forge:argon 1000`)
                 .duration(600)
                 .EUt(EV)
-                .circuit(index + 1)
                 .blastFurnaceTemp(3600);
 
             allthemods.shapeless(`botanypots:${color}_${variant}_hopper_botany_pot`, [
