@@ -59,16 +59,16 @@ ServerEvents.recipes(allthemods => {
     });
 
     allthemods.recipes.gtceu.assembler('gregification:crafting/steam_engine')
-        .itemInputs('gtceu:mv_machine_hull', 'gtceu:mv_electric_pump', '2x #gtceu:circuits/mv', 'create:copper_casing', '4x forbidden_arcanus:spawner_scrap')
+        .itemInputs('gtceu:mv_machine_hull', 'gtceu:mv_electric_pump', '2x #gtceu:circuits/mv', 'create:copper_casing', '4x forbidden_arcanus:spawner_scrap')        
         .inputFluids('#forge:soldering_alloy 288')
         .itemOutputs('create:steam_engine')
         .duration(600)
         .EUt(MV);
 
-    allthemods.recipes.gtceu.assembler('gregification:crafting/steam_engine')
-        .itemInputs('gtceu:mv_machine_hull', '6x #forge:plates/steel', '')
+    allthemods.recipes.gtceu.assembler('gregification:crafting/blaze_burner')
+        .itemInputs('gtceu:mv_machine_hull', '6x #forge:plates/steel', 'reliquary:molten_core', 'gtceu:cupronickel_coil_block')
         .inputFluids('#forge:soldering_alloy 288')
-        .itemOutputs('create:steam_engine')
+        .itemOutputs('create:blaze_burner')
         .duration(300)
         .EUt(MV);
     

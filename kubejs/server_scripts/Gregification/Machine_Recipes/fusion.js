@@ -80,6 +80,17 @@ ServerEvents.recipes(allthemods => {
 
     addFusion(
         [            
+            '#forge:beryllium 72',
+            '#forge:plutonium 72'
+        ],
+        'gtceu:californium_plasma 72',
+        UV,
+        20,
+        stages[2]
+    )
+
+    addFusion(
+        [            
             '#forge:californium_plasma 72',
             '#forge:calcium_plasma 72'
         ],

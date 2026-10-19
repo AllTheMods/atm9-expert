@@ -43,6 +43,15 @@ StartupEvents.registry('block', allthemods => {
         .soundType('metal')
         .tagBlock('gtceu:casings');
 
+    let block = allthemods.create(`gtceu:heat_exchange_casing`)
+        // @ts-ignore
+        .displayName('Heat Exchange Casing')
+        .textureAll(`gtceu:block/casings/heat_exchange_casing/heat_exchange_casing`)
+        .hardness(5.0)
+        .resistance(10.0)
+        .soundType('metal')
+        .tagBlock('gtceu:casings');
+
     coils.forEach(coil => {
         let block = allthemods.create(`gtceu:${coil.name}_casing`)
             // @ts-ignore

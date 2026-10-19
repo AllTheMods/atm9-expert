@@ -4,7 +4,9 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create('super_critical_heat_exchanger')
         .category('super_critical_heat_exchanger')
         .setEUIO('in')
-        .setMaxIOSize(6, 6, 6, 6) // Item In, Item Out, Fluid In, Fluid Out
+        .setMaxIOSize(0, 0, 1, 1) // Item In, Item Out, Fluid In, Fluid Out
+        .setSlotOverlay(false, true, GuiTextures.FLUID_TANK_OVERLAY)
+        .setSlotOverlay(true, true, GuiTextures.BREWER_OVERLAY)
         .setProgressBar(GuiTextures.COMPRESSOR_OVERLAY, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.COOLING)
 
@@ -72,17 +74,30 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
 
     allthemods.create('super_critical_heat_exchanger', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeType('super_critical_heat_exchanger')
-        //.appearanceBlock(GTBlocks.CASING_ALUMINIUM_FROSTPROOF)
-        .appearanceBlock(() => Block.getBlock('gtceu:gadolinium_casing'))        
+        .recipeType('super_critical_heat_exchanger')        
+        .appearanceBlock(() => GTBlocks.MACHINE_CASING_UV)
         .recipeModifiers([GTRecipeModifiers.OC_PERFECT])
         .pattern(definition => FactoryBlockPattern.start()            
-            .aisle('K')            
-            .where('K', Predicates.controller(Predicates.blocks(definition.get())))                                    
+
+            .aisle('CCCCCCCCC', 'F       F', 'F  GGG  F', 'F       F', 'F  GGG  F', 'F       F', 'F  GGG  F', 'F       F', 'CCCCCCCCC')
+            .aisle('CCCCCCCCC', '         ', '  GG GG  ', '         ', '  GG GG  ', '         ', '  GG GG  ', '         ', 'CCCCCCCCC')
+            .aisle('CCCCCCCCC', ' H     H ', ' HG   GH ', ' H     H ', ' HG   GH ', ' H     H ', ' HG   GH ', ' H     H ', 'CCCCCCCCC')
+            .aisle('CCCCCCCCC', 'HHH   HHH', 'H H   H H', 'H H   H H', 'H H   H H', 'H H   H H', 'H H   H H', 'HhH   HhH', 'CCCCCCCCC')
+            .aisle('CCCCCCCCC', ' H     H ', ' HG   GH ', ' H     H ', ' HG   GH ', ' H     H ', ' HG   GH ', ' H     H ', 'CCCCCCCCC')
+            .aisle('CCCCCCCCC', '         ', '  GG GG  ', '         ', '  GG GG  ', '         ', '  GG GG  ', '         ', 'CCCCCCCCC')
+            .aisle('CCCCKCCCC', 'F       F', 'F  GGG  F', 'F       F', 'F  GGG  F', 'F       F', 'F  GGG  F', 'F       F', 'CCCCCCCCC')
+            .where('K', Predicates.controller(Predicates.blocks(definition.get())))
+            .where('G', Predicates.blocks('gtceu:gadolinium_casing'))
+            .where('H', Predicates.blocks('gtceu:heat_exchange_casing'))
+            .where('F', Predicates.blocks('#forge:frames/draconium_awakened'))
+            .where('C', Predicates.blocks('gtceu:uv_machine_casing')
+                .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))                
+            )
             .build()
         )
         .workableCasingModel(
-            'gtceu:block/casings/solid/machine_casing_frost_proof',
+            'gtceu:block/casings/voltage/uv/side',
             'gtceu:block/multiblock/vacuum_freezer'            
         )
 

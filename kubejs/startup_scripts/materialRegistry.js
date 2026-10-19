@@ -1991,36 +1991,36 @@ const materials = [
     new MaterialDef('zinc_raffinate').fluid().color(0xB9C2B0).noDecomp(),
 
     //rest of the perioditic table
-    new MaterialDef('actinium').modify().dust().ingot().fluid(),
-    new MaterialDef('bohrium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
+    new MaterialDef('actinium').modify().dust().ingot().fluid().materialsBasic(),
+    new MaterialDef('bohrium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
     new MaterialDef('copernicium').modify().fluid(),
-    new MaterialDef('curium').modify().dust().ingot().fluid().noSmelting(), //chemical reaction
-    new MaterialDef('dubnium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
-    new MaterialDef('einsteinium').modify().dust().ingot().fluid(),
-    new MaterialDef('erbium').modify().dust().ingot().fluid().noSmelting(), //chemical reaction
+    new MaterialDef('curium').modify().dust().ingot().fluid().noSmelting().materialsBasic(), //chemical reaction
+    new MaterialDef('dubnium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
+    new MaterialDef('einsteinium').modify().dust().ingot().fluid().materialsBasic(),
+    new MaterialDef('erbium').modify().dust().ingot().fluid().noSmelting().materialsBasic(), //chemical reaction
     new MaterialDef('fermium').modify().fluid(),
-    new MaterialDef('flerovium').modify().dust().ingot().gas().noSmelting(),
-    new MaterialDef('hassium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
-    new MaterialDef('holmium').modify().dust().ingot().fluid().noSmelting(),    //chemical reaction
-    new MaterialDef('lawrencium').modify().dust().ingot().fluid().noSmelting(), //chemical reaction
+    new MaterialDef('flerovium').modify().dust().ingot().fluid().gas().noSmelting().materialsBasic(),
+    new MaterialDef('hassium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
+    new MaterialDef('holmium').modify().dust().ingot().fluid().noSmelting().materialsBasic(),    //chemical reaction
+    new MaterialDef('lawrencium').modify().dust().ingot().fluid().noSmelting().materialsBasic(), //chemical reaction
     new MaterialDef('livermorium').modify().fluid(),
-    new MaterialDef('meitnerium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
-    new MaterialDef('mendelevium').modify().dust().ingot().fluid(),
+    new MaterialDef('meitnerium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
+    new MaterialDef('mendelevium').modify().dust().ingot().fluid().materialsBasic(),
     new MaterialDef('moscovium').modify().fluid(),
-    new MaterialDef('neptunium').modify().dust().ingot().fluid()
+    new MaterialDef('neptunium').modify().dust().ingot().fluid().materialsBasic()
         .unify({nugget: 'aquaculture:neptunium_nugget', ingot: 'aquaculture:neptunium_ingot', block: 'aquaculture:neptunium_block'}),
     new MaterialDef('nihonium').modify().fluid(),
-    new MaterialDef('nobelium').modify().dust().ingot().fluid(),
+    new MaterialDef('nobelium').modify().dust().ingot().fluid().materialsBasic(),
     new MaterialDef('oganesson').modify().plasma().fluid(),
-    new MaterialDef('roentgenium').modify().dust().ingot().fluid(),
-    new MaterialDef('rutherfordium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
-    new MaterialDef('seaborgium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
-    new MaterialDef('technetium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM),
+    new MaterialDef('roentgenium').modify().dust().ingot().fluid().materialsBasic(),
+    new MaterialDef('rutherfordium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
+    new MaterialDef('seaborgium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
+    new MaterialDef('technetium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM).materialsBasic(),
     new MaterialDef('tennessine').modify().fluid(),
-    new MaterialDef('thulium').modify().dust().ingot().fluid().noSmelting(),    //chemical reaction
-    new MaterialDef('ytterbium').modify().dust().ingot().fluid(),
+    new MaterialDef('thulium').modify().dust().ingot().fluid().noSmelting().materialsBasic(),    //chemical reaction
+    new MaterialDef('ytterbium').modify().dust().ingot().fluid().materialsBasic(),
 
-    new MaterialDef('supercritical_steam').fluid().gas().color(0xE8B8A0).iconSet('FLUID').components('2x hydrogen, 1x oxygen').formula('H2O').noDecomp(),
+    new MaterialDef('super_critical_steam').fluid().gas().color(0xE8B8A0).iconSet('FLUID').components('2x hydrogen, 1x oxygen').formula('H2O').noDecomp(),
     
 ];
 
