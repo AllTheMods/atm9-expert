@@ -91,6 +91,7 @@ ServerEvents.recipes(allthemods => {
 
     
     const powahRemoves = [
+        'create:crafting/kinetics/steam_engine', 'create:crafting/kinetics/empty_blaze_burner',
         'ars_nouveau:source_gem_block', 'ars_nouveau:source_gem_block_2',
         'mekanism:laser_amplifier', 'mekanism:laser', 'sophisticatedstorage:controller',
         'sophisticatedstorage:stack_upgrade_omega_tier', 'sophisticatedbackpacks:stack_upgrade_omega_tier',

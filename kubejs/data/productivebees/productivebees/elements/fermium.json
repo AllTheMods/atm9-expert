@@ -5,11 +5,11 @@
   "beeTexture": "productivebees:textures/entity/bee/fermium/bee",
   "size": 0.4,
   "selfbreed": false,
-  "flowerTag": "forge:storage_blocks/fermium",
   "conditions": [
     {
       "type": "forge:mod_loaded",
       "modid": "gtceu"
     }
-  ]
+  ],
+  "flowerFluid": "gtceu:fermium"
 }

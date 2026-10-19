@@ -20,12 +20,6 @@
         "fluid": "gtceu:oxygen"
       },
       "amount": 1000
-    },
-    {
-      "fluid": {
-        "fluid": "productivebees:honey"
-      },
-      "amount": 50
     }
   ],
   "conditions": [

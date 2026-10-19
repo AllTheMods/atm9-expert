@@ -20,12 +20,6 @@
         "fluid": "gtceu:bromine"
       },
       "amount": 100
-    },
-    {
-      "fluid": {
-        "fluid": "productivebees:honey"
-      },
-      "amount": 50
     }
   ],
   "conditions": [

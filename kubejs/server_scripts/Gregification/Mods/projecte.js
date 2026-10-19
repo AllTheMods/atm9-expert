@@ -1,7 +1,7 @@
 ServerEvents.recipes(allthemods => {
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
     allthemods.recipes.gtceu.assembler('gregification:condenser_mk1')
-        .itemInputs('gtceu:iv_machine_hull', '4x minecraft:obsidian', '4x #forge:exquisite_gems/diamond', 'projecte:alchemical_chest','8x #forge:plates/enderium', 'gtceu:iv_field_generator', 'gtceu:ev_field_generator')
+        .itemInputs('gtceu:iv_machine_hull', '4x minecraft:obsidian', '4x #forge:double_plates/stabilized_clathrate', 'projecte:alchemical_chest','8x #forge:plates/enderium', 'gtceu:iv_field_generator')
         .inputFluids('#forge:polytetrafluoroethylene 576')
         .itemOutputs('projecte:condenser_mk1')
         .duration(1800)

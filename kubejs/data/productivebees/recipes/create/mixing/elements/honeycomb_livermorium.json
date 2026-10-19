@@ -14,8 +14,8 @@
   ],
   "results": [
     {
-      "item": "gtceu:livermorium_dust",
-      "chance": 0.1
+      "fluid": "gtceu:livermorium",
+      "amount": 100
     },
     {
       "item": "productivebees:wax"
@@ -33,10 +33,6 @@
     {
       "type": "forge:mod_loaded",
       "modid": "create"
-    },
-    {
-      "type": "forge:item_exists",
-      "item": "gtceu:livermorium_dust"
     }
   ]
 }

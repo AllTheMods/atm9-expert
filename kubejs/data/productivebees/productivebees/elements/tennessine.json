@@ -5,11 +5,11 @@
   "beeTexture": "productivebees:textures/entity/bee/tennessine/bee",
   "size": 0.5,
   "selfbreed": false,
-  "flowerTag": "forge:storage_blocks/tennessine",
   "conditions": [
     {
       "type": "forge:mod_loaded",
       "modid": "gtceu"
     }
-  ]
+  ],
+  "flowerFluid": "gtceu:tennessine"
 }

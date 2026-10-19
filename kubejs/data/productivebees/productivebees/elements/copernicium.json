@@ -5,11 +5,11 @@
   "beeTexture": "productivebees:textures/entity/bee/copernicium/bee",
   "size": 0.4,
   "selfbreed": false,
-  "flowerTag": "forge:storage_blocks/copernicium",
   "conditions": [
     {
       "type": "forge:mod_loaded",
       "modid": "gtceu"
     }
-  ]
+  ],
+  "flowerFluid": "gtceu:copernicium"
 }

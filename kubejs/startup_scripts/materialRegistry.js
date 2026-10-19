@@ -6,6 +6,7 @@ const OreProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.mate
 const GasTier = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty$GasTier')
 const WireProperties = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.WireProperties')
 const FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty')
+const FluidState = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidState')
 const IngotProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty')
 const DustProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty')
 const PolymerProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.PolymerProperty')
@@ -76,7 +77,7 @@ function overwriteToolStats(materialName, speed, damage, durability, harvestLeve
             ]
         )
             .unbreakable()
-            .build();
+            .build();        
         mat.setProperty(PropertyKey.TOOL, newProps);
     }
 }
@@ -137,7 +138,9 @@ MaterialDef.prototype.ingot = function () { this.traits.ingot = true; return thi
 MaterialDef.prototype.gem = function () { this.traits.gem = true; return this; };
 MaterialDef.prototype.fluid = function () { this.traits.fluid = true; return this; };
 MaterialDef.prototype.gas = function () { this.traits.gas = true; return this; };
+MaterialDef.prototype.plasma = function () { this.traits.plasma = true; return this; };
 MaterialDef.prototype.ore = function (oreMultiplier, byproductMultiplier) {
+    
     this.traits.ore = { oreMultiplier: oreMultiplier || 2, byproductMultiplier: byproductMultiplier || 1 };
     return this;
 };
@@ -254,6 +257,7 @@ MaterialDef.prototype.register = function (event) {
     if (this.traits.gem) b.gem();
     if (this.traits.fluid) b.fluid();
     if (this.traits.gas) b.gas();
+    if (this.traits.plasma) b.plasma();    
     if (this.traits.ore) b.ore(this.traits.ore.oreMultiplier, this.traits.ore.byproductMultiplier);
     if (this.traits.polymer) b.polymer();
     if (this.traits.element) b.element(this.traits.element);
@@ -318,7 +322,13 @@ MaterialDef.prototype.applyModification = function () {
         if (this.traits.dust && !mat.hasProperty(PropertyKey.DUST)) mat.setProperty(PropertyKey.DUST, new DustProperty());
         if (this.traits.ingot && !mat.hasProperty(PropertyKey.INGOT)) mat.setProperty(PropertyKey.INGOT, new IngotProperty());
         if (this.traits.gem && !mat.hasProperty(PropertyKey.GEM)) mat.setProperty(PropertyKey.GEM, new GemProperty());
-        if (this.traits.fluid && !mat.hasProperty(PropertyKey.FLUID)) mat.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
+        if (this.traits.fluid && !mat.hasProperty(PropertyKey.FLUID)) mat.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));        
+        let fluidProp = mat.getProperty(PropertyKey.FLUID);
+        if (fluidProp) {
+            if (this.traits.plasma) fluidProp.enqueueRegistration(FluidStorageKeys.PLASMA, new FluidBuilder().state(FluidState.PLASMA));
+            if (this.traits.gas) fluidProp.enqueueRegistration(FluidStorageKeys.GAS, new FluidBuilder().state(FluidState.GAS));
+        }
+        
         if (this.traits.polymer) mat.setProperty(PropertyKey.POLYMER, new PolymerProperty());
         if (this.traits.flags) this.traits.flags.forEach(f => mat.addFlags(f));
 
@@ -453,13 +463,13 @@ const materials = [
         .unify({ ingot: 'ad_astra:calorite_ingot', nugget: 'ad_astra:calorite_nugget', plate: 'ad_astra:calorite_plate', block: 'ad_astra:calorite_block', rawOre: 'ad_astra:raw_calorite', oreDeepslate: 'ad_astra:deepslate_calorite_ore' })
         .byproducts(['sulfur', 'lead', 'basalt']),
 
-    new MaterialDef('naquadria_stage_2').color(0x5A189A).iconSet('RADIOACTIVE').polymer(),
+    new MaterialDef('naquadria_stage_2').color(0x5A189A).iconSet('RADIOACTIVE').polymer().plasma(),
 
-    new MaterialDef('naquadria_stage_3').color(0x00FFD5).iconSet('RADIOACTIVE').polymer(),
+    new MaterialDef('naquadria_stage_3').color(0x00FFD5).iconSet('RADIOACTIVE').polymer().plasma(),
 
-    new MaterialDef('naquadria_stage_4').color(0xFFC107).iconSet('RADIOACTIVE').polymer(),
+    new MaterialDef('naquadria_stage_4').color(0xFFC107).iconSet('RADIOACTIVE').polymer().plasma(),
 
-    new MaterialDef('naquadria_awakened').color(0xFFC107).iconSet('RADIOACTIVE').polymer(),
+    new MaterialDef('naquadria_awakened').color(0xFFC107).iconSet('RADIOACTIVE').polymer().plasma(),
 
     new MaterialDef('demon').color(0x00FFFF).iconSet('DIAMOND').gem()
         .unify({ gem: 'bloodmagic:defaultcrystal' }),
@@ -1714,7 +1724,7 @@ const materials = [
 
     new MaterialDef('samarium_cobalt').dust().ingot().fluid().magnetic().color(0x8C7B4A).iconSet('METALLIC').formula('SmCo5').components('1x samarium, 5x cobalt').materialsBasic(),
 
-    new MaterialDef('antimatter').dust().fluid().element('antimatter').color(0x7d4d88).iconSet('RADIOACTIVE')
+    new MaterialDef('antimatter').dust().fluid().plasma().element('antimatter').color(0x7d4d88).iconSet('RADIOACTIVE')
         //.unify({ dust: 'mekanism:pellet_antimatter' }), trying the new unification method
         .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'mekanism:pellet_antimatter' }),
 
@@ -1810,11 +1820,15 @@ const materials = [
 
     new MaterialDef('graphite').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NICHROME).wireMod(2048).flags(GTMaterialFlags.GENERATE_ROTOR),
 
+    new MaterialDef('graphite').modify().fluid(),
+
+    new MaterialDef('calcium').modify().fluid().plasma(),
+
     new MaterialDef('strontium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsAll().blastCoil(COIL_TEMPS.NAQUADAH),
 
     new MaterialDef('tellurium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.DRACONIUM),
 
-    new MaterialDef('californium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
+    new MaterialDef('californium').modify().plasma().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
 
     new MaterialDef('berkelium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),
 
@@ -1977,35 +1991,36 @@ const materials = [
     new MaterialDef('zinc_raffinate').fluid().color(0xB9C2B0).noDecomp(),
 
     //rest of the perioditic table
-    
+    new MaterialDef('actinium').modify().dust().ingot().fluid(),
+    new MaterialDef('bohrium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
+    new MaterialDef('copernicium').modify().fluid(),
+    new MaterialDef('curium').modify().dust().ingot().fluid().noSmelting(), //chemical reaction
+    new MaterialDef('dubnium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
+    new MaterialDef('einsteinium').modify().dust().ingot().fluid(),
+    new MaterialDef('erbium').modify().dust().ingot().fluid().noSmelting(), //chemical reaction
+    new MaterialDef('fermium').modify().fluid(),
+    new MaterialDef('flerovium').modify().dust().ingot().gas().noSmelting(),
+    new MaterialDef('hassium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
+    new MaterialDef('holmium').modify().dust().ingot().fluid().noSmelting(),    //chemical reaction
+    new MaterialDef('lawrencium').modify().dust().ingot().fluid().noSmelting(), //chemical reaction
+    new MaterialDef('livermorium').modify().fluid(),
+    new MaterialDef('meitnerium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
+    new MaterialDef('mendelevium').modify().dust().ingot().fluid(),
+    new MaterialDef('moscovium').modify().fluid(),
+    new MaterialDef('neptunium').modify().dust().ingot().fluid()
+        .unify({nugget: 'aquaculture:neptunium_nugget', ingot: 'aquaculture:neptunium_ingot', block: 'aquaculture:neptunium_block'}),
+    new MaterialDef('nihonium').modify().fluid(),
+    new MaterialDef('nobelium').modify().dust().ingot().fluid(),
+    new MaterialDef('oganesson').modify().plasma().fluid(),
+    new MaterialDef('roentgenium').modify().dust().ingot().fluid(),
+    new MaterialDef('rutherfordium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
+    new MaterialDef('seaborgium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
+    new MaterialDef('technetium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM),
+    new MaterialDef('tennessine').modify().fluid(),
+    new MaterialDef('thulium').modify().dust().ingot().fluid().noSmelting(),    //chemical reaction
+    new MaterialDef('ytterbium').modify().dust().ingot().fluid(),
 
-    new MaterialDef('actinium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('bohrium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('copernicium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('curium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('dubnium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('einsteinium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('erbium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('fermium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('flerovium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('hassium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('holmium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('lawrencium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('livermorium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('meitnerium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('mendelevium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('moscovium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('neptunium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('nihonium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('nobelium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('oganesson').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('roentgenium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('rutherfordium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('seaborgium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('technetium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('tennessine').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('thulium').modify().dust().ingot().fluid().noSmelting(),
-    new MaterialDef('ytterbium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('supercritical_steam').fluid().gas().color(0xE8B8A0).iconSet('FLUID').components('2x hydrogen, 1x oxygen').formula('H2O').noDecomp(),
     
 ];
 

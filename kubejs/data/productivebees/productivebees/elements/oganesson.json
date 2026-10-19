@@ -5,11 +5,11 @@
   "beeTexture": "productivebees:textures/entity/bee/oganesson/bee",
   "size": 0.2,
   "selfbreed": false,
-  "flowerTag": "forge:storage_blocks/oganesson",
   "conditions": [
     {
       "type": "forge:mod_loaded",
       "modid": "gtceu"
     }
-  ]
+  ],
+  "flowerFluid": "gtceu:oganesson"
 }

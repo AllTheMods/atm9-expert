@@ -5,11 +5,11 @@
   "beeTexture": "productivebees:textures/entity/bee/moscovium/bee",
   "size": 0.5,
   "selfbreed": false,
-  "flowerTag": "forge:storage_blocks/moscovium",
   "conditions": [
     {
       "type": "forge:mod_loaded",
       "modid": "gtceu"
     }
-  ]
+  ],
+  "flowerFluid": "gtceu:moscovium"
 }

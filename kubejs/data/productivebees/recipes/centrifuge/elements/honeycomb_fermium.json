@@ -16,29 +16,16 @@
       }
     },
     {
-      "item": {
-        "tag": "forge:dusts/fermium"
-      },
-      "chance": 10
-    },
-    {
       "fluid": {
-        "fluid": "productivebees:honey"
+        "fluid": "gtceu:fermium"
       },
-      "amount": 50
+      "amount": 100
     }
   ],
   "conditions": [
     {
       "type": "forge:mod_loaded",
       "modid": "gtceu"
-    },
-    {
-      "type": "forge:not",
-      "value": {
-        "type": "forge:tag_empty",
-        "tag": "forge:dusts/fermium"
-      }
     }
   ]
 }

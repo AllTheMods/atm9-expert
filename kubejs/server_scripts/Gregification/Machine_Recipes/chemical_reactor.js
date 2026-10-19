@@ -132,7 +132,7 @@ ServerEvents.recipes(allthemods => {
     //titanium dioxide
     addChemical(
         '#forge:dusts/titanium',
-        '#forge:oxygen 1000',
+        '#forge:oxygen 2000',
         'gtceu:titanium_dioxide_dust',
         null,
         HV,

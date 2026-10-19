@@ -33,10 +33,10 @@ ServerEvents.recipes(allthemods => {
     //naquadria stage 2
     addFusion(
         [            
-            'gtceu:naquadria 72',
-            'gtceu:liquid_chaos 72'
+            '#forge:naquadria 72',
+            '#forge:liquid_chaos 72'
         ],
-        'gtceu:naquadria_stage_2 72',
+        'gtceu:naquadria_stage_2_plasma 72',
         IV,
         20,
         stages[1]
@@ -45,10 +45,10 @@ ServerEvents.recipes(allthemods => {
     //naquadria stage 3
     addFusion(
         [            
-            'gtceu:naquadria_stage_2 72',
-            'gtceu:liquid_chaos 72'
+            '#forge:naquadria_stage_2_plasma 72',
+            '#forge:liquid_chaos 72'
         ],
-        'gtceu:naquadria_stage_3 72',
+        'gtceu:naquadria_stage_3_plasma 72',
         LuV,
         20,
         stages[2]
@@ -57,10 +57,10 @@ ServerEvents.recipes(allthemods => {
     //naquadria stage 4
     addFusion(
         [            
-            'gtceu:naquadria_stage_3 72',
-            'gtceu:polonium 72'
+            '#forge:naquadria_stage_3_plasma 72',
+            '#forge:polonium 72'
         ],
-        'gtceu:naquadria_stage_4 72',
+        'gtceu:naquadria_stage_4_plasma 72',
         ZPM,
         20,
         stages[3]
@@ -69,10 +69,21 @@ ServerEvents.recipes(allthemods => {
     //naquadria awakened
     addFusion(
         [            
-            'gtceu:naquadria_stage_4 72',
-            'gtceu:antimatter 72'
+            '#forge:naquadria_stage_4_plasma 72',
+            '#forge:antimatter_plasma 72'
         ],
-        'gtceu:naquadria_awakened 72',
+        'gtceu:naquadria_awakened_plasma 72',
+        UV,
+        20,
+        stages[3]
+    )
+
+    addFusion(
+        [            
+            '#forge:californium_plasma 72',
+            '#forge:calcium_plasma 72'
+        ],
+        'gtceu:oganesson_plasma 72',
         UV,
         20,
         stages[3]
