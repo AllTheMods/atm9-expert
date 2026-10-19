@@ -885,6 +885,12 @@
     "material.gtceu.clarified_moon_mud": "Clarified Moon Mud",
     "material.gtceu.moon_brine": "Moon Brine",
     "material.gtceu.kreep_concentrate": "Kreep Concentrate",
-    "material.gtceu.moon_silica_residue": "Moon Silica Residue"
+    "material.gtceu.moon_silica_residue": "Moon Silica Residue",
+    "material.gtceu.acidified_brine": "Acidified Brine",
+    "material.gtceu.bromine_laden_brine": "Bromine Laden Brine",
+    "material.gtceu.bromine_laden_air": "Bromine Laden Air",
+    "material.gtceu.debrominated_brine": "Debrominated Brine",
+    "material.gtceu.hydrobromic_acid": "Hydrobromic Acid",
+    "material.gtceu.crude_bromine_solution": "Crude Bromine Solution"
     
 }

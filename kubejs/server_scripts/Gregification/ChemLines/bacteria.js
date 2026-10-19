@@ -147,7 +147,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.gene_sequencer(`gregification:sequencer`)
         .itemInputs('#forge:tiny_dusts/platinum')
         .inputFluids('#forge:concentrated_liquid_dna 10')
-        .chancedOutput('gtceu:dna', 50, 50)
+        .chancedOutput('gtceu:dna', 1500, 1500)
         .chancedFluidOutput('gtceu:dna_tolerance 100', 50, 50)
         .chancedFluidOutput('gtceu:dna_productivity 100', 50, 50)
         .chancedFluidOutput('gtceu:dna_behavior 100', 50, 50)
