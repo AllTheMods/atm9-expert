@@ -1893,8 +1893,6 @@ const materials = [
 
     new MaterialDef('darmstadtium').modify().flags(GTMaterialFlags.GENERATE_GEAR),
 
-    new MaterialDef('depleted_thorium_fuel').dust().color(0x5E6B4A).iconSet('RADIOACTIVE').components('3x thorium, 2x protactinium, 1x uranium'),
-
     new MaterialDef('prismarine').dust().color(0x529680).iconSet('DULL').noDecomp(),
 
     new MaterialDef('beryllium').modify().singularity(),

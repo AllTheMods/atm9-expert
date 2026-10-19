@@ -14,7 +14,8 @@ ServerEvents.recipes(allthemods => {
         let gasAmount = cell.outputCount * 4000;
         let wasteAmount = cell.outputCount * 1000;
 
-        let depleted = `gtceu:depleted_${cell.input.replace(/^.*:/, '')}`;
+        let m = cell.input.replace(/^.*:/, '').match(/^(thorium(?:_berkelium)?)_(single|double|quad)$/);
+        let depleted = `gtceu:depleted_${m[2]}_${m[1]}`;
         let wasteFluid = cell.id.startsWith('berkelium')
         ? 'gtceu:thorium_berkelium_waste_solution'
         : 'gtceu:thorium_waste_solution';

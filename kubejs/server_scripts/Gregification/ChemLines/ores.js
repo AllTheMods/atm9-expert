@@ -270,8 +270,8 @@ ServerEvents.recipes(allthemods => {
         .inputFluids('#forge:oxygen 5000')
         .itemOutputs(['2x gtceu:caesium_dust', 'gtceu:potassium_calcium_orthosilicate_dust'])
         .outputFluids('gtceu:carbon_tetroxide 3000')
-        .duration(Duration)
-        .EUt(EUMercuryVenus);
+        .duration(150)
+        .EUt(LuV);
         
     allthemods.recipes.gtceu.chemical_reactor('gregification:calcium_carbonate_synthesis')
         .itemInputs('#forge:dusts/calcium_hydroxide')

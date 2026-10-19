@@ -1045,6 +1045,7 @@ ServerEvents.recipes(allthemods => {
         [
             "8x #forge:dusts/thorium_oxide",
             "4x #forge:rods/graphite",
+            '8x #forge:plates/zirconium',
             '8x #forge:plates/potassium_calcium_orthosilicate'
         ],
         [
@@ -1063,6 +1064,7 @@ ServerEvents.recipes(allthemods => {
         [
             "2x gtceu:thorium_single",
             "4x #forge:rods/graphite",
+            '8x #forge:dusts/zirconium',
             '8x #forge:plates/potassium_calcium_orthosilicate'
         ],
         [
@@ -1081,6 +1083,7 @@ ServerEvents.recipes(allthemods => {
         [
             "2x gtceu:thorium_double",
             "4x #forge:rods/graphite",
+            '8x #forge:dusts/zirconium',
             '8x #forge:plates/potassium_calcium_orthosilicate'
         ],
         [
@@ -1099,6 +1102,7 @@ ServerEvents.recipes(allthemods => {
         [
             "8x #forge:dusts/thorium_berkelium_alloy",
             "4x #forge:rods/tellurium",
+            '8x #forge:dusts/zirconium',
             '8x #forge:plates/potassium_calcium_orthosilicate'
         ],
         [
@@ -1117,6 +1121,7 @@ ServerEvents.recipes(allthemods => {
         [
             "2x gtceu:thorium_berkelium_single",
             "4x #forge:rods/tellurium",
+            '8x #forge:dusts/zirconium',
             '8x #forge:plates/potassium_calcium_orthosilicate'
         ],
         [
@@ -1135,6 +1140,7 @@ ServerEvents.recipes(allthemods => {
         [
             "2x gtceu:thorium_berkelium_double",
             "4x #forge:rods/tellurium",
+            '8x #forge:dusts/zirconium',
             '8x #forge:plates/potassium_calcium_orthosilicate'
         ],
         [

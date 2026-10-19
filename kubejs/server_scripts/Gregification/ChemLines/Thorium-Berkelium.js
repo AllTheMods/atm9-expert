@@ -19,7 +19,7 @@ ServerEvents.recipes(allthemods => {
         .inputFluids('#forge:calcium_fluoride 2000')
         .outputFluids('gtceu:fluorine 2000')
         .itemOutputs('gtceu:thorium_doped_calcium_fluoride_gem', 'gtceu:calcium_dust')
-        .duration(800)
+        .duration(400)
         .EUt(eut);
 
     // Mixer recipe for Potassium Fluoride
@@ -45,7 +45,7 @@ ServerEvents.recipes(allthemods => {
         .inputFluids('#forge:nitric_acid 2000, #forge:fluorine 4000')
         .itemOutputs('gtceu:potassium_thorium_hexafluoride_dust', 'gtceu:calcium_nitrate_dust', '2x gtceu:potassium_fluoride_dust')
         .outputFluids('gtceu:hydrofluoric_acid 2000')
-        .duration(600)
+        .duration(300)
         .EUt(eut);
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:berkelium_osmium_phosphate_precursor')
@@ -53,7 +53,7 @@ ServerEvents.recipes(allthemods => {
         .inputFluids('#forge:phosphoric_acid 1000', 'gtceu:chlorine 6000', 'minecraft:water 5000')
         .itemOutputs('gtceu:berkelium_osmium_phosphate_dust')
         .outputFluids('gtceu:acidic_osmium_solution 1000', 'gtceu:hydrochloric_acid 5000', 'gtceu:hydrogen 5000') // 5000mB for byproduct HCl
-        .duration(800)
+        .duration(400)
         .EUt(eut);
 
     //very complex reaction
@@ -63,7 +63,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('gtceu:thorium_berkelium_alloy_ingot', 'alltheores:osmium_ingot', '4x gtceu:potassium_fluoride_dust')
         .outputFluids('gtceu:hydrofluoric_acid 8000', 'gtceu:phosphoric_acid 1000')
         .blastFurnaceTemp(7200)
-        .duration(1200)
+        .duration(400)
         .EUt(eut);
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:dicalcium_trisilicate_synthesis')
@@ -80,6 +80,6 @@ ServerEvents.recipes(allthemods => {
         .inputFluids('#forge:sulfuric_acid 2000')
         .itemOutputs('2x gtceu:potassium_calcium_orthosilicate_dust','2x gtceu:calcium_sulfate_dust','3x gtceu:silicon_dioxide_dust')
         .outputFluids('gtceu:hydrofluoric_acid 4000')
-        .duration(600)
+        .duration(150)
         .EUt(eut);    
 });

@@ -237,25 +237,7 @@ ServerEvents.recipes(allthemods => {
         .chancedOutput('gtceu:plutonium_241_dust', 500, 0)
         .duration(600)
         .EUt(LuV);
-
-    const rotary = (gas, fluid, amount) => {
-        // Gas -> Liquid
-        allthemods.custom({
-            "type": "mekanism:rotary",
-            "fluidInput": { "amount": amount, "fluid": fluid },
-            "gasOutput": { "amount": amount, "gas": gas }
-        }).id(`gregification:rotary/decondensing/${gas.split(':')[1]}`);
-
-        // Liquid -> Gas
-        allthemods.custom({
-            "type": "mekanism:rotary",
-            "gasInput": { "amount": amount, "gas": gas },
-            "fluidOutput": { "amount": amount, "fluid": fluid }
-        }).id(`gregification:rotary/condensing/${gas.split(':')[1]}`);
-    };
-
-    rotary('mekanism:spent_nuclear_waste', 'gtceu:spent_nuclear_waste', 10)
-
+        
     allthemods.recipes.gtceu.large_chemical_reactor(`gregification:chemical_reactor/bio_organic_nanocomposite`)
         .itemInputs('#forge:dusts/phenylalanine', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"CaulobacterCrescentus"}').strongNBT())
         .inputFluids('#forge:phenolic_resin 1440')

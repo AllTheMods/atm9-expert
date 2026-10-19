@@ -267,6 +267,7 @@ ServerEvents.recipes(allthemods => {
 	rotary('mekanism:plutonium', 'gtceu:plutonium', 1)
 	rotary('mekanism:nuclear_waste', 'gtceu:nuclear_waste', 10)
 	rotary('mekanism:hydrofluoric_acid', 'gtceu:hydrofluoric_acid', 10)
+	rotary('mekanism:spent_nuclear_waste', 'gtceu:spent_nuclear_waste', 10)
 	//enrich('kubejs:dirty_dust_demonite', 'bloodmagic:sand_hellforged', 'dirty_demonite_to_sand');
 	
 	//igniter('iesnium',					'occultism:raw_iesnium', 				'kubejs:iesnium_chunk',			2,	'kubejs:iesnium_chunk', 		1, 0.15, 	15000 );

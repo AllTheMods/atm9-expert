@@ -29,4 +29,20 @@ ServerEvents.recipes(allthemods => {
         .outputFluids('gtceu:nuclear_waste 250')
         .duration(400)
         .EUt(nuclearPhysicsEU);
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:pellet/polonium')
+        .itemInputs('1x #forge:dusts/fluorite')
+        .inputFluids('#forge:polonium 1000', 'minecraft:water 1000')
+        .itemOutputs('mekanism:pellet_polonium')
+        .outputFluids('gtceu:spent_nuclear_waste 1000')
+        .duration(400)
+        .EUt(nuclearPhysicsEU);
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:pellet/plutonium')
+        .itemInputs('1x #forge:dusts/fluorite')
+        .inputFluids('#forge:plutonium 1000', 'minecraft:water 1000')
+        .itemOutputs('mekanism:pellet_plutonium')
+        .outputFluids('gtceu:spent_nuclear_waste 1000')
+        .duration(400)
+        .EUt(nuclearPhysicsEU);
 });
