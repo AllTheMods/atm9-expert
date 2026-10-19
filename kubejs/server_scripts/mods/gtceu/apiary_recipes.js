@@ -11,6 +11,9 @@ ServerEvents.recipes(allthemods => {
     let data = Object.keys(jsonFolder)
     let goodBeeGenes = '{bee_weather_tolerance: 2, bee_productivity: 3, bee_behavior: 2, '
 
+    // the 96 element bees (ChemLib replacements) get their apiary recipes from apiary_recipes_elements.js
+    const ELEMENT_BEES = ['actinium', 'americium', 'antimony', 'argon', 'arsenic', 'astatine', 'barium', 'berkelium', 'beryllium', 'bohrium', 'boron', 'bromine', 'cadmium', 'calcium', 'californium', 'cerium', 'cesium', 'chlorine', 'chromium', 'copernicium', 'curium', 'darmstadtium', 'dubnium', 'dysprosium', 'einsteinium', 'erbium', 'europium', 'fermium', 'flerovium', 'fluorine', 'francium', 'gadolinium', 'gallium', 'germanium', 'hafnium', 'hassium', 'helium', 'holmium', 'hydrogen', 'indium', 'iodine', 'krypton', 'lanthanum', 'lawrencium', 'lithium', 'livermorium', 'lutetium', 'magnesium', 'manganese', 'meitnerium', 'mendelevium', 'mercury', 'moscovium', 'neon', 'neptunium', 'nihonium', 'niobium', 'nitrogen', 'nobelium', 'oganesson', 'oxygen', 'phosphorus', 'plutonium', 'polonium', 'potassium', 'praseodymium', 'promethium', 'protactinium', 'radium', 'radon', 'rhenium', 'rhodium', 'roentgenium', 'rubidium', 'ruthenium', 'rutherfordium', 'samarium', 'scandium', 'seaborgium', 'selenium', 'silicium', 'sodium', 'strontium', 'tantalum', 'technetium', 'tellurium', 'tennessine', 'terbium', 'thallium', 'thorium', 'thulium', 'vanadium', 'xenon', 'ytterbium', 'yttrium', 'zirconium']
+
     function makeName(inputString) {
         let underscore = inputString.split('_')
         let returnString = ''
@@ -174,7 +177,7 @@ ServerEvents.recipes(allthemods => {
         let beeType = recipe.ingredient.split(':')[1] 
         dbgBee = beeType
 
-        if (beeType != "rancher_bee" && beeType != "ether_gas" && beeType != "hematophagous") {
+        if (beeType != "rancher_bee" && beeType != "ether_gas" && beeType != "hematophagous" && !ELEMENT_BEES.includes(beeType)) {
             let input
             let input_ii
             if (beeType == 'creeper_bee') { 

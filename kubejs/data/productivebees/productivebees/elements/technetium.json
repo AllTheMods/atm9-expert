@@ -1,0 +1,14 @@
+{
+  "primaryColor": "#848486",
+  "particleColor": "#969699",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/technetium/bee",
+  "size": 0.7,
+  "flowerTag": "forge:storage_blocks/technetium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#cde9ee",
+  "particleColor": "#e4f7fa",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/radium/bee",
+  "flowerTag": "forge:storage_blocks/radium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

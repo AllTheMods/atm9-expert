@@ -1,0 +1,38 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "type": "forge:nbt",
+      "item": "productivebees:configurable_honeycomb",
+      "nbt": {
+        "EntityTag": {
+          "type": "productivebees:neon"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "fluid": "gtceu:neon",
+      "amount": 1000
+    },
+    {
+      "item": "productivebees:wax"
+    },
+    {
+      "fluid": "productivebees:honey",
+      "amount": 50
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

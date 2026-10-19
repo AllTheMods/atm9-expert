@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#ccccda",
+  "particleColor": "#ffffff",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/lithium/bee",
+  "flowerTag": "forge:dusts/lithium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

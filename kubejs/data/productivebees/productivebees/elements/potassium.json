@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#b6a577",
+  "particleColor": "#eed587",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/potassium/bee",
+  "flowerTag": "forge:dusts/potassium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

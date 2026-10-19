@@ -1,0 +1,15 @@
+{
+  "primaryColor": "#e5dec7",
+  "particleColor": "#efe8d4",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/helium/bee",
+  "size": 0.7,
+  "translucent": true,
+  "flowerFluid": "gtceu:helium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#c4c3c2",
+  "particleColor": "#d1cfca",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/terbium/bee",
+  "flowerTag": "forge:storage_blocks/terbium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

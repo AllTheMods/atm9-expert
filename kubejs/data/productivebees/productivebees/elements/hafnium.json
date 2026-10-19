@@ -1,0 +1,14 @@
+{
+  "primaryColor": "#444784",
+  "particleColor": "#5b5e9a",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/hafnium/bee",
+  "size": 0.7,
+  "flowerTag": "forge:storage_blocks/hafnium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

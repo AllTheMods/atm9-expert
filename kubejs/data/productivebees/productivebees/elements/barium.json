@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#bfbdb2",
+  "particleColor": "#c4c3be",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/barium/bee",
+  "flowerTag": "forge:dusts/barium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

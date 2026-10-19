@@ -1,0 +1,15 @@
+{
+  "primaryColor": "#edede1",
+  "particleColor": "#f5f5ed",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/oxygen/bee",
+  "size": 0.7,
+  "translucent": true,
+  "flowerFluid": "gtceu:oxygen",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

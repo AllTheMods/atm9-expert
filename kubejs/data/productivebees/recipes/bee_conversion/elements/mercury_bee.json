@@ -1,0 +1,26 @@
+{
+  "type": "productivebees:bee_conversion",
+  "source": "productivebees:zinc",
+  "result": "productivebees:mercury",
+  "item": {
+    "item": "gtceu:mercury_bucket"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:zinc"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:mercury"
+    },
+    {
+      "type": "forge:item_exists",
+      "item": "gtceu:mercury_bucket"
+    }
+  ]
+}

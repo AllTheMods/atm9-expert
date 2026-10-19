@@ -1,0 +1,22 @@
+{
+  "type": "productivebees:bee_conversion",
+  "source": "productivebees:gadolinium",
+  "result": "productivebees:terbium",
+  "item": {
+    "tag": "forge:dusts/terbium"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:gadolinium"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:terbium"
+    }
+  ]
+}

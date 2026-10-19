@@ -1,0 +1,15 @@
+{
+  "primaryColor": "#dece8a",
+  "particleColor": "#e1d6a2",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/fermium/bee",
+  "size": 0.4,
+  "selfbreed": false,
+  "flowerTag": "forge:storage_blocks/fermium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

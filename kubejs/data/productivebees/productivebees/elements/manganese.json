@@ -1,0 +1,12 @@
+{
+  "primaryColor": "#bccddb",
+  "particleColor": "#c6dadf",
+  "beeTexture": "productivebees:textures/entity/bee/manganese/bee",
+  "flowerTag": "forge:storage_blocks/manganese",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

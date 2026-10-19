@@ -1,0 +1,22 @@
+{
+  "type": "productivebees:bee_conversion",
+  "source": "productivebees:yttrium",
+  "result": "productivebees:ytterbium",
+  "item": {
+    "tag": "forge:storage_blocks/ytterbium"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:yttrium"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:ytterbium"
+    }
+  ]
+}

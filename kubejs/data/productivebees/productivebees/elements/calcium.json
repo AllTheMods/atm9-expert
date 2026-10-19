@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#bdbbac",
+  "particleColor": "#cfcdc5",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/calcium/bee",
+  "flowerTag": "forge:dusts/calcium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

@@ -33,12 +33,12 @@ ServerEvents.recipes(allthemods => {
     let beeRemoves = [];
     let removeColored = [];
 
-    let beeMaterials = [
+    let beeMaterials = [];/*
         'arsenic', 'gallium', 'hafnium', 'chromium', 'samarium', 'lanthanum', 'lutetium',
         'iodine', 'magnesium', 'manganese', 'mercury', 'niobium', 'protactinium',
         'nitrogen', 'scandium', 'tantalum', 'tellurium', 'thallium', 'titanium',
         'redstone', 'francium', 'astatine', 'gadolinium'
-    ];
+    ];*/
    
 
     let gemMaterials = [

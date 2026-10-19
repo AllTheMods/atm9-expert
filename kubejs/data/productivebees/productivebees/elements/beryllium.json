@@ -1,0 +1,12 @@
+{
+  "primaryColor": "#a7dbb4",
+  "particleColor": "#b1e6be",
+  "beeTexture": "productivebees:textures/entity/bee/beryllium/bee",
+  "flowerTag": "forge:storage_blocks/beryllium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

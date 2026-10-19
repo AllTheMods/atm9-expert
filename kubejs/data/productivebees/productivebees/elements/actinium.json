@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#51cce8",
+  "particleColor": "#67dbf5",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/actinium/bee",
+  "flowerTag": "forge:storage_blocks/actinium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "primaryColor": "#adafe4",
+  "particleColor": "#bcbcd7",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/hydrogen/bee",
+  "size": 0.7,
+  "translucent": true,
+  "flowerFluid": "gtceu:hydrogen",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "primaryColor": "#bcadca",
+  "particleColor": "#d0c1d0",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/krypton/bee",
+  "size": 0.7,
+  "translucent": true,
+  "flowerFluid": "gtceu:krypton",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

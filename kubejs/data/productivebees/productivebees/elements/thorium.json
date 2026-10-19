@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#e6e6ea",
+  "particleColor": "#ffffff",
+  "beeTexture": "productivebees:textures/entity/bee/thorium/bee",
+  "breedingItem": "gtceu:thorium_block",
+  "flowerTag": "forge:storage_blocks/thorium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

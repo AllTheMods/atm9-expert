@@ -1,0 +1,22 @@
+{
+  "type": "productivebees:bee_conversion",
+  "source": "productivebees:lanthanum",
+  "result": "productivebees:protactinium",
+  "item": {
+    "tag": "forge:storage_blocks/protactinium"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:lanthanum"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:protactinium"
+    }
+  ]
+}

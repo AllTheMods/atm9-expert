@@ -1,0 +1,42 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "type": "forge:nbt",
+      "item": "productivebees:configurable_honeycomb",
+      "nbt": {
+        "EntityTag": {
+          "type": "productivebees:europium"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "item": "gtceu:europium_dust",
+      "chance": 0.1
+    },
+    {
+      "item": "productivebees:wax"
+    },
+    {
+      "fluid": "productivebees:honey",
+      "amount": 50
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "forge:item_exists",
+      "item": "gtceu:europium_dust"
+    }
+  ]
+}

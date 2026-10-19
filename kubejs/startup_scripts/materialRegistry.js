@@ -1967,6 +1967,37 @@ const materials = [
     new MaterialDef('purified_indium_liquor').fluid().color(0xA9C7C0).noDecomp(),
     new MaterialDef('indium_loaded_extractant').fluid().color(0xC2A66A).noDecomp(),
     new MaterialDef('zinc_raffinate').fluid().color(0xB9C2B0).noDecomp(),
+
+    //rest of the perioditic table
+    
+
+    new MaterialDef('actinium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('bohrium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('copernicium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('curium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('dubnium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('einsteinium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('erbium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('fermium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('flerovium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('hassium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('holmium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('lawrencium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('livermorium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('meitnerium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('mendelevium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('moscovium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('neptunium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('nihonium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('nobelium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('oganesson').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('roentgenium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('rutherfordium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('seaborgium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('technetium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('tennessine').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('thulium').modify().dust().ingot().fluid().noSmelting(),
+    new MaterialDef('ytterbium').modify().dust().ingot().fluid().noSmelting(),
     
 ];
 

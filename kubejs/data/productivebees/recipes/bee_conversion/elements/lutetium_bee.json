@@ -1,0 +1,22 @@
+{
+  "type": "productivebees:bee_conversion",
+  "source": "productivebees:lanthanum",
+  "result": "productivebees:lutetium",
+  "item": {
+    "tag": "forge:storage_blocks/lutetium"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:lanthanum"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:lutetium"
+    }
+  ]
+}
