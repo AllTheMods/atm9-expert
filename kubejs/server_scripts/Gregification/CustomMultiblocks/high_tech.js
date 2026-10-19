@@ -345,7 +345,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.drone_station('gregification:forbidden_search')
         .chancedInput(drone, 2500, -500)
         .itemInputs('forbidden_arcanus:dark_nether_star')
-        .chancedOutput('forbidden_arcanus:artisan_relic', 1000, 1000)
+        .chancedOutput('forbidden_arcanus:artisan_relic', 100, 100)
         .chancedOutput('forbidden_arcanus:crescent_moon', 100, 100)
         .chancedOutput('gtceu:solar_relic', 100, 100)
         .chancedOutput('forbidden_arcanus:crimson_stone', 1000, 1000)

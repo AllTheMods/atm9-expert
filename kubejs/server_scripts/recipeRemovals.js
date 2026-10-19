@@ -85,8 +85,10 @@ ServerEvents.recipes(allthemods => {
     const beeRemovals = beeRemoves.map(recipeId => ({ id: recipeId }));    
     allthemods.remove(beeRemovals);
 
+    
     const powahRemoves = [
-        'mekanism:laser_amplifier', 'mekanism:laser',
+        'mekanism:laser_amplifier', 'mekanism:laser', 'sophisticatedstorage:controller',
+        'sophisticatedstorage:stack_upgrade_omega_tier', 'sophisticatedbackpacks:stack_upgrade_omega_tier',
         'gtceu:lathe/lathe_neodymium_doped_yttrium_aluminium_garnet_plate_to_lens', 'gtceu:lathe/lathe_praseodymium_doped_yttrium_aluminium_garnet_plate_to_lens',
         'thermal_extra:machine/crystallizer/ancient_dust',
         'thermal_extra:soul_infused_dust', 'thermal_extra:shellite_dust', 'thermal_extra:twinite_dust', 'thermal_extra:dragonsteel_dust', 'thermal_extra:abyssal_dust',
