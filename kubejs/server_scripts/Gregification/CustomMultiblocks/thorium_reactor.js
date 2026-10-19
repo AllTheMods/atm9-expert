@@ -12,15 +12,17 @@ ServerEvents.recipes(allthemods => {
 
     thoriumCells.forEach(cell => {
         let gasAmount = cell.outputCount * 4000;
-        let bioresidueAmount = cell.outputCount * 1000;
+        let wasteAmount = cell.outputCount * 1000;
 
-        let depleted = `gtceu:depleted_${cell.input.split('_').pop()}`;
-
+        let depleted = `gtceu:depleted_${cell.input.replace(/^.*:/, '')}`;
+        let wasteFluid = cell.id.startsWith('berkelium')
+        ? 'gtceu:thorium_berkelium_waste_solution'
+        : 'gtceu:thorium_waste_solution';
         allthemods.recipes.gtceu.thorium_reactor(`allthemods:thorium_reactor/${cell.id}`)
             .itemInputs(cell.input)
             .itemOutputs(`${cell.outputCount}x gtceu:protactinium_dust`, depleted)
             .inputFluids('gtceu:distilled_water 16000')
-            .outputFluids([`${cell.gas} ${gasAmount}`, `gtceu:radioactive_bioresidue ${bioresidueAmount}`])
+            .outputFluids([`${cell.gas} ${gasAmount}`, `${wasteFluid} ${wasteAmount}`])
             .duration(cell.duration)
             .EUt(-cell.eu);
     });
@@ -42,6 +44,7 @@ ServerEvents.recipes(allthemods => {
         .duration(600)
         .EUt(LuV);
 
+    /*
     allthemods.recipes.gtceu.macerator('gregification:macerate_depleted_thorium_fuel')
         .itemInputs('gtceu:depleted_single')
         .itemOutputs('6x gtceu:depleted_thorium_fuel_dust')
@@ -59,5 +62,6 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('24x gtceu:depleted_thorium_fuel_dust')
         .duration(400)
         .EUt(IV);
+    */
 });
 

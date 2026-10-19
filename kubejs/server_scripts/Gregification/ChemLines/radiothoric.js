@@ -25,7 +25,7 @@ ServerEvents.recipes(allthemods => {
             'gtceu:radium_acetate 600',
             'gtceu:astatine_acetate 600',
             'gtceu:francium_acetate 600',
-            'gtceu:radioactive_bioresidue 200' // Moved here as a fluid
+            'gtceu:thorium_phosphate_solution 200' // Moved here as a fluid
         )
         .duration(600).EUt(RadioEUComplex); // UV Tier
 
@@ -70,9 +70,9 @@ ServerEvents.recipes(allthemods => {
 
 
     // 3. ELECTROLYZE THE RADIOACTIVE BIORESIDUE (Correct 8-part ratio)
-    allthemods.recipes.gtceu.electrolyzer('gregification:electrolyze_radioactive_bioresidue')
+    allthemods.recipes.gtceu.electrolyzer('gregification:electrolyze_thorium_phosphate_solution')
         .itemInputs('7x #forge:dusts/carbon')
-        .inputFluids('#forge:radioactive_bioresidue 8000')
+        .inputFluids('#forge:thorium_phosphate_solution 8000')
         .itemOutputs('2x gtceu:protactinium_dust', '6x gtceu:thorium_dust', '4x gtceu:phosphorus_pentoxide_dust')
         .outputFluids('gtceu:carbon_tetroxide 7000')
         .duration(400).EUt(RadioEUComplex);

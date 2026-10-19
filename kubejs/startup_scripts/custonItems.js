@@ -99,6 +99,20 @@ StartupEvents.registry('item', event => {
         { name: 'charm', description: '§eLuminous second-generation quark.', rarity: 'UNCOMMON' }
     ];
 
+    event.create('gtceu:polonium_beryllium_neutron_source')
+        .displayName('Polonium Beryllium Neutron Emitter')
+        .rarity('ie_masterwork')
+        .tooltip('§7A Polonium beryllium neutron emitter.');
+            
+    event.create('gtceu:americium_beryllium_neutron_source')
+        .displayName('Americium Beryllium Neutron Emitter')
+        .rarity('ie_masterwork')
+        .tooltip('§7An Americium beryllium neutron emitter.');
+
+    event.create('gtceu:californium_neutron_source')
+        .displayName('Californium Neutron Emitter')
+        .rarity('ie_masterwork')
+        .tooltip('§7A Californium neutron emitter.');
 
     event.create('gtceu:preon')
         .displayName('Preon')
@@ -220,20 +234,35 @@ StartupEvents.registry('item', event => {
         .displayName('Samarium Cobalt Magnetic Rotor')
         .tooltip('§7A Samarium Cobalt Magnetic Rotor.')
 
-    event.create('gtceu:depleted_single')
-        .displayName('Single Depleted Fuel Cell')
+    event.create('gtceu:depleted_single_thorium')
+        .displayName('Single Depleted Thorium Fuel Cell')
         .rarity('RARE')
-        .tooltip('§7A Single depleted fuel cell.')
+        .tooltip('§7A Single depleted thorium fuel cell.')
 
-    event.create('gtceu:depleted_double')
-        .displayName('Double Depleted Fuel Cell')
+    event.create('gtceu:depleted_double_thorium')
+        .displayName('Double Depleted Thorium Fuel Cell')
         .rarity('RARE')
-        .tooltip('§7A Double depleted fuel cell.')
+        .tooltip('§7A Double depleted thorium fuel cell.')
 
-    event.create('gtceu:depleted_quad')
-        .displayName('Quad Depleted Fuel Cell')
+    event.create('gtceu:depleted_quad_thorium')
+        .displayName('Quad Depleted Thorium Fuel Cell')
         .rarity('RARE')
-        .tooltip('§7A Quad depleted fuel cell.')
+        .tooltip('§7A Quad depleted thorium fuel cell.')
+
+     event.create('gtceu:depleted_single_thorium_berkelium')
+        .displayName('Single Depleted Thorium Berkelium Fuel Cell')
+        .rarity('RARE')
+        .tooltip('§7A Single depleted thorium berkelium fuel cell.')
+
+    event.create('gtceu:depleted_double_thorium_berkelium')
+        .displayName('Double Depleted Thorium Berkelium Fuel Cell')
+        .rarity('RARE')
+        .tooltip('§7A Double depleted thorium berkelium fuel cell.')
+
+    event.create('gtceu:depleted_quad_thorium_berkelium')
+        .displayName('Quad Depleted Thorium Berkelium Fuel Cell')
+        .rarity('RARE')
+        .tooltip('§7A Quad depleted thorium berkelium fuel cell.')
 
 })
 

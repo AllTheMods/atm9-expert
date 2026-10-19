@@ -393,7 +393,7 @@ ServerEvents.recipes(allthemods => {
 		[
 			'gtceu:network_casing',
             '2x #gtceu:circuits/mv',
-            '8x #forge:plates/signalum',
+            '8x #forge:plates/soularium',
             'botania:rune_mana',
             'occultism:research_fragment_dust'
 		],

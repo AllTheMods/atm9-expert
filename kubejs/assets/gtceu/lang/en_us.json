@@ -277,7 +277,7 @@
     "material.gtceu.radium_acetate": "Radium Acetate",
     "material.gtceu.astatine_acetate": "Astatine Acetate",
     "material.gtceu.francium_acetate": "Francium Acetate",
-    "material.gtceu.radioactive_bioresidue": "Radioactive Bioresidue",
+    "material.gtceu.thorium_phosphate_solution": "Thorium Phosphate Solution",
     "material.gtceu.calaverite": "Calaverite",
     "material.gtceu.sodium_tellurite": "Sodium Tellurite",
     "material.gtceu.tellurous_acid": "Tellurous Acid",
@@ -893,6 +893,9 @@
     "material.gtceu.hydrobromic_acid": "Hydrobromic Acid",
     "material.gtceu.crude_bromine_solution": "Crude Bromine Solution",
     "material.gtceu.super_critical_steam": "Super Critical Steam",
-    "material.gtceu.andesite_alloy": "Andesite Alloy"
+    "material.gtceu.andesite_alloy": "Andesite Alloy",
+    "material.gtceu.thorium_waste_solution": "Thorium Waste Solution",
+    "material.gtceu.thorium_berkelium_waste_solution": "Thorium Berkelium Waste Solution",
+    "material.gtceu.nuclear_waste": "Nuclear Waste"
     
 }

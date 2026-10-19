@@ -4,7 +4,9 @@ ServerEvents.recipes(allthemods => {
     const steam = 'gtceu:super_critical_steam 1000'
     const plasmaExchnage = 16
     const plasmaExchangeDuration = 60
-    const plasmas = ['tin', 'iron', 'nickel', 'nitrogen', 'argon', 'americium', 'helium', 'oxygen', 'naquadria_stage_4', 'antimatter', 'naquadria_stage_3', 'naquadria_stage_2', 'naquadria_awakened', 'calcium', 'californium', 'oganesson'];
+    const plasmas = ['tin', 'iron', 'nickel', 'nitrogen', 'argon', 'americium', 'helium', 'oxygen', 
+        'naquadria_stage_4', 'antimatter', 'naquadria_stage_3', 'naquadria_stage_2', 'naquadria_awakened', 
+        'calcium', 'californium', 'oganesson', 'zinc', 'plutonium'];
 
     plasmas.forEach(plasma => {
         allthemods.recipes.gtceu.super_critical_heat_exchanger(`gregification:sche/${plasma}_cooling`)

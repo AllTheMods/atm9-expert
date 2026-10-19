@@ -654,7 +654,7 @@ const materials = [
 
     new MaterialDef('francium_acetate').fluid().color(0xFFF2DC).iconSet('FLUID').noDecomp().formula('Fr(C2H3O2)2').components('2x acetic_acid, 1x francium'),
 
-    new MaterialDef('radioactive_bioresidue').fluid().color(0x4B3621).iconSet('RADIOACTIVE').noDecomp().formula('ThPO6').components('1x thorium, 1x phosphorus, 6x oxygen'),
+    new MaterialDef('thorium_phosphate_solution').fluid().color(0x4B3621).iconSet('RADIOACTIVE').noDecomp().formula('ThPO6').components('1x thorium, 1x phosphorus, 6x oxygen'),
 
     new MaterialDef('germanium_tetrachloride').fluid().color(0x73877B).iconSet('FLUID').noDecomp().formula('GeCl4').components('1x germanium, 4x chlorine'),
 
@@ -1824,15 +1824,19 @@ const materials = [
 
     new MaterialDef('calcium').modify().fluid().plasma(),
 
+    new MaterialDef('zinc').modify().plasma(),
+
+    new MaterialDef('plutonium').modify().plasma(),
+
     new MaterialDef('strontium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsAll().blastCoil(COIL_TEMPS.NAQUADAH),
 
     new MaterialDef('tellurium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.DRACONIUM),
 
     new MaterialDef('californium').modify().plasma().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED),
 
-    new MaterialDef('berkelium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),
+    new MaterialDef('berkelium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().plasma().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),
 
-    new MaterialDef('polonium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid(),
+    new MaterialDef('polonium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().dust().ingot(),
 
     new MaterialDef('selenium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().polymerMod().materialsBasic(),
 
@@ -1997,11 +2001,11 @@ const materials = [
     new MaterialDef('actinium').modify().dust().ingot().fluid().materialsBasic(),
     new MaterialDef('bohrium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
     new MaterialDef('copernicium').modify().fluid(),
-    new MaterialDef('curium').modify().dust().ingot().fluid().noSmelting().materialsBasic(), //chemical reaction
+    new MaterialDef('curium').modify().dust().ingot().fluid().plasma().noSmelting().materialsBasic(), //chemical reaction
     new MaterialDef('dubnium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
     new MaterialDef('einsteinium').modify().dust().ingot().fluid().materialsBasic(),
     new MaterialDef('erbium').modify().dust().ingot().fluid().noSmelting().materialsBasic(), //chemical reaction
-    new MaterialDef('fermium').modify().fluid(),
+    new MaterialDef('fermium').modify().fluid().dust(),
     new MaterialDef('flerovium').modify().dust().ingot().fluid().gas().noSmelting().materialsBasic(),
     new MaterialDef('hassium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
     new MaterialDef('holmium').modify().dust().ingot().fluid().noSmelting().materialsBasic(),    //chemical reaction
@@ -2024,6 +2028,11 @@ const materials = [
     new MaterialDef('ytterbium').modify().dust().ingot().fluid().materialsBasic(),
 
     new MaterialDef('super_critical_steam').fluid().gas().color(0xE8B8A0).iconSet('FLUID').components('2x hydrogen, 1x oxygen').formula('H2O').noDecomp(),
+
+    //nuclear materials rework
+    new MaterialDef('thorium_waste_solution').fluid().color(0xB89A3C).iconSet('RADIOACTIVE'),
+    new MaterialDef('thorium_berkelium_waste_solution').fluid().color(0x8A4FB5).iconSet('RADIOACTIVE'),
+    new MaterialDef('nuclear_waste').fluid().color(0xB8D13A).iconSet('RADIOACTIVE'),
     
 ];
 
