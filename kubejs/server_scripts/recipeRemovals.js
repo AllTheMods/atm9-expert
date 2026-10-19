@@ -87,6 +87,7 @@ ServerEvents.recipes(allthemods => {
 
     
     const powahRemoves = [
+        'ars_nouveau:source_gem_block',
         'mekanism:laser_amplifier', 'mekanism:laser', 'sophisticatedstorage:controller',
         'sophisticatedstorage:stack_upgrade_omega_tier', 'sophisticatedbackpacks:stack_upgrade_omega_tier',
         'gtceu:lathe/lathe_neodymium_doped_yttrium_aluminium_garnet_plate_to_lens', 'gtceu:lathe/lathe_praseodymium_doped_yttrium_aluminium_garnet_plate_to_lens',

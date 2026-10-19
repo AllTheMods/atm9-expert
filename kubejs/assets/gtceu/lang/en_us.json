@@ -881,6 +881,10 @@
     "material.gtceu.neodymium_praseodymium_iron_boron": "Neodymium Praseodymium Iron Boron (Standard NdFeB)",
     "material.gtceu.magnetic_neodymium_dysprosium": "Magnetic Neodymium Dysprosium",
     "material.gtceu.magnetic_neodymium_terbium": "Magnetic Neodymium Terbium",
-    "material.gtceu.blazing_soularium": "Blazing Soularium"
+    "material.gtceu.blazing_soularium": "Blazing Soularium",
+    "material.gtceu.clarified_moon_mud": "Clarified Moon Mud",
+    "material.gtceu.moon_brine": "Moon Brine",
+    "material.gtceu.kreep_concentrate": "Kreep Concentrate",
+    "material.gtceu.moon_silica_residue": "Moon Silica Residue"
     
 }

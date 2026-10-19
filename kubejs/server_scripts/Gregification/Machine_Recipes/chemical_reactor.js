@@ -236,6 +236,7 @@ ServerEvents.recipes(allthemods => {
     addChemical('gtceu:crystallized_seed', 'gtceu:refined_seed_oil 1000', null, 'gtceu:crystallized_oil 1000', EV, 600, 'refined_seed_oil')
     addChemical('gtceu:empowered_seed', 'gtceu:crystallized_oil 1000', null, 'gtceu:empowered_oil 1000', EV, 600, 'empowered_seed_oil')
 
+
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/pr_yag_dope')
         .itemInputs('#forge:dusts/yttrium_aluminium_garnet', '#forge:dusts/praseodymium_oxide')
         .itemOutputs('gtceu:praseodymium_doped_yttrium_aluminium_garnet_dust', 'gtceu:yttrium_oxide_dust')

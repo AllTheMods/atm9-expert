@@ -1893,6 +1893,14 @@ const materials = [
 
     //new chemlines
 
+    //bromine
+    new MaterialDef('acidified_brine').fluid().color(0x8FA88C).iconSet('FLUID').noDecomp(),
+    new MaterialDef('bromine_laden_brine').fluid().color(0xA8743C).iconSet('FLUID').noDecomp(),
+    new MaterialDef('bromine_laden_air').fluid().gas().color(0xC47A3A).iconSet('FLUID').noDecomp(),
+    new MaterialDef('debrominated_brine').fluid().color(0x9DB0A3).iconSet('FLUID').noDecomp(),
+    new MaterialDef('hydrobromic_acid').fluid().color(0xD08F5B).iconSet('FLUID').components('1x hydrogen, 1x bromine').formula('HBr').noDecomp(),
+    new MaterialDef('crude_bromine_solution').fluid().color(0x9C4A2A).iconSet('FLUID').noDecomp(),
+
     //moon stone line
     new MaterialDef('sodium_formate').dust().color(0xE3DCCB).iconSet('DULL').formula('HCOONa').components('1x sodium, 1x carbon, 1x hydrogen, 2x oxygen'),    
     new MaterialDef('sodium_oxalate').dust().color(0xDDD5C2).iconSet('DULL').formula('Na2C2O4').components('2x sodium, 2x carbon, 4x oxygen'),    
