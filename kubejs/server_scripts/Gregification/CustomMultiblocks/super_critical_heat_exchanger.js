@@ -6,7 +6,8 @@ ServerEvents.recipes(allthemods => {
     const plasmaExchangeDuration = 60
     const plasmas = ['tin', 'iron', 'nickel', 'nitrogen', 'argon', 'americium', 'helium', 'oxygen', 
         'naquadria_stage_4', 'antimatter', 'naquadria_stage_3', 'naquadria_stage_2', 'naquadria_awakened', 
-        'calcium', 'californium', 'oganesson', 'zinc', 'plutonium'];
+        'calcium', 'californium', 'oganesson', 'zinc', 'plutonium',
+        'chromium', 'curium', 'berkelium'];
 
     plasmas.forEach(plasma => {
         allthemods.recipes.gtceu.super_critical_heat_exchanger(`gregification:sche/${plasma}_cooling`)

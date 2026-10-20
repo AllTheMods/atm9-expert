@@ -1021,4 +1021,53 @@ ServerEvents.recipes(allthemods => {
         LuV,
         "quarryplus:mover", 128
     );
+
+    allthemods.recipes.gtceu.assembly_line('gregification:craft_neutron_irradiator')
+        .itemInputs(
+            'gtceu:luv_machine_hull',
+            '2x #gtceu:circuits/luv',
+            '2x gtceu:luv_emitter',
+            '2x gtceu:luv_field_generator',
+            '4x gtceu:luv_electric_pump',
+            '4x #forge:plates/tungsten_steel',
+            '8x #forge:rods/tungsten_steel',
+            '4x #forge:frames/scandium',
+            'gtceu:polonium_beryllium_neutron_source'
+        )
+        .inputFluids('#forge:soldering_alloy 1000')
+        .itemOutputs('gtceu:neutron_irradiator')
+        .scannerResearch('gtceu:polonium_beryllium_neutron_source')
+        .duration(600)
+        .EUt(LuV);
+
+    allthemods.recipes.gtceu.assembly_line('gregification:craft_super_critical_heat_exchanger')
+        .itemInputs(
+            'gtceu:uv_machine_hull',
+            '2x #gtceu:circuits/uv',
+            '4x gtceu:uv_electric_pump',
+            '2x gtceu:uv_fluid_regulator',
+            '8x gtceu:heat_exchange_casing',
+            '4x gtceu:gadolinium_casing',
+            '4x #forge:frames/draconium_awakened'
+        )
+        .inputFluids('#forge:soldering_alloy 2000', '#forge:super_coolant 1000')
+        .itemOutputs('gtceu:super_critical_heat_exchanger')
+        .duration(1200)
+        .EUt(UV);
+
+    addAssemblyLine('gtceu:heat_exchange_casing',
+        [
+            'gtceu:zpm_machine_hull',
+            '8x #forge:plates/gadolinium',
+            '8x #forge:plates/rhodium_plated_palladium',
+            '4x #forge:rods/long/hafnium',
+            '2x #gtceu:circuits/zpm'
+        ],
+        [
+            '#forge:thermal_coolant 1440',
+            '#forge:soldering_alloy 1440'
+        ],
+        mekLong,
+        ZPM
+    );
 });
