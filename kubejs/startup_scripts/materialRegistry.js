@@ -974,7 +974,7 @@ const materials = [
 
     new MaterialDef('potassium_selenide').dust().color(0xE8E8E8).iconSet('DULL').formula('K2Se').components('2x potassium, 1x selenium'),
 
-    new MaterialDef('stromeyerite').dust().color(0x4A4A4A).iconSet('METALLIC').noDecomp().formula('AgCuS').components('1x silver, 1x copper, 1x sulfur'),
+    new MaterialDef('stromeyerite').dust().color(0x4A4A4A).iconSet('METALLIC').formula('AgCuS').components('1x silver, 1x copper, 1x sulfur'),
 
     new MaterialDef('thallium_monoselenide').dust().color(0x5C5C5C).iconSet('METALLIC').noDecomp().formula('TlSe').components('1x thallium, 1x selenium'),
 
@@ -1979,7 +1979,7 @@ const materials = [
     new MaterialDef('ruthenium_tetroxide_solution').fluid().color(0x7A8F5A).noDecomp(),
     new MaterialDef('rhodium_sponge').dust().color(0xA9AFB8).iconSet('METALLIC').noDecomp().components('1x rhodium'),
     new MaterialDef('rhodium_salt').dust().color(0xC25A5A).iconSet('DULL').noDecomp().components('1x rhodium, 3x chlorine'),
-    new MaterialDef('zinc_sulfate').dust().color(0xBFC9C2).iconSet('DULL').noDecomp().components('1x zinc, 1x sulfur, 4x oxygen'),
+    new MaterialDef('zinc_sulfate').dust().color(0xBFC9C2).iconSet('DULL').components('1x zinc, 1x sulfur, 4x oxygen'),
     new MaterialDef('iridium_dioxide').dust().color(0x2F3A4A).iconSet('DULL').noDecomp().components('1x iridium, 2x oxygen'),
     new MaterialDef('fused_pgm_melt').dust().color(0x8A4F2E).iconSet('DULL').noDecomp(),
     new MaterialDef('sodium_ruthenate_liquor').fluid().color(0x3F7A55).noDecomp(),
@@ -2059,6 +2059,12 @@ const materials = [
     new MaterialDef('einsteinium_255').dust().color(0x5EB0A0).iconSet('RADIOACTIVE').components('1x einsteinium').formula('Es²⁵⁵'),
     new MaterialDef('curium_fluoride').dust().color(0xD9C7E6).iconSet('DULL').components('1x curium, 3x fluorine').noDecomp(),
     
+    //perovskite photovoltaic cell
+    new MaterialDef('caesium_bromide').dust().color(0xE6DDF0).iconSet('DULL').formula('CsBr').components('1x caesium, 1x bromine'),
+    new MaterialDef('caesium_chloride').dust().color(0xD9E3EE).iconSet('DULL').formula('CsCl').components('1x caesium, 1x chlorine'),
+    new MaterialDef('indium_tin_oxide').dust().color(0xB8C77A).iconSet('DULL').noDecomp().formula('In2O3·SnO2').components('9x indium_iii_oxide, 1x cassiterite'),
+    new MaterialDef('perovskite_ink').fluid().color(0xE08A2E).iconSet('FLUID').noDecomp().formula('CsPbBr3·C2H6O').components('1x caesium, 1x lead, 3x bromine, 2x carbon, 6x hydrogen, 1x oxygen'),    	
+    new MaterialDef('caesium_lead_bromide').dust().color(0xD9731A).iconSet('DULL').formula('CsPbBr3').components('1x caesium, 1x lead, 3x bromine'),
 ];
 
 

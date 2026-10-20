@@ -904,6 +904,10 @@
     "material.gtceu.digested_transuranics": "Digested Transuranics",
     "gtceu.neutron_irradiator": "Neutron Irradiator",
     "block.gtceu.neutron_irradiator": "Neutron Irradiator",
+    "gtceu.lunarium_generator": "Lunarium Generator",
+    "block.gtceu.lunarium_generator": "Lunarium Generator",
+    "gtceu.sunnarium_generator": "Sunnarium Generator",
+    "block.gtceu.sunnarium_generator": "Sunnarium Generator",
     "material.gtceu.molybdenum_99": "Molybdenum 99",
     "material.gtceu.radium_227": "Radium 227",
     "material.gtceu.ion_adsorption_clay": "Ion Adsorption Clay",
@@ -922,6 +926,10 @@
     "material.gtceu.berkelium_250": "Berkelium 250",
     "material.gtceu.californium_253": "Californium 253",
     "material.gtceu.einsteinium_255": "Einsteinium 255",
-    "material.gtceu.curium_fluoride": "Curium Fluoride"
-    
+    "material.gtceu.curium_fluoride": "Curium Fluoride",
+    "material.gtceu.caesium_bromide": "Caesium Bromide",
+    "material.gtceu.caesium_chloride": "Caesium Chloride",
+    "material.gtceu.indium_tin_oxide": "Indium Tin Oxide",
+    "material.gtceu.perovskite_ink": "Perovskite Ink",
+    "material.gtceu.caesium_lead_bromide": "Caesium Lead Bromide"
 }

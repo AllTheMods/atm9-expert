@@ -73,6 +73,7 @@ ServerEvents.recipes(allthemods => {
         { name: 'meitnerium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
 
     ];
+    
 
     freezing.forEach(entry => {
         const mod = entry.mod || 'gtceu';
@@ -83,6 +84,8 @@ ServerEvents.recipes(allthemods => {
             .EUt(entry.eut);
         if (entry.coolant) r.inputFluids(entry.coolant);
     });
+
+    addEBF('2x #forge:dusts/indium_hydroxide', null, '1x gtceu:indium_iii_oxide_dust', 'gtceu:steam 3000', COIL_TEMPS.HSS_G, 300, IV, 1, 'indium_oxide_calcination');
 
     allthemods.recipes.gtceu.electric_blast_furnace('gregification:smelting/allthemodium_ingot')
         .notConsumable('forbidden_arcanus:artisan_relic')

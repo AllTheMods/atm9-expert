@@ -45,7 +45,7 @@ ServerEvents.recipes(allthemods => {
     tiers.forEach(tier => {
         allthemods.shaped(`gtceu:${tier}_sunnarium_generator`,
             [
-                'DCD',
+                'DGD',
                 'MHM',
                 'DCD'
             ],
@@ -53,13 +53,14 @@ ServerEvents.recipes(allthemods => {
                 H: `gtceu:${tier}_machine_hull`,
                 C: `#gtceu:circuits/${tier}`,
                 M: '#forge:plates/mithril',
-                D: '#forge:double_plates/sunnarium'
+                D: '#forge:double_plates/sunnarium',
+                G: 'gtceu:perovskite_photovoltaic_cell'
             }
         ).id(`gregification:solar_generator/${tier}_sunnarium_generator`);
 
         allthemods.shaped(`gtceu:${tier}_lunarium_generator`,
             [
-                'DCD',
+                'DGD',
                 'MHM',
                 'DCD'
             ],
@@ -67,7 +68,8 @@ ServerEvents.recipes(allthemods => {
                 H: `gtceu:${tier}_machine_hull`,
                 C: `#gtceu:circuits/${tier}`,
                 M: '#forge:plates/mithril',
-                D: '#forge:double_plates/lunarium'
+                D: '#forge:double_plates/lunarium',
+                G: 'gtceu:perovskite_photovoltaic_cell'
             }
         ).id(`gregification:solar_generator/${tier}_lunarium_generator`);
     });

@@ -518,6 +518,63 @@ ServerEvents.recipes(allthemods => {
     );
 
     
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:indium/precipitate_hydroxide')
+        .itemInputs('4x #forge:dusts/indium', '12x #forge:dusts/sodium_hydroxide')
+        .inputFluids('#forge:sulfuric_acid 6000')
+        .itemOutputs('4x gtceu:indium_hydroxide_dust', '6x gtceu:sodium_sulfate_dust')
+        .outputFluids('gtceu:hydrogen 12000')
+        .duration(400)
+        .EUt(IV);
+        
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:perovskite/caesium_hydroxide')
+        .itemInputs('2x #forge:dusts/caesium')
+        .inputFluids('minecraft:water 2000')
+        .itemOutputs('2x gtceu:caesium_hydroxide_dust')
+        .outputFluids('gtceu:hydrogen 2000')
+        .duration(400)
+        .EUt(IV);
 
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:perovskite/lead_chloride')
+        .itemInputs('2x gtceu:lead_sulfate_cake_dust')
+        .inputFluids('#forge:hydrochloric_acid 4000')
+        .itemOutputs('2x gtceu:lead_chloride_dust')
+        .outputFluids('gtceu:sulfuric_acid 2000')
+        .duration(400)
+        .EUt(IV);
 
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:perovskite/caesium_bromide')
+        .itemInputs('2x #forge:dusts/caesium_hydroxide')
+        .inputFluids('#forge:hydrobromic_acid 2000')
+        .itemOutputs('2x gtceu:caesium_bromide_dust')
+        .outputFluids('minecraft:water 2000')
+        .duration(400)
+        .EUt(IV);
+            
+    allthemods.recipes.gtceu.dissolution_tank('gregification:perovskite/ink')
+        .itemInputs('2x #forge:dusts/lead_chloride', '6x #forge:dusts/caesium_bromide')
+        .inputFluids('#forge:ethanol 2000')
+        .itemOutputs('4x gtceu:caesium_chloride_dust')
+        .outputFluids('gtceu:perovskite_ink 2000')
+        .addData('ebf_temp', COIL_TEMPS.HSS_G)
+        .duration(400)
+        .EUt(IV);
+        
+    allthemods.recipes.gtceu.distillation_tower('gregification:perovskite/crystallize')
+        .inputFluids('#forge:perovskite_ink 2000')
+        .itemOutputs('2x gtceu:caesium_lead_bromide_dust')
+        .outputFluids('gtceu:ethanol 2000')
+        .duration(400)
+        .EUt(IV);
+    
+    allthemods.recipes.gtceu.assembler('gregification:perovskite/photovoltaic_cell')
+        .itemInputs('solarflux:photovoltaic_cell_4',
+            '2x gtceu:tempered_glass',
+            '2x #forge:dusts/indium_tin_oxide',
+            '2x #forge:dusts/caesium_lead_bromide',
+            '4x #forge:foils/silver')
+        .inputFluids('#forge:polytetrafluoroethylene 288')
+        .itemOutputs('gtceu:perovskite_photovoltaic_cell')
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(600)
+        .EUt(LuV);
 });

@@ -21,6 +21,11 @@ StartupEvents.registry('item', event => {
         .tooltip('A relic imbued with the power of the sun.')
         .rarity('ie_masterwork')
 
+    event.create('gtceu:perovskite_photovoltaic_cell')
+        .displayName('Perovskite Photovoltaic Cell')
+        .tooltip('A highly efficient solar cell made from perovskite.')
+        .rarity('ie_masterwork')
+
     event.create('gtceu:sunnarium_core')
         .displayName('Sunnarium Core')
         .tooltip('A core imbued with the power of the sun.')
