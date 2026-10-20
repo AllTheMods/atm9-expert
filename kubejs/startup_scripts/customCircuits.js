@@ -17,6 +17,18 @@ global.circuitFamilies = [
     { id: 'antimatter', name: 'Antimatter', tier: 'max' }
 ]
 
+global.circuitSocs = [
+    { id: 'quantum',       name: 'Quantum',       tier: 'luv', madeIn: 'uv'  },
+    { id: 'wetware',       name: 'Wetware',       tier: 'zpm', madeIn: 'uhv' },
+    { id: 'bioware',       name: 'Bioware',       tier: 'uv',  madeIn: 'uev' },
+    { id: 'optical',       name: 'Optical',       tier: 'uhv', madeIn: 'uiv' },
+    { id: 'photonic',      name: 'Photonic',      tier: 'uev', madeIn: 'uxv' },
+    { id: 'bioengineered', name: 'Bioengineered', tier: 'uiv', madeIn: 'opv' },
+    { id: 'chaotic',       name: 'Chaotic',       tier: 'uxv', madeIn: 'max' },
+    { id: 'naquadric',     name: 'Naquadric',     tier: 'opv', madeIn: 'max', exotic: true },
+    { id: 'antimatter',    name: 'Antimatter',    tier: 'max', madeIn: 'max', exotic: true }
+]
+
 global.circuitItemName = (family, stage) => `${family.id}_processor${stage.idSuffix}`
 
 
@@ -29,9 +41,9 @@ StartupEvents.registry('item', allthemods => {
 
 
     const tierCodes = {
-        zpm: '7ZPM', uv: 'eUV', uhv: '4UHV',
-        uev: '9UEV', uiv: 'bUIV', uxv: 'dUXV',
-        opv: 'fOpV', max: 'fMAX'
+        luv: '5LuV', zpm: '7ZPM', uv: 'eUV', 
+        uhv: '4UHV', uev: '9UEV', uiv: 'bUIV', 
+        uxv: 'dUXV', opv: 'fOpV', max: 'fMAX'
     }
     const tierLabel = id => `§${tierCodes[id]}§7`
 
@@ -46,7 +58,18 @@ StartupEvents.registry('item', allthemods => {
         })
     })
 
-    const partTiers = [
+    // SoCs: named after the circuit family of their tier, textures are
+    // kubejs/assets/gtceu/textures/item/<id>_soc.png (auto-resolved, no .texture() call)
+    global.circuitSocs.forEach(soc => {
+        const item = allthemods.create(`gtceu:${soc.id}_soc`)
+            .displayName(`${soc.name} SoC`)
+            .tooltip(`${tierLabel(soc.tier)}-Tier SoC`)
+            .tooltip(`Assembled in ${tierLabel(soc.madeIn)} machines`)
+        if (soc.exotic) item.tooltip('§5Requires exotic materials')
+    })
+
+    // Voltage coils keep their old placeholder names and colours
+    const coilTiers = [
         { id: 'uhv', name: 'Neutronium', color: 0xC7C7C7 },
         { id: 'uev', name: 'Eternal', color: 0x4ECAB1 },
         { id: 'uiv', name: 'Cosmic', color: 0xFFC94D },
@@ -55,13 +78,7 @@ StartupEvents.registry('item', allthemods => {
         { id: 'max', name: 'Absolute', color: 0xFFFFFF }
     ]
 
-    partTiers.forEach(tier => {
-        allthemods.create(`gtceu:${tier.id}_soc`)
-            .texture('gtceu:item/crystal_soc')
-            .color(0, tier.color)
-            .displayName(`${tier.name} SoC Chip`)
-            .tooltip(`${tierLabel(tier.id)}-Tier SoC Chip`)
-
+    coilTiers.forEach(tier => {
         allthemods.create(`gtceu:${tier.id}_voltage_coil`)
             .texture('gtceu:item/ulv_voltage_coil')
             .color(0, tier.color)
