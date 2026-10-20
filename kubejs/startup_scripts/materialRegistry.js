@@ -2040,6 +2040,18 @@ const materials = [
 
     new MaterialDef('molybdenum_99').dust().color(0x5E7FA8).iconSet('RADIOACTIVE').components('1x molybdenum').formula('Mo⁹⁹'),
     new MaterialDef('radium_227').dust().color(0x7FC9A0).iconSet('RADIOACTIVE').components('1x radium').formula('Ra²²⁷'),
+
+    new MaterialDef('ion_adsorption_clay').dust().color(0xC9A27A).iconSet('DULL').components('1x clay'),
+    new MaterialDef('rare_earth_clay_mud').dust().color(0x9C7F63).iconSet('DULL'),
+    new MaterialDef('diluted_rare_earth_clay_mud').dust().color(0xB59A7E).iconSet('DULL'),
+    new MaterialDef('erbium_oxide').dust().color(0xE8A0B8).iconSet('DULL').components('2x erbium, 3x oxygen').noDecomp(),
+    new MaterialDef('holmium_oxide').dust().color(0xE6C48A).iconSet('DULL').components('2x holmium, 3x oxygen').noDecomp(),
+    new MaterialDef('thulium_oxide').dust().color(0xA9D8C4).iconSet('DULL').components('2x thulium, 3x oxygen').noDecomp(),
+    new MaterialDef('ytterbium_oxide').dust().color(0xD9D2A6).iconSet('DULL').components('2x ytterbium, 3x oxygen').noDecomp(),
+    new MaterialDef('erbium_fluoride').dust().color(0xD6A8C4).iconSet('DULL').components('1x erbium, 3x fluorine').noDecomp(),
+    new MaterialDef('holmium_fluoride').dust().color(0xD9B77A).iconSet('DULL').components('1x holmium, 3x fluorine').noDecomp(),
+    new MaterialDef('thulium_fluoride').dust().color(0x93C9B3).iconSet('DULL').components('1x thulium, 3x fluorine').noDecomp(),
+    new MaterialDef('lanthanum_oxide').dust().color(0xC9CFA8).iconSet('DULL').components('2x lanthanum, 3x oxygen'),
     
 ];
 

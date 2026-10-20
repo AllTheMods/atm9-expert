@@ -905,6 +905,17 @@
     "gtceu.neutron_irradiator": "Neutron Irradiator",
     "block.gtceu.neutron_irradiator": "Neutron Irradiator",
     "material.gtceu.molybdenum_99": "Molybdenum 99",
-    "material.gtceu.radium_227": "Radium 227"
+    "material.gtceu.radium_227": "Radium 227",
+    "material.gtceu.ion_adsorption_clay": "Ion Adsorption Clay",
+    "material.gtceu.rare_earth_clay_mud": "Rare Earth Clay Mud",
+    "material.gtceu.diluted_rare_earth_clay_mud": "Diluted Rare Earth Clay Mud",
+    "material.gtceu.erbium_oxide": "Erbium Oxide",
+    "material.gtceu.holmium_oxide": "Holmium Oxide",
+    "material.gtceu.thulium_oxide": "Thulium Oxide",
+    "material.gtceu.ytterbium_oxide": "Ytterbium Oxide",
+    "material.gtceu.erbium_fluoride": "Erbium Fluoride",
+    "material.gtceu.holmium_fluoride": "Holmium Fluoride",
+    "material.gtceu.thulium_fluoride": "Thulium Fluoride",
+    "material.gtceu.lanthanum_oxide": "Lanthanum Oxide"
     
 }

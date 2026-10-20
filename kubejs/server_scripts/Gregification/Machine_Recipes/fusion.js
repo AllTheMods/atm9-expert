@@ -219,4 +219,76 @@ ServerEvents.recipes(allthemods => {
         20,
         stages[2]
     )
+
+    //hassium
+    addFusion(
+        [
+            '#forge:iron_plasma 72',
+            '#forge:lead 72'
+        ],
+        'gtceu:hassium 72',
+        ZPM,
+        20,
+        stages[2]
+    )
+
+    //meitnerium
+    addFusion(
+        [
+            '#forge:iron_plasma 72',
+            '#forge:bismuth 72'
+        ],
+        'gtceu:meitnerium 72',
+        ZPM,
+        20,
+        stages[2]
+    )
+
+    //roentgenium
+    addFusion(
+        [
+            '#forge:nickel_plasma 72',
+            '#forge:bismuth 72'
+        ],
+        'gtceu:roentgenium 72',
+        UV,
+        20,
+        stages[2]
+    )
+
+    //mendelevium
+    addFusion(
+        [
+            '#forge:helium_plasma 72',
+            '#forge:einsteinium 72'
+        ],
+        'gtceu:mendelevium 72',
+        ZPM,
+        20,
+        stages[1]
+    )
+
+    //lawrencium
+    addFusion(
+        [
+            '#forge:oxygen_plasma 72',
+            '#forge:americium 72'
+        ],
+        'gtceu:lawrencium 72',
+        ZPM,
+        20,
+        stages[2]
+    )
+
+    //nobelium
+    addFusion(
+        [
+            '#forge:oxygen_plasma 72',
+            '#forge:plutonium 72'
+        ],
+        'gtceu:nobelium 72',
+        ZPM,
+        20,
+        stages[1]
+    )
 });

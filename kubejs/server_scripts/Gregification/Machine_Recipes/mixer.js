@@ -23,7 +23,7 @@ ServerEvents.recipes(allthemods => {
         if (program) recipe.circuit(program);
     };
 
-    
+
     addMixer(['1x #forge:dusts/dysprosium', '1x #forge:dusts/neodymium_praseodymium_iron_boron'], '2x gtceu:neodymium_dysprosium_dust', LuV, 600);
     addMixer(['1x #forge:dusts/terbium', '1x #forge:dusts/neodymium_praseodymium_iron_boron'], '2x gtceu:neodymium_terbium_dust', ZPM, 600);
     addMixer(['2x #forge:dusts/andesite', '2x #forge:dusts/zinc'], 'gtceu:andesite_alloy_dust', LV, 60);

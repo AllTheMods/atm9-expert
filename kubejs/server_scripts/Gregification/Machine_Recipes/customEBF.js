@@ -46,21 +46,31 @@ ServerEvents.recipes(allthemods => {
     addEBF('1x #forge:dusts/zirconium', '#forge:rutherfordium 144', 'gtceu:hot_rutherfordium_ingot', null, COIL_TEMPS.DRACONIUM_AWAKENED, 2400, UV);
     addEBF('1x #forge:dusts/niobium', '#forge:dubnium 144', 'gtceu:hot_dubnium_ingot', null, COIL_TEMPS.DRACONIUM_AWAKENED, 2400, UV);
     addEBF('1x #forge:dusts/tungsten', '#forge:seaborgium 144', 'gtceu:hot_seaborgium_ingot', null, COIL_TEMPS.DRACONIUM_AWAKENED, 2400, UV);
+    addEBF('1x #forge:dusts/osmium', '#forge:hassium 144', 'gtceu:hot_hassium_ingot', null, COIL_TEMPS.DRACONIUM_AWAKENED, 2400, UV);
+    addEBF('1x #forge:dusts/iridium', '#forge:meitnerium 144', 'gtceu:hot_meitnerium_ingot', null, COIL_TEMPS.DRACONIUM_AWAKENED, 2400, UV);
+    addEBF('1x #forge:dusts/lanthanum', '#forge:lawrencium 144', 'gtceu:lawrencium_ingot', null, COIL_TEMPS.TRINIUM, 2400, ZPM);
+    addEBF(['1x #forge:dusts/ytterbium_oxide', '2x #forge:dusts/lanthanum'], '#forge:argon 1000', ['2x gtceu:ytterbium_ingot', '1x gtceu:lanthanum_oxide_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);    
+    addEBF(['1x #forge:dusts/lanthanum_oxide', '3x #forge:dusts/calcium'], '#forge:argon 1000', ['2x gtceu:lanthanum_dust', '3x gtceu:quicklime_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);
+
+    ['erbium', 'holmium', 'thulium'].forEach(el => {
+        addEBF([`2x #forge:dusts/${el}_fluoride`, '3x #forge:dusts/calcium'], '#forge:argon 1000', [`2x gtceu:${el}_ingot`, '3x gtceu:fluorite_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);
+    });
 
     const freezing = [
-        
-        { name: 'allthemodium',                         mod: 'allthemodium',        duration: 500, eut: IV,  coolant: '#forge:thermal_coolant 1000' },
-        { name: 'vibranium',                            mod: 'allthemodium',        duration: 500, eut: IV,  coolant: '#forge:thermal_coolant 1000' },
-        { name: 'unobtainium',                          mod: 'allthemodium',        duration: 500, eut: IV,  coolant: '#forge:thermal_coolant 1000' },
-        { name: 'draconium',                            mod: 'draconicevolution',   duration: 500, eut: IV,  coolant: '#forge:thermal_coolant 1000' },
-        { name: 'bismuth_strontium_calcium_copper_oxide',                           duration: 500, eut: IV,  coolant: '#forge:thermal_coolant 1000' },
-        { name: 'neodymium_praseodymium_iron_boron',                                duration: 500, eut: LuV, coolant: '#forge:thermal_coolant 1000' },
+
+        { name: 'allthemodium', mod: 'allthemodium', duration: 500, eut: IV, coolant: '#forge:thermal_coolant 1000' },
+        { name: 'vibranium', mod: 'allthemodium', duration: 500, eut: IV, coolant: '#forge:thermal_coolant 1000' },
+        { name: 'unobtainium', mod: 'allthemodium', duration: 500, eut: IV, coolant: '#forge:thermal_coolant 1000' },
+        { name: 'draconium', mod: 'draconicevolution', duration: 500, eut: IV, coolant: '#forge:thermal_coolant 1000' },
+        { name: 'bismuth_strontium_calcium_copper_oxide', duration: 500, eut: IV, coolant: '#forge:thermal_coolant 1000' },
+        { name: 'neodymium_praseodymium_iron_boron', duration: 500, eut: LuV, coolant: '#forge:thermal_coolant 1000' },
         { name: 'seaborgium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
         { name: 'bohrium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
         { name: 'rutherfordium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
         { name: 'dubnium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
-        
-        
+        { name: 'hassium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
+        { name: 'meitnerium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
+
     ];
 
     freezing.forEach(({ name, mod = 'gtceu', duration, eut, coolant }) => {

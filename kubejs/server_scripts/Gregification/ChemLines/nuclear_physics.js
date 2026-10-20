@@ -224,5 +224,49 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('gtceu:flerovium_dust', '1x gtceu:gold_dust')
         .duration(400)
         .EUt(UV);
+
+    allthemods.recipes.gtceu.mixer('gregification:ion_clay/weathering')
+        .itemInputs('4x #forge:dusts/clay', '1x #forge:dusts/granite_red')
+        .inputFluids('minecraft:water 1000')
+        .itemOutputs('6x gtceu:ion_adsorption_clay_dust')
+        .duration(400)
+        .EUt(HV);
+        
+    allthemods.recipes.gtceu.industrial_leacher('gregification:ion_clay/leach')
+        .itemInputs('60x #forge:dusts/ion_adsorption_clay', '15x #forge:dusts/ammonium_chloride')
+        .inputFluids('#forge:sulfuric_acid 15000')
+        .itemOutputs('60x gtceu:rare_earth_clay_mud_dust')
+        .addData('ebf_temp', COIL_TEMPS.DRACONIUM)
+        .duration(400)
+        .EUt(ZPM);
+
+    allthemods.recipes.gtceu.dissolution_tank('gregification:ion_clay/dissolve')
+        .itemInputs('60x #forge:dusts/rare_earth_clay_mud', '15x #forge:dusts/saltpeter')
+        .inputFluids('minecraft:water 30000')
+        .itemOutputs('60x gtceu:diluted_rare_earth_clay_mud_dust', '15x gtceu:aluminium_dust')
+        .addData('ebf_temp', COIL_TEMPS.DRACONIUM)
+        .duration(400)
+        .EUt(ZPM);
+
+    allthemods.recipes.gtceu.sifter('gregification:ion_clay/sift')
+        .itemInputs('60x #forge:dusts/diluted_rare_earth_clay_mud')
+        .chancedOutput('3x gtceu:erbium_oxide_dust', 4000, 500)
+        .chancedOutput('3x gtceu:ytterbium_oxide_dust', 3500, 500)
+        .chancedOutput('1x gtceu:holmium_oxide_dust', 4500, 500)
+        .chancedOutput('1x gtceu:thulium_oxide_dust', 2250, 500)
+        .chancedOutput('15x gtceu:silicon_dioxide_dust', 5000, 500)
+        .duration(400)
+        .EUt(ZPM);
+    
+        ['erbium', 'holmium', 'thulium'].forEach(el => {        
+        allthemods.recipes.gtceu.large_chemical_reactor(`gregification:${el}/fluorination`)
+            .itemInputs(`1x #forge:dusts/${el}_oxide`)
+            .inputFluids('#forge:hydrofluoric_acid 6000')
+            .itemOutputs(`2x gtceu:${el}_fluoride_dust`)
+            .outputFluids('minecraft:water 3000')
+            .duration(400)
+            .EUt(ZPM);        
+    });
+
     
 });
