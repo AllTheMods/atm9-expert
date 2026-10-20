@@ -2041,7 +2041,7 @@ const materials = [
     new MaterialDef('molybdenum_99').dust().color(0x5E7FA8).iconSet('RADIOACTIVE').components('1x molybdenum').formula('Mo⁹⁹'),
     new MaterialDef('radium_227').dust().color(0x7FC9A0).iconSet('RADIOACTIVE').components('1x radium').formula('Ra²²⁷'),
 
-    new MaterialDef('ion_adsorption_clay').dust().color(0xC9A27A).iconSet('DULL').components('1x clay'),
+    new MaterialDef('ion_adsorption_clay').dust().color(0xC9A27A).iconSet('DULL').components('4x clay, 1x granite_red, 1x water'),
     new MaterialDef('rare_earth_clay_mud').dust().color(0x9C7F63).iconSet('DULL'),
     new MaterialDef('diluted_rare_earth_clay_mud').dust().color(0xB59A7E).iconSet('DULL'),
     new MaterialDef('erbium_oxide').dust().color(0xE8A0B8).iconSet('DULL').components('2x erbium, 3x oxygen').noDecomp(),

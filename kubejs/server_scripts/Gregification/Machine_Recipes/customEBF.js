@@ -84,40 +84,6 @@ ServerEvents.recipes(allthemods => {
         if (entry.coolant) r.inputFluids(entry.coolant);
     });
 
-    /*
-    allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/neodymium_praseodymium_iron_boron_ingot`)
-        .itemInputs('gtceu:hot_neodymium_praseodymium_iron_boron_ingot')
-        .itemOutputs('gtceu:neodymium_praseodymium_iron_boron_ingot')
-        .inputFluids('#forge:thermal_coolant 1000')
-        .duration(600)
-        .EUt(LuV);
-
-
-
-    const stage4cooling = ['gtceu:hot_allthemodium_ingot', 'gtceu:hot_vibranium_ingot', 'gtceu:hot_unobtainium_ingot']
-    stage4cooling.forEach(item => {
-        allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/${item.replace(/[^a-z0-9]/gi, '_')}`)
-            .itemInputs(item)
-            .itemOutputs(item.replace('hot_', '').replace('gtceu:', 'allthemodium:'))
-            .inputFluids('#forge:thermal_coolant 1000')
-            .duration(500)
-            .EUt(IV);
-
-    allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/hot_bismuth_strontium_calcium_copper_oxide_ingot`)
-        .itemInputs('#forge:hot_ingots/bismuth_strontium_calcium_copper_oxide')
-        .itemOutputs('gtceu:bismuth_strontium_calcium_copper_oxide_ingot')
-        .inputFluids('#forge:thermal_coolant 1000')
-        .duration(500)
-        .EUt(IV);
-
-    allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/draconium`)
-        .itemInputs('#forge:hot_ingots/draconium')
-        .itemOutputs('draconicevolution:draconium_ingot')
-        .inputFluids('#forge:thermal_coolant 1000')
-        .duration(500)
-        .EUt(IV);
-    });*/
-
     allthemods.recipes.gtceu.electric_blast_furnace('gregification:smelting/allthemodium_ingot')
         .notConsumable('forbidden_arcanus:artisan_relic')
         .itemInputs('#forge:dusts/allthemodium')

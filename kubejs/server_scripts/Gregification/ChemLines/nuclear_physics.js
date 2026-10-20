@@ -47,7 +47,7 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:nuclear_waste/cyanite')
         .itemInputs('1x #forge:dusts/cyanite')
-        .inputFluids('#forge:nitric_acid 250', '#forge:fluorine 576')
+        .inputFluids('#forge:nitric_acid 250', '#forge:hydrofluoric_acid 576')
         .outputFluids('gtceu:nuclear_waste 250')
         .duration(400)
         .EUt(nuclearPhysicsEU);
@@ -235,8 +235,8 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:flerovium/adsorption')
         .inputFluids('#forge:flerovium 144')
-        .itemInputs('1x #forge:dusts/gold')
-        .itemOutputs('gtceu:flerovium_dust', '1x gtceu:gold_dust')
+        .notConsumable('#forge:dusts/gold')
+        .itemOutputs('gtceu:flerovium_dust')
         .duration(400)
         .EUt(UV);
 
@@ -265,11 +265,11 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.sifter('gregification:ion_clay/sift')
         .itemInputs('60x #forge:dusts/diluted_rare_earth_clay_mud')
-        .chancedOutput('3x gtceu:erbium_oxide_dust', 4000, 500)
-        .chancedOutput('3x gtceu:ytterbium_oxide_dust', 3500, 500)
-        .chancedOutput('1x gtceu:holmium_oxide_dust', 4500, 500)
-        .chancedOutput('1x gtceu:thulium_oxide_dust', 2250, 500)
-        .chancedOutput('15x gtceu:silicon_dioxide_dust', 5000, 500)
+        .chancedOutput('3x gtceu:erbium_oxide_dust', 400, 500)
+        .chancedOutput('3x gtceu:ytterbium_oxide_dust', 350, 500)
+        .chancedOutput('1x gtceu:holmium_oxide_dust', 450, 500)
+        .chancedOutput('1x gtceu:thulium_oxide_dust', 250, 500)
+        .chancedOutput('15x gtceu:silicon_dioxide_dust', 500, 500)
         .duration(400)
         .EUt(ZPM);
     
@@ -283,8 +283,7 @@ ServerEvents.recipes(allthemods => {
             .EUt(ZPM);        
     });
 
-    const ladder = [
-        { from: 'plutonium',   iso: 'plutonium_241',   to: 'americium',   emitter: 'polonium_beryllium', eut: LuV },
+    const ladder = [        
         { from: 'americium',   iso: 'americium_244',   to: 'curium',      emitter: 'americium_beryllium', eut: ZPM },
         { from: 'curium',      iso: 'curium_249',      to: 'berkelium',   emitter: 'americium_beryllium', eut: ZPM },
         { from: 'berkelium',   iso: 'berkelium_250',   to: 'californium', emitter: 'californium', eut: UV },
