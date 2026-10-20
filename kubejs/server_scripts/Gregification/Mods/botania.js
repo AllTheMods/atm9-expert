@@ -42,6 +42,36 @@ ServerEvents.recipes(allthemods => {
             .outputFluids(`gtceu:source ${50 * s.n}`)
             .circuit(2)
             .duration(400);
+
+        allthemods.recipes.gtceu.mana_burner(`coal_to_liquid_mana_${s.n}`)
+            .itemInputs('#minecraft:coals')
+            .inputFluids(`${s.water} 1200`)
+            .outputFluids(`gtceu:mana_essence ${1200 * s.n}`)
+            .addData('ebf_temp', 3600)
+            .circuit(1)
+            .duration(1600);
+
+        allthemods.recipes.gtceu.mana_burner(`coal_to_source_${s.n}`)
+            .itemInputs('#minecraft:coals')
+            .inputFluids(`${s.water} 200`)
+            .outputFluids(`gtceu:source ${200 * s.n}`)
+            .addData('ebf_temp', 3600)
+            .circuit(2)
+            .duration(1600);
+
+        allthemods.recipes.gtceu.mana_burner(`cake_to_liquid_mana_${s.n}`)
+            .itemInputs('minecraft:cake')
+            .inputFluids(`${s.water} 10800`)
+            .outputFluids(`gtceu:mana_essence ${10800 * s.n}`)
+            .circuit(1)
+            .duration(14400);
+
+        allthemods.recipes.gtceu.mana_burner(`cake_to_source_${s.n}`)
+            .itemInputs('minecraft:cake')
+            .inputFluids(`${s.water} 1800`)
+            .outputFluids(`gtceu:source ${1800 * s.n}`)
+            .circuit(2)
+            .duration(14400);
     });
 
     
@@ -52,45 +82,7 @@ ServerEvents.recipes(allthemods => {
         .addData('ebf_temp', 3600)
         .duration(100)
         .EUt(MV);
-
-    allthemods.recipes.gtceu.mana_burner('coal_to_liquid_mana')
-        .itemInputs('#minecraft:coals')
-        .outputFluids('gtceu:mana_essence 1200')
-        .inputFluids(`${stage1} 1200}`)
-        .addData('ebf_temp', 3600)
-        .circuit(1)
-        .duration(1600)
-
-
-
-    allthemods.recipes.gtceu.mana_burner('coal_to_source')
-        .itemInputs('#minecraft:coals')
-        .inputFluids(`${stage1} 200}`)
-        .outputFluids('gtceu:source 200')
-        .addData('ebf_temp', 3600)
-        .circuit(2)
-        .duration(1600)
-
-
-    allthemods.recipes.gtceu.mana_burner('cake_to_liquid_mana')
-        .itemInputs('minecraft:cake')
-        .inputFluids(`${stage1} 10800}`)
-        .outputFluids('gtceu:mana_essence 10800')
-        .circuit(1)
-        .duration(14400)
-
-
-    allthemods.recipes.gtceu.mana_burner('cake_to_source')
-        .itemInputs('minecraft:cake')
-        .inputFluids(`${stage1} 1800}`)
-        .outputFluids('gtceu:source 1800')
-        .circuit(2)
-        .duration(14400)
-
-
-    
-
-
+        
     const petalDuration = 300;
     const runicDuration = 600;
     const infusionDuration = 1200;

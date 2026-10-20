@@ -141,6 +141,7 @@ ServerEvents.recipes(allthemods => {
     blackHole(['#forge:singularities/core', '4000x #forge:ingots/steeleaf'], null, 'gtceu:steeleaf_singularity', null, ZPM, compressionDuration, 'steeleaf_singularity')
     blackHole(['#forge:singularities/core', '4000x #forge:ingots/fiery'], null, 'gtceu:fiery_singularity', null, ZPM, compressionDuration, 'fiery_singularity')
     blackHole(['#forge:singularities/core', '4000x #forge:ingots/knightmetal'], null, 'gtceu:knightmetal_singularity', null, ZPM, compressionDuration, 'knightmetal_singularity')
+    blackHole(['#forge:singularities/core', '4000x forbidden_arcanus:spawner_scrap'], null, 'gtceu:spawner_scrap_singularity', null, ZPM, compressionDuration, 'spawner_scrap_singularity')
 
 
     blackHole(['#forge:singularities/core', '4000x #forge:gems/blazing_crystal'], null, 'gtceu:blazing_crystal_singularity', null, ZPM, compressionDuration, 'blazing_crystal_singularity')
