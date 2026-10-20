@@ -1,6 +1,13 @@
 
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
+    allthemods.create('neutron_irradiator')
+        .category('neutron_irradiator')
+        .setEUIO('in')
+        .setMaxIOSize(3, 1, 1, 1)
+        .setProgressBar(GuiTextures.COMPRESSOR_OVERLAY, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.SCIENCE);
+        
     allthemods.create('super_critical_heat_exchanger')
         .category('super_critical_heat_exchanger')
         .setEUIO('in')
@@ -71,6 +78,30 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
 
 })
 GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
+    allthemods.create('neutron_irradiator', 'multiblock')
+        .rotationState(RotationState.NON_Y_AXIS)
+        .recipeType('neutron_irradiator')
+        .recipeModifiers([GTRecipeModifiers.OC_PERFECT])
+        .appearanceBlock(GTBlocks.CASING_PTFE_INERT)
+        .pattern(definition => FactoryBlockPattern.start()
+            .aisle('SSSSS', 'SCCCS', 'SCCCS', 'SCCCS', 'SSSSS')
+            .aisle('SCCCS', 'C   C', 'C O C', 'C   C', 'SCCCS')
+            .aisle('SCCCS', 'C O C', 'COOOC', 'C O C', 'SCCCS')
+            .aisle('SCCCS', 'C   C', 'C O C', 'C   C', 'SCCCS')
+            .aisle('SSSSS', 'SCCCS', 'SCKCS', 'SCCCS', 'SSSSS')
+            .where('C', Predicates.blocks(GTBlocks.CASING_PTFE_INERT.get())
+                .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
+            .where('S', Predicates.blocks('gtceu:scandium_frame'))
+            .where('O', Predicates.blocks('gtceu:tungsten_steel_frame'))
+            .where('K', Predicates.controller(Predicates.blocks(definition.get())))
+            .where(' ', Predicates.any())
+            .build()
+        )
+        .workableCasingModel(
+            'gtceu:block/casings/solid/machine_casing_inert_ptfe',
+            'gtceu:block/multiblock/fusion_reactor'
+        );
 
     allthemods.create('super_critical_heat_exchanger', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
@@ -92,7 +123,7 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
             .where('F', Predicates.blocks('gtceu:draconium_awakened_frame'))
             .where('C', Predicates.blocks('gtceu:uv_machine_casing')
                 .or(Predicates.autoAbilities(definition.getRecipeTypes()))
-                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))                
+                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
             )
             .where(' ', Predicates.any())
             .build()

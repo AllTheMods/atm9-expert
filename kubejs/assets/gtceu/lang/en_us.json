@@ -901,6 +901,10 @@
     "material.gtceu.dissolved_berkelium_waste": "Dissolved Thorium Berkelium Waste",
     "material.gtceu.digested_fission_products": "Digested Fission Products",
     "material.gtceu.digested_fertile_actinides": "Digested Fertile Actinides",
-    "material.gtceu.digested_transuranics": "Digested Transuranics"
+    "material.gtceu.digested_transuranics": "Digested Transuranics",
+    "gtceu.neutron_irradiator": "Neutron Irradiator",
+    "block.gtceu.neutron_irradiator": "Neutron Irradiator",
+    "material.gtceu.molybdenum_99": "Molybdenum 99",
+    "material.gtceu.radium_227": "Radium 227"
     
 }

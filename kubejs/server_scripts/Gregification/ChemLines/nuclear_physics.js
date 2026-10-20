@@ -96,7 +96,7 @@ ServerEvents.recipes(allthemods => {
         .chancedOutput('gtceu:palladium_dust', 500, 100)
         .chancedOutput('gtceu:neodymium_dust', 500, 100)
         .chancedOutput('gtceu:neptunium_dust', 200, 100)
-        .outputFluids('gtceu:plutonium 100', 'gtceu:polonium 100', 'gtceu:xenon 100', 'gtceu:krypton 100', 'gtceu:spent_nuclear_waste 500')
+        .outputFluids('gtceu:plutonium 150', 'gtceu:polonium 250', 'gtceu:xenon 50', 'gtceu:krypton 50', 'gtceu:spent_nuclear_waste 500')
         .duration(durationA)
         .EUt(chainA);
 
@@ -167,7 +167,7 @@ ServerEvents.recipes(allthemods => {
         .chancedOutput('gtceu:fermium_dust', 30, 100)
         .duration(durationC)
         .EUt(chainC);
-    
+
     [['single', 1], ['double', 2], ['quad', 4]].forEach(([size, n]) => {
         allthemods.recipes.gtceu.large_chemical_reactor(`gregification:cell_reprocess/thorium_${size}`)
             .itemInputs(`gtceu:depleted_${size}_thorium`)
@@ -189,4 +189,40 @@ ServerEvents.recipes(allthemods => {
             .duration(300)
             .EUt(ZPM);
     });
+
+    const pbDuration = 600;
+    const pbEU = LuV;
+    allthemods.recipes.gtceu.neutron_irradiator('gregification:irradiator/molybdenum_99')
+        .itemInputs('4x #forge:dusts/molybdenum')
+        .notConsumable('gtceu:polonium_beryllium_neutron_source')
+        .itemOutputs('4x gtceu:molybdenum_99_dust')
+        .duration(pbDuration)
+        .EUt(pbEU);
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:decay/molybdenum_99')
+        .itemInputs('4x #forge:dusts/molybdenum_99')
+        .itemOutputs('4x gtceu:technetium_dust')
+        .duration(pbDuration)
+        .EUt(pbEU);
+
+    allthemods.recipes.gtceu.neutron_irradiator('gregification:irradiator/radium_227')
+        .itemInputs('4x #forge:dusts/radium')
+        .notConsumable('gtceu:polonium_beryllium_neutron_source')
+        .itemOutputs('4x gtceu:radium_227_dust')
+        .duration(pbDuration)
+        .EUt(pbEU);
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:decay/radium_227')
+        .itemInputs('4x #forge:dusts/radium_227')
+        .itemOutputs('4x gtceu:actinium_dust')
+        .duration(pbDuration)
+        .EUt(pbEU);
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:flerovium/adsorption')
+        .inputFluids('#forge:flerovium 144')
+        .itemInputs('1x #forge:dusts/gold')
+        .itemOutputs('gtceu:flerovium_dust', '1x gtceu:gold_dust')
+        .duration(400)
+        .EUt(UV);
+    
 });

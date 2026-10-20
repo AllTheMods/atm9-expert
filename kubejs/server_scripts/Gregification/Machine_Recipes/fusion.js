@@ -99,6 +99,124 @@ ServerEvents.recipes(allthemods => {
         20,
         stages[3]
     )
-    
 
+    //bohrium
+    addFusion(
+        [
+            '#forge:chromium_plasma 72',
+            '#forge:bismuth 72'
+        ],
+        'gtceu:bohrium 72',
+        ZPM,
+        20,
+        stages[2]
+    )
+
+    //copernicium
+    addFusion(
+        [
+            '#forge:zinc_plasma 72',
+            '#forge:lead 72'
+        ],
+        'gtceu:copernicium 72',
+        UV,
+        20,
+        stages[2]
+    )
+    
+    //nihonium
+    addFusion(
+        [
+            '#forge:zinc_plasma 72',
+            '#forge:bismuth 72'
+        ],
+        'gtceu:nihonium 72',
+        UV,
+        20,
+        stages[2]
+    )
+
+    //flerovium
+    addFusion(
+        [
+            '#forge:calcium_plasma 72',
+            '#forge:plutonium 72'
+        ],
+        'gtceu:flerovium 72',
+        UV,
+        20,
+        stages[3]
+    )
+
+    //moscovium
+    addFusion(
+        [
+            '#forge:calcium_plasma 72',
+            '#forge:americium 72'
+        ],
+        'gtceu:moscovium 72',
+        UV,
+        20,
+        stages[3]
+    )
+
+    //livermorium
+    addFusion(
+        [
+            '#forge:calcium_plasma 72',
+            '#forge:curium 72'
+        ],
+        'gtceu:livermorium 72',
+        UV,
+        20,
+        stages[3]
+    )
+
+    //tennessine
+    addFusion(
+        [
+            '#forge:calcium_plasma 72',
+            '#forge:berkelium 72'
+        ],
+        'gtceu:tennessine 72',
+        UV,
+        20,
+        stages[3]
+    )
+
+    //rutherfordium
+    addFusion(
+        [
+            '#forge:oxygen_plasma 72',
+            '#forge:curium 72'
+        ],
+        'gtceu:rutherfordium 72',
+        ZPM,
+        20,
+        stages[2]
+    )
+
+    //dubnium
+    addFusion(
+        [
+            '#forge:nitrogen_plasma 72',
+            '#forge:californium 72'
+        ],
+        'gtceu:dubnium 72',
+        ZPM,
+        20,
+        stages[2]
+    )
+
+    //seaborgium
+    addFusion(
+        [
+            '#forge:oxygen_plasma 72',
+            '#forge:californium 72'
+        ],
+        'gtceu:seaborgium 72',
+        ZPM,
+        20,
+        stages[2]
+    )
 });

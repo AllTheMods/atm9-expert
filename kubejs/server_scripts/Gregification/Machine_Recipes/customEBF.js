@@ -39,9 +39,40 @@ ServerEvents.recipes(allthemods => {
         if (fluidOut) { recipe.outputFluids(fluidOut) }
     };
 
-    addEBF('#forge:dusts/bismuth_strontium_calcium_copper_oxide', '#forge:terephthalic_acid 1000', 'gtceu:hot_bismuth_strontium_calcium_copper_oxide_ingot', null, 4500, 2400, IV);
+    addEBF('#forge:dusts/bismuth_strontium_calcium_copper_oxide', '#forge:terephthalic_acid 1000', 'gtceu:hot_bismuth_strontium_calcium_copper_oxide_ingot', null, COIL_TEMPS.RTM, 2400, IV);
     addEBF(['#forge:dusts/neodymium_praseodymium', '14x #forge:dusts/iron', '1x #forge:dusts/boron'], 'industrialforegoing:ether_gas 1000', 'gtceu:hot_neodymium_praseodymium_iron_boron_ingot', null, COIL_TEMPS.NAQUADAH, 2400, LuV);
+    addEBF('1x #forge:dusts/manganese', '#forge:bohrium 144', 'gtceu:hot_bohrium_ingot', null, COIL_TEMPS.DRACONIUM_AWAKENED, 2400, UV);
+    addEBF('1x #forge:dusts/flerovium', '#forge:hydrogen 1000', 'gtceu:flerovium_ingot', null, COIL_TEMPS.DRACONIUM, 2400, UV);
+    addEBF('1x #forge:dusts/zirconium', '#forge:rutherfordium 144', 'gtceu:hot_rutherfordium_ingot', null, COIL_TEMPS.DRACONIUM_AWAKENED, 2400, UV);
+    addEBF('1x #forge:dusts/niobium', '#forge:dubnium 144', 'gtceu:hot_dubnium_ingot', null, COIL_TEMPS.DRACONIUM_AWAKENED, 2400, UV);
+    addEBF('1x #forge:dusts/tungsten', '#forge:seaborgium 144', 'gtceu:hot_seaborgium_ingot', null, COIL_TEMPS.DRACONIUM_AWAKENED, 2400, UV);
 
+    const freezing = [
+        
+        { name: 'allthemodium',                         mod: 'allthemodium',        duration: 500, eut: IV,  coolant: '#forge:thermal_coolant 1000' },
+        { name: 'vibranium',                            mod: 'allthemodium',        duration: 500, eut: IV,  coolant: '#forge:thermal_coolant 1000' },
+        { name: 'unobtainium',                          mod: 'allthemodium',        duration: 500, eut: IV,  coolant: '#forge:thermal_coolant 1000' },
+        { name: 'draconium',                            mod: 'draconicevolution',   duration: 500, eut: IV,  coolant: '#forge:thermal_coolant 1000' },
+        { name: 'bismuth_strontium_calcium_copper_oxide',                           duration: 500, eut: IV,  coolant: '#forge:thermal_coolant 1000' },
+        { name: 'neodymium_praseodymium_iron_boron',                                duration: 500, eut: LuV, coolant: '#forge:thermal_coolant 1000' },
+        { name: 'seaborgium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
+        { name: 'bohrium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
+        { name: 'rutherfordium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
+        { name: 'dubnium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
+        
+        
+    ];
+
+    freezing.forEach(({ name, mod = 'gtceu', duration, eut, coolant }) => {
+        const r = allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/${name}_ingot`)
+            .itemInputs(`#forge:hot_ingots/${name}`)
+            .itemOutputs(`${mod}:${name}_ingot`)
+            .duration(duration)
+            .EUt(eut);
+        if (coolant) r.inputFluids(coolant);
+    });
+
+    /*
     allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/neodymium_praseodymium_iron_boron_ingot`)
         .itemInputs('gtceu:hot_neodymium_praseodymium_iron_boron_ingot')
         .itemOutputs('gtceu:neodymium_praseodymium_iron_boron_ingot')
@@ -59,7 +90,21 @@ ServerEvents.recipes(allthemods => {
             .inputFluids('#forge:thermal_coolant 1000')
             .duration(500)
             .EUt(IV);
-    });
+
+    allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/hot_bismuth_strontium_calcium_copper_oxide_ingot`)
+        .itemInputs('#forge:hot_ingots/bismuth_strontium_calcium_copper_oxide')
+        .itemOutputs('gtceu:bismuth_strontium_calcium_copper_oxide_ingot')
+        .inputFluids('#forge:thermal_coolant 1000')
+        .duration(500)
+        .EUt(IV);
+
+    allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/draconium`)
+        .itemInputs('#forge:hot_ingots/draconium')
+        .itemOutputs('draconicevolution:draconium_ingot')
+        .inputFluids('#forge:thermal_coolant 1000')
+        .duration(500)
+        .EUt(IV);
+    });*/
 
     allthemods.recipes.gtceu.electric_blast_furnace('gregification:smelting/allthemodium_ingot')
         .notConsumable('forbidden_arcanus:artisan_relic')
@@ -87,21 +132,6 @@ ServerEvents.recipes(allthemods => {
         .duration(2400)
         .blastFurnaceTemp(7200)
         .EUt(ZPM);
-
-    allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/hot_bismuth_strontium_calcium_copper_oxide_ingot`)
-        .itemInputs('#forge:hot_ingots/bismuth_strontium_calcium_copper_oxide')
-        .itemOutputs('gtceu:bismuth_strontium_calcium_copper_oxide_ingot')
-        .inputFluids('#forge:thermal_coolant 1000')
-        .duration(500)
-        .EUt(IV);
-
-    allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/draconium`)
-        .itemInputs('#forge:hot_ingots/draconium')
-        .itemOutputs('draconicevolution:draconium_ingot')
-        .inputFluids('#forge:thermal_coolant 1000')
-        .duration(500)
-        .EUt(IV);
-
 
     const thermalExtra = [
         { name: 'soul_infused', temp: 2700, EUt: HV, duration: 800 },

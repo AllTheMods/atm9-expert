@@ -1794,7 +1794,7 @@ const materials = [
         .byproducts(['thorium', 'plutonium'])
         .unify({ rawOre: 'alltheores:raw_uranium', ore: 'alltheores:uranium_ore', oreDeepslate: 'alltheores:deepslate_uranium_ore', oreNetherrack: 'alltheores:nether_uranium_ore' }),
 
-    new MaterialDef('zinc').modify()
+    new MaterialDef('zinc').modify().plasma()
         .byproducts(['cadmium', 'lead', 'silver'])
         .unify({ rawOre: 'alltheores:raw_zinc', ore: 'alltheores:zinc_ore', oreDeepslate: 'alltheores:deepslate_zinc_ore', oreNetherrack: 'alltheores:nether_zinc_ore' }),
 
@@ -1820,11 +1820,9 @@ const materials = [
 
     new MaterialDef('graphite').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NICHROME).wireMod(2048).flags(GTMaterialFlags.GENERATE_ROTOR),
 
-    new MaterialDef('graphite').modify().fluid(),
+    new MaterialDef('chromium').modify().plasma(),
 
-    new MaterialDef('calcium').modify().fluid().plasma(),
-
-    new MaterialDef('zinc').modify().plasma(),
+    new MaterialDef('calcium').modify().fluid().plasma(),    
 
     new MaterialDef('plutonium').modify().plasma(),
 
@@ -1997,7 +1995,7 @@ const materials = [
 
     //rest of the perioditic table
     new MaterialDef('actinium').modify().dust().ingot().fluid().materialsBasic(),
-    new MaterialDef('bohrium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
+    new MaterialDef('bohrium').modify().dust().ingot().fluid().noSmelting().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
     new MaterialDef('copernicium').modify().fluid(),
     new MaterialDef('curium').modify().dust().ingot().fluid().plasma().noSmelting().materialsBasic(), //chemical reaction
     new MaterialDef('dubnium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
@@ -2018,7 +2016,7 @@ const materials = [
     new MaterialDef('nobelium').modify().dust().ingot().fluid().materialsBasic(),
     new MaterialDef('oganesson').modify().plasma().fluid(),
     new MaterialDef('roentgenium').modify().dust().ingot().fluid().materialsBasic(),
-    new MaterialDef('rutherfordium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
+    new MaterialDef('rutherfordium').modify().dust().ingot().fluid().noSmelting().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
     new MaterialDef('seaborgium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
     new MaterialDef('technetium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM).materialsBasic(),
     new MaterialDef('tennessine').modify().fluid(),
@@ -2039,6 +2037,9 @@ const materials = [
     new MaterialDef('digested_fission_products').fluid().color(0x4FA89A).iconSet('RADIOACTIVE'),
     new MaterialDef('digested_fertile_actinides').fluid().color(0xD08A3E).iconSet('RADIOACTIVE'),
     new MaterialDef('digested_transuranics').fluid().color(0xA23B6E).iconSet('RADIOACTIVE'),
+
+    new MaterialDef('molybdenum_99').dust().color(0x5E7FA8).iconSet('RADIOACTIVE').components('1x molybdenum').formula('Mo⁹⁹'),
+    new MaterialDef('radium_227').dust().color(0x7FC9A0).iconSet('RADIOACTIVE').components('1x radium').formula('Ra²²⁷'),
     
 ];
 
