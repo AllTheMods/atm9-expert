@@ -1,5 +1,8 @@
 ServerEvents.recipes(allthemods => {
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
+    
+
+    
 
     allthemods.recipes.gtceu.sunnarium_generator('gregification:generator/day')
         .notConsumable('gtceu:sunnarium_core')
@@ -73,6 +76,7 @@ ServerEvents.recipes(allthemods => {
             }
         ).id(`gregification:solar_generator/${tier}_lunarium_generator`);
     });
+        
 
 
 })

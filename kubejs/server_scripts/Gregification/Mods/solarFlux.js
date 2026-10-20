@@ -5,6 +5,21 @@ ServerEvents.recipes(allthemods => {
     const upgradeDuration = 400;
     const panelDuration = 1000;
 
+    const COIL_TEMPS = {
+        CUPRONICKEL: 1800,
+        KANTHAL: 2700,
+        NICHROME: 3600,
+        RTM: 4500,
+        HSS_G: 5400,
+        NAQUADAH: 7200,
+        TRINIUM: 9000,
+        TRITANIUM: 10800,
+        DRACONIUM: 11200,
+        DRACONIUM_AWAKENED: 12800,
+        ETRIUM: 13500,
+        INFINITY: 15000
+    };
+
 
     const addAssembler = (itemsIn, fluidIn, itemsOut, eu, duration, program) => {
         const outputID = itemsOut.replace(/[^a-z0-9]/gi, '_');
@@ -577,4 +592,10 @@ ServerEvents.recipes(allthemods => {
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(600)
         .EUt(LuV);
+    
+    allthemods.recipes.gtceu.mixer('gregification:perovskite/ito_blend')
+        .itemInputs('9x #forge:dusts/indium_iii_oxide', '1x #forge:dusts/cassiterite')
+        .itemOutputs('10x gtceu:indium_tin_oxide_dust')
+        .duration(200)
+        .EUt(EV);
 });
