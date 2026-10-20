@@ -1998,16 +1998,16 @@ const materials = [
     new MaterialDef('bohrium').modify().dust().ingot().fluid().noSmelting().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
     new MaterialDef('copernicium').modify().fluid(),
     new MaterialDef('curium').modify().dust().ingot().fluid().plasma().noSmelting().materialsBasic(), //chemical reaction
-    new MaterialDef('dubnium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
+    new MaterialDef('dubnium').modify().dust().ingot().fluid().noSmelting().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
     new MaterialDef('einsteinium').modify().dust().ingot().fluid().materialsBasic(),
     new MaterialDef('erbium').modify().dust().ingot().fluid().noSmelting().materialsBasic(), //chemical reaction
     new MaterialDef('fermium').modify().fluid().dust(),
     new MaterialDef('flerovium').modify().dust().ingot().fluid().gas().noSmelting().materialsBasic(),
-    new MaterialDef('hassium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
+    new MaterialDef('hassium').modify().dust().ingot().fluid().noSmelting().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
     new MaterialDef('holmium').modify().dust().ingot().fluid().noSmelting().materialsBasic(),    //chemical reaction
     new MaterialDef('lawrencium').modify().dust().ingot().fluid().noSmelting().materialsBasic(), //chemical reaction
     new MaterialDef('livermorium').modify().fluid(),
-    new MaterialDef('meitnerium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
+    new MaterialDef('meitnerium').modify().dust().ingot().fluid().noSmelting().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
     new MaterialDef('mendelevium').modify().dust().ingot().fluid().materialsBasic(),
     new MaterialDef('moscovium').modify().fluid(),
     new MaterialDef('neptunium').modify().dust().ingot().fluid().materialsBasic()
@@ -2017,7 +2017,7 @@ const materials = [
     new MaterialDef('oganesson').modify().plasma().fluid(),
     new MaterialDef('roentgenium').modify().dust().ingot().fluid().materialsBasic(),
     new MaterialDef('rutherfordium').modify().dust().ingot().fluid().noSmelting().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
-    new MaterialDef('seaborgium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
+    new MaterialDef('seaborgium').modify().dust().ingot().fluid().noSmelting().blastCoil(COIL_TEMPS.DRACONIUM_AWAKENED).materialsBasic(),
     new MaterialDef('technetium').modify().dust().ingot().fluid().blastCoil(COIL_TEMPS.DRACONIUM).materialsBasic(),
     new MaterialDef('tennessine').modify().fluid(),
     new MaterialDef('thulium').modify().dust().ingot().fluid().noSmelting().materialsBasic(),    //chemical reaction
@@ -2052,6 +2052,11 @@ const materials = [
     new MaterialDef('holmium_fluoride').dust().color(0xD9B77A).iconSet('DULL').components('1x holmium, 3x fluorine').noDecomp(),
     new MaterialDef('thulium_fluoride').dust().color(0x93C9B3).iconSet('DULL').components('1x thulium, 3x fluorine').noDecomp(),
     new MaterialDef('lanthanum_oxide').dust().color(0xC9CFA8).iconSet('DULL').components('2x lanthanum, 3x oxygen'),
+    new MaterialDef('americium_244').dust().color(0xC47A5E).iconSet('RADIOACTIVE').components('1x americium').formula('Am²⁴⁴'),
+    new MaterialDef('curium_249').dust().color(0x7E6FB0).iconSet('RADIOACTIVE').components('1x curium').formula('Cm²⁴⁹'),
+    new MaterialDef('berkelium_250').dust().color(0xB07FA8).iconSet('RADIOACTIVE').components('1x berkelium').formula('Bk²⁵⁰'),
+    new MaterialDef('californium_253').dust().color(0xD2A05A).iconSet('RADIOACTIVE').components('1x californium').formula('Cf²⁵³'),
+    new MaterialDef('einsteinium_255').dust().color(0x5EB0A0).iconSet('RADIOACTIVE').components('1x einsteinium').formula('Es²⁵⁵'),
     
 ];
 

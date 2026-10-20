@@ -1,6 +1,21 @@
 ServerEvents.recipes(allthemods => {
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA;
 
+    const COIL_TEMPS = {
+        CUPRONICKEL: 1800,
+        KANTHAL: 2700,
+        NICHROME: 3600,
+        RTM: 4500,
+        HSS_G: 5400,
+        NAQUADAH: 7200,
+        TRINIUM: 9000,
+        TRITANIUM: 10800,
+        DRACONIUM: 11200,
+        DRACONIUM_AWAKENED: 12800,
+        ETRIUM: 13500,
+        INFINITY: 15000
+    };
+
     const chainA = IV;
     const chainB = LuV;
     const chainC = ZPM;
@@ -268,5 +283,27 @@ ServerEvents.recipes(allthemods => {
             .EUt(ZPM);        
     });
 
-    
+    const ladder = [
+        { from: 'plutonium',   iso: 'plutonium_241',   to: 'americium',   emitter: 'polonium_beryllium', eut: LuV },
+        { from: 'americium',   iso: 'americium_244',   to: 'curium',      emitter: 'americium_beryllium', eut: ZPM },
+        { from: 'curium',      iso: 'curium_249',      to: 'berkelium',   emitter: 'americium_beryllium', eut: ZPM },
+        { from: 'berkelium',   iso: 'berkelium_250',   to: 'californium', emitter: 'californium', eut: UV },
+        { from: 'californium', iso: 'californium_253', to: 'einsteinium', emitter: 'californium', eut: UV },
+        { from: 'einsteinium', iso: 'einsteinium_255', to: 'fermium',     emitter: 'californium', eut: UV }
+    ];
+
+    ladder.forEach(({ from, iso, to, emitter, eut }) => {
+        allthemods.recipes.gtceu.neutron_irradiator(`gregification:irradiator/${iso}`)
+            .itemInputs(`4x #forge:dusts/${from}`)
+            .notConsumable(`gtceu:${emitter}_neutron_source`)
+            .itemOutputs(`4x gtceu:${iso}_dust`)
+            .duration(pbDuration)
+            .EUt(eut);
+
+        allthemods.recipes.gtceu.large_chemical_reactor(`gregification:decay/${iso}`)
+            .itemInputs(`4x #forge:dusts/${iso}`)
+            .itemOutputs(`4x gtceu:${to}_dust`)
+            .duration(pbDuration)
+            .EUt(eut);
+    });
 });

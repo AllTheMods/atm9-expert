@@ -53,7 +53,7 @@ ServerEvents.recipes(allthemods => {
     addEBF(['1x #forge:dusts/lanthanum_oxide', '3x #forge:dusts/calcium'], '#forge:argon 1000', ['2x gtceu:lanthanum_dust', '3x gtceu:quicklime_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);
 
     ['erbium', 'holmium', 'thulium'].forEach(el => {
-        addEBF([`2x #forge:dusts/${el}_fluoride`, '3x #forge:dusts/calcium'], '#forge:argon 1000', [`2x gtceu:${el}_ingot`, '3x gtceu:fluorite_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);
+        addEBF([`2x #forge:dusts/${el}_fluoride`, '3x #forge:dusts/calcium'], '#forge:argon 1000', [`2x gtceu:${el}_ingot`, '3x gtceu:calcium_fluoride_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);
     });
 
     const freezing = [

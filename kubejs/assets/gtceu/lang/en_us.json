@@ -916,6 +916,11 @@
     "material.gtceu.erbium_fluoride": "Erbium Fluoride",
     "material.gtceu.holmium_fluoride": "Holmium Fluoride",
     "material.gtceu.thulium_fluoride": "Thulium Fluoride",
-    "material.gtceu.lanthanum_oxide": "Lanthanum Oxide"
+    "material.gtceu.lanthanum_oxide": "Lanthanum Oxide",
+    "material.gtceu.americium_244": "Americium 244",
+    "material.gtceu.curium_249": "Curium 249",
+    "material.gtceu.berkelium_250": "Berkelium 250",
+    "material.gtceu.californium_253": "Californium 253",
+    "material.gtceu.einsteinium_255": "Einsteinium 255"
     
 }
