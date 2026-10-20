@@ -284,7 +284,7 @@ ServerEvents.recipes(allthemods => {
             '4x #forge:dusts/redstone'
         ],
         '8x alltheores:signalum_dust',
-        HV,
+        MV,
         100
     );
 
@@ -296,9 +296,11 @@ ServerEvents.recipes(allthemods => {
             '2x #forge:dusts/glowstone'
         ],
         '6x alltheores:lumium_dust',
-        EV,
+        HV,
         100
     );
+
+    addMixer(['#forge:dusts/diamond', '3x #forge:dusts/lead', '2x #forge:dusts/ender_pearl'], '6x alltheores:enderium_dust', EV, 100);
 
     //eternium
     addMixer(
