@@ -92,7 +92,7 @@ ServerEvents.recipes(allthemods => {
     
     const powahRemoves = [
         'mekanism:processing/lategame/plutonium_pellet/from_reaction', 'mekanism:processing/lategame/polonium_pellet/from_reaction',
-        'mekanism:processing/lategame/plutonium', 'mekanism:processing/lategame/polonium',
+        'mekanism:processing/lategame/plutonium', 'mekanism:processing/lategame/polonium', 'mekanism:processing/uranium/reprocessing/from_plutoniumm',
         'create:crafting/materials/andesite_alloy', 'create:crafting/materials/andesite_alloy_from_zinc',
         'create:crafting/kinetics/steam_engine', 'create:crafting/kinetics/empty_blaze_burner',
         'ars_nouveau:source_gem_block', 'ars_nouveau:source_gem_block_2',

@@ -1,6 +1,13 @@
 ServerEvents.recipes(allthemods => {
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA;
 
+    const chainA = IV;
+    const chainB = LuV;
+    const chainC = ZPM;
+    const durationA = 400;
+    const durationB = 600;
+    const durationC = 800;
+
     const nuclearPhysicsEU = ZPM
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:neutron_source/polonium_beryllium')
         .itemInputs('32x #forge:dusts/polonium', '64x #forge:dusts/beryllium', '1x #forge:frames/adamantium')
@@ -45,4 +52,141 @@ ServerEvents.recipes(allthemods => {
         .outputFluids('gtceu:spent_nuclear_waste 1000')
         .duration(400)
         .EUt(nuclearPhysicsEU);
+
+    [['single', 1], ['double', 2], ['quad', 4]].forEach(([size, n]) => {
+        allthemods.recipes.gtceu.assembler(`gregification:cell/thorium_${size}`)
+            .itemInputs(`${n}x #forge:dusts/thorium_oxide`,
+                `${n}x #forge:plates/potassium_calcium_orthosilicate`,
+                `${2 * n}x #forge:rods/graphite`,
+                `${2 * n}x #forge:plates/zirconium`,
+                `${n}x #forge:dusts/boron`,
+                `${n}x #forge:dusts/beryllium`)
+            .inputFluids('#forge:hop_graphite 1000')
+            .itemOutputs(`gtceu:thorium_${size}`)
+            .duration(120)
+            .EUt(IV);
+    });
+
+    [['single', 1], ['double', 2], ['quad', 4]].forEach(([size, n]) => {
+        allthemods.recipes.gtceu.assembler(`gregification:cell/thorium_berkelium_${size}`)
+            .itemInputs(`${n}x #forge:dusts/thorium_berkelium_alloy`,
+                `${n}x #forge:plates/tungsten_carbide`,
+                `${2 * n}x #forge:rods/thorium`,
+                `${2 * n}x #forge:plates/zirconium`,
+                `${n}x #forge:dusts/gadolinium`,
+                `${n}x #forge:dusts/beryllium`)
+            .inputFluids('#forge:hop_graphite 1000')
+            .itemOutputs(`gtceu:thorium_berkelium_${size}`)
+            .duration(120)
+            .EUt(LuV);
+    });
+
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:waste_chain/a_dissolve')
+        .inputFluids('#forge:nuclear_waste 1000', '#forge:nitric_acid 1000')
+        .outputFluids('gtceu:dissolved_nuclear_waste 1000')
+        .duration(durationA)
+        .EUt(chainA);
+
+    allthemods.recipes.gtceu.centrifuge('gregification:waste_chain/a_split')
+        .inputFluids('#forge:dissolved_nuclear_waste 1000')
+        .chancedOutput('gtceu:uranium_dust', 1000, 100)
+        .chancedOutput('gtceu:caesium_dust', 500, 100)
+        .chancedOutput('gtceu:strontium_dust', 500, 100)
+        .chancedOutput('gtceu:palladium_dust', 500, 100)
+        .chancedOutput('gtceu:neodymium_dust', 500, 100)
+        .chancedOutput('gtceu:neptunium_dust', 200, 100)
+        .outputFluids('gtceu:plutonium 100', 'gtceu:polonium 100', 'gtceu:xenon 100', 'gtceu:krypton 100', 'gtceu:spent_nuclear_waste 500')
+        .duration(durationA)
+        .EUt(chainA);
+
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:waste_chain/b_dissolve')
+        .inputFluids('#forge:thorium_waste_solution 1000', '#forge:hydrochloric_acid 1000')
+        .outputFluids('gtceu:dissolved_thorium_waste 1000')
+        .duration(durationB)
+        .EUt(chainB);
+
+    allthemods.recipes.gtceu.electrolyzer('gregification:waste_chain/b_split')
+        .inputFluids('#forge:dissolved_thorium_waste 1000')
+        .chancedOutput('gtceu:thorium_dust', 1000, 100)
+        .chancedOutput('gtceu:uranium_dust', 500, 100)
+        .chancedOutput('gtceu:protactinium_dust', 1000, 100)
+        .chancedOutput('gtceu:strontium_dust', 600, 100)
+        .chancedOutput('gtceu:radium_dust', 200, 100)
+        .chancedOutput('gtceu:actinium_dust', 100, 100)
+        .outputFluids('gtceu:radon 250', 'gtceu:spent_nuclear_waste 500')
+        .duration(durationB)
+        .EUt(chainB);
+
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:waste_chain/c_dissolve')
+        .inputFluids('#forge:thorium_berkelium_waste_solution 1000', '#forge:sulfuric_acid 1000')
+        .outputFluids('gtceu:dissolved_berkelium_waste 1000')
+        .duration(durationC)
+        .EUt(chainC);
+
+    allthemods.recipes.gtceu.centrifuge('gregification:waste_chain/c_split')
+        .inputFluids('#forge:dissolved_berkelium_waste 1000')
+        .chancedOutput('gtceu:thorium_dust', 1500, 100)
+        .chancedOutput('gtceu:californium_dust', 300, 100)
+        .chancedOutput('gtceu:berkelium_dust', 200, 100)
+        .chancedOutput('gtceu:protactinium_dust', 1000, 100)
+        .chancedOutput('gtceu:uranium_dust', 800, 100)
+        .chancedOutput('gtceu:einsteinium_dust', 200, 100)
+        .outputFluids('gtceu:xenon 200', 'gtceu:spent_nuclear_waste 500')
+        .duration(durationC)
+        .EUt(chainC);
+
+    allthemods.recipes.gtceu.centrifuge('gregification:waste_chain/digested_fission')
+        .inputFluids('#forge:digested_fission_products 1000')
+        .chancedOutput('gtceu:caesium_dust', 200, 100)
+        .chancedOutput('gtceu:strontium_sulfide_dust', 120, 100)
+        .chancedOutput('gtceu:technetium_dust', 500, 100)
+        .chancedOutput('gtceu:ruthenium_dust', 500, 100)
+        .chancedOutput('gtceu:rhodium_dust', 300, 100)
+        .chancedOutput('gtceu:tellurium_dust', 600, 100)
+        .duration(durationC)
+        .EUt(chainC);
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:waste_chain/digested_fertile')
+        .inputFluids('#forge:digested_fertile_actinides 1000')
+        .chancedOutput('gtceu:thorium_dust', 250, 100)
+        .chancedOutput('gtceu:uranium_dust', 250, 100)
+        .chancedOutput('gtceu:protactinium_dust', 150, 100)
+        .duration(durationC)
+        .EUt(chainC);
+
+    allthemods.recipes.gtceu.electrolyzer('gregification:waste_chain/digested_transuranics')
+        .inputFluids('#forge:digested_transuranics 1000')
+        .chancedOutput('gtceu:plutonium_241_dust', 100, 100)
+        .chancedOutput('gtceu:neptunium_dust', 500, 100)
+        .chancedOutput('gtceu:americium_dust', 300, 100)
+        .chancedOutput('gtceu:curium_dust', 150, 100)
+        .chancedOutput('gtceu:einsteinium_dust', 50, 100)
+        .chancedOutput('gtceu:fermium_dust', 30, 100)
+        .duration(durationC)
+        .EUt(chainC);
+    
+    [['single', 1], ['double', 2], ['quad', 4]].forEach(([size, n]) => {
+        allthemods.recipes.gtceu.large_chemical_reactor(`gregification:cell_reprocess/thorium_${size}`)
+            .itemInputs(`gtceu:depleted_${size}_thorium`)
+            .inputFluids(`#forge:nitric_acid ${n * 1000}`)
+            .chancedOutput(`${2 * n}x gtceu:zirconium_dust`, 7500, 100)
+            .chancedOutput(`${n}x gtceu:potassium_calcium_orthosilicate_dust`, 2500, 100)
+            .chancedOutput(`${2 * n}x gtceu:graphite_dust`, 2500, 100)
+            .outputFluids(`gtceu:thorium_waste_solution ${500 * n}`)
+            .duration(300)
+            .EUt(LuV);
+
+        allthemods.recipes.gtceu.large_chemical_reactor(`gregification:cell_reprocess/thorium_berkelium_${size}`)
+            .itemInputs(`gtceu:depleted_${size}_thorium_berkelium`)
+            .inputFluids(`#forge:hydrofluoric_acid ${n * 1000}`)
+            .chancedOutput(`${2 * n}x gtceu:zirconium_dust`, 7500, 100)
+            .chancedOutput(`${n}x gtceu:tungsten_carbide_dust`, 2500, 100)
+            .chancedOutput(`${2 * n}x gtceu:thorium_dust`, 2500, 100)
+            .outputFluids(`gtceu:thorium_berkelium_waste_solution ${500 * n}`)
+            .duration(300)
+            .EUt(ZPM);
+    });
 });

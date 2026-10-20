@@ -895,6 +895,12 @@
     "material.gtceu.andesite_alloy": "Andesite Alloy",
     "material.gtceu.thorium_waste_solution": "Thorium Waste Solution",
     "material.gtceu.thorium_berkelium_waste_solution": "Thorium Berkelium Waste Solution",
-    "material.gtceu.nuclear_waste": "Nuclear Waste"
+    "material.gtceu.nuclear_waste": "Nuclear Waste",
+    "material.gtceu.dissolved_nuclear_waste": "Dissolved Nuclear Waste",
+    "material.gtceu.dissolved_thorium_waste": "Dissolved Thorium Waste",
+    "material.gtceu.dissolved_berkelium_waste": "Dissolved Thorium Berkelium Waste",
+    "material.gtceu.digested_fission_products": "Digested Fission Products",
+    "material.gtceu.digested_fertile_actinides": "Digested Fertile Actinides",
+    "material.gtceu.digested_transuranics": "Digested Transuranics",
     
 }

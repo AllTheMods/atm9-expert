@@ -229,15 +229,12 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.centrifuge('bacteria/process/spent_nuclear_waste')
         .itemInputs(desulfovibrioStrain)
         .inputFluids('#forge:spent_nuclear_waste 1000')
-        .chancedOutput('gtceu:caesium_dust', 2000, 0)
-        .chancedOutput('gtceu:thorium_dust', 2000, 0)
-        .chancedOutput('gtceu:uranium_dust', 3000, 0)
-        .chancedOutput('gtceu:protactinium_dust', 2500, 0)
-        .chancedOutput('gtceu:strontium_sulfide_dust', 1000, 0)
-        .chancedOutput('gtceu:plutonium_241_dust', 500, 0)
+        .outputFluids('gtceu:digested_fission_products 400',
+                    'gtceu:digested_fertile_actinides 300',
+                    'gtceu:digested_transuranics 300')
         .duration(600)
         .EUt(LuV);
-        
+
     allthemods.recipes.gtceu.large_chemical_reactor(`gregification:chemical_reactor/bio_organic_nanocomposite`)
         .itemInputs('#forge:dusts/phenylalanine', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"CaulobacterCrescentus"}').strongNBT())
         .inputFluids('#forge:phenolic_resin 1440')

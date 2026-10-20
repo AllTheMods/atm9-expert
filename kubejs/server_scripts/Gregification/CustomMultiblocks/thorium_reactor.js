@@ -2,12 +2,12 @@ ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
 
     const thoriumCells = [
-        { id: 'thorium_single_cell',    input: 'gtceu:thorium_single',            outputCount: 1, gas: 'gtceu:radon', duration: 1500,  eu: ZPM },
-        { id: 'thorium_double_cell',    input: 'gtceu:thorium_double',            outputCount: 2, gas: 'gtceu:radon', duration: 4950,  eu: ZPM },
-        { id: 'thorium_quad_cell',      input: 'gtceu:thorium_quad',              outputCount: 4, gas: 'gtceu:radon', duration: 12600, eu: ZPM },
-        { id: 'berkelium_single_cell',  input: 'gtceu:thorium_berkelium_single',  outputCount: 2, gas: 'gtceu:xenon', duration: 1500,  eu: UV },
-        { id: 'berkelium_double_cell',  input: 'gtceu:thorium_berkelium_double',  outputCount: 4, gas: 'gtceu:xenon', duration: 4950,  eu: UV },
-        { id: 'berkelium_quad_cell',    input: 'gtceu:thorium_berkelium_quad',    outputCount: 8, gas: 'gtceu:xenon', duration: 12600, eu: UV }
+        { id: 'thorium_single_cell',    input: 'gtceu:thorium_single',            outputCount: 1, gas: 'gtceu:radon', duration: 1050,  eu: ZPM },
+        { id: 'thorium_double_cell',    input: 'gtceu:thorium_double',            outputCount: 2, gas: 'gtceu:radon', duration: 2915,  eu: ZPM },
+        { id: 'thorium_quad_cell',      input: 'gtceu:thorium_quad',              outputCount: 4, gas: 'gtceu:radon', duration: 8290,  eu: ZPM },
+        { id: 'berkelium_single_cell',  input: 'gtceu:thorium_berkelium_single',  outputCount: 2, gas: 'gtceu:xenon', duration: 1440,  eu: UV },
+        { id: 'berkelium_double_cell',  input: 'gtceu:thorium_berkelium_double',  outputCount: 4, gas: 'gtceu:xenon', duration: 4010,  eu: UV },
+        { id: 'berkelium_quad_cell',    input: 'gtceu:thorium_berkelium_quad',    outputCount: 8, gas: 'gtceu:xenon', duration: 11410, eu: UV }
     ];
 
     thoriumCells.forEach(cell => {

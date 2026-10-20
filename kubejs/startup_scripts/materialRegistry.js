@@ -2032,6 +2032,14 @@ const materials = [
     new MaterialDef('thorium_berkelium_waste_solution').fluid().color(0x8A4FB5).iconSet('RADIOACTIVE'),
     new MaterialDef('nuclear_waste').fluid().color(0xB8D13A).iconSet('RADIOACTIVE'),
     
+    new MaterialDef('dissolved_nuclear_waste').fluid().color(0x8FAE2E).iconSet('RADIOACTIVE'),
+    new MaterialDef('dissolved_thorium_waste').fluid().color(0xC9B458).iconSet('RADIOACTIVE'),
+    new MaterialDef('dissolved_berkelium_waste').fluid().color(0x6A3FA0).iconSet('RADIOACTIVE'),
+
+    new MaterialDef('digested_fission_products').fluid().color(0x4FA89A).iconSet('RADIOACTIVE'),
+    new MaterialDef('digested_fertile_actinides').fluid().color(0xD08A3E).iconSet('RADIOACTIVE'),
+    new MaterialDef('digested_transuranics').fluid().color(0xA23B6E).iconSet('RADIOACTIVE'),
+    
 ];
 
 
