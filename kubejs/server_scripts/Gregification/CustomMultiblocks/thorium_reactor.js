@@ -22,7 +22,7 @@ ServerEvents.recipes(allthemods => {
         allthemods.recipes.gtceu.thorium_reactor(`allthemods:thorium_reactor/${cell.id}`)
             .itemInputs(cell.input)
             .itemOutputs(`${cell.outputCount}x gtceu:protactinium_dust`, depleted)
-            .inputFluids('gtceu:distilled_water 16000')
+            .inputFluids(`gtceu:distilled_water ${cell.outputCount * 4000}`)
             .outputFluids([`${cell.gas} ${gasAmount}`, `${wasteFluid} ${wasteAmount}`])
             .duration(cell.duration)
             .EUt(-cell.eu);

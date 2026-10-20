@@ -114,23 +114,6 @@ ServerEvents.recipes(allthemods => {
         '#forge:ingots/gaia'
     );
     
-    //working on this recipe
-    addAssemblyLine(
-        'gtceu:magical_soil',
-        [
-            '#kubejs:farmland/insanium',
-            '4x #forge:storage_blocks/insanium_essence'
-        ],
-        [
-            '#forge:saturated_tau 10000',
-            '#forge:saturated_life_fertilizer 10000'
-        ],
-        mekShort,
-        LuV,
-        'mysticalagradditions:insanium_block'
-    );
-
-    
 
     //mekanism - steel casing
     addAssemblyLine('mekanism:steel_casing',
