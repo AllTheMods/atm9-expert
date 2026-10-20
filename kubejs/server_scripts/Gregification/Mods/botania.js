@@ -110,7 +110,7 @@ ServerEvents.recipes(allthemods => {
         allthemods.recipes.gtceu.petal_apothecary(safeID)
             .itemInputs(inputItems)
             .itemOutputs(outputItem)
-            .inputFluids(`${stage1} 1000}`)
+            .inputFluids(`${stage1} 1000`)
             .duration(petalDuration)
             .EUt(petalVoltage);
     });
@@ -236,7 +236,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.petal_apothecary('pure_bee')
         .itemInputs(['minecraft:bee_spawn_egg', '3x #botania:petals/white', 'productivebees:honey_treat', 'minecraft:bee_spawn_egg'])
         .itemOutputs(pureBee)
-        .inputFluids(`${stage3} 10000}`)
+        .inputFluids(`${stage3} 10000`)
         .duration(petalDuration)
         .EUt(petalVoltage);
     allthemods.recipes.gtceu.runic_altar('mana_bee')
@@ -338,7 +338,6 @@ ServerEvents.recipes(allthemods => {
         try {
             let recipe = JSON.parse(rawRecipe.json);
 
-            // --- Input item ---
             let inputItem = null;
             if (recipe.input) {
                 if (recipe.input.item) {
@@ -349,14 +348,12 @@ ServerEvents.recipes(allthemods => {
             }
             let inputItems = inputItem ? [inputItem] : [];
 
-            // --- Input fluid ---
             let inputFluids = [];
             if (recipe.inputFluid && recipe.inputFluid.fluid) {
                 let amount = recipe.inputFluid.amount || 1000;
                 inputFluids.push(`${recipe.inputFluid.fluid} ${Math.round(amount)}`);
             }
 
-            // --- Main output item(s) — handle both single-object and array shapes ---
             let outputItems = [];
             let outputObjs = Array.isArray(recipe.output) ? recipe.output : (recipe.output ? [recipe.output] : []);
             outputObjs.forEach(out => {
@@ -365,15 +362,13 @@ ServerEvents.recipes(allthemods => {
                     outputItems.push(count > 1 ? `${count}x ${out.item}` : out.item);
                 }
             });
-
-            // --- Output fluid ---
+            
             let outputFluids = [];
             if (recipe.outputFluid && recipe.outputFluid.fluid) {
                 let amount = recipe.outputFluid.amount || 1000;
                 outputFluids.push(`${recipe.outputFluid.fluid} ${Math.round(amount)}`);
             }
-
-            // --- addedoutput: split into guaranteed extras vs genuine chanced outputs ---
+            
             let chancedEntries = [];
             if (Array.isArray(recipe.addedoutput)) {
                 recipe.addedoutput.forEach(added => {
@@ -383,13 +378,11 @@ ServerEvents.recipes(allthemods => {
                     let chance = Math.round((added.chance || 0) * 10000);
 
                     if (mainChance >= 1.0) {
-                        // Guaranteed extra output — treat as a normal output, not chanced
                         let count = added.type.count || 1;
                         outputItems.push(count > 1 ? `${count}x ${added.type.item}` : added.type.item);
                     } else if (chance > 0 && chance < 10000) {
                         chancedEntries.push({ item: added.type.item, chance: chance });
-                    }
-                    // else: chance is 0 and mainchance isn't 1.0 — nothing happens, skip silently
+                    }                    
                 });
             }
 
@@ -397,7 +390,6 @@ ServerEvents.recipes(allthemods => {
                 outputItems.push('minecraft:air');
             }
 
-            // --- Build the recipe ---
             let builder = allthemods.recipes.gtceu.alchemical_workbench(safeID)
                 .itemInputs(inputItems)
                 .itemOutputs(outputItems)
@@ -406,8 +398,7 @@ ServerEvents.recipes(allthemods => {
 
             if (inputFluids.length > 0) builder.inputFluids(inputFluids);
             if (outputFluids.length > 0) builder.outputFluids(outputFluids);
-
-            // --- Tool handling: hydrate dropped entirely, others become non-consumed requirements ---
+            
             if (recipe.tool && recipe.tool.tag) {
                 let match = recipe.tool.tag.match(/bloodmagic:arc\/([a-z]+)/);
                 let category = match ? match[1] : null;
@@ -443,11 +434,9 @@ ServerEvents.recipes(allthemods => {
         try {
             let recipe = JSON.parse(rawRecipe.json);
 
-            // --- Input items — array of {item} or {tag}, some entries may be nested OR-arrays ---
             let inputItems = [];
             (recipe.input || []).forEach(ing => {
                 if (Array.isArray(ing)) {
-                    // OR-slot — take the first option only
                     let first = ing[0];
                     if (first.item) {
                         inputItems.push(first.item);
@@ -460,23 +449,19 @@ ServerEvents.recipes(allthemods => {
                     inputItems.push('#' + ing.tag);
                 }
             });
-
-            // --- Output item ---
+            
             let outputItem = 'minecraft:air';
             if (recipe.output && recipe.output.item) {
                 let count = recipe.output.count || 1;
                 outputItem = count > 1 ? `${count}x ${recipe.output.item}` : recipe.output.item;
             }
 
-            // --- Liquid blood cost (syphon → fluid) ---
             let syphonAmount = Math.round(recipe.syphon || 0);
 
-            // --- Duration ---
             let duration = Math.round(recipe.ticks || 100);
 
-            // --- Blood orb tier as non-consumed requirement ---
             let orbItem = BLOOD_ORB_TIERS[Math.round(recipe.upgradeLevel || 1)];
-            [Math.round(recipe.upgradeLevel || 1)];
+            
             let altarVoltage = EUTiers[Math.round(recipe.upgradeLevel || 3)];
 
             let builder = allthemods.recipes.gtceu.alchemical_workbench(safeID)
@@ -520,13 +505,11 @@ ServerEvents.recipes(allthemods => {
         try {
             let recipe = JSON.parse(rawRecipe.json);
 
-            // --- Skip NBT-based recipes (e.g. bee spawn eggs) - handled manually below ---
             if ((recipe.input && recipe.input.type === 'forge:nbt') ||
                 (recipe.output && recipe.output.type === 'forge:nbt')) {
                 return;
             }
 
-            // --- Output item (shared across every alternative input) ---
             let outObj = recipe.output;
             let outputItem = 'minecraft:air';
             if (outObj && outObj.item) {
@@ -536,7 +519,6 @@ ServerEvents.recipes(allthemods => {
 
             let manaCost = recipe.mana || 0;
 
-            // --- Input: normalize to an array of alternatives (single-item input becomes a 1-length array) ---
             let rawInput = recipe.input;
             let inputEntries = Array.isArray(rawInput) ? rawInput : [rawInput];
 
@@ -551,7 +533,6 @@ ServerEvents.recipes(allthemods => {
                 }
                 if (!inputItem) return;
 
-                // one recipe ID per alternative - suffix only added when there's more than one
                 let safeID = inputEntries.length > 1 ? `${baseSafeID}_alt${index}` : baseSafeID;
 
                 let builder = allthemods.recipes.gtceu.mana_pool(safeID)
@@ -561,7 +542,6 @@ ServerEvents.recipes(allthemods => {
                     .duration(10)
                     .EUt(HV);
 
-                // --- Catalyst (Alchemy/Conjuration) as a non-consumed second input ---
                 if (recipe.catalyst && recipe.catalyst.block) {
                     let catalystItem = CATALYST_ITEM_IDS[recipe.catalyst.block];
                     if (catalystItem) {
@@ -581,7 +561,6 @@ ServerEvents.recipes(allthemods => {
 
 
 
-    // --- Manasteel bee - manual, NBT-based, excluded from the automated loop above ---
     allthemods.recipes.gtceu.mana_pool('bacteria_mana_pool_manasteel_bee')
         .itemInputs(ironBee)
         .itemOutputs(manaSteel)
