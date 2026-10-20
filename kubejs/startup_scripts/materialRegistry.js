@@ -136,9 +136,11 @@ MaterialDef.prototype.getCoilVoltage = function (coil) {
 MaterialDef.prototype.dust = function () { this.traits.dust = true; return this; };
 MaterialDef.prototype.ingot = function () { this.traits.ingot = true; return this; };
 MaterialDef.prototype.gem = function () { this.traits.gem = true; return this; };
-MaterialDef.prototype.fluid = function () { this.traits.fluid = true; return this; };
 MaterialDef.prototype.gas = function () { this.traits.gas = true; return this; };
-MaterialDef.prototype.plasma = function () { this.traits.plasma = true; return this; };
+MaterialDef.prototype.fluid = function (customStill) { this.traits.fluid = true; if (customStill) this.traits.fluidStill = true; return this; };
+MaterialDef.prototype.plasma = function (customStill) { this.traits.plasma = true; if (customStill) this.traits.plasmaStill = true; return this; };
+//MaterialDef.prototype.fluid = function () { this.traits.fluid = true; return this; };
+//MaterialDef.prototype.plasma = function () { this.traits.plasma = true; return this; };
 MaterialDef.prototype.ore = function (oreMultiplier, byproductMultiplier) {
     
     this.traits.ore = { oreMultiplier: oreMultiplier || 2, byproductMultiplier: byproductMultiplier || 1 };
@@ -255,9 +257,15 @@ MaterialDef.prototype.register = function (event) {
     if (this.traits.dust) b.dust();
     if (this.traits.ingot) b.ingot();
     if (this.traits.gem) b.gem();
-    if (this.traits.fluid) b.fluid();
+    if (this.traits.fluid) {
+    if (this.traits.fluidStill) b.liquid(new GTFluidBuilder().state(GTFluidState.LIQUID).customStill().block());
+        else b.fluid();
+    }
     if (this.traits.gas) b.gas();
-    if (this.traits.plasma) b.plasma();    
+    if (this.traits.plasma) {
+        if (this.traits.plasmaStill) b['fluid(com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey,com.gregtechceu.gtceu.api.fluids.FluidBuilder)'](GTFluidStorageKeys.PLASMA, new GTFluidBuilder().state(GTFluidState.PLASMA).customStill().block());
+        else b.plasma();
+    }
     if (this.traits.ore) b.ore(this.traits.ore.oreMultiplier, this.traits.ore.byproductMultiplier);
     if (this.traits.polymer) b.polymer();
     if (this.traits.element) b.element(this.traits.element);
@@ -1910,7 +1918,7 @@ const materials = [
 
     new MaterialDef('lapotron').modify().singularity(),
 
-    new MaterialDef('nether_star').modify().ore().color(0xD8D8C0).iconSet('SHINY')
+    new MaterialDef('nether_star').modify().ore().color(0xD8D8C0).iconSet('SHINY').fluid()
         .byproducts(['nether_quartz', 'glowstone', 'sulfur']),
 
     new MaterialDef('kevlar_carbon_fiber_mesh').gem().color(0x8A7A46).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE)
@@ -2078,19 +2086,41 @@ const materials = [
     new MaterialDef('indium_tin_oxide').dust().color(0xB8C77A).iconSet('DULL').noDecomp().formula('In2O3·SnO2').components('9x indium_iii_oxide, 1x cassiterite'),
     new MaterialDef('perovskite_ink').fluid().color(0xE08A2E).iconSet('FLUID').noDecomp().formula('CsPbBr3·C2H6O').components('1x caesium, 1x lead, 3x bromine, 2x carbon, 6x hydrogen, 1x oxygen'),    	
     new MaterialDef('caesium_lead_bromide').dust().color(0xD9731A).iconSet('DULL').formula('CsPbBr3').components('1x caesium, 1x lead, 3x bromine'),
+
+    //legacy atm9 registries converted
+    new MaterialDef('fluorite').gem().ore().color(0x0c9949).iconSet('DIAMOND').components('1x calcium, 2x fluorine'),
+    new MaterialDef('dolomite').dust().ore().color(0xf2e4bd).iconSet('ROUGH').components('1x calcium, 1x magnesium, 1x carbon, 3x oxygen'),
+    new MaterialDef('star_matter').plasma('customStill').color(0xb219d1),
+    new MaterialDef('infinity').ingot().fluid('customStill').element('infinity').color(0xffffff).iconSet('infinity')
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FOIL)
+        .cable({ voltage: 134217728, loss: 0, superconductor: true })
+        .blast({ temp: COIL_TEMPS.ETRIUM, eut: 33554432, duration: 600 }),
+    new MaterialDef('molten_piglich_heart').fluid().color(0xe6af15).iconSet('FLUID'),
+    new MaterialDef('nitinol').ingot().fluid().iconSet('METALLIC').color(0xD4B0F4).flags(GTMaterialFlags.GENERATE_PLATE).components('4x nickel, 6x titanium')
+        .blast({ temp: 1583, eut: IV, duration: 1200 }),
+    new MaterialDef('trinaquadalloy').ingot().fluid().color(0x281832).iconSet('BRIGHT').flags(GTMaterialFlags.GENERATE_PLATE).components('6x trinium, 2x naquadah, 1x carbon')
+        .blast({ temp: 8747, eut: ZPM, duration: 1200 }),
+    new MaterialDef('trinium').modify().ore().byproducts(['naquadah', 'titanium', 'trinium']),
+        
 ];
 
 
 GTCEuStartupEvents.registry('gtceu:material', allthemods => {
-    materials.forEach(m => m.register(allthemods));
+    materials.forEach(m => m.register(allthemods));    
+    /*
+    allthemods.create('star_matter')
+        ['fluid(com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey,com.gregtechceu.gtceu.api.fluids.FluidBuilder)'](GTFluidStorageKeys.PLASMA, new GTFluidBuilder().state(GTFluidState.PLASMA).customStill())
+        .color(0xb219d1);
+
+    
     let materialBuilder = allthemods.create("infinity")
-    //
+    
         .cableProperties(134217728, 1, 0, true)
         .ingot()
         .liquid(new GTFluidBuilder().state(GTFluidState.LIQUID).customStill())
         .element('infinity')
         .color(0xffffff)
-        .iconSet("infinity")
+        .iconSet("infinity")        
         .blastTemp(COIL_TEMPS.ETRIUM, GasTier.HIGHEST, 33554432, 600)
         .flags(
             GTMaterialFlags.GENERATE_PLATE,
@@ -2104,6 +2134,7 @@ GTCEuStartupEvents.registry('gtceu:material', allthemods => {
             GTMaterialFlags.GENERATE_GEAR,
             GTMaterialFlags.GENERATE_SMALL_GEAR,
             GTMaterialFlags.GENERATE_FOIL);
+    */
 });
 
 StartupEvents.postInit(allthemods => {

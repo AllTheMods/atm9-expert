@@ -94,14 +94,6 @@ ServerEvents.recipes(allthemods => {
         .outputFluids([Fluid.of('gtceu:liquid_ender_air', 640000), Fluid.of('gtceu:tritium', 32000)])
         .duration(1800 * 8).EUt(UV)
 
-    allthemods.recipes.gtceu.micro_universe_collector('nether_ore')
-        .notConsumable('16x kubejs:micro_universe_catalyst')
-        .itemInputs(['1x kubejs:micro_universe_drill_ship', '1024x minecraft:netherrack'])
-        .inputFluids([Fluid.of('gtceu:rocket_fuel', 10000), Fluid.of('gtceu:nether_air', 1000000), Fluid.of('gtceu:nether_star', 144 * 16)])
-        .itemOutputs(['8192x gtceu:netherrack_sulfur_ore', '8192x gtceu:netherrack_tetrahedrite_ore', '4096x gtceu:netherrack_sphalerite_ore'])
-        .outputFluids([Fluid.of('gtceu:liquid_nether_air', 640000), Fluid.of('minecraft:lava', 100000), Fluid.of('gtceu:inert_nether_essence', 16000)])
-        .duration(1200 * 4).EUt(UV)
-
     allthemods.recipes.gtceu.micro_universe_collector('overworld_ore')
         .notConsumable('16x kubejs:micro_universe_catalyst')
         .itemInputs(['1x kubejs:micro_universe_drill_ship', '1024x minecraft:stone'])

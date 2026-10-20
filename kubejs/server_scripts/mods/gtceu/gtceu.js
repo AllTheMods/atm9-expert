@@ -18,20 +18,6 @@ ServerEvents.recipes(allthemods => {
         .duration(10)
         .EUt(IV)
 
-    allthemods.recipes.gtceu.mixer('kubejs:inert_fluid')
-        .itemInputs('kubejs:inert_nether_star')
-        .inputFluids(Fluid.of('gtceu:aqua_regia', 2000))
-        .outputFluids(Fluid.of('gtceu:inert_nether_essence', 2304))
-        .duration(12)
-        .EUt(IV)
-
-    allthemods.recipes.gtceu.autoclave('kubejs:autoclave/nether_star')
-        .itemInputs('gtceu:polyethylene_dust')
-        .inputFluids(Fluid.of('gtceu:inert_nether_essence', 144))
-        .itemOutputs('minecraft:nether_star')
-        .duration(6)
-        .EUt(EV)
-
     allthemods.recipes.gtceu.arc_furnace('nan/its_a_joke')
         .itemInputs(Item.of('productivebees:configurable_honeycomb', '{EntityTag:{type:"productivebees:neutronium"}}').strongNBT())
         .inputFluids(Fluid.of('gtceu:oxygen_plasma', 100))
