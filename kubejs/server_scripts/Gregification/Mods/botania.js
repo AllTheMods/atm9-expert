@@ -5,21 +5,46 @@ ServerEvents.recipes(allthemods => {
     const stage3 = 'gtceu:water_stage_3'
     const stage4 = 'gtceu:water_stage_4'
 
-    allthemods.recipes.gtceu.mana_converter('eu_to_source')
-        .inputFluids(`${stage1} 200}`)
-        .outputFluids('gtceu:source 200')
-        .addData('ebf_temp', 3600)
-        .circuit(2)
-        .duration(100)
-        .EUt(MV);
+    const stages = [
+        { water: stage1, n: 1 },
+        { water: stage2, n: 2 },
+        { water: stage3, n: 3 },
+        { water: stage4, n: 4 }
+    ];
 
-    allthemods.recipes.gtceu.mana_converter('eu_to_liquid_mana')
-        .inputFluids(`${stage1} 1280}`)
-        .outputFluids('gtceu:mana_essence 1280')
-        .addData('ebf_temp', 3600)
-        .circuit(1)
-        .duration(100)
-        .EUt(MV);
+    stages.forEach(s => {
+        allthemods.recipes.gtceu.mana_converter(`eu_to_source_${s.n}`)
+            .inputFluids(`${s.water} 200`)
+            .outputFluids(`gtceu:source ${200 * s.n}`)
+            .addData('ebf_temp', 3600)
+            .circuit(2)
+            .duration(100)
+            .EUt(MV);
+
+        allthemods.recipes.gtceu.mana_converter(`eu_to_liquid_mana_${s.n}`)
+            .inputFluids(`${s.water} 1280`)
+            .outputFluids(`gtceu:mana_essence ${1280 * s.n}`)
+            .addData('ebf_temp', 3600)
+            .circuit(1)
+            .duration(100)
+            .EUt(MV);
+
+        allthemods.recipes.gtceu.mana_burner(`lava_to_liquid_mana_${s.n}`)
+            .inputFluids('minecraft:lava 1000')
+            .inputFluids(`${s.water} 320`)
+            .outputFluids(`gtceu:mana_essence ${320 * s.n}`)
+            .circuit(1)
+            .duration(400);
+
+        allthemods.recipes.gtceu.mana_burner(`lava_to_source_${s.n}`)
+            .inputFluids('minecraft:lava 1000')
+            .inputFluids(`${s.water} 50`)
+            .outputFluids(`gtceu:source ${50 * s.n}`)
+            .circuit(2)
+            .duration(400);
+    });
+
+    
 
     allthemods.recipes.gtceu.mana_converter('mana_to_portal_fluid')
         .inputFluids('#forge:mana_essence 1000')
@@ -63,20 +88,7 @@ ServerEvents.recipes(allthemods => {
         .duration(14400)
 
 
-    allthemods.recipes.gtceu.mana_burner('lava_to_liquid_mana')
-        .inputFluids('minecraft:lava 1000')
-        .inputFluids(`${stage1} 320}`)
-        .outputFluids('gtceu:mana_essence 320')
-        .circuit(1)
-        .duration(400)
-
-
-    allthemods.recipes.gtceu.mana_burner('lava_to_source')
-        .inputFluids('minecraft:lava 1000')
-        .inputFluids(`${stage1} 50}`)
-        .outputFluids('gtceu:source 50')
-        .circuit(2)
-        .duration(400)
+    
 
 
     const petalDuration = 300;

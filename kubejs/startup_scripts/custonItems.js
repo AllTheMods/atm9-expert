@@ -4,6 +4,11 @@ StartupEvents.registry('item', event => {
         .displayName('Technomancy Orb')
         .tooltip('Orb of Technomantic Ascendancy')
         .rarity('ie_masterwork')
+
+    event.create('gtceu:beryllium_sphere')
+        .displayName('Beryllium Sphere')
+        .tooltip('Never give up. Never surrender.')
+        .rarity('ie_masterwork')
         
     
     event.create('gtceu:agarwood')
@@ -78,8 +83,7 @@ StartupEvents.registry('item', event => {
         .tooltip('§7A concentrated orb of pure magical energy.');
     */
     event.create('gtceu:blank_slate_casing')
-        .displayName('Blank Slate Casing')
-        .color(0, 0xff4d4d)
+        .displayName('Blank Slate Casing')        
         .tooltip('§7Blood soaked slate ready for imbuing.');
 
     event.create('gtceu:crystallized_seed')

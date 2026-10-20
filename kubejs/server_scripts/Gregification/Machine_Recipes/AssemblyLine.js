@@ -1070,4 +1070,22 @@ ServerEvents.recipes(allthemods => {
         mekLong,
         ZPM
     );
+
+    //beryllium sphere
+    addAssemblyLine('gtceu:beryllium_sphere',
+        [
+            'gtceu:beryllium_singularity',
+            '8x #forge:plates/potassium_calcium_orthosilicate',
+            '4x #forge:plates/rhenium_nickel_alloy',
+            '4x #forge:plates/neptunium',
+            '8x #forge:foils/actinium',
+            '4x #forge:rods/technetium'
+        ],
+        [
+            '#forge:sodium_potassium 1000'
+        ],
+        1200,
+        ZPM,
+        'gtceu:beryllium_singularity'
+    );
 });
