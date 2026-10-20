@@ -640,7 +640,7 @@ ServerEvents.recipes(allthemods => {
     );    
 
     addRitual(
-        ['#forge:farmland/insanium', '4x #forge:storage_blocks/insanium_essence', 'botania:rune_winter', 'botania:rune_spring', 'botania:rune_summer', 'botania:rune_autumn', '#forge:gems/soul'],
+        ['#kubejs:farmland/insanium', '4x #forge:storage_blocks/insanium_essence', 'botania:rune_winter', 'botania:rune_spring', 'botania:rune_summer', 'botania:rune_autumn', '#forge:gems/soul'],
         'gtceu:magical_soil',
         'osorins_unbound_calling',
         250

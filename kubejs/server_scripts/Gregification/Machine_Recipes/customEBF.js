@@ -74,13 +74,14 @@ ServerEvents.recipes(allthemods => {
 
     ];
 
-    freezing.forEach(({ name, mod = 'gtceu', duration, eut, coolant }) => {
-        const r = allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/${name}_ingot`)
-            .itemInputs(`#forge:hot_ingots/${name}`)
-            .itemOutputs(`${mod}:${name}_ingot`)
-            .duration(duration)
-            .EUt(eut);
-        if (coolant) r.inputFluids(coolant);
+    freezing.forEach(entry => {
+        const mod = entry.mod || 'gtceu';
+        const r = allthemods.recipes.gtceu.vacuum_freezer(`gregification:freezing/${entry.name}_ingot`)
+            .itemInputs(`#forge:hot_ingots/${entry.name}`)
+            .itemOutputs(`${mod}:${entry.name}_ingot`)
+            .duration(entry.duration)
+            .EUt(entry.eut);
+        if (entry.coolant) r.inputFluids(entry.coolant);
     });
 
     /*

@@ -292,19 +292,19 @@ ServerEvents.recipes(allthemods => {
         { from: 'einsteinium', iso: 'einsteinium_255', to: 'fermium',     emitter: 'californium', eut: UV }
     ];
 
-    ladder.forEach(({ from, iso, to, emitter, eut }) => {
-        allthemods.recipes.gtceu.neutron_irradiator(`gregification:irradiator/${iso}`)
-            .itemInputs(`4x #forge:dusts/${from}`)
-            .notConsumable(`gtceu:${emitter}_neutron_source`)
-            .itemOutputs(`4x gtceu:${iso}_dust`)
+    ladder.forEach(step => {
+        allthemods.recipes.gtceu.neutron_irradiator(`gregification:irradiator/${step.iso}`)
+            .itemInputs(`4x #forge:dusts/${step.from}`)
+            .notConsumable(`gtceu:${step.emitter}_neutron_source`)
+            .itemOutputs(`4x gtceu:${step.iso}_dust`)
             .duration(pbDuration)
-            .EUt(eut);
+            .EUt(step.eut);
 
-        allthemods.recipes.gtceu.large_chemical_reactor(`gregification:decay/${iso}`)
-            .itemInputs(`4x #forge:dusts/${iso}`)
-            .itemOutputs(`4x gtceu:${to}_dust`)
+        allthemods.recipes.gtceu.large_chemical_reactor(`gregification:decay/${step.iso}`)
+            .itemInputs(`4x #forge:dusts/${step.iso}`)
+            .itemOutputs(`4x gtceu:${step.to}_dust`)
             .duration(pbDuration)
-            .EUt(eut);
+            .EUt(step.eut);
     });
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:curium/fluorination')
