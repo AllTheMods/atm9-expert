@@ -68,30 +68,34 @@ ServerEvents.recipes(allthemods => {
         .duration(400)
         .EUt(nuclearPhysicsEU);
 
-    [['single', 1], ['double', 2], ['quad', 4]].forEach(([size, n]) => {
-        allthemods.recipes.gtceu.assembler(`gregification:cell/thorium_${size}`)
+    [{ size: 'single', n: 1 }, { size: 'double', n: 2 }, { size: 'quad', n: 4 }].forEach(cell => {
+        const n = cell.n;
+        allthemods.recipes.gtceu.assembler(`gregification:cell/thorium_${cell.size}`)            
             .itemInputs(`${n}x #forge:dusts/thorium_oxide`,
                 `${n}x #forge:plates/potassium_calcium_orthosilicate`,
                 `${2 * n}x #forge:rods/graphite`,
                 `${2 * n}x #forge:plates/zirconium`,
                 `${n}x #forge:dusts/boron`,
                 `${n}x #forge:dusts/beryllium`)
+            .circuit(n)
             .inputFluids('#forge:hop_graphite 1000')
-            .itemOutputs(`gtceu:thorium_${size}`)
+            .itemOutputs(`gtceu:thorium_${cell.size}`)
             .duration(120)
             .EUt(IV);
     });
 
-    [['single', 1], ['double', 2], ['quad', 4]].forEach(([size, n]) => {
-        allthemods.recipes.gtceu.assembler(`gregification:cell/thorium_berkelium_${size}`)
+    [{ size: 'single', n: 1 }, { size: 'double', n: 2 }, { size: 'quad', n: 4 }].forEach(cell => {
+        const n = cell.n;
+        allthemods.recipes.gtceu.assembler(`gregification:cell/thorium_berkelium_${cell.size}`)            
             .itemInputs(`${n}x #forge:dusts/thorium_berkelium_alloy`,
                 `${n}x #forge:plates/tungsten_carbide`,
                 `${2 * n}x #forge:rods/thorium`,
                 `${2 * n}x #forge:plates/zirconium`,
                 `${n}x #forge:dusts/gadolinium`,
                 `${n}x #forge:dusts/beryllium`)
+            .circuit(n)
             .inputFluids('#forge:hop_graphite 1000')
-            .itemOutputs(`gtceu:thorium_berkelium_${size}`)
+            .itemOutputs(`gtceu:thorium_berkelium_${cell.size}`)
             .duration(120)
             .EUt(LuV);
     });
@@ -246,7 +250,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('6x gtceu:ion_adsorption_clay_dust')
         .duration(400)
         .EUt(HV);
-        
+
     allthemods.recipes.gtceu.industrial_leacher('gregification:ion_clay/leach')
         .itemInputs('60x #forge:dusts/ion_adsorption_clay', '15x #forge:dusts/ammonium_chloride')
         .inputFluids('#forge:sulfuric_acid 15000')
@@ -272,23 +276,23 @@ ServerEvents.recipes(allthemods => {
         .chancedOutput('15x gtceu:silicon_dioxide_dust', 500, 500)
         .duration(400)
         .EUt(ZPM);
-    
-        ['erbium', 'holmium', 'thulium'].forEach(el => {        
+
+    ['erbium', 'holmium', 'thulium'].forEach(el => {
         allthemods.recipes.gtceu.large_chemical_reactor(`gregification:${el}/fluorination`)
             .itemInputs(`1x #forge:dusts/${el}_oxide`)
             .inputFluids('#forge:hydrofluoric_acid 6000')
             .itemOutputs(`2x gtceu:${el}_fluoride_dust`)
             .outputFluids('minecraft:water 3000')
             .duration(400)
-            .EUt(ZPM);        
+            .EUt(ZPM);
     });
 
-    const ladder = [        
-        { from: 'americium',   iso: 'americium_244',   to: 'curium',      emitter: 'americium_beryllium', eut: ZPM },
-        { from: 'curium',      iso: 'curium_249',      to: 'berkelium',   emitter: 'americium_beryllium', eut: ZPM },
-        { from: 'berkelium',   iso: 'berkelium_250',   to: 'californium', emitter: 'californium', eut: UV },
+    const ladder = [
+        { from: 'americium', iso: 'americium_244', to: 'curium', emitter: 'americium_beryllium', eut: ZPM },
+        { from: 'curium', iso: 'curium_249', to: 'berkelium', emitter: 'americium_beryllium', eut: ZPM },
+        { from: 'berkelium', iso: 'berkelium_250', to: 'californium', emitter: 'californium', eut: UV },
         { from: 'californium', iso: 'californium_253', to: 'einsteinium', emitter: 'californium', eut: UV },
-        { from: 'einsteinium', iso: 'einsteinium_255', to: 'fermium',     emitter: 'californium', eut: UV }
+        { from: 'einsteinium', iso: 'einsteinium_255', to: 'fermium', emitter: 'californium', eut: UV }
     ];
 
     ladder.forEach(step => {

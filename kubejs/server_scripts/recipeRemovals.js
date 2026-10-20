@@ -87,7 +87,7 @@ ServerEvents.recipes(allthemods => {
     removeColored.push('botanypots:botanypots/crafting/terracotta_hopper_botany_pot');
 
 
-    const solidified = ['ingot', 'block', 'nugget', 'plate', 'gear', 'small_gear'];
+    const solidified = ['ingot', 'block', 'nugget', 'plate', 'gear'];
     const solidifierRemovals = [];
     
     ['bohrium', 'rutherfordium', 'dubnium', 'seaborgium', 'hassium', 'meitnerium', 'lawrencium', 'flerovium',
@@ -95,6 +95,7 @@ ServerEvents.recipes(allthemods => {
         solidified.forEach(form => {
             solidifierRemovals.push({ type: 'gtceu:fluid_solidifier', output: `gtceu:${el}_${form}` });
         });
+        solidifierRemovals.push({ type: 'gtceu:fluid_solidifier', output: `gtceu:small_${el}_gear` });
     });
     allthemods.remove(solidifierRemovals);
     
