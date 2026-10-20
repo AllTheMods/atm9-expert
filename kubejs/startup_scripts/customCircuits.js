@@ -18,15 +18,14 @@ global.circuitFamilies = [
 ]
 
 global.circuitSocs = [
-    { id: 'quantum',       name: 'Quantum',       tier: 'luv', madeIn: 'uv'  },
-    { id: 'wetware',       name: 'Wetware',       tier: 'zpm', madeIn: 'uhv' },
-    { id: 'bioware',       name: 'Bioware',       tier: 'uv',  madeIn: 'uev' },
-    { id: 'optical',       name: 'Optical',       tier: 'uhv', madeIn: 'uiv' },
-    { id: 'photonic',      name: 'Photonic',      tier: 'uev', madeIn: 'uxv' },
+    { id: 'wetware', name: 'Wetware', tier: 'zpm', madeIn: 'uhv' },
+    { id: 'bioware', name: 'Bioware', tier: 'uv', madeIn: 'uev' },
+    { id: 'optical', name: 'Optical', tier: 'uhv', madeIn: 'uiv' },
+    { id: 'photonic', name: 'Photonic', tier: 'uev', madeIn: 'uxv' },
     { id: 'bioengineered', name: 'Bioengineered', tier: 'uiv', madeIn: 'opv' },
-    { id: 'chaotic',       name: 'Chaotic',       tier: 'uxv', madeIn: 'max' },
-    { id: 'naquadric',     name: 'Naquadric',     tier: 'opv', madeIn: 'max', exotic: true },
-    { id: 'antimatter',    name: 'Antimatter',    tier: 'max', madeIn: 'max', exotic: true }
+    { id: 'chaotic', name: 'Chaotic', tier: 'uxv', madeIn: 'max' },
+    { id: 'naquadric', name: 'Naquadric', tier: 'opv', madeIn: 'max', exotic: true },
+    { id: 'antimatter', name: 'Antimatter', tier: 'max', madeIn: 'max', exotic: true }
 ]
 
 global.circuitItemName = (family, stage) => `${family.id}_processor${stage.idSuffix}`
@@ -41,8 +40,8 @@ StartupEvents.registry('item', allthemods => {
 
 
     const tierCodes = {
-        luv: '5LuV', zpm: '7ZPM', uv: 'eUV', 
-        uhv: '4UHV', uev: '9UEV', uiv: 'bUIV', 
+        luv: '5LuV', zpm: '7ZPM', uv: 'eUV',
+        uhv: '4UHV', uev: '9UEV', uiv: 'bUIV',
         uxv: 'dUXV', opv: 'fOpV', max: 'fMAX'
     }
     const tierLabel = id => `§${tierCodes[id]}§7`
@@ -66,6 +65,11 @@ StartupEvents.registry('item', allthemods => {
             .tooltip(`${tierLabel(soc.tier)}-Tier SoC`)
             .tooltip(`Assembled in ${tierLabel(soc.madeIn)} machines`)
         if (soc.exotic) item.tooltip('§5Requires exotic materials')
+
+        allthemods.create(`gtceu:${soc.id}_soc_wafer`)            
+            .displayName(`${soc.name} SoC Wafer`)            
+            .tooltip(`${tierLabel(soc.tier)}-Tier SoC Wafer`)
+            .tooltip(`Assembled in ${tierLabel(soc.madeIn)} machines`)            
     })
 
     // Voltage coils keep their old placeholder names and colours

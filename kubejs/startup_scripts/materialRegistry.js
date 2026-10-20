@@ -252,7 +252,11 @@ MaterialDef.prototype.register = function (event) {
     if (this.traits.isModification) return;
     let b = event.create(this.name);
     if (this.traits.color !== undefined) b.color(this.traits.color);
-    if (this.traits.iconSet) b.iconSet(GTMaterialIconSet[this.traits.iconSet] || this.traits.iconSet);
+    if (this.traits.iconSet) {
+        let icon;
+        try { icon = GTMaterialIconSet[this.traits.iconSet]; } catch (e) { icon = null; }
+        b.iconSet(icon || this.traits.iconSet);
+    }
 
     if (this.traits.dust) b.dust();
     if (this.traits.ingot) b.ingot();
@@ -2088,6 +2092,13 @@ const materials = [
     new MaterialDef('caesium_lead_bromide').dust().color(0xD9731A).iconSet('DULL').formula('CsPbBr3').components('1x caesium, 1x lead, 3x bromine'),
 
     //legacy atm9 registries converted
+    new MaterialDef('molten_piglich_heart').fluid().color(0xe6af15).iconSet('FLUID'),
+    new MaterialDef('nitinol').ingot().fluid().iconSet('METALLIC').color(0xD4B0F4).flags(GTMaterialFlags.GENERATE_PLATE).components('4x nickel, 6x titanium')
+        .blast({ temp: 1583, eut: IV, duration: 1200 }),
+    new MaterialDef('trinaquadalloy').ingot().fluid().color(0x281832).iconSet('BRIGHT').flags(GTMaterialFlags.GENERATE_PLATE).components('6x trinium, 2x naquadah, 1x carbon')
+        .blast({ temp: 8747, eut: ZPM, duration: 1200 }),
+    new MaterialDef('trinium').modify().ore().byproducts(['naquadah', 'titanium', 'trinium']),
+
     new MaterialDef('fluorite').gem().ore().color(0x0c9949).iconSet('DIAMOND').components('1x calcium, 2x fluorine'),
     new MaterialDef('dolomite').dust().ore().color(0xf2e4bd).iconSet('ROUGH').components('1x calcium, 1x magnesium, 1x carbon, 3x oxygen'),
     new MaterialDef('star_matter').plasma('customStill').color(0xb219d1),
@@ -2095,12 +2106,7 @@ const materials = [
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FOIL)
         .cable({ voltage: 134217728, loss: 0, superconductor: true })
         .blast({ temp: COIL_TEMPS.ETRIUM, eut: 33554432, duration: 600 }),
-    new MaterialDef('molten_piglich_heart').fluid().color(0xe6af15).iconSet('FLUID'),
-    new MaterialDef('nitinol').ingot().fluid().iconSet('METALLIC').color(0xD4B0F4).flags(GTMaterialFlags.GENERATE_PLATE).components('4x nickel, 6x titanium')
-        .blast({ temp: 1583, eut: IV, duration: 1200 }),
-    new MaterialDef('trinaquadalloy').ingot().fluid().color(0x281832).iconSet('BRIGHT').flags(GTMaterialFlags.GENERATE_PLATE).components('6x trinium, 2x naquadah, 1x carbon')
-        .blast({ temp: 8747, eut: ZPM, duration: 1200 }),
-    new MaterialDef('trinium').modify().ore().byproducts(['naquadah', 'titanium', 'trinium']),
+    
         
 ];
 
