@@ -306,4 +306,12 @@ ServerEvents.recipes(allthemods => {
             .duration(pbDuration)
             .EUt(eut);
     });
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:curium/fluorination')
+        .itemInputs('2x #forge:dusts/curium')
+        .inputFluids('#forge:hydrofluoric_acid 6000')
+        .itemOutputs('2x gtceu:curium_fluoride_dust')
+        .outputFluids('gtceu:hydrogen 3000')
+        .duration(400)
+        .EUt(UV);
 });

@@ -2057,6 +2057,7 @@ const materials = [
     new MaterialDef('berkelium_250').dust().color(0xB07FA8).iconSet('RADIOACTIVE').components('1x berkelium').formula('Bk²⁵⁰'),
     new MaterialDef('californium_253').dust().color(0xD2A05A).iconSet('RADIOACTIVE').components('1x californium').formula('Cf²⁵³'),
     new MaterialDef('einsteinium_255').dust().color(0x5EB0A0).iconSet('RADIOACTIVE').components('1x einsteinium').formula('Es²⁵⁵'),
+    new MaterialDef('curium_fluoride').dust().color(0xD9C7E6).iconSet('DULL').components('1x curium, 3x fluorine').noDecomp(),
     
 ];
 

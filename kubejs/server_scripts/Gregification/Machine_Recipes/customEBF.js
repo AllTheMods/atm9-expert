@@ -51,6 +51,7 @@ ServerEvents.recipes(allthemods => {
     addEBF('1x #forge:dusts/lanthanum', '#forge:lawrencium 144', 'gtceu:lawrencium_ingot', null, COIL_TEMPS.TRINIUM, 2400, ZPM);
     addEBF(['1x #forge:dusts/ytterbium_oxide', '2x #forge:dusts/lanthanum'], '#forge:argon 1000', ['2x gtceu:ytterbium_ingot', '1x gtceu:lanthanum_oxide_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);    
     addEBF(['1x #forge:dusts/lanthanum_oxide', '3x #forge:dusts/calcium'], '#forge:argon 1000', ['2x gtceu:lanthanum_dust', '3x gtceu:quicklime_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);
+    addEBF(['2x #forge:dusts/curium_fluoride', '3x #forge:dusts/calcium'], '#forge:argon 1000', ['2x gtceu:curium_ingot', '3x gtceu:calcium_fluoride_dust'], null, COIL_TEMPS.TRITANIUM, 800, UV);
 
     ['erbium', 'holmium', 'thulium'].forEach(el => {
         addEBF([`2x #forge:dusts/${el}_fluoride`, '3x #forge:dusts/calcium'], '#forge:argon 1000', [`2x gtceu:${el}_ingot`, '3x gtceu:calcium_fluoride_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);
