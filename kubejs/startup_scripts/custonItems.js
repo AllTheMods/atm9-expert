@@ -79,7 +79,6 @@ StartupEvents.registry('item', event => {
     */
     event.create('gtceu:blank_slate_casing')
         .displayName('Blank Slate Casing')
-        .texture('bloodmagic:item/blankslate')
         .color(0, 0xff4d4d)
         .tooltip('§7Blood soaked slate ready for imbuing.');
 

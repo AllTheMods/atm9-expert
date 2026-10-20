@@ -931,5 +931,7 @@
     "material.gtceu.caesium_chloride": "Caesium Chloride",
     "material.gtceu.indium_tin_oxide": "Indium Tin Oxide",
     "material.gtceu.perovskite_ink": "Perovskite Ink",
-    "material.gtceu.caesium_lead_bromide": "Caesium Lead Bromide"
+    "material.gtceu.caesium_lead_bromide": "Caesium Lead Bromide",
+    "material.gtceu.dark_gem": "Dark Gem",
+    "material.gtceu.dark_power_gem": "Dark Power Gem"
 }

@@ -14,8 +14,7 @@ StartupEvents.registry('block', allthemods => {
         { id: 'xenomorphic_data_frame', name: 'Xenomorphic Data-Frame', tex: 'fluxnetworks:block/flux_block' },
         { id: 'industrial_pylon_casing', name: 'Industrial Pylon Casing', tex: 'gtceu:block/casings/solid/machine_casing_clean_stainless_steel' },
 
-        // Magic & Biological
-        { id: 'slate_casing', name: 'Slate Casing', tex: 'bloodmagic:block/largebloodstonebrick' },
+        // Magic & Biological        
         { id: 'rune_casing', name: 'Rune Casing', tex: 'bloodmagic:block/blankrune' },
         { id: 'reinforced_rune_casing', name: 'Reinforced Rune Casing', tex: 'bloodmagic:block/masterritualstone' },
         { id: 'ritual_casing', name: 'Ritual Casing', tex: 'bloodmagic:block/ritualstone' },
@@ -33,6 +32,17 @@ StartupEvents.registry('block', allthemods => {
         { name: 'chaotic', displayName: 'Chaotic Casing' },
 
     ]
+
+    
+
+    allthemods.create(`gtceu:slate_casing`)
+        // @ts-ignore
+        .displayName('Slate Casing')
+        .textureAll('gtceu:block/casings/slate_casing/slate_casing')
+        .hardness(1.0)
+        .resistance(1.0)
+        .soundType('metal')
+        .tagBlock('gtceu:casings');
 
     allthemods.create(`gtceu:gadolinium_casing`)
         // @ts-ignore
