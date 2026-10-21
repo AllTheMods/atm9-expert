@@ -111,12 +111,12 @@ ServerEvents.recipes(allthemods => {
         { t: 6, tier: 'luv', structural: 'rhodium_plated_palladium', component: 'rhodium_plated_palladium', conductive: 'hssg', polymer: 'polytetrafluoroethylene' },
         { t: 7, tier: 'zpm', structural: 'naquadah_alloy', component: 'naquadah_alloy', conductive: 'naquadah', polymer: 'polybenzimidazole' },
         { t: 8, tier: 'uv', structural: 'darmstadtium', component: 'darmstadtium', conductive: 'naquadah_alloy', polymer: 'polybenzimidazole' },
-        { t: 9, tier: 'uhv', structural: 'neutronium', component: 'darmstadtium', conductive: 'trinium', polymer: 'polybenzimidazole', magnetic: 'samarium' },
-        { t: 10, tier: 'uev', structural: 'corrosive_etrium_alloy', component: 'infused_star', conductive: 'gaia', polymer: 'polyimide', magnetic: 'samarium_cobalt' },
-        { t: 11, tier: 'uiv', structural: 'destructive_scandozirconium', component: 'reinforced_star', conductive: 'etrium', polymer: 'organic_polymer', magnetic: 'samarium_cobalt' },
-        { t: 12, tier: 'uxv', structural: 'vengeful_gadomeitnerium_alloy', component: 'atomic_star', conductive: 'tenebrium', polymer: 'chaos_plastic', magnetic: 'samarium_cobalt' },
-        { t: 13, tier: 'opv', structural: 'steadfast_rhenobedrock_alloy', component: 'dark_matter', conductive: 'dark_matter', polymer: 'naquadria_awakened', magnetic: 'etrium' },
-        { t: 14, tier: 'max', structural: 'demonic_antimatter_alloy', component: 'red_matter', conductive: 'red_matter', polymer: 'fifth_element', magnetic: 'etrium' }
+        { t: 9, tier: 'uhv', structural: 'neutronium', component: 'darmstadtium', conductive: 'gaia', polymer: 'polybenzimidazole', magnetic: 'samarium' },
+        { t: 10, tier: 'uev', structural: 'corrosive_etrium_alloy', component: 'infused_star', conductive: 'etrium', polymer: 'polyimide', magnetic: 'eternium' },
+        { t: 11, tier: 'uiv', structural: 'destructive_scandozirconium', component: 'reinforced_star', conductive: 'tenebrium', polymer: 'organic_polymer', magnetic: 'neodymium_dysprosium' },
+        { t: 12, tier: 'uxv', structural: 'vengeful_gadomeitnerium_alloy', component: 'atomic_star', conductive: 'infinity', polymer: 'chaos_plastic', magnetic: 'neodymium_dysprosium' },
+        { t: 13, tier: 'opv', structural: 'steadfast_rhenobedrock_alloy', component: 'dark_matter', conductive: 'dark_matter', polymer: 'naquadria_awakened', magnetic: 'neodymium_terbium' },
+        { t: 14, tier: 'max', structural: 'demonic_antimatter_alloy', component: 'red_matter', conductive: 'red_matter', polymer: 'fifth_element', magnetic: 'neodymium_terbium' }
     ];
 
     const customMachines = [
