@@ -81,13 +81,13 @@ StartupEvents.registry('item', allthemods => {
         { id: 'opv', name: 'Naquadric', color: 0xE853DC },
         { id: 'max', name: 'Antimatter', color: 0xFFFFFF }
     ]
-
+    
     coilTiers.forEach(tier => {
         allthemods.create(`gtceu:pics/coils/${tier.id}_voltage_coil`)            
             .displayName(`${tier.name} Voltage Coil`)
             .tooltip(`${tierLabel(tier.id)}-Tier Voltage Coil`)
 
-        allthemods.create(`gtceu:pics/wafers/${tier.id}_pic_chip`)
+        allthemods.create(`gtceu:pics/chips/${tier.id}_pic_chip`)
             .displayName(`${tier.name} Chip`)
             .tooltip(`${tierLabel(tier.id)}-Tier Power IC`)
 
@@ -96,7 +96,9 @@ StartupEvents.registry('item', allthemods => {
             .tooltip(`${tierLabel(tier.id)}-Tier Power IC Wafer`)
     })
 
-
+    allthemods.create(`gtceu:pics/coils/uhv_voltage_coil`)            
+            .displayName(`Neutronium Voltage Coil`)
+            .tooltip(`${tierLabel('uhv')}-Tier Voltage Coil`)
     
     
 

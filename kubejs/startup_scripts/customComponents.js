@@ -201,13 +201,13 @@ GTCEuStartupEvents.craftingComponents(event => {
         MAX: Item.of("gtceu:neutronium_buzz_saw_blade")
     })
 
-    //hpic chip - for now using uhpic - new power component chips needed later
+    
     event.setItems(GTCraftingComponents.POWER_COMPONENT, {
-        UEV: Item.of("gtceu:pics/chip/uev_pic_chip"),
-        UIV: Item.of("gtceu:pics/chip/uiv_pic_chip"),
-        UXV: Item.of("gtceu:pics/chip/uxv_pic_chip"),
-        OpV: Item.of("gtceu:pics/chip/opv_pic_chip"),
-        MAX: Item.of("gtceu:pics/chip/max_pic_chip")
+        UEV: Item.of("gtceu:pics/chips/uev_pic_chip"),
+        UIV: Item.of("gtceu:pics/chips/uiv_pic_chip"),
+        UXV: Item.of("gtceu:pics/chips/uxv_pic_chip"),
+        OpV: Item.of("gtceu:pics/chips/opv_pic_chip"),
+        MAX: Item.of("gtceu:pics/chips/max_pic_chip")
     })
 
     //voltage coils (new textures needed)
