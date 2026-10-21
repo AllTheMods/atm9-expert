@@ -203,21 +203,21 @@ GTCEuStartupEvents.craftingComponents(event => {
 
     
     event.setItems(GTCraftingComponents.POWER_COMPONENT, {
-        UEV: Item.of("gtceu:pics/chips/uev_pic_chip"),
-        UIV: Item.of("gtceu:pics/chips/uiv_pic_chip"),
-        UXV: Item.of("gtceu:pics/chips/uxv_pic_chip"),
-        OpV: Item.of("gtceu:pics/chips/opv_pic_chip"),
-        MAX: Item.of("gtceu:pics/chips/max_pic_chip")
+        UEV: Item.of("gtceu:uev_pic_chip"),
+        UIV: Item.of("gtceu:uiv_pic_chip"),
+        UXV: Item.of("gtceu:uxv_pic_chip"),
+        OpV: Item.of("gtceu:opv_pic_chip"),
+        MAX: Item.of("gtceu:max_pic_chip")
     })
 
     //voltage coils (new textures needed)
     event.setItems(GTCraftingComponents.VOLTAGE_COIL, {
-        UHV: Item.of("gtceu:pics/coils/uhv_voltage_coil"),
-        UEV: Item.of("gtceu:pics/coils/uev_voltage_coil"),
-        UIV: Item.of("gtceu:pics/coils/uiv_voltage_coil"),
-        UXV: Item.of("gtceu:pics/coils/uxv_voltage_coil"),
-        OpV: Item.of("gtceu:pics/coils/opv_voltage_coil"),
-        MAX: Item.of("gtceu:pics/coils/max_voltage_coil")
+        UHV: Item.of("gtceu:uhv_voltage_coil"),
+        UEV: Item.of("gtceu:uev_voltage_coil"),
+        UIV: Item.of("gtceu:uiv_voltage_coil"),
+        UXV: Item.of("gtceu:uxv_voltage_coil"),
+        OpV: Item.of("gtceu:opv_voltage_coil"),
+        MAX: Item.of("gtceu:max_voltage_coil")
     })
 
     event.setItems(GTCraftingComponents.DRUM, {

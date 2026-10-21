@@ -377,7 +377,7 @@ ServerEvents.recipes(allthemods => {
             addAssembler(
                 [
                     magnetic2,
-                    `16x gtceu:fine_${tData.metal2}_wire`
+                    `16x gtceu:fine_${tData.conductive}_wire`
                 ],
                 null,
                 `${item}_voltage_coil`,
@@ -416,10 +416,10 @@ ServerEvents.recipes(allthemods => {
                 `${item}_electric_motor`,
                 [
                     `${magnetic}`,
-                    `2x #forge:rods/long/${tData.metal}`,
-                    `2x #forge:rings/${tData.metal}`,
-                    `4x #forge:rounds/${tData.metal}`,
-                    `96x #forge:fine_wires/${tData.metal2}`,
+                    `2x #forge:rods/long/${tData.structural}`,
+                    `2x #forge:rings/${tData.structural}`,
+                    `4x #forge:rounds/${tData.structural}`,
+                    `96x #forge:fine_wires/${tData.component}`,
                     `2x ${wire}`
                 ],
                 [
@@ -437,10 +437,10 @@ ServerEvents.recipes(allthemods => {
                 `${item}_conveyor_module`,
                 [
                     `2x gtceu:${tData.tier}_electric_motor`,
-                    `2x #forge:plates/${tData.metal}`,
-                    `4x #forge:rings/${tData.metal}`,
-                    `16x #forge:rounds/${tData.metal}`,
-                    `4x #forge:screws/${tData.metal}`,
+                    `2x #forge:plates/${tData.structural}`,
+                    `4x #forge:rings/${tData.structural}`,
+                    `16x #forge:rounds/${tData.structural}`,
+                    `4x #forge:screws/${tData.structural}`,
                     `2x ${wire}`
                 ],
                 [
@@ -460,10 +460,10 @@ ServerEvents.recipes(allthemods => {
                 [
                     `gtceu:${tData.tier}_electric_motor`,
                     `#gtceu:pipes/small/${tData.metal2}`,
-                    `2x #forge:plates/${tData.metal}`,
-                    `8x #forge:screws/${tData.metal}`,
+                    `2x #forge:plates/${tData.structural}`,
+                    `8x #forge:screws/${tData.structural}`,
                     `4x gtceu:silicone_rubber_ring`,
-                    `4x #forge:rotors/${tData.metal2}`,
+                    `4x #forge:rotors/${tData.component}`,
                     `2x ${wire}`
                 ],
                 [
@@ -481,12 +481,12 @@ ServerEvents.recipes(allthemods => {
                 `${item}_electric_piston`,
                 [
                     `gtceu:${tData.tier}_electric_motor`,
-                    `4x #forge:plates/${tData.metal}`,
-                    `4x #forge:rings/${tData.metal}`,
-                    `16x #forge:rounds/${tData.metal}`,
-                    `4x #forge:rods/${tData.metal}`,
-                    `#forge:gears/${tData.metal}`,
-                    `2x #forge:small_gears/${tData.metal}`,
+                    `4x #forge:plates/${tData.structural}`,
+                    `4x #forge:rings/${tData.structural}`,
+                    `16x #forge:rounds/${tData.structural}`,
+                    `4x #forge:rods/${tData.structural}`,
+                    `#forge:gears/${tData.structural}`,
+                    `2x #forge:small_gears/${tData.structural}`,
                     `2x ${wire}`
                 ],
                 [
@@ -502,9 +502,9 @@ ServerEvents.recipes(allthemods => {
             addAssemblyLine(
                 `${item}_sensor`,
                 [
-                    `#forge:frames/${tData.metal}`,
+                    `#forge:frames/${tData.structural}`,
                     `gtceu:${tData.tier}_electric_motor`,
-                    `4x #forge:plates/${tData.metal2}`,
+                    `4x #forge:plates/${tData.component}`,
                     `gtceu:quantum_star`,
                     `${circuit}`,
                     `64x #forge:foils/chaos_plastic`,
@@ -523,9 +523,9 @@ ServerEvents.recipes(allthemods => {
             addAssemblyLine(
                 `${item}_emitter`,
                 [
-                    `#forge:frames/${tData.metal}`,
+                    `#forge:frames/${tData.structural}`,
                     `gtceu:${tData.tier}_electric_motor`,
-                    `4x #forge:rods/long/${tData.metal2}`,
+                    `4x #forge:rods/long/${tData.component}`,
                     `gtceu:quantum_star`,
                     `${circuit}`,
                     `64x #forge:foils/chaos_plastic`,
@@ -544,12 +544,12 @@ ServerEvents.recipes(allthemods => {
             addAssemblyLine(
                 `${item}_field_generator`,
                 [
-                    `#forge:frames/${tData.metal}`,
-                    `6x #forge:plates/${tData.metal2}`,
+                    `#forge:frames/${tData.structural}`,
+                    `6x #forge:plates/${tData.component}`,
                     `gtceu:quantum_star`,
                     `2x gtceu:${tData.tier}_emitter`,
                     `${circuit}`,
-                    `128x #forge:fine_wires/${tData.metal2}`,
+                    `128x #forge:fine_wires/${tData.component}`,
                     `4x ${wire}`
                 ],
                 [
@@ -575,20 +575,19 @@ ServerEvents.recipes(allthemods => {
             )
             
             //rotor holders
-            addMachineRecipe(
-                `${item}_rotor_holder`,
+            allthemods.shaped(`${item}_rotor_holder`,
                 [
                     'SGS',
                     'GHG',
                     'SGS'
                 ],
                 {
-                    'H': `gtceu:${tData.tier}_machine_hull`,
-                    'S': `#forge:small_gears/${tData.metal}`,
-                    'G': `#forge:gears/${tData.metal2}`
+                    H: `gtceu:${tData.tier}_machine_hull`,
+                    S: `#forge:small_gears/${tData.structural}`,
+                    G: `#forge:gears/${tData.component}`
 
                 }
-            );
+            ).id(`gregification:${tData.tier}_rotor_holder`);
             //energy hatch
             addAssemblyLine(
                 `${item}_energy_input_hatch`,
@@ -614,7 +613,7 @@ ServerEvents.recipes(allthemods => {
                 `${item}_energy_output_hatch`,
                 [
                     `gtceu:${tData.tier}_machine_hull`,
-                    `4x #forge:springs/${tData.metal2}`,
+                    `4x #forge:springs/${tData.component}`,
                     `2x gtceu:uhpic_chip`,
                     `${circuit}`,
                     `2x gtceu:${tData.tier}_voltage_coil`

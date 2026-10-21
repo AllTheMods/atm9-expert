@@ -1735,6 +1735,9 @@ const materials = [
     new MaterialDef('netherite').modify().materialsBasic(),
     //.unify({ plate: 'thermal:netherite_plate' }) seems like thermal removed its own plate without the need for unification once this was registered.
 
+    new MaterialDef('neutronium').modify()
+        .flags(GTMaterialFlags.GENERATE_SMALL_GEAR),
+
     new MaterialDef('osmiridium').modify()
         .byproducts(['ruthenium']),
 
