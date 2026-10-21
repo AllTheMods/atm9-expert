@@ -145,7 +145,7 @@ ServerEvents.recipes(allthemods => {
     //eternal stella
     hephaestus(
         [
-            "4x #forge:double_plates/naquatainium",
+            "4x #forge:double_plates/allthemodium",
             "3x forbidden_arcanus:xpetrified_orb",
             "1x forbidden_arcanus:stellarite_piece"
         ],

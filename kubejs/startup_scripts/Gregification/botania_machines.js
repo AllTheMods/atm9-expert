@@ -198,7 +198,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         )		
 
     event.create("mana_burner", "simple")
-        .tiers(GTValues.HV)
+        .tiers(GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
         .definition((tier, builder) =>
             builder
                 .rotationState(RotationState.NON_Y_AXIS)
@@ -207,7 +207,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         );
 
     event.create("mana_converter", "simple")
-        .tiers(GTValues.HV)
+        .tiers(GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
         .definition((tier, builder) =>
             builder
                 .rotationState(RotationState.NON_Y_AXIS)
@@ -233,14 +233,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .workableTieredHullModel("gtceu:block/machines/assembler")
         );   
 
-    /*event.create("mana_infuser", "simple")
-        .tiers(GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
-        .definition((tier, builder) =>
-            builder
-                .rotationState(RotationState.NON_Y_AXIS)
-                .recipeType("mana_infuser")                
-                .workableTieredHullModel("gtceu:block/machines/assembler")
-        );*/
     event.create('mana_infuser', 'multiblock')        
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('mana_infuser')         

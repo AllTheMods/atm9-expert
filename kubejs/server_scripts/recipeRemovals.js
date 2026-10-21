@@ -70,6 +70,17 @@ ServerEvents.recipes(allthemods => {
         beeRemoves.push('productivebees:centrifuge/honeycomb_' + mat + '_block');
     });
 
+
+    const metalRods = ['aluminum', 'iridium', 'lead', 'nickel', 'osmium', 'platinum', 'silver', 'tin', 'uranium', 'zinc', 'steel', 'invar', 'electrum', 'bronze', 'iron', 'gold', 'diamond', 'copper', 'enderium', 'lumium', 'signalum', 'constantan', 'brass', 'allthemodium', 'vibranium', 'unobtainium']
+    let rodRemoval = [];
+    metalRods.forEach(function(mat) {
+        rodRemoval.push(`thermal_extra:crafting/${mat}_rod`);
+        rodRemoval.push(`immersiveengineering:crafting/stick_${mat}`);
+        rodRemoval.push(`ad_astra:${mat}_rod`);
+    });
+    allthemods.remove(rodRemoval);
+
+
     const colors = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue', 'brown', 'green', 'red', 'black'];
     colors.forEach(function(color) {
         removeColored.push(`botanypots:botanypots/crafting/${color}_terracotta_botany_pot`);
@@ -85,8 +96,7 @@ ServerEvents.recipes(allthemods => {
     removeColored.push('botanypots:botanypots/crafting/terracotta_botany_pot');
     removeColored.push('botanypots:botanypots/crafting/terracotta_compact_hopper_botany_pot');
     removeColored.push('botanypots:botanypots/crafting/terracotta_hopper_botany_pot');
-
-
+    
     const solidified = ['ingot', 'block', 'nugget', 'plate', 'gear'];
     const solidifierRemovals = [];
     
@@ -104,6 +114,8 @@ ServerEvents.recipes(allthemods => {
 
     
     const powahRemoves = [
+        'allthemodium:allthemodium_rod', 'allthemodium:vibranium_rod', 'allthemodium:unobtainium_rod',
+        'forestry:resource_storage_silicon',
         'mekanism:processing/lategame/plutonium_pellet/from_reaction', 'mekanism:processing/lategame/polonium_pellet/from_reaction',
         'mekanism:processing/lategame/plutonium', 'mekanism:processing/lategame/polonium', 'mekanism:processing/uranium/reprocessing/from_plutonium',
         'create:crafting/materials/andesite_alloy', 'create:crafting/materials/andesite_alloy_from_zinc',
@@ -563,7 +575,7 @@ ServerEvents.recipes(allthemods => {
     // Blast Materials (Dusts and Raw)
     const blastMaterials = [
         'soularium', 'vibrant_alloy', 'energetic_alloy', 'conductive_alloy', 'dark_steel',
-        'end_steel', 'signalum', 'lumium', 'enderium', 'naquatainium', 'naquabranium', 'naquamodium'
+        'end_steel', 'signalum', 'lumium', 'enderium'
     ];
     let blastInputs = [];
     blastMaterials.forEach(mat => {

@@ -58,7 +58,7 @@ ServerEvents.recipes(allthemods => {
     //farming for blockheads - market
     addAssemblyLine("farmingforblockheads:market",
         [
-            '#forge:frames/naquamodium',
+            '#forge:frames/allthemodium',
             "allthemodium:allthemodium_hoe",
             '2x #forge:double_plates/ferrognetic',
             '4x #forge:gears/terrasteel',
@@ -1088,4 +1088,23 @@ ServerEvents.recipes(allthemods => {
         ZPM,
         'gtceu:beryllium_singularity'
     );
+
+    addAssemblyLine(
+        'gtceu:atmospheric_collector',
+        [
+            '8x #forge:plates/rhodium_plated_palladium',
+            '4x gtceu:niobium_titanium_huge_fluid_pipe',
+            '8x gtceu:luv_electric_motor',
+            '2x gtceu:luv_electric_pump',
+            'gtceu:luv_machine_hull',
+            '4x #gtceu:circuits/luv'
+        ],
+        [
+            'gtceu:soldering_alloy 1152',
+            'gtceu:polybenzimidazole 1152'
+        ],
+        1200,
+        LuV,
+        'gtceu:vacuum_freezer'
+    )
 });

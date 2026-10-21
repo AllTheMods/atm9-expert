@@ -8,7 +8,7 @@ ServerEvents.recipes(allthemods => {
 
         allthemods.recipes.gtceu.macerator('gregification:macerate_thermal_sulfur')
                 .itemInputs('thermal:sulfur')
-                .itemOutputs('gtceu:sulfur_dust')
+                .itemOutputs('2x gtceu:sulfur_dust')
                 .duration(80)
                 .EUt(LV);
 

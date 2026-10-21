@@ -107,7 +107,7 @@ ServerEvents.recipes(allthemods => {
 
     //blood
     allthemods.recipes.gtceu.atmospheric_collector('gregification:bloodmagic_blood')
-        .outputFluids('bloodmagic:life_essence_fluid 16000')
+        .outputFluids('gtceu:sanguine_concentrate 16000')
         .circuit(18)
         .duration(collectorDuration).EUt(collectorEU).dimension('bloodmagic:dungeon'); 
 

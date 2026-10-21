@@ -34,6 +34,25 @@ ServerEvents.recipes(allthemods => {
         }
     };
 
+    addAssembler(
+        [
+            '4x #forge:small_gears/desh',
+            '4x #forge:gears/tungsten_steel',
+            '2x #gtceu:circuits/iv',
+            '2x gtceu:iv_electric_piston',
+            'gtceu:iv_machine_hull',
+            '#forge:frames/terrasteel'            
+        ],
+        [
+            'gtceu:soldering_alloy 576',
+            'gtceu:polytetrafluoroethylene 576'
+        ],
+        'gtceu:empowerer',
+        IV,
+        1200
+    )
+
+
     //germanium diode wafer
     addAssembler(
         [

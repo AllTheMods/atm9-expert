@@ -77,7 +77,7 @@ ServerEvents.recipes(allthemods => {
             'PEP'
         ],
         {
-            P: "#forge:plates/naquatainium",
+            P: "#forge:plates/neutronium",
             E: "#forge:plates/europium",
             M: "mekanism:alloy_atomic"
         }

@@ -23,6 +23,170 @@ ServerEvents.recipes(allthemods => {
         if (program) recipe.circuit(program);
     };
 
+    // ===== UEV+ tier alloys (paste into mixer.js, uses the existing addMixer) =====
+    // EUt = the material's .blast eut minus two tiers, output = sum of the inputs, duration 500 like the other alloys
+
+    // ---- structural ----
+    //corrosive_etrium_alloy (blast UHV)
+    addMixer(
+        [
+            '4x #forge:dusts/etrium',
+            '3x #forge:dusts/eternal',
+            '2x #forge:dusts/corrosive',
+            '#forge:dusts/bohrium'
+        ],
+        '10x gtceu:corrosive_etrium_alloy_dust',
+        ZPM,
+        500
+    )
+
+    //destructive_scandozirconium (blast UEV)
+    addMixer(
+        [
+            '4x #forge:dusts/zirconium',
+            '3x #forge:dusts/scandium',
+            '2x #forge:dusts/destructive',
+            '#forge:dusts/hassium'
+        ],
+        '10x gtceu:destructive_scandozirconium_dust',
+        UV,
+        500
+    )
+
+    //vengeful_gadomeitnerium_alloy (blast UIV)
+    addMixer(
+        [
+            '4x #forge:dusts/gadolinium',
+            '3x #forge:dusts/vengeful',
+            '2x #forge:dusts/meitnerium',
+            '#forge:dusts/rutherfordium'
+        ],
+        '10x gtceu:vengeful_gadomeitnerium_alloy_dust',
+        UHV,
+        500
+    )
+
+    //steadfast_rhenobedrock_alloy (blast UXV)
+    addMixer(
+        [
+            '4x #forge:dusts/bedrockium',
+            '3x #forge:dusts/rhenium',
+            '2x #forge:dusts/steadfast',
+            '#forge:dusts/seaborgium'
+        ],
+        '10x gtceu:steadfast_rhenobedrock_alloy_dust',
+        UEV,
+        500
+    )
+
+    //demonic_antimatter_alloy (blast OpV)
+    addMixer(
+        [
+            '4x #forge:dusts/antimatter',
+            '3x #forge:dusts/dubnium',
+            '2x #forge:dusts/demon',
+            '#forge:dusts/fermium'
+        ],
+        '10x gtceu:demonic_antimatter_alloy_dust',
+        UIV,
+        500
+    )
+
+    // ---- component ----
+    //infused_star (blast UHV)
+    addMixer(
+        [
+            '4x #forge:dusts/alloy_infused',
+            '#forge:dusts/atm_star'
+        ],
+        '5x gtceu:infused_star_dust',
+        ZPM,
+        500
+    )
+
+    //reinforced_star (blast UEV)
+    addMixer(
+        [
+            '3x #forge:dusts/alloy_reinforced',
+            '2x #forge:dusts/atm_star'
+        ],
+        '5x gtceu:reinforced_star_dust',
+        UV,
+        500
+    )
+
+    //atomic_star (blast UIV)
+    addMixer(
+        [
+            '2x #forge:dusts/alloy_atomic',
+            '3x #forge:dusts/atm_star'
+        ],
+        '5x gtceu:atomic_star_dust',
+        UHV,
+        500
+    )
+
+    // ---- superconductor cables ----
+    //flerovium_terbium_alloy (blast UIV)
+    addMixer(
+        [
+            '3x #forge:dusts/bismuth',
+            '3x #forge:dusts/dysprosium',
+            '2x #forge:dusts/terbium',
+            '2x #forge:dusts/flerovium'
+        ],
+        '10x gtceu:flerovium_terbium_alloy_dust',
+        UHV,
+        500
+    )
+    
+
+    //copernicium_dysprosium_alloy (blast UHV)
+    allthemods.recipes.gtceu.mixer('copernicium_dysprosium_alloy_dust')
+        .itemInputs([
+            '3x #forge:dusts/dysprosium',
+            '3x #forge:dusts/cadmium',
+            '2x #forge:dusts/technetium'
+        ])
+        .inputFluids('#forge:copernicium 288')
+        .itemOutputs('10x gtceu:copernicium_dysprosium_alloy_dust')
+        .duration(500)
+        .EUt(ZPM)
+
+    //nihonium_bismuth_alloy (blast UEV)
+    allthemods.recipes.gtceu.mixer('nihonium_bismuth_alloy_dust')
+        .itemInputs([
+            '3x #forge:dusts/bismuth',
+            '3x #forge:dusts/rubidium',
+            '2x #forge:dusts/terbium'
+        ])
+        .inputFluids('#forge:nihonium 288')
+        .itemOutputs('10x gtceu:nihonium_bismuth_alloy_dust')
+        .duration(500)
+        .EUt(UV)
+
+    //moscovium_roentgenium_alloy (blast UXV)
+    allthemods.recipes.gtceu.mixer('moscovium_roentgenium_alloy_dust')
+        .itemInputs([
+            '3x #forge:dusts/astatine',
+            '3x #forge:dusts/roentgenium'
+        ])
+        .inputFluids('#forge:moscovium 288', '#forge:tennessine 288')
+        .itemOutputs('10x gtceu:moscovium_roentgenium_alloy_dust')
+        .duration(500)
+        .EUt(UEV)
+
+    //livermorium_astatine_alloy (blast OpV)
+    allthemods.recipes.gtceu.mixer('livermorium_astatine_alloy_dust')
+        .itemInputs([
+            '3x #forge:dusts/bismuth',
+            '3x #forge:dusts/astatine',
+            '2x #forge:dusts/roentgenium'
+        ])
+        .inputFluids('#forge:livermorium 288')
+        .itemOutputs('10x gtceu:livermorium_astatine_alloy_dust')
+        .duration(500)
+        .EUt(UIV)
 
     addMixer(['1x #forge:dusts/dysprosium', '1x #forge:dusts/neodymium_praseodymium_iron_boron'], '2x gtceu:neodymium_dysprosium_dust', LuV, 600);
     addMixer(['1x #forge:dusts/terbium', '1x #forge:dusts/neodymium_praseodymium_iron_boron'], '2x gtceu:neodymium_terbium_dust', ZPM, 600);
@@ -99,91 +263,7 @@ ServerEvents.recipes(allthemods => {
         500
     )
 
-    //doerum alloy dust
-    addMixer(
-        [
-            '3x #forge:dusts/naquadria',
-            '2x #forge:dusts/deorum',
-            '2x #forge:dusts/trinium',
-            '3x #forge:dusts/steadfast'
-        ],
-        '10x gtceu:deorum_alloy_dust',
-        UXV,
-        500
-    )
-
-
-    //alltheneutronium
-    addMixer(
-        [
-            '2x #forge:dusts/naquamodium',
-            '2x #forge:dusts/neutronium',
-            '#forge:dusts/alloy_infused',
-            '3x #forge:dusts/corrosive'
-        ],
-        '8x gtceu:alltheneutronium_dust',
-        UHV,
-        500
-    )
-
-    //vibtronium
-    addMixer(
-        [
-            '2x #forge:dusts/naquabranium',
-            '2x #forge:dusts/alltheneutronium',
-            '#forge:dusts/alloy_reinforced',
-            '3x #forge:dusts/destructive'
-        ],
-        '8x gtceu:vibtronium_dust',
-        UEV,
-        500
-    )
-
-    //unobtronium
-    addMixer(
-        [
-            '2x #forge:dusts/naquatainium',
-            '2x #forge:dusts/vibtronium',
-            '#forge:dusts/alloy_atomic',
-            '3x #forge:dusts/vengeful'
-        ],
-        '8x gtceu:unobtronium_dust',
-        UIV,
-        500
-    )
-
-    //naquamodium
-    addMixer(
-        [
-            '5x #forge:dusts/naquadah',
-            '3x #forge:dusts/allthemodium'
-        ],
-        '8x gtceu:naquamodium_dust',
-        LuV,
-        250
-    );
-
-    //naquabranium
-    addMixer(
-        [
-            '5x #forge:dusts/naquadah',
-            '3x #forge:dusts/vibranium'
-        ],
-        '8x gtceu:naquabranium_dust',
-        LuV,
-        250
-    );
-
-    //naquatainium
-    addMixer(
-        [
-            '5x #forge:dusts/naquadria',
-            '3x #forge:dusts/unobtainium'
-        ],
-        '8x gtceu:naquatainium_dust',
-        LuV,
-        250
-    );
+    
 
     //vibrant alloy
     addMixer(
@@ -426,84 +506,6 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('8x gtceu:witherite_dust')
         .inputFluids('#forge:oxygen 3000')
         .duration(600)
-        .EUt(IV);
-
-    
-
-
-    //demonic alloy
-    addMixer(
-        [
-            //here - add a component
-            //'#forge:singularities/vibrant_alloy',
-            '3x #forge:dusts/demon',
-            '3x #forge:dusts/tenebrium',
-            '3x #forge:dusts/caesium',
-            '3x #forge:dusts/tritanium',
-            '3x #forge:dusts/gaia'
-        ],
-        '15x gtceu:demonic_alloy_dust',
-        OpV,
-        500
-    )
-
-    //singularity    
-    addMixer(
-        [
-            '8x #forge:dusts/bedrockium',
-            '5x #forge:dusts/stabilized_clathrate',
-            '4x #forge:dusts/thorium_berkelium_alloy',
-            '#forge:dusts/tachyon',
-            '7x #forge:dusts/californium'
-            
-        ],
-        '25x gtceu:singularity_alloy_dust',
-        UXV,
-        500
-    )
-
-    //anti matter alloy dust
-    addMixer(
-        [
-            '3x #forge:dusts/antimatter',
-            '3x #forge:dusts/duranium',
-            '2x #forge:dusts/darmstadtium',
-            '4x #forge:dusts/iridium',
-            '5x #forge:dusts/etrium'
-        ],
-        '17x gtceu:antimatter_alloy_dust',
-        UIV,
-        500
-    )
-
-    //absolute
-    addMixer(
-        [
-            '3x #forge:dusts/strontium',
-            '2x #forge:dusts/unobtronium',
-            '4x #forge:dusts/tellurium',
-            '4x #forge:dusts/radium',
-            '8x #forge:dusts/tenebrium'
-        ],
-        '21x gtceu:absolute_alloy_dust',
-        OpV,
-        500
-    )
-
-    //cosmic alloy
-    addMixer(
-        [
-            '3x #forge:dusts/cosmic_matter',
-            '4x #forge:dusts/alfsteel',
-            '3x #forge:dusts/americium',
-            '2x #forge:dusts/naquadria',
-            '2x #forge:dusts/nether_star'
-        ],
-        '14x gtceu:cosmic_alloy_dust',
-        UEV,
-        500
-    )
-
-    
+        .EUt(IV);   
 
 });

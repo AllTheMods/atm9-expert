@@ -64,44 +64,6 @@ ServerEvents.recipes(allthemods => {
             }
         }
     };
-    const singularityMetals = []    
-
-    const singularityGems = [
-        'demon', 'steadfast', 'corrosive', 'vengeful', 'destructive', 'eternal',
-        'restonia', 'palis', 'diamatine', 'void_crystal', 'emeradic', 'enori', 'black_quartz',
-        'empowered_restonia', 'empowered_palis', 'empowered_diamatine', 'empowered_void_crystal', 'empowered_emeradic', 'empowered_enori',
-        'mana_essence', 'garmonbozia', 'fluix'
-    ];
-    const singularityIngots = [
-        'copper_alloy', 'conductive_alloy', 'energetic_alloy', 'vibrant_alloy', 
-        'pulsating_alloy', 'soularium', 'dark_steel', 'end_steel',
-        'signalum', 'lumium', 'enderium',    
-        'manasteel', 'elementium', 'terrasteel', 'gaia', 'alfsteel',    
-        'hellforged', 'iesnium',
-        'allthemodium', 'vibranium', 'unobtainium',    
-        'draconium', 'draconium_awakened',    
-        'refined_obsidian', 'refined_glowstone', 'alloy_infused', 'alloy_reinforced', 'alloy_atomic',    
-        'compressed_iron', 'hop_graphite', 'graphite',
-        'pink_slime', 'plastic', 'deorum', 'ferrognetic',    
-        'naquamodium', 'naquabranium', 'naquatainium',    
-        'eternium', 'cosmic_alloy', 'antimatter_alloy', 'singularity_alloy', 'absolute_alloy',
-        'alltheneutronium', 'vibtronium', 'unobtronium', 'deorum_alloy', 'demonic_alloy', 'tenebrium',
-        'rhenium','radium','astatine','strontium', 'rhenium_nickel_alloy', 'tellurium', 'berkelium', 'californium',
-        'blutonium', 'cyanite', 'magentite', 'ludicrite', 'ridiculite', 'inanite', 'insanite',
-        'iron','copper','silver','gold','lead','tin','platinum', 'nickel', 'zinc', 'brass', 'bronze', 'invar', 'steel'        
-    ];
-    
-             
-
-    /*singularityGems.forEach(mat=>{
-        let input = `64000x #forge:gems/${mat}`
-        //blackHole(input, '#forge:concentrated_dark_matter 1000', `gtceu:${mat}_singularity`,null,8388608, 1200)
-    })
-
-    singularityIngots.forEach(mat=>{
-        let input = `64000x #forge:ingots/${mat}`        
-        //blackHole(input, '#forge:concentrated_dark_matter 1000', `gtceu:${mat}_singularity`,null,8388608, 1200)
-    })*/
     
     addAssemblyLine(
         'gtceu:black_hole',
