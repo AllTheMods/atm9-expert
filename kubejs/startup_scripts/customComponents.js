@@ -33,6 +33,16 @@ GTCEuStartupEvents.craftingComponents(event => {
         MAX: 'red_matter'
     }
 
+    // heating: coil metals (electric furnace / fluid heater wire), follows the coil ladder
+    const heating = {
+        UHV: 'trinium',
+        UEV: 'tritanium',
+        UIV: 'draconium',
+        UXV: 'draconium_awakened',
+        OpV: 'etrium',
+        MAX: 'infinity'
+    }
+
     const polymers = {
         UEV: 'polyimide',
         UIV: 'organic_polymer',
@@ -96,10 +106,10 @@ GTCEuStartupEvents.craftingComponents(event => {
     })
 
     //double wire for electric furnace
-    event.setMaterialEntries(GTCraftingComponents.COIL_HEATING, entries("wireGtDouble", conductive))
+    event.setMaterialEntries(GTCraftingComponents.COIL_HEATING, entries("wireGtDouble", heating))
 
     //quad wire for fluid heater
-    event.setMaterialEntries(GTCraftingComponents.COIL_HEATING_DOUBLE, entries("wireGtQuadruple", conductive))
+    event.setMaterialEntries(GTCraftingComponents.COIL_HEATING_DOUBLE, entries("wireGtQuadruple", heating))
 
     event.setMaterialEntries(GTCraftingComponents.COIL_ELECTRIC, entries("wireGtQuadruple", conductive))
 
@@ -193,21 +203,21 @@ GTCEuStartupEvents.craftingComponents(event => {
 
     //hpic chip - for now using uhpic - new power component chips needed later
     event.setItems(GTCraftingComponents.POWER_COMPONENT, {
-        UEV: Item.of("gtceu:uhpic_chip"),
-        UIV: Item.of("gtceu:uhpic_chip"),
-        UXV: Item.of("gtceu:uhpic_chip"),
-        OpV: Item.of("gtceu:uhpic_chip"),
-        MAX: Item.of("gtceu:uhpic_chip")
+        UEV: Item.of("gtceu:pics/chip/uev_pic_chip"),
+        UIV: Item.of("gtceu:pics/chip/uiv_pic_chip"),
+        UXV: Item.of("gtceu:pics/chip/uxv_pic_chip"),
+        OpV: Item.of("gtceu:pics/chip/opv_pic_chip"),
+        MAX: Item.of("gtceu:pics/chip/max_pic_chip")
     })
 
     //voltage coils (new textures needed)
     event.setItems(GTCraftingComponents.VOLTAGE_COIL, {
-        UHV: Item.of("gtceu:uhv_voltage_coil"),
-        UEV: Item.of("gtceu:uev_voltage_coil"),
-        UIV: Item.of("gtceu:uiv_voltage_coil"),
-        UXV: Item.of("gtceu:uxv_voltage_coil"),
-        OpV: Item.of("gtceu:opv_voltage_coil"),
-        MAX: Item.of("gtceu:max_voltage_coil")
+        UHV: Item.of("gtceu:pics/coils/uhv_voltage_coil"),
+        UEV: Item.of("gtceu:pics/coils/uev_voltage_coil"),
+        UIV: Item.of("gtceu:pics/coils/uiv_voltage_coil"),
+        UXV: Item.of("gtceu:pics/coils/uxv_voltage_coil"),
+        OpV: Item.of("gtceu:pics/coils/opv_voltage_coil"),
+        MAX: Item.of("gtceu:pics/coils/max_voltage_coil")
     })
 
     event.setItems(GTCraftingComponents.DRUM, {

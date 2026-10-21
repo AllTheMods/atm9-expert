@@ -351,7 +351,7 @@ ServerEvents.recipes(allthemods => {
     });
 
 
-    /*
+    
     machineTiers.forEach(tData => {
 
         let hull = `gtceu:${tData.tier}_machine_hull`;
@@ -390,9 +390,9 @@ ServerEvents.recipes(allthemods => {
             addAssemblyLine(
                 `${item}_robot_arm`,
                 [
-                    `4x #forge:rods/long/${tData.metal}`,
-                    `#forge:gears/${tData.metal}`,
-                    `3x #forge:small_gears/${tData.metal}`,
+                    `4x #forge:rods/long/${tData.structural}`,
+                    `#forge:gears/${tData.component}`,
+                    `3x #forge:small_gears/${tData.structural}`,
                     `2x gtceu:${tData.tier}_electric_motor`,
                     `gtceu:${tData.tier}_electric_piston`,
                     `1x #gtceu:circuits/${prev1}`,
@@ -630,7 +630,7 @@ ServerEvents.recipes(allthemods => {
             )
         }
     });
-    */
+    
     //casings
 
     const materials = [

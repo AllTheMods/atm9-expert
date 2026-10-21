@@ -1210,6 +1210,7 @@ const materials = [
         .unify({ nugget: 'botania:terrasteel_nugget', ingot: 'botania:terrasteel_ingot', block: 'botania:terrasteel_block' }),
 
     new MaterialDef('gaia').element('gaia').color(0xF7A8D8).dust().iconSet('METALLIC').ingot().fluid().materialsAll()        
+        .cable({ voltage: 2097152, loss: 2 })
         .unify({ ingot: 'botania:gaia_ingot' }),
 
     new MaterialDef('alfsteel').element('alfsteel').color(0xFD9D32).dust().iconSet('METALLIC').ingot().fluid().materialsAll()        
@@ -2036,7 +2037,7 @@ const materials = [
     new MaterialDef('star_matter').plasma('customStill').color(0xb219d1),
     new MaterialDef('infinity').ingot().fluid('customStill').element('infinity').color(0xffffff).iconSet('infinity').materialsAll()
         //.flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FOIL)
-        .cable({ voltage: 134217728, loss: 0, superconductor: true })
+        .cable({ voltage: 134217728, loss:2 })
         .blast({ temp: COIL_TEMPS.ETRIUM, eut: 33554432, duration: 600 }),
 
     //UEV UIV UXV OPV MAX structural and conductive alloys    

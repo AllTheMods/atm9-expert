@@ -74,24 +74,31 @@ StartupEvents.registry('item', allthemods => {
 
     // Voltage coils keep their old placeholder names and colours
     const coilTiers = [
-        { id: 'uhv', name: 'Neutronium', color: 0xC7C7C7 },
-        { id: 'uev', name: 'Eternal', color: 0x4ECAB1 },
-        { id: 'uiv', name: 'Cosmic', color: 0xFFC94D },
-        { id: 'uxv', name: 'Antimatter', color: 0xCF566A },
-        { id: 'opv', name: 'Singularity', color: 0xE853DC },
-        { id: 'max', name: 'Absolute', color: 0xFFFFFF }
+        //{ id: 'uhv', name: 'Neutronium', color: 0xC7C7C7 },
+        { id: 'uev', name: 'Photonic', color: 0x4ECAB1 },
+        { id: 'uiv', name: 'Bioengineered', color: 0xFFC94D },
+        { id: 'uxv', name: 'Chaotic', color: 0xCF566A },
+        { id: 'opv', name: 'Naquadric', color: 0xE853DC },
+        { id: 'max', name: 'Antimatter', color: 0xFFFFFF }
     ]
 
     coilTiers.forEach(tier => {
-        allthemods.create(`gtceu:${tier.id}_voltage_coil`)
-            .texture('gtceu:item/ulv_voltage_coil')
-            .color(0, tier.color)
+        allthemods.create(`gtceu:pics/coils/${tier.id}_voltage_coil`)            
             .displayName(`${tier.name} Voltage Coil`)
             .tooltip(`${tierLabel(tier.id)}-Tier Voltage Coil`)
+
+        allthemods.create(`gtceu:pics/wafers/${tier.id}_pic_chip`)
+            .displayName(`${tier.name} Chip`)
+            .tooltip(`${tierLabel(tier.id)}-Tier Power IC`)
+
+        allthemods.create(`gtceu:pics/wafers/${tier.id}_pic_wafer`)
+            .displayName(`${tier.name} Wafer`)
+            .tooltip(`${tierLabel(tier.id)}-Tier Power IC Wafer`)
     })
 
 
-
+    
+    
 
 
     //individual boules and wafers for various materials
