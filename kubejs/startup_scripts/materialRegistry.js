@@ -497,19 +497,19 @@ const materials = [
 
     new MaterialDef('naquadria_awakened').color(0xFFC107).iconSet('RADIOACTIVE').polymer().plasma(),
 
-    new MaterialDef('demon').color(0x00FFFF).iconSet('DIAMOND').gem()
+    new MaterialDef('demon').color(0x00FFFF).iconSet('DIAMOND').gem().lens()
         .unify({ gem: 'bloodmagic:defaultcrystal' }),
 
-    new MaterialDef('steadfast').color(0xB0C4DE).iconSet('LAPIS').gem()
+    new MaterialDef('steadfast').color(0xB0C4DE).iconSet('LAPIS').gem().lens()
         .unify({ gem: 'bloodmagic:steadfastcrystal' }),
 
-    new MaterialDef('corrosive').color(0x90EE90).iconSet('EMERALD').gem()
+    new MaterialDef('corrosive').color(0x90EE90).iconSet('EMERALD').gem().lens()
         .unify({ gem: 'bloodmagic:corrosivecrystal' }),
 
-    new MaterialDef('vengeful').color(0xFFCCCB).iconSet('DIAMOND').gem()
+    new MaterialDef('vengeful').color(0xFFCCCB).iconSet('DIAMOND').gem().lens()
         .unify({ gem: 'bloodmagic:vengefulcrystal' }),
 
-    new MaterialDef('destructive').color(0xFFFFE0).iconSet('QUARTZ').gem()
+    new MaterialDef('destructive').color(0xFFFFE0).iconSet('QUARTZ').gem().lens()
         .unify({ gem: 'bloodmagic:destructivecrystal' }),
 
     new MaterialDef('eternal').color(0xFFFFE0).iconSet('SHINY').element('eternal').lens()
@@ -1874,10 +1874,10 @@ const materials = [
     new MaterialDef('nether_star').modify().ore().color(0xD8D8C0).iconSet('SHINY').fluid()
         .byproducts(['nether_quartz', 'glowstone', 'sulfur']),
 
-    new MaterialDef('kevlar_carbon_fiber_mesh').gem().color(0x8A7A46).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_FOIL)
+    new MaterialDef('kevlar_carbon_fiber_mesh').gem().color(0x8A7A46).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE)
         .unify({ block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('kevlar').dust().color(0x76683C).iconSet('kevlar').flags(GTMaterialFlags.GENERATE_PLATE),
+    new MaterialDef('kevlar').dust().color(0x76683C).iconSet('kevlar').flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_FOIL),
 
     new MaterialDef('andesite_alloy').dust().ingot().color(0x7d9284).components('2x andesite, 2x zinc').iconSet('SHINY').flags(GTMaterialFlags.GENERATE_PLATE)
         .unify({ plate: 'create:andesite_alloy' }),

@@ -20,12 +20,7 @@ global.circuitFamilies = [
 global.circuitSocs = [
     { id: 'wetware', name: 'Wetware', tier: 'zpm', madeIn: 'uhv' },
     { id: 'bioware', name: 'Bioware', tier: 'uv', madeIn: 'uev' },
-    { id: 'optical', name: 'Optical', tier: 'uhv', madeIn: 'uiv' },
-    { id: 'photonic', name: 'Photonic', tier: 'uev', madeIn: 'uxv' },
-    { id: 'bioengineered', name: 'Bioengineered', tier: 'uiv', madeIn: 'opv' },
-    { id: 'chaotic', name: 'Chaotic', tier: 'uxv', madeIn: 'max' },
-    { id: 'naquadric', name: 'Naquadric', tier: 'opv', madeIn: 'max', exotic: true },
-    { id: 'antimatter', name: 'Antimatter', tier: 'max', madeIn: 'max', exotic: true }
+    { id: 'optical', name: 'Optical', tier: 'uhv', madeIn: 'uiv' },    
 ]
 
 global.circuitItemName = (family, stage) => `${family.id}_processor${stage.idSuffix}`
