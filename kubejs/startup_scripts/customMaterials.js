@@ -168,5 +168,11 @@ GTCEuStartupEvents.registry("gtceu:dimension_marker", allthemods => {
 GTCEuStartupEvents.registry("gtceu:material_icon_set", allthemods => {
 
     allthemods.create("infinity").parent(GTMaterialIconSet.DULL)
+    allthemods.create("bacteria_colony").parent(GTMaterialIconSet.DULL)
+    allthemods.create("bacteria_matrix").parent(GTMaterialIconSet.DULL)
+    allthemods.create("bacteria_cultivated").parent(GTMaterialIconSet.DULL)
+    allthemods.create("bacteria_mutated").parent(GTMaterialIconSet.DULL)
+    allthemods.create("bacteria_seed").parent(GTMaterialIconSet.DULL)
+    allthemods.create("bacteria_vegetative").parent(GTMaterialIconSet.DULL)
 
 })

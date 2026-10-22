@@ -3,6 +3,18 @@ ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
     const LUV = LuV; // matches your getVoltage() LuV tier
     const DUR = 200;
+/*
+         {
+            //done
+            nbt: 'PHABioplastic',
+            name: 'PHA Bioplastic Strain',
+            bTier: 2,
+            parent: 'Clostridium',
+            children: [],
+            origin: null,
+            catalyst: 'gtceu:carbon_fibers'
+            //uses: advanced/refined bioplastic polymer (real PHA - polyhydroxyalkanoate - bacterial bioplastic)
+        },*/
 
     const bacteriaChainStrains = [
         { nbt: 'PichiaPastoris', name: 'Pichia Pastoris' },
@@ -14,7 +26,9 @@ ServerEvents.recipes(allthemods => {
         { nbt: 'Rhizobacterium', name: 'Nitrogen-Fixing Rhizobacteria' },
         { nbt: 'Desulfovibrio', name: 'Desulfovibrio' },
         { nbt: 'Clostridium', name: 'Clostridium Cellulose-Alpha' },
-        { nbt: 'CaulobacterCrescentus', name: 'Caulobacter crescentus' }
+        { nbt: 'CaulobacterCrescentus', name: 'Caulobacter crescentus' },
+        { nbt: 'PHABioplastic', name: 'PHA Bioplastic Strain' }
+
     ];
 
     const bacteriaStageItems = (strain) => {
@@ -23,19 +37,19 @@ ServerEvents.recipes(allthemods => {
         return {
             base: Item.of('gtceu:bacteria_gene_sample', `{bacteriaSpecies:"${strain.nbt}",speciesName:"${strain.name}",parentName:"Escherichia coli",parent2Name:""}`).strongNBT(),
 
-            seedCulture: Item.of('gtceu:seed_culture_dust', nbtTag)
+            seedCulture: Item.of('gtceu:bacteria_seed_dust', nbtTag)
                 .withName(Text.of(`${strain.name} Seed Culture`).green()).strongNBT(),
 
-            cultivatedBacteria: Item.of('gtceu:cultivated_bacteria_dust', nbtTag)
+            cultivatedBacteria: Item.of('gtceu:bacteria_cultivated_dust', nbtTag)
                 .withName(Text.of(`${strain.name} Cultivated Bacteria`).green()).strongNBT(),
 
-            vegetativeCulture: Item.of('gtceu:vegetative_culture_dust', nbtTag)
+            vegetativeCulture: Item.of('gtceu:bacteria_vegetative_dust', nbtTag)
                 .withName(Text.of(`${strain.name} Vegetative Culture`).green()).strongNBT(),
 
-            bacterialMatrix: Item.of('gtceu:bacterial_matrix_dust', nbtTag)
+            bacterialMatrix: Item.of('gtceu:bacteria_matrix_dust', nbtTag)
                 .withName(Text.of(`${strain.name} Bacterial Matrix`).green()).strongNBT(),
 
-            mutatedBacterium: Item.of('gtceu:mutated_bacterium_dust', nbtTag)
+            mutatedBacterium: Item.of('gtceu:bacteria_mutated_dust', nbtTag)
                 .withName(Text.of(`${strain.name} Mutated Bacterium`).green()).strongNBT(),
 
             colony: Item.of('gtceu:bacteria_colony_dust', nbtTag)
@@ -96,7 +110,7 @@ ServerEvents.recipes(allthemods => {
             .EUt(LUV);
     });
 
-    //bees
+    
     allthemods.recipes.gtceu.chemical_reactor(`gregification:bacteria/sugar_water`)
         .itemInputs('4x #forge:dusts/sugar')
         .inputFluids('#forge:water_stage_1 1000')

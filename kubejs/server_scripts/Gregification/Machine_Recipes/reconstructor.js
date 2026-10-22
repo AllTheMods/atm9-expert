@@ -2,12 +2,12 @@ ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
 
     const reconstructedItems = [
-        { input: "minecraft:redstone", output: "gtceu:restonia_gem", energy: EV },
-        { input: "minecraft:iron_ingot", output: "gtceu:enori_gem", energy: EV },
-        { input: "minecraft:coal", output: "gtceu:void_crystal_gem", energy: EV },
-        { input: "minecraft:lapis_lazuli", output: "gtceu:palis_gem", energy: EV },
-        { input: "minecraft:diamond", output: "gtceu:diamatine_gem", energy: EV },
-        { input: "minecraft:emerald", output: "gtceu:emeradic_gem", energy: EV },
+        { input: "minecraft:redstone", output: "gtceu:restonia_dust", energy: EV },
+        { input: "minecraft:iron_ingot", output: "gtceu:enori_dust", energy: EV },
+        { input: "minecraft:coal", output: "gtceu:void_crystal_dust", energy: EV },
+        { input: "minecraft:lapis_lazuli", output: "gtceu:palis_dust", energy: EV },
+        { input: "minecraft:diamond", output: "gtceu:diamatine_dust", energy: EV },
+        { input: "minecraft:emerald", output: "gtceu:emeradic_dust", energy: EV },
         { input: "minecraft:coal_block", output: "gtceu:void_crystal_block", energy: EV },
         { input: "#forge:storage_blocks/redstone", output: "gtceu:restonia_block", energy: EV },
         { input: "#forge:storage_blocks/lapis", output: "gtceu:palis_block", energy: EV },

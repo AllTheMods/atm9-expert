@@ -25,11 +25,11 @@ const quarks = [
 ]
 
 const bacteriaDusts = [
-    'gtceu:seed_culture_dust',
-    'gtceu:cultivated_bacteria_dust',
-    'gtceu:vegetative_culture_dust',
-    'gtceu:bacterial_matrix_dust',
-    'gtceu:mutated_bacterium_dust',
+    'gtceu:bacteria_seed_dust',
+    'gtceu:bacteria_cultivated_dust',
+    'gtceu:bacteria_vegetative_dust',
+    'gtceu:bacteria_matrix_dust',
+    'gtceu:bacteria_mutated_dust',
     'gtceu:bacteria_colony_dust'
 ];
 ItemEvents.tooltip(event => {

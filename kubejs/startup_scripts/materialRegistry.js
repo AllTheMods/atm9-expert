@@ -244,7 +244,12 @@ MaterialDef.prototype.removeFlags = function () {
     return this;
 };
 MaterialDef.prototype.wireMod = function (v) { this.traits.wireMod = v; return this; };
-MaterialDef.prototype.blastCoil = function (t) { this.traits.blastCoil = t; return this; };
+MaterialDef.prototype.blastCoil = function (opts) {
+    if (typeof opts === 'number') opts = { temp: opts };
+    opts = opts || {};
+    this.traits.blastCoil = { temp: opts.temp, eut: opts.eut, duration: opts.duration, vacuumDuration: opts.vacuumDuration };
+    return this;
+};
 MaterialDef.prototype.polymerMod = function () { this.traits.polymer = true; return this; }; // sets POLYMER property only, no side effects (unlike .polymer())
 
 
@@ -360,13 +365,16 @@ MaterialDef.prototype.applyModification = function () {
         if (this.traits.wireMod) mat.setProperty(PropertyKey.WIRE, new WireProperties(this.traits.wireMod, 1, 0));
 
         if (this.traits.blastCoil) {
-            let bVolts = this.getCoilVoltage(this.traits.blastCoil);
+            let bc = this.traits.blastCoil;
+            let bVolts = bc.eut !== undefined ? bc.eut : this.getCoilVoltage(bc.temp);
+            let bDuration = bc.duration !== undefined ? bc.duration : 1200;
+            let bVacuum = bc.vacuumDuration !== undefined ? bc.vacuumDuration : Math.max(1, Math.floor(bDuration / 10));
             let mbp = new BlastProperty();
-            mbp.setBlastTemperature(this.traits.blastCoil);
-            mbp.setDurationOverride(1200);
+            mbp.setBlastTemperature(bc.temp);
+            mbp.setDurationOverride(bDuration);
             mbp.setEUtOverride(bVolts);
             mbp.setGasTier(this.getGasTier(bVolts));
-            mbp.setVacuumDurationOverride(120);
+            mbp.setVacuumDurationOverride(bVacuum);
             mbp.setVacuumEUtOverride(bVolts);
             mat.setProperty(PropertyKey.BLAST, mbp);
         }
@@ -862,31 +870,31 @@ const materials = [
 
     new MaterialDef('butanol').fluid().color(0xEBDCA0).iconSet('FLUID').formula('C4H9OH'),
 
-    new MaterialDef('restonia').element('restonia').color(0xff0000).iconSet('RUBY').lens(),
+    new MaterialDef('restonia').element('restonia').color(0xff0000).iconSet('RUBY').polymer(),
 
-    new MaterialDef('palis').element('palis').color(0x1a237e).iconSet('LAPIS').lens(),
+    new MaterialDef('palis').element('palis').color(0x1a237e).iconSet('LAPIS').polymer(),
 
-    new MaterialDef('diamatine').element('diamatine').color(0x4fc3f7).iconSet('DIAMOND').lens(),
+    new MaterialDef('diamatine').element('diamatine').color(0x4fc3f7).iconSet('DIAMOND').polymer(),
 
-    new MaterialDef('void_crystal').element('void_crystal').color(0x212121).iconSet('LIGNITE').lens(),
+    new MaterialDef('void_crystal').element('void_crystal').color(0x212121).iconSet('LIGNITE').polymer(),
 
-    new MaterialDef('emeradic').element('emeradic').color(0x00e676).iconSet('EMERALD').lens(),
+    new MaterialDef('emeradic').element('emeradic').color(0x00e676).iconSet('EMERALD').polymer(),
 
-    new MaterialDef('enori').element('enori').color(0xf5f5f5).iconSet('QUARTZ').lens(),
+    new MaterialDef('enori').element('enori').color(0xf5f5f5).iconSet('QUARTZ').polymer(),
 
-    new MaterialDef('black_quartz').element('black_quartz').color(0x000000).iconSet('QUARTZ').lens(),
+    new MaterialDef('black_quartz').element('black_quartz').color(0x000000).iconSet('QUARTZ').polymer(),
 
-    new MaterialDef('empowered_restonia').element('restonia').color(0xff4d4d).iconSet('RUBY').gem(),
+    new MaterialDef('empowered_restonia').element('restonia').color(0xff4d4d).iconSet('RUBY').polymer(),
 
-    new MaterialDef('empowered_palis').element('palis').color(0x534bae).iconSet('LAPIS').gem(),
+    new MaterialDef('empowered_palis').element('palis').color(0x534bae).iconSet('LAPIS').polymer(),
 
-    new MaterialDef('empowered_diamatine').element('diamatine').color(0x8bf6ff).iconSet('DIAMOND').gem(),
+    new MaterialDef('empowered_diamatine').element('diamatine').color(0x8bf6ff).iconSet('DIAMOND').polymer(),
 
-    new MaterialDef('empowered_void_crystal').element('void_crystal').color(0x484848).iconSet('LIGNITE').gem(),
+    new MaterialDef('empowered_void_crystal').element('void_crystal').color(0x484848).iconSet('LIGNITE').polymer(),
 
-    new MaterialDef('empowered_emeradic').element('emeradic').color(0x66ffa6).iconSet('EMERALD').gem(),
+    new MaterialDef('empowered_emeradic').element('emeradic').color(0x66ffa6).iconSet('EMERALD').polymer(),
 
-    new MaterialDef('empowered_enori').element('enori').color(0xf5f5f5).iconSet('QUARTZ').gem(),
+    new MaterialDef('empowered_enori').element('enori').color(0xf5f5f5).iconSet('QUARTZ').polymer(),
 
     new MaterialDef('magebloom').dust().color(0xc14bfc).iconSet('DULL'),
 
@@ -1946,7 +1954,8 @@ const materials = [
     new MaterialDef('rhodium_sponge').dust().color(0xA9AFB8).iconSet('METALLIC').noDecomp().components('1x rhodium'),
     new MaterialDef('rhodium_salt').dust().color(0xC25A5A).iconSet('DULL').noDecomp().components('1x rhodium, 3x chlorine'),
     new MaterialDef('zinc_sulfate').dust().color(0xBFC9C2).iconSet('DULL').components('1x zinc, 1x sulfur, 4x oxygen'),
-    new MaterialDef('iridium_dioxide').dust().color(0x2F3A4A).iconSet('DULL').noDecomp().components('1x iridium, 2x oxygen'),
+    new MaterialDef('iridium_dioxide').dust().color(0x2F3A4A).iconSet('DULL').noDecomp().components('1x iridium, 2x oxygen').ingot().materialsBasic()
+        .blast({ temp: COIL_TEMPS.DRACONIUM, eut: UV, duration: 1200 }),
     new MaterialDef('fused_pgm_melt').dust().color(0x8A4F2E).iconSet('DULL').noDecomp(),
     new MaterialDef('sodium_ruthenate_liquor').fluid().color(0x3F7A55).noDecomp(),
     new MaterialDef('pgm_oxide_cake').dust().color(0x4A3F44).iconSet('DULL').noDecomp(),
@@ -2118,12 +2127,79 @@ const materials = [
     new MaterialDef('neodymium_dysprosium_dopant').dust().color(0x9C8A62).iconSet('METALLIC').components('3x neodymium, 1x dysprosium').formula('Nd3Dy').noDecomp(),
     new MaterialDef('neodymium_terbium_dysprosium_dopant').dust().color(0x7E8F7A).iconSet('METALLIC').components('2x neodymium, 1x terbium, 1x dysprosium').formula('Nd2TbDy').noDecomp(),
     new MaterialDef('neodymium_rare_earth_dopant').dust().color(0xA48C7E).iconSet('METALLIC').components('2x neodymium, 1x praseodymium, 1x promethium, 1x terbium, 1x dysprosium').formula('Nd2PrPmTbDy').noDecomp(),
+    new MaterialDef('artificial_cerebrospinal_fluid').fluid().color(0xA8D8E8).iconSet(GTMaterialIconSet.FLUID).components('2x sodium', '1x potassium', '1x calcium', '1x magnesium', '2x glycerol', '6x distilled_water'),
+
+    new MaterialDef('bacteria_seed').dust().color(0xA8C878).iconSet('bacteria_seed')
+        .unify({dustTiny: true, dustSmall: true }),
+    new MaterialDef('bacteria_cultivated').dust().color(0x8CB860).iconSet('bacteria_cultivated')
+        .unify({dustTiny: true, dustSmall: true }),
+    new MaterialDef('bacteria_vegetative').dust().color(0x6EA048).iconSet('bacteria_vegetative')
+        .unify({dustTiny: true, dustSmall: true }),
+    new MaterialDef('bacteria_matrix').dust().color(0x508A30).iconSet('bacteria_matrix')
+        .unify({dustTiny: true, dustSmall: true }),
+    new MaterialDef('bacteria_mutated').dust().color(0x9AD850).iconSet('bacteria_mutated')
+        .unify({dustTiny: true, dustSmall: true }),
+    new MaterialDef('bacteria_colony').dust().color(0x3C7020).iconSet('bacteria_colony')
+        .unify({dustTiny: true, dustSmall: true }),
+
+    
+    new MaterialDef('bismuth_selenide').dust().color(0x2E4A52).iconSet('METALLIC').formula('Bi2Se3').components('2x bismuth, 3x selenium'),
+    new MaterialDef('indium_antimonide').dust().color(0x6B6F7A).iconSet('METALLIC').formula('InSb').components('1x indium, 1x antimony'),
+    new MaterialDef('lithium_niobate').dust().color(0xC4B8D8).iconSet('SHINY').formula('LiNbO3').components('1x lithium, 1x niobium, 3x oxygen'),
+    new MaterialDef('gallium_nitride').dust().color(0xC9B458).iconSet('DULL').formula('GaN').components('1x gallium, 1x nitrogen'),
+    new MaterialDef('aluminium_nitride').dust().color(0xA9B7C6).iconSet('DULL').formula('AlN').components('1x aluminium, 1x nitrogen'),
+    new MaterialDef('vanadium_dioxide').dust().color(0x2F4F6F).iconSet('DULL').formula('VO2').components('1x vanadium, 2x oxygen'),
+    new MaterialDef('cobalt_iron_boride').dust().color(0x4A5A78).iconSet('METALLIC').formula('CoFeB').components('1x cobalt, 1x iron, 1x boron'),
+    new MaterialDef('magnesium_oxide').dust().color(0xDAD4C8).iconSet('DULL').formula('MgO').components('1x magnesium, 1x oxygen'),
+    new MaterialDef('europium_yttrium_silicate').dust().color(0xD98C8C).iconSet('SHINY').formula('EuY2SiO5').components('1x europium, 2x yttrium, 1x silicon, 5x oxygen'),
+    new MaterialDef('praseodymium_yttrium_silicate').dust().color(0xA8CF7A).iconSet('SHINY').formula('PrY2SiO5').components('1x praseodymium, 2x yttrium, 1x silicon, 5x oxygen'),
+
+    
+    new MaterialDef('bismuth_antimony_telluride').dust().color(0x5A5F78).iconSet('METALLIC').formula('BiSbTe3').components('1x bismuth, 1x antimony, 3x tellurium'),
+    new MaterialDef('zirconium_diboride').dust().color(0x6E7C86).iconSet('METALLIC').formula('ZrB2').components('1x zirconium, 2x boron'),
+    new MaterialDef('tungsten_diselenide').dust().color(0x3C3A44).iconSet('METALLIC').formula('WSe2').components('1x tungsten, 2x selenium'),
+    new MaterialDef('indium_selenide').dust().color(0x8A3E3A).iconSet('DULL').formula('InSe').components('1x indium, 1x selenium'),
+    new MaterialDef('zirconium_dioxide').dust().color(0xE2DCCB).iconSet('DULL').formula('ZrO2').components('1x zirconium, 2x oxygen'),
+    new MaterialDef('zirconium_titanate').dust().color(0xCFC7B0).iconSet('DULL').formula('ZrTiO4').components('1x zirconium, 1x titanium, 4x oxygen'),
+    new MaterialDef('gadolinium_zirconate').dust().color(0xC8D2D8).iconSet('DULL').formula('Gd2Zr2O7').components('2x gadolinium, 2x zirconium, 7x oxygen'),
+    new MaterialDef('barium_titanate').dust().color(0xB9B4A4).iconSet('DULL').formula('BaTiO3').components('1x barium, 1x titanium, 3x oxygen'),
+    new MaterialDef('cadmium_zinc_telluride').dust().color(0x6A5F52).iconSet('METALLIC').formula('CdZnTe2').components('1x cadmium, 1x zinc, 2x tellurium'),
+    new MaterialDef('gadolinium_oxysulfide').dust().color(0xBFD98A).iconSet('DULL').formula('Gd2O2S').components('2x gadolinium, 2x oxygen, 1x sulfur'),
+    new MaterialDef('gadolinium_iron_garnet').dust().color(0x6B4E3D).iconSet('SHINY').formula('Gd3Fe5O12').components('3x gadolinium, 5x iron, 12x oxygen'),
+    new MaterialDef('gadolinium_gallium_garnet').dust().color(0xD8C8A0).iconSet('SHINY').formula('Gd3Ga5O12').components('3x gadolinium, 5x gallium, 12x oxygen'),
+
+    
+    new MaterialDef('chromium_disilicide').dust().ingot().color(0x7E8A95).iconSet('METALLIC').formula('CrSi2').components('1x chromium, 2x silicon').materialsBasic()
+        .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
+    new MaterialDef('nickel_silicide').dust().ingot().color(0x8FA3A8).iconSet('METALLIC').formula('NiSi').components('1x nickel, 1x silicon').materialsBasic()
+        .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
+    new MaterialDef('titanium_nitride').dust().ingot().color(0xD4A940).iconSet('SHINY').formula('TiN').components('1x titanium, 1x nitrogen').materialsBasic()
+        .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
+    new MaterialDef('nickel_germanide').dust().ingot().color(0x93A39B).iconSet('METALLIC').formula('NiGe').components('1x nickel, 1x germanium').materialsBasic()
+        .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
+    new MaterialDef('sendust').dust().ingot().color(0x7D7F86).iconSet('METALLIC').formula('Fe85Si10Al5').components('17x iron, 2x silicon, 1x aluminium').noDecomp().materialsBasic()
+        .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
+    new MaterialDef('ruthenium_dioxide').dust().ingot().color(0x1F2A35).iconSet('METALLIC').formula('RuO2').components('1x ruthenium, 2x oxygen').materialsBasic()
+        .blast({ temp: COIL_TEMPS.DRACONIUM, eut: UV, duration: 1200 }),
+    new MaterialDef('erbium_disilicide').dust().ingot().color(0xC98FA0).iconSet('METALLIC').formula('ErSi2').components('1x erbium, 2x silicon').materialsBasic()
+        .blast({ temp: COIL_TEMPS.DRACONIUM, eut: UV, duration: 1200 }),
+    new MaterialDef('gold_germanium').dust().ingot().color(0xD8B94E).iconSet('SHINY').formula('AuGe').components('1x gold, 1x germanium').materialsBasic()
+        .blast({ temp: COIL_TEMPS.DRACONIUM, eut: UV, duration: 1200 }),
+    new MaterialDef('permendur').dust().ingot().color(0x59606E).iconSet('METALLIC').formula('Fe49Co49V2').components('49x iron, 49x cobalt, 2x vanadium').noDecomp().materialsBasic()
+        .blast({ temp: COIL_TEMPS.DRACONIUM, eut: UV, duration: 1200 }),
+
+    new MaterialDef('silicon_germanium').dust().ingot().color(0x7A8BA3).iconSet('METALLIC').formula('Si4Ge').components('4x silicon, 1x germanium').flags(GTMaterialFlags.GENERATE_PLATE)
+        .blast({ temp: COIL_TEMPS.TRINIUM, eut: UV, duration: 1200 }),
+    new MaterialDef('indium_phosphide').modify().dust().ingot().color(0x4B3A5E).iconSet('METALLIC').formula('InP').components('1x indium, 1x phosphorus').flags(GTMaterialFlags.GENERATE_PLATE)
+        .blastCoil({ temp: COIL_TEMPS.DRACONIUM_AWAKENED, eut: UHV, duration: 1200 }),        
+    new MaterialDef('langasite').dust().color(0xB8CFC4).iconSet('SHINY').formula('La3Ga5SiO14').components('3x lanthanum, 5x gallium, 1x silicon, 14x oxygen'),
+    new MaterialDef('tungsten_hexafluoride').fluid().gas().color(0xC8C2B4).iconSet('FLUID').formula('WF6').components('1x tungsten, 6x fluorine').noDecomp(),
 
 ];
 
 
 GTCEuStartupEvents.registry('gtceu:material', allthemods => {
-    materials.forEach(m => m.register(allthemods));
+    materials.forEach(m => m.register(allthemods));       
 });
 
 StartupEvents.postInit(allthemods => {
