@@ -393,21 +393,8 @@ ServerEvents.recipes(allthemods => {
             let prev2 = machineTiers[tData.t - 2].tier;
             let prev3 = machineTiers[tData.t - 3].tier;
 
-            let prevTier = machineTiers[tData.t - 2].tier   // 'uv' when t is 9
-            let prevEU   = tierValues[tData.t - 2]          // UV voltage when t is 9
-
-            //voltage coil
-            addAssembler(
-                [
-                    magnetic2,
-                    `16x gtceu:fine_${tData.conductive}_wire`
-                ],
-                null,
-                `${item}_voltage_coil`,
-                prevEU,
-                200,
-                1
-            )
+            let prevTier = machineTiers[tData.t - 2].tier
+            let prevEU   = tierValues[tData.t - 2]            
 
             //robot arm        
             addAssemblyLine(
@@ -433,7 +420,7 @@ ServerEvents.recipes(allthemods => {
                 prevEU,
                 `gtceu:${prevTier}_robot_arm`,
                 64
-            )
+            );
 
             //motor
             addAssemblyLine(
@@ -456,7 +443,7 @@ ServerEvents.recipes(allthemods => {
                 prevEU,
                 `gtceu:${prevTier}_electric_motor`,
                 64
-            )
+            );
 
             //conveyor
             addAssemblyLine(
@@ -479,14 +466,14 @@ ServerEvents.recipes(allthemods => {
                 prevEU,
                 `gtceu:${prevTier}_conveyor_module`,
                 64
-            )
+            );
 
             //pump
             addAssemblyLine(
                 `${item}_electric_pump`,
                 [
                     `gtceu:${tData.tier}_electric_motor`,
-                    `#gtceu:pipes/huge/${tData.structural}`,
+                    `#gtceu:pipes/fluid/huge/${tData.structural}`,
                     `2x #forge:plates/${tData.structural}`,
                     `8x #forge:screws/${tData.structural}`,
                     `16x gtceu:silicone_rubber_ring`,
@@ -502,7 +489,8 @@ ServerEvents.recipes(allthemods => {
                 prevEU,
                 `gtceu:${prevTier}_electric_pump`,
                 64
-            )
+                //64
+            );
 
             //piston
             addAssemblyLine(
@@ -526,7 +514,7 @@ ServerEvents.recipes(allthemods => {
                 prevEU,
                 `gtceu:${prevTier}_electric_piston`,
                 64
-            )
+            );
             //sensor
             addAssemblyLine(
                 `${item}_sensor`,
@@ -548,7 +536,7 @@ ServerEvents.recipes(allthemods => {
                 prevEU,
                 `gtceu:${prevTier}_sensor`,
                 64
-            )
+            );
 
             //emitter
             addAssemblyLine(
@@ -571,10 +559,10 @@ ServerEvents.recipes(allthemods => {
                 prevEU,
                 `gtceu:${prevTier}_emitter`,
                 64
-            )
+            );
 
+            console.error(`research item: gtceu:${prevTier}_field_generator`);
             //field generator
-            
             addAssemblyLine(
                 `${item}_field_generator`,
                 [
@@ -595,8 +583,7 @@ ServerEvents.recipes(allthemods => {
                 prevEU,
                 `gtceu:${prevTier}_field_generator`,
                 64
-            )
-        
+            );
 
             //regulator
             addAssembler(
@@ -609,7 +596,7 @@ ServerEvents.recipes(allthemods => {
                 prevEU,
                 50,
                 1
-            )
+            );
 
             //rotor holders
             allthemods.shaped(`${item}_rotor_holder`,
@@ -625,7 +612,67 @@ ServerEvents.recipes(allthemods => {
 
                 }
             ).id(`gregification:${tData.tier}_rotor_holder`);
+            
+            //quantum chest
+            if (tData.t > 9) {
+                allthemods.shaped(`gtceu:${tData.tier}_quantum_chest`,
+                    [
+                        'CPC',
+                        'PHP',
+                        'CFC'
+                    ], {
+                    C: circuit,
+                    H: hull,
+                    P: plate,
+                    F: `gtceu:${prevTier}_field_generator`
+                }).id(`gregification:${tData.tier}_quantum_chest`)
+            }            
+        }
+        if (tData.t >= 9) {
 
+            let item = `gtceu:${tData.tier}`;            
+
+            let prevTier = machineTiers[tData.t - 2].tier
+            let prevEU   = tierValues[tData.t - 2]
+
+            //voltage coil
+            addAssembler(
+                [
+                    magnetic2,
+                    `16x gtceu:fine_${tData.conductive}_wire`
+                ],
+                null,
+                `${item}_voltage_coil`,
+                prevEU,
+                200,
+                1
+            )
+
+            if (tData.t >= 10) {
+                //casing
+                allthemods.shaped(`gtceu:${tData.tier}_machine_casing`, ['PPP', 'PWP', 'PPP'], {
+                P: plate,
+                W: '#forge:tools/wrenches'}).id(`gregification:${tData.tier}_machine_casing`)
+            
+                addAssembler(
+                    [`8x ${plate}`],
+                    null,
+                    `gtceu:${tData.tier}_machine_casing`,
+                    LV,
+                    50,
+                    8
+                );
+
+                //machine hull
+                addAssembler(          
+                    [`gtceu:${tData.tier}_machine_casing`,`2x ${wire}`],
+                    `#forge:${tData.polymer} 288`,
+                    `gtceu:${tData.tier}_machine_hull`,
+                    LV,
+                    50
+                );
+            }
+            
             //energy hatch
             addAssemblyLine(
                 `${item}_energy_input_hatch`,
@@ -644,7 +691,7 @@ ServerEvents.recipes(allthemods => {
                 prevEU,
                 `gtceu:${prevTier}_energy_input_hatch`,
                 64
-            )
+            );
 
             //dynamo hatch
             addAssemblyLine(
@@ -658,62 +705,38 @@ ServerEvents.recipes(allthemods => {
                 ],
                 [
                     `#forge:sodium_potassium ${(tData.t - 3) * 2000}`,
-                    solder
+                    `#forge:soldering_alloy 4320`
                 ],
                 600,
                 prevEU,
                 `gtceu:${prevTier}_energy_output_hatch`,
                 64
-            )
+            );
 
+            //nonuple
+            allthemods.shaped(`gtceu:${tData.tier}_output_hatch_9x`, [' P ', ' H ', '   '], {
+                P: `gtceu:${tData.tier}_output_hatch`,
+                H: `gtceu:${tData.structural}_nonuple_fluid_pipe`}
+            ).id(`gregification:${tData.tier}_nonuple_output_hatch`)
 
-            //quantum chest
-            if (tData.t > 9) {
-                allthemods.shaped(`gtceu:${tData.tier}_quantum_chest`,
-                    [
-                        'CPC',
-                        'PHP',
-                        'CFC'
-                    ], {
-                    C: circuit,
-                    H: hull,
-                    P: plate,
-                    F: `gtceu:${prevTier}_field_generator`
-                }).id(`gregification:${tData.tier}_quantum_chest`)
-            }
+            allthemods.shaped(`gtceu:${tData.tier}_input_hatch_9x`, [' P ', ' H ', '   '], {
+                P: `gtceu:${tData.tier}_input_hatch`,
+                H: `gtceu:${tData.structural}_nonuple_fluid_pipe`}
+            ).id(`gregification:${tData.tier}_nonuple_input_hatch`)
 
+            //quadruple
+            allthemods.shaped(`gtceu:${tData.tier}_output_hatch_4x`, [' P ', ' H ', '   '], {
+                P: `gtceu:${tData.tier}_output_hatch`,
+                H: `gtceu:${tData.structural}_quadruple_fluid_pipe`}
+            ).id(`gregification:${tData.tier}_quadruple_output_hatch`)
+
+            allthemods.shaped(`gtceu:${tData.tier}_input_hatch_4x`, [' P ', ' H ', '   '], {
+                P: `gtceu:${tData.tier}_input_hatch`,
+                H: `gtceu:${tData.structural}_quadruple_fluid_pipe`}
+            ).id(`gregification:${tData.tier}_quadruple_input_hatch`)
         }
     });
 
-    //casings
-
-    const materials = [
-        { name: 'corrosive_etrium_alloy', tier: 'uev' },
-        { name: 'destructive_scandozirconium', tier: 'uiv' },
-        { name: 'vengeful_gadomeitnerium_alloy', tier: 'uxv' },
-        { name: 'steadfast_rhenobedrock_alloy', tier: 'opv' },
-        { name: 'demonic_antimatter_alloy', tier: 'max' }
-    ]
-
-    materials.forEach((mat, index) => {
-        // Force the Casing Recipe
-        allthemods.shaped(`gtceu:${mat.tier}_machine_casing`, ['PPP', 'PWP', 'PPP'], {
-            P: `gtceu:${mat.name}_plate`,
-            W: '#forge:tools/wrenches'
-        })
-        let tierKeys = Object.keys(tiers);
-        let startTierIndex = tierKeys.indexOf('UHV');
-        let currentTierKey = tierKeys[startTierIndex + index];
-        let currentVoltage = tiers[currentTierKey];
-        addAssembler(
-            [`8x gtceu:${mat.name}_plate`],
-            null,
-            `gtceu:${mat.tier}_machine_casing`,
-            LV,
-            50,
-            8
-        );
-    });
 
     //grind head
     allthemods.shaped('gtceu:eternium_grinding_head',

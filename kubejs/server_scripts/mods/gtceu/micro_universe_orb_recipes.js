@@ -102,12 +102,13 @@ ServerEvents.recipes(allthemods => {
         .outputFluids([Fluid.of('gtceu:liquid_air', 640000), Fluid.of('gtceu:oil', 1000000)])
         .duration(1200 * 2).EUt(UV)
 
+        /*
     allthemods.recipes.gtceu.micro_universe_collector('max_energy_hatch')
         .itemInputs(['1x allthetweaks:greg_star_block', '8x gtceu:uhv_energy_input_hatch_16a', '1x kubejs:micro_universe_drill_ship', '16x kubejs:micro_universe_catalyst'])
         .inputFluids([Fluid.of('gtceu:star_matter_plasma', 12000), Fluid.of('gtceu:nether_star', 1574640)])
         .itemOutputs(['1x gtceu:max_energy_input_hatch'])
         .duration(2400 * 16).EUt(UV)
-
+*/
     allthemods.recipes.gtceu.micro_universe_collector('creative_energy')
         .itemInputs(['1x allthetweaks:greg_star_block', '32x gtceu:uhv_16a_energy_converter', '1x kubejs:micro_universe_drill_ship', '16x kubejs:micro_universe_catalyst'])
         .inputFluids([Fluid.of('gtceu:nether_star', 1574640)])
