@@ -32,6 +32,18 @@ ServerEvents.recipes(allthemods => {
     const withCount = (id, n) => (n > 1 ? n + 'x ' + id : id)
     const idSafe = s => String(s).replace(/[^a-z0-9]/gi, '_')
 
+    // material forms are always referenced by forge tag, never by item id
+    const FORM_TAGS = { fine_wire: 'fine_wires', foil: 'foils', plate: 'plates', frame: 'frames', bolt: 'bolts' }
+    const formTag = (form, material) =>
+        form === 'double_wire' ? '#gtceu:wires/double/' + material : '#forge:' + FORM_TAGS[form] + '/' + material
+    const itemRef = id => {
+        if (id.indexOf(':') === -1) {
+            const m = /^(.+)_(fine_wire|double_wire|foil|plate|frame|bolt)$/.exec(id)
+            if (m) return formTag(m[2], m[1])
+        }
+        return nsId(id)
+    }
+
     const fluidStr = (name, amount) => {
         if (name === 'water') return 'minecraft:water ' + amount
         return '#forge:' + name + ' ' + amount
@@ -54,13 +66,18 @@ ServerEvents.recipes(allthemods => {
 
     const isSterile = machine => machine && machine.cleanroom === 'sterile'
 
-    // plain item ids (not tags, not NBT stacks) that are not in the game; the recipe is skipped and the ids are logged
+    // ids / tags that are not in the game; the recipe is skipped and they are logged
+    const tagEmpty = tag => {
+        try { return Ingredient.of(tag).isEmpty() } catch (e) { return false }
+    }
     const missingIds = list => {
         const out = []
         list.forEach(entry => {
-            if (typeof entry !== 'string' || entry.charAt(0) === '#') return
+            if (typeof entry !== 'string') return
             const id = entry.replace(/^\d+x /, '')
-            if (!Item.exists(id)) out.push(id)
+            if (id.charAt(0) === '#') {
+                if (tagEmpty(id)) out.push(id + ' (empty or unknown tag)')
+            } else if (!Item.exists(id)) out.push(id)
         })
         return out
     }
@@ -74,7 +91,7 @@ ServerEvents.recipes(allthemods => {
                 ' fluids, recipe has ' + itemCount + ' / ' + ins.fluids.length)
             return false
         }
-        const missing = missingIds(ins.items).concat(missingIds([withCount(nsId(outId), outAmount)]))
+        const missing = missingIds(ins.items).concat(missingIds(ins.notConsumable)).concat(missingIds([withCount(nsId(outId), outAmount)]))
         if (missing.length > 0) {
             console.error('[circuits] ' + recipeId + ' skipped: item does not exist: ' + missing.join(', '))
             return false
@@ -112,7 +129,7 @@ ServerEvents.recipes(allthemods => {
             else if (c.dust) pushItem(ins.items, '#forge:dusts/' + c.dust, c.amount, split)
             else if (c.gem) pushItem(ins.items, '#forge:gems/' + c.gem, c.amount, split)
             else if (c.bacteria) ins.items.push(bacteriaStack(c.bacteria, c.amount))
-            else if (c.item) pushItem(ins.items, nsId(c.item), c.amount, split)
+            else if (c.item) pushItem(ins.items, itemRef(c.item), c.amount, split)
             else {
                 console.error('[circuits] ' + recipeId + ' skipped: unknown component ' + JSON.stringify(c))
                 failed = true
@@ -186,12 +203,12 @@ ServerEvents.recipes(allthemods => {
                 return { id: 'gtceu:' + global.socParts[f.id].id, amount: amount }
             case 'previous':
                 return { id: 'gtceu:' + circuitId(f, stages[stageIdx - 1]), amount: amount }
-            case 'fineWire': return { id: 'gtceu:' + f.fineWire + '_fine_wire', amount: amount }
-            case 'doubleWire': return { id: 'gtceu:' + f.doubleWire + '_double_wire', amount: amount }
-            case 'foil': return { id: 'gtceu:' + f.foil + '_foil', amount: amount }
-            case 'plate': return { id: 'gtceu:' + f.plate + '_plate', amount: amount }
-            case 'frame': return { id: 'gtceu:' + f.frame + '_frame', amount: amount }
-            case 'bolt': return { id: 'gtceu:' + f.bolt + '_bolt', amount: amount }
+            case 'fineWire': return { id: formTag('fine_wire', f.fineWire), amount: amount }
+            case 'doubleWire': return { id: formTag('double_wire', f.doubleWire), amount: amount }
+            case 'foil': return { id: formTag('foil', f.foil), amount: amount }
+            case 'plate': return { id: formTag('plate', f.plate), amount: amount }
+            case 'frame': return { id: formTag('frame', f.frame), amount: amount }
+            case 'bolt': return { id: formTag('bolt', f.bolt), amount: amount }
             case 'polymer': return { fluid: true, id: f.polymer, amount: amount }
             case 'solder': return { fluid: true, id: 'soldering_alloy', amount: amount }
         }
@@ -234,5 +251,5 @@ ServerEvents.recipes(allthemods => {
         })
     })
 
-    console.error('[circuits] registered ' + stepCount + ' step recipes and ' + stageCount + ' stage recipes')
+    console.info('[circuits] registered ' + stepCount + ' step recipes and ' + stageCount + ' stage recipes')
 })

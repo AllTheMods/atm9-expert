@@ -301,7 +301,7 @@ global.circuitParts = {
                 machine: circuitDurations.oscillator_engrave[1],
                 components: [
                     { item: 'oscillator_wafer', amount: 1 },
-                    { lens: 'void_crystal' }
+                    { lens: 'demon' }
                 ],
                 output: { item: 'engraved_oscillator_wafer', amount: 1 }
             },
@@ -336,7 +336,7 @@ global.circuitParts = {
                 machine: circuitDurations.oscillator_engrave[2],
                 components: [
                     { item: 'advanced_oscillator_wafer', amount: 1 },
-                    { lens: 'empowered_void_crystal' }
+                    { lens: 'steadfast' }
                 ],
                 output: { item: 'engraved_advanced_oscillator_wafer', amount: 1 }
             },
