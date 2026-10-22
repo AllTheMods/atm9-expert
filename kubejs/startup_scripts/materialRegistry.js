@@ -1874,10 +1874,10 @@ const materials = [
     new MaterialDef('nether_star').modify().ore().color(0xD8D8C0).iconSet('SHINY').fluid()
         .byproducts(['nether_quartz', 'glowstone', 'sulfur']),
 
-    new MaterialDef('kevlar_carbon_fiber_mesh').gem().color(0x8A7A46).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE)
+    new MaterialDef('kevlar_carbon_fiber_mesh').gem().color(0x8A7A46).iconSet('kevlar').flags(GTMaterialFlags.GENERATE_PLATE)
         .unify({ block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('kevlar').dust().color(0x76683C).iconSet('kevlar').flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_FOIL),
+    new MaterialDef('kevlar').ingot().dust().color(0x76683C).iconSet('kevlar').flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_FOIL),
 
     new MaterialDef('andesite_alloy').dust().ingot().color(0x7d9284).components('2x andesite, 2x zinc').iconSet('SHINY').flags(GTMaterialFlags.GENERATE_PLATE)
         .unify({ plate: 'create:andesite_alloy' }),
