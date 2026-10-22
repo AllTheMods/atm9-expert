@@ -54,6 +54,17 @@ ServerEvents.recipes(allthemods => {
 
     const isSterile = machine => machine && machine.cleanroom === 'sterile'
 
+    // plain item ids (not tags, not NBT stacks) that are not in the game; the recipe is skipped and the ids are logged
+    const missingIds = list => {
+        const out = []
+        list.forEach(entry => {
+            if (typeof entry !== 'string' || entry.charAt(0) === '#') return
+            const id = entry.replace(/^\d+x /, '')
+            if (!Item.exists(id)) out.push(id)
+        })
+        return out
+    }
+
     // returns true when the recipe was registered
     const register = (type, recipeId, ins, outId, outAmount, eut, duration, sterile, extra) => {
         const itemCount = ins.items.length + ins.notConsumable.length
@@ -61,6 +72,11 @@ ServerEvents.recipes(allthemods => {
         if (lim && (itemCount > lim.items || ins.fluids.length > lim.fluids)) {
             console.error('[circuits] ' + recipeId + ' skipped: ' + type + ' takes ' + lim.items + ' items / ' + lim.fluids +
                 ' fluids, recipe has ' + itemCount + ' / ' + ins.fluids.length)
+            return false
+        }
+        const missing = missingIds(ins.items).concat(missingIds([withCount(nsId(outId), outAmount)]))
+        if (missing.length > 0) {
+            console.error('[circuits] ' + recipeId + ' skipped: item does not exist: ' + missing.join(', '))
             return false
         }
         const r = allthemods.recipes.gtceu[type](recipeId)
@@ -218,5 +234,5 @@ ServerEvents.recipes(allthemods => {
         })
     })
 
-    console.info('[circuits] registered ' + stepCount + ' step recipes and ' + stageCount + ' stage recipes')
+    console.error('[circuits] registered ' + stepCount + ' step recipes and ' + stageCount + ' stage recipes')
 })

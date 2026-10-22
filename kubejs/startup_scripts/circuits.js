@@ -44,7 +44,7 @@ global.circuitLadder = [
         cwut: { computer: 20, mainframe: 100 },
         board: 'photonic_printed_circuit_board',
         core: 'advanced_neuroprocessing_unit',
-        fineWire: circuitMaterials[0].conductive,
+        fineWire: 'eternium',
         doubleWire: circuitMaterials[0].conductive,
         frame: circuitMaterials[0].structural,
         plate: circuitMaterials[0].structural,
@@ -230,7 +230,7 @@ global.circuitParts = {
                 components: [
                     { item: 'silicon_germanium_plate', amount: 1 },
                     { item: 'crystalline_matrix', amount: 4 },
-                    { item: 'etrium_fine_wire', amount: 32 },
+                    { item: 'eternium_fine_wire', amount: 32 },
                     { fluid: 'liquid_crystal_kevlar', amount: 1440 },
                     { bacteria: 'PichiaPastoris', amount: 1 }
                 ],
@@ -815,7 +815,7 @@ global.circuitCores = {
             components: [
                 { item: 'neuro_processing_unit', amount: 1 },
                 { item: 'stem_cells', amount: 32 },
-                { item: 'etrium_fine_wire', amount: 64 },
+                { item: 'eternium_fine_wire', amount: 64 },
                 { item: 'kevlar_foil', amount: 32 },
                 { item: 'infused_star_bolt', amount: 16 },
                 { item: 'corrosive_etrium_alloy_plate', amount: 8 }
