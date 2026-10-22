@@ -1874,10 +1874,10 @@ const materials = [
     new MaterialDef('nether_star').modify().ore().color(0xD8D8C0).iconSet('SHINY').fluid()
         .byproducts(['nether_quartz', 'glowstone', 'sulfur']),
 
-    new MaterialDef('kevlar_carbon_fiber_mesh').gem().color(0x8A7A46).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE)
+    new MaterialDef('kevlar_carbon_fiber_mesh').gem().color(0x8A7A46).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_FOIL)
         .unify({ block: true, gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('kevlar').dust().color(0x76683C).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE),
+    new MaterialDef('kevlar').dust().color(0x76683C).iconSet('kevlar').flags(GTMaterialFlags.GENERATE_PLATE),
 
     new MaterialDef('andesite_alloy').dust().ingot().color(0x7d9284).components('2x andesite, 2x zinc').iconSet('SHINY').flags(GTMaterialFlags.GENERATE_PLATE)
         .unify({ plate: 'create:andesite_alloy' }),
@@ -2194,6 +2194,10 @@ const materials = [
         .blastCoil({ temp: COIL_TEMPS.DRACONIUM_AWAKENED, eut: UHV, duration: 1200 }),        
     new MaterialDef('langasite').dust().color(0xB8CFC4).iconSet('SHINY').formula('La3Ga5SiO14').components('3x lanthanum, 5x gallium, 1x silicon, 14x oxygen'),
     new MaterialDef('tungsten_hexafluoride').fluid().gas().color(0xC8C2B4).iconSet('FLUID').formula('WF6').components('1x tungsten, 6x fluorine').noDecomp(),
+
+    new MaterialDef('indium_gallium_arsenide').dust().color(0x6E4A5E).iconSet('METALLIC').formula('InGaAs2').components('1x indium, 1x gallium, 2x arsenic'),
+    new MaterialDef('aluminium_gallium_nitride').dust().color(0x9A8F6A).iconSet('DULL').formula('AlGaN2').components('1x aluminium, 1x gallium, 2x nitrogen'),
+    new MaterialDef('tantalum_hafnium_carbide').dust().color(0x3E4A4A).iconSet('METALLIC').formula('Ta4HfC5').components('4x tantalum, 1x hafnium, 5x carbon'),
 
 ];
 

@@ -174,5 +174,6 @@ GTCEuStartupEvents.registry("gtceu:material_icon_set", allthemods => {
     allthemods.create("bacteria_mutated").parent(GTMaterialIconSet.DULL)
     allthemods.create("bacteria_seed").parent(GTMaterialIconSet.DULL)
     allthemods.create("bacteria_vegetative").parent(GTMaterialIconSet.DULL)
+    allthemods.create("kevlar").parent(GTMaterialIconSet.DULL)
 
 })

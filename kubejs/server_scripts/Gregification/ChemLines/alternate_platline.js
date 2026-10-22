@@ -213,4 +213,10 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('2x gtceu:salt_dust')
         .outputFluids('gtceu:ruthenium_tetroxide_solution 3000')
         .duration(durationComplex).EUt(EUComplex);
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:pgm/iridium_dioxide_synthesis')
+        .itemInputs('#forge:dusts/iridium')
+        .inputFluids('#forge:oxygen 2000')
+        .itemOutputs('4x gtceu:iridium_dioxide_dust')
+        .duration(durationComplex).EUt(EUComplex);
 });
