@@ -1,0 +1,185 @@
+StartupEvents.registry('item', allthemods => {
+    const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
+    
+    const materials = [
+        { component: 'infused_star', structural: 'corrosive_etrium_alloy', conductive: 'etrium' },
+        { component: 'reinforced_star', structural: 'destructive_scandozirconium', conductive: 'tenebrium' },
+        { component: 'atomic_star', structural: 'vengeful_gadomeitnerium_alloy', conductive: 'infinity' },
+        { component: 'dark_matter', structural: 'steadfast_rhenobedrock_alloy', conductive: 'dark_matter' },
+        { component: 'red_matter', structural: 'demonic_antimatter_alloy', conductive: 'red_matter' } 
+    ];
+
+    const smd = {
+    1: {
+        resistor: 'gtceu:quantum_resistor',
+        capacitor: 'gtceu:quantum_capacitor',
+        diode: 'gtceu:quantum_diode',
+        inductor: 'gtceu:quantum_inductor',
+        transistor: 'gtceu:quantum_transistor',
+        ram: 'gtceu:qbit_memory',
+        alternate_chip: 'gtceu:logic_gate',
+        germanium: 'gtceu:germanium_diode',
+        clock: 'gtceu:atomic_clock',
+        cpu_1: 'gtceu:cpu_core',
+        cpu_2: 'gtceu:central_processing_unit'
+    },
+    2: {
+        resistor: 'gtceu:advanced_quantum_resistor',
+        capacitor: 'gtceu:advanced_quantum_capacitor',
+        diode: 'gtceu:advanced_quantum_diode',
+        inductor: 'gtceu:advanced_quantum_inductor',
+        transistor: 'gtceu:advanced_quantum_transistor',
+        ram: 'gtceu:advanced_qbit_memory',
+        alternate_chip: 'gtceu:advanced_logic_gate',
+        germanium: 'gtceu:advanced_germanium_diode',
+        clock: 'gtceu:advanced_atomic_clock',
+        cpu_1: 'gtceu:advanced_cpu_core',
+        cpu_2: 'gtceu:advanced_central_processing_unit'
+    }
+    /*
+    Resistor: thallium sulfide photoconductive film
+    Transistor: tungsten diselenide channel with erbium silicide contacts
+    Capacitor: hafnium oxide dielectric
+    Diode: thulium-doped laser-diode junction
+    Inductor: NdPrDy magnet core*/
+    
+};
+
+    global.circuitLadder = [
+        {
+            id: 'photonic', tier: 'uev', gen: 1,
+            research: { computer: 'gtceu:wetware_processor_computer', mainframe: 'gtceu:wetware_processor_mainframe' },
+            stageEut: { processor: UHV, assembly: UHV, computer: UHV, mainframe: UHV },
+            cwut: { computer: 20, mainframe: 100 },
+            board: 'photonic_printed_circuit_board',
+            core: 'photonic_core',
+            fineWire: materials[0].conductive,
+            doubleWire: materials[0].conductive,
+            frame: materials[0].structural,
+            plate: materials[0].structural,
+            foil: 'polyimide',
+            polymer: 'polyimide',
+            bolt: materials[0].component,
+            pump: 'uhv', sensor: 'uv',
+            smd_capacitor: smd[1].capacitor,
+            smd_resistor: smd[1].resistor,
+            smd_diode: smd[1].diode,
+            smd_inductor: smd[1].inductor,
+            smd_transistor: smd[1].transistor,
+            ram_chip: smd[1].ram,
+            alternate_chip: smd[1].alternate_chip,
+            germanium: smd[1].germanium,
+            clock: smd[1].clock,
+            cpu_1: smd[1].cpu_1,
+            cpu_2: smd[1].cpu_2
+        },
+        {
+            id: 'bioengineered', tier: 'uiv', gen: 1,
+            research: { computer: 'gtceu:photonic_processor_computer', mainframe: 'gtceu:photonic_processor_mainframe' },
+            stageEut: { processor: UEV, assembly: UEV, computer: UEV, mainframe: UEV },
+            cwut: { computer: 24, mainframe: 105 },
+            board: 'bioengineered_printed_circuit_board',
+            core: 'bioengineered_core',
+            fineWire: materials[1].conductive,
+            doubleWire: materials[1].conductive,
+            frame: materials[1].structural,
+            plate: materials[1].structural,
+            foil: 'organic_polymer',
+            polymer: 'organic_polymer',
+            bolt: materials[1].component,
+            pump: 'uev', sensor: 'uhv',
+            smd_capacitor: smd[1].capacitor,
+            smd_resistor: smd[1].resistor,
+            smd_diode: smd[1].diode,
+            smd_inductor: smd[1].inductor,
+            smd_transistor: smd[1].transistor,
+            ram_chip: smd[1].ram,
+            alternate_chip: smd[1].alternate_chip,
+            germanium: smd[1].germanium,
+            clock: smd[1].clock,
+            cpu_1: smd[1].cpu_1,
+            cpu_2: smd[1].cpu_2
+        },
+        {
+            id: 'chaotic', tier: 'uxv', gen: 1,
+            research: { computer: 'gtceu:bioengineered_processor_computer', mainframe: 'gtceu:bioengineered_processor_mainframe' },
+            stageEut: { processor: UIV, assembly: UIV, computer: UIV, mainframe: UIV },
+            cwut: { computer: 28, mainframe: 110 },
+            board: 'chaotic_printed_circuit_board',
+            core: 'chaotic_core',
+            fineWire: materials[2].conductive,
+            doubleWire: materials[2].conductive,
+            frame: materials[2].structural,
+            plate: materials[2].structural,
+            foil: 'chaos_plastic',
+            polymer: 'chaos_plastic',
+            bolt: materials[2].component,
+            pump: 'uiv', sensor: 'uev',
+            smd_capacitor: smd[1].capacitor,
+            smd_resistor: smd[1].resistor,
+            smd_diode: smd[1].diode,
+            smd_inductor: smd[1].inductor,
+            smd_transistor: smd[1].transistor,
+            ram_chip: smd[1].ram,
+            alternate_chip: smd[1].alternate_chip,
+            germanium: smd[1].germanium,
+            clock: smd[1].clock,
+            cpu_1: smd[1].cpu_1,
+            cpu_2: smd[1].cpu_2
+        },
+        {
+            id: 'naquadric', tier: 'opv', gen: 2,
+            research: { computer: 'gtceu:chaotic_processor_computer', mainframe: 'gtceu:chaotic_processor_mainframe' },
+            stageEut: { processor: UXV, assembly: UXV, computer: UXV, mainframe: UXV },
+            cwut: { computer: 32, mainframe: 115 },
+            board: 'naquadric_printed_circuit_board',
+            core: 'naquadric_core',
+            fineWire: materials[3].conductive,
+            doubleWire: materials[3].conductive,
+            frame: materials[3].structural,
+            plate: materials[3].structural,
+            foil: 'naquadria_awakened',
+            polymer: 'naquadria_awakened',
+            bolt: materials[3].component,
+            pump: 'uxv', sensor: 'uiv',
+            smd_capacitor: smd[2].capacitor,
+            smd_resistor: smd[2].resistor,
+            smd_diode: smd[2].diode,
+            smd_inductor: smd[2].inductor,
+            smd_transistor: smd[2].transistor,
+            ram_chip: smd[2].ram,
+            alternate_chip: smd[2].alternate_chip,
+            germanium: smd[2].germanium,
+            clock: smd[2].clock,
+            cpu_1: smd[2].cpu_1,
+            cpu_2: smd[2].cpu_2
+        },
+        {
+            id: 'antimatter', tier: 'max', gen: 2,
+            research: { computer: 'gtceu:naquadric_processor_computer', mainframe: 'gtceu:naquadric_processor_mainframe' },
+            stageEut: { processor: OpV, assembly: OpV, computer: OpV, mainframe: OpV },
+            cwut: { computer: 36, mainframe: 120 },
+            board: 'antimatter_printed_circuit_board',
+            core: 'antimatter_core',
+            fineWire: materials[4].conductive,
+            doubleWire: materials[4].conductive,
+            frame: materials[4].structural,
+            plate: materials[4].structural,
+            foil: 'fifth_element',
+            polymer: 'fifth_element',
+            bolt: materials[4].component,
+            pump: 'opv', sensor: 'uxv',
+            smd_capacitor: smd[2].capacitor,
+            smd_resistor: smd[2].resistor,
+            smd_diode: smd[2].diode,
+            smd_inductor: smd[2].inductor,
+            smd_transistor: smd[2].transistor,
+            ram_chip: smd[2].ram,
+            alternate_chip: smd[2].alternate_chip,
+            germanium: smd[2].germanium,
+            clock: smd[2].clock,
+            cpu_1: smd[2].cpu_1,
+            cpu_2: smd[2].cpu_2
+        }
+    ];
+});
