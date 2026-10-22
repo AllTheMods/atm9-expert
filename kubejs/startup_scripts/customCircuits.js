@@ -74,7 +74,7 @@ StartupEvents.registry('item', allthemods => {
 
     // Voltage coils keep their old placeholder names and colours
     const coilTiers = [
-        //{ id: 'uhv', name: 'Neutronium', color: 0xC7C7C7 },
+        { id: 'uhv', name: 'Neutronium', color: 0xC7C7C7 },
         { id: 'uev', name: 'Photonic', color: 0x4ECAB1 },
         { id: 'uiv', name: 'Bioengineered', color: 0xFFC94D },
         { id: 'uxv', name: 'Chaotic', color: 0xCF566A },
@@ -95,11 +95,11 @@ StartupEvents.registry('item', allthemods => {
             .displayName(`${tier.name} Wafer`)
             .tooltip(`${tierLabel(tier.id)}-Tier Power IC Wafer`)
     })
-
+/*
     allthemods.create(`gtceu:uhv_voltage_coil`)            
             .displayName(`Neutronium Voltage Coil`)
             .tooltip(`${tierLabel('uhv')}-Tier Voltage Coil`)
-    
+ */   
     
 
 

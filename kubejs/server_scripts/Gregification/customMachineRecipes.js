@@ -679,7 +679,7 @@ ServerEvents.recipes(allthemods => {
                 [
                     `gtceu:${tData.tier}_machine_hull`,
                     `4x ${wire}`,
-                    `2x gtceu:uhpic_chip`,
+                    `2x gtceu:${tData.tier}_pic_chip`,
                     `${circuit}`,
                     `2x gtceu:${tData.tier}_voltage_coil`
                 ],
@@ -699,7 +699,7 @@ ServerEvents.recipes(allthemods => {
                 [
                     `gtceu:${tData.tier}_machine_hull`,
                     `4x #forge:springs/${tData.component}`,
-                    `2x gtceu:uhpic_chip`,
+                    `2x gtceu:${tData.tier}_pic_chip`,
                     `${circuit}`,
                     `2x gtceu:${tData.tier}_voltage_coil`
                 ],

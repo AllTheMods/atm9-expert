@@ -343,14 +343,13 @@ ServerEvents.recipes(allthemods => {
         .EUt(HV);
 
     const picLadder = [
-        { id: 'uhv', prev: 'gtceu:uhpic_wafer', dopant: 'neodymium_praseodymium', polymer: 'polybenzimidazole', eut: UHV },
-        { id: 'uev', prev: 'gtceu:uhv_pic_wafer', dopant: 'neodymium_promethium_dopant', polymer: 'polyimide', eut: UEV },
-        { id: 'uiv', prev: 'gtceu:uev_pic_wafer', dopant: 'neodymium_terbium_dopant', polymer: 'organic_polymer', eut: UIV },
-        { id: 'uxv', prev: 'gtceu:uiv_pic_wafer', dopant: 'neodymium_dysprosium_dopant', polymer: 'chaos_plastic', eut: UXV },
-        { id: 'opv', prev: 'gtceu:uxv_pic_wafer', dopant: 'neodymium_terbium_dysprosium_dopant', polymer: 'naquadria_awakened', eut: OpV },
-        { id: 'max', prev: 'gtceu:opv_pic_wafer', dopant: 'neodymium_rare_earth_dopant', polymer: 'fifth_element', eut: MAX }
+        { id: 'uhv', prev: 'gtceu:uhpic_wafer', dopant: 'neodymium_praseodymium', polymer: 'polybenzimidazole', eut: UV },
+        { id: 'uev', prev: 'gtceu:uhv_pic_wafer', dopant: 'neodymium_promethium_dopant', polymer: 'polyimide', eut: UHV },
+        { id: 'uiv', prev: 'gtceu:uev_pic_wafer', dopant: 'neodymium_terbium_dopant', polymer: 'organic_polymer', eut: UEV },
+        { id: 'uxv', prev: 'gtceu:uiv_pic_wafer', dopant: 'neodymium_dysprosium_dopant', polymer: 'chaos_plastic', eut: UIV },
+        { id: 'opv', prev: 'gtceu:uxv_pic_wafer', dopant: 'neodymium_terbium_dysprosium_dopant', polymer: 'naquadria_awakened', eut: UXV },
+        { id: 'max', prev: 'gtceu:opv_pic_wafer', dopant: 'neodymium_rare_earth_dopant', polymer: 'fifth_element', eut: OpV }
     ];
-
     picLadder.forEach((p, i) => {
         allthemods.recipes.gtceu.large_chemical_reactor(`gregification:chemical_reactor/${p.id}_pic_wafer`)
             .itemInputs(p.prev, `8x #forge:dusts/${p.dopant}`)
