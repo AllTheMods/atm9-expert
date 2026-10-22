@@ -1,22 +1,23 @@
 // priority: 500
 // @ts-nocheck
-const PropertyKey = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey')
-const BlastProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty')
-const OreProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty')
-const GasTier = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty$GasTier')
-const WireProperties = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.WireProperties')
-const FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty')
-const FluidState = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidState')
-const IngotProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty')
-const DustProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty')
-const PolymerProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.PolymerProperty')
-const GemProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.GemProperty')
-const FluidStorageKeys = Java.loadClass('com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys')
-const FluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder')
-const GTValues = Java.loadClass('com.gregtechceu.gtceu.api.GTValues')
-const MaterialStack = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.stack.MaterialStack')
+const PropertyKey = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey');
+const BlastProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty');
+const OreProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty');
+const GasTier = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty$GasTier');
+const WireProperties = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.WireProperties');
+const FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty');
+const FluidState = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidState');
+const IngotProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty');
+const DustProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty');
+const PolymerProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.PolymerProperty');
+const GemProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.GemProperty');
+const FluidStorageKeys = Java.loadClass('com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys');
+const FluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder');
+const GTValues = Java.loadClass('com.gregtechceu.gtceu.api.GTValues');
+const MaterialStack = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.stack.MaterialStack');
 const ArrayList = Java.loadClass('java.util.ArrayList');
 const ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty');
+const FluidPipeProperties = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties');
 
 const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
 
@@ -339,6 +340,10 @@ MaterialDef.prototype.applyModification = function () {
         if (fluidProp) {
             if (this.traits.plasma) fluidProp.enqueueRegistration(FluidStorageKeys.PLASMA, new FluidBuilder().state(FluidState.PLASMA));
             if (this.traits.gas) fluidProp.enqueueRegistration(FluidStorageKeys.GAS, new FluidBuilder().state(FluidState.GAS));
+        }
+        if (this.traits.pipe && !mat.hasProperty(PropertyKey.FLUID_PIPE)) {
+            mat.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(
+                this.traits.pipe.maxFluidTemperature, this.traits.pipe.throughput, this.traits.pipe.gasProof, true, true, true))
         }
 
         if (this.traits.polymer) mat.setProperty(PropertyKey.POLYMER, new PolymerProperty());
@@ -1736,7 +1741,7 @@ const materials = [
     //.unify({ plate: 'thermal:netherite_plate' }) seems like thermal removed its own plate without the need for unification once this was registered.
 
     new MaterialDef('neutronium').modify()
-        .flags(GTMaterialFlags.GENERATE_SMALL_GEAR),
+        .materialsAll(),
 
     new MaterialDef('osmiridium').modify()
         .byproducts(['ruthenium']),
@@ -1850,7 +1855,7 @@ const materials = [
 
     new MaterialDef('rhodium_plated_palladium').modify().flags(GTMaterialFlags.GENERATE_GEAR),
 
-    new MaterialDef('darmstadtium').modify().flags(GTMaterialFlags.GENERATE_GEAR),
+    new MaterialDef('darmstadtium').modify().materialsAll(),
 
     new MaterialDef('prismarine').dust().color(0x529680).iconSet('DULL').noDecomp(),
 

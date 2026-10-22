@@ -315,7 +315,7 @@ ServerEvents.recipes(allthemods => {
                         W: wire
                     }).id(`gregification:${tData.tier}_sanguine_refinery`);
             }
-            if (mData.machine == '_unifier' && tData.t >= mData.startTier && tData.t <= mData.endTier) {                                            
+            if (mData.machine == '_unifier' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
                 allthemods.shaped(`gtceu:${tData.tier}_unifier`, [
                     'TCT',
                     'UHV',
@@ -329,7 +329,7 @@ ServerEvents.recipes(allthemods => {
                         C: circuit
                     }).id(`gregification:${tData.tier}_unifier`);
             }
-            if (mData.machine == '_gem_polisher' && tData.t >= mData.startTier && tData.t <= mData.endTier) {                
+            if (mData.machine == '_gem_polisher' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
                 addAssemblyLine(
                     `gtceu:${tData.tier}_gem_polisher`,
                     [
@@ -351,7 +351,7 @@ ServerEvents.recipes(allthemods => {
     });
 
 
-    
+
     machineTiers.forEach(tData => {
 
         let hull = `gtceu:${tData.tier}_machine_hull`;
@@ -362,8 +362,12 @@ ServerEvents.recipes(allthemods => {
         let conveyor = `gtceu:${tData.tier}_conveyor_module`;
         let pump = `gtceu:${tData.tier}_electric_pump`;
         let motor = `gtceu:${tData.tier}_electric_motor`;
-        let magnetic = 'gtceu:long_magnetic_eternium_rod';        
-        let magnetic2 = 'gtceu:magnetic_eternium_rod';   
+        let magnetic = '';
+        let magnetic2 = '';
+        if (tData.magnetic) {
+            magnetic = `gtceu:long_${tData.magnetic}_rod`;
+            magnetic2 = `gtceu:${tData.magnetic}_rod`;
+        }
 
         if (tData.t >= 9 && tData.t <= 13) {
             //add voltage coil recipes here            
@@ -372,7 +376,7 @@ ServerEvents.recipes(allthemods => {
             let prev1 = machineTiers[tData.t - 1].tier;
             let prev2 = machineTiers[tData.t - 2].tier;
             let prev3 = machineTiers[tData.t - 3].tier;
-            
+
             //voltage coil
             addAssembler(
                 [
@@ -385,7 +389,7 @@ ServerEvents.recipes(allthemods => {
                 200,
                 1
             )
-            
+
             //robot arm        
             addAssemblyLine(
                 `${item}_robot_arm`,
@@ -410,7 +414,7 @@ ServerEvents.recipes(allthemods => {
                 `gtceu:${prev1}_robot_arm`,
                 64
             )
-            
+
             //motor
             addAssemblyLine(
                 `${item}_electric_motor`,
@@ -419,7 +423,8 @@ ServerEvents.recipes(allthemods => {
                     `2x #forge:rods/long/${tData.structural}`,
                     `2x #forge:rings/${tData.structural}`,
                     `4x #forge:rounds/${tData.structural}`,
-                    `96x #forge:fine_wires/${tData.component}`,
+                    `64x #forge:fine_wires/${tData.component}`,
+                    `32x #forge:fine_wires/${tData.component}`,
                     `2x ${wire}`
                 ],
                 [
@@ -431,7 +436,7 @@ ServerEvents.recipes(allthemods => {
                 `gtceu:${prev1}_electric_motor`,
                 64
             )
-            
+
             //conveyor
             addAssemblyLine(
                 `${item}_conveyor_module`,
@@ -453,13 +458,13 @@ ServerEvents.recipes(allthemods => {
                 `gtceu:${prev1}_conveyor_module`,
                 64
             )
-            
+
             //pump
             addAssemblyLine(
                 `${item}_electric_pump`,
                 [
                     `gtceu:${tData.tier}_electric_motor`,
-                    `#gtceu:pipes/small/${tData.metal2}`,
+                    `#gtceu:pipes/small/${tData.structural}`,
                     `2x #forge:plates/${tData.structural}`,
                     `8x #forge:screws/${tData.structural}`,
                     `4x gtceu:silicone_rubber_ring`,
@@ -475,7 +480,7 @@ ServerEvents.recipes(allthemods => {
                 `gtceu:${prev1}_electric_pump`,
                 64
             )
-            
+
             //piston
             addAssemblyLine(
                 `${item}_electric_piston`,
@@ -505,7 +510,7 @@ ServerEvents.recipes(allthemods => {
                     `#forge:frames/${tData.structural}`,
                     `gtceu:${tData.tier}_electric_motor`,
                     `4x #forge:plates/${tData.component}`,
-                    `gtceu:quantum_star`,
+                    `#forge:exquisite_gems/${tData.structural.split('_')[0]}`,
                     `${circuit}`,
                     `64x #forge:foils/chaos_plastic`,
                     `4x ${wire}`
@@ -518,7 +523,7 @@ ServerEvents.recipes(allthemods => {
                 `gtceu:${prev1}_sensor`,
                 64
             )
-            
+
             //emitter
             addAssemblyLine(
                 `${item}_emitter`,
@@ -526,7 +531,7 @@ ServerEvents.recipes(allthemods => {
                     `#forge:frames/${tData.structural}`,
                     `gtceu:${tData.tier}_electric_motor`,
                     `4x #forge:rods/long/${tData.component}`,
-                    `gtceu:quantum_star`,
+                    `#forge:exquisite_gems/${tData.structural.split('_')[0]}`,
                     `${circuit}`,
                     `64x #forge:foils/chaos_plastic`,
                     `4x ${wire}`
@@ -546,10 +551,11 @@ ServerEvents.recipes(allthemods => {
                 [
                     `#forge:frames/${tData.structural}`,
                     `6x #forge:plates/${tData.component}`,
-                    `gtceu:quantum_star`,
+                    `#forge:exquisite_gems/${tData.structural.split('_')[0]}`,
                     `2x gtceu:${tData.tier}_emitter`,
                     `${circuit}`,
-                    `128x #forge:fine_wires/${tData.component}`,
+                    `64x #forge:fine_wires/${tData.component}`,
+                    `64x #forge:fine_wires/${tData.component}`,
                     `4x ${wire}`
                 ],
                 [
@@ -560,7 +566,7 @@ ServerEvents.recipes(allthemods => {
                 `gtceu:${prev1}_field_generator`,
                 64
             )
-            
+
             //regulator
             addAssembler(
                 [
@@ -573,7 +579,7 @@ ServerEvents.recipes(allthemods => {
                 50,
                 1
             )
-            
+
             //rotor holders
             allthemods.shaped(`${item}_rotor_holder`,
                 [
@@ -607,7 +613,7 @@ ServerEvents.recipes(allthemods => {
                 `gtceu:${prev1}_energy_input_hatch`,
                 64
             )
-            
+
             //dynamo hatch
             addAssemblyLine(
                 `${item}_energy_output_hatch`,
@@ -627,9 +633,25 @@ ServerEvents.recipes(allthemods => {
                 `gtceu:${prev1}_energy_output_hatch`,
                 64
             )
+
+            //quantum chest
+
+            //quantum chest
+            allthemods.shaped(`gtceu:${tData.tier}_quantum_chest`,
+                [
+                    'CPC',
+                    'PHP',
+                    'CFC'
+                ], {
+                C: circuit,
+                H: hull,
+                P: `${tData.structural}`,
+                F: `gtceu:${tData.tier}_field_generator`
+            }).id(`gregification:${tData.tier}_quantum_chest`)
+
         }
     });
-    
+
     //casings
 
     const materials = [
