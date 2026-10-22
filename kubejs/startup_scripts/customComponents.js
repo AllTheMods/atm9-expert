@@ -129,7 +129,7 @@ GTCEuStartupEvents.craftingComponents(event => {
 
     // ===== STRUCTURAL =====
     event.setMaterialEntries(GTCraftingComponents.PLATE, entries("plate", structural))
-    event.setMaterialEntries(GTCraftingComponents.ROTOR, entries("rotor", structural))
+    event.setMaterialEntries(GTCraftingComponents.ROTOR, entries("rotor", component))
 
     // hull sheet: one polymer per tier (hull recipes themselves still need KubeJS replacements for UEV+)
     event.setItems(GTCraftingComponents.HULL_PLATE, items("", polymers, "_foil"))
