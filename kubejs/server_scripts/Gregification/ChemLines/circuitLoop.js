@@ -15,7 +15,7 @@ ServerEvents.recipes(allthemods => {
         engrave: 'laser_engraver',
         cut: 'cutter',
         circuit_assemble: 'circuit_assembler',
-        print: 'large_chemical_reactor'
+        print: 'assembler'
     }
 
     // max inputs per recipe type (items, fluids); a lens counts as an item
@@ -25,8 +25,7 @@ ServerEvents.recipes(allthemods => {
         assembly_line: { items: 16, fluids: 4 },
         cutter: { items: 1, fluids: 1 },
         laser_engraver: { items: 2, fluids: 1 },
-        crystal_growth_chamber: { items: 6, fluids: 3 },
-        large_chemical_reactor: { items: 3, fluids: 5 }
+        crystal_growth_chamber: { items: 6, fluids: 3 }
     }
 
     const nsId = id => (id.indexOf(':') === -1 ? 'gtceu:' + id : id)
@@ -47,12 +46,10 @@ ServerEvents.recipes(allthemods => {
             list.push(withCount(id, n))
             return
         }
-        let left = n
-        while (left > 64) {
-            list.push(withCount(id, 64))
-            left -= 64
-        }
-        if (left > 0) list.push(withCount(id, left))
+        const full = Math.floor(n / 64)
+        const rest = n - full * 64
+        for (var k = 0; k < full; k++) list.push(withCount(id, 64))
+        if (rest > 0) list.push(withCount(id, rest))
     }
 
     const isSterile = machine => machine && machine.cleanroom === 'sterile'
@@ -79,17 +76,21 @@ ServerEvents.recipes(allthemods => {
     }
 
     // ---------------------------------------------------------------- step recipes (parts, smds, chipsets, cores, boards, socs)
+    // NOTE: no const/let inside loop bodies anywhere in this file - Rhino keeps the first value of a block-scoped
+    // variable declared in a loop body, so every iteration would see the first element. forEach gives a fresh scope.
     const resolveComponents = (components, recipeId, split) => {
         const ins = { items: [], fluids: [], notConsumable: [] }
-        for (let i = 0; i < components.length; i++) {
-            const c = components[i]
+        let failed = false
+        components.forEach(c => {
+            if (failed) return
             if (c.lens) {
                 ins.notConsumable.push('#forge:lenses/' + c.lens)
-                continue
+                return
             }
             if (c.amount === undefined || c.amount === null) {
                 console.error('[circuits] ' + recipeId + ' skipped: component without an amount ' + JSON.stringify(c))
-                return null
+                failed = true
+                return
             }
             if (c.fluid) ins.fluids.push(fluidStr(c.fluid, c.amount))
             else if (c.dust) pushItem(ins.items, '#forge:dusts/' + c.dust, c.amount, split)
@@ -98,10 +99,10 @@ ServerEvents.recipes(allthemods => {
             else if (c.item) pushItem(ins.items, nsId(c.item), c.amount, split)
             else {
                 console.error('[circuits] ' + recipeId + ' skipped: unknown component ' + JSON.stringify(c))
-                return null
+                failed = true
             }
-        }
-        return ins
+        })
+        return failed ? null : ins
     }
 
     const walk = (node, key, cb) => {
@@ -217,5 +218,5 @@ ServerEvents.recipes(allthemods => {
         })
     })
 
-    console.error('[circuits] registered ' + stepCount + ' step recipes and ' + stageCount + ' stage recipes')
+    console.info('[circuits] registered ' + stepCount + ' step recipes and ' + stageCount + ' stage recipes')
 })

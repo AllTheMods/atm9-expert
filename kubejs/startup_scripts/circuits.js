@@ -850,7 +850,6 @@ global.circuitBoards = {
                 { item: 'uhv_electric_pump', amount: 1 },
                 { item: 'uv_sensor', amount: 1 },
                 { item: 'etrium_foil', amount: 64 },
-                { fluid: 'peroxodisulfuric_acid', amount: 1000 },
                 { fluid: 'polyimide', amount: 1152 }
             ],
             output: { item: 'photonic_printed_circuit_board', amount: 1 }
@@ -866,7 +865,6 @@ global.circuitBoards = {
                 { item: 'uev_electric_pump', amount: 1 },
                 { item: 'uhv_sensor', amount: 1 },
                 { item: 'tenebrium_foil', amount: 96 },
-                { fluid: 'aqua_regia', amount: 1000 },
                 { fluid: 'organic_polymer', amount: 1152 }
             ],
             output: { item: 'bioengineered_printed_circuit_board', amount: 1 }
@@ -882,7 +880,6 @@ global.circuitBoards = {
                 { item: 'uiv_electric_pump', amount: 1 },
                 { item: 'uev_sensor', amount: 1 },
                 { item: 'infinity_foil', amount: 128 },
-                { fluid: 'fluoroantimonic_acid', amount: 1000 },
                 { fluid: 'chaos_plastic', amount: 1152 }
             ],
             output: { item: 'chaotic_printed_circuit_board', amount: 1 }
@@ -898,7 +895,6 @@ global.circuitBoards = {
                 { item: 'uxv_electric_pump', amount: 1 },
                 { item: 'uiv_sensor', amount: 1 },
                 { item: 'dark_matter_foil', amount: 192 },
-                { fluid: 'fluoroantimonic_acid', amount: 2000 },
                 { fluid: 'naquadria_awakened', amount: 2304 }
             ],
             output: { item: 'naquadric_printed_circuit_board', amount: 1 }
@@ -914,8 +910,6 @@ global.circuitBoards = {
                 { item: 'opv_electric_pump', amount: 1 },
                 { item: 'uxv_sensor', amount: 1 },
                 { item: 'red_matter_foil', amount: 256 },
-                { fluid: 'aqua_regia', amount: 1000 },
-                { fluid: 'fluoroantimonic_acid', amount: 2000 },
                 { fluid: 'fifth_element', amount: 2304 }
             ],
             output: { item: 'antimatter_printed_circuit_board', amount: 1 }
