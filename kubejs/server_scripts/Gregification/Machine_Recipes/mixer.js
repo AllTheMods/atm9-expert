@@ -23,8 +23,12 @@ ServerEvents.recipes(allthemods => {
         if (program) recipe.circuit(program);
     };
 
-    // ===== UEV+ tier alloys (paste into mixer.js, uses the existing addMixer) =====
-    // EUt = the material's .blast eut minus two tiers, output = sum of the inputs, duration 500 like the other alloys
+
+    addMixer(['3x #forge:dusts/neodymium', '#forge:dusts/promethium'], '4x gtceu:neodymium_promethium_dopant_dust', ZPM, 400);
+    addMixer(['3x #forge:dusts/neodymium', '#forge:dusts/terbium'], '4x gtceu:neodymium_terbium_dopant_dust', ZPM, 400);
+    addMixer(['3x #forge:dusts/neodymium', '#forge:dusts/dysprosium'], '4x gtceu:neodymium_dysprosium_dopant_dust', ZPM, 400);
+    addMixer(['2x #forge:dusts/neodymium', '#forge:dusts/terbium', '#forge:dusts/dysprosium'], '4x gtceu:neodymium_terbium_dysprosium_dopant_dust', ZPM, 400);
+    addMixer(['2x #forge:dusts/neodymium', '#forge:dusts/praseodymium', '#forge:dusts/promethium', '#forge:dusts/terbium', '#forge:dusts/dysprosium'], '6x gtceu:neodymium_rare_earth_dopant_dust', ZPM, 400);
 
     // ---- structural ----
     //corrosive_etrium_alloy (blast UHV)

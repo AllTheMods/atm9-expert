@@ -1,7 +1,7 @@
 //@ts-check
 
 ServerEvents.recipes(allthemods => {
-    const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+    const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
 
     const addChemical = (itemsIn, fluidsIn, itemsOut, fluidsOut, eu, duration, rID, program) => {
 
@@ -51,7 +51,7 @@ ServerEvents.recipes(allthemods => {
         600,
         'nylon'
     );
-    
+
     //neoprene
     addChemical(
         null,
@@ -84,7 +84,7 @@ ServerEvents.recipes(allthemods => {
         600,
         'polyimide'
     );
-    
+
     //chloroprene
     addChemical(
         null,
@@ -110,7 +110,7 @@ ServerEvents.recipes(allthemods => {
     //oxydianiline
     addChemical(
         null,
-        ['#forge:aniline 2000','#forge:oxygen 1000'],
+        ['#forge:aniline 2000', '#forge:oxygen 1000'],
         null,
         'gtceu:oxydianiline 3000',
         HV,
@@ -175,7 +175,7 @@ ServerEvents.recipes(allthemods => {
 
     //titanium carbonitride
     addChemical(
-        ['#forge:dusts/titanium_dioxide','3x #forge:dusts/carbon'],
+        ['#forge:dusts/titanium_dioxide', '3x #forge:dusts/carbon'],
         '#forge:nitrogen 1000',
         'gtceu:titanium_carbonitride_dust',
         null,
@@ -245,7 +245,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/nd_yag_dope')
         .itemInputs('#forge:dusts/yttrium_aluminium_garnet', '#forge:dusts/neodymium_oxide')
         .itemOutputs('gtceu:neodymium_doped_yttrium_aluminium_garnet_dust', 'gtceu:yttrium_oxide_dust')
-        .EUt(ZPM).duration(300);    
+        .EUt(ZPM).duration(300);
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/aluminium_oxide_synthesis')
         .itemInputs('2x #forge:dusts/aluminium')
@@ -342,6 +342,24 @@ ServerEvents.recipes(allthemods => {
         .circuit(1)
         .EUt(HV);
 
+    const picLadder = [
+        { id: 'uhv', prev: 'gtceu:uhpic_wafer', dopant: 'neodymium_praseodymium', polymer: 'polybenzimidazole', eut: UHV },
+        { id: 'uev', prev: 'gtceu:uhv_pic_wafer', dopant: 'neodymium_promethium_dopant', polymer: 'polyimide', eut: UEV },
+        { id: 'uiv', prev: 'gtceu:uev_pic_wafer', dopant: 'neodymium_terbium_dopant', polymer: 'organic_polymer', eut: UIV },
+        { id: 'uxv', prev: 'gtceu:uiv_pic_wafer', dopant: 'neodymium_dysprosium_dopant', polymer: 'chaos_plastic', eut: UXV },
+        { id: 'opv', prev: 'gtceu:uxv_pic_wafer', dopant: 'neodymium_terbium_dysprosium_dopant', polymer: 'naquadria_awakened', eut: OpV },
+        { id: 'max', prev: 'gtceu:opv_pic_wafer', dopant: 'neodymium_rare_earth_dopant', polymer: 'fifth_element', eut: MAX }
+    ];
+
+    picLadder.forEach((p, i) => {
+        allthemods.recipes.gtceu.large_chemical_reactor(`gregification:chemical_reactor/${p.id}_pic_wafer`)
+            .itemInputs(p.prev, `8x #forge:dusts/${p.dopant}`)
+            .inputFluids(`#forge:${p.polymer} ${576 * Math.pow(2, i)}`)
+            .itemOutputs(`gtceu:${p.id}_pic_wafer`)
+            .cleanroom(CleanroomType.CLEANROOM)
+            .duration(1200)
+            .EUt(p.eut);
+    });
 
 
 });

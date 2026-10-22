@@ -2113,7 +2113,11 @@ const materials = [
         .cable({ voltage: MAX, loss: 0, superconductor: true })
         .blast({ temp: COIL_TEMPS.INFINITY, eut: OpV, duration: 3000 }),
 
-
+    new MaterialDef('neodymium_promethium_dopant').dust().color(0x6E9C98).iconSet('METALLIC').components('3x neodymium, 1x promethium').formula('Nd3Pm').noDecomp(),
+    new MaterialDef('neodymium_terbium_dopant').dust().color(0x8A9A6C).iconSet('METALLIC').components('3x neodymium, 1x terbium').formula('Nd3Tb').noDecomp(),
+    new MaterialDef('neodymium_dysprosium_dopant').dust().color(0x9C8A62).iconSet('METALLIC').components('3x neodymium, 1x dysprosium').formula('Nd3Dy').noDecomp(),
+    new MaterialDef('neodymium_terbium_dysprosium_dopant').dust().color(0x7E8F7A).iconSet('METALLIC').components('2x neodymium, 1x terbium, 1x dysprosium').formula('Nd2TbDy').noDecomp(),
+    new MaterialDef('neodymium_rare_earth_dopant').dust().color(0xA48C7E).iconSet('METALLIC').components('2x neodymium, 1x praseodymium, 1x promethium, 1x terbium, 1x dysprosium').formula('Nd2PrPmTbDy').noDecomp(),
 
 ];
 

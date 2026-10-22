@@ -930,5 +930,11 @@
     "material.gtceu.flerovium_terbium_alloy": "Flerovium Terbium Alloy",
     "material.gtceu.moscovium_roentgenium_alloy": "Moscovium Roentgenium Alloy",
     "material.gtceu.livermorium_astatine_alloy": "Livermorium Astatine Alloy",
-    "material.gtceu.chaos_plastic": "Chaos Plastic"
+    "material.gtceu.chaos_plastic": "Chaos Plastic",
+    "material.gtceu.organic_polymer": "Organic Polymer",
+    "material.gtceu.neodymium_promethium_dopant": "Neodymium Promethium Dopant",
+    "material.gtceu.neodymium_terbium_dopant": "Neodymium Terbium Dopant",
+    "material.gtceu.neodymium_dysprosium_dopant": "Neodymium Dysprosium Dopant",
+    "material.gtceu.neodymium_terbium_dysprosium_dopant": "Neodymium Terbium Dysprosium Dopant",
+    "material.gtceu.neodymium_rare_earth_dopant": "Neodymium Rare Earth Dopant"
 }

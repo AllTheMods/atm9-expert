@@ -401,7 +401,7 @@ ServerEvents.recipes(allthemods => {
                 `${item}_robot_arm`,
                 [
                     `4x #forge:rods/long/${tData.structural}`,
-                    `#forge:gears/${tData.component}`,
+                    `#forge:gears/${tData.structural}`,
                     `3x #forge:small_gears/${tData.structural}`,
                     `2x gtceu:${tData.tier}_electric_motor`,
                     `gtceu:${tData.tier}_electric_piston`,
@@ -561,7 +561,7 @@ ServerEvents.recipes(allthemods => {
                 64
             );
 
-            console.error(`research item: gtceu:${prevTier}_field_generator`);
+            
             //field generator
             addAssemblyLine(
                 `${item}_field_generator`,

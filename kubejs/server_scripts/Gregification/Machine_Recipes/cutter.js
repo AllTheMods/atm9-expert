@@ -7,8 +7,6 @@ ServerEvents.recipes(allthemods => {
             .split(':').pop()
             .replace(/[^a-z0-9]/gi, '_');
 
-
-
         let configs
 
         if (customFluid) {
@@ -58,5 +56,11 @@ ServerEvents.recipes(allthemods => {
 
     //blank slate
     addCutter('gtceu:slate_casing', '9x gtceu:blank_slate_casing', LV, 500, 250)
+    
+    const tiers = ['UHV', 'UEV', 'UIV', 'UXV', 'OPV', 'MAX']
+    tiers.forEach((tier,index) => {
+        addCutter(`gtceu:${tier.toLowerCase()}_pic_wafer`, `2x gtceu:${tier.toLowerCase()}_pic_chip`, GTValues.VA[8+index],2400,250,null,CleanroomType.CLEANROOM)
+    });
+    
 
 });
