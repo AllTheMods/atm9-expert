@@ -1,0 +1,349 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "north": "true",
+        "south": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/node"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "south": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/core"
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "north": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/node",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "north": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/core"
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "west": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/node",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "west": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/core"
+      }
+    },
+    {
+      "when": {
+        "west": "true",
+        "east": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/node",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "west": "true",
+        "east": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/core"
+      }
+    },
+    {
+      "when": {
+        "down": "true",
+        "up": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/node",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "down": "true",
+        "up": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/core"
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "down": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/node",
+        "x": 270
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "down": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/core"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "south": "true",
+        "east": "false",
+        "west": "false",
+        "up": "false",
+        "down": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/line"
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "west": "true",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "down": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/line",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "down": "true",
+        "up": "true",
+        "east": "false",
+        "west": "false",
+        "north": "false",
+        "south": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/line",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "down": "true",
+        "up": "true",
+        "east": "true",
+        "west": "true"
+      },
+      "apply": {
+        "model": "pipez:block/item/cross",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "west": "true",
+        "north": "true",
+        "south": "true"
+      },
+      "apply": {
+        "model": "pipez:block/item/cross",
+        "x": 0
+      }
+    },
+    {
+      "when": {
+        "down": "true",
+        "up": "true",
+        "north": "true",
+        "south": "true"
+      },
+      "apply": {
+        "model": "pipez:block/item/cross_z"
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "down": "false",
+        "west": "false",
+        "east": "false",
+        "south": "false",
+        "north": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/core"
+      }
+    },
+
+    {
+      "when": {
+        "north": "true",
+        "south": "true",
+        "east": "true",
+        "west": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/cut_line"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "south": "true",
+        "east": "false",
+        "west": "true"
+      },
+      "apply": {
+        "model": "pipez:block/item/cut_line"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "south": "true",
+        "down": "false",
+        "up": "true"
+      },
+      "apply": {
+        "model": "pipez:block/item/cut_line"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "south": "true",
+        "down": "true",
+        "up": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/cut_line"
+      }
+    },
+
+    {
+      "when": {
+        "up": "true",
+        "down": "true",
+        "east": "true",
+        "west": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/cut_line",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "down": "true",
+        "east": "false",
+        "west": "true"
+      },
+      "apply": {
+        "model": "pipez:block/item/cut_line",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "down": "true",
+        "north": "false",
+        "south": "true"
+      },
+      "apply": {
+        "model": "pipez:block/item/cut_line",
+        "x": 90
+      }
+    },
+    {
+      "when": {
+        "up": "true",
+        "down": "true",
+        "north": "true",
+        "south": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/cut_line",
+        "x": 90
+      }
+    },
+
+    {
+      "when": {
+        "east": "true",
+        "west": "true",
+        "north": "true",
+        "south": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/cut_line",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "west": "true",
+        "north": "false",
+        "south": "true"
+      },
+      "apply": {
+        "model": "pipez:block/item/cut_line",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "west": "true",
+        "up": "false",
+        "down": "true"
+      },
+      "apply": {
+        "model": "pipez:block/item/cut_line",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "west": "true",
+        "up": "true",
+        "down": "false"
+      },
+      "apply": {
+        "model": "pipez:block/item/cut_line",
+        "y": 90
+      }
+    }
+  ]
+}

@@ -62,6 +62,24 @@ StartupEvents.registry('block', allthemods => {
         .soundType('metal')
         .tagBlock('gtceu:casings');
 
+    allthemods.create(`gtceu:adamantium_casing`)
+        // @ts-ignore
+        .displayName('Adamantium Casing')
+        .textureAll(`gtceu:block/casings/adamantium_casing/adamantium_casing`)
+        .hardness(5.0)
+        .resistance(10.0)
+        .soundType('metal')
+        .tagBlock('gtceu:casings');
+
+    allthemods.create(`gtceu:zirconium_casing`)
+        // @ts-ignore
+        .displayName('Zirconium Casing')
+        .textureAll(`gtceu:block/casings/zirconium_casing/zirconium_casing`)
+        .hardness(5.0)
+        .resistance(10.0)
+        .soundType('metal')
+        .tagBlock('gtceu:casings');
+
     allthemods.create('gtceu:magical_soil')
         .textureAll('gtceu:block/casings/magical_soil/magical_soil_side')
         .texture('up', 'gtceu:block/casings/magical_soil/magical_soil_top')

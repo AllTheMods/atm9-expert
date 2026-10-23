@@ -1,0 +1,7 @@
+{
+	"parent": "pipez:block/_template/node",
+	"textures": {
+		"pipe_type": "pipez:block/item_pipe",
+		"pipe_structure": "pipez:block/pipe_structure"
+	}
+}

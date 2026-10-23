@@ -1,0 +1,7 @@
+{
+	"parent": "pipez:block/_template/cross",
+	"textures": {
+		"pipe_type": "pipez:block/universal_pipe",
+		"pipe_structure": "pipez:block/pipe_structure"
+	}
+}

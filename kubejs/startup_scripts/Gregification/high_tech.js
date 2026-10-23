@@ -78,28 +78,35 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
 
 })
 GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
-    allthemods.create('neutron_irradiator', 'multiblock')
+        allthemods.create('neutron_irradiator', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('neutron_irradiator')
         .recipeModifiers([GTRecipeModifiers.OC_PERFECT])
-        .appearanceBlock(GTBlocks.CASING_PTFE_INERT)
+        .appearanceBlock(() => Block.getBlock('gtceu:gadolinium_casing'))
         .pattern(definition => FactoryBlockPattern.start()
-            .aisle('SSSSS', 'SCCCS', 'SCCCS', 'SCCCS', 'SSSSS')
-            .aisle('SCCCS', 'C   C', 'C O C', 'C   C', 'SCCCS')
-            .aisle('SCCCS', 'C O C', 'COOOC', 'C O C', 'SCCCS')
-            .aisle('SCCCS', 'C   C', 'C O C', 'C   C', 'SCCCS')
-            .aisle('SSSSS', 'SCCCS', 'SCKCS', 'SCCCS', 'SSSSS')
-            .where('C', Predicates.blocks(GTBlocks.CASING_PTFE_INERT.get())
+            .aisle('AAAAAAAAA', 'AGGGGGGGA', 'AGGGGGGGA', 'AGGGGGGGA', 'AGGGGGGGA', 'AGGGGGGGA', 'AGGGGGGGA', 'AGGGGGGGA', 'AAAAAAAAA')
+            .aisle('AGGGGGGGA', 'GTTTTTTTG', 'GTTTTTTTG', 'GTTTTTTTG', 'GTTTTTTTG', 'GTTTTTTTG', 'GTTTTTTTG', 'GTTTTTTTG', 'AGGGGGGGA')
+            .aisle('AGGGGGGGA', 'GTTTTTTTG', 'GTZZZZZTG', 'GTZZZZZTG', 'GTZZZZZTG', 'GTZZZZZTG', 'GTZZZZZTG', 'GTTTTTTTG', 'AGGGGGGGA')
+            .aisle('AGGGGGGGA', 'GTTTTTTTG', 'GTZZZZZTG', 'GTZRRRZTG', 'GTZRRRZTG', 'GTZRRRZTG', 'GTZZZZZTG', 'GTTTTTTTG', 'AGGGGGGGA')
+            .aisle('AGGGGGGGA', 'GTTTTTTTG', 'GTZZZZZTG', 'GTZRHRZTG', 'GTZH HZTG', 'GTZRHRZTG', 'GTZZZZZTG', 'GTTTTTTTG', 'AGGGGGGGA')
+            .aisle('AGGGGGGGA', 'GTTTTTTTG', 'GTZZZZZTG', 'GTZRRRZTG', 'GTZRRRZTG', 'GTZRRRZTG', 'GTZZZZZTG', 'GTTTTTTTG', 'AGGGGGGGA')
+            .aisle('AGGGGGGGA', 'GTTTTTTTG', 'GTZZZZZTG', 'GTZZZZZTG', 'GTZZZZZTG', 'GTZZZZZTG', 'GTZZZZZTG', 'GTTTTTTTG', 'AGGGGGGGA')
+            .aisle('AGGGGGGGA', 'GTTTTTTTG', 'GTTTTTTTG', 'GTTTTTTTG', 'GTTTTTTTG', 'GTTTTTTTG', 'GTTTTTTTG', 'GTTTTTTTG', 'AGGGGGGGA')
+            .aisle('AAAAAAAAA', 'AGGGGGGGA', 'AGGGGGGGA', 'AGGGGGGGA', 'AGGGKGGGA', 'AGGGGGGGA', 'AGGGGGGGA', 'AGGGGGGGA', 'AAAAAAAAA')
+            .where('K', Predicates.controller(Predicates.blocks(definition.get())))
+            .where('G', Predicates.blocks('gtceu:gadolinium_casing')
                 .or(Predicates.autoAbilities(definition.getRecipeTypes()))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
-            .where('S', Predicates.blocks('gtceu:scandium_frame'))
-            .where('O', Predicates.blocks('gtceu:tungsten_steel_frame'))
-            .where('K', Predicates.controller(Predicates.blocks(definition.get())))
+            .where('T', Predicates.blocks('gtceu:robust_machine_casing'))
+            .where('Z', Predicates.blocks('gtceu:zirconium_casing'))
+            .where('R', Predicates.blocks('gtceu:inert_ptfe_casing'))
+            .where('H', Predicates.blocks('bigreactors:reinforced_reactorcontrolrod'))
+            .where('A', Predicates.blocks('gtceu:adamantium_casing'))
             .where(' ', Predicates.any())
             .build()
         )
         .workableCasingModel(
-            'gtceu:block/casings/solid/machine_casing_inert_ptfe',
+            'gtceu:block/casings/gadolinium_casing/gadolinium_casing',
             'gtceu:block/multiblock/fusion_reactor'
         );
 

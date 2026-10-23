@@ -42,7 +42,7 @@ ServerEvents.recipes(allthemods => {
         .EUt(leachEUt);
 
     allthemods.recipes.gtceu.mixer('gregification:silicate_leach/felsic_lime_mix')
-        .itemInputs('16x #forge:dusts/granite_red', '16x #forge:dusts/potassium_feldspar', '8x #forge:dusts/biotite', '24x #forge:dusts/calcite')
+        .itemInputs('18x #forge:dusts/granite_red', '18x #forge:dusts/potassium_feldspar', '4x #forge:dusts/biotite', '24x #forge:dusts/calcite')
         .itemOutputs('64x gtceu:felsic_lime_mix_dust')
         .duration(leachDuration)
         .EUt(leachEUt);
@@ -87,15 +87,15 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.sifter('gregification:silicate_leach/sift_refined_alum')
         .itemInputs('5x gtceu:refined_rubidium_caesium_alum_dust')
-        .itemOutputs('12x gtceu:rubidium_dust')
-        .chancedOutput('gtceu:caesium_dust', 5000, 500)
+        .itemOutputs('11x gtceu:rubidium_dust')
+        .chancedOutput('gtceu:caesium_dust', 4000, 500)
         .duration(leachDuration)
         .EUt(leachEUt);
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:silicate_leach/iron_titanium')
         .itemInputs('16x #forge:dusts/calcite')
         .inputFluids('#forge:alum_mother_liquor 16000', '#forge:oxygen 2000')
-        .itemOutputs('12x gtceu:iron_dust', '1x gtceu:titanium_dust', '16x gtceu:gypsum_dust')
+        .itemOutputs('10x gtceu:iron_dust', '1x gtceu:titanium_dust', '16x gtceu:gypsum_dust')
         .outputFluids('gtceu:iron_free_liquor 16000', 'gtceu:carbon_dioxide 8000')
         .duration(leachDuration)
         .EUt(leachEUt);
@@ -127,7 +127,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:silicate_leach/nickel_cobalt_zinc')
         .itemInputs('24x #forge:dusts/calcium_hydroxide')
         .inputFluids('#forge:rare_earth_free_liquor 16000')
-        .itemOutputs('15x gtceu:nickel_dust', '2x gtceu:cobalt_dust', '7x gtceu:zinc_dust')
+        .itemOutputs('14x gtceu:nickel_dust', '2x gtceu:cobalt_dust', '6x gtceu:zinc_dust')
         .outputFluids('gtceu:magnesium_brine 16000')
         .duration(leachDuration)
         .EUt(leachEUt);
@@ -135,7 +135,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:silicate_leach/magnesium')
         .itemInputs('12x #forge:dusts/calcium_hydroxide', '6x #forge:dusts/sodium_hydroxide')
         .inputFluids('#forge:magnesium_brine 16000')
-        .itemOutputs('11x gtceu:magnesium_dust', '12x gtceu:gypsum_dust')
+        .itemOutputs('10x gtceu:magnesium_dust', '12x gtceu:gypsum_dust')
         .outputFluids('gtceu:lithium_brine 16000')
         .duration(leachDuration)
         .EUt(leachEUt);
@@ -143,7 +143,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:silicate_leach/calcium_lithium')
         .itemInputs('8x #forge:dusts/soda_ash')
         .inputFluids('#forge:lithium_brine 16000')
-        .itemOutputs('8x gtceu:calcite_dust', '4x gtceu:lithium_dust', '8x gtceu:sodium_sulfate_dust')
+        .itemOutputs('8x gtceu:calcite_dust', '2x gtceu:lithium_dust', '8x gtceu:sodium_sulfate_dust')
         .outputFluids('minecraft:water 12000')
         .duration(leachDuration)
         .EUt(leachEUt);

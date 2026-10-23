@@ -52,6 +52,31 @@ ServerEvents.recipes(allthemods => {
         1200
     )
 
+    //zirconium casing
+    addAssembler(
+        [
+            '8x #forge:plates/zirconium',
+            '#forge:frames/zirconium',
+            '4x #forge:screws/draconium',
+            '8x #forge:dusts/graphite'
+        ],
+        null,
+        '2x gtceu:zirconium_casing',
+        IV, 100
+    );
+
+    //adamantium casing
+    addAssembler(
+        [
+            '8x #forge:plates/adamantium',
+            '#forge:frames/adamantium',
+            '4x #forge:screws/draconium_awakened',
+            '8x #forge:dusts/gadolinium'
+        ],
+        'gtceu:polybenzimidazole 288',
+        '2x gtceu:adamantium_casing',
+        ZPM, 200
+    );
 
     //germanium diode wafer
     addAssembler(
