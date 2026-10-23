@@ -51,9 +51,42 @@ ServerEvents.recipes(allthemods => {
     };
 
 
+    allthemods.recipes.gtceu.assembly_line('gregification:craft_neutron_irradiator')
+        .itemInputs(
+            'gtceu:zpm_machine_hull',
+            '2x #gtceu:circuits/zpm',
+            '2x gtceu:zpm_emitter',
+            '2x gtceu:zpm_field_generator',
+            '4x gtceu:zpm_electric_pump',
+            '4x gtceu:adamantium_casing',
+            '4x gtceu:gadolinium_casing',
+            '2x gtceu:zirconium_casing',
+            '4x bigreactors:reinforced_reactorcontrolrod',
+            'gtceu:polonium_beryllium_neutron_source'
+        )
+        .inputFluids('#forge:soldering_alloy 2000', '#forge:polybenzimidazole 1152')
+        .itemOutputs('gtceu:neutron_irradiator')
+        .scannerResearch('gtceu:polonium_beryllium_neutron_source')
+        .duration(1200)
+        .EUt(ZPM);
 
-    //super critical heat exchanger
-
+    
+        allthemods.recipes.gtceu.assembly_line('gregification:craft_neutrino_collector')
+        .itemInputs(
+            'gtceu:uv_machine_hull',
+            '4x #gtceu:circuits/uv',
+            '8x gtceu:uv_sensor',
+            '2x gtceu:uv_field_generator',
+            '4x gtceu:uv_electric_pump',
+            '8x gtceu:gadolinium_casing',
+            '4x gtceu:adamantium_casing',
+            '16x #forge:plates/germanium'
+        )
+        .inputFluids('#forge:soldering_alloy 2304', '#forge:polybenzimidazole 2304')
+        .itemOutputs('gtceu:neutrino_collector')
+        .scannerResearch('gtceu:neutrino')
+        .duration(1800)
+        .EUt(UV);
     
     //farming for blockheads - market
     addAssemblyLine("farmingforblockheads:market",
@@ -892,7 +925,7 @@ ServerEvents.recipes(allthemods => {
         LuV
     );
 
-    //here
+    
     addAssemblyLine('gtceu:gadolinium_casing',
         [
             'gtceu:luv_machine_hull',
@@ -1022,23 +1055,7 @@ ServerEvents.recipes(allthemods => {
         "quarryplus:mover", 128
     );
 
-    allthemods.recipes.gtceu.assembly_line('gregification:craft_neutron_irradiator')
-        .itemInputs(
-            'gtceu:luv_machine_hull',
-            '2x #gtceu:circuits/luv',
-            '2x gtceu:luv_emitter',
-            '2x gtceu:luv_field_generator',
-            '4x gtceu:luv_electric_pump',
-            '4x #forge:plates/tungsten_steel',
-            '8x #forge:rods/tungsten_steel',
-            '4x #forge:frames/scandium',
-            'gtceu:polonium_beryllium_neutron_source'
-        )
-        .inputFluids('#forge:soldering_alloy 1000')
-        .itemOutputs('gtceu:neutron_irradiator')
-        .scannerResearch('gtceu:polonium_beryllium_neutron_source')
-        .duration(600)
-        .EUt(LuV);
+
 
     allthemods.recipes.gtceu.assembly_line('gregification:craft_super_critical_heat_exchanger')
         .itemInputs(

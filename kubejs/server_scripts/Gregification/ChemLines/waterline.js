@@ -73,15 +73,13 @@ ServerEvents.recipes(allthemods => {
         .duration(duration*.7)
         .EUt(EUStage4);
     
-    //here - needs lenses for laser purification
+    
     allthemods.recipes.gtceu.laser_purification('gregification:water_stage_5')
-        //.chancedInput('#forge:lenses/restonia', 500, 0)
-        //.chancedInput('#forge:lenses/palis', 500, 0)
-        //.chancedInput('#forge:lenses/diamatine', 500, 0)
-        //.chancedInput('#forge:lenses/void_crystal', 500, 0)
-        //.chancedInput('#forge:lenses/emeradic', 500, 0)
-        //.chancedInput('#forge:lenses/enori', 500, 0)
-        //.chancedInput('#forge:lenses/black_quartz', 500, 0)
+        .chancedInput('#forge:lenses/demon', 1000, 0)
+        .chancedInput('#forge:lenses/soul', 1000, 0)
+        .chancedInput('#forge:lenses/eternal', 1000, 0)
+        .chancedInput('#forge:lenses/nether_star', 1000, 0)
+        .chancedInput('#forge:lenses/source', 1000, 0)        
         .inputFluids('gtceu:water_stage_4 600')
         .outputFluids('gtceu:water_stage_5 500')
         .duration(duration*.6)

@@ -291,4 +291,16 @@ ServerEvents.recipes(allthemods => {
         20,
         stages[1]
     )
+
+    //francium
+    addFusion(
+        [
+            '#forge:oxygen_plasma 72',
+            '#forge:gold 72'
+        ],
+        'gtceu:francium 72',
+        ZPM,
+        20,
+        stages[2]
+    )
 });
