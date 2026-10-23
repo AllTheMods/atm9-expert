@@ -324,8 +324,7 @@ ServerEvents.recipes(allthemods => {
                     {
                         H: hull,
                         U: pump,
-                        V: conveyor,
-                        P: pump,
+                        V: conveyor,                        
                         T: plate,
                         C: circuit
                     }).id(`gregification:${tData.tier}_unifier`);
