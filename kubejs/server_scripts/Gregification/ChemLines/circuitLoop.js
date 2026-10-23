@@ -167,7 +167,7 @@ ServerEvents.recipes(allthemods => {
                 return
             }
             const recipeId = 'gregification:circuits/' + step + '/' + idSafe(def.output.item)
-            const ins = resolveComponents(def.components, recipeId, false)
+            const ins = resolveComponents(def.components, recipeId, true)
             if (!ins) return
             if (register(type, recipeId, ins, def.output.item, def.output.amount,
                 def.machine.eut, def.machine.duration, isSterile(def.machine))) stepCount++
@@ -229,7 +229,7 @@ ServerEvents.recipes(allthemods => {
 
             variants.forEach(v => {
                 const recipeId = 'gregification:circuits/stage/' + circuitId(f, stage) + v.suffix
-                const split = tpl.machine === 'assembly_line'
+                const split = true
                 const ins = { items: [], fluids: [], notConsumable: [] }
                 v.slots.forEach(s => {
                     const r = resolveSlot(f, si, s)

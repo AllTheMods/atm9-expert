@@ -256,13 +256,13 @@ global.circuitParts = {
                 machine: circuitDurations.matrix[2],
                 components: [
                     { fluid: 'oganesson', amount: 288 },
-                    { item: 'empowered_restonia_foil', amount: 128 },
-                    { item: 'empowered_emeradic_foil', amount: 128 },
-                    { item: 'empowered_palis_foil', amount: 128 },
-                    { item: 'empowered_diamatine_foil', amount: 128 },
-                    { item: 'empowered_enori_foil', amount: 128 }
+                    { item: 'empowered_restonia_foil', amount: 64 },
+                    { item: 'empowered_emeradic_foil', amount: 64 },
+                    { item: 'empowered_palis_foil', amount: 64 },
+                    { item: 'empowered_diamatine_foil', amount: 64 },
+                    { item: 'empowered_enori_foil', amount: 64 }
                 ],
-                output: { item: 'advanced_crystalline_matrix', amount: 64 }
+                output: { item: 'advanced_crystalline_matrix', amount: 32 }
             },
             assemble: {
                 machine: circuitDurations.bus[2],
@@ -286,7 +286,9 @@ global.circuitParts = {
             boule: {
                 machine: circuitDurations.boule[1],
                 components: [
-                    { dust: 'langasite', amount: 16 }
+                    { dust: 'langasite', amount: 16 },
+                    { dust: 'tantalum', amount: 16 },
+                    { dust: 'niobium', amount: 16 }
                 ],
                 output: { item: 'oscillator_boule', amount: 1 }
             },
@@ -321,7 +323,11 @@ global.circuitParts = {
             boule: {
                 machine: circuitDurations.boule[2],
                 components: [
-                    { gem: 'thorium_doped_calcium_fluoride', amount: 32 }
+                    { gem: 'thorium_doped_calcium_fluoride', amount: 32 },
+                    { dust: 'strontium', amount: 32 },
+                    { dust: 'aluminium', amount: 16 },
+                    { dust: 'lithium', amount: 16 },
+                    { fluid: 'fluorine', amount: 2000 }
                 ],
                 output: { item: 'advanced_oscillator_boule', amount: 1 }
             },
@@ -514,6 +520,7 @@ global.chipsetParts = {
                     { dust: 'bismuth_selenide', amount: 16 },
                     { dust: 'promethium', amount: 32 },
                     { dust: 'lutetium', amount: 32 },
+                    { dust: 'tellurium', amount: 32 },
                     { fluid: 'argon', amount: 10000 }
                 ],
                 output: { item: 'cpu_core_boule', amount: 1 }
@@ -550,6 +557,8 @@ global.chipsetParts = {
                     { dust: 'indium_antimonide', amount: 32 },
                     { dust: 'actinium', amount: 64 },
                     { dust: 'neptunium', amount: 64 },
+                    { dust: 'tellurium', amount: 32 },
+                    { dust: 'germanium', amount: 32 },
                     { fluid: 'krypton', amount: 20000 }
                 ],
                 output: { item: 'advanced_cpu_core_boule', amount: 1 }
@@ -588,6 +597,7 @@ global.chipsetParts = {
                     { dust: 'lithium_niobate', amount: 16 },
                     { dust: 'technetium', amount: 32 },
                     { dust: 'cerium', amount: 32 },
+                    { dust: 'magnesium', amount: 32 },
                     { fluid: 'neon', amount: 10000 }
                 ],
                 output: { item: 'central_processing_unit_boule', amount: 1 }
@@ -625,7 +635,10 @@ global.chipsetParts = {
                     { dust: 'aluminium_nitride', amount: 32 },
                     { dust: 'protactinium', amount: 64 },
                     { dust: 'lawrencium', amount: 64 },
-                    { fluid: 'xenon', amount: 20000 }
+                    { dust: 'magnesium', amount: 32 },
+                    { dust: 'silicon', amount: 32 },
+                    { fluid: 'xenon', amount: 20000 },
+                    { fluid: 'ammonia', amount: 5000 }
                 ],
                 output: { item: 'advanced_central_processing_unit_boule', amount: 1 }
             },
@@ -663,6 +676,7 @@ global.chipsetParts = {
                     { dust: 'vanadium_dioxide', amount: 16 },
                     { dust: 'tungsten', amount: 32 },
                     { dust: 'lanthanum', amount: 32 },
+                    { dust: 'chromium', amount: 32 },
                     { fluid: 'helium', amount: 10000 }
                 ],
                 output: { item: 'logic_gate_boule', amount: 1 }
@@ -700,6 +714,8 @@ global.chipsetParts = {
                     { dust: 'magnesium_oxide', amount: 32 },
                     { dust: 'plutonium', amount: 64 },
                     { dust: 'francium', amount: 64 },
+                    { dust: 'ruthenium', amount: 32 },
+                    { dust: 'tantalum', amount: 32 },
                     { fluid: 'radon', amount: 20000 }
                 ],
                 output: { item: 'advanced_logic_gate_boule', amount: 1 }
@@ -738,6 +754,7 @@ global.chipsetParts = {
                     { dust: 'europium_yttrium_silicate', amount: 16 },
                     { dust: 'mendelevium', amount: 32 },
                     { dust: 'scandium', amount: 32 },
+                    { dust: 'erbium', amount: 32 },
                     { fluid: 'helium', amount: 10000 }
                 ],
                 output: { item: 'qbit_memory_boule', amount: 1 }
@@ -774,6 +791,8 @@ global.chipsetParts = {
                     { dust: 'praseodymium_yttrium_silicate', amount: 32 },
                     { dust: 'einsteinium', amount: 64 },
                     { dust: 'nobelium', amount: 64 },
+                    { dust: 'ytterbium', amount: 32 },
+                    { dust: 'erbium', amount: 32 },
                     { fluid: 'helium_3', amount: 20000 }
                 ],
                 output: { item: 'advanced_qbit_memory_boule', amount: 1 }
@@ -929,6 +948,8 @@ global.socParts = {
                 { dust: 'gallium_arsenide', amount: 64 },
                 { dust: 'erbium', amount: 64 },
                 { dust: 'europium', amount: 64 },
+                { dust: 'silicon', amount: 32 },
+                { dust: 'zinc', amount: 32 },
                 { fluid: 'argon', amount: 30000 }
             ],
             output: { item: 'photonic_soc_boule', amount: 1 }
@@ -963,9 +984,11 @@ global.socParts = {
         boule: {
             machine: circuitDurations.soc_boule.bioengineered,
             components: [
-                { dust: 'indium_gallium_arsenide', amount: 96 },
-                { dust: 'thulium', amount: 96 },
-                { dust: 'terbium', amount: 96 },
+                { dust: 'indium_gallium_arsenide', amount: 64 },
+                { dust: 'thulium', amount: 64 },
+                { dust: 'terbium', amount: 64 },
+                { dust: 'beryllium', amount: 32 },
+                { dust: 'silicon', amount: 32 },
                 { fluid: 'krypton', amount: 40000 }
             ],
             output: { item: 'bioengineered_soc_boule', amount: 1 }
@@ -1000,10 +1023,13 @@ global.socParts = {
         boule: {
             machine: circuitDurations.soc_boule.chaotic,
             components: [
-                { dust: 'aluminium_gallium_nitride', amount: 128 },
-                { dust: 'hafnium', amount: 128 },
-                { dust: 'gadolinium', amount: 128 },
-                { fluid: 'xenon', amount: 50000 }
+                { dust: 'aluminium_gallium_nitride', amount: 64 },
+                { dust: 'hafnium', amount: 64 },
+                { dust: 'gadolinium', amount: 64 },
+                { dust: 'silicon', amount: 32 },
+                { dust: 'magnesium', amount: 32 },
+                { fluid: 'xenon', amount: 50000 },
+                { fluid: 'ammonia', amount: 10000 }
             ],
             output: { item: 'chaotic_soc_boule', amount: 1 }
         },
