@@ -24,7 +24,7 @@ ServerEvents.recipes(allthemods => {
             allthemods.recipes.gtceu.macerator(`gregification:macerate_${stone.stone.replace(':', '_')}`)
                 .itemInputs(`${stone.stone}`)
                 .itemOutputs(`gtceu:${stone.stone.split(':')[1]}_dust`)
-                .duration(120)
+                .duration(100)
                 .EUt(stone.eu);
         }
     });
@@ -46,7 +46,7 @@ ServerEvents.recipes(allthemods => {
     //prismarine
     const stoneCrush = [
         ['minecraft:basalt', [{ output: 'gtceu:basalt_dust', chance: 1 },               { output: 'gtceu:olivine_dust', chance: 0.2 }, { output: 'minecraft:iron_nugget', chance: 0.4 }, { output: 'gtceu:calcite_dust', chance: 0.4 }], 250],
-        ['minecraft:granite', [{ output: 'gtceu:granite_dust', chance: 1 },             { output: 'gtceu:red_sand_dust', chance: 0.4 }, { output: 'create:crushed_raw_copper', chance: 0.4 }, { output: 'minecraft:gold_nugget', chance: 0.2 }], 250],
+        ['minecraft:granite', [{ output: 'gtceu:granite_dust', chance: 1 },             { output: 'minecraft:red_sand', chance: 0.4 }, { output: 'create:crushed_raw_copper', chance: 0.4 }, { output: 'minecraft:gold_nugget', chance: 0.2 }], 250],
         ['gtceu:red_granite', [{ output: 'gtceu:granite_red_dust', chance: 1 },         { output: 'create:crushed_raw_aluminum', chance: 0.6 }, { output: 'gtceu:potassium_feldspar_dust', chance: 0.1 }, { output: 'alltheores:aluminum_nugget', chance: 0.3 }], 250],
         ['gtceu:marble', [{ output: 'gtceu:marble_dust', chance: 1 },                   { output: 'gtceu:magnesium_dust', chance: 0.2 }, { output: 'gtceu:calcite_dust', chance: 0.4 }, { output: 'alltheores:zinc_nugget', chance: 0.4 }], 250],
         ['minecraft:deepslate', [{ output: 'gtceu:deepslate_dust', chance: 1 },         { output: 'gtceu:silicon_dioxide_dust', chance: 0.5 }, { output: 'gtceu:biotite_dust', chance: 0.1 }, { output: 'alltheores:aluminum_nugget', chance: 0.4 }], 250],

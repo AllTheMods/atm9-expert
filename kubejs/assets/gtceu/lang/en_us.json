@@ -974,5 +974,19 @@
     "material.gtceu.tungsten_hexafluoride": "Tungsten Hexafluoride",
     "material.gtceu.indium_gallium_arsenide": "Indium Gallium Arsenide",
     "material.gtceu.aluminium_gallium_nitride": "Aluminium Gallium Nitride",
-    "material.gtceu.tantalum_hafnium_carbide": "Tantalum Hafnium Carbide"
+    "material.gtceu.tantalum_hafnium_carbide": "Tantalum Hafnium Carbide",
+    "material.gtceu.silicate_leach_liquor": "Silicate Leach Liquor",
+    "material.gtceu.alum_mother_liquor": "Alum Mother Liquor",
+    "material.gtceu.alum_solution": "Alum Solution",
+    "material.gtceu.iron_free_liquor": "Iron Free Liquor",
+    "material.gtceu.vanadium_free_liquor": "Vanadium Free Liquor",
+    "material.gtceu.aluminium_free_liquor": "Aluminium Free Liquor",
+    "material.gtceu.rare_earth_free_liquor": "Rare Earth Free Liquor",
+    "material.gtceu.magnesium_brine": "Magnesium Brine",
+    "material.gtceu.lithium_brine": "Lithium Brine",
+    "material.gtceu.felsic_lime_mix": "Felsic Lime Mix",
+    "material.gtceu.silicate_sinter": "Silicate Sinter",
+    "material.gtceu.potassium_alum": "Potassium Alum",
+    "material.gtceu.crude_rubidium_caesium_alum": "Crude Rubidium Caesium Alum",
+    "material.gtceu.refined_rubidium_caesium_alum": "Refined Rubidium Caesium Alum"
 }

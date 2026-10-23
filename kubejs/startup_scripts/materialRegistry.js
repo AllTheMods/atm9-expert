@@ -2050,7 +2050,7 @@ const materials = [
     new MaterialDef('trinium').modify().ore().byproducts(['naquadah', 'titanium', 'trinium']),
 
     new MaterialDef('fluorite').gem().ore().color(0x0c9949).iconSet('DIAMOND').components('1x calcium, 2x fluorine'),
-    new MaterialDef('dolomite').dust().ore().color(0xf2e4bd).iconSet('ROUGH').components('1x calcium, 1x magnesium, 1x carbon, 3x oxygen'),
+    new MaterialDef('dolomite').dust().ore().color(0xf2e4bd).iconSet('ROUGH').components('1x calcium, 1x magnesium, 1x carbon, 3x oxygen').formula('CaMg(CO3)2'),
     new MaterialDef('star_matter').plasma('customStill').color(0xb219d1),
     new MaterialDef('infinity').ingot().fluid('customStill').element('infinity').color(0xffffff).iconSet('infinity').materialsAll()
         //.flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FOIL)
@@ -2198,6 +2198,22 @@ const materials = [
     new MaterialDef('indium_gallium_arsenide').dust().color(0x6E4A5E).iconSet('METALLIC').formula('InGaAs2').components('1x indium, 1x gallium, 2x arsenic'),
     new MaterialDef('aluminium_gallium_nitride').dust().color(0x9A8F6A).iconSet('DULL').formula('AlGaN2').components('1x aluminium, 1x gallium, 2x nitrogen'),
     new MaterialDef('tantalum_hafnium_carbide').dust().color(0x3E4A4A).iconSet('METALLIC').formula('Ta4HfC5').components('4x tantalum, 1x hafnium, 5x carbon'),
+    
+    //silicate leach line
+    new MaterialDef('silicate_leach_liquor').fluid().color(0x7A6A55).iconSet('FLUID').noDecomp(),
+    new MaterialDef('alum_mother_liquor').fluid().color(0x8A7A5C).iconSet('FLUID').noDecomp(),
+    new MaterialDef('alum_solution').fluid().color(0x9A9A7C).iconSet('FLUID').noDecomp(),
+    new MaterialDef('iron_free_liquor').fluid().color(0x6E8A7A).iconSet('FLUID').noDecomp(),
+    new MaterialDef('vanadium_free_liquor').fluid().color(0x7C9A62).iconSet('FLUID').noDecomp(),
+    new MaterialDef('aluminium_free_liquor').fluid().color(0x628A8A).iconSet('FLUID').noDecomp(),
+    new MaterialDef('rare_earth_free_liquor').fluid().color(0x5E7C94).iconSet('FLUID').noDecomp(),
+    new MaterialDef('magnesium_brine').fluid().color(0x6A6E94).iconSet('FLUID').noDecomp(),
+    new MaterialDef('lithium_brine').fluid().color(0x8A6A94).iconSet('FLUID').noDecomp(),
+    new MaterialDef('felsic_lime_mix').dust().color(0xB8AFA0).iconSet('DULL').noDecomp(),
+    new MaterialDef('silicate_sinter').dust().color(0x9C938A).iconSet('DULL').noDecomp(),
+    new MaterialDef('potassium_alum').dust().color(0xC9D1D6).iconSet('DULL').formula('KAl(SO4)2').components('1x potassium, 1x aluminium, 2x sulfur, 8x oxygen'),
+    new MaterialDef('crude_rubidium_caesium_alum').dust().color(0xBFC7B8).iconSet('DULL').noDecomp(),
+    new MaterialDef('refined_rubidium_caesium_alum').dust().color(0xD0D8C4).iconSet('DULL').noDecomp(),
 
 ];
 

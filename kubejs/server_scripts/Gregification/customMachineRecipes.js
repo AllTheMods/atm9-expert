@@ -132,7 +132,7 @@ ServerEvents.recipes(allthemods => {
         { machine: '_reconstructor', startTier: 2, endTier: 8 },
         { machine: '_liquifier', startTier: 2, endTier: 8 },
         { machine: '_sanguine_refinery', startTier: 2, endTier: 8 },
-        { machine: '_unifier', startTier: 2, endTier: 8 },
+        { machine: '_unifier', startTier: 2, endTier: 8 },        
         { machine: '_gem_polisher', startTier: 6, endTier: 8 }
     ]
 
@@ -323,6 +323,7 @@ ServerEvents.recipes(allthemods => {
                 ],
                     {
                         H: hull,
+                        U: pump,
                         V: conveyor,
                         P: pump,
                         T: plate,
