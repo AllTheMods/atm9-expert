@@ -12,6 +12,12 @@ ServerEvents.recipes(allthemods => {
                 .duration(80)
                 .EUt(LV);
 
+        allthemods.recipes.gtceu.macerator('gregification:macerate_apatite_sulfur')
+                .itemInputs('thermal:apatite')
+                .itemOutputs('2x gtceu:apatite_dust')
+                .duration(80)
+                .EUt(LV);
+
         allthemods.recipes.gtceu.macerator('gregification:arcane_crystal_dust')
                 .itemInputs('forbidden_arcanus:arcane_crystal')
                 .itemOutputs('2x forbidden_arcanus:arcane_crystal_dust')

@@ -361,4 +361,11 @@ ServerEvents.recipes(allthemods => {
     });
 
 
+
+    allthemods.recipes.gtceu.chemical_reactor('gregification:chemical_reactor/infinity_dust')
+        .itemInputs('8x #forge:dusts/stabilized_clathrate', '#forge:dusts/adamantium')
+        .inputFluids('#forge:necrotic_acid 4000')
+        .itemOutputs('gtceu:infinity_dust')
+        .duration(1200)
+        .EUt(UV);
 });
