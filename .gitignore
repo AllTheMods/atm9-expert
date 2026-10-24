@@ -4,6 +4,7 @@
 # ...except the folders we actually want to track
 !/kubejs/
 !/config/
+!/defaultconfigs/
  
 # and this file itself
 !/.gitignore
