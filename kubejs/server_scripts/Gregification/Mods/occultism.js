@@ -12,6 +12,7 @@ ServerEvents.recipes(allthemods => {
         { ore: 'bedrockium', weight: 1 }
     ];
 
+    /*
     allthemods.custom({
         type: 'occultism:miner',
         ingredient: {
@@ -83,7 +84,7 @@ ServerEvents.recipes(allthemods => {
         },
         weight: 5
     }).id(`occultism:master_miner_mining_dim_core`)
-
+*/
 
     function parseItemRef(ref) {
     if (typeof ref === 'string') {

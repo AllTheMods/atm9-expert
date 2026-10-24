@@ -1,0 +1,1 @@
+{"type":"forge:conditional","recipes":[{"conditions":[{"type":"forge:false"}],"recipe":{"type":"industrialforegoing:laser_drill_ore"}}]}

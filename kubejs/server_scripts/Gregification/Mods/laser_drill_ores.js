@@ -2,6 +2,7 @@ ServerEvents.recipes(event => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
     //need to check these make sure they work
         // ---- Rare earths ----
+        /*
     event.recipes.industrialforegoing.laser_drill_ore(
         'gtceu:raw_bastnasite',
         'gtceu:neodymium_doped_yttrium_aluminium_garnet_lens',
@@ -977,7 +978,7 @@ ServerEvents.recipes(event => {
                 weight: 4
             }
         ]
-    )*/
+    )
 
     event.recipes.industrialforegoing.laser_drill_ore(
         'gtceu:raw_etrium',
@@ -1012,5 +1013,5 @@ ServerEvents.recipes(event => {
             }
         ]
     )
-
+*/
 });
