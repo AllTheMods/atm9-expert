@@ -55,4 +55,10 @@
         .duration(100)
         .EUt(HV)
 
+    allthemods.recipes.gtceu.liquifier('wraith_heart_liquification')
+        .itemInputs('32x eidolon:wraith_heart')
+        .outputFluids('gtceu:soul 1')
+        .duration(100)
+        .EUt(MV)
+        
     });

@@ -1,5 +1,18 @@
 ServerEvents.recipes(allthemods => {
         const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
+        
+        allthemods.recipes.gtceu.macerator('gregification:macerate_slime_block')
+                .itemInputs('minecraft:slime_block')
+                .itemOutputs('4x gtceu:green_slime_dust')
+                .duration(100)
+                .EUt(LV);
+
+        allthemods.recipes.gtceu.macerator('gregification:macerate_blue_slime_block')
+                .itemInputs('tconstruct:sky_slime')
+                .itemOutputs('4x gtceu:blue_slime_dust')
+                .duration(100)
+                .EUt(LV);
+                
         allthemods.recipes.gtceu.macerator('gregification:recycle_steel_boiler')
                 .itemInputs('railcraft:high_pressure_steam_boiler_tank')
                 .itemOutputs('2x alltheores:steel_dust')

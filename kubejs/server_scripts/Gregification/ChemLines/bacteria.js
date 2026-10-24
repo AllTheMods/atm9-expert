@@ -57,6 +57,13 @@ ServerEvents.recipes(allthemods => {
         };
     };
 
+    allthemods.recipes.gtceu.chemical_reactor(`gregification:bacteria/slime_slurry`)
+        .itemInputs('32x #forge:dusts/green_slime', '32x #forge:dusts/blue_slime')
+        .inputFluids('minecraft:water 16000')
+        .outputFluids('gtceu:slime_slurry 50', 'gtceu:slime_waste_water 15950')
+        .duration(DUR)
+        .EUt(IV);
+        
     bacteriaChainStrains.forEach(strain => {
 
         let pichia = bacteriaStageItems(strain);
@@ -97,6 +104,14 @@ ServerEvents.recipes(allthemods => {
         allthemods.recipes.gtceu.chemical_reactor(`gregification:bacteria/${strainName}_mutated`)
             .itemInputs(pichia.bacterialMatrix, '#forge:dusts/protactinium')
             .inputFluids('#forge:mutagen 100', 'gtceu:water_stage_5 250')
+            .itemOutputs(pichia.mutatedBacterium)
+            .duration(DUR)
+            .EUt(LUV);
+
+        //alternate
+        allthemods.recipes.gtceu.chemical_reactor(`gregification:bacteria/${strainName}_mutated_slime`)
+            .itemInputs(pichia.bacterialMatrix, '#forge:dusts/protactinium')
+            .inputFluids('#forge:mutagen 100', 'gtceu:slime_slurry 250')
             .itemOutputs(pichia.mutatedBacterium)
             .duration(DUR)
             .EUt(LUV);
