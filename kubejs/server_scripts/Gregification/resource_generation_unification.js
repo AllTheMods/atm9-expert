@@ -319,4 +319,21 @@ ServerEvents.recipes(allthemods => {
             }).id(miner.idPrefix + e.n);
         }
     });
+
+    const MINER_ITEMS = [
+        { n: 'void_chalk', item: 'occultism:chalk_void', miner: 'foliot', mw: 20 },
+        { n: 'atomic_core', item: 'gtceu:atomic_core', miner: 'foliot', mw: 20 },
+        { n: 'element_blank', item: 'gtceu:element_blank', miner: 'foliot', mw: 20 },
+        { n: 'mining_dim_core', item: 'occultism:mining_dim_core', miner: 'marid', mw: 5 }
+    ];
+
+    MINER_ITEMS.forEach(e => {
+        const miner = MINERS[e.miner];
+        allthemods.custom({
+            type: 'occultism:miner',
+            ingredient: { item: miner.block },
+            result: { item: e.item },
+            weight: e.mw
+        }).id(miner.idPrefix + e.n);
+    });
 });

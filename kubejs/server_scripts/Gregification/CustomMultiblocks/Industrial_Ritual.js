@@ -434,19 +434,19 @@ ServerEvents.recipes(allthemods => {
     };
 
     let tartaric = Item.of('bloodmagic:soulgemgreater', '{souls:4096.0d}').strongNBT();
-    //addRitual(['mekanism:digital_miner', '4x #gtceu:circuits/iv'], 'occultism:miner_marid_master','uphyxes_inverted_tower');	
-    addRitual(['#occultism:miner/marid',     'occultism:iesnium_pickaxe', 'occultism:mining_dim_core', 'allthemodium:piglich_heart', 'allthemodium:unobtainium_pickaxe' ], 'occultism:miner_ancient_eldritch', 'ronazas_contract');	
-    //addRitual(['#occultism:miner/afrit',     'occultism:iesnium_pickaxe', 'minecraft:dragon_breath', 'occultism:marid_essence', 'minecraft:totem_of_undying', 'minecraft:netherite_pickaxe', 'minecraft:nether_star', 'occultism:spirit_attuned_crystal'], 'occultism:miner_marid_master', 'uphyxes_inverted_tower');	
-    //addRitual(['#occultism:miner/djinni',    'occultism:iesnium_pickaxe', '#forge:gems/echo_shard', 'minecraft:crying_obsidian', 'occultism:afrit_essence', 'occultism:spirit_attuned_crystal'], 'occultism:miner_afrit_deeps', 'seviras_permanent_confinment');	
-    //addRitual(['#occultism:miner/foliot',    'occultism:iesnium_pickaxe', 'occultism:spirit_attuned_crystal', '#forge:storage_blocks/lapis', '#forge:raw_materials/gold'], 'occultism:miner_djinni_ores', 'strigeors_higher_binding');	
-    //addRitual(['occultism:magic_lamp_empty', 'occultism:iesnium_pickaxe', '#forge:gravel', '#forge:raw_materials/iron'], 'occultism:miner_foliot_unspecialized', 'eziveus_spectral_complustion');	
-
-    //addRitual(['4x minecraft:soul_sand', '#forge:gems/diamond', '#forge:ingots/gold', '#forge:ingots/silver', '#forge:ingots/copper'], 'occultism:soul_gem', 'strigeors_higher_binding');
-    //addRitual(['#forge:frames/iesnium', '16x #gtceu:circuits/hv', '12x occultism:spirit_attuned_crystal', tartaric, '4x #forge:gears/terrasteel'], 'occultism:dimensional_mineshaft', 'strigeors_higher_binding');
-
-    //addRitual(['minecraft:netherrack','minecraft:gunpowder','minecraft:flint_and_steel', '#forge:ingots/iesnium'], 'occultism:afrit_essence', 'kandras_open_conjure');
-
-    //addRitual([], '', '');
+    
+    
+    
+    
+    
+    addRitual(['occultism:magic_lamp_empty', 'occultism:iesnium_pickaxe', '#forge:raw_materials/iron', 'minecraft:gravel', '#forge:frames/desh', '4x #forge:plates/hafnium'], 'occultism:miner_foliot_unspecialized', 'eziveus_spectral_complustion', 60);
+    addRitual(['#occultism:miner/foliot', 'occultism:iesnium_pickaxe', 'occultism:spirit_attuned_crystal', '#forge:storage_blocks/lapis', '#forge:raw_materials/gold', '#forge:frames/ostrum', '4x #forge:plates/scandium'], 'occultism:miner_djinni_ores', 'strigeors_higher_binding');
+    addRitual(['#occultism:miner/djinni', 'occultism:iesnium_pickaxe', '#forge:gems/echo_shard', 'minecraft:crying_obsidian', 'occultism:afrit_essence', 'occultism:spirit_attuned_crystal', '#forge:frames/calorite', '4x #forge:plates/strontium'], 'occultism:miner_afrit_deeps', 'seviras_permanent_confinment');
+    addRitual(['#occultism:miner/afrit', 'occultism:iesnium_pickaxe', 'minecraft:dragon_breath', 'occultism:marid_essence', 'minecraft:totem_of_undying', 'minecraft:netherite_pickaxe', 'minecraft:nether_star', 'occultism:spirit_attuned_crystal', '#forge:frames/etrium', '4x #forge:plates/bedrockium'], 'occultism:miner_marid_master', 'uphyxes_inverted_tower');
+    addRitual(['#occultism:miner/marid', 'occultism:iesnium_pickaxe', 'occultism:mining_dim_core', 'allthemodium:piglich_heart', 'allthemodium:unobtainium_pickaxe', '#forge:frames/infinity', '4x #forge:plates/adamantium'], 'occultism:miner_ancient_eldritch', 'ronazas_contract');
+    addRitual(['mekanism:digital_miner', '4x #gtceu:circuits/zpm', 'occultism:mining_dim_core', 'allthemodium:piglich_heart', 'allthemodium:unobtainium_pickaxe', '#forge:frames/infinity', '4x #forge:plates/adamantium'], 'occultism:miner_ancient_eldritch', 'ronazas_contract', null, 'eldritch_miner_digital');
+    
+    
 
     addRitual(['#forge:dusts/netherite', 'minecraft:wither_skeleton_skull', '#forge:dusts/blackstone', 'minecraft:wither_rose'], 'occultism:witherite_dust', 'seviras_permanent_confinment');
     addRitual(['4x minecraft:rabbit_foot', '4x minecraft:scute', '2x #forge:wool', '2x minecraft:pointed_dripstone'], 'occultism:cruelty_essence', 'xeovrenth_abjure');
@@ -501,6 +501,13 @@ ServerEvents.recipes(allthemods => {
     
 
 
+    const manualOutputs = [
+        'occultism:miner_foliot_unspecialized',
+        'occultism:miner_djinni_ores',
+        'occultism:miner_afrit_deeps',
+        'occultism:miner_marid_master'
+    ];
+
     let i = 0;
 
     allthemods.forEachRecipe({ type: 'occultism:ritual' }, rawRecipe => {
@@ -512,6 +519,10 @@ ServerEvents.recipes(allthemods => {
  
             // no real item output - nothing to craft, skip (covers all summon-family rituals)
             if (!outputItem || outputItem.indexOf('jei_dummy') !== -1) {
+                return;
+            }
+
+            if (manualOutputs.indexOf(outputItem) !== -1) {
                 return;
             }
  
