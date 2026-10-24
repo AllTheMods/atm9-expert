@@ -1506,6 +1506,10 @@ const materials = [
         .unify({ ingot: 'justdirethings:eclipsealloy_ingot', block: 'justdirethings:eclipsealloy_block', rawOre: 'justdirethings:raw_eclipsealloy', ore: 'justdirethings:raw_eclipsealloy_ore' })
         .byproducts(['blazegold', 'ender_pearl', 'obsidian']),
 
+    new MaterialDef('celestigem').gem().ore().color(0x53dfcf).iconSet('diamond')
+        .unify({ gem: 'justdirethings:celestigem', block: 'justdirethings:celestigem_block', ore: 'justdirethings:raw_celestigem_ore', gemFlawless: true, gemExquisite: true })
+        .byproducts(['diamond', 'apatite', 'celestigem']),
+
     new MaterialDef('coagulite').gem().ore().color(0x5C0A0A).iconSet('METALLIC').noDecomp()
         .byproducts(['demon', 'source'])
         .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'evilcraft:condensed_blood' }),

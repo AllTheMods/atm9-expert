@@ -153,6 +153,7 @@ ServerEvents.recipes(allthemods => {
     { n: 'sulfur', t: 1, dim: 'overworld', lens: 10, y: [80, 112], miner: 'foliot' },
     { n: 'tantalite', t: 1, dim: 'overworld', lens: 10, y: [-48, -16], miner: 'foliot' },
     { n: 'ferricore', t: 1, dim: 'overworld', lens: 11, y: [-64, 32], miner: 'foliot', ore: 'justdirethings:raw_ferricore_ore', raw: 'justdirethings:raw_ferricore' },
+    { n: 'celestigem', t: 1, dim: 'overworld', lens: 11, y: [32, 96], miner: 'foliot', mw: 50, lw: 2, ore: 'justdirethings:celestigem_ore', raw: 'justdirethings:celestigem' },
     { n: 'inferium', t: 1, dim: 'overworld', lens: 11, y: [-16, 80], miner: 'foliot', ore: 'mysticalagriculture:inferium_ore' },
     { n: 'prosperity', t: 1, dim: 'overworld', lens: 11, y: [32, 128], miner: 'foliot', ore: 'mysticalagriculture:prosperity_ore' },
     { n: 'uranium', t: 1, dim: 'overworld', lens: 12, y: [0, 128], miner: 'foliot' },
