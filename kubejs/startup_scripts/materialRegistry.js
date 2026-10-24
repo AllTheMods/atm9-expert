@@ -550,7 +550,7 @@ const materials = [
         .unify({ gemFlawless: true, gemExquisite: true, gem: 'evilcraft:dark_power_gem', block: 'evilcraft:dark_power_gem_block' }),
 
     new MaterialDef('umbral_steel').components('1x steel, 1x dark_gem').color(0x3A2457).iconSet('METALLIC').ingot().fluid().flags(GTMaterialFlags.GENERATE_PLATE).noSmelting()
-        .blast({ temp: COIL_TEMPS.NICHROME, eut: LV, duration: 400 }),
+        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: LV, duration: 400 }),
 
     new MaterialDef('spawner_scrap').dust().color(0x5B6E8F).iconSet('METALLIC').singularity(),
 
