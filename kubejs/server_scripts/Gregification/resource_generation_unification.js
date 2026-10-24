@@ -54,7 +54,7 @@ ServerEvents.recipes(allthemods => {
     };
 
     // Namespaces tried (in priority order) when an ore has no explicit id: vanilla, All The Ores, All The Modium, GT.
-    const NAMESPACES = ['minecraft', 'alltheores', 'allthemodium', 'gtceu'];
+    const NAMESPACES = ['minecraft', 'alltheores', 'allthemodium', 'gtceu', 'justdirethings', 'thermal'];
     const ALT = { aluminium: ['aluminum'], nether_quartz: ['quartz'], plutonium_239: ['plutonium'] };
 
     const names = n => [n].concat(ALT[n] || []);
@@ -86,7 +86,7 @@ ServerEvents.recipes(allthemods => {
     { n: 'goethite', t: 1, dim: 'overworld', lens: 0, y: [73, 128], miner: 'foliot' },
     { n: 'hematite', t: 1, dim: 'overworld', lens: 0, y: [18, 73], miner: 'foliot' },
     { n: 'iron', t: 1, dim: 'overworld', lens: 0, y: [-64, -9], miner: 'foliot' },
-    { n: 'limonite', t: 1, dim: 'overworld', lens: 0, y: [46, 101], miner: 'foliot' },
+    { n: 'yellow_limonite', t: 1, dim: 'overworld', lens: 0, y: [46, 101], miner: 'foliot' },
     { n: 'magnetite', t: 1, dim: 'overworld', lens: 0, y: [-37, 18], miner: 'foliot' },
     { n: 'vanadium_magnetite', t: 1, dim: 'overworld', lens: 0, y: [-9, 46], miner: 'foliot' },
     { n: 'cassiterite', t: 1, dim: 'overworld', lens: 1, y: [0, 43], miner: 'foliot' },
@@ -109,9 +109,9 @@ ServerEvents.recipes(allthemods => {
     { n: 'ruby', t: 1, dim: 'overworld', lens: 4, y: [-64, 0], miner: 'foliot' },
     { n: 'sapphire', t: 1, dim: 'overworld', lens: 4, y: [-32, 32], miner: 'foliot' },
     { n: 'almandine', t: 1, dim: 'overworld', lens: 5, y: [-64, -16], miner: 'foliot' },
-    { n: 'garnet_red', t: 1, dim: 'overworld', lens: 5, y: [32, 80], miner: 'foliot' },
+    { n: 'red_garnet', t: 1, dim: 'overworld', lens: 5, y: [32, 80], miner: 'foliot' },
     { n: 'garnet_sand', t: 1, dim: 'overworld', lens: 5, y: [80, 128], miner: 'foliot' },
-    { n: 'garnet_yellow', t: 1, dim: 'overworld', lens: 5, y: [56, 104], miner: 'foliot' },
+    { n: 'yellow_garnet', t: 1, dim: 'overworld', lens: 5, y: [56, 104], miner: 'foliot' },
     { n: 'grossular', t: 1, dim: 'overworld', lens: 5, y: [-40, 8], miner: 'foliot' },
     { n: 'pyrope', t: 1, dim: 'overworld', lens: 5, y: [-16, 32], miner: 'foliot' },
     { n: 'spessartine', t: 1, dim: 'overworld', lens: 5, y: [8, 56], miner: 'foliot' },
@@ -144,7 +144,7 @@ ServerEvents.recipes(allthemods => {
     { n: 'bauxite', t: 1, dim: 'overworld', lens: 10, y: [-64, -32], miner: 'foliot' },
     { n: 'cinnabar', t: 1, dim: 'overworld', lens: 10, y: [16, 48], miner: 'foliot' },
     { n: 'magnesite', t: 1, dim: 'overworld', lens: 10, y: [32, 64], miner: 'foliot' },
-    { n: 'niter', t: 1, dim: 'overworld', lens: 10, y: [96, 128], miner: 'foliot' },
+    { n: 'niter', t: 1, dim: 'overworld', lens: 10, y: [96, 128], miner: 'foliot', ore: 'thermal:niter_ore', raw: 'thermal:niter' },
     { n: 'olivine', t: 1, dim: 'overworld', lens: 10, y: [64, 96], miner: 'foliot' },
     { n: 'pyrite', t: 1, dim: 'overworld', lens: 10, y: [48, 80], miner: 'foliot' },
     { n: 'pyrochlore', t: 1, dim: 'overworld', lens: 10, y: [-32, 0], miner: 'foliot' },
@@ -152,7 +152,7 @@ ServerEvents.recipes(allthemods => {
     { n: 'realgar', t: 1, dim: 'overworld', lens: 10, y: [0, 32], miner: 'foliot' },
     { n: 'sulfur', t: 1, dim: 'overworld', lens: 10, y: [80, 112], miner: 'foliot' },
     { n: 'tantalite', t: 1, dim: 'overworld', lens: 10, y: [-48, -16], miner: 'foliot' },
-    { n: 'ferricore', t: 1, dim: 'overworld', lens: 11, y: [-64, 32], miner: 'foliot' },
+    { n: 'ferricore', t: 1, dim: 'overworld', lens: 11, y: [-64, 32], miner: 'foliot', ore: 'justdirethings:raw_ferricore_ore', raw: 'justdirethings:raw_ferricore' },
     { n: 'inferium', t: 1, dim: 'overworld', lens: 11, y: [-16, 80], miner: 'foliot', ore: 'mysticalagriculture:inferium_ore' },
     { n: 'prosperity', t: 1, dim: 'overworld', lens: 11, y: [32, 128], miner: 'foliot', ore: 'mysticalagriculture:prosperity_ore' },
     { n: 'uranium', t: 1, dim: 'overworld', lens: 12, y: [0, 128], miner: 'foliot' },
@@ -183,7 +183,7 @@ ServerEvents.recipes(allthemods => {
     { n: 'electrotine', t: 2, dim: 'nether', lens: 5, y: [65, 120], miner: 'foliot' },
     { n: 'lapis', t: 2, dim: 'nether', lens: 5, y: [38, 93], miner: 'foliot' },
     { n: 'redstone', t: 2, dim: 'nether', lens: 5, y: [10, 65], miner: 'foliot' },
-    { n: 'blazegold', t: 2, dim: 'nether', lens: 6, y: [10, 83], miner: 'foliot' },
+    { n: 'blazegold', t: 2, dim: 'nether', lens: 6, y: [10, 83], miner: 'foliot', ore: 'justdirethings:raw_blazegold_ore', raw: 'justdirethings:raw_blazegold' },
     { n: 'soulium', t: 2, dim: 'nether', lens: 6, y: [47, 120], miner: 'foliot', ore: 'mysticalagriculture:soulium_ore' },
     // ---- end ----
     { n: 'aluminium', t: 3, dim: 'end', lens: 0, y: [0, 32], miner: 'foliot' },
@@ -205,8 +205,8 @@ ServerEvents.recipes(allthemods => {
     { n: 'naquadah', t: 3, dim: 'end', lens: 6, y: [0, 80], miner: 'foliot' },
     { n: 'azure_silver', t: 3, dim: 'end', lens: 7, y: [30, 60], miner: 'foliot' },
     { n: 'crimson_iron', t: 3, dim: 'end', lens: 7, y: [0, 32], miner: 'foliot' },
-    { n: 'draconium', t: 3, dim: 'end', lens: 7, y: [48, 80], miner: 'foliot' },
-    { n: 'eclipse_alloy', t: 3, dim: 'end', lens: 7, y: [16, 48], miner: 'foliot' },
+    { n: 'draconium', t: 3, dim: 'end', lens: 7, y: [48, 80], miner: 'foliot', ore: 'draconicevolution:end_draconium_ore' },
+    { n: 'eclipsealloy', t: 3, dim: 'end', lens: 7, y: [16, 48], miner: 'foliot', ore: 'justdirethings:raw_eclipsealloy_ore', raw: 'justdirethings:raw_eclipsealloy' },
     { n: 'echo_shard', t: 3, dim: 'end', lens: 8, y: [0, 80], miner: 'foliot', mw: 20, lw: 1, item: 'minecraft:echo_shard' },
     // ---- moon ----
     { n: 'clausthalite', t: 4, dim: 'moon', lens: 0, y: [6, 50], miner: 'djinni' },
