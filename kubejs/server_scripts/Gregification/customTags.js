@@ -22,6 +22,17 @@ ServerEvents.tags('fluid', allthemods => {
 
 ServerEvents.tags('item', allthemods => {
 
+	const mixedGems = [
+		'almandine', 'amethyst', 'blue_topaz', 'topaz', 'green_sapphire', 'sapphire',
+		'opal', 'lazurite', 'sodalite', 'spessartine', 'pyrope', 'grossular',
+		'red_garnet', 'yellow_garnet', 'olivine', 'malachite', 'peridot'
+	]
+	mixedGems.forEach(gem => {
+		['gtceu:' + gem + '_gem', 'alltheores:' + gem, 'thermal:' + gem].forEach(id => {
+			if (Item.exists(id)) allthemods.add('forge:mixed_gem_material', id)
+		})
+	})
+
 	allthemods.add('occultism:miner/foliot', 'occultism:miner_foliot_unspecialized')
 	allthemods.add('occultism:miner/djinni', 'occultism:miner_djinni_ores')
 	allthemods.add('occultism:miner/afrit', 'occultism:miner_afrit_deeps')

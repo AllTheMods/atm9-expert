@@ -2219,6 +2219,13 @@ const materials = [
     new MaterialDef('crude_rubidium_caesium_alum').dust().color(0xBFC7B8).iconSet('DULL').noDecomp(),
     new MaterialDef('refined_rubidium_caesium_alum').dust().color(0xD0D8C4).iconSet('DULL').noDecomp(),
 
+    new MaterialDef('mixed_gem').dust().color(0x8C84B0).iconSet('QUARTZ').noDecomp(),
+new MaterialDef('mixed_gem_calcine').dust().color(0xB89C9A).iconSet('DULL').noDecomp(),
+new MaterialDef('mixed_gem_residue').dust().color(0x9C7C70).iconSet('DULL').noDecomp(),
+new MaterialDef('mixed_gem_lime_cake').dust().color(0xA89484).iconSet('DULL').noDecomp(),
+new MaterialDef('mixed_gem_rare_earth').dust().color(0xC4B08C).iconSet('DULL').noDecomp(),
+new MaterialDef('sodium_aluminate').dust().color(0xD9D2C4).iconSet('DULL').formula('NaAlO2').components('1x sodium, 1x aluminium, 2x oxygen'),
+
 ];
 
 

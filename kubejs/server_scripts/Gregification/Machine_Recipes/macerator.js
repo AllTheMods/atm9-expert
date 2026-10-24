@@ -12,9 +12,15 @@ ServerEvents.recipes(allthemods => {
                 .duration(80)
                 .EUt(LV);
 
-        allthemods.recipes.gtceu.macerator('gregification:macerate_apatite_sulfur')
+        allthemods.recipes.gtceu.macerator('gregification:macerate_apatite')
                 .itemInputs('thermal:apatite')
                 .itemOutputs('2x gtceu:apatite_dust')
+                .duration(80)
+                .EUt(LV);
+
+        allthemods.recipes.gtceu.macerator('gregification:macerate_niter')
+                .itemInputs('thermal:niter')
+                .itemOutputs('2x thermal:niter_dust')
                 .duration(80)
                 .EUt(LV);
 

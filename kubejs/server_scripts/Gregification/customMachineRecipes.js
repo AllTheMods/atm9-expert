@@ -133,7 +133,8 @@ ServerEvents.recipes(allthemods => {
         { machine: '_liquifier', startTier: 2, endTier: 8 },
         { machine: '_sanguine_refinery', startTier: 2, endTier: 8 },
         { machine: '_unifier', startTier: 2, endTier: 8 },        
-        { machine: '_gem_polisher', startTier: 6, endTier: 8 }
+        { machine: '_gem_polisher', startTier: 6, endTier: 8 },
+        { machine: '_gem_crusher', startTier: 3, endTier: 8 },
     ]
 
     machineTiers.forEach(tData => {
@@ -346,6 +347,20 @@ ServerEvents.recipes(allthemods => {
                     600,
                     tierValues[tData.t - 1]
                 )
+            }
+            if (mData.machine == '_gem_crusher' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                allthemods.shaped(`gtceu:${tData.tier}_gem_crusher`, [
+                    'TIT',
+                    'MHM',
+                    'CGC'
+                ], {
+                    H: hull,
+                    T: plate,
+                    C: circuit,
+                    I: piston,
+                    M: motor,
+                    G: 'gtceu:diamond_grinding_head'
+                }).id(`gregification:${tData.tier}_gem_crusher`);
             }
         })
     });
