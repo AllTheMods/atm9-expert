@@ -1,5 +1,7 @@
 StartupEvents.registry('item', event => {
 
+    event.create('gtceu:raw_model_neuron').displayName('Raw Model Neuron')
+
     event.create('gtceu:technomancy_orb')
         .displayName('Technomancy Orb')
         .tooltip('Orb of Technomantic Ascendancy')

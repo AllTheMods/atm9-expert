@@ -16,7 +16,7 @@ ServerEvents.recipes(allthemods => {
         ETRIUM: 13500,
         INFINITY: 15000
     };
-        
+
     allthemods.shaped('gtceu:industrial_leacher', [
         'TCT',
         'OHO',
@@ -30,7 +30,7 @@ ServerEvents.recipes(allthemods => {
         W: 'gtceu:tungsten_steel_normal_fluid_pipe'
     }).id('gregification:controllers/industrial_leacher')
 
-    
+
     allthemods.shaped('gtceu:dissolution_tank', [
         'ECE',
         'MHM',
@@ -44,7 +44,7 @@ ServerEvents.recipes(allthemods => {
         P: 'gtceu:iv_electric_pump'
     }).id('gregification:controllers/dissolution_tank')
 
-    
+
     allthemods.shaped('gtceu:acid_brewing_vat', [
         'NCN',
         'PHP',
@@ -57,4 +57,72 @@ ServerEvents.recipes(allthemods => {
         T: '#forge:plates/tungsten_carbide',
         O: '#forge:frames/vibranium'
     }).id('gregification:controllers/acid_brewing_vat')
+
+    const launchDuration = 2000;
+    const launchEUt = UV;
+    const launchArrows = 1024;
+    const neuronChance = 500;
+    const selfAwareData = 1254;
+
+    allthemods.recipes.gtceu.subatomic_projectile_launcher('gregification:subatomic_projectile_launch')
+        .itemInputs(launchArrows + 'x minecraft:arrow')
+        .notConsumable('hostilenetworks:blank_data_model')
+        .chancedOutput('gtceu:raw_model_neuron', neuronChance, 0)
+        .duration(launchDuration)
+        .EUt(launchEUt);
+
+    const awareModels = ['zombie', 'skeleton', 'wither_skeleton', 'wither', 'elder_guardian', 'guardian', 'ender_dragon', 'enderman', 'shulker', 'hoglin', 'pig', 'squid', 'warden', 'blaze', 'ghast', 'drowned', 'spider', 'witch', 'iron_golem', 'doppleganger', 'wraith', '~death_tome', '-piglich'];
+
+    awareModels.forEach(creature => {
+        let modelId = creature;
+        if (creature[0] == '~') { modelId = 'twilightforest/' + creature.slice(1); }
+        else if (creature[0] == '-') { modelId = 'allthemodium/' + creature.slice(1); }
+        let slug = modelId.replace('/', '_');
+
+        let anyModel = Item.of('hostilenetworks:data_model', '{data_model:{id:"hostilenetworks:' + modelId + '"}}').weakNBT();
+        let awareModel = Item.of('hostilenetworks:data_model', '{data_model:{data:' + selfAwareData + ',id:"hostilenetworks:' + modelId + '"}}').strongNBT();
+
+        allthemods.shapeless(awareModel, [anyModel, 'gtceu:raw_model_neuron'])
+            .modifyResult((grid, result) => {
+                let model = grid.find('hostilenetworks:data_model');
+                let out = model.copy();
+                let tag = out.getOrCreateTag();
+                let dm = tag.getCompound('data_model');
+                dm.putInt('data', selfAwareData);
+                tag.put('data_model', dm);
+                return out;
+            })
+            .id('gregification:self_aware/' + slug);
+    });
+
+    allthemods.shapeless('hostilenetworks:data_model', ['hostilenetworks:data_model', 'gtceu:raw_model_neuron'])
+        .modifyResult((grid, result) => {
+            let model = grid.find('hostilenetworks:data_model');
+            let out = model.copy();
+            let tag = out.getOrCreateTag();
+            let dm = tag.getCompound('data_model');
+            dm.putInt('data', selfAwareData);
+            tag.put('data_model', dm);
+            return out;
+        })
+        .id('gregification:self_aware/any_model');
+
+
+    allthemods.recipes.gtceu.assembly_line('gregification:craft_subatomic_projectile_launcher')
+        .itemInputs(
+            'gtceu:uv_machine_hull',
+            '4x #gtceu:circuits/uv',
+            '4x gtceu:uv_emitter',
+            '2x gtceu:uv_field_generator',
+            '4x gtceu:uv_robot_arm',
+            '8x gtceu:atomic_casing',
+            '8x minecraft:dispenser',
+            '4x minecraft:target',
+            '16x #forge:plates/tritanium'
+        )
+        .inputFluids('#forge:soldering_alloy 2304', '#forge:polybenzimidazole 2304')
+        .itemOutputs('gtceu:subatomic_projectile_launcher')
+        .scannerResearch('hostilenetworks:blank_data_model')
+        .duration(1800)
+        .EUt(UV);
 });

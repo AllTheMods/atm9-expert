@@ -632,6 +632,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.remove({ type: 'mysticalagriculture:awakening' });
     allthemods.remove({ type: 'evilcraft:blood_infuser' });
     allthemods.remove({ type: 'pneumaticcraft:pressure_chamber' });
+    allthemods.remove({ id: /^utilitarian:utility\// });
     
 
     // Input Removals

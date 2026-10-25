@@ -1018,5 +1018,8 @@
     "block.gtceu.destination_encoder": "Destination Encoder",
     "block.gtceu.research_compiler": "Research Compiler",
     "block.gtceu.launch_platform": "Launch Platform",
-    "block.gtceu.payload_opener": "Payload Opener"
+    "block.gtceu.payload_opener": "Payload Opener",
+    "item.gtceu.raw_model_neuron": "Raw Model Neuron",
+    "block.gtceu.subatomic_projectile_launcher": "Subatomic Projectile Launcher",
+    "gtceu.subatomic_projectile_launcher": "Subatomic Projectile Launcher"
 }
