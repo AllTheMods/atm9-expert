@@ -156,7 +156,7 @@ StartupEvents.registry('item', event => {
 
     event.create('gtceu:bacteria_gene_sample')
         .displayName('Gene Sample (Bacteria)')
-        .texture('gendustry:item/gene_sample'); // reuse visual only - confirm real path
+        //.texture('gendustry:item/gene_sample'); // reuse visual only - confirm real path
 
     quarks.forEach(quark => {
         event.create(`gtceu:${quark.name}_quark`)
