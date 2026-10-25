@@ -77,7 +77,7 @@ ServerEvents.recipes(allthemods => {
 
     DEST.forEach(d => {
         const ship = 'gtceu:ship_mk' + d.mk;
-        S.FUELS.forEach(f => {
+        S.FUELS.forEach((f, fuelIndex) => {
             if (f.tier < d.mk) return;
             const fuelAmount = Math.round(d.d * f.perDistance);
             const fluids = [f.fluid + ' ' + fuelAmount];
@@ -86,6 +86,7 @@ ServerEvents.recipes(allthemods => {
             const seconds = S.FLIGHT_BASE_SECONDS + (d.d * S.FLIGHT_SECONDS_PER_DISTANCE) / f.speed;
             allthemods.recipes.gtceu.launch_platform('gregification:space/launch/' + d.id + '/' + f.id)
                 .notConsumable(ship)
+                .circuit(fuelIndex + 1)
                 .itemInputs(Item.of('gtceu:destination_card', { destination: d.id, name: d.name, distance: d.d, tier: d.mk }).strongNBT())
                 .inputFluids(fluids)
                 .itemOutputs(Item.of('gtceu:cargo_pod', { destination: d.id, name: d.name }))

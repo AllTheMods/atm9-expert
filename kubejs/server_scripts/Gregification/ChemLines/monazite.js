@@ -100,8 +100,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:monazite/light_terminal')
         .inputFluids('#forge:monazite_loaded_extractant 20000', '#forge:oxalic_acid 4000')
         .itemOutputs('4x gtceu:cerium_oxide_dust', '3x gtceu:lanthanum_hydroxide_dust')
-        .chancedOutput('gtceu:neodymium_dust', 4000, 1000)
-        .chancedOutput('gtceu:praseodymium_dust', 3000, 1000)
+        .chancedOutput('gtceu:neodymium_praseodymium_dust', 5000, 1000)
         .outputFluids('gtceu:rare_earth_extractant 19000', 'gtceu:carbon_dioxide 3000')
         .duration(durationComplex)
         .EUt(EUComplex);
