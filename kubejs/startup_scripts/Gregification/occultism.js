@@ -22,7 +22,7 @@ StartupEvents.registry('item', event => {
     event.create('occultism:miner_ancient_eldritch')
         .texture('layer0', 'occultism:item/magic_lamp')
         .displayName('Eldritch Miner')
-        .rarity('EPIC')
+        //.rarity('EPIC')
         .glow(true)
         .maxDamage(2500) // Gives it physical durability so hurtAndBreak() doesn't error out
         .unstackable();   // Ensures automation filters treat it like a single tool        

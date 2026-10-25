@@ -1239,7 +1239,7 @@ StartupEvents.registry('item', allthemods => {
             const item = allthemods.create(`gtceu:${entry.id}`)
                 .displayName(entry.name)
                 .tooltip(entry.tooltip)
-                .rarity('ie_masterwork')
+                //.rarity('ie_masterwork')
 
             if (entry.texture) item.texture(entry.texture)
         })

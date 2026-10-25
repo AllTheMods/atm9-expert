@@ -24,7 +24,7 @@ StartupEvents.registry('item', allthemods => {
         allthemods.create(`gtceu:blueprint_${bp.id}`)            
             .texture('minecraft:item/paper')
             .color(0, 0x007EA7)
-            .rarity('ADVANCED')
+            //.rarity('ADVANCED')
             .displayName(`Blueprint (${bp.name})`)                                                
             .tooltip(`§7A ${bp.name} blueprint.`);
         });

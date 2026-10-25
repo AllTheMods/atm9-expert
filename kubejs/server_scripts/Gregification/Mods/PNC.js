@@ -39,7 +39,7 @@ ServerEvents.recipes(allthemods => {
         H: 'gtceu:lv_machine_hull',
         C: '#gtceu:circuits/lv',
         T: '#gtceu:wires/octal/cadmium_copper',
-        P: 'gtceu:iv_electric_piston'
+        P: 'gtceu:lv_electric_piston'
     }).id('gregification:pnc/pressure_chamber')
 
     allthemods.recipes.gtceu.assembler('gregification:flux_compressor')

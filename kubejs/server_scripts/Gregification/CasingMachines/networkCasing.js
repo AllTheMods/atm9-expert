@@ -263,7 +263,7 @@ ServerEvents.recipes(allthemods => {
     ], {
         P: '#forge:plates/vibrant_alloy',
         C: 'gtceu:hv_emitter',
-        L: '#gtceu:circuits/ev',
+        L: '#gtceu:circuits/hv',
         N: 'gtceu:network_casing',
         G: '#forge:plates/signalum',
         R: 'gtceu:hv_sensor'
