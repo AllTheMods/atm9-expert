@@ -95,32 +95,35 @@ ServerEvents.recipes(allthemods => {
     });
 
     DEST.forEach(d => {
-        const r = allthemods.recipes.gtceu.payload_opener('gregification:space/open/' + d.id)
-            .itemInputs(Item.of('gtceu:cargo_pod', { destination: d.id, name: d.name }).strongNBT())
-            .itemOutputs('gtceu:crashed_scrap')
-            .duration(S.OPEN_DURATION)
-            .EUt(volt(S.OPENER_VOLTAGE, d.mk));
+        var dataType = d.mk === 6 ? null : typeOf(d.data);
+        for (var b = 0; b <= 2; b++) {
+            var haulChance = Math.min(10000, S.HAUL_CHANCE_BASE + S.HAUL_CHANCE_BOOST_PER_TIER * b);
+            var researchChance = Math.min(10000, S.RESEARCH_CHANCE_BASE + S.RESEARCH_CHANCE_BOOST_PER_TIER * b);
+            var r = allthemods.recipes.gtceu.payload_opener('gregification:space/open/' + d.id + '_plus' + b)
+                .itemInputs(Item.of('gtceu:cargo_pod', { destination: d.id, name: d.name }).strongNBT())
+                .circuit(b + 1)
+                .itemOutputs('gtceu:crashed_scrap')
+                .duration(S.OPEN_DURATION)
+                .EUt(GTValues.VA[2 + d.mk + b]);
 
-        d.haul.forEach(h => {
-            const res = resolve(h[0], h[2], h[1]);
-            if (!res) {
-                console.warn('[space_mission] unresolved haul ' + h[0] + ' (' + h[2] + ') for ' + d.id);
-                return;
-            }
-            if (res.type === 'item') {
-                r.chancedOutput(Item.of(res.id, res.count), S.HAUL_CHANCE_BASE, S.HAUL_CHANCE_BOOST_PER_TIER);
-            } else {
-                r.chancedFluidOutput(res.id + ' ' + res.amount, S.HAUL_CHANCE_BASE, S.HAUL_CHANCE_BOOST_PER_TIER);
-            }
-        });
+            d.haul.forEach(h => {
+                var res = resolve(h[0], h[2], h[1]);
+                if (!res) {
+                    if (b === 0) console.warn('[space_mission] unresolved haul ' + h[0] + ' (' + h[2] + ') for ' + d.id);
+                    return;
+                }
+                if (res.type === 'item') {
+                    r.chancedOutput(Item.of(res.id, res.count), haulChance, 0);
+                } else {
+                    r.chancedFluidOutput(res.id + ' ' + res.amount, haulChance, 0);
+                }
+            });
 
-        if (d.mk === 6) {
-            r.itemOutputs(Item.of('gtceu:cosmic_research_fragment', S.COSMIC_GUARANTEED));
-            r.chancedOutput(Item.of('gtceu:cosmic_research_fragment', 1), S.COSMIC_EXTRA_CHANCE, 0);
-        } else {
-            var dataType = typeOf(d.data);
-            if (dataType) {
-                r.chancedOutput(Item.of('gtceu:' + dataType + '_research_fragment_mk' + d.mk, S.FRAGMENT_COUNT), S.RESEARCH_CHANCE_BASE, S.RESEARCH_CHANCE_BOOST_PER_TIER);
+            if (d.mk === 6) {
+                r.itemOutputs(Item.of('gtceu:cosmic_research_fragment', S.COSMIC_GUARANTEED));
+                r.chancedOutput(Item.of('gtceu:cosmic_research_fragment', 1), S.COSMIC_EXTRA_CHANCE, 0);
+            } else if (dataType) {
+                r.chancedOutput(Item.of('gtceu:' + dataType + '_research_fragment_mk' + d.mk, S.FRAGMENT_COUNT), researchChance, 0);
             }
         }
     });
@@ -190,10 +193,11 @@ ServerEvents.recipes(allthemods => {
         .EUt(HV);
 
     // Molten metal per tier (assembler: HV steel, EV titanium; assembly line: tungsten steel + lubricant + solder)
+    const SHIP_METAL = { 1: 'stainless_steel', 2: 'titanium', 3: 'tungsten_steel', 4: 'rhodium_plated_palladium', 5: 'naquadah_alloy', 6: 'etrium' };
     const shipFluids = tier => {
-        if (tier === 1) return ['gtceu:steel 15984'];
-        if (tier === 2) return ['gtceu:titanium 15984'];
-        return ['gtceu:tungsten_steel 15984', 'gtceu:lubricant 16000', '#forge:soldering_alloy 16000'];
+        var f = ['gtceu:' + SHIP_METAL[tier] + ' 15984'];
+        if (tier >= 3) f.push('gtceu:lubricant 16000', '#forge:soldering_alloy 16000');
+        return f;
     };
 
     const addPart = (id, tier, inputs, outputs, research) => {
@@ -201,7 +205,6 @@ ServerEvents.recipes(allthemods => {
         const r = (tier <= 2 ? allthemods.recipes.gtceu.assembler(rid) : allthemods.recipes.gtceu.assembly_line(rid))
             .itemInputs(inputs)
             .itemOutputs(outputs)
-            .inputFluids(shipFluids(tier))
             .duration(tier <= 2 ? S.PART_DURATION : S.PART_DURATION * 2)
             .EUt(VOLT[S.SHIP_TIER_VOLTAGE[tier]]);
         if (research) r.notConsumable(research);
