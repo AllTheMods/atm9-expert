@@ -1,5 +1,9 @@
 {
-    "ldlib": {
-        "connection": "gtceu:block/casings/draconium_casing/draconium_casing_ctm"
-    }
+  "ldlib": {
+    "connection": "gtceu:block/casings/draconium_casing/draconium_casing_ctm"
+  },
+  "animation": {
+    "frametime": 2,
+    "interpolate": false
+  }
 }

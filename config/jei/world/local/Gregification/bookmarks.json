@@ -1,0 +1,8 @@
+[
+  {"version":1},
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:raw_infinity\"}"},
+  {"type":"recipe","value":"gtceu:industrial_leacher#gregification:industrial_leacher/ion_clay/leach#item_stack\u0026gtceu:rare_earth_clay_mud_dust"},
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:industrial_leacher\"}"},
+  {"type":"recipe","value":"gtceu:wiremill#gtceu:wiremill/mill_infinity_wire#item_stack\u0026gtceu:infinity_single_wire"},
+  {"type":"item_stack","value":"{Count:1b,id:\"kubejs:infinity_coil_block\"}"}
+]

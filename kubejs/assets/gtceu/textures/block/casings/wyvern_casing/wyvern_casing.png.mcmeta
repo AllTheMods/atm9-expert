@@ -1,5 +1,9 @@
 {
-    "ldlib": {
-        "connection": "gtceu:block/casings/wyvern_casing/wyvern_casing_ctm"
-    }
+  "ldlib": {
+    "connection": "gtceu:block/casings/wyvern_casing/wyvern_casing_ctm"
+  },
+  "animation": {
+    "frametime": 2,
+    "interpolate": false
+  }
 }

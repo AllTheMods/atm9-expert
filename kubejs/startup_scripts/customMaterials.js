@@ -33,12 +33,50 @@ StartupEvents.registry('block', allthemods => {
 
     ]
 
-    
+    allthemods.create(`draconium_coil_block`, "gtceu:coil")
+        //.textureAll('kubejs:block/coils/draconium_coil_block')
+        .temperature(11200)
+        .level(20)
+        .energyDiscount(6)
+        .tier(9)
+        .coilMaterial(() => GTMaterials.get('draconium'))
+        .hardness(5)
+        .soundType("metal");
+
+    allthemods.create(`draconium_awakened_coil_block`, "gtceu:coil")
+        //.textureAll('kubejs:block/coils/draconium_awakened_coil_block')
+        .temperature(12800)
+        .level(24)
+        .energyDiscount(8)
+        .tier(10)
+        .coilMaterial(() => GTMaterials.get('draconium_awakened'))
+        .hardness(5)
+        .soundType("metal");
+
+    allthemods.create(`etrium_coil_block`, "gtceu:coil")
+        //.textureAll('kubejs:block/coils/etrium_coil_block')
+        .temperature(13500)
+        .level(28)
+        .energyDiscount(10)
+        .tier(11)
+        .coilMaterial(() => GTMaterials.get('etrium'))
+        .hardness(5)
+        .soundType("metal");
+
+    allthemods.create(`infinity_coil_block`, "gtceu:coil")
+        //.textureAll('kubejs:block/coils/infinity_coil_block')
+        .temperature(15000)
+        .level(32)
+        .energyDiscount(12)
+        .tier(12)
+        .coilMaterial(() => GTMaterials.get('infinity'))
+        .hardness(5)
+        .soundType("metal");
 
     allthemods.create(`gtceu:slate_casing`)
         // @ts-ignore
         .displayName('Slate Casing')
-        .textureAll('gtceu:block/casings/slate_casing/slate_casing')
+        //.textureAll('gtceu:block/casings/slate_casing/slate_casing')
         .hardness(1.0)
         .resistance(1.0)
         .soundType('metal')
@@ -47,7 +85,7 @@ StartupEvents.registry('block', allthemods => {
     allthemods.create(`gtceu:gadolinium_casing`)
         // @ts-ignore
         .displayName('Gadolinium Casing')
-        .textureAll(`gtceu:block/casings/gadolinium_casing/gadolinium_casing`)
+        //.textureAll(`gtceu:block/casings/gadolinium_casing/gadolinium_casing`)
         .hardness(5.0)
         .resistance(10.0)
         .soundType('metal')
@@ -56,7 +94,7 @@ StartupEvents.registry('block', allthemods => {
     allthemods.create(`gtceu:heat_exchange_casing`)
         // @ts-ignore
         .displayName('Heat Exchange Casing')
-        .textureAll(`gtceu:block/casings/heat_exchange_casing/heat_exchange_casing`)
+        //.textureAll(`gtceu:block/casings/heat_exchange_casing/heat_exchange_casing`)
         .hardness(5.0)
         .resistance(10.0)
         .soundType('metal')
@@ -65,7 +103,7 @@ StartupEvents.registry('block', allthemods => {
     allthemods.create(`gtceu:adamantium_casing`)
         // @ts-ignore
         .displayName('Adamantium Casing')
-        .textureAll(`gtceu:block/casings/adamantium_casing/adamantium_casing`)
+        //.textureAll(`gtceu:block/casings/adamantium_casing/adamantium_casing`)
         .hardness(5.0)
         .resistance(10.0)
         .soundType('metal')
@@ -74,16 +112,16 @@ StartupEvents.registry('block', allthemods => {
     allthemods.create(`gtceu:zirconium_casing`)
         // @ts-ignore
         .displayName('Zirconium Casing')
-        .textureAll(`gtceu:block/casings/zirconium_casing/zirconium_casing`)
+        //.textureAll(`gtceu:block/casings/zirconium_casing/zirconium_casing`)
         .hardness(5.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
 
     allthemods.create('gtceu:magical_soil')
-        .textureAll('gtceu:block/casings/magical_soil/magical_soil_side')
-        .texture('up', 'gtceu:block/casings/magical_soil/magical_soil_top')
-        .texture('down', 'gtceu:block/casings/magical_soil/magical_soil_side')
+        //.textureAll('gtceu:block/casings/magical_soil/magical_soil_side')
+        //.texture('up', 'gtceu:block/casings/magical_soil/magical_soil_top')
+        //.texture('down', 'gtceu:block/casings/magical_soil/magical_soil_side')
         .displayName('§bMagical Soil')
         .grassSoundType()
         .mapColor('grass')
@@ -93,7 +131,7 @@ StartupEvents.registry('block', allthemods => {
         let block = allthemods.create(`gtceu:${coil.name}_casing`)
             // @ts-ignore
             .displayName(coil.displayName)
-            .textureAll(`gtceu:block/casings/${coil.name}_casing/${coil.name}_casing`)
+            //.textureAll(`gtceu:block/casings/${coil.name}_casing/${coil.name}_casing`)
             .hardness(5.0)
             .resistance(10.0)
             .soundType('metal')
@@ -108,7 +146,7 @@ StartupEvents.registry('block', allthemods => {
             .hardness(5.0)
             .resistance(10.0)
             .soundType('metal')
-            .textureAll(casing.tex) // These paths are now verified
+            //.textureAll(casing.tex)
             .tagBlock('gtceu:casings');
 
         if (casing.color) {
@@ -193,5 +231,6 @@ GTCEuStartupEvents.registry("gtceu:material_icon_set", allthemods => {
     allthemods.create("bacteria_seed").parent(GTMaterialIconSet.DULL)
     allthemods.create("bacteria_vegetative").parent(GTMaterialIconSet.DULL)
     allthemods.create("kevlar").parent(GTMaterialIconSet.DULL)
+    allthemods.create("bedrockium").parent(GTMaterialIconSet.DULL)
 
 })

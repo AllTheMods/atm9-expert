@@ -4,19 +4,19 @@
 StartupEvents.registry('item', allthemods => {
     allthemods
         .create('universal_press')
-        .texture('kubejs:item/universal_press')
+        //.texture('kubejs:item/universal_press')
         .maxStackSize(64)
         .displayName('Universal Press');
 
     allthemods
         .create('universal_addon_press')
-        .texture('kubejs:item/universal_addon_press')
+        //.texture('kubejs:item/universal_addon_press')
         .maxStackSize(64)
         .displayName('Universal Addon Press');
 
     allthemods
         .create('ultimate_universal_press')
-        .texture('kubejs:item/ultimate_universal_press')
+        //.texture('kubejs:item/ultimate_universal_press')
         .maxStackSize(64)
         .displayName('Ultimate Universal Press');
 })

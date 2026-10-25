@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtceu:block/casings/hexagonal_bio_composite/hexagonal_bio_composite"
+  }
+}

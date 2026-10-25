@@ -297,7 +297,7 @@ ServerEvents.recipes(allthemods => {
 
         }
     );
-
+/*
     replaceShaped('minecraft:flint_and_steel',null,
         [
             'G  ',
@@ -348,4 +348,5 @@ ServerEvents.recipes(allthemods => {
         }
     );
     
+*/ 
 });

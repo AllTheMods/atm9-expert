@@ -1,5 +1,9 @@
 {
-    "ldlib": {
-        "connection": "gtceu:block/coils/draconium_awakened_ctm"		
-    }    
+  "ldlib": {
+    "connection": "gtceu:block/coils/draconium_awakened_ctm"
+  },
+  "animation": {
+    "frametime": 2,
+    "interpolate": false
+  }
 }

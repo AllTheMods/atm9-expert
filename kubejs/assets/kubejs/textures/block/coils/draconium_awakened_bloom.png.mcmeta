@@ -1,9 +1,13 @@
 {
-    "ldlib": {
-        "connection": "kubejs:block/coils/draconium_awakened_bloom_ctm",
-        "emissive": true
-    },
-    "shimmer": {
-        "bloom": true
-    }
+  "ldlib": {
+    "connection": "kubejs:block/coils/draconium_awakened_bloom_ctm",
+    "emissive": true
+  },
+  "shimmer": {
+    "bloom": true
+  },
+  "animation": {
+    "frametime": 2,
+    "interpolate": false
+  }
 }

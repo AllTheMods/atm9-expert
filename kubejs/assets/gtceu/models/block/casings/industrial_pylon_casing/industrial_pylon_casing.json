@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtceu:block/casings/industrial_pylon_casing/industrial_pylon_casing"
+  }
+}

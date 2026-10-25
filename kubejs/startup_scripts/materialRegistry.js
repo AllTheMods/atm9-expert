@@ -1486,7 +1486,7 @@ const materials = [
 
     new MaterialDef('tectonic_petrotheum').dust().gem().fluid().color(0x352821).iconSet('GEM_VERTICAL'),
 
-    new MaterialDef('bedrockium').ingot().ore().dust().color(0x101010).iconSet('METALLIC').noSmelting().singularity().noDecomp().materialsBasic()
+    new MaterialDef('bedrockium').ingot().ore().dust().color(0x101010).iconSet('bedrockium').noSmelting().singularity().noDecomp().materialsBasic()
         .byproducts(['debris', 'netherite', 'bedrockium']),
 
     new MaterialDef('debris').ore().color(0x6E5A52).iconSet('METALLIC')
@@ -2054,7 +2054,7 @@ const materials = [
     new MaterialDef('fluorite').gem().ore().color(0x0c9949).iconSet('DIAMOND').components('1x calcium, 2x fluorine'),
     new MaterialDef('dolomite').dust().ore().color(0xf2e4bd).iconSet('ROUGH').components('1x calcium, 1x magnesium, 1x carbon, 3x oxygen').formula('CaMg(CO3)2'),
     new MaterialDef('star_matter').plasma('customStill').color(0xb219d1),
-    new MaterialDef('infinity').ingot().fluid('customStill').element('infinity').color(0xffffff).iconSet('infinity').materialsAll()
+    new MaterialDef('infinity').ingot().fluid('customStill').element('infinity').color(0xffffff).iconSet('infinity').materialsAll().ore().ignoreAllOrePrefixes()
         //.flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FOIL)
         .cable({ voltage: 134217728, loss: 2 })
         .blast({ temp: COIL_TEMPS.ETRIUM, eut: 33554432, duration: 600 }),
@@ -2131,17 +2131,17 @@ const materials = [
     new MaterialDef('neodymium_rare_earth_dopant').dust().color(0xA48C7E).iconSet('METALLIC').components('2x neodymium, 1x praseodymium, 1x promethium, 1x terbium, 1x dysprosium').formula('Nd2PrPmTbDy').noDecomp(),
     new MaterialDef('artificial_cerebrospinal_fluid').fluid().color(0xA8D8E8).iconSet(GTMaterialIconSet.FLUID).components('2x sodium', '1x potassium', '1x calcium', '1x magnesium', '2x glycerol', '6x distilled_water'),
 
-    new MaterialDef('bacteria_seed').dust().color(0xA8C878).iconSet('bacteria_seed')
+    new MaterialDef('bacteria_seed').dust().color(0xFFFFFF).iconSet('bacteria_seed')
         .unify({ dustTiny: true, dustSmall: true }),
-    new MaterialDef('bacteria_cultivated').dust().color(0x8CB860).iconSet('bacteria_cultivated')
+    new MaterialDef('bacteria_cultivated').dust().color(0xFFFFFF).iconSet('bacteria_cultivated')
         .unify({ dustTiny: true, dustSmall: true }),
-    new MaterialDef('bacteria_vegetative').dust().color(0x6EA048).iconSet('bacteria_vegetative')
+    new MaterialDef('bacteria_vegetative').dust().color(0xFFFFFF).iconSet('bacteria_vegetative')
         .unify({ dustTiny: true, dustSmall: true }),
-    new MaterialDef('bacteria_matrix').dust().color(0x508A30).iconSet('bacteria_matrix')
+    new MaterialDef('bacteria_matrix').dust().color(0xFFFFFF).iconSet('bacteria_matrix')
         .unify({ dustTiny: true, dustSmall: true }),
-    new MaterialDef('bacteria_mutated').dust().color(0x9AD850).iconSet('bacteria_mutated')
+    new MaterialDef('bacteria_mutated').dust().color(0xFFFFFF).iconSet('bacteria_mutated')
         .unify({ dustTiny: true, dustSmall: true }),
-    new MaterialDef('bacteria_colony').dust().color(0x3C7020).iconSet('bacteria_colony')
+    new MaterialDef('bacteria_colony').dust().color(0xFFFFFF).iconSet('bacteria_colony')
         .unify({ dustTiny: true, dustSmall: true }),
 
 

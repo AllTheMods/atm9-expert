@@ -1,5 +1,9 @@
 {
-    "ldlib": {
-        "connection": "kubejs:block/coils/etrium_ctm"		
-    }    
+  "ldlib": {
+    "connection": "kubejs:block/coils/etrium_ctm"
+  },
+  "animation": {
+    "frametime": 2,
+    "interpolate": false
+  }
 }

@@ -104,33 +104,33 @@ StartupEvents.registry('item', allthemods => {
         .displayName('Yttrium Aluminium Garnet Raw Circuit')
         .tooltip('Yttrium Aluminium Garnet Boule')
         //.rarity('ie_masterwork')
-        .texture('gtceu:item/neutronium_boule')
-        .color(0, 0xE8E8F0)
+        //.texture('gtceu:item/neutronium_boule')
+        //.color(0, 0xE8E8F0)
 
     allthemods.create('gtceu:neodymium_doped_yttrium_aluminium_garnet_boule')
         .displayName('Neodymium Doped Yttrium Aluminium Garnet Raw Circuit')
         .tooltip('Neodymium Doped Yttrium Aluminium Garnet Boule')
         //.rarity('ie_masterwork')
-        .texture('gtceu:item/neutronium_boule')
-        .color(0, 0xC9A8E0)
+        //.texture('gtceu:item/neutronium_boule')
+        //.color(0, 0xC9A8E0)
 
     allthemods.create('gtceu:praseodymium_doped_yttrium_aluminium_garnet_boule')
         .displayName('Praseodymium Doped Yttrium Aluminium Garnet Raw Circuit')
         .tooltip('Praseodymium Doped Yttrium Aluminium Garnet Boule')
         //.rarity('ie_masterwork')
-        .texture('gtceu:item/neutronium_boule')
-        .color(0, 0xC8D46A)
+        //.texture('gtceu:item/neutronium_boule')
+        //.color(0, 0xC8D46A)
 
     allthemods.create('gtceu:cubic_zirconia_boule')
         .displayName('Zirconia Raw Circuit')
         .tooltip('Cubic Zirconia Boule')
         //.rarity('ie_masterwork')
-        .texture('gtceu:item/neutronium_boule')
-        .color(0, 0xD8ECF2)
+        //.texture('gtceu:item/neutronium_boule')
+        //.color(0, 0xD8ECF2)
 
     allthemods.create(`gtceu:cubic_zirconia_wafer`)
-        .texture('gtceu:item/neutronium_wafer')
-        .color(0, 0xD8ECF2)
+        //.texture('gtceu:item/neutronium_wafer')
+        //.color(0, 0xD8ECF2)
         .displayName(`Cubic Zirconia Wafer`)
         .tooltip(`Cubic Zirconia Raw Circuit`);
 
@@ -138,56 +138,56 @@ StartupEvents.registry('item', allthemods => {
         .displayName('Bismuth Telluride Raw Circuit')
         .tooltip('Bismuth Telluride Boule')
         //.rarity('ie_masterwork')
-        .texture('gtceu:item/neutronium_boule')
-        .color(0, 0x4B4F5C)
+        //.texture('gtceu:item/neutronium_boule')
+        //.color(0, 0x4B4F5C)
 
     allthemods.create(`gtceu:bismuth_telluride_wafer`)
-        .texture('gtceu:item/neutronium_wafer')
-        .color(0, 0x4B4F5C)
+        //.texture('gtceu:item/neutronium_wafer')
+        //.color(0, 0x4B4F5C)
         .displayName(`Bismuth Telluride Wafer`)
         .tooltip(`Bismuth Telluride Raw Circuit`);
 
     allthemods.create(`gtceu:empowered_boule`)
-        .texture('gtceu:item/neutronium_boule')
-        .color(0, 0xC7C7C7)
+        //.texture('gtceu:item/neutronium_boule')
+        //.color(0, 0xC7C7C7)
         .displayName(`Empowered Boule`)
         .tooltip(`Empowered Raw Circuit`);
 
     allthemods.create(`gtceu:empowered_wafer`)
-        .texture('gtceu:item/neutronium_wafer')
-        .color(0, 0xC7C7C7)
+        //.texture('gtceu:item/neutronium_wafer')
+        //.color(0, 0xC7C7C7)
         .displayName(`Empowered Wafer`)
         .tooltip(`Empowered Raw Circuit`);
 
     allthemods.create(`gtceu:empowered_ram_wafer`)
-        .texture('gtceu:item/ram_wafer')
-        .color(0, 0xC7C7C7)
+        //.texture('gtceu:item/ram_wafer')
+        //.color(0, 0xC7C7C7)
         .displayName(`Empowered Ram Wafer`)
         .tooltip(`Empowered Raw Memory`);
 
     allthemods.create(`gtceu:empowered_ram_chip`)
-        .texture('gtceu:item/ram_chip')
-        .color(0, 0xC7C7C7)
+        //.texture('gtceu:item/ram_chip')
+        //.color(0, 0xC7C7C7)
         .displayName(`Empowered Ram Chip`)
         .tooltip(`Empowered Random Access Memory`);
 
     allthemods.create('gtceu:germanium_boule')
         .displayName('Germanium Boule')
         // Using the existing GT silicon boule texture as a base
-        .texture('gtceu:item/neutronium_boule')
-        .color(0, 0x333333) // Tints the boule to Germanium's dark grey/black
+        //.texture('gtceu:item/neutronium_boule')
+        //.color(0, 0x333333) // Tints the boule to Germanium's dark grey/black
         .tooltip('Germanium doped boule');
 
     allthemods.create('gtceu:germanium_wafer')
         .displayName('Germanium Wafer')
-        .texture('gtceu:item/neutronium_wafer')
-        .color(0, 0x333333) // Tints the wafer to the same dark tone
+        //.texture('gtceu:item/neutronium_wafer')
+        //.color(0, 0x333333) // Tints the wafer to the same dark tone
         .tooltip('Germanium doped wafer');
 
     allthemods.create('gtceu:germanium_diode_wafer')
         .displayName('Germanium Diode Wafer')
-        .texture('gtceu:item/ilc_chip')
-        .color(0, 0x333333) // Tints the wafer to the same dark tone
+        //.texture('gtceu:item/ilc_chip')
+        //.color(0, 0x333333) // Tints the wafer to the same dark tone
         .tooltip('Germanium doped wafer');
 
     allthemods.create('gtceu:germanium_diode')
@@ -198,36 +198,36 @@ StartupEvents.registry('item', allthemods => {
     allthemods.create('gtceu:atomic_boule')
         .displayName('Atomic Boule')
         // Using the existing GT silicon boule texture as a base
-        .texture('gtceu:item/neutronium_boule')
-        .color(0, 0xFFD700) // Tints the boule to Germanium's dark grey/black
+        //.texture('gtceu:item/neutronium_boule')
+        //.color(0, 0xFFD700) // Tints the boule to Germanium's dark grey/black
         .tooltip('Atomic Clock Boule');
 
     allthemods.create('gtceu:atomic_wafer')
         .displayName('Atomic Wafer')
-        .texture('gtceu:item/neutronium_wafer')
-        .color(0, 0xFFD700) // Tints the wafer to the same dark tone
+        //.texture('gtceu:item/neutronium_wafer')
+        //.color(0, 0xFFD700) // Tints the wafer to the same dark tone
         .tooltip('Atomic Clock Wafer');
 
     allthemods.create('gtceu:atomic_clock_wafer')
         .displayName('Atomic Clock IC Wafer')
-        .texture('gtceu:item/ilc_chip')
-        .color(0, 0xFFD700) // Tints the wafer to the same dark tone
+        //.texture('gtceu:item/ilc_chip')
+        //.color(0, 0xFFD700) // Tints the wafer to the same dark tone
         .tooltip('Atomic Clock IC Wafer');
 
     allthemods.create('gtceu:atomic_clock')
         .displayName('Atomic Clock')
-        .texture('gtceu:item/cpu_chip')
-        .color(0, 0xFFD700) // Tints the wafer to the same dark tone
+        //.texture('gtceu:item/cpu_chip')
+        //.color(0, 0xFFD700) // Tints the wafer to the same dark tone
         .tooltip('Atomic Clock IC');
 
     allthemods.create('gtceu:selenium_rectifier')
-        .texture('gtceu:item/selenium_rectifier')
+        //.texture('gtceu:item/selenium_rectifier')
         .displayName('Selenium Rectifier')
 
     allthemods.create('gtceu:polishing_wheel')
-        .texture('gtceu:item/polishing_wheel')
+        //.texture('gtceu:item/polishing_wheel')
         .displayName('Polishing Wheel')
 
     allthemods.create(`gtceu:eternium_grinding_head`)
-        .texture('gtceu:item/eternium_grinding_head')
+        //.texture('gtceu:item/eternium_grinding_head')
 })

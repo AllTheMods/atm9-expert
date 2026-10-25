@@ -224,9 +224,9 @@ ServerEvents.recipes(allthemods => {
         'endertanks:bucket', 'endertanks:tank', 'entangled:block', 'entangled:item',
         'easy_villagers:trader', 'easy_villagers:auto_trader', 'easy_villagers:farmer', 'easy_villagers:breeder',
         'easy_villagers:converter', 'easy_villagers:iron_farm', 'easy_villagers:incubator',
-        'allthemodium:teleport_pad', 'minecraft:flint_and_steel', 'farmingforblockheads:market',
-        'minecraft:cauldron', 'minecraft:brewing_stand', 'minecraft:enchanting_table', 'blue_skies:enchanting_table_compat',
-        'gtceu:assembler/enchanting_table', 'gtceu:assembler/cauldron','gtceu:assembler/brewing_stand',
+        'allthemodium:teleport_pad', 'farmingforblockheads:market', 'blue_skies:enchanting_table_compat',
+        
+        //'minecraft:flint_and_steel', 'gtceu:assembler/enchanting_table', 'gtceu:assembler/cauldron','gtceu:assembler/brewing_stand', 'minecraft:cauldron', 'minecraft:brewing_stand', 'minecraft:enchanting_table',
 
         'thermal:augments/upgrade_augment_1', 'thermal:augments/upgrade_augment_2', 'thermal:augments/upgrade_augment_3',
         'thermal_extra:crafting/abyssal_integral_component', 'thermal_extra:crafting/dragonsteel_integral_component',
@@ -490,6 +490,7 @@ ServerEvents.recipes(allthemods => {
         'extrastorage:part/storagepart_1048576k_fluid',
 
         // --- Applied Energistics 2 & Addons ---
+        'ae2:network/blocks/pattern_providers_interface',
         'ae2:network/blocks/controller', 'ae2:network/blocks/interfaces_interface', 'ae2:network/blocks/storage_chest',
         'ae2:network/blocks/storage_drive', 'ae2:network/blocks/io_condenser', 'ae2:network/blocks/energy_energy_acceptor',
         'ae2:network/crafting/cpu_crafting_unit', 'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/inscribers',

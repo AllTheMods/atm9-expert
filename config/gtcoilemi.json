@@ -25,8 +25,16 @@
     "gtceu:cracker",
     "gtceu:pyrolyse_oven"
   ],
-  "offsetX": 35,
-  "offsetY": -14,
+  "showResearchIcon": true,
+  "researchExcludedCategories": [
+    "gtceu:assembly_line"
+  ],
+  "jeiEnabled": true,
+  "jeiRecipeTypes": [],
+  "meteorTab": true,
+  "meteorActivationCost": 250000,
+  "offsetX": 0,
+  "offsetY": 0,
   "showText": true,
   "textX": -4,
   "textY": 0

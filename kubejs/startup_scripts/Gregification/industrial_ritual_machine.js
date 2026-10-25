@@ -5,7 +5,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create('industrial_ritual_machine')
         .category('ritual')
         .setEUIO('in') // Machine takes power IN
-        .setMaxIOSize(15, 1, 12, 0) // 4 Item In, 1 Item Out, 2 Fluid In
+        .setMaxIOSize(16, 1, 12, 0) // 4 Item In, 1 Item Out, 2 Fluid In
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.CHEMICAL)	
 })

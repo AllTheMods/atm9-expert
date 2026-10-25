@@ -20,7 +20,7 @@ StartupEvents.registry('item', event => {
         .displayName('Mining Dimension Core');
 
     event.create('occultism:miner_ancient_eldritch')
-        .texture('layer0', 'occultism:item/magic_lamp')
+        //.texture('layer0', 'occultism:item/magic_lamp')
         .displayName('Eldritch Miner')
         //.rarity('EPIC')
         .glow(true)
@@ -40,14 +40,14 @@ StartupEvents.registry('item', event => {
     chalks.forEach(chalk => {
         // Pure chalk
         event.create(`occultism:chalk_${chalk.name}`)
-            .texture('layer0', 'occultism:item/chalk_base')
+            //.texture('layer0', 'occultism:item/chalk_base')
             .color(0, chalk.hex)
             .displayName(`${toTitleCase(chalk.name)} Chalk`);
 
         // Impure chalk
         event.create(`occultism:chalk_${chalk.name}_impure`)
-            .texture('layer0', 'occultism:item/chalk_base')
-            .texture('layer1', 'occultism:item/chalk_base_impure')
+            //.texture('layer0', 'occultism:item/chalk_base')
+            //.texture('layer1', 'occultism:item/chalk_base_impure')
             .color(0, chalk.hex)
             .displayName(`Impure ${toTitleCase(chalk.name)} Chalk`);
     });

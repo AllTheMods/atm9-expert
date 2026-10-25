@@ -38,10 +38,10 @@ global.SPACE = {
         { id: 'stage3', fluid: '#forge:rocket_fuel_stage_3', tier: 3, perDistance: 6000, naquadria: 0, darkMatter: 0, speed: 1.5 },
         { id: 'xylene', fluid: '#forge:xylene', tier: 4, perDistance: 6500, naquadria: 0, darkMatter: 0, speed: 1.6 },
         { id: 'stage4', fluid: '#forge:rocket_fuel_stage_4', tier: 4, perDistance: 4000, naquadria: 0, darkMatter: 0, speed: 1.7 },
-        { id: 'mk5alt', fluid: '#forge:xylene', tier: 5, perDistance: 4500, naquadria: 800, darkMatter: 0, speed: 2.0 },
-        { id: 'mk5blend', fluid: '#forge:xylene', tier: 5, perDistance: 3000, naquadria: 1600, darkMatter: 0, speed: 2.4 },
-        { id: 'mk6alt', fluid: '#forge:xylene', tier: 6, perDistance: 2500, naquadria: 1600, darkMatter: 40, speed: 3.0 },
-        { id: 'mk6blend', fluid: '#forge:xylene', tier: 6, perDistance: 2000, naquadria: 3200, darkMatter: 20, speed: 3.5 }
+        { id: 'mk5alt', fluid: '#forge:xylene', tier: 5, perDistance: 4500, naquadria: 80, darkMatter: 0, speed: 2.0 },
+        { id: 'mk5blend', fluid: '#forge:xylene', tier: 5, perDistance: 3000, naquadria: 160, darkMatter: 0, speed: 2.4 },
+        { id: 'mk6alt', fluid: '#forge:xylene', tier: 6, perDistance: 2500, naquadria: 160, darkMatter: 40, speed: 3.0 },
+        { id: 'mk6blend', fluid: '#forge:xylene', tier: 6, perDistance: 2000, naquadria: 320, darkMatter: 20, speed: 3.5 }
     ],
     NAQUADRIA_FLUID: '#forge:naquadria_awakened',
     DARK_MATTER_FLUID: '#forge:concentrated_dark_matter',
@@ -165,5 +165,6 @@ global.SPACE_DESTINATIONS = [
     {"id":"black_hole_accretion_disk","name":"Black hole accretion disk","mk":6,"d":65,"data":"C","gate":"","haul":[["neutronium",24,"item"],["naquadria",24,"item"]]},
     {"id":"black_hole_isco_stable_zone","name":"Black hole ISCO (stable zone)","mk":6,"d":68,"data":"C","gate":"","haul":[["californium",32,"item"],["einsteinium",32,"item"],["fermium",32,"item"],["mendelevium",32,"item"]]},
     {"id":"galactic_center","name":"Galactic center","mk":6,"d":70,"data":"C","gate":"","haul":[["antimatter",8,"item"],["red_matter",16,"item"]]},
-    {"id":"quasar_jet","name":"Quasar jet","mk":6,"d":80,"data":"C","gate":"","haul":[["chaos_shard",16,"item"]]}
+    {"id":"quasar_jet","name":"Quasar jet","mk":6,"d":400,"data":"C","gate":"","haul":[["chaos_shard",128,"item"]]},
+    {"id":"infinity_fracture","name":"Infinity fracture","mk":6,"d":200,"data":"C","gate":"","haul":[["infinity",32,"ore"]]}
 ];

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtceu:block/casings/reinforced_rune_casing/reinforced_rune_casing"
+  }
+}
