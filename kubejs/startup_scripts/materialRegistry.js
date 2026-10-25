@@ -170,7 +170,19 @@ MaterialDef.prototype.centrifugeDecomp = function () { return this.flags(GTMater
 MaterialDef.prototype.noSmelting = function () { return this.flags(GTMaterialFlags.NO_SMELTING); };
 MaterialDef.prototype.noBlocks = function () { return this.flags(GTMaterialFlags.EXCLUDE_BLOCK_CRAFTING_RECIPES); };
 MaterialDef.prototype.singularity = function () { return this.flags(CMMEMaterialFlags.GENERATE_SINGULARITY); };
-MaterialDef.prototype.ignoreAllOrePrefixes = function () { this.traits.ignoreAllOrePrefixes = true; return this; };
+MaterialDef.prototype.ignoreAllOrePrefixes = function () {
+    this.traits.ignoreAllOrePrefixes = true;
+    this.traits.keepOrePrefixes = [];
+    for (let i = 0; i < arguments.length; i++) {
+        let a = arguments[i];
+        if (Array.isArray(a)) {
+            for (let j = 0; j < a.length; j++) this.traits.keepOrePrefixes.push(String(a[j]));
+        } else if (a != null) {
+            this.traits.keepOrePrefixes.push(String(a));
+        }
+    }
+    return this;
+};
 
 // ---- presets ----
 MaterialDef.prototype.lens = function () {
@@ -312,7 +324,9 @@ MaterialDef.prototype.applyUnification = function () {
     if (!mat) return;
 
     if (this.traits.ignoreAllOrePrefixes) {
+        let keep = this.traits.keepOrePrefixes || [];
         MaterialDef.ALL_ORE_PREFIXES.forEach(prefixStr => {
+            if (keep.indexOf(prefixStr) !== -1) return;
             let prefixObj;
             try { prefixObj = TagPrefix[prefixStr]; } catch (e) { return; }
             if (prefixObj) prefixObj.setIgnored(mat);
@@ -1486,7 +1500,7 @@ const materials = [
 
     new MaterialDef('tectonic_petrotheum').dust().gem().fluid().color(0x352821).iconSet('GEM_VERTICAL'),
 
-    new MaterialDef('bedrockium').ingot().ore().dust().color(0x101010).iconSet('bedrockium').noSmelting().singularity().noDecomp().materialsBasic()
+    new MaterialDef('bedrockium').ingot().ore().dust().color(0xFFFFFF).iconSet('bedrockium').noSmelting().singularity().noDecomp().materialsBasic()
         .byproducts(['debris', 'netherite', 'bedrockium']),
 
     new MaterialDef('debris').ore().color(0x6E5A52).iconSet('METALLIC')
@@ -2054,7 +2068,7 @@ const materials = [
     new MaterialDef('fluorite').gem().ore().color(0x0c9949).iconSet('DIAMOND').components('1x calcium, 2x fluorine'),
     new MaterialDef('dolomite').dust().ore().color(0xf2e4bd).iconSet('ROUGH').components('1x calcium, 1x magnesium, 1x carbon, 3x oxygen').formula('CaMg(CO3)2'),
     new MaterialDef('star_matter').plasma('customStill').color(0xb219d1),
-    new MaterialDef('infinity').ingot().fluid('customStill').element('infinity').color(0xffffff).iconSet('infinity').materialsAll().ore().ignoreAllOrePrefixes()
+    new MaterialDef('infinity').ingot().fluid('customStill').element('infinity').color(0xffffff).iconSet('infinity').materialsAll().ore().ignoreAllOrePrefixes('ore').singularity()
         //.flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FOIL)
         .cable({ voltage: 134217728, loss: 2 })
         .blast({ temp: COIL_TEMPS.ETRIUM, eut: 33554432, duration: 600 }),

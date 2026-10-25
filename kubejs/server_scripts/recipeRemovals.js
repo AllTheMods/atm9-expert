@@ -489,7 +489,7 @@ ServerEvents.recipes(allthemods => {
         'extrastorage:part/storagepart_16384k_fluid', 'extrastorage:part/storagepart_65536k_fluid', 'extrastorage:part/storagepart_262144k_fluid',
         'extrastorage:part/storagepart_1048576k_fluid',
 
-        // --- Applied Energistics 2 & Addons ---
+        // --- Applied Energistics 2 & Addons ---        
         'ae2:network/blocks/pattern_providers_interface',
         'ae2:network/blocks/controller', 'ae2:network/blocks/interfaces_interface', 'ae2:network/blocks/storage_chest',
         'ae2:network/blocks/storage_drive', 'ae2:network/blocks/io_condenser', 'ae2:network/blocks/energy_energy_acceptor',

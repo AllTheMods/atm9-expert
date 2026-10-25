@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "gtceu:item/material_sets/infinity/spring"
+    "layer0": "gtceu:item/material_sets/infinity/spring",
+    "layer1": "gtceu:item/material_sets/dull/spring_overlay"
   }
 }

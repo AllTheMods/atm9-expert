@@ -599,7 +599,7 @@ ServerEvents.recipes(allthemods => {
             ZPM,
             'elementalcraft:creative_container',
             32,
-            `gregification:creative_container_${element}`, 'creative_container'
+            `gregification:creative_container_${element}`, 'creative_element_container'
         );
     })
 

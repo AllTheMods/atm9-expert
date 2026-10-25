@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "gtceu:item/material_sets/infinity/crushed"
+    "layer0": "gtceu:item/material_sets/infinity/crushed",
+    "layer1": "gtceu:item/material_sets/dull/crushed_overlay"
   }
 }
