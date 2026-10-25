@@ -95,34 +95,31 @@ ServerEvents.recipes(allthemods => {
     });
 
     DEST.forEach(d => {
-        var dataType = d.mk === 6 ? null : typeOf(d.data);
-        for (var b = 0; b <= 2; b++) {
-            var haulChance = Math.min(10000, S.HAUL_CHANCE_BASE + S.HAUL_CHANCE_BOOST_PER_TIER * b);
-            var researchChance = Math.min(10000, S.RESEARCH_CHANCE_BASE + S.RESEARCH_CHANCE_BOOST_PER_TIER * b);
-            var r = allthemods.recipes.gtceu.payload_opener('gregification:space/open/' + d.id + '_plus' + b)
-                .itemInputs(Item.of('gtceu:cargo_pod', { destination: d.id, name: d.name }).strongNBT())
-                .circuit(b + 1)
-                .duration(S.OPEN_DURATION)
-                .EUt(GTValues.VA[2 + d.mk + b]);
+        var r = allthemods.recipes.gtceu.payload_opener('gregification:space/open/' + d.id)
+            .itemInputs(Item.of('gtceu:cargo_pod', { destination: d.id, name: d.name }).strongNBT())
+            .duration(S.OPEN_DURATION)
+            .EUt(volt(S.OPENER_VOLTAGE, d.mk));
 
-            d.haul.forEach(h => {
-                var res = resolve(h[0], h[2], h[1]);
-                if (!res) {
-                    if (b === 0) console.warn('[space_mission] unresolved haul ' + h[0] + ' (' + h[2] + ') for ' + d.id);
-                    return;
-                }
-                if (res.type === 'item') {
-                    r.chancedOutput(Item.of(res.id, res.count), haulChance, S.HAUL_CHANCE_BOOST_PER_TIER);
-                } else {
-                    r.chancedFluidOutput(res.id + ' ' + res.amount, haulChance, S.HAUL_CHANCE_BOOST_PER_TIER);
-                }
-            });
+        d.haul.forEach(h => {
+            var res = resolve(h[0], h[2], h[1]);
+            if (!res) {
+                console.warn('[space_mission] unresolved haul ' + h[0] + ' (' + h[2] + ') for ' + d.id);
+                return;
+            }
+            if (res.type === 'item') {
+                r.chancedOutput(Item.of(res.id, res.count), S.HAUL_CHANCE_BASE, S.HAUL_CHANCE_BOOST_PER_TIER);
+            } else {
+                r.chancedFluidOutput(res.id + ' ' + res.amount, S.HAUL_CHANCE_BASE, S.HAUL_CHANCE_BOOST_PER_TIER);
+            }
+        });
 
-            if (d.mk === 6) {
-                r.itemOutputs(Item.of('gtceu:cosmic_research_fragment', S.COSMIC_GUARANTEED));
-                r.chancedOutput(Item.of('gtceu:cosmic_research_fragment', 1), S.COSMIC_EXTRA_CHANCE, 0);
-            } else if (dataType) {
-                r.chancedOutput(Item.of('gtceu:' + dataType + '_research_fragment_mk' + d.mk, S.FRAGMENT_COUNT), researchChance, S.RESEARCH_CHANCE_BOOST_PER_TIER);
+        if (d.mk === 6) {
+            r.itemOutputs(Item.of('gtceu:cosmic_research_fragment', S.COSMIC_GUARANTEED));
+            r.chancedOutput(Item.of('gtceu:cosmic_research_fragment', 1), S.COSMIC_EXTRA_CHANCE, 0);
+        } else {
+            var dataType = typeOf(d.data);
+            if (dataType) {
+                r.chancedOutput(Item.of('gtceu:' + dataType + '_research_fragment_mk' + d.mk, S.FRAGMENT_COUNT), S.RESEARCH_CHANCE_BASE, S.RESEARCH_CHANCE_BOOST_PER_TIER);
             }
         }
     });
@@ -166,12 +163,11 @@ ServerEvents.recipes(allthemods => {
             if (o[2] >= 10000) {
                 r.itemOutputs(stack);
             } else {
-                r.chancedOutput(stack, o[2], 0);
+                r.chancedOutput(stack, o[2], S.SCRAP_CHANCE_BOOST_PER_TIER);
             }
         });
     };
     reclaim('circuit_scrap', 'gtceu:circuit_scrap');
-    reclaim('crashed_scrap', 'gtceu:crashed_scrap');
 
     allthemods.recipes.gtceu.macerator('gregification:space/kuiper_rock_dust')
         .itemInputs('gtceu:kuiper_rock')

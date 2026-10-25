@@ -1863,9 +1863,7 @@ const materials = [
 
     new MaterialDef('thallium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.TRINIUM),
 
-    new MaterialDef('protactinium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),
-
-    new MaterialDef('rhodium_plated_palladium').modify().flags(GTMaterialFlags.GENERATE_GEAR),
+    new MaterialDef('protactinium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().materialsBasic().blastCoil(COIL_TEMPS.NAQUADAH),    
 
     new MaterialDef('darmstadtium').modify().materialsAll(),
 

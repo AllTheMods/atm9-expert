@@ -33,5 +33,4 @@ StartupEvents.registry('item', event => {
     make('kuiper_rock');
     make('kuiper_rock_dust');
     make('circuit_scrap');
-    make('crashed_scrap');
 });

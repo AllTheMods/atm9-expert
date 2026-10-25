@@ -71,4 +71,53 @@ ItemEvents.tooltip(event => {
 
         }
     });
+
+    var findDest = function (id) {
+        var list = global.SPACE_DESTINATIONS || [];
+        for (var i = 0; i < list.length; i++) {
+            if (list[i].id === id) return list[i];
+        }
+        return null;
+    };
+    var title = function (id) {
+        return id.split('_').map(function (w) { return w.charAt(0).toUpperCase() + w.slice(1); }).join(' ');
+    };
+    var dataName = { T: 'Thermal', P: 'Propulsion', N: 'Navigation' };
+
+    event.addAdvanced('gtceu:destination_card', function (item, advanced, text) {
+        var nbt = item.nbt;
+        if (nbt == null || !nbt.contains('destination')) {
+            text.add(Text.of('Blank destination').darkGray());
+            return;
+        }
+        var dest = findDest(nbt.getString('destination'));
+        var name = nbt.contains('name') ? nbt.getString('name') : (dest ? dest.name : title(nbt.getString('destination')));
+        text.add(Text.of('Destination: ').gray().append(Text.of(name).aqua()));
+        var tier = nbt.contains('tier') ? nbt.getInt('tier') : (dest ? dest.mk : 0);
+        var dist = nbt.contains('distance') ? nbt.getDouble('distance') : (dest ? dest.d : 0);
+        if (tier > 0) text.add(Text.of('Requires a Mk' + tier + ' ship').darkGray());
+        if (dist > 0) text.add(Text.of('Distance: ' + dist).darkGray());
+    });
+
+    event.addAdvanced('gtceu:cargo_pod', function (item, advanced, text) {
+        var nbt = item.nbt;
+        if (nbt == null || !nbt.contains('destination')) {
+            text.add(Text.of('Empty pod').darkGray());
+            return;
+        }
+        var dest = findDest(nbt.getString('destination'));
+        var name = nbt.contains('name') ? nbt.getString('name') : (dest ? dest.name : title(nbt.getString('destination')));
+        text.add(Text.of('Returned from: ').gray().append(Text.of(name).aqua()));
+        if (!dest) return;
+        text.add(Text.of('Contains:').gray());
+        dest.haul.forEach(function (h) {
+            var line = h[2] === 'fluid' ? h[1] + ' B ' + title(h[0]) : h[1] + 'x ' + title(h[0]);
+            text.add(Text.of(' - ' + line).white());
+        });
+        if (dest.mk === 6) {
+            text.add(Text.of(' - Cosmic Research Fragment').lightPurple());
+        } else if (dataName[dest.data]) {
+            text.add(Text.of(' - ' + dataName[dest.data] + ' Research Fragment (chance)').lightPurple());
+        }
+    });
 });
