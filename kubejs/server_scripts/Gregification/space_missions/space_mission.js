@@ -284,4 +284,28 @@ ServerEvents.recipes(allthemods => {
             .duration(100)
             .EUt(VOLT[S.SHIP_TIER_VOLTAGE[t]]);
     }
+
+    allthemods.recipes.gtceu.assembler('gregification:space/controller/destination_encoder')
+        .itemInputs('gtceu:hv_machine_hull', '4x #gtceu:circuits/hv', '1x gtceu:hv_sensor', '1x gtceu:hv_emitter', '4x #forge:plates/stainless_steel')
+        .itemOutputs('gtceu:destination_encoder')
+        .duration(400)
+        .EUt(HV);
+
+    allthemods.recipes.gtceu.assembler('gregification:space/controller/research_compiler')
+        .itemInputs('gtceu:mv_machine_hull', '4x #gtceu:circuits/mv', '2x gtceu:ram_chip', '1x gtceu:mv_sensor', '4x #forge:plates/steel')
+        .itemOutputs('gtceu:research_compiler')
+        .duration(300)
+        .EUt(MV);
+
+    allthemods.recipes.gtceu.assembler('gregification:space/controller/launch_platform')
+        .itemInputs('gtceu:hv_machine_hull', '4x #gtceu:circuits/hv', '2x gtceu:hv_robot_arm', '2x gtceu:hv_electric_pump', '4x #forge:frames/stainless_steel', '8x #forge:plates/stainless_steel')
+        .itemOutputs('gtceu:launch_platform')
+        .duration(600)
+        .EUt(HV);
+
+    allthemods.recipes.gtceu.assembler('gregification:space/controller/payload_opener')
+        .itemInputs('gtceu:hv_machine_hull', '4x #gtceu:circuits/hv', '2x gtceu:hv_robot_arm', '2x gtceu:hv_conveyor_module', '4x #forge:plates/stainless_steel')
+        .itemOutputs('gtceu:payload_opener')
+        .duration(400)
+        .EUt(HV);
 });
