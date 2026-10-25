@@ -113,6 +113,16 @@ ServerEvents.recipes(allthemods => {
     allthemods.remove(beeRemovals);
 
     
+    const moreRemovals = [
+        'create:mixing/andesite_alloy', 'create:mixing/andesite_alloy_from_zinc',
+        'tconstruct:compat/create/andesite_alloy_iron', 'tconstruct:compat/create/andesite_alloy_zinc',
+        'itemcollectors:basic_collector', 'itemcollectors:advanced_collector',
+        'mekanism:cardboard_box'
+
+    ];
+    
+    
+
     const powahRemoves = [
         'allthemodium:allthemodium_rod', 'allthemodium:vibranium_rod', 'allthemodium:unobtainium_rod',
         'forestry:resource_storage_silicon',
@@ -571,6 +581,8 @@ ServerEvents.recipes(allthemods => {
     removalObjects = powahRemoves.map(recipeId => ({ id: recipeId }));
     allthemods.remove(removalObjects);
 
+    removalObjects = moreRemovals.map(recipeId => ({ id: recipeId }));
+    allthemods.remove(removalObjects);
 
     // Blast Materials (Dusts and Raw)
     const blastMaterials = [

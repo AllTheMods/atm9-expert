@@ -117,7 +117,8 @@ ServerEvents.recipes(allthemods => {
     
     
     bloodAltar( 'gtceu:blank_slate_casing', 'bloodmagic:blankslate', 0, 1000, 25, 25)
-    bloodAltar( 'gtceu:hot_blazing_soularium_ingot', 'enderio:soularium_ingot', 1, 10000, 25, 25)
+    bloodAltar( 'gtceu:hot_blazing_soularium_ingot', 'enderio:soularium_ingot', 1, 2000, 25, 25)
+    bloodAltar( 'gtceu:hot_blazing_energetic_alloy_ingot', 'enderio:energetic_alloy_ingot', 1, 2000, 25, 25)
 
     let recipe;
     recipe = allthemods.recipes.gtceu.alchemical_workbench('gregification:alchemical_workbench/gilded_blackstone')

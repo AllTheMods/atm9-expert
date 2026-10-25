@@ -1,5 +1,5 @@
 ServerEvents.recipes(allthemods => {
-    const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+    const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
     // --- Helper Function ---
     const bendPlate = (input, output, customID) => {
         let id = customID ? `gregification:mechanical_press/${customID}` : `gregification:mechanical_press/${output.split(':')[1]}_plate`;
@@ -32,6 +32,42 @@ ServerEvents.recipes(allthemods => {
         }).id(id);
     };
 
+    allthemods.custom({
+        type: 'create:mixing',
+        ingredients: [
+            { tag: 'forge:dusts/andesite' },
+            { tag: 'forge:dusts/andesite' },
+            { tag: 'forge:dusts/andesite' },
+            { tag: 'forge:dusts/andesite' },
+            { tag: 'forge:dusts/iron' },
+            { tag: 'forge:dusts/iron' },
+            { tag: 'forge:dusts/iron' },
+            { tag: 'forge:dusts/iron' }
+        ],
+        results: [
+            { item: 'gtceu:andesite_alloy_dust' }
+        ]
+    }).id('gregification:mixing/andesite_alloy_dust_iron')
+
+    allthemods.custom({
+        type: 'create:mixing',
+        ingredients: [
+            { tag: 'forge:dusts/andesite' },
+            { tag: 'forge:dusts/andesite' },
+            { tag: 'forge:dusts/andesite' },
+            { tag: 'forge:dusts/andesite' },
+            { tag: 'forge:dusts/zinc' },
+            { tag: 'forge:dusts/zinc' },
+            { tag: 'forge:dusts/zinc' },
+            { tag: 'forge:dusts/zinc' }
+        ],
+        results: [
+            { item: 'gtceu:andesite_alloy_dust' }
+        ]
+    }).id('gregification:mixing/andesite_alloy_dust_zinc')
+
+
+
     const baseMetals = [
         { dust: 'alltheores:iron_dust', ingot: 'forge:ingots/iron' },
         { dust: 'alltheores:gold_dust', ingot: 'forge:ingots/gold' },
@@ -59,7 +95,7 @@ ServerEvents.recipes(allthemods => {
     });
 
     allthemods.recipes.gtceu.assembler('gregification:crafting/steam_engine')
-        .itemInputs('gtceu:mv_machine_hull', 'gtceu:mv_electric_pump', '2x #gtceu:circuits/mv', 'create:copper_casing', '4x forbidden_arcanus:spawner_scrap')        
+        .itemInputs('gtceu:mv_machine_hull', 'gtceu:mv_electric_pump', '2x #gtceu:circuits/mv', 'create:copper_casing', '4x forbidden_arcanus:spawner_scrap')
         .inputFluids('#forge:soldering_alloy 288')
         .itemOutputs('create:steam_engine')
         .duration(600)
@@ -71,7 +107,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('create:blaze_burner')
         .duration(300)
         .EUt(MV);
-    
-    allthemods.shapeless('gtceu:andesite_alloy_dust', ['4x #forge:dusts/andesite', '4x #forge:dusts/zinc']).id('gregification:andesite_alloy_dust');    
+
+    allthemods.shapeless('gtceu:andesite_alloy_dust', ['4x #forge:dusts/andesite', '4x #forge:dusts/zinc']).id('gregification:andesite_alloy_dust');
 
 })

@@ -93,10 +93,20 @@ ServerEvents.recipes(allthemods => {
             { 'tag': 'forge:hot_ingots/soularium' }
         ],
         results: [
-            { 'count': 1, 'item': 'gtceu:hot_blazing_soularium_ingot' }
-            // optional extra with a chance: { 'chance': 0.25, 'item': 'modid:bonus_item' }
+            { 'count': 1, 'item': 'gtceu:hot_blazing_soularium_ingot' }            
         ],
         processingTime: 150
-    }).id('gregification:haunting/your_recipe_name')
+    }).id('gregification:haunting/hot_blazing_soularium')
+
+    allthemods.custom({
+        type: 'create:haunting',
+        ingredients: [
+            { 'tag': 'forge:hot_ingots/energetic_alloy' }
+        ],
+        results: [
+            { 'count': 1, 'item': 'gtceu:hot_blazing_energetic_alloy_ingot' }            
+        ],
+        processingTime: 150
+    }).id('gregification:haunting/hot_blazing_energetic_alloy')
 
 });

@@ -53,7 +53,7 @@
         .inputFluids('#forge:water_stage_1 500')
         .outputFluids('gtceu:sanguine_concentrate 500')
         .duration(100)
-        .EUt(HV)
+        .EUt(MV)
 
     allthemods.recipes.gtceu.liquifier('wraith_heart_liquification')
         .itemInputs('32x eidolon:wraith_heart')

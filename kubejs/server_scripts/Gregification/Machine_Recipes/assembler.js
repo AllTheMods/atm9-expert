@@ -52,6 +52,17 @@ ServerEvents.recipes(allthemods => {
         1200
     )
 
+    addAssembler(
+        [
+            '16x #forge:sawdust',
+            '2x gtceu:duct_tape'
+        ],
+        '#forge:glue 288',
+        'mekanism:cardboard_box',
+        EV,
+        100
+    )
+
     //zirconium casing
     addAssembler(
         [

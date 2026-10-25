@@ -83,6 +83,36 @@ ServerEvents.recipes(allthemods => {
         }
     ).id("projectge:gregificatrion/philosophers_stone")
 
+    allthemods.shaped('itemcollectors:basic_collector',
+        [
+            'PEP',
+            'PCP',
+            'OOO'
+        ],
+        {
+            O: "minecraft:obsidian",
+            C: "gtceu:lv_item_collector",
+            E: "minecraft:ender_eye",
+            P: "#forge:plates/steel"
+        }
+
+    ).id("gregification:basic_collector")
+
+    allthemods.shaped('itemcollectors:advanced_collector',
+        [
+            'PEP',
+            'PCP',
+            'OOO'
+        ],
+        {
+            O: "minecraft:obsidian",
+            C: "gtceu:hv_item_collector",
+            E: "gtceu:quantum_eye",
+            P: "#forge:plates/end_steel"
+        }
+        
+    ).id("gregification:advanced_collector")
+
 
     // --- ENDER CHEST ---
     replaceShaped("enderchests:ender_pouch", null,

@@ -999,9 +999,24 @@
     "material.gtceu.mixed_gem_lime_cake": "Mixed Gem Lime Cake",
     "material.gtceu.mixed_gem_rare_earth": "Mixed Gem Rare Earth",
     "material.gtceu.sodium_aluminate": "Sodium Aluminate",
-
+    "material.gtceu.celestigem": "Celestigem",
     "material.gtceu.green_slime": "Green Slime",
     "material.gtceu.blue_slime": "Blue Slime",
     "material.gtceu.slime_slurry": "Slime Slurry",
-    "material.gtceu.slime_waste_water": "Slime Waste Water"
+    "material.gtceu.slime_waste_water": "Slime Waste Water",
+    "material.gtceu.blazing_energetic_alloy": "Blazing Energetic Alloy",
+    "gtceu.destination_encoder_t1": "Destination Encoder Mk1",
+    "gtceu.destination_encoder_t2": "Destination Encoder Mk2",
+    "gtceu.destination_encoder_t3": "Destination Encoder Mk3",
+    "gtceu.destination_encoder_t4": "Destination Encoder Mk4",
+    "gtceu.destination_encoder_t5": "Destination Encoder Mk5",
+    "gtceu.destination_encoder_t6": "Destination Encoder Mk6",
+    "gtceu.launch_platform": "Launch Platform",
+    "gtceu.payload_opener": "Payload Opener",
+    "gtceu.scrap_reclaimer": "Scrap Reclaimer",
+    "gtceu.research_compiler": "Research Compiler",
+    "block.gtceu.destination_encoder": "Destination Encoder",
+    "block.gtceu.research_compiler": "Research Compiler",
+    "block.gtceu.launch_platform": "Launch Platform",
+    "block.gtceu.payload_opener": "Payload Opener"
 }

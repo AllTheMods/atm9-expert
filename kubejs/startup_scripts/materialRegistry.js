@@ -1176,12 +1176,7 @@ const materials = [
     new MaterialDef('conductive_alloy').components('1x iron, 1x redstone').color(0xF7B066).iconSet('METALLIC').ingot().fluid().materialsAll()
         .cable({ voltage: 128, loss: 2 })
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: MV, duration: 400 })
-        .unify({ ingot: 'enderio:conductive_alloy_ingot', block: 'enderio:conductive_alloy_block', nugget: 'enderio:conductive_alloy_nugget' }),
-
-    new MaterialDef('energetic_alloy').components('1x gold, 1x redstone, 1x glowstone').color(0xFFB933).iconSet('METALLIC').ingot().fluid().materialsAll()
-        .cable({ voltage: 512, loss: 2 })
-        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: MV, duration: 400 })
-        .unify({ ingot: 'enderio:energetic_alloy_ingot', block: 'enderio:energetic_alloy_block', nugget: 'enderio:energetic_alloy_nugget' }),
+        .unify({ ingot: 'enderio:conductive_alloy_ingot', block: 'enderio:conductive_alloy_block', nugget: 'enderio:conductive_alloy_nugget' }),    
 
     new MaterialDef('vibrant_alloy').components('1x energetic_alloy, 1x ender_pearl').color(0xB6F132).iconSet('METALLIC').ingot().fluid().materialsAll()
         .cable({ voltage: 2048, loss: 1 })
@@ -1198,8 +1193,17 @@ const materials = [
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
         .unify({ ingot: 'enderio:soularium_ingot', block: 'enderio:soularium_block', nugget: 'enderio:soularium_nugget' }),
 
-    new MaterialDef('blazing_soularium').color(0x56402C).iconSet('METALLIC').ingot()
+    new MaterialDef('blazing_soularium').components('1x soularium').color(0x56402C).iconSet('METALLIC').ingot()
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
+        .unify({ ingot: true, dust: true, block: true, nugget: true, dustSmall: true, dustTiny: true }),
+
+    new MaterialDef('energetic_alloy').components('1x gold, 1x redstone, 1x glowstone').color(0xFFB933).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .cable({ voltage: 512, loss: 2 })
+        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: MV, duration: 400 })
+        .unify({ ingot: 'enderio:energetic_alloy_ingot', block: 'enderio:energetic_alloy_block', nugget: 'enderio:energetic_alloy_nugget' }),
+
+    new MaterialDef('blazing_energetic_alloy').components('1x energetic_alloy').color(0xFFB933).iconSet('METALLIC').ingot()        
+        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: MV, duration: 400 })        
         .unify({ ingot: true, dust: true, block: true, nugget: true, dustSmall: true, dustTiny: true }),
 
 
@@ -2231,6 +2235,28 @@ const materials = [
     new MaterialDef('slime_slurry').fluid().color(0x74B88C).iconSet('FLUID').noDecomp(),
     new MaterialDef('slime_waste_water').fluid().color(0x8A9A6A).iconSet('FLUID').noDecomp(),
 
+
+    Add these lines to the modify section of materialRegistry.js (next to the other .modify() entries):
+
+    new MaterialDef('steel').modify().flags(GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_ROTOR),
+    new MaterialDef('stainless_steel').modify().flags(GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_ROTOR),
+    new MaterialDef('tungsten_steel').modify().flags(GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_GEAR),
+    new MaterialDef('electrum').modify().flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD),
+    new MaterialDef('platinum').modify().flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD),
+    new MaterialDef('palladium').modify().flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_ROTOR),
+
+Replace these three existing lines:
+
+    new MaterialDef('osmiridium').modify()
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_ROTOR)
+        .byproducts(['ruthenium']),
+
+    new MaterialDef('iridium').modify()
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_ROTOR)
+        .byproducts(['osmium_tetroxide', 'rhodium_sulfate'])
+        .unify({ rawOre: 'alltheores:raw_iridium', ore: 'alltheores:iridium_ore', oreDeepslate: 'alltheores:deepslate_iridium_ore', oreNetherrack: 'alltheores:nether_iridium_ore' }),
+
+    new MaterialDef('rhodium_plated_palladium').modify().flags(GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_PLATE),
 ];
 
 
