@@ -48,12 +48,12 @@ global.SPACE = {
     PLANET_COMPONENT: { moon: 'hafnium', mars: 'rhenium', mercury: 'strontium', venus: 'tellurium', glacio: 'etrium' },
 
     PARTS: {
-        1: { hull: 'aluminum', engine: 'steel', avionics: 'lumium' },
-        2: { hull: 'titanium', engine: 'stainless_steel', avionics: 'end_steel' },
-        3: { hull: 'hafnium', engine: 'tungsten_steel', avionics: 'palladium' },
-        4: { hull: 'rheni_zirconium_alloy', engine: 'rhodium_plated_palladium', avionics: 'iridium' },
-        5: { hull: 'strontium', engine: 'naquadah_alloy', avionics: 'osmiridium' },
-        6: { hull: 'etrium', engine: 'neutronium', avionics: 'darmstadtium' }
+        1: { hull: 'stainless_steel', engine: 'stainless_steel', avionics: 'stainless_steel' },
+        2: { hull: 'titanium', engine: 'titanium', avionics: 'titanium' },
+        3: { hull: 'tungsten_steel', engine: 'tungsten_steel', avionics: 'tungsten_steel' },
+        4: { hull: 'rhodium_plated_palladium', engine: 'rhodium_plated_palladium', avionics: 'rhodium_plated_palladium' },
+        5: { hull: 'naquadah_alloy', engine: 'naquadah_alloy', avionics: 'naquadah_alloy' },
+        6: { hull: 'etrium', engine: 'etrium', avionics: 'etrium' }
     },
 
     KUIPER_SIFT: [
@@ -83,6 +83,7 @@ global.SPACE = {
         dark_matter: 'projecte:dark_matter',
         kuiper_rock: 'gtceu:kuiper_rock',
         circuit_scrap: 'gtceu:circuit_scrap',
+        crashed_scrap: 'gtceu:crashed_scrap',
         neutrino: 'gtceu:neutrino',
         tachyon: 'gtceu:tachyon',
         plutonic_quark: 'gtceu:plutonic_quark',
@@ -103,7 +104,7 @@ global.SPACE_DESTINATIONS = [
     {"id":"stratosphere_skim","name":"Stratosphere skim","mk":1,"d":1,"data":"P","gate":"","haul":[["ozone",64,"fluid"],["hydrogen_peroxide",32,"fluid"]]},
     {"id":"aurora_ring","name":"Aurora ring","mk":1,"d":1,"data":"T","gate":"","haul":[["mana_essence",32,"item"]]},
     {"id":"lunar_orbit","name":"Lunar orbit","mk":1,"d":1,"data":"P","gate":"","haul":[["helium_3",64,"fluid"],["gallium",48,"item"]]},
-    {"id":"dead_satellite_graveyard","name":"Dead satellite graveyard","mk":1,"d":1,"data":"N","gate":"","haul":[["gold",48,"item"],["gallium_arsenide",32,"item"],["circuit_scrap",32,"item"]]},
+    {"id":"dead_satellite_graveyard","name":"Dead satellite graveyard","mk":1,"d":1,"data":"N","gate":"","haul":[["gold",48,"item"],["gallium_arsenide",32,"item"],["circuit_scrap",32,"item"],["crashed_scrap",6,"item"]]},
     {"id":"lunar_polar_craters","name":"Lunar polar craters","mk":1,"d":1,"data":"T","gate":"","haul":[["blue_ice",64,"item"],["mercury",32,"item"],["methanol",32,"fluid"],["ethylene",32,"fluid"]]},
     {"id":"lunar_kreep_terrane","name":"Lunar KREEP terrane","mk":1,"d":1,"data":"N","gate":"","haul":[["thorium",32,"item"],["uranium",32,"item"],["uraninite",64,"ore"]]},
     {"id":"near_earth_asteroid","name":"Near-Earth asteroid","mk":1,"d":2,"data":"N","gate":"","haul":[["platinum",48,"item"],["cobalt",48,"item"]]},

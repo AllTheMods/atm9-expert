@@ -102,7 +102,6 @@ ServerEvents.recipes(allthemods => {
             var r = allthemods.recipes.gtceu.payload_opener('gregification:space/open/' + d.id + '_plus' + b)
                 .itemInputs(Item.of('gtceu:cargo_pod', { destination: d.id, name: d.name }).strongNBT())
                 .circuit(b + 1)
-                .itemOutputs('gtceu:crashed_scrap')
                 .duration(S.OPEN_DURATION)
                 .EUt(GTValues.VA[2 + d.mk + b]);
 
@@ -113,9 +112,9 @@ ServerEvents.recipes(allthemods => {
                     return;
                 }
                 if (res.type === 'item') {
-                    r.chancedOutput(Item.of(res.id, res.count), haulChance, 0);
+                    r.chancedOutput(Item.of(res.id, res.count), haulChance, S.HAUL_CHANCE_BOOST_PER_TIER);
                 } else {
-                    r.chancedFluidOutput(res.id + ' ' + res.amount, haulChance, 0);
+                    r.chancedFluidOutput(res.id + ' ' + res.amount, haulChance, S.HAUL_CHANCE_BOOST_PER_TIER);
                 }
             });
 
@@ -123,7 +122,7 @@ ServerEvents.recipes(allthemods => {
                 r.itemOutputs(Item.of('gtceu:cosmic_research_fragment', S.COSMIC_GUARANTEED));
                 r.chancedOutput(Item.of('gtceu:cosmic_research_fragment', 1), S.COSMIC_EXTRA_CHANCE, 0);
             } else if (dataType) {
-                r.chancedOutput(Item.of('gtceu:' + dataType + '_research_fragment_mk' + d.mk, S.FRAGMENT_COUNT), researchChance, 0);
+                r.chancedOutput(Item.of('gtceu:' + dataType + '_research_fragment_mk' + d.mk, S.FRAGMENT_COUNT), researchChance, S.RESEARCH_CHANCE_BOOST_PER_TIER);
             }
         }
     });
@@ -231,11 +230,7 @@ ServerEvents.recipes(allthemods => {
         var circ = '#gtceu:circuits/' + TIER_NAMES[t];
 
         var hullInputs = [frame];
-        if (t === 5) {
-            hullInputs.push('4x #forge:plates/strontium', '4x #forge:plates/tellurium');
-        } else {
-            hullInputs.push('8x #forge:plates/' + p.hull);
-        }
+        hullInputs.push('8x #forge:plates/' + p.hull);
         addPart('hull_mk' + t, t, hullInputs, 'gtceu:ship_hull_mk' + t, rTherm);
 
         var engineInputs = [frame];
