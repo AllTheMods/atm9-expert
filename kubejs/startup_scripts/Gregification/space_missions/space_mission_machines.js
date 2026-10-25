@@ -55,7 +55,7 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
             .aisle('CCCCC', 'C   C', 'G   G', 'G   G', 'CSSSC', ' F F ', ' F F ', ' FFF ', '     ')
             .aisle('CCCCC', 'SCKCS', 'FGGGF', 'FGGGF', 'FCCCF', '     ', '     ', '     ', '     ')
             .where('K', Predicates.controller(Predicates.blocks(definition.get())))
-            .where('D', Predicates.blocks(GTBlocks.CASING_STEEL_SOLID.get()))
+            .where('S', Predicates.blocks(GTBlocks.CASING_STEEL_SOLID.get()))
             .where('R', Predicates.blocks(GTBlocks.CASING_STEEL_GEARBOX.get()))
             .where('G', Predicates.blocks('gtceu:cleanroom_glass'))
             .where('F', Predicates.frames(GTMaterials.StainlessSteel))
