@@ -189,11 +189,19 @@ ServerEvents.recipes(allthemods => {
         .duration(100)
         .EUt(HV);
 
+    // Molten metal per tier (assembler: HV steel, EV titanium; assembly line: tungsten steel + lubricant + solder)
+    const shipFluids = tier => {
+        if (tier === 1) return ['gtceu:steel 15984'];
+        if (tier === 2) return ['gtceu:titanium 15984'];
+        return ['gtceu:tungsten_steel 15984', 'gtceu:lubricant 16000', '#forge:soldering_alloy 16000'];
+    };
+
     const addPart = (id, tier, inputs, outputs, research) => {
         const rid = 'gregification:space/part/' + id;
         const r = (tier <= 2 ? allthemods.recipes.gtceu.assembler(rid) : allthemods.recipes.gtceu.assembly_line(rid))
             .itemInputs(inputs)
             .itemOutputs(outputs)
+            .inputFluids(shipFluids(tier))
             .duration(tier <= 2 ? S.PART_DURATION : S.PART_DURATION * 2)
             .EUt(VOLT[S.SHIP_TIER_VOLTAGE[tier]]);
         if (research) r.notConsumable(research);
@@ -204,7 +212,7 @@ ServerEvents.recipes(allthemods => {
         3: { plate: 'enderium', rod: 'end_steel' },
         4: { plate: 'rheni_zirconium_alloy', rod: 'desh' },
         5: { plate: 'scandium', rod: 'ostrum' },
-        6: { plate: 'etrium', rod: 'chaotic' }
+        6: { plate: 'etrium', rod: 'etrium' }
     };
     const smd = tier => tier >= 4
         ? ['gtceu:advanced_smd_transistor', 'gtceu:advanced_smd_resistor', 'gtceu:advanced_smd_capacitor', 'gtceu:advanced_smd_diode']
@@ -229,7 +237,7 @@ ServerEvents.recipes(allthemods => {
 
         var engineInputs = [frame];
         if (t <= 2) {
-            engineInputs.push('4x #forge:rotors/' + p.engine, '4x #forge:long_rods/' + p.engine);
+            engineInputs.push('4x #forge:rotors/' + p.engine, '4x #forge:rods/long/' + p.engine);
         } else {
             var x = ENGINE_EXTRAS[t];
             engineInputs.push('4x #forge:gears/' + p.engine, '8x #forge:plates/' + x.plate, '4x #forge:rods/' + x.rod);
@@ -239,7 +247,7 @@ ServerEvents.recipes(allthemods => {
         }
         addPart('engine_mk' + t, t, engineInputs, 'gtceu:ship_engine_mk' + t, rProp);
 
-        var avInputs = [frame, '4x #forge:plates/' + p.avionics, '2x #forge:long_rods/' + p.avionics, '1x gtceu:' + TIER_NAMES[t] + '_sensor', '1x gtceu:' + TIER_NAMES[t] + '_emitter'];
+        var avInputs = [frame, '4x #forge:plates/' + p.avionics, '2x #forge:rods/long/' + p.avionics, '1x gtceu:' + TIER_NAMES[t] + '_sensor', '1x gtceu:' + TIER_NAMES[t] + '_emitter'];
         var planetMats = [];
         if (t === 3) planetMats.push('hafnium');
         if (t === 4) planetMats.push('rhenium');
@@ -252,7 +260,7 @@ ServerEvents.recipes(allthemods => {
             addPart('guidance_computer_mk' + t, t,
                 ['4x #forge:dusts/cadmium_selenide', '1x ' + circ, frame],
                 'gtceu:guidance_computer_mk' + t, null);
-            var gInputs = ['1x gtceu:guidance_computer_mk' + t, frame, '4x #forge:plates/' + p.avionics, '2x #forge:rotors/' + p.avionics, '2x #forge:long_rods/' + p.avionics];
+            var gInputs = ['1x gtceu:guidance_computer_mk' + t, frame, '4x #forge:plates/' + p.avionics, '2x #forge:rotors/' + p.avionics, '2x #forge:rods/long/' + p.avionics];
             planetMats.forEach(m => { gInputs.push(S.COMPONENT_PLATES + 'x #forge:plates/' + m); });
             addPart('guidance_mk' + t, t, gInputs, 'gtceu:ship_guidance_mk' + t, rNav);
         }
@@ -271,6 +279,7 @@ ServerEvents.recipes(allthemods => {
         (t <= 2 ? allthemods.recipes.gtceu.assembler(shipId) : allthemods.recipes.gtceu.assembly_line(shipId))
             .itemInputs(shipInputs)
             .itemOutputs('gtceu:ship_mk' + t)
+            .inputFluids(shipFluids(t))
             .duration(S.SHIP_DURATION)
             .EUt(VOLT[S.SHIP_TIER_VOLTAGE[t]]);
 

@@ -1766,11 +1766,7 @@ const materials = [
         .byproducts(['rare_earth', 'gadolinium', 'neodymium']),
 
     new MaterialDef('bastnasite').modify()
-        .byproducts(['rare_earth', 'gadolinium', 'neodymium']),
-
-    new MaterialDef('iridium').modify()
-        .byproducts(['osmium_tetroxide', 'rhodium_sulfate'])
-        .unify({ rawOre: 'alltheores:raw_iridium', ore: 'alltheores:iridium_ore', oreDeepslate: 'alltheores:deepslate_iridium_ore', oreNetherrack: 'alltheores:nether_iridium_ore' }),
+        .byproducts(['rare_earth', 'gadolinium', 'neodymium']),    
 
     new MaterialDef('uranium').modify()
         .byproducts(['thorium', 'plutonium'])
@@ -2235,16 +2231,14 @@ const materials = [
     new MaterialDef('slime_slurry').fluid().color(0x74B88C).iconSet('FLUID').noDecomp(),
     new MaterialDef('slime_waste_water').fluid().color(0x8A9A6A).iconSet('FLUID').noDecomp(),
 
-    new MaterialDef('osmiridium').modify()
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_ROTOR)
-        .byproducts(['ruthenium']),
-
-    new MaterialDef('iridium').modify()
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_ROTOR)
+   
+    new MaterialDef('iridium').modify().flags(GTMaterialFlags.GENERATE_ROTOR)
         .byproducts(['osmium_tetroxide', 'rhodium_sulfate'])
         .unify({ rawOre: 'alltheores:raw_iridium', ore: 'alltheores:iridium_ore', oreDeepslate: 'alltheores:deepslate_iridium_ore', oreNetherrack: 'alltheores:nether_iridium_ore' }),
 
-    new MaterialDef('rhodium_plated_palladium').modify().flags(GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_PLATE),
+
+    new MaterialDef('rhodium_plated_palladium').modify().flags(GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_FRAME),
+    new MaterialDef('palladium').modify().flags(GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_ROTOR),
 ];
 
 
