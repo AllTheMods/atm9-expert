@@ -2235,18 +2235,6 @@ const materials = [
     new MaterialDef('slime_slurry').fluid().color(0x74B88C).iconSet('FLUID').noDecomp(),
     new MaterialDef('slime_waste_water').fluid().color(0x8A9A6A).iconSet('FLUID').noDecomp(),
 
-
-    Add these lines to the modify section of materialRegistry.js (next to the other .modify() entries):
-
-    new MaterialDef('steel').modify().flags(GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_ROTOR),
-    new MaterialDef('stainless_steel').modify().flags(GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_ROTOR),
-    new MaterialDef('tungsten_steel').modify().flags(GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_GEAR),
-    new MaterialDef('electrum').modify().flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD),
-    new MaterialDef('platinum').modify().flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD),
-    new MaterialDef('palladium').modify().flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_ROTOR),
-
-Replace these three existing lines:
-
     new MaterialDef('osmiridium').modify()
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_ROTOR)
         .byproducts(['ruthenium']),

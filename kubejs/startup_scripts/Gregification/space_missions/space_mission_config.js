@@ -48,12 +48,12 @@ global.SPACE = {
     PLANET_COMPONENT: { moon: 'hafnium', mars: 'rhenium', mercury: 'strontium', venus: 'tellurium', glacio: 'etrium' },
 
     PARTS: {
-        1: { hull: 'aluminum', engine: 'steel', avionics: 'electrum' },
-        2: { hull: 'titanium', engine: 'stainless_steel', avionics: 'platinum' },
+        1: { hull: 'aluminum', engine: 'steel', avionics: 'lumium' },
+        2: { hull: 'titanium', engine: 'stainless_steel', avionics: 'end_steel' },
         3: { hull: 'hafnium', engine: 'tungsten_steel', avionics: 'palladium' },
         4: { hull: 'rheni_zirconium_alloy', engine: 'rhodium_plated_palladium', avionics: 'iridium' },
         5: { hull: 'strontium', engine: 'naquadah_alloy', avionics: 'osmiridium' },
-        6: { hull: 'etrium', engine: 'neutronium', avionics: 'chaotic' }
+        6: { hull: 'etrium', engine: 'neutronium', avionics: 'darmstadtium' }
     },
 
     KUIPER_SIFT: [
