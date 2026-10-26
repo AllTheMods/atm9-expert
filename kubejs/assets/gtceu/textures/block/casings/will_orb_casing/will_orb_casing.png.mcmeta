@@ -1,0 +1,9 @@
+{
+  "ldlib": {
+    "connection": "gtceu:block/casings/will_orb_casing/will_orb_casing_ctm"
+  },
+  "animation": {
+    "frametime": 3,
+    "interpolate": false
+  }
+}

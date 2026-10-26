@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtceu:block/casings/blood_splash_casing/blood_splash_casing"
+  }
+}

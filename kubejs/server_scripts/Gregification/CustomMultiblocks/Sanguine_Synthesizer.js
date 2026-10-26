@@ -29,8 +29,8 @@ ServerEvents.recipes(allthemods => {
         .duration(1000)
         .EUt(LuV);
 
-    allthemods.forEachRecipe({ type: 'bloodmagic:arc' }, rawRecipe => {
-        let safeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
+    allthemods.forEachRecipe({ type: 'bloodmagic:arc' }, rawRecipe => {        
+        let safeID = String(rawRecipe.getId()).replace(/[^a-z0-9]/gi, '_');
         try {
             let recipe = JSON.parse(rawRecipe.json);
 
@@ -99,7 +99,7 @@ ServerEvents.recipes(allthemods => {
     });
 
     allthemods.forEachRecipe({ type: 'bloodmagic:alchemytable' }, rawRecipe => {
-        let safeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
+        let safeID = String(rawRecipe.getId()).replace(/[^a-z0-9]/gi, '_');
         try {
             let recipe = JSON.parse(rawRecipe.json);
 

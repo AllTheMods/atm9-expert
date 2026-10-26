@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtceu:block/casings/sanguine_vessel_casing/sanguine_vessel_casing"
+  }
+}
