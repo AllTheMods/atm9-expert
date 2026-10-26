@@ -1,0 +1,44 @@
+{
+  "enabled": true,
+  "strictNamespaces": false,
+  "logMatches": true,
+  "namespaces": [
+    "gtceu",
+    "kubejs"
+  ],
+  "autoDetect": true,
+  "autoDetectKeys": [
+    "ebf_temp",
+    "RequiredTemp",
+    "required_temp",
+    "coil_temp",
+    "temperature"
+  ],
+  "categories": {
+    "gtceu:example_smelting": {
+      "dataKey": "RequiredTemp",
+      "mode": "temperature"
+    }
+  },
+  "excludedCategories": [
+    "gtceu:electric_blast_furnace",
+    "gtceu:cracker",
+    "gtceu:pyrolyse_oven"
+  ],
+  "showResearchIcon": true,
+  "researchExcludedCategories": [
+    "gtceu:assembly_line"
+  ],
+  "showExtraBadges": true,
+  "jeiEnabled": true,
+  "jeiRecipeTypes": [],
+  "meteorTab": true,
+  "ritualTab": true,
+  "meteorActivationCost": 250000,
+  "offsetX": 0,
+  "offsetY": 0,
+  "copyRecipeId": true,
+  "showText": true,
+  "textX": 4,
+  "textY": 4
+}

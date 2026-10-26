@@ -1021,5 +1021,7 @@
     "block.gtceu.payload_opener": "Payload Opener",
     "item.gtceu.raw_model_neuron": "Raw Model Neuron",
     "block.gtceu.subatomic_projectile_launcher": "Subatomic Projectile Launcher",
-    "gtceu.subatomic_projectile_launcher": "Subatomic Projectile Launcher"
+    "gtceu.subatomic_projectile_launcher": "Subatomic Projectile Launcher",
+    "gtceu.extras_test": "Extras Test",
+    "block.gtceu.extras_test_multiblock": "Extras Test Multiblock"
 }

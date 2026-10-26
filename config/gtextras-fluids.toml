@@ -1,0 +1,6 @@
+#Fluids the hatches use with adjacent tanks, 1 mB = 1 unit. Each entry is a fluid id (modid:name) or a fluid tag written with a leading # (#forge:blood).
+#Input hatches accept every fluid in the list. Output hatches push the entry chosen by sneak-right-clicking them with a screwdriver, starting from the first.
+bloodFluids = ["bloodmagic:life_essence_fluid", "evilcraft:blood", "gtceu:sanguine_concentrate", "#forge:blood"]
+manaFluids = ["gtceu:mana_essence", "#forge:mana"]
+sourceFluids = ["gtceu:source", "#forge:source"]
+

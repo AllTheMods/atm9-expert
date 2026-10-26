@@ -17,6 +17,8 @@ ServerEvents.tags('fluid', allthemods => {
 	allthemods.add('forge:cupronickel', 'tconstruct:molten_constantan')
 	allthemods.add('forge:plastic', 'pneumaticcraft:plastic')
 	allthemods.add('forge:crude_oil', 'gtceu:oil')
+	allthemods.add('forge:mana', 'gtceu:mana_essence');
+    allthemods.add('forge:source', 'gtceu:source');
 
 })
 
