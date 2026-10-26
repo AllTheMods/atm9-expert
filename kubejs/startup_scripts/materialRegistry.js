@@ -1500,7 +1500,7 @@ const materials = [
 
     new MaterialDef('tectonic_petrotheum').dust().gem().fluid().color(0x352821).iconSet('GEM_VERTICAL'),
 
-    new MaterialDef('bedrockium').ingot().ore().dust().color(0xFFFFFF).iconSet('bedrockium').noSmelting().singularity().noDecomp().materialsBasic()
+    new MaterialDef('bedrockium').ingot().ore().dust().color(0xFFFFFF).iconSet('bedrockium').noSmelting().singularity().noDecomp().materialsAll()
         .byproducts(['debris', 'netherite', 'bedrockium']),
 
     new MaterialDef('debris').ore().color(0x6E5A52).iconSet('METALLIC')

@@ -4,5 +4,6 @@
   "forge:dusts/niter": "railcraft:saltpeter_dust",
   "forge:ingots/chrome": "null",
   "forge:ingots/titanium": "null",
-  "forge:ingots/mithril": "null"
+  "forge:ingots/mithril": "null",
+  "forge:rubber": "productivetrees:cured_rubber"
 }

@@ -18,11 +18,12 @@ ServerEvents.tags('fluid', allthemods => {
 	allthemods.add('forge:plastic', 'pneumaticcraft:plastic')
 	allthemods.add('forge:crude_oil', 'gtceu:oil')
 	allthemods.add('forge:mana', 'gtceu:mana_essence');
-    allthemods.add('forge:source', 'gtceu:source');
+	allthemods.add('forge:source', 'gtceu:source');
+
 
 })
 
-ServerEvents.tags('item', allthemods => {
+ServerEvents.tags('item', allthemods => {	
 
 	const mixedGems = [
 		'almandine', 'amethyst', 'blue_topaz', 'topaz', 'green_sapphire', 'sapphire',

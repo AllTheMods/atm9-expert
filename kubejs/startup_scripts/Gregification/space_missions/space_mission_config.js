@@ -168,5 +168,6 @@ global.SPACE_DESTINATIONS = [
     {"id":"black_hole_isco_stable_zone","name":"Black hole ISCO (stable zone)","mk":6,"d":68,"data":"C","gate":"","haul":[["californium",32,"item"],["einsteinium",32,"item"],["fermium",32,"item"],["mendelevium",32,"item"]]},
     {"id":"galactic_center","name":"Galactic center","mk":6,"d":70,"data":"C","gate":"","haul":[["antimatter",8,"item"],["red_matter",16,"item"]]},
     {"id":"quasar_jet","name":"Quasar jet","mk":6,"d":400,"data":"C","gate":"","haul":[["chaos_shard",128,"item"]]},
-    {"id":"infinity_fracture","name":"Infinity fracture","mk":6,"d":200,"data":"C","gate":"","haul":[["infinity",32,"ore"]]}
+    {"id":"infinity_fracture","name":"Infinity fracture","mk":6,"d":200,"data":"C","gate":"","haul":[["infinity",32,"ore"]]},
+    {"id":"hell","name":"Hell","mk":3,"d":7,"data":"T","gate":"","haul":[["exquisite_demon_gem",16,"item"],["exquisite_corrosive_gem",8,"item"],["exquisite_destructive_gem",8,"item"],["exquisite_vengeful_gem",8,"item"],["exquisite_steadfast_gem",8,"item"]]},
 ];
