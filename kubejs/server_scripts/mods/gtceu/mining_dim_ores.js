@@ -124,6 +124,8 @@ GTCEuServerEvents.oreVeins(allthemods => {
             vein.heightRangeUniform(startY, endY);
             vein.dimensions('allthemodium:mining');
             vein.biomes('#allthemodium:mining_features/mining_biomes');
+            vein.density(Math.min(vein.density(), 0.4));
+            vein.clusterSize(Math.min(vein.clusterSize().getMaxValue(), 40));
             vein.layeredVeinGenerator(gen => gen.buildLayerPattern(pattern => {
                 parsedLayers.forEach(pl => {
                     if (pl.type === 'mat') {

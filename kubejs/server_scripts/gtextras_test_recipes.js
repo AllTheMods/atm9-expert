@@ -172,6 +172,16 @@ ServerEvents.recipes(event => {
         .duration(40)
         .EUt(MV);
 
+    [['lv', LV], ['mv', MV], ['hv', HV]].forEach(tier => {
+        [32, 64, 128].forEach(rpm => {
+            event.recipes.gtceu.extras_test('gtextras:cobble_to_rotation_' + tier[0] + '_' + rpm)
+                .itemInputs('4x minecraft:cobblestone')
+                .addCondition(GTX.outputRpm(rpm))
+                .duration(400)
+                .EUt(tier[1]);
+        });
+    });
+
     [16, 64, 128, 256].forEach(rpm => {
         event.recipes.gtceu.extras_test('gtextras:test_rpm_' + rpm)
             .itemInputs(next())
