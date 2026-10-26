@@ -1,7 +1,7 @@
 
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
-    
+    /*
     event.create('alchemical_workbench')
         .category('alchemical_workbench')        
         .setMaxIOSize(12, 6, 3, 3)
@@ -21,5 +21,5 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .recipeType("alchemical_workbench")                
                 .workableTieredHullModel("gtceu:block/machines/chemical_bath")                
         );
-    
+    */
 });

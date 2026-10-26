@@ -121,7 +121,7 @@ ServerEvents.recipes(allthemods => {
     bloodAltar( 'gtceu:hot_blazing_energetic_alloy_ingot', 'enderio:energetic_alloy_ingot', 1, 2000, 25, 25)
 
     let recipe;
-    recipe = allthemods.recipes.gtceu.alchemical_workbench('gregification:alchemical_workbench/gilded_blackstone')
+    recipe = allthemods.recipes.gtceu.sanguine_alchemy('gregification:alchemical_workbench/gilded_blackstone')
         .itemInputs('minecraft:blackstone', '4x #forge:plates/gold')
         .itemOutputs('minecraft:gilded_blackstone')
         .duration(30)

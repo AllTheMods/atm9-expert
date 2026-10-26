@@ -1021,5 +1021,8 @@
     "block.gtceu.payload_opener": "Payload Opener",
     "item.gtceu.raw_model_neuron": "Raw Model Neuron",
     "block.gtceu.subatomic_projectile_launcher": "Subatomic Projectile Launcher",
-    "gtceu.subatomic_projectile_launcher": "Subatomic Projectile Launcher"
+    "gtceu.subatomic_projectile_launcher": "Subatomic Projectile Launcher",
+    "block.gtceu.sanguine_vessel_casing": "Sanguine Vessel Casing",
+    "block.gtceu.sanguine_synthesizer": "Sanguine Synthesizer",
+    "gtceu.sanguine_synthesis": "Sanguine Synthesis"
 }

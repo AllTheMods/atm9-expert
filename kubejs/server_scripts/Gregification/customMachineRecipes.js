@@ -127,7 +127,7 @@ ServerEvents.recipes(allthemods => {
         { machine: '_alfheim_trader', startTier: 3, endTier: 8 },
         { machine: '_mana_pool', startTier: 3, endTier: 8 },
         { machine: '_imbument_chamber', startTier: 3, endTier: 8 },
-        { machine: '_alchemical_workbench', startTier: 4, endTier: 8 },
+        //{ machine: '_alchemical_workbench', startTier: 4, endTier: 8 },
         { machine: '_air_compressor', startTier: 1, endTier: 8 },
         { machine: '_reconstructor', startTier: 2, endTier: 8 },
         { machine: '_liquifier', startTier: 2, endTier: 8 },

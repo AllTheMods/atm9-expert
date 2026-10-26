@@ -6,5 +6,8 @@
   {"type":"item_stack","value":"{Count:1b,id:\"bloodmagic:soulgemgreater\",tag:{}}"},
   {"type":"item_stack","value":"{Count:1b,id:\"minecraft:brick\"}"},
   {"type":"item_stack","value":"{Count:1b,id:\"minecraft:chest\"}"},
-  {"type":"item_stack","value":"{Count:1b,id:\"minecraft:honeycomb\"}"}
+  {"type":"item_stack","value":"{Count:1b,id:\"minecraft:honeycomb\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"gtextras:rotation_interface\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"create:gearbox\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"minecraft:amethyst_shard\"}"}
 ]
