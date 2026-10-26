@@ -128,6 +128,10 @@ ServerEvents.recipes(allthemods => {
         { machine: '_mana_pool', startTier: 3, endTier: 8 },
         { machine: '_imbument_chamber', startTier: 3, endTier: 8 },
         //{ machine: '_alchemical_workbench', startTier: 4, endTier: 8 },
+        { machine: '_sanguine_alchemy', startTier: 1, endTier: 8 },
+        { machine: '_sanguine_forge', startTier: 1, endTier: 8 },
+        { machine: '_sanguine_arc', startTier: 1, endTier: 8 },
+        { machine: '_sanguine_array', startTier: 1, endTier: 8 },
         { machine: '_air_compressor', startTier: 1, endTier: 8 },
         { machine: '_reconstructor', startTier: 2, endTier: 8 },
         { machine: '_liquifier', startTier: 2, endTier: 8 },
@@ -247,7 +251,7 @@ ServerEvents.recipes(allthemods => {
                     I: piston
                 }).id(`gregification:${tData.tier}_imbument_chamber`);
             }
-            if (mData.machine == '_alchemical_workbench' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+            /*if (mData.machine == '_alchemical_workbench' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
                 allthemods.shaped(`gtceu:${tData.tier}_alchemical_workbench`, [
                     'TRT',
                     'UHI',
@@ -261,7 +265,72 @@ ServerEvents.recipes(allthemods => {
                     T: plate,
                     I: piston
                 }).id(`gregification:${tData.tier}_alchemical_workbench`);
+            }*/
+           
+            if (mData.machine == '_sanguine_alchemy' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                allthemods.shaped(`gtceu:${tData.tier}_sanguine_alchemy`, [
+                    'TRT',
+                    'UHI',
+                    'CFC'
+                ], {
+                    H: hull,
+                    R: 'bloodmagic:alchemytable',
+                    F: '#forge:frames/hellforged',
+                    U: pump,
+                    C: circuit,
+                    T: plate,
+                    I: piston
+                }).id(`gregification:${tData.tier}_sanguine_alchemy`);
             }
+
+            if (mData.machine == '_sanguine_forge' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                allthemods.shaped(`gtceu:${tData.tier}_sanguine_forge`, [
+                    'TRT',
+                    'UHI',
+                    'CFC'
+                ], {
+                    H: hull,
+                    R: 'bloodmagic:soulforge',
+                    F: '#forge:frames/hellforged',
+                    U: pump,
+                    C: circuit,
+                    T: plate,
+                    I: piston
+                }).id(`gregification:${tData.tier}_sanguine_forge`);
+            }
+
+            if (mData.machine == '_sanguine_arc' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                allthemods.shaped(`gtceu:${tData.tier}_sanguine_arc`, [
+                    'TRT',
+                    'UHI',
+                    'CFC'
+                ], {
+                    H: hull,
+                    R: 'bloodmagic:alchemicalreactionchamber',
+                    F: '#forge:frames/hellforged',
+                    U: pump,
+                    C: circuit,
+                    T: plate,
+                    I: piston
+                }).id(`gregification:${tData.tier}_sanguine_arc`);
+            }
+
+            if (mData.machine == '_sanguine_array' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                allthemods.shaped(`gtceu:${tData.tier}_sanguine_array`, [
+                    'TRT',
+                    'UHI',
+                    'CFC'
+                ], {
+                    H: hull,
+                    R: 'bloodmagic:arcaneashes',
+                    F: '#forge:frames/hellforged',
+                    U: pump,
+                    C: circuit,
+                    T: plate,
+                    I: piston
+                }).id(`gregification:${tData.tier}_sanguine_array`);
+            }
+
             if (mData.machine == '_air_compressor' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
                 allthemods.shaped(`gtceu:${tData.tier}_air_compressor`, [
                     'PUP',

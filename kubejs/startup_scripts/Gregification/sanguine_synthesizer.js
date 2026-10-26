@@ -24,42 +24,36 @@ StartupEvents.registry('block', allthemods => {
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     
-    /*allthemods.create('alchemical_workbench')
-        .category('alchemical_workbench')        
-        .setMaxIOSize(9, 3, 0, 0)
-        .setSound(GTSoundEntries.BATH)        
-        .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT);*/
-
     allthemods.create('sanguine_synthesis')
-        .category('multiblock')
+        .category('sanguine_synthesis')
         .setEUIO('in')
         .setMaxIOSize(4, 4, 2, 2)
         .setProgressBar(GuiTextures.COMPRESSOR_OVERLAY, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.COMPRESSOR);
 
     allthemods.create('sanguine_alchemy')
-        .category('multiblock')
+        .category('sanguine_alchemy')
         .setEUIO('in')
-        .setMaxIOSize(6, 1, 0, 0)
+        .setMaxIOSize(9, 1, 0, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.BATH);
 
     allthemods.create('sanguine_forge')
-        .category('multiblock')
+        .category('sanguine_forge')
         .setEUIO('in')
         .setMaxIOSize(4, 1, 0, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_COMPRESS, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.FURNACE);
 
     allthemods.create('sanguine_arc')
-        .category('multiblock')
+        .category('sanguine_arc')
         .setEUIO('in')
         .setMaxIOSize(2, 4, 1, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_MACERATE, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.MACERATOR);
 
     allthemods.create('sanguine_array')
-        .category('multiblock')
+        .category('sanguine_array')
         .setEUIO('in')
         .setMaxIOSize(2, 1, 0, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ASSEMBLER, FillDirection.LEFT_TO_RIGHT)
@@ -67,14 +61,41 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
-    /*allthemods.create("alchemical_workbench", "simple")
-        .tiers(GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
+    allthemods.create('sanguine_alchemy', 'simple')
+        .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
         .definition((tier, builder) =>
             builder
                 .rotationState(RotationState.NON_Y_AXIS)
-                .recipeType("alchemical_workbench")                
-                .workableTieredHullModel("gtceu:block/machines/chemical_bath")                
-        );*/
+                .recipeType('sanguine_alchemy')
+                .workableTieredHullModel('gtceu:block/machines/chemical_bath')
+        );
+
+    allthemods.create('sanguine_forge', 'simple')
+        .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
+        .definition((tier, builder) =>
+            builder
+                .rotationState(RotationState.NON_Y_AXIS)
+                .recipeType('sanguine_forge')
+                .workableTieredHullModel('gtceu:block/machines/forge_hammer')
+        );
+
+    allthemods.create('sanguine_arc', 'simple')
+        .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
+        .definition((tier, builder) =>
+            builder
+                .rotationState(RotationState.NON_Y_AXIS)
+                .recipeType('sanguine_arc')
+                .workableTieredHullModel('gtceu:block/machines/macerator')
+        );
+
+    allthemods.create('sanguine_array', 'simple')
+        .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
+        .definition((tier, builder) =>
+            builder
+                .rotationState(RotationState.NON_Y_AXIS)
+                .recipeType('sanguine_array')
+                .workableTieredHullModel('gtceu:block/machines/assembler')
+        );
 
     allthemods.create('sanguine_synthesizer', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
