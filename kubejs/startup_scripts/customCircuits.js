@@ -36,6 +36,7 @@ StartupEvents.registry('item', allthemods => {
 
 
     const tierCodes = {
+        lv: '8LV', mv: '3MV', hv: '6HV', ev: 'aEV', iv: '1IV',
         luv: '5LuV', zpm: '7ZPM', uv: 'eUV',
         uhv: '4UHV', uev: '9UEV', uiv: 'bUIV',
         uxv: 'dUXV', opv: 'fOpV', max: 'fMAX'

@@ -6,20 +6,20 @@ ServerEvents.recipes(allthemods => {
     }
   
     //'simplemagnets:basic_demagnetization_coil', 'simplemagnets:advanced_demagnetization_coil','simplemagnets:basicmagnet','simplemagnets:advancedmagnet',
-    allthemods.shapeless('simplemagnets:basic_demagnetization_coil', ['simplemagnets:basicmagnet', 'gtceu:iv_machine_hull']).id('gregification:basic_demagnetization_coil');
+    allthemods.shapeless('simplemagnets:basic_demagnetization_coil', ['simplemagnets:basicmagnet', 'gtceu:lv_machine_hull']).id('gregification:basic_demagnetization_coil');
 
-    allthemods.shapeless('simplemagnets:advanced_demagnetization_coil', ['simplemagnets:advancedmagnet', 'gtceu:luv_machine_hull']).id('gregification:advanced_demagnetization_coil');
+    allthemods.shapeless('simplemagnets:advanced_demagnetization_coil', ['simplemagnets:advancedmagnet', 'gtceu:ev_machine_hull']).id('gregification:advanced_demagnetization_coil');
 
     allthemods.shaped('simplemagnets:basicmagnet', [
         'T L',
         'ERE',
         'ECE'
     ], {
-        R: "#forge:rods/magnetic_samarium_cobalt",
-        E: "#forge:plates/enderium",
+        R: "#forge:rods/magnetic_steel",
+        E: "#forge:plates/aluminium",
         T: "#forge:dusts/redstone",
         L: "#forge:gems/lapis",
-        C: "#gtceu:circuits/ev"
+        C: "#gtceu:circuits/lv"
     }).id('gregification:basicmagnet');
 
     allthemods.shaped('simplemagnets:advancedmagnet', [
