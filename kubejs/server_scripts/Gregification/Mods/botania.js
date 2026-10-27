@@ -74,7 +74,35 @@ ServerEvents.recipes(allthemods => {
             .duration(14400);
     });
 
-    
+    allthemods.recipes.gtceu.assembly_line('gregification:craft_elven_forge')
+        .itemInputs(
+            'gtceu:luv_machine_hull',
+            '2x #gtceu:circuits/luv',
+            '2x gtceu:luv_electric_pump',
+            '2x gtceu:luv_electric_motor',
+            '2x #forge:plates/rhodium_plated_palladium',            
+            '4x botania:elf_glass',
+            '2x gtceu:overgrown_plating_casing'
+        )
+        .inputFluids('#forge:soldering_alloy 2000', '#forge:mana 2000')
+        .itemOutputs('gtceu:elven_forge')
+        .duration(600)
+        .EUt(LuV);
+        
+    allthemods.recipes.gtceu.assembler('gregification:craft_sanguine_synthesizer')
+    .itemInputs(
+        'gtceu:hv_machine_hull',
+        '#gtceu:circuits/hv',
+        '2x gtceu:hv_electric_pump',
+        '2x gtceu:hv_electric_motor',
+        '2x #forge:plates/stainless_steel',
+        '2x gtceu:sanguine_vessel_casing',
+        '4x bloodmagic:demonslate'
+    )
+    .inputFluids('#forge:blood 16000')
+    .itemOutputs('gtceu:sanguine_synthesizer')
+    .duration(300)
+    .EUt(HV);
 
     allthemods.recipes.gtceu.mana_converter('mana_to_portal_fluid')
         .inputFluids('#forge:mana 1000')

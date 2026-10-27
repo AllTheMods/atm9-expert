@@ -1,0 +1,9 @@
+{
+  "ldlib": {
+    "connection": "gtceu:block/casings/overgrown_conduit_casing/overgrown_conduit_casing_ctm"
+  },
+  "animation": {
+    "frametime": 2,
+    "interpolate": false
+  }
+}

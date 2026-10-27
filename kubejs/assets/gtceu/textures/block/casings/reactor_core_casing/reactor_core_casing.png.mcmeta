@@ -1,0 +1,9 @@
+{
+  "ldlib": {
+    "connection": "gtceu:block/casings/reactor_core_casing/reactor_core_casing_ctm"
+  },
+  "animation": {
+    "frametime": 2,
+    "interpolate": false
+  }
+}

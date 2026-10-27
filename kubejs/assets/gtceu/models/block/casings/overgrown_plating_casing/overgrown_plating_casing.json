@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtceu:block/casings/overgrown_plating_casing/overgrown_plating_casing"
+  }
+}
