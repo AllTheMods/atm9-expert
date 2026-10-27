@@ -162,7 +162,7 @@ ServerEvents.recipes(allthemods => {
         allthemods.recipes.gtceu.runic_altar(safeID)
             .itemInputs(inputItems)
             .itemOutputs(outputItems)
-            .inputFluids(`gtceu:mana_essence ${manaCost}`)
+            .inputFluids(`#forge:mana ${manaCost}`)
             .duration(runicDuration)
             .EUt(HV);
     });
@@ -205,7 +205,7 @@ ServerEvents.recipes(allthemods => {
         allthemods.recipes.gtceu.mana_infuser(safeID)
             .itemInputs(inputItems)
             .itemOutputs(outputItem)
-            .inputFluids(`gtceu:mana_essence ${manaCost}`)
+            .inputFluids(`#forge:mana ${manaCost}`)
             .duration(infusionDuration)
             .EUt(infusionVoltage);
     });
@@ -242,19 +242,19 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.runic_altar('mana_bee')
         .itemInputs([pureBee, '4x botania:rune_mana', 'botania:livingrock'])
         .itemOutputs(manaBee)
-        .inputFluids('gtceu:mana_essence 1000000')
+        .inputFluids('#forge:mana 1000000')
         .duration(petalDuration)
         .EUt(runicVoltage);
     allthemods.recipes.gtceu.mana_infuser('terra_bee')
         .itemInputs([manaSteel, 'botania:mana_pearl', 'botania:mana_diamond'])
         .itemOutputs(terraBee)
-        .inputFluids('gtceu:mana_essence 500000')
+        .inputFluids('#forge:mana 500000')
         .duration(infusionDuration)
         .EUt(infusionVoltage);
     allthemods.recipes.gtceu.mana_infuser('alf_bee')
         .itemInputs([elementiumBee, 'botania:pixie_dust', 'botania:dragonstone'])
         .itemOutputs(alfBee)
-        .inputFluids('gtceu:mana_essence 500000')
+        .inputFluids('#forge:mana 500000')
         .duration(infusionDuration)
         .EUt(infusionVoltage);
 
@@ -262,49 +262,49 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.mana_infuser('unobtainium_allthemodium_alloy_block')
         .itemInputs(['#forge:storage_blocks/unobtainium', '#forge:storage_blocks/allthemodium', 'allthemodium:piglich_heart_block'])
         .itemOutputs('allthemodium:unobtainium_allthemodium_alloy_block')
-        .inputFluids('gtceu:mana_essence 8100000')
+        .inputFluids('#forge:mana 8100000')
         .duration(infusionDuration)
         .EUt(infusionVoltage);
 
     allthemods.recipes.gtceu.mana_infuser('unobtainium_vibranium_alloy_block')
         .itemInputs(['#forge:storage_blocks/unobtainium', '#forge:storage_blocks/vibranium', 'allthemodium:piglich_heart_block'])
         .itemOutputs('allthemodium:unobtainium_vibranium_alloy_block')
-        .inputFluids('gtceu:mana_essence 8100000')
+        .inputFluids('#forge:mana 8100000')
         .duration(infusionDuration)
         .EUt(infusionVoltage);
 
     allthemods.recipes.gtceu.mana_infuser('vibranium_allthemodium_alloy_block')
         .itemInputs(['#forge:storage_blocks/allthemodium', '#forge:storage_blocks/vibranium', 'allthemodium:piglich_heart_block'])
         .itemOutputs('allthemodium:vibranium_allthemodium_alloy_block')
-        .inputFluids('gtceu:mana_essence 8100000')
+        .inputFluids('#forge:mana 8100000')
         .duration(infusionDuration)
         .EUt(infusionVoltage);
 
     allthemods.recipes.gtceu.mana_infuser('unobtainium_vibranium_alloy_ingot')
         .itemInputs(['#forge:ingots/unobtainium', '#forge:ingots/vibranium', 'allthemodium:piglich_heart'])
         .itemOutputs('allthemodium:unobtainium_vibranium_alloy_ingot')
-        .inputFluids('gtceu:mana_essence 1000000')
+        .inputFluids('#forge:mana 1000000')
         .duration(infusionDuration)
         .EUt(infusionVoltage);
 
     allthemods.recipes.gtceu.mana_infuser('vibranium_allthemodium_alloy_ingot')
         .itemInputs(['#forge:ingots/vibranium', '#forge:ingots/allthemodium', 'allthemodium:piglich_heart'])
         .itemOutputs('allthemodium:vibranium_allthemodium_alloy_ingot')
-        .inputFluids('gtceu:mana_essence 1000000')
+        .inputFluids('#forge:mana 1000000')
         .duration(infusionDuration)
         .EUt(infusionVoltage);
 
     allthemods.recipes.gtceu.mana_infuser('unobtainium_allthemodium_alloy_ingot')
         .itemInputs(['#forge:ingots/unobtainium', '#forge:ingots/allthemodium', 'allthemodium:piglich_heart'])
         .itemOutputs('allthemodium:unobtainium_allthemodium_alloy_ingot')
-        .inputFluids('gtceu:mana_essence 1000000')
+        .inputFluids('#forge:mana 1000000')
         .duration(infusionDuration)
         .EUt(infusionVoltage);
 
     allthemods.recipes.gtceu.mana_infuser('mythicbotany:alfsteel_ingot')
         .itemInputs(['botania:elementium_ingot', 'botania:pixie_dust', 'botania:mana_pearl'])
         .itemOutputs('mythicbotany:alfsteel_ingot')
-        .inputFluids('gtceu:mana_essence 1000000')
+        .inputFluids('#forge:mana 1000000')
         .duration(infusionDuration)
         .EUt(infusionVoltage);
 
@@ -352,7 +352,7 @@ ServerEvents.recipes(allthemods => {
                 let builder = allthemods.recipes.gtceu.mana_pool(safeID)
                     .itemInputs([inputItem])
                     .itemOutputs(outputItem)
-                    .inputFluids(`gtceu:mana_essence ${manaCost}`)
+                    .inputFluids(`#forge:mana ${manaCost}`)
                     .duration(10)
                     .EUt(HV);
 
@@ -378,7 +378,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.mana_pool('bacteria_mana_pool_manasteel_bee')
         .itemInputs(ironBee)
         .itemOutputs(manaSteel)
-        .inputFluids('gtceu:mana_essence 10000')
+        .inputFluids('#forge:mana 10000')
         .duration(10)
         .EUt(HV);
 

@@ -5,7 +5,7 @@ ServerEvents.recipes(allthemods => {
 
     const baseMaterials = [
         { name: 'eternium', eu: UV },
-        { name: 'samarium_cobalt', eu: IV },
+        { name: 'samarium_cobalt', eu: EV },
         { name: 'neodymium_dysprosium', eu: LuV },
         { name: 'neodymium_terbium', eu: ZPM }
     ]

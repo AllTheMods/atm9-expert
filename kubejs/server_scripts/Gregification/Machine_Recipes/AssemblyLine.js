@@ -996,7 +996,7 @@ ServerEvents.recipes(allthemods => {
             '8x naturesaura:depth_ingot'
         ],
         [
-            'gtceu:mana_essence 1296',
+            '#forge:mana 1296',
             'gtceu:primordial_cosmic_soup 1000'
 
         ],
