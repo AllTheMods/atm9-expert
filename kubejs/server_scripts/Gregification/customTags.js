@@ -21,11 +21,15 @@ ServerEvents.tags('fluid', allthemods => {
 	allthemods.add('forge:source', 'gtceu:source');
 	['corrosive','vengeful','destructive','demon','steadfast'].forEach(tag => {
 		allthemods.add('forge:will', `gtceu:${tag}`);
-	});
-
+	});	
 })
 
 ServerEvents.tags('item', allthemods => {	
+	
+	['LV', 'MV', 'HV', 'EV', 'IV', 'LuV', 'ZPM', 'UV', 'UHV', 'UEV', 'UIV', 'UXV', 'OpV', 'MAX'].forEach(tier => {
+        allthemods.add('gtceu:circuits', `gtceu:${tier.toLowerCase()}_universal_circuit`)
+		allthemods.add(`gtceu:circuits/${tier.toLowerCase()}`, `gtceu:${tier.toLowerCase()}_universal_circuit`)
+    })
 
 	const mixedGems = [
 		'almandine', 'amethyst', 'blue_topaz', 'topaz', 'green_sapphire', 'sapphire',

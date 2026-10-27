@@ -39,7 +39,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('unifier')
         .category('unifier')
         .setEUIO('in')
-        .setMaxIOSize(1, 1, 1, 1)
+        .setMaxIOSize(3, 3, 3, 3)
         .setSound(GTSoundEntries.BOILER)
         .setSlotOverlay(false, true, GuiTextures.BEAKER_OVERLAY_3)
         .setSlotOverlay(true, true, GuiTextures.BEAKER_OVERLAY_4)

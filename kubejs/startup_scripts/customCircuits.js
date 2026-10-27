@@ -20,7 +20,7 @@ global.circuitFamilies = [
 global.circuitSocs = [
     { id: 'wetware', name: 'Wetware', tier: 'zpm', madeIn: 'uhv' },
     { id: 'bioware', name: 'Bioware', tier: 'uv', madeIn: 'uev' },
-    { id: 'optical', name: 'Optical', tier: 'uhv', madeIn: 'uiv' },    
+    { id: 'optical', name: 'Optical', tier: 'uhv', madeIn: 'uiv' },
 ]
 
 global.circuitItemName = (family, stage) => `${family.id}_processor${stage.idSuffix}`
@@ -34,12 +34,19 @@ global.circuitTagTier = (family, stage) => {
 StartupEvents.registry('item', allthemods => {
 
 
+
     const tierCodes = {
         luv: '5LuV', zpm: '7ZPM', uv: 'eUV',
         uhv: '4UHV', uev: '9UEV', uiv: 'bUIV',
         uxv: 'dUXV', opv: 'fOpV', max: 'fMAX'
     }
-    const tierLabel = id => `§${tierCodes[id]}§7`
+    const tierLabel = id => `§${tierCodes[id]}§7`;
+
+    ['LV', 'MV', 'HV', 'EV', 'IV', 'LuV', 'ZPM', 'UV', 'UHV', 'UEV', 'UIV', 'UXV', 'OpV', 'MAX'].forEach(tier => {
+        allthemods.create(`gtceu:${tier.toLowerCase()}_universal_circuit`)
+            .displayName(`${tier} Universal Circuit`)
+            .tooltip(`${tierLabel(tier.toLowerCase())}-Tier Universal Circuit`)
+    })
 
 
     global.circuitFamilies.forEach(family => {
@@ -52,8 +59,7 @@ StartupEvents.registry('item', allthemods => {
         })
     })
 
-    // SoCs: named after the circuit family of their tier, textures are
-    // kubejs/assets/gtceu/textures/item/<id>_soc.png (auto-resolved, no .texture() call)
+    
     global.circuitSocs.forEach(soc => {
         const item = allthemods.create(`gtceu:${soc.id}_soc`)
             .displayName(`${soc.name} SoC`)
@@ -61,13 +67,13 @@ StartupEvents.registry('item', allthemods => {
             .tooltip(`Assembled in ${tierLabel(soc.madeIn)} machines`)
         if (soc.exotic) item.tooltip('§5Requires exotic materials')
 
-        allthemods.create(`gtceu:${soc.id}_soc_wafer`)            
-            .displayName(`${soc.name} SoC Wafer`)            
+        allthemods.create(`gtceu:${soc.id}_soc_wafer`)
+            .displayName(`${soc.name} SoC Wafer`)
             .tooltip(`${tierLabel(soc.tier)}-Tier SoC Wafer`)
-            .tooltip(`Assembled in ${tierLabel(soc.madeIn)} machines`)            
+            .tooltip(`Assembled in ${tierLabel(soc.madeIn)} machines`)
     })
 
-    // Voltage coils keep their old placeholder names and colours
+    
     const coilTiers = [
         { id: 'uhv', name: 'Neutronium', color: 0xC7C7C7 },
         { id: 'uev', name: 'Photonic', color: 0x4ECAB1 },
@@ -76,9 +82,9 @@ StartupEvents.registry('item', allthemods => {
         { id: 'opv', name: 'Naquadric', color: 0xE853DC },
         { id: 'max', name: 'Antimatter', color: 0xFFFFFF }
     ]
-    
+
     coilTiers.forEach(tier => {
-        allthemods.create(`gtceu:${tier.id}_voltage_coil`)            
+        allthemods.create(`gtceu:${tier.id}_voltage_coil`)
             .displayName(`${tier.name} Voltage Coil`)
             .tooltip(`${tierLabel(tier.id)}-Tier Voltage Coil`)
 
@@ -90,12 +96,12 @@ StartupEvents.registry('item', allthemods => {
             .displayName(`${tier.name} Wafer`)
             .tooltip(`${tierLabel(tier.id)}-Tier Power IC Wafer`)
     })
-/*
-    allthemods.create(`gtceu:uhv_voltage_coil`)            
-            .displayName(`Neutronium Voltage Coil`)
-            .tooltip(`${tierLabel('uhv')}-Tier Voltage Coil`)
- */   
-    
+    /*
+        allthemods.create(`gtceu:uhv_voltage_coil`)            
+                .displayName(`Neutronium Voltage Coil`)
+                .tooltip(`${tierLabel('uhv')}-Tier Voltage Coil`)
+     */
+
 
 
     //individual boules and wafers for various materials
@@ -103,30 +109,30 @@ StartupEvents.registry('item', allthemods => {
     allthemods.create('gtceu:yttrium_aluminium_garnet_boule')
         .displayName('Yttrium Aluminium Garnet Raw Circuit')
         .tooltip('Yttrium Aluminium Garnet Boule')
-        //.rarity('ie_masterwork')
-        //.texture('gtceu:item/neutronium_boule')
-        //.color(0, 0xE8E8F0)
+    //.rarity('ie_masterwork')
+    //.texture('gtceu:item/neutronium_boule')
+    //.color(0, 0xE8E8F0)
 
     allthemods.create('gtceu:neodymium_doped_yttrium_aluminium_garnet_boule')
         .displayName('Neodymium Doped Yttrium Aluminium Garnet Raw Circuit')
         .tooltip('Neodymium Doped Yttrium Aluminium Garnet Boule')
-        //.rarity('ie_masterwork')
-        //.texture('gtceu:item/neutronium_boule')
-        //.color(0, 0xC9A8E0)
+    //.rarity('ie_masterwork')
+    //.texture('gtceu:item/neutronium_boule')
+    //.color(0, 0xC9A8E0)
 
     allthemods.create('gtceu:praseodymium_doped_yttrium_aluminium_garnet_boule')
         .displayName('Praseodymium Doped Yttrium Aluminium Garnet Raw Circuit')
         .tooltip('Praseodymium Doped Yttrium Aluminium Garnet Boule')
-        //.rarity('ie_masterwork')
-        //.texture('gtceu:item/neutronium_boule')
-        //.color(0, 0xC8D46A)
+    //.rarity('ie_masterwork')
+    //.texture('gtceu:item/neutronium_boule')
+    //.color(0, 0xC8D46A)
 
     allthemods.create('gtceu:cubic_zirconia_boule')
         .displayName('Zirconia Raw Circuit')
         .tooltip('Cubic Zirconia Boule')
-        //.rarity('ie_masterwork')
-        //.texture('gtceu:item/neutronium_boule')
-        //.color(0, 0xD8ECF2)
+    //.rarity('ie_masterwork')
+    //.texture('gtceu:item/neutronium_boule')
+    //.color(0, 0xD8ECF2)
 
     allthemods.create(`gtceu:cubic_zirconia_wafer`)
         //.texture('gtceu:item/neutronium_wafer')
@@ -137,9 +143,9 @@ StartupEvents.registry('item', allthemods => {
     allthemods.create('gtceu:bismuth_telluride_boule')
         .displayName('Bismuth Telluride Raw Circuit')
         .tooltip('Bismuth Telluride Boule')
-        //.rarity('ie_masterwork')
-        //.texture('gtceu:item/neutronium_boule')
-        //.color(0, 0x4B4F5C)
+    //.rarity('ie_masterwork')
+    //.texture('gtceu:item/neutronium_boule')
+    //.color(0, 0x4B4F5C)
 
     allthemods.create(`gtceu:bismuth_telluride_wafer`)
         //.texture('gtceu:item/neutronium_wafer')
@@ -229,5 +235,5 @@ StartupEvents.registry('item', allthemods => {
         .displayName('Polishing Wheel')
 
     allthemods.create(`gtceu:eternium_grinding_head`)
-        //.texture('gtceu:item/eternium_grinding_head')
+    //.texture('gtceu:item/eternium_grinding_head')
 })

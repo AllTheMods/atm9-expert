@@ -1,5 +1,5 @@
 ServerEvents.recipes(allthemods => {
-        const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+        const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
         allthemods.recipes.gtceu.unifier('gregification:lubricant_uinification')
                 .inputFluids('#forge:lubricant 12')
                 .outputFluids('gtceu:lubricant 12')
@@ -18,11 +18,20 @@ ServerEvents.recipes(allthemods => {
                 .duration(1)
                 .EUt(LV);
 
-        
+
         allthemods.recipes.gtceu.unifier(`gregification:will_unification`)
                 .inputFluids(`#forge:will 144`)
                 .outputFluids(`gtceu:demon 144`)
                 .duration(1)
                 .EUt(LV);
-	
+
+        ['LV', 'MV', 'HV', 'EV', 'IV', 'LuV', 'ZPM', 'UV', 'UHV', 'UEV', 'UIV', 'UXV', 'OpV', 'MAX'].forEach((tier, index) => {
+                allthemods.recipes.gtceu.unifier(`gregification:${tier.toLowerCase()}_universal_circuit_unification`)
+                        .itemInputs(`#gtceu:circuits/${tier.toLowerCase()}`)
+                        .itemOutputs(`1x gtceu:${tier.toLowerCase()}_universal_circuit`)
+                        .circuit(index + 1)
+                        .duration(1)
+                        .EUt(8);
+        });
+
 });
