@@ -74,35 +74,21 @@ ServerEvents.recipes(allthemods => {
             .duration(14400);
     });
 
-    allthemods.recipes.gtceu.assembly_line('gregification:craft_elven_forge')
-        .itemInputs(
-            'gtceu:luv_machine_hull',
-            '2x #gtceu:circuits/luv',
-            '2x gtceu:luv_electric_pump',
-            '2x gtceu:luv_electric_motor',
-            '2x #forge:plates/rhodium_plated_palladium',            
-            '4x botania:elf_glass',
-            '2x gtceu:overgrown_plating_casing'
-        )
-        .inputFluids('#forge:soldering_alloy 2000', '#forge:mana 2000')
-        .itemOutputs('gtceu:elven_forge')
-        .duration(600)
-        .EUt(LuV);
-        
+
     allthemods.recipes.gtceu.assembler('gregification:craft_sanguine_synthesizer')
-    .itemInputs(
-        'gtceu:hv_machine_hull',
-        '#gtceu:circuits/hv',
-        '2x gtceu:hv_electric_pump',
-        '2x gtceu:hv_electric_motor',
-        '2x #forge:plates/stainless_steel',
-        '2x gtceu:sanguine_vessel_casing',
-        '4x bloodmagic:demonslate'
-    )
-    .inputFluids('#forge:blood 16000')
-    .itemOutputs('gtceu:sanguine_synthesizer')
-    .duration(300)
-    .EUt(HV);
+        .itemInputs(
+            'gtceu:hv_machine_hull',
+            '#gtceu:circuits/hv',
+            '2x gtceu:hv_electric_pump',
+            '2x gtceu:hv_electric_motor',
+            '2x #forge:plates/stainless_steel',
+            '2x gtceu:sanguine_vessel_casing',
+            '4x bloodmagic:demonslate'
+        )
+        .inputFluids('#forge:blood 16000')
+        .itemOutputs('gtceu:sanguine_synthesizer')
+        .duration(300)
+        .EUt(HV);
 
     allthemods.recipes.gtceu.mana_converter('mana_to_portal_fluid')
         .inputFluids('#forge:mana 1000')
@@ -110,7 +96,7 @@ ServerEvents.recipes(allthemods => {
         .addData('ebf_temp', 3600)
         .duration(100)
         .EUt(MV);
-        
+
     const petalDuration = 300;
     const runicDuration = 600;
     const infusionDuration = 1200;
@@ -502,4 +488,38 @@ ServerEvents.recipes(allthemods => {
         .duration(1200)
         .EUt(ZPM);
 
+    allthemods.recipes.gtceu.assembler('gregification:craft_overgrown_plating_casing')
+        .itemInputs(
+            '#forge:frames/aluminium',
+            '6x #forge:plates/manasteel',
+            '2x botania:livingrock',
+            '2x botania:rune_mana'
+        )
+        .inputFluids('#forge:mana 5000')
+        .itemOutputs('2x gtceu:overgrown_plating_casing')        
+        .duration(100)
+        .EUt(MV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_overgrown_conduit_casing')
+        .itemInputs(
+            '#forge:frames/aluminium',
+            '8x #forge:plates/elementium',
+            '4x botania:livingwood'
+        )
+        .inputFluids('#forge:mana 10000')
+        .itemOutputs('2x gtceu:overgrown_conduit_casing')        
+        .duration(100)
+        .EUt(MV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_reactor_core_casing')
+        .itemInputs(
+            '#forge:frames/terrasteel',
+            '8x #forge:plates/terrasteel',
+            '8x #forge:plates/umbral_steel',
+            '4x botania:mana_diamond'
+        )
+        .inputFluids('#forge:mana 2000')
+        .itemOutputs('2x gtceu:reactor_core_casing')        
+        .duration(100)
+        .EUt(MV);
 });

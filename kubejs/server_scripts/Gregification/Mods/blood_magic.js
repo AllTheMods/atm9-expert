@@ -23,7 +23,7 @@ const basicPairs = [
 
 ServerEvents.recipes(allthemods => {
 
-    const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+    const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
 
     allthemods.shaped('gtceu:rune_casing', [
         'NCN',
@@ -103,7 +103,7 @@ ServerEvents.recipes(allthemods => {
             LV,
             30,
             index + 1)
-        
+
         addAssembler(
             '#forge:altar_runes',
             '#forge:blood 2500',
@@ -114,11 +114,11 @@ ServerEvents.recipes(allthemods => {
             `${rName}rune_conversion`)
 
     });
-    
-    
-    bloodAltar( 'gtceu:blank_slate_casing', 'bloodmagic:blankslate', 0, 1000, 25, 25)
-    bloodAltar( 'gtceu:hot_blazing_soularium_ingot', 'enderio:soularium_ingot', 1, 2000, 25, 25)
-    bloodAltar( 'gtceu:hot_blazing_energetic_alloy_ingot', 'enderio:energetic_alloy_ingot', 1, 2000, 25, 25)
+
+
+    bloodAltar('gtceu:blank_slate_casing', 'bloodmagic:blankslate', 0, 1000, 25, 25)
+    bloodAltar('gtceu:hot_blazing_soularium_ingot', 'enderio:soularium_ingot', 1, 2000, 25, 25)
+    bloodAltar('gtceu:hot_blazing_energetic_alloy_ingot', 'enderio:energetic_alloy_ingot', 1, 2000, 25, 25)
 
     let recipe;
     recipe = allthemods.recipes.gtceu.sanguine_alchemy('gregification:alchemical_workbench/gilded_blackstone')
@@ -126,5 +126,43 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('minecraft:gilded_blackstone')
         .duration(30)
         .EUt(MV);
-        
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_sanguine_vessel_casing')
+        .itemInputs(
+            '#forge:frames/umbral_steel',
+            '3x #forge:plates/stainless_steel',
+            '3x #forge:plates/umbral_steel',
+            '2x bloodmagic:reinforcedslate'
+        )
+        .inputFluids('#forge:blood 2000')
+        .itemOutputs('2x gtceu:sanguine_vessel_casing')
+        .circuit(1)
+        .duration(100)
+        .EUt(MV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_blood_splash_casing')
+        .itemInputs(
+            '#forge:frames/aluminium',
+            '4x #forge:plates/stainless_steel',
+            '4x #forge:plates/umbral_steel',
+            'bloodmagic:demonslate'
+        )
+        .inputFluids('#forge:blood 4000')
+        .itemOutputs('2x gtceu:blood_splash_casing')
+        .circuit(2)
+        .duration(100)
+        .EUt(MV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_will_orb_casing')
+        .itemInputs(
+            '#forge:frames/hellforged',
+            '4x #forge:plates/stainless_steel',
+            '4x #forge:plates/umbral_steel',
+            'bloodmagic:reinforcedslate'
+        )
+        .inputFluids('#forge:will 288')
+        .itemOutputs('2x gtceu:will_orb_casing')
+        .duration(100)
+        .EUt(MV);
+
 })

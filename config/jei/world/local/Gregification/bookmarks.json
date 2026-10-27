@@ -3,5 +3,15 @@
   {"type":"item_stack","value":"{Count:1b,id:\"gtceu:mv_sanguine_forge\"}"},
   {"type":"item_stack","value":"{Count:1b,id:\"gtceu:mv_sanguine_array\"}"},
   {"type":"item_stack","value":"{Count:1b,id:\"gtceu:sanguine_synthesizer\"}"},
-  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:botanical_factory\"}"}
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:botanical_factory\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:overgrown_conduit_casing\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:reactor_core_casing\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:overgrown_plating_casing\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"botania:mana_diamond\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"botania:mana_pearl\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"botania:manasteel_ingot\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"botania:terrasteel_ingot\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:will_orb_casing\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:blood_splash_casing\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:sanguine_vessel_casing\"}"}
 ]

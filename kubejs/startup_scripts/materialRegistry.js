@@ -563,7 +563,7 @@ const materials = [
         .color(0x2f0a0b).iconSet('NETHERSTAR').gem()
         .unify({ gemFlawless: true, gemExquisite: true, gem: 'evilcraft:dark_power_gem', block: 'evilcraft:dark_power_gem_block' }),
 
-    new MaterialDef('umbral_steel').components('1x steel, 1x dark_gem').color(0x3A2457).iconSet('METALLIC').ingot().fluid().flags(GTMaterialFlags.GENERATE_PLATE).noSmelting()
+    new MaterialDef('umbral_steel').components('1x steel, 1x dark_gem').color(0x3A2457).iconSet('METALLIC').ingot().fluid().flags(GTMaterialFlags.GENERATE_PLATE).noSmelting().materialsBasic()
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: LV, duration: 400 }),
 
     new MaterialDef('spawner_scrap').dust().color(0x5B6E8F).iconSet('METALLIC').singularity(),
