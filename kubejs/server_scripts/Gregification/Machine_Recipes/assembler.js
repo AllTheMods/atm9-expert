@@ -245,7 +245,7 @@ ServerEvents.recipes(allthemods => {
     //undead sapling
     addAssembler(
         'minecraft:dead_bush',
-        '#forge:sanguine_concentrate 1000',
+        '#forge:blood 1000',
         'evilcraft:undead_sapling',
         LV,                                        // LV Voltage
         2000

@@ -274,7 +274,7 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/saturated_life_fertilizer')
         .itemInputs('#forge:dusts/picolinic_acid')
-        .inputFluids('#forge:liquid_fertilizer 500', '#forge:sanguine_concentrate 500', '#forge:copper_ii_sulfate 432')
+        .inputFluids('#forge:liquid_fertilizer 500', '#forge:blood 500', '#forge:copper_ii_sulfate 432')
         .outputFluids('gtceu:saturated_life_fertilizer 1000')
         .duration(100)
         .EUt(HV);

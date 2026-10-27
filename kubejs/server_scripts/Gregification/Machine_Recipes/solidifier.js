@@ -26,7 +26,7 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.fluid_solidifier('gregification_hardened_blood')
         .notConsumable('gtceu:block_casting_mold')
-        .inputFluids('#forge:sanguine_concentrate 1000')
+        .inputFluids('#forge:blood 1000')
         .itemOutputs('evilcraft:hardened_blood')
         .duration(200)
         .EUt(HV)

@@ -893,7 +893,7 @@ ServerEvents.recipes(allthemods => {
             '#forge:singularities/garmonbozia',
             'allthetweaks:atm_star'
         ],
-        '#forge:sanguine_concentrate 1024000',
+        '#forge:blood 1024000',
         6000,
         LuV, 8, null, 0
     );

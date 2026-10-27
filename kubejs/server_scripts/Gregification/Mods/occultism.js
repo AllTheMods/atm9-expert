@@ -71,7 +71,7 @@ ServerEvents.recipes(allthemods => {
         }
 
         if (data.fluid) {
-            bio_recipe.inputFluids(`#forge:sanguine_concentrate ${data.fluid.amount}`);
+            bio_recipe.inputFluids(`#forge:blood ${data.fluid.amount}`);
         }
 
         switch (data.tier) {
@@ -85,7 +85,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.bio_electrical_infuser('gregification:bio_electrical_infuser/weakblood_orb_to_bound_blood_drop')
         .itemInputs('#forge:blood_orb')
         .itemOutputs('evilcraft:bound_blood_drop')
-        .inputFluids('#forge:sanguine_concentrate 10000')
+        .inputFluids('#forge:blood 10000')
         .duration(1000)
         .notConsumable('evilcraft:promise_tier_2')
         .EUt(IV)
@@ -101,7 +101,7 @@ ServerEvents.recipes(allthemods => {
                 '16x gtceu:carbon_fiber_plate'
             ])
         .itemOutputs('gtceu:blood_coated_blade')
-        .inputFluids('#forge:sanguine_concentrate 64000')
+        .inputFluids('#forge:blood 64000')
         .notConsumable('evilcraft:promise_tier_3')
         .duration(1000)
         .EUt(IV)

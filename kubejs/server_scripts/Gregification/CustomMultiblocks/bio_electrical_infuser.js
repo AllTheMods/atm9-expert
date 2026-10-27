@@ -364,7 +364,7 @@ ServerEvents.recipes(allthemods => {
 			'gtceu:tachyon'
 		],
 		[
-			'#forge:sanguine_concentrate 16000',
+			'#forge:blood 16000',
 			'#forge:lubricant 16000',
 			'#forge:honey 16000',
 			'#forge:dna_omega 1'

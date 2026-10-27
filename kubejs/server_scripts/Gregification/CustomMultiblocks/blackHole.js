@@ -131,12 +131,12 @@ ServerEvents.recipes(allthemods => {
     blackHole(['#forge:singularities/core', '4000x gtceu:beryllium_ingot'], null, 'gtceu:beryllium_singularity', null, ZPM, compressionDuration, 'beryllium_singularity')
     
 
-    blackHole(['#forge:singularities/core','8000x elementalcraft:fire_shard'],    '#forge:sanguine_concentrate 32000000', 'gtceu:elemental_fire_singularity', null, ZPM, compressionDuration, 'fire_singularity')
+    blackHole(['#forge:singularities/core','8000x elementalcraft:fire_shard'],    '#forge:blood 32000000', 'gtceu:elemental_fire_singularity', null, ZPM, compressionDuration, 'fire_singularity')
     blackHole(['#forge:singularities/core','8000x elementalcraft:air_shard'],     '#forge:source 32000000', 'gtceu:elemental_air_singularity', null, ZPM, compressionDuration, 'air_singularity')
     blackHole(['#forge:singularities/core','8000x elementalcraft:earth_shard'],   '#forge:experience 32000000', 'gtceu:elemental_earth_singularity', null, ZPM, compressionDuration, 'earth_singularity')
     blackHole(['#forge:singularities/core','8000x elementalcraft:water_shard'],   '#forge:mana_essence 32000000', 'gtceu:elemental_water_singularity', null, ZPM, compressionDuration, 'water_singularity')
 
-    blackHole(['#forge:singularities/core','4000x elementalcraft:powerful_fire_shard'],  '#forge:sanguine_concentrate 32000000', 'gtceu:elemental_fire_singularity', null, ZPM, compressionDuration, 'powerful_fire_singularity')
+    blackHole(['#forge:singularities/core','4000x elementalcraft:powerful_fire_shard'],  '#forge:blood 32000000', 'gtceu:elemental_fire_singularity', null, ZPM, compressionDuration, 'powerful_fire_singularity')
     blackHole(['#forge:singularities/core','4000x elementalcraft:powerful_air_shard'],   '#forge:source 32000000', 'gtceu:elemental_air_singularity', null, ZPM, compressionDuration, 'powerful_air_singularity')
     blackHole(['#forge:singularities/core','4000x elementalcraft:powerful_earth_shard'], '#forge:experience 32000000', 'gtceu:elemental_earth_singularity', null, ZPM, compressionDuration, 'powerful_earth_singularity')
     blackHole(['#forge:singularities/core','4000x elementalcraft:powerful_water_shard'], '#forge:mana_essence 32000000', 'gtceu:elemental_water_singularity', null, ZPM, compressionDuration, 'powerful_water_singularity')
