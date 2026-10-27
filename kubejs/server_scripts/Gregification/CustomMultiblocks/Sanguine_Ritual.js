@@ -40,7 +40,7 @@ ServerEvents.recipes(allthemods => {
             .EUt(tiers[eu]);
 
         
-        recipe.inputFluids(`gtceu:sanguine_concentrate ${fluidIn}`);
+        recipe.inputFluids(`#forge:blood ${fluidIn}`);
 
         if (fluidOut && fluidOut.length > 0) {
             recipe.outputFluids(fluidOut);

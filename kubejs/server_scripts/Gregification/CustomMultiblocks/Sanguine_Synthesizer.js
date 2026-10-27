@@ -91,7 +91,9 @@ ServerEvents.recipes(allthemods => {
             });
 
             if (recipe.tool && recipe.tool.tag) {
+                builder.notConsumable('#' + recipe.tool.tag);
                 builder.addCondition(GTX.damageItem('#' + recipe.tool.tag, 1));
+                builder.addCondition(GTX.damageItemLabel('#' + recipe.tool.tag));
             }
         } catch (err) {
             console.error(`FAILED recipe ID: ${safeID} — ${err}`);
@@ -146,10 +148,12 @@ ServerEvents.recipes(allthemods => {
                 .duration(duration)
                 .EUt(altarVoltage);
 
-            if (syphonAmount > 0) builder.input(GTX.BLOOD, syphonAmount);
+            if (syphonAmount > 0) builder.inputFluids('#forge:blood ' + syphonAmount);
             if (orbItem) builder.notConsumable(orbItem);
             tools.forEach(key => {
+                builder.notConsumable(key);
                 builder.addCondition(GTX.damageItem(key, 1));
+                builder.addCondition(GTX.damageItemLabel(key));
             });
         } catch (err) {
             console.error(`FAILED recipe ID: ${safeID} — ${err}`);

@@ -2,12 +2,15 @@
   {"version":1},
   {"type":"item_stack","value":"{Count:1b,id:\"gtceu:subatomic_projectile_launcher\"}"},
   {"type":"recipe","value":"gtceu:subatomic_projectile_launcher#gregification:subatomic_projectile_launcher/subatomic_projectile_launch#item_stack\u0026gtceu:raw_model_neuron"},
-  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:extras_test_multiblock\"}"},
   {"type":"item_stack","value":"{Count:1b,id:\"bloodmagic:soulgemgreater\",tag:{}}"},
   {"type":"item_stack","value":"{Count:1b,id:\"minecraft:brick\"}"},
   {"type":"item_stack","value":"{Count:1b,id:\"minecraft:chest\"}"},
   {"type":"item_stack","value":"{Count:1b,id:\"minecraft:honeycomb\"}"},
   {"type":"item_stack","value":"{Count:1b,id:\"gtextras:rotation_interface\"}"},
   {"type":"item_stack","value":"{Count:1b,id:\"create:gearbox\"}"},
-  {"type":"item_stack","value":"{Count:1b,id:\"minecraft:amethyst_shard\"}"}
+  {"type":"item_stack","value":"{Count:1b,id:\"minecraft:amethyst_shard\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:mv_sanguine_alchemy\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:mv_sanguine_arc\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:mv_sanguine_forge\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:mv_sanguine_array\"}"}
 ]

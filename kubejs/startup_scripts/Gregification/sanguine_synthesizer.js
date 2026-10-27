@@ -34,28 +34,28 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create('sanguine_alchemy')
         .category('sanguine_alchemy')
         .setEUIO('in')
-        .setMaxIOSize(9, 1, 0, 0)
+        .setMaxIOSize(9, 1, 1, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.BATH);
 
     allthemods.create('sanguine_forge')
         .category('sanguine_forge')
         .setEUIO('in')
-        .setMaxIOSize(4, 1, 0, 0)
+        .setMaxIOSize(4, 1, 1, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_COMPRESS, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.FURNACE);
 
     allthemods.create('sanguine_arc')
         .category('sanguine_arc')
         .setEUIO('in')
-        .setMaxIOSize(2, 4, 1, 1)
+        .setMaxIOSize(2, 4, 2, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_MACERATE, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.MACERATOR);
 
     allthemods.create('sanguine_array')
         .category('sanguine_array')
         .setEUIO('in')
-        .setMaxIOSize(2, 1, 0, 0)
+        .setMaxIOSize(2, 1, 1, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ASSEMBLER, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.SCIENCE);
 });

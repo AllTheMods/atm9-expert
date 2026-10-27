@@ -36,7 +36,7 @@ ServerEvents.recipes(allthemods => {
 	//hexagonal casing
 	addBioInfuser ( 
 		['gtceu:magical_bio_composite', '4x #forge:plates/titanium', '2x gtceu:ev_electric_motor', '2x gtceu:ev_electric_pump', '2x #forge:plates/terrasteel', '2x #forge:plates/vibrant_alloy', '8x #forge:screws/soularium', '4x #forge:small_gears/hellforged'],
-		['gtceu:glue 1000', 'gtceu:sanguine_concentrate 1000', '#forge:creosote 1000', '#forge:lubricant 1000', 'gtceu:saturated_tau 1000'],
+		['gtceu:glue 1000', '#forge:blood 1000', '#forge:creosote 1000', '#forge:lubricant 1000', 'gtceu:saturated_tau 1000'],
 		'gtceu:hexagonal_bio_composite', null, IV, 1200);	
 		
 		allthemods.remove({ 
@@ -105,7 +105,7 @@ ServerEvents.recipes(allthemods => {
             'gtceu:ev_electric_motor'
         ],
         [
-			'gtceu:sanguine_concentrate 2000',            
+			'#forge:blood 2000',            
             '#forge:lubricant 2000',
 			'gtceu:soldering_alloy 288',
 			'pneumaticcraft:etching_acid 2000'
@@ -127,7 +127,7 @@ ServerEvents.recipes(allthemods => {
             'gtceu:iv_electric_motor'
         ],
         [
-            'gtceu:sanguine_concentrate 4000',
+            '#forge:blood 4000',
             'gtceu:polytetrafluoroethylene 1000',
             'gtceu:soldering_alloy 576',
             '#forge:lubricant 4000',
@@ -152,7 +152,7 @@ ServerEvents.recipes(allthemods => {
             'gtceu:ev_conveyor_module'
         ],
         [
-            'gtceu:sanguine_concentrate 2000',
+            '#forge:blood 2000',
             'gtceu:soldering_alloy 288',
             '#forge:lubricant 1000'
         ],
@@ -176,7 +176,7 @@ ServerEvents.recipes(allthemods => {
             'evilcraft:garmonbozia'
         ],
         [
-            'gtceu:sanguine_concentrate 2000',
+            '#forge:blood 2000',
 			'#forge:lubricant 4000',            
             'gtceu:soldering_alloy 288'
         ],
@@ -197,7 +197,7 @@ ServerEvents.recipes(allthemods => {
             'evilcraft:garmonbozia'
         ],
         [
-            'gtceu:sanguine_concentrate 4000',
+            '#forge:blood 4000',
 			'#forge:lubricant 4000',
             'gtceu:soldering_alloy 288'
         ],
@@ -236,7 +236,7 @@ ServerEvents.recipes(allthemods => {
             'evilcraft:garmonbozia'
         ],
         [
-            'gtceu:sanguine_concentrate 8000',
+            '#forge:blood 8000',
             '#forge:lubricant 8000',
             'gtceu:soldering_alloy 576',
             'gtceu:polytetrafluoroethylene 1000'
@@ -386,7 +386,7 @@ ServerEvents.recipes(allthemods => {
 			'evilcraft:garmonbozia'			
 		], 
 		[
-			'gtceu:sanguine_concentrate 2000',
+			'#forge:blood 2000',
 			'gtceu:saturated_tau 1000', 
 			'#forge:lubricant 1000'
 		],

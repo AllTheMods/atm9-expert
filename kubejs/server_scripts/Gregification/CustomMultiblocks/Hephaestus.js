@@ -57,7 +57,7 @@ ServerEvents.recipes(allthemods => {
             [
                 "gtceu:aureal 1000",
                 "#forge:soul 10",
-                'gtceu:sanguine_concentrate 1000',
+                '#forge:blood 1000',
                 "gtceu:distilled_water 10000"
             ],
             //"forbidden_arcanus:growing_edelwood",
@@ -78,7 +78,7 @@ ServerEvents.recipes(allthemods => {
         [
             "gtceu:aureal 1000",
             "#forge:soul 8",
-            'gtceu:sanguine_concentrate 2000'
+            '#forge:blood 2000'
         ],
         "forbidden_arcanus:sea_prism",
         1200,
@@ -96,7 +96,7 @@ ServerEvents.recipes(allthemods => {
         [
             "gtceu:aureal 200",
             "#forge:soul 4",
-            'gtceu:sanguine_concentrate 1250'
+            '#forge:blood 1250'
         ],
         "forbidden_arcanus:smelter_prism",
         1200,
@@ -115,7 +115,7 @@ ServerEvents.recipes(allthemods => {
         [
             "gtceu:aureal 300",
             "#forge:soul 9",
-            'gtceu:sanguine_concentrate 1500'
+            '#forge:blood 1500'
         ],
         "forbidden_arcanus:terrastomp_prism",
         1200,
@@ -134,7 +134,7 @@ ServerEvents.recipes(allthemods => {
         [
             "gtceu:aureal 1000",
             "#forge:soul 3",
-            'gtceu:sanguine_concentrate 2250'
+            '#forge:blood 2250'
         ],
         "forbidden_arcanus:whirlwind_prism",
         1200,
@@ -152,7 +152,7 @@ ServerEvents.recipes(allthemods => {
         [
             "gtceu:aureal 1000",
             "#forge:soul 500",
-            'gtceu:sanguine_concentrate 1000'
+            '#forge:blood 1000'
         ],
         "forbidden_arcanus:eternal_stella",
         1200,
@@ -174,7 +174,7 @@ ServerEvents.recipes(allthemods => {
         [
             "gtceu:aureal 100",
             "#forge:soul 20",
-            'gtceu:sanguine_concentrate 2000'
+            '#forge:blood 2000'
         ],
         "forbidden_arcanus:ferrognetic_mixture",
         400,
@@ -192,7 +192,7 @@ ServerEvents.recipes(allthemods => {
         [
             "gtceu:aureal 82",
             "#forge:soul 1",
-            'gtceu:sanguine_concentrate 1000'
+            '#forge:blood 1000'
         ],
         Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:stellarite"}}').strongNBT(),
         1200,

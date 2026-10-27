@@ -312,8 +312,8 @@ ServerEvents.recipes(allthemods => {
 
 	fluidmix('primordial_plasma', 			'gtceu:liquid_draconic_essence',		1000, '#forge:blue_ice', 					1000, 'gtceu:primordial_sanguine_plasma', 1000 );	
 	fluidmix('primordial_cosmic_soup', 		'gtceu:aetheric_sanguine_singularity',	1000, 'industrialforegoing:ether_gas', 		1000, 'gtceu:primordial_cosmic_soup', 1000, 250000 );	
-	fluidmix('unrefined_white_blood', 		'#forge:white_chalk', 					1000, 'gtceu:sanguine_concentrate', 		1000, 'gtceu:unrefined_white_blood', 1000 );
-	fluidmix('unrefined_red_blood', 		'#forge:purple_chalk', 					1000, 'gtceu:sanguine_concentrate',			1000, 'gtceu:unrefined_red_blood', 1000 );	
+	fluidmix('unrefined_white_blood', 		'#forge:white_chalk', 					1000, '#forge:blood', 						1000, 'gtceu:unrefined_white_blood', 1000 );
+	fluidmix('unrefined_red_blood', 		'#forge:purple_chalk', 					1000, '#forge:blood',						1000, 'gtceu:unrefined_red_blood', 1000 );	
 	fluidmix('energized_glowing_catalyst', 	'#forge:yellow_chalk', 					1000, 'thermal:glowstone', 					1000, 'gtceu:energized_glowing_catalyst', 1000 );	
 	fluidmix('destabilized_red_catalyst', 	'#forge:red_chalk',						1000, 'thermal:redstone', 					1000, 'gtceu:destabilized_red_catalyst', 1000 );
 	fluidmix('essence_of_creation', 		'gtceu:ethereal_white_blood', 			1000, 'gtceu:energized_glowing_catalyst', 	1000, 'gtceu:essence_of_creation', 1000 );

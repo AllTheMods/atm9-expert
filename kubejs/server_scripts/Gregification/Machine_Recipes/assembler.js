@@ -116,7 +116,7 @@ ServerEvents.recipes(allthemods => {
     //slate casing
     addAssembler(
         ['4x #forge:plates/umbral_steel', '4x minecraft:stone', 'gtceu:lv_machine_casing'],
-        'gtceu:sanguine_concentrate 250',
+        '#forge:blood 250',
         'gtceu:slate_casing',
         LV, 200
     );
@@ -202,7 +202,7 @@ ServerEvents.recipes(allthemods => {
             'gtceu:data_stick',
             '#forge:frames/compressed_iron'
         ],
-        'gtceu:sanguine_concentrate',
+        '#forge:blood 1000',
         'gtceu:xenomorphic_data_frame',
         HV,
         600
