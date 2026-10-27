@@ -1,0 +1,287 @@
+#shaders/lang/nl_NL.lang
+
+Contribute=Draag bij aan de officiële vertalingen: https://www.euphoriapatches.com/lang - Verander deze URL niet
+
+option.LANG_FILE_HEADER=Vertalingen gemaakt door de Community - De vertalingen kunnen verouderd zijn. SpacEagle17 kan hun nauwkeurigheid niet garanderen.
+option.TRANSLATORS=Vertaald door: Patatagod69
+
+shaderDescription=§cComplementary Shaders r5.9.3§r + §dEuphoria Patches 1.10.5§r\nComplementary add-on gemaakt door SpacEagle17, die de shader met vele unieke instellingen en features uitbreidt.\nDev versies: §dwww.euphoriapatches.com/support§r
+
+#Profiles
+profile.POTATO=Performance: §aPotato
+profile.VERYLOW=Performance: §aErg Laag
+profile.LOW=Performance: §aLaag
+profile.MEDIUM=Performance: §aMedium
+profile.HIGH=Performance: §eHoog (standaard)
+profile.VERYHIGH=Performance: §eErg Hoog
+profile.ULTRA=Performance: §cUltra
+profile.COMPLEMENTARY=Performance: §4§lComplementary
+profile.comment=Shader-profiles veranderen de performance-instellingen met de meest geoptimaliseerde looks-tot-performance ratio. §e[*]§r Het is aangeraden om één van deze profiles te gebruiken voor je instellingen te maken, tenzij je verstand van zaken hebt. §e[*]§r Alle aangepaste instellingen zijn te vinden in het "Performance Instellingen" menu.
+
+#Information
+screen.INFORMATION=Informatie
+screen.INFORMATION.comment=Dit gedeelde bevat knoppen die alleen bestaan om informatie te geven.
+
+screen.INFORMATION2=Complementary Informatie
+screen.INFORMATION2.comment=Dit gedeelde bevat knoppen die alleen bestaan om informatie te geven.
+
+option.info0=§bHover je cursor op een knop
+value.info0.0=
+option.info0.comment=Dit gedeelde bevat knoppen die alleen bestaan om informatie te geven.
+
+option.info1=Hoe krijg je meer performance
+value.info1.0=
+option.info1.comment=- Performance is een complex onderwerp in Minecraft, omdat het door vele verschillende dingen wordt beïnvloed. Je kan alsnog deze tips proberen: - Gebruik Iris+Sodium mods in plaats van Optifine, omdat Optifine verouderd is en je bijvoorbeeld niet eens deze hele tekst laat lezen. - Verminder de "Profile" shader-instelling. Deze zijn zorgvuldig ingesteld voor de beste looks-tot-performance ratio. - Verminder je render distance instelling. Het is aangeraden om hem 2 tot 4 chunks hoger dan de "schaduw-afstand" van het "Profile" dat je hebt gekozen. Bijvoorbeeld, 16 chunks voor het profile "Hoog" en 6 chunks voor het profile "Potato". - Zorg ervoor dat je schermresolutie niet overdreven hoog is. 1920x1080 is top voor mid-tier computers, 1440p is haalbaar voor krachtige computers en 4k is simpelweg té hoog. - Zorg ervoor dat je geen enorm aantal mods hebt, zelfs niet als deze "optimalisatie-mods" zijn. Ze maken meestal geen verschil met shaders aan. En als laatst: sommige resource-pakketten, zeker degene die complexer gebladerte toevoegen, kosten veel performance.
+
+option.info2=Wat zijn de beste instellingen
+value.info2.0=
+option.info2.comment=- De beste instellingen zijn subjectief, maar de standaard "Profile"-opties zullen erg passend zijn voor bijna iedereen. - De standaard-instellingen zijn gevormd door jaren aan community-evaluaties, -tests en -feedback, samen met performance in het achterhoofd. - Maar voel je vrij om de instellingen te tweaken en plezier ermee te hebben!
+
+option.info3=Wat is Profile of Visual Style
+value.info3.0=
+option.info3.comment=- De "Profile"-instelling verandert de instellingen gevonden in het "Performance Instellingen"-menu, maar verandert geen grote visuele instellingen. - "Visual Style" verandert een hoop visuele instellingen, maar verandert performance zowat niet. - Het enige verschil tussen Complementary Reimagined en Complementary Unbound is de standaardwaarde van "Visual Style".
+
+option.info4=Wat is RP Support
+value.info4.0=
+option.info4.comment=- De RP Support instelling bepaalt hoe de shader met de verschillende blokken van Minecraft omgaat. - Bijvoorbeeld, §bIntegratedPBR+§r maakt goudblokken reflectief, terwijl §elabPBR§r en §eseuspbr§r een resource pack met die informatie nodig hebben. - §aBasic§r RP Support zal geen enkel blok zulke speciale effecten geven, behalve voor een paar uitzonderingen zoals water.
+
+option.info5=Wat zijn gele instellingen
+value.info5.0=
+option.info5.comment=- Een instelling met een gele naam betekent dat de instelling een meetbare impact op performance heeft, zelfs als hij buiten de "Performance Instellingen" categorie staat. - Als de instelling zelfs rood kleurt, bekent dat dat de instelling een hoge impact op performance heeft.
+
+option.info6=Zijn er enige aanbevolen mods
+value.info6.0=
+option.info6.comment=- Naast de essentiele mods Iris en Sodium, raad ik een block-entity optimalisatie-mod zoals "Optimized Block Entities" of "Enhanced Block Entities" aan om je performance te verbeteren. - Ook kan de "RenderScale" mod goed zijn voor het eenvoudig aanpassen van de schermresolutie, wat een enorme performance-impact kan hebben. - De mods "Voxy" en "Distant Horizons" maken het mogelijk om extreme render distances te hebben zonder een extreme performance-impact. Ik raad je aan 64 tot 256 chunks aan Voxy render distance te gebruiken en 64 tot 128 chunks aan Distant Horizons render distance te gebruiken, met een normale render distance van 8 tot 12 wanneer één van deze mods wordt gebruikt. - Ten slotte kan je de "Euphoria Patches" mod gebruiken. Deze mod voegt automatisch een gemodificeerde instantie van Complementary aan je shader-lijst toe, en fixt zelfs sommige Iris bugs tijdens het gebruik van elke shader maar ook, zoals laten werken van gekleurde lichten op hoge wereldcoördinaten.
+
+option.info7=Waar kan ik vragen stellen of problemen melden
+value.info7.0=
+option.info7.comment=- Gebruik alsjeblieft de Complementary Discord-server voor vragen of het "issues" gedeelte in de Github pagina. - www.complementary.dev/discord. - www.complementary.dev/github
+
+option.info8=Hoe join ik de community
+value.info8.0=
+option.info8.comment=- Je kan de Complementary Discord server joinen om aan onze vriendelijke community deel te nemen, en ook nog eens ervaren members en ontwikkelaars te kunnen spreken. - www.complementary.dev/discord
+
+option.info9=Hoe support ik Complementary
+value.info9.0=
+option.info9.comment=- De beste manier om Complementary te supporten is om het met je vrienden en op social media te delen, maar je kan ook de hoofd-ontwikkelaar (ik!) supporten op Patreon. - www.patreon.com/emingt
+
+option.info10=Credits
+value.info10.0=
+option.info10.comment=- EminGT: De hoofd-ontwikkelaar van Complementary. Capt Tatsu: Ontwikkelaar van BSL Shaders, zijn gulheid is wat Complementary mogelijk heeft gemaakt. - Special Thanks: IMS212, sp614x, Chocapic13, Robobo1221, sixthsurge, null511, fayer3, catlikecoding, Builderb0y, Jessie, SpacEagle17, isuewo, flytrap, gri573, FoZy-STYLE, plazmal, aceralex
+
+option.info11=§dWat is Euphoria Patches
+value.info11.0=
+option.info11.comment=Euphoria Patches is een add-on voor Complementary Shaders, ontwikkeld door SpacEagle17. Het doelt om Complementary met meer features en instellingen uit te breiden.
+
+option.info12=Euphoria Patches Instellingen
+value.info12.0=
+option.info12.comment=Alle Euphoria-instellingen zijn standaard uitgeschakelt. De gebruiker kan zelf beslissen wat ze wel of niet ingeschakelt willen hebben. Onder de "Populaire Instellingen" categorie kan je de meest populaire Euphoria Patches features vinden. Er bestaan talloze andere instellingen en er komen steeds meer bij! Veel plezier met het tweaken zoals je hartje begeert.
+
+option.info13=Euphoria Mod Support
+value.info13.0=
+option.info13.comment=Euphoria Patches doelt om mod-blokken beter te ondersteunen dan Complementary door standaard support toe te voegen. Neem bijvoorbeeld de lichtbron-detectie met automatische PBR en gebladerte model-detectie met automatische SSS.
+
+option.info14=Join de community
+value.info14.0=
+option.info14.comment=Join de Euphoria Patches Discord server om vragen te stellen, deel te nemen aan een fijne community en up-to-date te blijven met het laatste nieuws. §d§l§neuphoriapatches.com/discord
+
+option.info15=Euphoria Patches Credits
+value.info15.0=
+option.info15.comment=De volledige credits kan je vinden op §deuphoriapatches.com/credits§r. isuewo - Voormalige medeontwikkelaar van Euphoria Patches. EminGT: De hoofd-ontwikkelaar van Complementary. Capt Tatsu, gri573, FoZy STYLE, JoKerTech, sixthsurge, WoMspace (aka Sasha), Septonious, fayer3, Xonk, Memokii, dragoncat, TheNukeLore, dbrighthd, Surisen (Ruri), Acer (Alex), Folox_, Helgust.
+
+option.info16=§d§nHoe support ik Euphoria Patches
+value.info16.0=
+option.info16.comment=Je kan Euphoria Patches supporten door het te delen met anderen, maar je kan ook SpacEagle17 op Patron of Ko-Fi supporten en toegang tot exclusieve Beta-versies krijgen. §d§l§neuphoriapatches.com/support
+
+option.info17=Beta Versie: SpacEagle17 Patreon
+value.info17.0=
+option.info17.comment=Je kan SpacEagle17 op Patron of Ko-Fi supporten en toegang tot exclusieve Beta-versies krijgen. §d§l§neuphoriapatches.com/support
+
+option.info18=Voor Complementary r5.9.3
+value.info18.0=
+option.info18.comment=Bedankt voor het installeren van Euphoria Patches :)
+
+option.info19=§aNIEUWE UPDATE
+value.info19.0=§cX.Y.Z §r->§a X.Y.Z
+option.info19.comment=Een nieuwe versie van de EuphoriaPatcher Mod is beschikbaar. Download hem van Modrinth: https://euphoriapatches.com/download.
+
+option.info20=
+value.info20.0=§aeuphoriapatches.com/download
+option.info20.comment=Een nieuwe versie van de EuphoriaPatcher Mod is beschikbaar. Download hem van Modrinth: https://euphoriapatches.com/download.
+
+option.info21=Veelgestelde Vragen
+value.info21.0=
+option.info21.comment=Bekijk de FAQ-pagina om antwoorden op veelgestelde vragen te vinden. §l§neuphoriapatches.com/faq
+
+option.info22=§dMeer Instellingen door te Scrollen
+value.info22.0=
+option.info22.comment=Bij grote GUI-groottes is het mogelijk dat sommige instellingen verborgen zijn, omlaag scrollen zal ze onthullen.
+
+#Style
+option.SHADER_STYLE=Visual Style
+option.SHADER_STYLE.comment=Bepaalt de standaard visuele stijl van het shader pakket. §bReimagined§r: Verbeter Minecraft terwijl je de unieke stijl ervan behoudt. §dUnbound§r: Vernieuwt de looks van Minecraft met een semi-realistische fantasy-style. §e[*]§r Veranderde instellingen: Water Stijl, Wolken Stijl, Zon/Maan Stijl, Zon/Maan Hoek, Aurora Stijl, Gloeiende Ertsen
+value.SHADER_STYLE.1=§bReimagined
+value.SHADER_STYLE.4=§dUnbound
+
+#Screens
+screen.PERFORMANCE_SETTINGS=§ePerformance Instellingen§r
+screen.PERFORMANCE_SETTINGS.comment=Instellingen die rechtstreeks de performance veranderen en veranderd worden door verschillende shader-profiles.
+
+screen.ATMOSPHERE_SETTINGS=Atmosfeer
+screen.ATMOSPHERE_SETTINGS.comment=Instellingen die te maken hebben met de atmosfeer.
+
+screen.ATM_COLOR_SETTINGS=Atmosfeer Kleur-vermenigvuldigers
+screen.ATM_COLOR_SETTINGS.comment=Maakt aanpassingen van luchtkleuren mogelijk, die het meest worden gezien in de lucht en de mist.
+
+screen.MORNING_ATM_MULTS=Zonsondergang/Zonsopgang Tijd
+screen.NOON_ATM_MULTS=Middaguur Tijd
+screen.NIGHT_ATM_MULTS=Nacht Tijd
+screen.RAIN_ATM_MULTS=Regenachtig Weer
+screen.NETHER_ATM_MULTS=De Nether Dimensie
+screen.END_ATM_MULTS=The End Dimensie
+
+screen.CLOUD_SETTINGS=Wolken
+screen.CLOUD_SETTINGS.comment=Instellingen die te maken hebben met de wolken.
+
+screen.CLOUD_COLOR_SETTINGS=Wolkenkleur
+screen.CLOUD_COLOR_SETTINGS.comment=Instellingen voor het veranderen van de kleur van de wolken.
+
+screen.CLOUD_UNBOUND_SETTINGS=Unbound Wolken-Instellingen
+screen.CLOUD_REIMAGINED_SETTINGS=Reimagined Wolken-Instellingen
+
+screen.FOG_SETTINGS=Mist
+screen.FOG_SETTINGS.comment=Instellingen die te maken hebben met de verschillende soorten mist.
+
+screen.SUN_MOON_SETTINGS=Zon / Maan
+screen.SUN_MOON_SETTINGS.comment=Instellingen die te maken hebben met de zon en de maan.
+
+screen.NETHER_SETTINGS=De Nether Dimensie
+screen.NETHER_SETTINGS.comment=Instellingen die te maken hebben met de Nether Dimensie.
+
+screen.END_SETTINGS=The End Dimensie
+screen.END_SETTINGS.comment=Instellingen die te maken hebben met de End Dimensie.
+
+screen.WEATHER_SETTINGS=Regen / Weer
+screen.WEATHER_SETTINGS.comment=Instellingen die te maken hebben met de weersomstandigheden.
+
+screen.CAMERA_SETTINGS=Camera
+screen.CAMERA_SETTINGS.comment=Instellingen die te maken hebben met het beeld / de Camera.
+
+screen.TONEMAP_SETTINGS=Kleurbalans
+screen.TONEMAP_SETTINGS.comment=Instellingen die de kleurenbalans van het beeld bepalen.
+
+screen.COLORGRADING_SETTINGS=Kleurcorrectie
+screen.COLORGRADING_SETTINGS.comment=Instellingen om de uiteindelijke kleurkanalen te veranderen en mixen.
+
+screen.WORLD_BLUR_SETTINGS=Wereld Blur
+screen.WORLD_BLUR_SETTINGS.comment=Instellingen die te maken hebben met wereld-blur effecten.
+
+screen.TAA_SETTINGS=Temporal Filter Instellingen
+screen.TAA_SETTINGS.comment=Instellingen om het gedrag van temporal anti-aliasing te bepalen.
+
+screen.MATERIAL_SETTINGS=Materialen
+screen.MATERIAL_SETTINGS.comment=Instellingen die te maken hebben met de materialen van Minecraft.
+
+screen.IPBR_SETTINGS=IntegratedPBR+ Materialen
+screen.IPBR_SETTINGS.comment=Instellingen die te maken hebben met de features van IntegratedPBR+.
+
+screen.GLOWING_ORE_SETTINGS=Gloeiende Ertsen
+screen.GLOWING_ORE_SETTINGS.comment=Instellingen om de emissie van ertsblokken aan te passen.
+
+screen.GLOWING_STUFF_SETTINGS=Gloeiende Dingen
+screen.GLOWING_STUFF_SETTINGS.comment=Instellingen om de emissie van diverse blokken aan te passen.
+
+screen.OTHER_IPBR_SETTINGS=Andere IPBR+ Features
+screen.OTHER_IPBR_SETTINGS.comment=Diverse IntegratedPBR+ instellingen
+
+screen.CUSTOM_PBR_SETTINGS=labPBR/seuspbr Materialen
+screen.CUSTOM_PBR_SETTINGS.comment=Instellingen die te maken hebben met de features van labPBR/seuspbr.
+
+screen.LIGHTING_SETTINGS=Belichting
+screen.LIGHTING_SETTINGS.comment=Instellingen die te maken hebben met de belichting.
+
+screen.LIGHT_COLOR_SETTINGS=Kleurenvermenigvuldigers Licht
+screen.LIGHT_COLOR_SETTINGS.comment=Maakt aanpassing mogelijk van lichtkleuren die op alle oppervlakken worden gezien.
+
+screen.MORNING_LIGHT_MULTS=Zonsondergang/Zonsopgang Tijd
+screen.NOON_LIGHT_MULTS=Middaguur Tijd
+screen.NIGHT_LIGHT_MULTS=Nacht Tijd
+screen.RAIN_LIGHT_MULTS=Regenachtig Weer
+screen.NETHER_LIGHT_MULTS=De Nether Dimensie
+screen.END_LIGHT_MULTS=The End Dimensie
+
+screen.BLOCKLIGHT_SETTINGS=Bloklicht §e[*]§r
+screen.BLOCKLIGHT_SETTINGS.comment=Instellingen voor het aanpassen van de belichting van lichtbronblokken. §e[*]§r De rood/groen/blauw kleurinstellingen hebben geen invloed op de meeste lichten als de Geavanceerde Kleur Tracing instelling is ingeschakeld.
+
+screen.MOON_PHASE_INF_SETTINGS=Maanfase Invloed
+screen.MOON_PHASE_INF_SETTINGS.comment=Instellingen die bepalen hoe verschillende fasen van de maan invloed hebben op de nachtverlichting.
+
+screen.ACT_FEATURES_SETTINGS=ACT-Exclusieve Features §e[*]§r
+screen.ACT_FEATURES_SETTINGS.comment=Instellingen die te maken hebben met features exclusief tot Geavanceerde Kleur Tracing. §e[*]§r Deze features werken alleen als Geavanceerde Kleur Tracing ingeschakeld is en je systeem het ondersteunt.
+
+screen.PIXELATED_LIGHTING_SETTINGS=Gepixelde Belichting
+screen.PIXELATED_LIGHTING_SETTINGS.comment=Instellingen om bepaalde belichtingseffecten gepixeld te maken
+
+screen.WATER_SETTINGS=Water
+screen.WATER_SETTINGS.comment=Instellingen die te maken hebben met water.
+
+screen.WATER_COLOR_SETTINGS=Wateroppervlakte Kleur
+screen.UNDERWATER_COLOR_SETTINGS=Onderwater Kleur
+
+screen.WATER_WAVE_SETTINGS=Golvende Water Normals §e[*]§r
+screen.WATER_WAVE_SETTINGS.comment=Instellingen voor het aanpassen van de golvende oppervlakte-richting (normals) op water. §e[*]§r Deze instellingen werken alleen als Water Stijl ingesteld is op "Reimagined + Golven" of "Unbound".
+
+screen.WAVING_SETTINGS=Golvende Textures
+screen.WAVING_SETTINGS.comment=Instellingen die te maken hebben met golvende textures.
+
+screen.OTHER_SETTINGS=Overig
+screen.OTHER_SETTINGS.comment=Instellingen die niet passen in een andere categorie.
+
+screen.SELECT_OUTLINE_SETTINGS=Selectie Omlijning
+screen.SELECT_OUTLINE_SETTINGS.comment=Instellingen die de blokselectie-omlijning wijzigen.
+
+screen.WORLD_OUTLINE_SETTINGS=Wereld Omlijning
+screen.WORLD_OUTLINE_SETTINGS.comment=Instellingen die te maken hebben met optionele omlijningseffecten.
+
+#Settings
+option.RP_MODE=RP Support
+option.RP_MODE.comment=Verandert veel interne berekeningen om te bepalen hoe verschillende blokken en materialen worden afgebeeld. §bIntegrated PBR+§r: Berekende PBR en extra effecten, aangeraden voor de meeste gebruikers. §aBasic§r: Geen PBR of extra effecten. §elabPBR/seuspbr§r: Gebruikt de gegeven PBR resource packs voor materialen.
+value.RP_MODE.0=§aBasic
+value.RP_MODE.1=§bIntegrated PBR+
+value.RP_MODE.2=§eseuspbr (RP benodigd)
+value.RP_MODE.3=§elabPBR (RP benodigd)
+
+option.WATER_REFLECT_QUALITY=Waterreflectie Kwaliteit
+option.WATER_REFLECT_QUALITY.comment=Past de kwaliteit van reflecties op doorzichtige oppervlakken aan. §cMedium§r: Screenspace ray-traced reflecties op water en doorzichtige oppervlakken. §ePotato§r: Vervangt reflecties op water en doorzichtige oppervlakken met een snellere methode, maar kan er in sommige situaties verkeerd uitzien. §aUIT§r: Geen reflecties.
+value.WATER_REFLECT_QUALITY.-1=§aUIT
+value.WATER_REFLECT_QUALITY.0=§aAlleen lucht
+value.WATER_REFLECT_QUALITY.1=§ePotato
+value.WATER_REFLECT_QUALITY.2=§cMedium
+
+option.BLOCK_REFLECT_QUALITY=Blokreflectie Kwaliteit §e[*]§r
+option.BLOCK_REFLECT_QUALITY.comment=Past de kwaliteit van reflecties op vaste materialen aan. §cHoog§r: Zon/maan highlights + geavanceerde spiegelende reflecties. §eLaag§r: Alleen Zon/maan highlights. §e[*]§r De RP Support instelling moet op alles behalve Basic zijn ingesteld voor deze reflecties om te verschijnen.
+value.BLOCK_REFLECT_QUALITY.0=§aUIT
+value.BLOCK_REFLECT_QUALITY.1=§eLaag
+value.BLOCK_REFLECT_QUALITY.3=§cHoog
+
+option.SHADOW_QUALITY=Real-Time Schaduwen
+option.SHADOW_QUALITY.comment=Past de kwaliteit van schaduwen aan. Elk niveau vermindert schaduw-ruis, §eLaag§r and §eErg Laag§r gebruiken simpelere schaduw-filtering, §eErg Laag§r zet gekleurde schaduwen uit en §aUIT§r schakelt schaduwen en lichtstralen volledig uit. §e[*]§r Deze instelling zal altijd op "Laag" staan als Temporal Filter uitstaat of Gepixelde Schaduwen aanstaat.
+value.SHADOW_QUALITY.-1=§aUIT
+value.SHADOW_QUALITY.0=§eErg Laag
+value.SHADOW_QUALITY.1=§eLaag
+value.SHADOW_QUALITY.2=§eMedium
+value.SHADOW_QUALITY.3=§cHoog
+value.SHADOW_QUALITY.4=§cErg Hoog
+value.SHADOW_QUALITY.5=§4§lUltra
+
+option.LIGHTSHAFT_QUALI_DEFINE=Lichtstralen Kwaliteit §e[*]§r
+option.LIGHTSHAFT_QUALI_DEFINE.comment=Past de kwaliteit van lichtstralen aan. Elk niveau vermindert lichtstraal-ruis. §e[*]§r "Real-Time Schaduwen" moet op alles behalve UIT staan voor lichtstralen om te verschijnen. §e[*]§r Deze instelling bepaalt ook de kwaliteit van End Beams, met de uitzondering dat "UIT" intern wordt gezien als "Laag".
+value.LIGHTSHAFT_QUALI_DEFINE.0=§aUIT
+value.LIGHTSHAFT_QUALI_DEFINE.1=§eLaag
+value.LIGHTSHAFT_QUALI_DEFINE.2=§eMedium
+value.LIGHTSHAFT_QUALI_DEFINE.3=§cHoog
+
+####### Euphoria Patches #######
+
+#WATERMARK
+

@@ -1,0 +1,1041 @@
+#shaders/lang/es_ES.lang
+
+option.LANG_FILE_HEADER=Archivos de traducción de la Comunidad. - Las traducciones pueden no ser las mejores. SpacEagle17 no puede garantizar que sean acertadas.
+option.TRANSLATORS=Traducido por: Wither362
+
+shaderDescription=§cComplementary Shaders r5.9.3§r + §dEuphoria Patches 1.10.5§r\nAdd-on para Complementary de SpacEagle17 que lo amplía con muchas más funciones y ajustes opcionales únicos.\nVersiones de desarrollo: §dwww.euphoriapatches.com/support§r
+
+#Profiles
+profile.POTATO=Rendimiento: §aPatata
+profile.VERYLOW=Rendimiento: §aMuy bajo
+profile.LOW=Rendimiento: §aBajo
+profile.MEDIUM=Rendimiento: §aMedio
+profile.HIGH=Rendimiento: §eAlto (Por defecto)
+profile.VERYHIGH=Rendimiento: §eMuy Alto
+profile.ULTRA=Rendimiento: §cUltra
+profile.COMPLEMENTARY=Rendimiento: §4§lComplementary
+
+#Information
+screen.INFORMATION=Información
+screen.INFORMATION.comment=Esta sección contiene botones que sólo existen para dar información.
+
+screen.INFORMATION2=Información de Complementary
+screen.INFORMATION2.comment=Esta sección contiene botones que únicamente existen para facilitar información
+
+option.info0=§bPasa el ratón por encima de un botón
+value.info0.0=
+option.info0.comment=Esta sección contiene botones que únicamente existen para facilitar información
+
+option.info1=Cómo conseguir un mayor rendimiento
+value.info1.0=
+
+option.info2=Qué ajustes son los mejores
+value.info2.0=
+
+option.info3=Qué es "Perfil" o "Estilo Visual"
+value.info3.0=
+
+option.info4=Qué es el Soporte RP (o RP Support)
+value.info4.0=
+
+option.info5=Qué son los ajustes que tienen color amarillo
+value.info5.0=
+
+value.info6.0=
+
+option.info7=Dónde hacer preguntas o reportar problemas
+value.info7.0=
+
+option.info8=Cómo unirse a la Comunidad
+value.info8.0=
+
+option.info9=Cómo apoyar al proyecto Complementary
+value.info9.0=
+
+option.info10=Créditos
+value.info10.0=
+
+option.info11=§dQué es Euphoria Patches
+value.info11.0=
+
+option.info12=Configuración de Euphoria Patches
+value.info12.0=
+
+option.info13=Soporte del Mod Euphoria
+value.info13.0=
+
+option.info14=¡Únete a la Comunidad!
+value.info14.0=
+option.info14.comment=Únete al servidor de Discord de Euphoria Patches si tienes dudas, si quieres unirte a una divertida comunidad, y para estar al día de las últimas noticias. §d§l§neuphoriapatches.com/discord
+
+option.info15=Créditos de Euphoria Patches
+value.info15.0=
+
+option.info16=§d§nCómo apoyar al proyecto Euphoria Patches
+value.info16.0=
+
+option.info17=Versión Beta: Patreon de SpacEagle17
+value.info17.0=
+option.info17.comment=Puede apoyar a SpacEagle17 en Patreon o en Ko-Fi y acceder a versiones de desarrollo exclusivas. §d§l§neuphoriapatches.com/support
+
+option.info18=For Complementary r5.9.3
+value.info18.0=
+option.info18.comment=Gracias por instalar Euphoria Patches :)
+
+option.info19=§aNUEVA ACTUALIZACIÓN
+value.info19.0=§cX.Y.Z §r->§a X.Y.Z
+option.info19.comment=Hay una nueva versión disponible del Mod EuphoriaPatcher. Descárgalo desde Modrinth: https://euphoriapatches.com/download.
+
+option.info20=
+value.info20.0=§aeuphoriapatches.com/download
+option.info20.comment=Hay una nueva versión disponible del Mod EuphoriaPatcher. Descárgalo desde Modrinth: https://euphoriapatches.com/download.
+
+option.info21=Preguntas Frecuentes (FAQ)
+value.info21.0=
+option.info21.comment=Echa un vistazo a la página de FAQ para encontrar respuestas a preguntas frecuentes. §d§l§neuphoriapatches.com/faq
+
+option.info22=§dMás ajustes si desplazas hacia abajo (scroll)
+value.info22.0=
+
+#Style
+option.SHADER_STYLE=Estilo Visual (Visual Style)
+value.SHADER_STYLE.1=§bReimagined
+value.SHADER_STYLE.4=§dUnbound
+
+#Screens
+screen.PERFORMANCE_SETTINGS=§eAjustes de Rendimiento§r
+
+screen.ATMOSPHERE_SETTINGS=Ambiente
+screen.ATMOSPHERE_SETTINGS.comment=Ajustes relacionados con el ambiente.
+
+screen.ATM_COLOR_SETTINGS=Multiplicadores de Color de atmósfera
+screen.ATM_COLOR_SETTINGS.comment=Permite personalizar los colores de la atmósfera que se ven principalmente en el cielo y la niebla.
+
+screen.MORNING_ATM_MULTS=Amanecer/Atardecer
+screen.NOON_ATM_MULTS=Hora del Mediodía
+screen.NIGHT_ATM_MULTS=Noche
+screen.RAIN_ATM_MULTS=Lluvia
+screen.NETHER_ATM_MULTS=Dimensión del Nether
+screen.END_ATM_MULTS=Dimensión del End
+
+screen.CLOUD_SETTINGS=Nubes
+screen.CLOUD_SETTINGS.comment=Ajustes relacionados con las nubes.
+
+screen.CLOUD_COLOR_SETTINGS=Color de nubes
+screen.CLOUD_COLOR_SETTINGS.comment=Ajustes para cambiar el color de las nubes
+
+screen.CLOUD_UNBOUND_SETTINGS=Ajustes de nubes Unbound
+screen.CLOUD_REIMAGINED_SETTINGS=Ajustes de nubes Reimagined
+
+screen.FOG_SETTINGS=Niebla
+screen.FOG_SETTINGS.comment=Ajustes relacionados con los distintos tipos de niebla.
+
+screen.SUN_MOON_SETTINGS=Sol / Luna
+screen.SUN_MOON_SETTINGS.comment=Ajustes relacionados con el Sol y la Luna
+
+screen.NETHER_SETTINGS=Dimensión del Nether
+screen.NETHER_SETTINGS.comment=Ajustes relacionados con la Dimensión del Nether
+
+screen.END_SETTINGS=Dimensión del End
+screen.END_SETTINGS.comment=Ajustes relacionados con la Dimensión del End.
+
+screen.WEATHER_SETTINGS=Lluvia / Clima
+screen.WEATHER_SETTINGS.comment=Ajustes relacionados con las condiciones meteorológicas (clima).
+
+screen.CAMERA_SETTINGS=Cámara
+screen.CAMERA_SETTINGS.comment=Ajustes relacionados con la vista/cámara.
+
+screen.TONEMAP_SETTINGS=Balance de Color
+screen.TONEMAP_SETTINGS.comment=Ajustes que determinan el balance de color visual.
+
+screen.WORLD_BLUR_SETTINGS=Desenfoque del Mundo
+
+screen.TAA_SETTINGS=Ajustes de filtro temporal
+
+screen.MATERIAL_SETTINGS=Materiales
+screen.MATERIAL_SETTINGS.comment=Ajustes relacionados con los materiales de Minecraft.
+
+screen.IPBR_SETTINGS=Materiales IntegratedPBR+
+screen.IPBR_SETTINGS.comment=Ajustes relacionados con las características IntegratedPBR+
+
+screen.GLOWING_ORE_SETTINGS=Ores Brillantes
+screen.GLOWING_ORE_SETTINGS.comment=Ajustes para ajustar la emisión de los bloques de ores (minerales).
+
+screen.GLOWING_STUFF_SETTINGS=Cosas brillantes
+screen.GLOWING_STUFF_SETTINGS.comment=Ajustes relacionados con la emisión de bloques misceláneos.
+
+screen.OTHER_IPBR_SETTINGS=Otras características IPBR+
+screen.OTHER_IPBR_SETTINGS.comment=Configuración IntegratedPBR+ miscelánea.
+
+screen.CUSTOM_PBR_SETTINGS=Materiales labPBR/seuspbr
+
+screen.LIGHTING_SETTINGS=Iluminación
+screen.LIGHTING_SETTINGS.comment=Ajustes relacionados con iluminación.
+
+screen.LIGHT_COLOR_SETTINGS=Multiplicadores de Iluminación de Color
+
+screen.MORNING_LIGHT_MULTS=Amanecer/Atardecer
+screen.NOON_LIGHT_MULTS=Hora del Mediodía
+screen.NIGHT_LIGHT_MULTS=Noche
+screen.RAIN_LIGHT_MULTS=Lluvia
+screen.NETHER_LIGHT_MULTS=Dimensión del Nether
+screen.END_LIGHT_MULTS=Dimensión del End
+
+screen.BLOCKLIGHT_SETTINGS=Luz de Bloques §e[*]§r
+
+screen.MOON_PHASE_INF_SETTINGS=Influencia de la Fase Lunar
+
+screen.ACT_FEATURES_SETTINGS=Características Exclusivas de ACT §e[*]§r
+
+screen.PIXELATED_LIGHTING_SETTINGS=Iluminación Pixelada
+
+screen.WATER_SETTINGS=Agua
+screen.WATER_SETTINGS.comment=Configuración sobre el agua.
+
+screen.WATER_COLOR_SETTINGS=Color de la superficie del agua
+screen.UNDERWATER_COLOR_SETTINGS=Color Subacuático
+
+screen.WAVING_SETTINGS=Texturas Ondulantes
+screen.WAVING_SETTINGS.comment=Ajustes relacionados sobre texturas ondulantes.
+
+screen.OTHER_SETTINGS=Otros
+screen.OTHER_SETTINGS.comment=Ajustes que no encajan en ninguna otra categoría.
+
+screen.SELECT_OUTLINE_SETTINGS=Contorno de la Selección
+screen.SELECT_OUTLINE_SETTINGS.comment=Ajustes que cambian el contorno de la selección de bloques.
+
+screen.WORLD_OUTLINE_SETTINGS=Contorno del Mundo
+screen.WORLD_OUTLINE_SETTINGS.comment=Ajustes relacionados con efectos de contorno opcionales.
+
+#Settings
+option.RP_MODE=Soporte de RP (RP Support)
+value.RP_MODE.0=§aBásico
+value.RP_MODE.1=§bIntegrated PBR+
+value.RP_MODE.2=§eseuspbr (RP requerido)
+value.RP_MODE.3=§elabPBR (RP requerido)
+
+option.WATER_REFLECT_QUALITY=Calidad de los Reflejos del Agua
+value.WATER_REFLECT_QUALITY.-1=§aDESACTIVADO
+value.WATER_REFLECT_QUALITY.0=§aSólo Cielo
+value.WATER_REFLECT_QUALITY.1=§ePatata
+value.WATER_REFLECT_QUALITY.2=§cMedia
+
+option.BLOCK_REFLECT_QUALITY=Calidad de Reflejos de Bloques §e[*]§r
+
+option.SHADOW_QUALITY=Sombras en Tiempo Real
+value.SHADOW_QUALITY.-1=§aDESACTIVADO
+value.SHADOW_QUALITY.0=§eMuy baja
+value.SHADOW_QUALITY.1=§eBaja
+value.SHADOW_QUALITY.2=§eMedia
+value.SHADOW_QUALITY.3=§cAlta
+value.SHADOW_QUALITY.4=§cMuy alta
+value.SHADOW_QUALITY.5=§4§lUltra
+
+value.LIGHTSHAFT_QUALI_DEFINE.0=§aDESACTIVADO
+value.LIGHTSHAFT_QUALI_DEFINE.1=§eBaja
+value.LIGHTSHAFT_QUALI_DEFINE.2=§eMedia
+value.LIGHTSHAFT_QUALI_DEFINE.3=§cAlta
+value.LIGHTSHAFT_QUALI_DEFINE.4=§4§lMuy alta
+
+option.shadowDistance=Distancia de Sombras
+value.shadowDistance.64.0=§a4 Chunks §c[-]
+value.shadowDistance.80.0=§a5 Chunks §c[-]
+value.shadowDistance.96.0=§a6 Chunks §c[-]
+value.shadowDistance.112.0=§a7 Chunks §c[-]
+value.shadowDistance.128.0=§a8 Chunks
+value.shadowDistance.160.0=§e10 Chunks
+value.shadowDistance.192.0=§e12 Chunks
+value.shadowDistance.224.0=§e14 Chunks
+value.shadowDistance.256.0=§c16 Chunks
+value.shadowDistance.320.0=§c20 Chunks
+value.shadowDistance.384.0=§4§l24 Chunks
+value.shadowDistance.512.0=§4§l32 Chunks
+value.shadowDistance.768.0=§4§l§n§o48 Chunks
+value.shadowDistance.1024.0=§4§k-§r§4§l§n§o64 Chunks§r§4§k-
+
+option.ENTITY_SHADOW=Sombras de Entidades
+option.ENTITY_SHADOW.comment=Permite emitir sombras desde entidades y entidades de bloques. "Entidades Normales" incluye las comunes como animales y monstruos, mientras que "Todas" también incluye entidades de bloques como cofres. §c[-]§r El ajuste de Sombras de Entidades impacta mucho más de lo esperado, costando más del 50% de tus fps en algunos casos.
+value.ENTITY_SHADOW.-1=§aDESACTIVADAS
+value.ENTITY_SHADOW.1=§cEntidades Normales
+value.ENTITY_SHADOW.2=§4§k-§r§4§l§n§oTodas§r§4§k- §r§c[-]
+
+option.DETAIL_QUALITY=Calidad de Detalles
+value.DETAIL_QUALITY.0=§aPatata
+value.DETAIL_QUALITY.2=§eMedia
+value.DETAIL_QUALITY.3=§cAlta
+
+option.CLOUD_QUALITY=Calidad de Nubes
+value.CLOUD_QUALITY.0=§aDESACTIVADAS
+value.CLOUD_QUALITY.1=§aBaja
+value.CLOUD_QUALITY.2=§eMedia
+value.CLOUD_QUALITY.3=§cAlta
+
+option.FXAA_DEFINE=Suavizado (FXAA Antialiasing)
+option.FXAA_DEFINE.comment=Activar el Anti-Aliasing Aproximado Rápido (FXAA), que es básicamente un efecto que produce una imagen más suave.
+value.FXAA_DEFINE.-1=§aDESACTIVADO
+value.FXAA_DEFINE.1=§eACTIVADO
+
+option.SSAO_QUALI_DEFINE=Calidad de la sombra del borde (SSAO)
+
+option.ANISOTROPIC_FILTER=Filtrado de Texturas (Filtering)
+value.ANISOTROPIC_FILTER.0=§aDESACTIVADO
+value.ANISOTROPIC_FILTER.4=§e4x
+value.ANISOTROPIC_FILTER.8=§e8x
+value.ANISOTROPIC_FILTER.16=§4§l16x
+
+option.COLORED_LIGHTING=Trazado de Color Avanzado §e[*]§r
+value.COLORED_LIGHTING.0=§aDESACTIVADA
+value.COLORED_LIGHTING.128=§c4 Chunks
+value.COLORED_LIGHTING.192=§c6 Chunks
+value.COLORED_LIGHTING.256=§4§l8 Chunks
+value.COLORED_LIGHTING.384=§4§l12 Chunks
+value.COLORED_LIGHTING.512=§4§l§n§o16 Chunks
+value.COLORED_LIGHTING.768=§4§l§n§o24 Chunks §r§c[-]
+value.COLORED_LIGHTING.1024=§4§k-§r§4§l§n§o32 Chunks§r§4§k- §r§c[-]
+
+option.WORLD_SPACE_REFLECTIONS=Reflejos en el Espacio del Mundo §e[*]§r
+
+option.SSAO_I=Intensidad de la sombra de borde (SSAO)
+option.SSAO_I.comment=Determina la fuerza de la Oclusión Ambiente Screen-Space (SSAO) que añade sombra ambiental extra a los bordes de la escena. §e[*]§r Esta configuración no funcionará si SSAO está desactivado en "Ajustes de Rendimiento".
+
+option.VANILLAAO_I=Intensidad de la sombra de borde (Vanilla)
+
+option.ATM_FOG_MULT=Niebla Atmosférica
+option.ATM_FOG_MULT.comment=Ajusta la intensidad de la niebla basada en altitud.
+value.ATM_FOG_MULT.0.50=Muy sutil
+value.ATM_FOG_MULT.0.65=Sutil
+value.ATM_FOG_MULT.0.80=Estándar
+value.ATM_FOG_MULT.0.95=Intensa
+
+option.ATM_FOG_DISTANCE=Distancia de la Niebla Atmosférica
+option.ATM_FOG_DISTANCE.comment=Ajusta la distancia de la cámara que la niebla atmosférica empieza a aparecer. §e[*]§r Ten en cuenta que también se ajusta automáticamente a la configuración de Distancia de Renderizado (Render Distance) en Ajustes de Vídeo.
+
+option.ATM_FOG_ALTITUDE=Altitud de la Niebla Atmosférica
+
+option.CAVE_FOG=Niebla en Cuevas
+option.CAVE_FOG.comment=Permite niebla extra en zonas subterráneas profundas.
+
+option.CLOUD_STYLE_DEFINE=Estilo de Nubes
+value.CLOUD_STYLE_DEFINE.-1=Definido por estilo
+value.CLOUD_STYLE_DEFINE.0=Desactivado
+value.CLOUD_STYLE_DEFINE.1=Reimagined
+value.CLOUD_STYLE_DEFINE.3=Unbound
+value.CLOUD_STYLE_DEFINE.50=Vanilla §e[*]
+
+option.CLOUD_SHADOWS=Sombras de nubes
+
+option.CLOUD_CLOSED_AREA_CHECK=Prevenir nubes en los interiores
+
+option.CLOUD_ALT1=Altitud de las nubes §e[*]§r
+option.CLOUD_ALT1.comment=Determina la altura del mundo en que aparecerán las nubes. §e[*]§r Este ajuste puede ser incrementado internamente o disminuido dependiendo de tus ajustes de dimensión y mods. §e[*]§r Esta configuración sólo funciona con los estilos de nube "Reimagined" o "Unbound".
+
+option.CLOUD_SPEED_MULT=Velocidad de Nubes
+value.CLOUD_SPEED_MULT.100=Sincronizado con la Hora Mundial
+
+option.CLOUD_R=Multiplicador de Rojos en Nubes
+option.CLOUD_G=Multiplicador de Verdes en Nubes
+option.CLOUD_B=Multiplicador de Azules en Nubes
+
+option.CLOUD_UNBOUND_AMOUNT=Cantidad de Nubes
+option.CLOUD_UNBOUND_AMOUNT.comment=Ajusta la cantidad de nubes del estilo Unbound.
+
+option.CLOUD_UNBOUND_SIZE_MULT=Altura de nubes §c[-]§r
+
+option.CLOUD_UNBOUND_RAIN_ADD=Cantidad de nubes en lluvia
+option.CLOUD_UNBOUND_RAIN_ADD.comment=Ajusta el aumento de la cantidad de la nube que se aplica durante la lluvia o la nieve.
+prefix.CLOUD_UNBOUND_RAIN_ADD=+
+
+option.DOUBLE_REIM_CLOUDS=Nubes Reimagined dobles
+option.DOUBLE_REIM_CLOUDS.comment=Activa una segunda zona de nubes Reimagined. §e[*]§r Esta opción sólo funciona con el estilo de nube "Reimagined".
+
+option.CLOUD_ALT2=Altitud de zona de nubes 2
+option.CLOUD_ALT2.comment=Determina la altura del mundo en la que aparecerán las nubes de la segunda zona. §e[*]§r Esta configuración sólo funciona cuando la opción "Nubes Reimagined dobles" está activada con el estilo de nube "Reimagined".
+
+option.NETHER_STORM=§eTormenta del Nether§r
+option.NETHER_STORM.comment=Añade un efecto volumétrico como humo a la dimensión del Nether. §c[-]§r Este efecto puede impactar el rendimiento.
+
+option.NETHER_STORM_I=Opacidad de tormenta del Nether
+option.NETHER_STORM_I.comment=Ajusta la opacidad de la Tormenta del Nether.
+
+value.NETHER_VIEW_LIMIT.96.0=6 Chunks
+value.NETHER_VIEW_LIMIT.112.0=7 Chunks
+value.NETHER_VIEW_LIMIT.128.0=8 Chunks
+value.NETHER_VIEW_LIMIT.160.0=10 Chunks
+value.NETHER_VIEW_LIMIT.192.0=12 Chunks
+value.NETHER_VIEW_LIMIT.224.0=14 Chunks
+value.NETHER_VIEW_LIMIT.256.0=16 Chunks
+value.NETHER_VIEW_LIMIT.320.0=20 Chunks
+value.NETHER_VIEW_LIMIT.384.0=24 Chunks
+value.NETHER_VIEW_LIMIT.512.0=32 Chunks §c[-]
+value.NETHER_VIEW_LIMIT.768.0=48 Chunks §c[-]
+value.NETHER_VIEW_LIMIT.1024.0=64 Chunks §c[-]
+
+value.NETHER_COLOR_MODE.0=Constante
+
+option.END_STAR_INTENSITY=Intensidad de las Estrellas del End
+option.END_STAR_INTENSITY.comment=Ajusta el brillo de las estrellas visibles en la dimensión del End.
+
+option.END_FLASHES=End Flashes
+
+option.TM_EXPOSURE=Brillo general
+option.TM_EXPOSURE.comment=También conocido como "Tonemap Exposure", ajusta el brillo total de la imagen.
+
+option.TM_WHITE_CURVE=Brillo Blanco
+
+option.T_UPPER_CURVE=Contraste de Colores Claros
+
+option.T_LOWER_CURVE=Contraste de Colores Oscuros
+
+option.TM_CONTRAST=Contraste general
+
+option.T_SATURATION=Saturación
+
+option.TM_DARK_DESATURATION=Desaturación de oscuridad
+
+option.GR_RR=Rojo a Rojo
+option.GR_RG=Rojo a Verde
+option.GR_RB=Rojo a Azul
+option.GR_RC=Curva del Rojo
+option.GR_GR=Verde a Rojo
+option.GR_GG=Verde a Verde
+option.GR_GB=Verde a Azul
+option.GR_GC=Curva del Verde
+option.GR_BR=Azul a Rojo
+option.GR_BG=Azul a Verde
+option.GR_BB=Azul a Azul
+option.GR_BC=Curva del Azul
+
+option.WATER_STYLE_DEFINE=Estilo de agua
+value.WATER_STYLE_DEFINE.-1=Definido por estilo
+value.WATER_STYLE_DEFINE.1=Reimagined
+value.WATER_STYLE_DEFINE.2=Reimagined + Olas
+value.WATER_STYLE_DEFINE.3=Unbound
+
+value.WATER_CAUSTIC_STYLE_DEFINE.1=Reimagined
+value.WATER_CAUSTIC_STYLE_DEFINE.3=Unbound
+
+option.WATER_FOAM_I=Intensidad de la espuma de agua
+
+option.WATER_ALPHA_MULT=Factor de la Opacidad del Agua
+
+option.WATER_FOG_MULT=Factor de niebla de agua
+
+option.WATERCOLOR_R=Multiplicador de Superficie Roja
+option.WATERCOLOR_G=Multiplicador de Superficie Verde
+option.WATERCOLOR_B=Multiplicador de Superficie Azul
+
+option.WATERCOLOR_MODE=Modo de color
+value.WATERCOLOR_MODE.3=Basado en biomas (restringido)
+value.WATERCOLOR_MODE.2=Basado en biomas
+value.WATERCOLOR_MODE.0=Constante
+
+option.UNDERWATERCOLOR_R=Multiplicador rojo bajo agua
+option.UNDERWATERCOLOR_G=Multiplicador verde bajo agua
+option.UNDERWATERCOLOR_B=Multiplicador azul bajo agua
+
+option.WATER_BUMPINESS=Fuerza de ondas
+
+option.SUN_ANGLE=Ángulo de Sol/Luna
+value.SUN_ANGLE.-1=Definido por estilo
+value.SUN_ANGLE.0=0 §r(§bReimagined§r)
+value.SUN_ANGLE.-40=-40 §r(§dUnbound§r)
+
+option.SUN_MOON_STYLE_DEFINE=Estilo del Sol/Luna
+value.SUN_MOON_STYLE_DEFINE.-1=Definido por estilo
+value.SUN_MOON_STYLE_DEFINE.1=Reimagined
+value.SUN_MOON_STYLE_DEFINE.2=Unbound
+value.SUN_MOON_STYLE_DEFINE.3=Unbound - Más pequeño
+
+option.NIGHT_STAR_AMOUNT=Cantidad de Estrellas de noche
+option.NIGHT_STAR_AMOUNT.comment=Ajusta la cantidad de estrellas en el cielo de noche.
+value.NIGHT_STAR_AMOUNT.0=Apagada
+value.NIGHT_STAR_AMOUNT.1=Baja
+value.NIGHT_STAR_AMOUNT.2=Media
+value.NIGHT_STAR_AMOUNT.3=Alta
+value.NIGHT_STAR_AMOUNT.4=Muy Alta
+
+option.RAINBOWS=Arcoíris
+value.RAINBOWS.1=Tras la lluvia
+
+value.RAINBOW_STYLE_DEFINE.-1=Definido por el Estilo Visual
+value.RAINBOW_STYLE_DEFINE.1=Reimagined
+value.RAINBOW_STYLE_DEFINE.4=Unbound
+
+option.AURORA_STYLE_DEFINE=Estilo de Aurora Borealis
+option.AURORA_STYLE_DEFINE.comment=Ajusta el estilo de las Auroras Borealis que aparecen de noche en el cielo.
+value.AURORA_STYLE_DEFINE.-1=Definido por Estilo Visual
+value.AURORA_STYLE_DEFINE.0=Desactivado
+value.AURORA_STYLE_DEFINE.1=Reimagined
+value.AURORA_STYLE_DEFINE.2=Unbound
+
+value.AURORA_CONDITION.-1=Siempre Excepto Luna Nueva
+value.AURORA_CONDITION.0=Todas las noches
+value.AURORA_CONDITION.1=Luna llena
+value.AURORA_CONDITION.2=Bioma nevado
+value.AURORA_CONDITION.3=Luna llena en bioma nevado
+value.AURORA_CONDITION.4=Luna llena o bioma nevado
+
+option.NIGHT_NEBULAE=§eNebulosa Nocturna§r
+
+option.RAIN_STYLE.comment=Determina el estilo del ambiente cuando llueve.
+value.RAIN_STYLE.1=Suave y Cálido
+value.RAIN_STYLE.2=Pesado y Frío
+
+option.PIXEL_SCALE=Escala de Pixelación
+option.PIXEL_SCALE.comment=Escala hecha en la resolución de texturas.
+value.PIXEL_SCALE.-2=0.25x
+value.PIXEL_SCALE.-1=0.5x
+value.PIXEL_SCALE.1=1x
+value.PIXEL_SCALE.2=2x
+value.PIXEL_SCALE.3=4x
+value.PIXEL_SCALE.4=8x
+value.PIXEL_SCALE.5=16x
+
+option.BLOOM_ENABLED=§eDesenfoque§r
+value.BLOOM_ENABLED.-1=Desactivado
+value.BLOOM_ENABLED.1=§eACTIVADO
+
+value.BLOOM_STRENGTH.0.027=15%
+value.BLOOM_STRENGTH.0.036=20%
+value.BLOOM_STRENGTH.0.045=25%
+value.BLOOM_STRENGTH.0.054=30%
+value.BLOOM_STRENGTH.0.063=35%
+value.BLOOM_STRENGTH.0.072=40%
+value.BLOOM_STRENGTH.0.081=45%
+value.BLOOM_STRENGTH.0.09=50%
+value.BLOOM_STRENGTH.0.10=55%
+value.BLOOM_STRENGTH.0.11=60%
+value.BLOOM_STRENGTH.0.12=65%
+value.BLOOM_STRENGTH.0.13=70%
+value.BLOOM_STRENGTH.0.14=75%
+value.BLOOM_STRENGTH.0.15=80% §c[-]
+value.BLOOM_STRENGTH.0.16=85% §c[-]
+value.BLOOM_STRENGTH.0.17=90% §c[-]
+value.BLOOM_STRENGTH.0.18=95% §c[-]
+value.BLOOM_STRENGTH.0.19=100% §c[-]
+value.BLOOM_STRENGTH.0.21=110% §c[-]
+value.BLOOM_STRENGTH.0.23=120% §c[-]
+value.BLOOM_STRENGTH.0.25=130% §c[-]
+value.BLOOM_STRENGTH.0.28=150% §c[-]
+value.BLOOM_STRENGTH.0.32=180% §c[-]
+value.BLOOM_STRENGTH.10.00=§cExtremo
+
+option.IMAGE_SHARPENING=Nitidez de Imagen
+value.IMAGE_SHARPENING.1=1x
+value.IMAGE_SHARPENING.2=2x
+value.IMAGE_SHARPENING.3=3x
+value.IMAGE_SHARPENING.4=4x
+value.IMAGE_SHARPENING.5=5x
+value.IMAGE_SHARPENING.6=6x §c[-]
+value.IMAGE_SHARPENING.7=7x §c[-]
+value.IMAGE_SHARPENING.8=8x §c[-]
+value.IMAGE_SHARPENING.9=9x §c[-]
+value.IMAGE_SHARPENING.10=10x §c[-]
+
+option.TAA_SMOOTHING=Suavizado Temporal (TAA)
+
+option.FXAA_STRENGTH=Intensidad de FXAA
+
+option.FXAA_TAA_INTERACTION=Reducir FXAA en movimiento
+option.FXAA_TAA_INTERACTION.comment=Reduce la fuerza de la FXAA cuando la cámara se mueve. Los valores altos producen una imagen más nítida pero producen más parpadeo.
+value.FXAA_TAA_INTERACTION.0=No
+value.FXAA_TAA_INTERACTION.2=20
+value.FXAA_TAA_INTERACTION.4=40
+value.FXAA_TAA_INTERACTION.6=60
+value.FXAA_TAA_INTERACTION.8=80
+value.FXAA_TAA_INTERACTION.10=100
+
+value.WORLD_BLUR.2=§cProfundidad del Campo de Visión
+
+option.WB_CHROMATIC=Desenfoque Cromático
+option.WB_CHROMATIC.comment=Aplica la aberración cromática a las áreas borrosas, separado diferentes colores en esas áreas.
+
+option.WB_DOF_I=Profundidad de la Fuerza del Campo de Visión
+option.WB_DOF_FOCUS=Profundidad del Enfoque de Campo
+option.WB_DOF_FOCUS.comment=Determina la distancia de enfoque de la cámara. Automático: El punto de enfoque se ajusta según el punto central de la pantalla. Brillo: El punto de enfoque es determinado por el deslizador de "brillo" en la configuración de vídeo.
+value.WB_DOF_FOCUS.-1=Brillo §e[*]
+value.WB_DOF_FOCUS.0=Automático
+
+option.WB_DB_DAY_I=Dis. Desenfoque - Día
+option.WB_DB_NIGHT_I=Dis. Desenfoque - Noche e Interiores
+option.WB_DB_RAIN_I=Dis. Desenfoque - Lluvia y nieve
+option.WB_DB_WATER_I=Dis. Desenfoque - Bajo Agua
+option.WB_DB_NETHER_I=Dis. Desenfoque - En el Nether
+option.WB_DB_END_I=Dis. Desenfoque - En el End
+
+option.VIGNETTE_R=Viñeta
+option.VIGNETTE_R.comment=Aplica una viñeta (oscurecimiento) alrededor de los bordes de la pantalla.
+
+option.CHROMA_ABERRATION=Aberración Cromática
+value.CHROMA_ABERRATION.4=4 §c[-]
+value.CHROMA_ABERRATION.5=5 §c[-]
+value.CHROMA_ABERRATION.6=6 §c[-]
+value.CHROMA_ABERRATION.7=7 §c[-]
+value.CHROMA_ABERRATION.8=8 §c[-]
+
+value.IPBR_EMISSIVE_MODE.1=Sólo IPBR+
+value.IPBR_EMISSIVE_MODE.3=labPBR > IPBR+
+value.IPBR_EMISSIVE_MODE.2=seuspbr > IPBR+
+
+option.IPBR_COMPAT_MODE_DEFINE=Modo de Compatibilidad de IPBR+
+
+option.IPBR_PARTICLE_FEATURES=Características de las partículas de IPBR+
+
+option.GREEN_SCREEN_LIME=Bloques Lima como Pantalla Verde
+
+value.MIRROR_TINTED_GLASS.0=Desactivadas
+value.MIRROR_TINTED_GLASS.35=Espejos 35%
+value.MIRROR_TINTED_GLASS.70=70% de espejo
+value.MIRROR_TINTED_GLASS.100=Espejos 100% §c[-]
+
+option.HIDE_ARMOR=Ocultar Armadura §e[*]§r
+value.HIDE_ARMOR.1=En Jugador §e[*]§r
+value.HIDE_ARMOR.2=En Todas las Entidades
+
+option.HAND_SWAYING=Movimiento de Mano
+option.HAND_SWAYING.comment=Añade un movimiento lento a la mano del jugador para simular una animación de respiración.
+value.HAND_SWAYING.0=DESACTIVADO
+value.HAND_SWAYING.1=Sutil
+value.HAND_SWAYING.2=Normal
+value.HAND_SWAYING.3=Intenso
+
+option.LESS_LAVA_FOG=Menos niebla dentro de Lava o Nieve
+option.LESS_LAVA_FOG.comment=Reduce la niebla de lava y niebla de la nieve en polvo para mejorar la visibilidad dentro de ellos.
+
+option.REDUCE_CLOSE_PARTICLES=Reducir las Partículas Cercanas
+
+option.SNOWY_WORLD=Mundo de Nieve
+option.SNOWY_WORLD.comment=Hace que el mundo entero esté cubierto de nieve.
+
+option.SHOW_LIGHT_LEVEL=Mostrar Niveles de Luz
+value.SHOW_LIGHT_LEVEL.0=Desactivado
+
+option.GLOWING_COLORED_PARTICLES=Forzar Partículas Brillantes §c[-]§r
+
+option.PLAYER_SHADOW=Sombra de Jugador §e[*]§r
+
+value.SKY_EFFECT_REFLECTION_DEFINE.0=§aDESACTIVADA
+
+option.GLOWING_ORE_MULT.comment=Determina la fuerza de emisión de minerales brillantes.
+
+option.CUSTOM_EMISSION_INTENSITY=Intensidad de Emisión Personalizada
+
+value.POM_QUALITY.16=16 §e[*]
+value.POM_QUALITY.32=32 §e[*]
+value.POM_QUALITY.64=64 §e[*]
+value.POM_QUALITY.256=256 §c[-]
+value.POM_QUALITY.512=512 §c[-]
+
+value.POM_DISTANCE.64=64 §e[*]
+value.POM_DISTANCE.128=128 §e[*]
+value.POM_DISTANCE.256=256 §e[*]
+value.POM_DISTANCE.512=512 §e[*]
+value.POM_DISTANCE.1024=1024 §e[*]
+
+value.WAVING_I.1.25=1,25 §c[-]
+value.WAVING_I.1.50=1,50 §c[-]
+value.WAVING_I.1.75=1,75 §c[-]
+value.WAVING_I.2.00=2,00 §c[-]
+value.WAVING_I.50.0=§cExtremo
+
+value.WAVING_I.125=125 §c[-]
+value.WAVING_I.150=150 §c[-]
+value.WAVING_I.175=175 §c[-]
+value.WAVING_I.200=200 §c[-]
+
+####### Euphoria Patches #######
+
+#WATERMARK
+option.WATERMARK=Complementary
+value.WATERMARK.0=& §dEuphoria §rPatches
+value.WATERMARK.1=& §cE§6u§ep§aho§br§9i§da §rPatches
+value.WATERMARK.2=& §cE§6u§ep§aho§br§9i§da §rPatches - GUI Oculto
+
+screen.CLOUDS=Nubes
+screen.CLOUD_REIMAGINED_SETTINGS_EUPHORIA=Nubes Reimagined
+screen.CLOUD_REIMAGINED_SECOND_LAYER_SETTINGS=Segunda Capa de Nubes
+screen.CLOUD_UNBOUND_SETTINGS_EUPHORIA=Nubes Unbound
+screen.DOUBLE_UNBOUND_CLOUDS_SETTINGS=Doble de Nubes Unbound
+screen.RAIN_SETTINGS=Ajustes de la Lluvia
+
+screen.WORLD=Mundo
+screen.WORLD.comment=Ajustes relacionados con el mundo
+screen.BLOOD_MOON_SETTINGS=Ajustes de Luna de Sangre
+screen.OVERWORLD_WORLD=Overworld (Superficie)
+screen.FOG=Niebla
+screen.FOG_CAVE=Niebla en Cuevas
+screen.FOG_ATMOSPHERIC=Niebla Atmosférica
+screen.SEASON=Estaciones
+screen.WINTER=Ajustes del Invierno
+screen.AUTUMN=Ajustes del Otoño
+screen.SPRING=Ajustes de la Primavera
+screen.SUMMER=Ajustes del Verano
+screen.NETHER_WORLD=Nether
+screen.FOG_BORDER_NETHER=Niebla de borde
+
+screen.MISC_SETTINGS=Más
+screen.MISC_SETTINGS.comment=Ajustes que no encajan en ninguna otra categoría.
+screen.REFLECTION_SETTINGS=Reflejos
+screen.REFLECTION_SETTINGS.comment=Ajustes relacionados con los reflejos.
+
+screen.CAMERA=Cámara
+screen.CAMERA.comment=Ajustes relacionados con la vista.
+screen.AGX_SETTINGS=Configuración de AgX
+screen.CAMERA_EFFECTS=Efectos de cámara
+
+screen.FUN=Diversión
+
+screen.POPULAR_SETTINGS_2=Página 2
+screen.POPULAR_SETTINGS_3=Página 3
+screen.EP_VERSION=Euphoria Patches §d1.10.5
+screen.EP_VERSION.comment=§bPuedes apoyar a SpacEagle17 en Patreon o Ko-Fi y acceder a nuevas versiones de desarrollo exclusivas. §r§d§l§neuphoriapatches.com/support
+
+value.RANDOM_AURORA.0=Por defecto
+value.RANDOM_AURORA.1=10% de probabilidad
+value.RANDOM_AURORA.2=20% de probabilidad
+value.RANDOM_AURORA.3=30% de probabilidad
+value.RANDOM_AURORA.4=40% de probabilidad
+value.RANDOM_AURORA.5=50% de probabilidad
+value.RANDOM_AURORA.6=60% de probabilidad
+value.RANDOM_AURORA.7=70% de probabilidad
+value.RANDOM_AURORA.8=80% de probabilidad
+value.RANDOM_AURORA.9=90% de probabilidad
+
+option.REIMAGINED_CLOUDS_OUTLINE.comment=Activa un contorno alrededor de las nubes Reimagined.
+value.REIMAGINED_CLOUDS_OUTLINE.0=No
+
+option.CLOUD_TEXTURE=Textura de las nubes
+value.CLOUD_TEXTURE.0=Por defecto
+
+option.RAINBOW_CLOUD=Nubes Multicolor
+value.RAINBOW_CLOUD.0=Desactivadas
+value.RAINBOW_CLOUD.1=10% de cobertura
+value.RAINBOW_CLOUD.2=20% de cobertura
+value.RAINBOW_CLOUD.3=30% de cobertura
+value.RAINBOW_CLOUD.4=40% de cobertura
+value.RAINBOW_CLOUD.5=50% de cobertura
+value.RAINBOW_CLOUD.6=60% de cobertura
+value.RAINBOW_CLOUD.7=70% de cobertura
+value.RAINBOW_CLOUD.8=80% de cobertura
+value.RAINBOW_CLOUD.9=90% de cobertura
+value.RAINBOW_CLOUD.10=100% de cobertura
+
+option.CLOUD_RENDER_DISTANCE=Distancia de Renderizando de las Nubes
+
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.0=0,0
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.1=0,05
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.2=0,10
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.3=0,15
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.4=0,20
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.5=0,25
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.6=0,30
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.7=0,35
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.8=0,40
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.9=0,45
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.10=0,50
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.11=0,55
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.12=0,60
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.13=0,65
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.14=0,70
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.15=0,75
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.16=0,80
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.17=0,85
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.18=0,90
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.19=0,95
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.20=1,00
+
+
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.0=0,0
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.1=0,05
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.2=0,10
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.3=0,15
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.4=0,20
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.5=0,25
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.6=0,30
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.7=0,35
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.8=0,40
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.9=0,45
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.10=0,50
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.11=0,55
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.12=0,60
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.13=0,65
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.14=0,70
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.15=0,75
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.16=0,80
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.17=0,85
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.18=0,90
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.19=0,95
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.20=1,00
+
+value.END_CRYSTAL_VOXEL_PIXEL.0=No
+
+option.END_STAR_AMOUNT=Cantidad de Estrellas del End
+value.END_STAR_AMOUNT.0=Baja
+value.END_STAR_AMOUNT.1=Estándar
+value.END_STAR_AMOUNT.2=Alta
+value.END_STAR_AMOUNT.3=Muy Alta
+value.END_STAR_AMOUNT.4=Un MONTÓN
+option.END_TWINKLING_STARS=Estrellas del End parpadeantes
+value.END_TWINKLING_STARS.0=Desactivado
+value.END_TWINKLING_STARS.1=0,1
+value.END_TWINKLING_STARS.2=0,2
+value.END_TWINKLING_STARS.3=0,3
+value.END_TWINKLING_STARS.4=0,4
+value.END_TWINKLING_STARS.5=0,5
+value.END_TWINKLING_STARS.6=0,6
+value.END_TWINKLING_STARS.7=0,7
+value.END_TWINKLING_STARS.8=0,8
+value.END_TWINKLING_STARS.9=0,9
+value.END_TWINKLING_STARS.10=1,0
+value.END_TWINKLING_STARS.11=1,1
+value.END_TWINKLING_STARS.12=1,2
+value.END_TWINKLING_STARS.13=1,3
+value.END_TWINKLING_STARS.14=1,4
+value.END_TWINKLING_STARS.15=1,5
+value.END_TWINKLING_STARS.16=1,6
+value.END_TWINKLING_STARS.17=1,7
+value.END_TWINKLING_STARS.18=1,8
+value.END_TWINKLING_STARS.19=1,9
+value.END_TWINKLING_STARS.20=2,0
+
+value.END_NEBULA.0=Desactivadas
+
+value.END_NEBULA_QUALITY.1=Baja
+value.END_NEBULA_QUALITY.2=Media
+value.END_NEBULA_QUALITY.3=Alta
+
+value.END_NEBULA_STAR_BRIGHTNESS.0=Desactivadas
+
+option.STAR_BRIGHTNESS=Brillo de las Estrellas
+option.STAR_BRIGHTNESS.comment=Ajuste del brillo de las estrellas.
+value.STAR_BRIGHTNESS.3=Sin brillo
+value.STAR_BRIGHTNESS.4=0,1
+value.STAR_BRIGHTNESS.5=0,2
+value.STAR_BRIGHTNESS.6=0,3
+value.STAR_BRIGHTNESS.7=0,4
+value.STAR_BRIGHTNESS.8=0,5
+value.STAR_BRIGHTNESS.9=0,6
+value.STAR_BRIGHTNESS.10=0,7
+value.STAR_BRIGHTNESS.11=0,8
+value.STAR_BRIGHTNESS.12=0,9
+value.STAR_BRIGHTNESS.13=1,0
+value.STAR_BRIGHTNESS.14=1,1
+value.STAR_BRIGHTNESS.15=1,2
+value.STAR_BRIGHTNESS.16=1,3
+value.STAR_BRIGHTNESS.17=1,4
+value.STAR_BRIGHTNESS.18=1,5
+value.STAR_BRIGHTNESS.19=1,6
+value.STAR_BRIGHTNESS.20=1,7
+value.STAR_BRIGHTNESS.21=1,8
+value.STAR_BRIGHTNESS.22=1,9
+value.STAR_BRIGHTNESS.23=2,0
+value.STAR_BRIGHTNESS.24=2,1
+value.STAR_BRIGHTNESS.25=2,2
+value.STAR_BRIGHTNESS.26=2,3
+value.STAR_BRIGHTNESS.27=2,4
+value.STAR_BRIGHTNESS.28=2,5
+value.STAR_BRIGHTNESS.29=2,6
+value.STAR_BRIGHTNESS.30=2,7
+value.STAR_BRIGHTNESS.31=2,8
+value.STAR_BRIGHTNESS.32=2,9
+value.STAR_BRIGHTNESS.33=3,0
+
+option.TWINKLING_STARS=Estrellas Parpadeantes
+option.TWINKLING_STARS.comment=Hace que las estrellas te guiñen.
+value.TWINKLING_STARS.0=No
+value.TWINKLING_STARS.1=0,1
+value.TWINKLING_STARS.2=0,2
+value.TWINKLING_STARS.3=0,3
+value.TWINKLING_STARS.4=0,4
+value.TWINKLING_STARS.5=0,5
+value.TWINKLING_STARS.6=0,6
+value.TWINKLING_STARS.7=0,7
+value.TWINKLING_STARS.8=0,8
+value.TWINKLING_STARS.9=0,9
+value.TWINKLING_STARS.10=1,0
+value.TWINKLING_STARS.11=1,1
+value.TWINKLING_STARS.12=1,2
+value.TWINKLING_STARS.13=1,3
+value.TWINKLING_STARS.14=1,4
+value.TWINKLING_STARS.15=1,5
+value.TWINKLING_STARS.16=1,6
+value.TWINKLING_STARS.17=1,7
+value.TWINKLING_STARS.18=1,8
+value.TWINKLING_STARS.19=1,9
+value.TWINKLING_STARS.20=2,0
+option.STAR_SIZE=Tamaño de las Estrellas
+option.STAR_SIZE.comment=Cambiar el tamaño de tus estrellas.
+
+option.BORDER_FOG_DISTANCE_OVERWORLD=Distancia de niebla de borde
+option.BORDER_FOG_DISTANCE_OVERWORLD.comment=Ajuste de la distancia de la niebla de borde del Overworld (Superficie).
+value.BORDER_FOG_DISTANCE_OVERWORLD.1=0,25
+value.BORDER_FOG_DISTANCE_OVERWORLD.2=0,40
+value.BORDER_FOG_DISTANCE_OVERWORLD.3=0,50
+value.BORDER_FOG_DISTANCE_OVERWORLD.6=1,00
+value.BORDER_FOG_DISTANCE_OVERWORLD.10=1,25
+value.BORDER_FOG_DISTANCE_OVERWORLD.50=1,50
+value.BORDER_FOG_DISTANCE_OVERWORLD.100=1,75
+value.BORDER_FOG_DISTANCE_OVERWORLD.500=2,00
+value.BORDER_FOG_DISTANCE_OVERWORLD.1000=2,50
+
+value.BORDER_FOG_DISTANCE_NETHER.1=0,25
+value.BORDER_FOG_DISTANCE_NETHER.2=0,40
+value.BORDER_FOG_DISTANCE_NETHER.3=0,50
+value.BORDER_FOG_DISTANCE_NETHER.6=1,00
+value.BORDER_FOG_DISTANCE_NETHER.10=1,25
+value.BORDER_FOG_DISTANCE_NETHER.50=1,50
+value.BORDER_FOG_DISTANCE_NETHER.100=1,75
+value.BORDER_FOG_DISTANCE_NETHER.500=2,00
+value.BORDER_FOG_DISTANCE_NETHER.1000=2,50
+
+value.BORDER_FOG_DISTANCE_END.1=0,25
+value.BORDER_FOG_DISTANCE_END.2=0,40
+value.BORDER_FOG_DISTANCE_END.3=0,50
+value.BORDER_FOG_DISTANCE_END.6=1,00
+value.BORDER_FOG_DISTANCE_END.10=1,25
+value.BORDER_FOG_DISTANCE_END.50=1,50
+value.BORDER_FOG_DISTANCE_END.100=1,75
+value.BORDER_FOG_DISTANCE_END.500=2,00
+value.BORDER_FOG_DISTANCE_END.1000=2,50
+
+option.BAD_APPLE=Bad Apple
+
+value.tonemap.GTTonemap=Gran Turismo
+
+value.tonemap_left.uncharted2_tonemap_partial=Uncharted 2
+value.tonemap_left.GTTonemap=Gran Turismo
+
+value.tonemap_right.DoBSLTonemap=BSL/Complementary
+value.tonemap_right.uncharted2_tonemap_partial=Uncharted 2
+value.tonemap_right.reinhard2=Reinhard2
+value.tonemap_right.GTTonemap=Gran Turismo
+
+option.WAVE_EVERYTHING.comment=macarena  :')
+
+option.ATLAS_ROTATION.comment=:).
+
+option.PALETTE1R=Rojo Color1
+option.PALETTE1G=Verde Color1
+option.PALETTE1B=Azul Color1
+option.PALETTE2R=Rojo Color2
+option.PALETTE2G=Verde Color2
+option.PALETTE2B=Azul Color2
+option.PALETTE3R=Rojo Color3
+option.PALETTE3G=Verde Color3
+option.PALETTE3B=Azul Color3
+option.PALETTE4R=Rojo Color4
+option.PALETTE4G=Verde Color4
+option.PALETTE4B=Azul Color4
+option.PALETTE5R=Rojo Color5
+option.PALETTE5G=Verde Color5
+option.PALETTE5B=Azul Color5
+option.PALETTE6R=Rojo Color6
+option.PALETTE6G=Verde Color6
+
+value.SCANLINE_NEW_MONOCHROME.false=Desactivadas
+
+option.DOF_SHAPE=Forma
+value.DOF_SHAPE.0=Original
+value.DOF_SHAPE.3=Triángulo
+value.DOF_SHAPE.4=Cuadrado
+value.DOF_SHAPE.5=Pentágono
+value.DOF_SHAPE.6=Hexágono
+value.DOF_SHAPE.7=Heptágono
+value.DOF_SHAPE.8=Octágono
+
+option.DOF_SHAPE_ROTATION_DEGREES=Rotación
+
+option.SAND_TRANSPARENCY=Transparencia de la Arena
+option.SAND_IN_CAVES=Arena en Cuevas
+
+value.FROGLIGHT_SATURATION.1=Por defecto
+value.FROGLIGHT_SATURATION.2=2x
+value.FROGLIGHT_SATURATION.3=3x
+
+option.STAR_COLOR_1_OW_R=Estrella 1 - Rojo
+option.STAR_COLOR_1_OW_G=Estrella 1 - Verde
+option.STAR_COLOR_1_OW_B=Estrella 1 - Azul
+
+option.STAR_COLOR_2_OW_R=Estrella 2 - Rojo
+option.STAR_COLOR_2_OW_G=Estrella 2 - Verde
+option.STAR_COLOR_2_OW_B=Estrella 2 - Azul
+
+option.STAR_COLOR_3_OW_R=Estrella 3 - Rojo
+option.STAR_COLOR_3_OW_G=Estrella 3 - Verde
+option.STAR_COLOR_3_OW_B=Estrella 3 - Azul
+
+option.STAR_COLOR_1_END_R=Estrella 1 - Rojo
+option.STAR_COLOR_1_END_G=Estrella 1 - Verde
+option.STAR_COLOR_1_END_B=Estrella 1 - Azul
+
+option.STAR_COLOR_2_END_R=Estrella 2 - Rojo
+option.STAR_COLOR_2_END_G=Estrella 2 - Verde
+option.STAR_COLOR_2_END_B=Estrella 2 - Azul
+
+option.STAR_COLOR_3_END_R=Estrella 3 - Rojo
+option.STAR_COLOR_3_END_G=Estrella 3 - Verde
+option.STAR_COLOR_3_END_B=Estrella 3 - Azul
+
+option.SHOOTING_STARS_SIZE=Tamaño
+option.SHOOTING_STARS_SPEED=Velocidad
+option.SHOOTING_STARS_COUNT=Cantidad
+
+value.BLURRED_REFLECTIONS_I.0=Desactivadas
+value.BLURRED_REFLECTIONS_I.10=Por defecto
+
+value.REFLECTION_RESPONSIVENESS.0.0=Por defecto
+
+value.BETTER_LABPBR_REFRACTIONS.0=DESACTIVADO
+
+option.PHOTONICS_RENDER_SCALE=Escala de Renderizado
+
+option.PHOTONICS_INDIRECT_INTENSITY=Iluminación Global
+
+option.PHOTONICS_MAX_LIGHTS=Máx. de Luces
+
+suffix.PHOTONICS_VANILLA_LIGHT_FALLBACK=%
+
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.6=6 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.7=7 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.8=8 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.9=9 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.10=10 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.11=11 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.12=12 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.13=13 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.14=14 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.15=15 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.16=16 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.17=17 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.18=18 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.19=19 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.20=20 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.21=21 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.22=22 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.23=23 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.24=24 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.25=25 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.26=26 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.27=27 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.28=28 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.29=29 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.30=30 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.31=31 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.32=32 Chunks
+value.PHOTONICS_MAX_ALLOWED_DISTANCE.100=Distancia de Renderizado
+
+
+value.MCWIND_NETHER_FOG.0=DESACTIVADO
+
+value.BLACK_HOLE_SHAPE.1=Cuadrado
+
+value.BLACK_HOLE_PIXELATION.0=Apagada
+
+value.BLACK_HOLE_DIRECTION_MODE.1=Posición Fija
+
+option.BLACK_HOLE_LATITUDE=Latitud
+option.BLACK_HOLE_LATITUDE.comment=Modo de Posición Fija: posiciona la posición relativa del agujero negro por encima o por debajo del horizonte, en grados.
+
+value.BLACK_HOLE_STREAK.0=Sin brillo
+
+option.REFLECTIVE_HORSES=Caballos Brillantes

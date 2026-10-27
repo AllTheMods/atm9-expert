@@ -5,6 +5,8 @@
 !/kubejs/
 !/config/
 !/defaultconfigs/
+!/packmenu/
+!/shaderpacks/
  
 # and this file itself
 !/.gitignore

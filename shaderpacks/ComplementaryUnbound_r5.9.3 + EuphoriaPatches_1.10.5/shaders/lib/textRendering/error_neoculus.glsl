@@ -1,0 +1,35 @@
+color.rgb *= mix(0.5, 1.0, animation);
+beginTextM(6, vec2(10, 12));
+    text.fgCol = vec4(1.0, 0.0, 0.0, 1.0);
+    printString((_N, _e, _O, _c, _u, _l, _u, _s, _space, _i, _s, _space, _u, _n, _m, _a, _i, _n, _t, _a, _i, _n, _e, _d, _space, _a, _n, _d, _space, _b, _r, _o, _k, _e, _n));
+    printLine();
+    textColor = color.rgb;
+endText(textColor);
+color.rgb = mix(textColor, color.rgb, animation);
+
+beginTextM(4, vec2(15, 36));
+    printString((_N, _e, _O, _c, _u, _l, _u, _s, _space, _i, _s, _space, _u, _s, _e, _d, _space, _a, _s, _space, _t, _h, _e, _space, _s, _h, _a, _d, _e, _r, _space, _l, _o, _a, _d, _e, _r, _space, _m, _o, _d, _dot));
+    printLine();
+    printString((_H, _o, _w, _e, _v, _e, _r, _comma, _space, _i, _t, _space, _i, _s, _space, _a, _b, _a, _n, _d, _o, _n, _e, _d, _space, _a, _n, _d, _space, _i, _s, _s, _u, _e, _s, _space, _w, _i, _l, _l, _space, _n, _o, _t, _space, _b, _e, _space, _f, _i, _x, _e, _d, _dot));
+    printLine();
+    printString((_I, _f, _space, _y, _o, _u, _space, _e, _n, _c, _o, _u, _n, _t, _e, _r, _space, _a, _n, _y, _space, _i, _s, _s, _u, _e, _s, _space, _w, _i, _t, _h, _space, _t, _h, _e, _space, _s, _h, _a, _d, _e, _r, _comma));
+    printLine();
+    printString((_i, _t, _space, _i, _s, _space, _l, _i, _k, _e, _l, _y, _space, _t, _h, _a, _t, _space, _N, _e, _O, _c, _u, _l, _u, _s, _space, _i, _s, _space, _c, _a, _u, _s, _i, _n, _g, _space, _t, _h, _e, _m, _dot));
+    printLine();
+    printLine();
+    printString((_P, _l, _e, _a, _s, _e, _space, _s, _w, _i, _t, _c, _h, _space, _o, _v, _e, _r, _space, _t, _o, _space, _I, _r, _i, _s, _space, _a, _n, _d, _space, _S, _o, _d, _i, _u, _m, _comma, _space, _w, _h, _i, _c, _h));
+    printLine();
+    printString((_a, _r, _e, _space, _f, _u, _l, _l, _y, _space, _s, _u, _p, _p, _o, _r, _t, _e, _d, _space, _o, _n, _space, _1, _dot, _2, _1, _dot, _1, _space, _N, _e, _o, _F, _o, _r, _g, _e, _dot));
+    printLine();
+    textColor = color.rgb;
+endText(textColor);
+color.rgb = mix(textColor, color.rgb, animation);
+
+beginTextM(2, vec2(30, 177));
+    printString((_M, _o, _v, _e, _space, _t, _o, _space, _d, _i, _s, _m, _i, _s, _s, _space, _t, _h, _e, _space, _e, _r, _r, _o, _r, _space, _m, _e, _s, _s, _a, _g, _e, _dot));
+    printLine();
+    printFloat(timeRemainingUntilDismissing);
+    printString((_space, _s, _e, _c, _o, _n, _d, _space, _r, _e, _m, _a, _i, _n, _i, _n, _g, _space, _u, _n, _t, _i, _l, _space, _b, _e, _i, _n, _g, _space, _a, _b, _l, _e, _space, _t, _o, _space, _d, _i, _s, _m, _i, _s, _s, _space, _t, _h, _e, _space, _e, _r, _r, _o, _r, _space, _m, _e, _s, _s, _a, _g, _e, _dot));
+    textColor = color.rgb;
+endText(textColor);
+color.rgb = mix(textColor, color.rgb, animation);

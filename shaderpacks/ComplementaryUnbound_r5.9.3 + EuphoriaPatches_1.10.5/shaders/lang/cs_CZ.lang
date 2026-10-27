@@ -1,0 +1,2852 @@
+#shaders/lang/cs_CZ.lang
+
+Contribute=Přispěj k oficiálním překladům zde: https://www.euphoriapatches.com/lang - Neměň tuto adresu
+
+option.LANG_FILE_HEADER=Soubory překladů od komunity - Překlad může být zastaralý. SpacEagle17 nemůže zaručit jejich přesnost.
+option.TRANSLATORS=Přeložil: TerexG
+
+shaderDescription=§cComplementary Shaders r5.9.3§r + §dEuphoria Patches 1.10.5§r\nDoplněk pro Complementary od SpacEagle17, který jej rozšiřuje o mnoho různých volitelných funkcí a nastavení.\nVývojové verze: §dwww.euphoriapatches.com/support§r
+
+#Profiles
+profile.POTATO=Výkon: §aBrambora
+profile.VERYLOW=Výkon: §aVelmi nízký
+profile.LOW=Výkon: §aNízký
+profile.MEDIUM=Výkon: §aStřední
+profile.HIGH=Výkon: §eVysoký (Výchozí)
+profile.VERYHIGH=Výkon: §eVelmi vysoký
+profile.ULTRA=Výkon: §cUltra
+profile.COMPLEMENTARY=Výkon: §4§lComplementary
+profile.comment=Profily shaderu mění nastavení s nejvíce optimalizovaným poměrem vizuální kvality a výkonu. §e[*]§r Je doporučeno používat jeden z těchto profilů pro tvoje nastavení, pokud nevíš, co děláš. §e[*]§r Všechna ovlivněná nastavení lze nalézt v nabídce "Nastavení výkonu".
+
+#Information
+screen.INFORMATION=Informace
+screen.INFORMATION.comment=Tato sekce obsahuje tlačítka, která pouze poskytují informace.
+
+screen.INFORMATION2=Informace Complementary
+screen.INFORMATION2.comment=Tato sekce obsahuje tlačítka, která pouze poskytují informace.
+
+option.info0=§bNajeď myší na tlačítko
+value.info0.0=
+option.info0.comment=Tato sekce obsahuje tlačítka, která pouze poskytují informace.
+
+option.info1=Jak získat lepší výkon
+value.info1.0=
+option.info1.comment=- Výkon je v Minecraftu složité téma, protože je ovlivněn mnoha věcmi, ale můžeš zkusit toto:. - Používej mody Iris a Sodium namísto Optifinu, protože Optifine je problematický a v některých případech tě nenechá ani přečíst zbytek tohoto popisu. - Sniž nastavení shaderu "Profil", tyto profily byly pečlivě testovány pro nejlepší poměr vzhled/výkon. - Sniž svoji dohlednost, doporučuji ji nastavit o 2-4 chunky více, než "vzdálenost stínů" "Profilu", který sis vybral, takže například délka dohledu 16 chunků pro "Vysoký" profil nebo 6 chunků pro profil Brambora. - Ujisti se, že nemáš přehnaně velké rozlišení, 1920x1080 je skvělé pro středně výkonné počítače, 1440p je možné pro vysoce výkonné počítače, 4k je přehnané. - Ujisti se, že nemáš velké množství modů, i když je většina z nich "optimizačními mody", většinou nejsou tak užitečné pro shadery. Stojí také za zmínku, že některé balíčky modifikací stojí hodně výkonu, obzvláště ty, které přidávají složitější zeleň/listy.
+
+option.info2=Jaká jsou nejlepší nastavení
+value.info2.0=
+option.info2.comment=- Nejlepší nastavení jsou subjektivní, ale používání výchozích možností "Profilu" bude pro většinu lidí skoro nejlepší. - Výchozí nastavení bylo vytvořeno roky hodnocení od komunity, testování a zpětné vazby; zatímco věnuje velkou pozornost poměru vzhled/výkon. - Pořád si však můžeš nastavení vyladit podle tebe a přitom se bavit!
+
+option.info3=Co je Profil nebo Vizuální styl
+value.info3.0=
+option.info3.comment=- Nastavení "Profil" mění nastavení v nabídce "Nastavení výkonu", ale neovlivní žádná nastavení založená na preferenci. - "Vizuální styl" mění hodnoty "Určen(a/o) stylem", které existují v mnoha nastaveních založených na preferenci, ale neovlivňuje výkon o důležité množství. - Jediný rozdíl mezi Complementary Reimagined a Unbound je výchozí hodnota "Vizuálního stylu"
+
+option.info4=Co je Podpora textur
+value.info4.0=
+option.info4.comment=- Možnost Podpora textur určuje, jak shader zachází s různými bloky Minecraftu. - Například §bIntegrovanéPBR+§r považuje bloky zlata za odrážlivé, zatímco §elabPBR§r nebo §eseuspbr§r vyžadují, aby sis nainstaloval balíček modifikací, který to řekne shaderu. - Nastavením Podpory textur na §aZákladní§r způsobí, že žádný blok není "zvláštní" kromě pár výjimek jako třeba voda.
+
+option.info5=Co jsou žlutá nastavení
+value.info5.0=
+option.info5.comment=- Nastavení se žlutým jménem znamená, že toto nastavení ovlivňuje výkon o měřitelné množství, i když není v kategorii "Nastavení výkonu". - Pokud jeho povolení způsobí červený text možnosti, znamená to, že jeho dopad na výkon je velmi vysoký.
+
+option.info6=Jsou nějaké mody doporučené
+value.info6.0=
+option.info6.comment=- Kromě Iris a Sodium, které jsou zásadní, doporučuji pro lepší výkon mod pro optimalizaci blokových entit, jako třeba "Optimized Block Entities" nebo "Enhanced Block Entities". - Kromě toho může být mod "RenderScale" užitečný pro snadné upravení rozlišení. - Také stojí za zmínku mody "Voxy" nebo "Distant Horizons", které přidávají možnost mít extrémní dohlednosti bez extrémního dopadu na výkon; Doporučuji používat 64 až 256 chunků dohlednosti pro Voxy, nebo 64 až 128 chunků pro Distant Horizons s normální dohledností 8 až 12 chunků pro oba mody. - Posledně můžeš získat mod "Euphoria Patches", který přidává upravený Complementary ke tvému seznamu shaderů s více funkcemi a nastaveními; spolu s přidáním několika oprav/vylepšení i když nepoužíváš modifikovaný balíček shaderů Complementary-Euphoria, jako například zachování funkce barevného osvětlení při vysokých světových souřadnicích.
+
+option.info7=Kde pokládat otázky nebo hlásit problémy
+value.info7.0=
+option.info7.comment=- Použij prosím Discord server Complementary pro otázky, nebo sekci "issues" na stránce Github. - www.complementary.dev/discord. - www.complementary.dev/github
+
+option.info8=Jak se připojit ke komunitě
+value.info8.0=
+option.info8.comment=- Můžeš se připojit do Discord serveru Complementary a připojit se k naší přátelské komunitě a mít možnost kontaktovat vývojáře nebo zkušené členy komunity. - www.complementary.dev/discord
+
+option.info9=Jak podpořit Complementary
+value.info9.0=
+option.info9.comment=- Nejlepší způsob, jak podpořit Complementary je sdílet jej s přáteli nebo na sociálních médiích, ale můžeš také přímo podpořit hlavního vývojáře (mě!) na Patreonu. - www.patreon.com/emingt
+
+option.info10=Poděkování
+value.info10.0=
+option.info10.comment=- EminGT: Hlavní vývojář Complementary. - Capt Tatsu: Vývojář BSL Shaders, jeho velkorysost je to, co v první řadě učinilo Complementary možným. - Zvláštní poděkování: IMS212, sp614x, Chocapic13, Robobo1221, SixthSurge, null511, fayer3, catlikecoding, Builderb0y, Jessie, SpacEagle17, isuewo, flytrap, gri573, FoZy-STYLE, plazmal, aceralex
+
+option.info11=Co je Euphoria Patches
+value.info11.0=
+option.info11.comment=Euphoria Patches je doplněk pro shader Complementary, který vyvinul SpacEagle17. Jeho cílem je rozšíření Complementary s více volitelnými ručně vyrobenými funkcemi a nastaveními.
+
+option.info12=Nastavení Euphoria Patches
+value.info12.0=
+option.info12.comment=Všechny možnosti Euphoria jsou ve výchozím nastavení vypnuty a uživatel se může rozhodnout, co zapnout. V kategorii Populární nastavení můžeš najít nejvíce populární funkce Euphoria Patches. Existuje nespočetně dalších nastavení a je přidáváno více s každou aktualizací, bav se hraním si s nimi!
+
+option.info13=Podpora modů Euphoria
+value.info13.0=
+option.info13.comment=Euphoria Patches si klade za cíl lepší podporu modovaných bloků než normální Complementary tím, že má výchozí podporu modovaných bloků (podívej se na block.properties). Detekce zdrojů světla s automaticky aplikovaným svícením. Detekce modelů zeleně s automaticky aplikovaným SSS.
+
+option.info14=Připoj se do komunity
+value.info14.0=
+option.info14.comment=Připoj se do Discord serveru Euphoria Patches pro otázky, zábavnou komunitu a abys zůstal(a) v obraze s nejnovějšími zprávami. §d§l§neuphoriapatches.com/discord
+
+option.info15=Poděkování Euphoria Patches
+value.info15.0=
+option.info15.comment=Celé poděkování lze nalézt na §deuphoriapatches.com/credits§r. isuewo - Bývalý spoluvývojář Euphoria Patches. EminGT: Hlavní vývojář Complementary. Capt Tatsu, gri573, FoZy STYLE, JoKerTech, SixthSurge, WoMspace (aka Sasha), Septonious, fayer3, Xonk, Memokii, dragoncat, TheNukeLore, dbrighthd, Surisen (Ruri), Acer (Alex), Folox_, Helgust.
+
+option.info16=Jak podpořit Euphoria Patches
+value.info16.0=
+option.info16.comment=Můžeš podpořit Euphoria Patches tím, že budeš zvědavý/á na nové aktualizace nebo jeho sdílením s ostatními lidmi, ale také můžeš přímo podpořit SpacEagle17 na Patreonu nebo Ko-Fi a získat přístup k exkluzivním beta verzím. §d§l§neuphoriapatches.com/support
+
+option.info17=Beta verze: Patreon SpacEagle17
+value.info17.0=
+option.info17.comment=Můžeš podpořit SpacEagle17 na Patreonu nebo Ko-Fi a získat přístup k exkluzivním verzím ve vývoji. §d§l§neuphoriapatches.com/support
+
+option.info18=Pro Complementary r5.9.3
+value.info18.0=
+option.info18.comment=Děkujeme za instalaci Euphoria Patches :)
+
+option.info19=§aNOVÁ AKTUALIZACE
+value.info19.0=§cX.Y.Z §r->§a X.Y.Z
+option.info19.comment=Je dostupná nová verze modu EuphoriaPatcher. Stáhni si ji z Modrinthu: https://euphoriapatches.com/download.
+
+option.info20=
+value.info20.0=§aeuphoriapatches.com/download
+option.info20.comment=Je dostupná nová verze modu EuphoriaPatcher. Stáhni si ji z Modrinthu: https://euphoriapatches.com/download.
+
+option.info21=Často kladené dotazy
+value.info21.0=
+option.info21.comment=Podívej se na stránku FAQ a najdi odpovědi na běžné otázky. §d§l§neuphoriapatches.com/faq
+
+option.info22=§dVíce nastavení po posunutí
+value.info22.0=
+option.info22.comment=Je možné, že na velkých velikostech GUI jsou některá nastavení skrytá, posunutí stránky dolů je odhalí.
+
+#Style
+option.SHADER_STYLE=Vizuální styl
+option.SHADER_STYLE.comment=Určuje výchozí vizuální styl balíčku shaderů. §bReimagined§r: Doplňuje Minecraft a zároveň zachovává jeho unikátní vizuální prvky. §dUnbound§r: Předělává vzhled Minecraftu s polorealistickým fantasy stylem.. §e[*]§r Ovlivněná nastavení: Styl vody, Styl mraků, Styl Slunce/Měsíce, Úhel Slunce/Měsíce, Styl polární záře, Svítící rudy.
+value.SHADER_STYLE.1=§bReimagined
+value.SHADER_STYLE.4=§dUnbound
+
+#Screens
+screen.PERFORMANCE_SETTINGS=§eNastavení výkonu§r
+screen.PERFORMANCE_SETTINGS.comment=Nastavení, která se přímo vztahují k výkonu a mění se s různými profily shaderu.
+
+screen.ATMOSPHERE_SETTINGS=Atmosféra
+screen.ATMOSPHERE_SETTINGS.comment=Nastavení týkající se atmosféry.
+
+screen.ATM_COLOR_SETTINGS=Násobiče barev atmosféry
+screen.ATM_COLOR_SETTINGS.comment=Umožňuje přizpůsobení barev atmosféry, které jsou hlavně vidět na obloze a mlze.
+
+screen.MORNING_ATM_MULTS=Východ/západ Slunce
+screen.NOON_ATM_MULTS=Poledne
+screen.NIGHT_ATM_MULTS=Noc
+screen.RAIN_ATM_MULTS=Deštivé počasí
+screen.NETHER_ATM_MULTS=Nether dimenze
+screen.END_ATM_MULTS=End dimenze
+
+screen.CLOUD_SETTINGS=Mraky
+screen.CLOUD_SETTINGS.comment=Nastavení týkající se mraků.
+
+screen.CLOUD_COLOR_SETTINGS=Barva mraků
+screen.CLOUD_COLOR_SETTINGS.comment=Nastavení pro změnu barvy mraků.
+
+screen.CLOUD_UNBOUND_SETTINGS=Nastavení Unbound mraků
+screen.CLOUD_REIMAGINED_SETTINGS=Nastavení Reimagined mraků
+
+screen.FOG_SETTINGS=Mlha
+screen.FOG_SETTINGS.comment=Nastavení týkající se různých typů mlhy.
+
+screen.SUN_MOON_SETTINGS=Slunce / Měsíc
+screen.SUN_MOON_SETTINGS.comment=Nastavení týkající se Slunce a Měsíce
+
+screen.NETHER_SETTINGS=Nether dimenze
+screen.NETHER_SETTINGS.comment=Nastavení týkající se Nether dimenze.
+
+screen.END_SETTINGS=End dimenze
+screen.END_SETTINGS.comment=Nastavení týkající s End dimenze.
+
+screen.WEATHER_SETTINGS=Déšť / Počasí
+screen.WEATHER_SETTINGS.comment=Nastavení týkající se povětrnostních podmínek.
+
+screen.CAMERA_SETTINGS=Kamera
+screen.CAMERA_SETTINGS.comment=Nastavení týkající se pohledu/kamery.
+
+screen.TONEMAP_SETTINGS=Rovnováha barev
+screen.TONEMAP_SETTINGS.comment=Nastavení určující rovnováhu barev obrazu.
+
+screen.COLORGRADING_SETTINGS=Korekce barev
+screen.COLORGRADING_SETTINGS.comment=Nastavení pro promíchání finálních kanálů barev.
+
+screen.WORLD_BLUR_SETTINGS=Rozostření světa
+screen.WORLD_BLUR_SETTINGS.comment=Nastavení týkající se skvělých efektů rozostření světa.
+
+screen.TAA_SETTINGS=Nastavení Temporálního filtru
+screen.TAA_SETTINGS.comment=Nastavení pro určení chování temporálního anti aliasingu.
+
+screen.MATERIAL_SETTINGS=Materiály
+screen.MATERIAL_SETTINGS.comment=Nastavení týkající se materiálů Minecraftu.
+
+screen.IPBR_SETTINGS=Materiály IntegrovanéhoPBR+
+screen.IPBR_SETTINGS.comment=Nastavení týkající se funkcí IntegrovanéhoPBR+.
+
+screen.GLOWING_ORE_SETTINGS=Svítící rudy
+screen.GLOWING_ORE_SETTINGS.comment=Nastavení pro upravení svícení bloků rud.
+
+screen.GLOWING_STUFF_SETTINGS=Svítící věci
+screen.GLOWING_STUFF_SETTINGS.comment=Nastavení pro upravení svícení různých bloků.
+
+screen.OTHER_IPBR_SETTINGS=Další funkce IPBR+
+screen.OTHER_IPBR_SETTINGS.comment=Různá nastavení IntegrovanéhoPBR+.
+
+screen.CUSTOM_PBR_SETTINGS=labPBR/seuspbr materiály
+screen.CUSTOM_PBR_SETTINGS.comment=Nastavení týkající se funkcí labPBR/seuspbr.
+
+screen.LIGHTING_SETTINGS=Osvětlení
+screen.LIGHTING_SETTINGS.comment=Nastavení týkající se osvětlení.
+
+screen.LIGHT_COLOR_SETTINGS=Násobiče barev osvětlení
+screen.LIGHT_COLOR_SETTINGS.comment=Umožňuje přizpůsobení barev osvětlení, které jsou viditelné na všech površích.
+
+screen.MORNING_LIGHT_MULTS=Východ/západ Slunce
+screen.NOON_LIGHT_MULTS=Poledne
+screen.NIGHT_LIGHT_MULTS=Noc
+screen.RAIN_LIGHT_MULTS=Deštivé počasí
+screen.NETHER_LIGHT_MULTS=Nether dimenze
+screen.END_LIGHT_MULTS=End dimenze
+
+screen.BLOCKLIGHT_SETTINGS=Světlo bloků §e[*]§r
+screen.BLOCKLIGHT_SETTINGS.comment=Nastavení pro upravení osvětlení vyzařovaného z bloků zdroje světla. §e[*]§r Nastavení červené/zelené/modré barvy neovlivní většinu světel, pokud je povoleno Pokročilé trasování barev.
+
+screen.MOON_PHASE_INF_SETTINGS=Vliv fáze Měsíce
+screen.MOON_PHASE_INF_SETTINGS.comment=Nastavení pro určení, jak různé fáze Měsíce ovlivňují noční osvětlení.
+
+screen.ACT_FEATURES_SETTINGS=Exkluzivní funkce ACT §e[*]§r
+screen.ACT_FEATURES_SETTINGS.comment=Nastavení, která jsou o funkcích exkluzivních pro Pokročilé trasování barev. §e[*]§r Tyto funkce pouze fungují, pokud je zapnuté Pokročilé trasování barev v Nastavení výkonu a tvůj systém jej podporuje.
+
+screen.PIXELATED_LIGHTING_SETTINGS=Pixelované osvětlení
+screen.PIXELATED_LIGHTING_SETTINGS.comment=Nastavení, aby některé efekty osvětlení byly pixelované.
+
+screen.WATER_SETTINGS=Voda
+screen.WATER_SETTINGS.comment=Nastavení týkající se vody.
+
+screen.WATER_COLOR_SETTINGS=Barva povrchu vody
+screen.UNDERWATER_COLOR_SETTINGS=Podvodní barva
+
+screen.WATER_WAVE_SETTINGS=Vlnící se normály vody §e[*]§r
+screen.WATER_WAVE_SETTINGS.comment=Nastavení pro přizpůsobení vln (normál) hladiny vody. §e[*]§r Tato nastavení pouze fungují, když je Styl vody "Reimagined s vlnami" nebo "Unbound".
+
+screen.WAVING_SETTINGS=Vlající textury
+screen.WAVING_SETTINGS.comment=Nastavení o vlajících texturách.
+
+screen.OTHER_SETTINGS=Ostatní
+screen.OTHER_SETTINGS.comment=Nastavení, která nepatří do žádné jiné kategorie.
+
+screen.SELECT_OUTLINE_SETTINGS=Obrys výběru
+screen.SELECT_OUTLINE_SETTINGS.comment=Nastavení měnící obrys vybraného bloku.
+
+screen.WORLD_OUTLINE_SETTINGS=Obrys světa
+screen.WORLD_OUTLINE_SETTINGS.comment=Nastavení týkající se volitelných efektů obrysu.
+
+#Settings
+option.RP_MODE=Podpora textur
+option.RP_MODE.comment=Mění mnoho vnitřních výpočtů pro určení, jak budou různé bloky a materiály vykreslovány. §bIntegrované PBR+§r: Vypočtené PBR a další efekty, velmi doporučeno pro většinu případů použití. §aZákladní§r: Žádné PBR ani další efekty. §elabPBR/seuspbr§r: Materiály využívající potřebné PBR Balíčky modifikací.
+value.RP_MODE.0=§aZákladní
+value.RP_MODE.1=§bIntegrované PBR+
+value.RP_MODE.2=§eseuspbr (Vyžadován Bal. mod.)
+value.RP_MODE.3=§elabPBR (Vyžadován Bal. mod.)
+
+option.WATER_REFLECT_QUALITY=Kvalita odrazů vody
+option.WATER_REFLECT_QUALITY.comment=Upravuje vizuální kvalitu odrazů, které se objevují na průhledných objektech. §cStřední§r: Odrazy na vodě a průhledných blocích využívají ray-tracing v prostoru obrazovky (SSR). §eBrambora§r: Nahrazuje odrazy vody a průhledných bloků rychlejší metodou, může v nějakých situacích vypadat nepřesně. §aVYP§r: Žádné odrazy.
+value.WATER_REFLECT_QUALITY.-1=§aVYP
+value.WATER_REFLECT_QUALITY.0=§aPouze obloha
+value.WATER_REFLECT_QUALITY.1=§eBrambora
+value.WATER_REFLECT_QUALITY.2=§cStřední
+
+option.BLOCK_REFLECT_QUALITY=Kvalita odrazů bloků §e[*]§r
+option.BLOCK_REFLECT_QUALITY.comment=Upravuje vizuální kvalitu odrazů, které se objevují na pevných materiálech. §cVysoká§r: Odlesky od Slunce/Měsíce a pokročilé zrcadlové odrazy. §eNízká§r: Pouze odlesky od Slunce/Měsíce. §e[*]§r Možnost Podpora textur musí být nastavena na cokoliv kromě Základní, aby se objevily jakékoliv zrcadlové odrazy.
+value.BLOCK_REFLECT_QUALITY.0=§aVYP
+value.BLOCK_REFLECT_QUALITY.1=§eNízká
+value.BLOCK_REFLECT_QUALITY.3=§cVysoká
+
+option.SHADOW_QUALITY=Stíny v reálném čase
+option.SHADOW_QUALITY.comment=Upravuje kvalitu stínů. Každá úroveň dále zmenšuje artefakty šumu ve stínech, §eNízké§r a §eVelmi nízké§r používají jednodušší filtrování stínů, §eVelmi nízké§r také vypíná barevné stíny, §aVYP§r úplně vypíná stíny a paprsky světla. §e[*]§r Toto nastavení je vnitřně limitováno na „Nízké“, pokud je vypnutý Temporální filtr, nebo jsou zapnuté Pixelované stíny.
+value.SHADOW_QUALITY.-1=§aVYP
+value.SHADOW_QUALITY.0=§eVelmi nízké
+value.SHADOW_QUALITY.1=§eNízké
+value.SHADOW_QUALITY.2=§eStřední
+value.SHADOW_QUALITY.3=§cVysoké
+value.SHADOW_QUALITY.4=§cVelmi vysoké
+value.SHADOW_QUALITY.5=§4§lUltra
+
+option.LIGHTSHAFT_QUALI_DEFINE=Kvalita paprsků světla §e[*]§r
+option.LIGHTSHAFT_QUALI_DEFINE.comment=Upravuje kvalitu paprsků světla. Každá úroveň dále zmenšuje artefakty šumu. §e[*]§r Nastavení "Stíny v reálném čase" musí být nastaveno na cokoliv kromě VYP, aby paprsky světla fungovaly. §e[*]§r Toto nastavení také řídí kvalitu Endových paprsků, kromě toho, že možnost "VYP" je považována za "Nízká".
+value.LIGHTSHAFT_QUALI_DEFINE.0=§aVYP
+value.LIGHTSHAFT_QUALI_DEFINE.1=§eNízká
+value.LIGHTSHAFT_QUALI_DEFINE.2=§eStřední
+value.LIGHTSHAFT_QUALI_DEFINE.3=§cVysoká
+value.LIGHTSHAFT_QUALI_DEFINE.4=§4§lVelmi vysoká
+
+option.shadowDistance=Vzdálenost stínů
+option.shadowDistance.comment=Upravuje vzdálenost od hráče, kde jsou vykreslovány stíny v reálném čase. §c[-]§r Nižší hodnoty mohou způsobit nadměrné "prosakování" Paprsků světla.
+value.shadowDistance.64.0=§a4 chunky §c[-]
+value.shadowDistance.80.0=§a5 chunků §c[-]
+value.shadowDistance.96.0=§a6 chunků §c[-]
+value.shadowDistance.112.0=§a7 chunků §c[-]
+value.shadowDistance.128.0=§a8 chunků
+value.shadowDistance.160.0=§e10 chunků
+value.shadowDistance.192.0=§e12 chunků
+value.shadowDistance.224.0=§e14 chunků
+value.shadowDistance.256.0=§c16 chunků
+value.shadowDistance.320.0=§c20 chunků
+value.shadowDistance.384.0=§4§l24 chunků
+value.shadowDistance.512.0=§4§l32 chunků
+value.shadowDistance.768.0=§4§l§n§o48 chunků
+value.shadowDistance.1024.0=§4§k-§r§4§l§n§o64 chunků§r§4§k-
+
+option.ENTITY_SHADOW=Stíny entit
+option.ENTITY_SHADOW.comment=Zapne stíny vrhané z entit a blokových entit. "Normální entity" zahrnují například zvířata a nestvůry, zatímco možnost "Plné" také zahrnuje blokové entity jako třeba truhly. §c[-]§r Stíny entit mají mnohem větší vliv na výkon, než je očekáváno, mohou v některých situacích snížit tvé FPS o více než 50%.
+value.ENTITY_SHADOW.-1=§aVYP
+value.ENTITY_SHADOW.1=§cNormální entity
+value.ENTITY_SHADOW.2=§4§k-§r§4§l§n§oPlné§r§4§k- §r§c[-]
+
+option.DETAIL_QUALITY=Kvalita detailů
+option.DETAIL_QUALITY.comment=Upravuje mnoho malých věcí, které mají dopad na výkon. Mění kvalitu: Materiálu vody, TAA, vyladění osvětlení, Noční mlhoviny, Netherové bouře, odrazů efektů oblohy, přesnost dešťových kaluží, vlajících efektů, rozmazání pohybu, oprav odrazů, filtrování textur průsvitných objektů
+value.DETAIL_QUALITY.0=§aBrambora
+value.DETAIL_QUALITY.2=§eStřední
+value.DETAIL_QUALITY.3=§cVysoká
+value.DETAIL_QUALITY.4=§4§k-§r§4§l§n§oUltra§r§4§k-
+
+option.CLOUD_QUALITY=Kvalita mraků
+option.CLOUD_QUALITY.comment=Upravuje osvětlení, detaily a kvalitu vzorkování Reimagined/Unbound stylů mraků. §e[*]§r Toto nastavení funguje pouze s "Reimagined" nebo "Unbound" styly mraků.
+value.CLOUD_QUALITY.0=§aVYP
+value.CLOUD_QUALITY.1=§aNízká
+value.CLOUD_QUALITY.2=§eStřední
+value.CLOUD_QUALITY.3=§cVysoká
+
+option.FXAA_DEFINE=Anti-Aliasing (FXAA)
+option.FXAA_DEFINE.comment=Zapne Fast Approximate Anti-Aliasing (FXAA), což je v podstatě efekt, který vytváří hladší obraz.
+value.FXAA_DEFINE.-1=§aVYP
+value.FXAA_DEFINE.1=§eZAP
+
+option.SSAO_QUALI_DEFINE=Kvalita stínů na hranách (SSAO)
+option.SSAO_QUALI_DEFINE.comment=Upravuje kvalitu Screen-Space Ambient Occlusion (SSAO), tento efekt přidává stíny navíc ke hranám scény. Každý stupeň dále snižuje artefakty šumu SSAO.
+value.SSAO_QUALI_DEFINE.0=§aVYP
+value.SSAO_QUALI_DEFINE.2=§eStřední
+value.SSAO_QUALI_DEFINE.3=§cVysoká
+
+option.ANISOTROPIC_FILTER=Filtrování textur
+option.ANISOTROPIC_FILTER.comment=Zlepšuje kvalitu mipmapovaných textur pomocí Anisotropic Filtering. §e[*]§r Ujisti se, že nastavení grafiky "Úroveň mipmapy" je nastaveno na maximum (4), nebo nedostaneš dobré výsledky.
+value.ANISOTROPIC_FILTER.0=§aVYP
+value.ANISOTROPIC_FILTER.4=§e4x
+value.ANISOTROPIC_FILTER.8=§e8x
+value.ANISOTROPIC_FILTER.16=§4§l16x
+
+option.COLORED_LIGHTING=Pokročilé trasování barev (ACT) §e[*]§r
+option.COLORED_LIGHTING.comment=Funkce Complementary Shaders. Používá voxelizaci a záplavové osvětlení pro přidání barvy světlu bloků a zavedení některých nových světel. §e[*]§r Tato funkce funguje pouze na Iris a podporovaných platformách. §e[*]§r Toto nastavení bude zakázáno, pokud jsou vypnuté "Stíny v reálném čase". §a[+]§r Systém pokročilého trasování barev také zapíná některé jiné funkce, které můžeš jednotlivě zapnout/vyphout v nabídce "Ostatní" -> "Funkce ACT". §c[-]§r Vysoké hodnoty chunků pro tento efekt mají mnohem větší vliv na výkon, než je očekáváno, každé zvýšení může stát více než dvakrát více výkonu než předchozí úroveň. §c[-]§r Barevné osvětlení může způsobit lehké "prosakování" světla u neplných nebo modovaných bloků.
+value.COLORED_LIGHTING.0=§aVYP
+value.COLORED_LIGHTING.128=§c4 chunky
+value.COLORED_LIGHTING.192=§c6 chunků
+value.COLORED_LIGHTING.256=§4§l8 chunků
+value.COLORED_LIGHTING.384=§4§l12 chunků
+value.COLORED_LIGHTING.512=§4§l§n§o16 chunků
+value.COLORED_LIGHTING.768=§4§l§n§o24 chunků §r§c[-]
+value.COLORED_LIGHTING.1024=§4§k-§r§4§l§n§o32 chunků§r§4§k- §r§c[-]
+
+option.WORLD_SPACE_REFLECTIONS=Odrazy v prostoru světa (WSR) §e[*]§r
+option.WORLD_SPACE_REFLECTIONS.comment=Vypočítává odrazy v prostoru světa místo prostoru obrazovky. §c[-]§r Pravděpodobně nebude fungovat s modovanými bloky. §e[*]§r Tato funkce pouze funguje, když je zapnuto Pokročilé trasování barev v Nastavení výkonu a tvůj systém jej podporuje. §e[*]§r Maximální vzdálenost tohoto efektu závisí na vzdálenosti Pokročilého trasování barev, ale je z technických důvodů vnitřně limitováno na 16 chunků. §c[-]§r Tento efekt může mít vážný dopad na výkon, zejména s vyššími vzdálenostmi Pokročilého trasování barev. §c[-]§r Odrazy v prostoru světa mohou mít různé problémy s mody nebo balíčky modifikací.
+value.WORLD_SPACE_REFLECTIONS.-1=§aVYP
+value.WORLD_SPACE_REFLECTIONS.1=§4§l§n§oZAP
+
+option.WORLD_SPACE_REF_MODE=Režim WSR §e[*]§r
+option.WORLD_SPACE_REF_MODE.comment=Určuje způsob fungování odrazů v prostoru světa. §e[*]§r Režim "Pouze WSR" je dobrý pro eliminování artefaktů odrazů v prostoru obrazovky, protože ukazuje pouze odrazy v prostoru světa, ale režim "WSR + SSR" je lepší pro získání více detailů v odrazech, protože odrazy v prostoru obrazovky mají přístup ke všem detailům, které jsou na obrazovce, aniž by byly limitovány na bloky nebo na určitou vzdálenost.
+value.WORLD_SPACE_REF_MODE.1=Pouze WSR
+value.WORLD_SPACE_REF_MODE.2=WSR + SSR
+
+option.WORLD_SPACE_PLAYER_REF=WSR odrazy hráče
+option.WORLD_SPACE_PLAYER_REF.comment=Odráží model aktuálního hráče v odrazech v prostoru světa.
+value.WORLD_SPACE_PLAYER_REF.-1=VYP
+value.WORLD_SPACE_PLAYER_REF.1=ZAP
+
+option.SSAO_I=Intenzita stínů na hranách (SSAO)
+option.SSAO_I.comment=Určuje sílu Screen-Space Ambient Occlusion (SSAO), které přidává stíny navíc ke hranám scény. §e[*]§r Toto nastavení nefunguje, pokud je SSAO vypnuto v menu "Nastavení výkonu".
+value.SSAO_I.0=VYP
+
+option.VANILLAAO_I=Intenzita stínů na hranách (Vanilla)
+option.VANILLAAO_I.comment=Určuje sílu Ambient Occlusion Minecraftu, které přidává stíny navíc ke hranám scény.
+value.VANILLAAO_I.0=VYP
+
+option.BORDER_FOG=Mlha hranice
+option.BORDER_FOG.comment=Intenzivní mlha na okrajích načteného světa, aby se skryly hranice chunků. §e[*]§r Je doporučeno vypnout Mlhu hranice, když hraješ s dohledností menší než 8 chunků.
+
+option.ATM_FOG_MULT=Atmosférická mlha
+option.ATM_FOG_MULT.comment=Upravuje intenzitu mlhy založené na nadmořské výšce.
+value.ATM_FOG_MULT.0.50=Velmi jemná
+value.ATM_FOG_MULT.0.65=Jemná
+value.ATM_FOG_MULT.0.80=Normální
+value.ATM_FOG_MULT.0.95=Intenzivní
+
+option.ATM_FOG_DISTANCE=Vzdálenost atmosférické mlhy
+option.ATM_FOG_DISTANCE.comment=Upravuje vzdálenost od kamery, kde se začíná objevovat atmosférická mlha. §e[*]§r Měj na povědomí, že vzdálenost mlhy je také automaticky upravena nastavením Dohlednost v Nastavení grafiky.
+
+option.ATM_FOG_ALTITUDE=Výška atmosférické mlhy
+option.ATM_FOG_ALTITUDE.comment=Určuje nadmořskou výšku, kde se nejvýrazněji objevuje atmosférická mlha.
+
+option.CAVE_FOG=Mlha v jeskyních
+option.CAVE_FOG.comment=Přidává mlhu navíc v hlubokých podzemních oblastech.
+
+option.LIGHTSHAFT_BEHAVIOUR=Režim paprsků světla
+option.LIGHTSHAFT_BEHAVIOUR.comment=Určuje chování paprsků světla. §a[+]§r Režim Vědomý scény automaticky mění mezi normálním a extrémním režimem pro nejlepší výsledky. §c[-]§r Extrémní režim není doporučen pro obecné hraní a může mít závažný dopad na výkon.
+value.LIGHTSHAFT_BEHAVIOUR.0=VYP
+value.LIGHTSHAFT_BEHAVIOUR.1=Vědomý scény §a[+]
+value.LIGHTSHAFT_BEHAVIOUR.2=Normální
+value.LIGHTSHAFT_BEHAVIOUR.3=Extrémní §c[-]
+
+option.LIGHTSHAFT_SMOKE=§eKouř v paprscích světla§r
+option.LIGHTSHAFT_SMOKE.comment=Přidává volumetrický kouř k paprskům světla. §c[-]§r Tento efekt může mít vážný dopad na výkon.
+
+option.SPECIAL_PALE_GARDEN_LIGHTSHAFTS=Speciální paprsky v Bledé zahradě
+option.SPECIAL_PALE_GARDEN_LIGHTSHAFTS.comment=Dělá paprsky světla extra intenzivní v biomu "Bledá zahrada".
+
+option.LIGHTSHAFT_NOON_I=Násobič paprsků světla v poledne
+option.LIGHTSHAFT_SUNSET_I=Násobič paprsků světla při západu Slunce
+option.LIGHTSHAFT_NIGHT_I=Násobič paprsků světla v noci
+option.LIGHTSHAFT_RAIN_I=Násobič paprsků světla při dešti
+
+option.LIGHTSHAFT_SUNSET_SATURATION=Barva paprsků světla při západu Slunce
+option.LIGHTSHAFT_SUNSET_SATURATION.comment=Upravuje barvu přidávanou paprskům světla při východu a západu Slunce. Vyšší hodnoty změní barvu blíže k červené, zatímco nižší hodnoty blíže ke žluté.
+
+option.CLOUD_STYLE_DEFINE=Styl mraků
+option.CLOUD_STYLE_DEFINE.comment=Určuje styl mraků. §e[*]§r "Určen stylem" znamená, že toto nastavení bude automaticky určeno nastavením "Vizuální styl" v hlavní nabídce Nastavení shaderů. §e[*]§r Styl "Vanilla" vyžaduje, aby byly zapnuté mraky v Nastavení grafiky.
+value.CLOUD_STYLE_DEFINE.-1=Určen stylem
+value.CLOUD_STYLE_DEFINE.0=VYP
+value.CLOUD_STYLE_DEFINE.1=Reimagined
+value.CLOUD_STYLE_DEFINE.3=Unbound
+value.CLOUD_STYLE_DEFINE.50=Vanilla §e[*]
+
+option.CLOUD_SHADOWS=Stíny mraků
+option.CLOUD_SHADOWS.comment=Umožňuje mrakům, aby vrhaly stíny. §e[*]§r Toto nastavení pouze funguje se styly mraků "Reimagined" nebo "Unbound". §e[*]§r Stíny mraků budou náhodně generované, pokud je Styl mraků nastaven na "Unbound" kvůli dodatečné složitosti Unbound mraků.
+
+option.CLOUD_CLOSED_AREA_CHECK=Odstranit mraky v interiérech
+option.CLOUD_CLOSED_AREA_CHECK.comment=Dělá dodatečné kontroly pro odstranění mraků v uzavřených prostorech. §e[*]§r Toto nastavení pouze funguje se styly mraků "Reimagined" nebo "Unbound". §e[*]§r Toto nastavení je zakázané, pokud jsou vypnuty "Stíny v reálném čase".
+
+option.CLOUD_ALT1=Úroveň mraků §e[*]§r
+option.CLOUD_ALT1.comment=Určuje nadmořskou výšku, kde se objeví mraky. §e[*]§r Toto nastavení může být vnitřně zvýšeno nebo sníženo v závislosti na tvých nastaveních dimenze a modech. §e[*]§r Toto nastavení pouze funguje se styly mraků "Reimagined" nebo "Unbound".
+
+option.CLOUD_SPEED_MULT=Rychlost mraků
+option.CLOUD_SPEED_MULT.comment=Určuje, jak rychle se pohybují mraky. Nastavení "Synchronizována s časem světa" používá čas světa Minecraftu pro posunutí pozice mraků; to umožňuje mrakům, aby vypadaly stejně mezi hráči ve stejném serveru. §e[*]§r Toto nastavení pouze funguje se styly mraků "Reimagined" nebo "Unbound".
+value.CLOUD_SPEED_MULT.100=Synchronizována s časem světa
+
+option.CLOUD_R=Násobič červené barvy mraků
+option.CLOUD_G=Násobič zelené barvy mraků
+option.CLOUD_B=Násobič modré barvy mraků
+
+option.CLOUD_UNBOUND_AMOUNT=Množství mraků
+option.CLOUD_UNBOUND_AMOUNT.comment=Upravuje množství Unbound mraků.
+
+option.CLOUD_UNBOUND_SIZE_MULT=Malost mraků §c[-]§r
+option.CLOUD_UNBOUND_SIZE_MULT.comment=Upravuje velikost Unbound mraků. Vyšší hodnoty vytvářejí menší mraky. §c[-]§r Změna tohoto nastavení zakáže Complementary funkci synchronizace mraků mezi hráči ve stejném serveru.
+
+option.CLOUD_UNBOUND_RAIN_ADD=Přidání mraků při dešti
+option.CLOUD_UNBOUND_RAIN_ADD.comment=Upravuje, o kolik se zvětší množství mraků během deště/sněžení.
+prefix.CLOUD_UNBOUND_RAIN_ADD=+
+
+option.DOUBLE_REIM_CLOUDS=Dvojité Reimagined mraky
+option.DOUBLE_REIM_CLOUDS.comment=Zapíná druhou vrstvu Reimagined mraků. §e[*]§r Toto nastavení funguje pouze s "Reimagined" stylem mraků.
+
+option.CLOUD_ALT2=Výška druhé vrstvy mraků
+option.CLOUD_ALT2.comment=Určuje výšku ve světě, kde se objeví druhá vrstva mraků. §e[*]§r Toto nastavení pouze funguje, když je zapnuté nastavení "Dvojité Reimagined mraky" s "Reimagined" stylem mraků.
+
+option.NETHER_STORM=§eNetherová bouře§r
+option.NETHER_STORM.comment=Přidává volumetrický efekt podobný kouři do Nether dimenze. §c[-]§r Tento efekt může mít dopad na výkon.
+
+option.NETHER_STORM_I=Průhlednost Netherové bouře
+option.NETHER_STORM_I.comment=Upravuje průhlednost Netherové bouře.
+
+option.NETHER_STORM_LOWER_ALT=Spodní limit Netherové bouře
+option.NETHER_STORM_LOWER_ALT.comment=Určuje, od jakého bodu začíná Netherová bouře. Netherová bouře se neobjeví pod touto výškou a bude nejvíce jasná hned nad touto výškou.
+
+option.NETHER_STORM_HEIGHT=Výška Netherové bouře
+option.NETHER_STORM_HEIGHT.comment=Určuje, jak vysoká bude Netherová bouře. Snížením této hodnoty se stane, že se Netherová bouře bude shromážďovat blízko u "Spodního limitu Netherové bouře".
+
+option.NETHER_VIEW_LIMIT=§eLimit dohledu v Netheru§r
+option.NETHER_VIEW_LIMIT.comment=Určuje maximální vzdálenost, kam dovoluje mlha vidět v Netheru. §c[-]§r Zvýšení tohoto nastavení může mít dopad na výkon, když je zapnutá "Netherová bouře".
+value.NETHER_VIEW_LIMIT.96.0=6 Chunků
+value.NETHER_VIEW_LIMIT.112.0=7 Chunků
+value.NETHER_VIEW_LIMIT.128.0=8 Chunků
+value.NETHER_VIEW_LIMIT.160.0=10 Chunků
+value.NETHER_VIEW_LIMIT.192.0=12 Chunků
+value.NETHER_VIEW_LIMIT.224.0=14 Chunků
+value.NETHER_VIEW_LIMIT.256.0=16 Chunků
+value.NETHER_VIEW_LIMIT.320.0=20 Chunků
+value.NETHER_VIEW_LIMIT.384.0=24 Chunků
+value.NETHER_VIEW_LIMIT.512.0=32 Chunků §c[-]
+value.NETHER_VIEW_LIMIT.768.0=48 Chunků §c[-]
+value.NETHER_VIEW_LIMIT.1024.0=64 Chunků §c[-]
+value.NETHER_VIEW_LIMIT.99999.0=Bez limitu §c[-]
+
+option.NETHER_COLOR_MODE=Režim barev
+option.NETHER_COLOR_MODE.comment=Určuje, jak se bude zacházet s barvami prostředí v Netheru. Konstantní: Barvy se nebudou měnit mezi biomy. Založen na biomu: Barvy se budou měnit v závislosti na biomu. Založen na biomu (Upraven): Založen na biomu, ale barvy byly pozměněny, aby se lépe hodily k výchozímu vizuálnímu směru Complementary.
+value.NETHER_COLOR_MODE.3=Založen na biomu (Upraven)
+value.NETHER_COLOR_MODE.2=Založen na biomu
+value.NETHER_COLOR_MODE.0=Konstantní
+
+option.END_BEAM_INTENSITY=Intenzita Endových paprsků
+option.END_BEAM_INTENSITY.comment=Upravuje jas paprsků, které lze vidět v End dimenzi.
+
+option.END_STAR_INTENSITY=Intenzita hvězd v Endu
+option.END_STAR_INTENSITY.comment=Upravuje jas hvězd, které lze vidět v End dimenzi.
+
+option.END_FLASHES=Endové záblesky
+option.END_FLASHES.comment=Zapíná podporu pro funkci "Endových záblesků", která byla přidána v Minecraft verzi 1.21.9. Intenzita záblesků na obloze je přímo úměrná intenzitě Endových paprsků.
+
+option.END_BEAM_CENTER_ALT=Pozice středu Endových paprsků
+option.END_BEAM_CENTER_ALT.comment=Upravuje výšku na ose Y světa, kde budou Endové paprsky vycentrovány.
+
+option.END_BEAM_HEIGHT=Výška Endových paprsků
+option.END_BEAM_HEIGHT.comment=Upravuje fyzickou výšku Endových paprsků.
+
+option.TM_EXPOSURE=Celkový jas
+option.TM_EXPOSURE.comment=Také známý jako "Expozice tónové mapy" (Tonemap Exposure). Upravuje celkový jas celého obrazu.
+
+option.TM_WHITE_CURVE=Jas bílé barvy
+option.TM_WHITE_CURVE.comment=Také známý jako "Bílá křivka tónové mapy" (Tonemap White Curve). Upravuje, jak snadno barvy dosahují plné bílé.
+
+option.T_UPPER_CURVE=Kontrast světlejších barev
+option.T_UPPER_CURVE.comment=Také známý jako "Horní křivka tónové mapy" (Tonemap Upper Curve). Upravuje kontrast světlejších barev.
+
+option.T_LOWER_CURVE=Kontrast tmavších barev
+option.T_LOWER_CURVE.comment=Také známý jako "Spodní křivka tónové mapy" (Tonemap Lower Curve). Upravuje kontrast tmavších barev.
+
+option.TM_CONTRAST=Celkový kontrast
+option.TM_CONTRAST.comment=Upravuje tmavost tmavých barev a světlost světlých barev.
+
+option.T_SATURATION=Sytost
+option.T_SATURATION.comment=Upravuje celkovou barevnost obrazu.
+
+option.T_VIBRANCE=Sytost bledších barev
+option.T_VIBRANCE.comment=Také známa jako "Živost" (Vibrance). Upravuje barevnost obrazu, ale již barevné pixely jsou méně ovlivněné.
+
+option.TM_DARK_DESATURATION=Vyblednutí ve tmě
+option.TM_DARK_DESATURATION.comment=Upravuje množství vyblednutí barev, které je aplikované tmavším oblastem.
+
+option.TM_WHITE_PATH=Dosažitelnost bílé barvy
+option.TM_WHITE_PATH.comment=Upravuje, jak snadno světlejší barvy dosahují bílé.
+
+option.COLORGRADING=§eKorekce barev
+option.COLORGRADING.comment=Umožňuje volné míchání závěrečných barevných kanálů.
+option.GR_RR=Červená do červené
+option.GR_RG=Červená do zelené
+option.GR_RB=Červená do modré
+option.GR_RC=Křivka červené
+option.GR_GR=Zelená do červené
+option.GR_GG=Zelená do zelené
+option.GR_GB=Zelená do modré
+option.GR_GC=Křivka zelené
+option.GR_BR=Modrá do červené
+option.GR_BG=Modrá do zelené
+option.GR_BB=Modrá do modré
+option.GR_BC=Křivka modré
+
+option.WATER_STYLE_DEFINE=Styl vody
+option.WATER_STYLE_DEFINE.comment=Určuje styl vody. §e[*]§r "Určen stylem" znamená, že toto nastavení bude automaticky určeno nastavením "Vizuální styl" v hlavní nabídce Nastavení shaderů.
+value.WATER_STYLE_DEFINE.-1=Určen stylem
+value.WATER_STYLE_DEFINE.1=Reimagined
+value.WATER_STYLE_DEFINE.2=Reimagined s vlnami
+value.WATER_STYLE_DEFINE.3=Unbound
+
+option.WATER_CAUSTIC_STYLE_DEFINE=Styl kaustik vody
+option.WATER_CAUSTIC_STYLE_DEFINE.comment=Určuje styl stínů vody, také známých jako kaustiky vody.
+value.WATER_CAUSTIC_STYLE_DEFINE.-1=Stejný jako voda
+value.WATER_CAUSTIC_STYLE_DEFINE.1=Reimagined
+value.WATER_CAUSTIC_STYLE_DEFINE.3=Unbound
+
+option.WATER_REFRACTION_INTENSITY=Intenzita lomu světla vody §e[*]§r
+option.WATER_REFRACTION_INTENSITY.comment=Upravuje intenzitu lomu světla vody a zkreslení pod vodou. §e[*]§r Toto nastavení pouze plně funguje, když je Kvalita detailů nastavena na "Vysoká", jinak to bude pouze ovlivňovat jemné zkreslení pod vodou.
+
+option.WATER_FOAM_I=Intenzita vodní pěny
+option.WATER_FOAM_I.comment=Určuje průhlednost pěny viditelné na okrajích vody. §e[*]§r Toto nastavení pouze funguje, když je Kvalita detailů nastavena na Střední nebo vyšší.
+
+option.WATER_ALPHA_MULT=Faktor průhlednosti vody
+option.WATER_ALPHA_MULT.comment=Upravuje, jak průhledná vypadá voda. §c[-]§r Extrémní hodnoty rozbijí rovnováhu osvětlení vody. §e[*]§r Toto nastavení pouze funguje, když je Kvalita detailů nastavena na Střední nebo vyšší.
+
+option.WATER_FOG_MULT=Faktor mlhy ve vodě
+option.WATER_FOG_MULT.comment=Upravuje, jak blízko se objevuje mlha ve vodě. Vyšší hodnoty poskytují bližší mlhu. §c[-]§r Extrémní hodnoty rozbijí rovnováhu osvětlení vody.
+
+option.WATERCOLOR_R=Násobič červené barvy hladiny vody
+option.WATERCOLOR_G=Násobič zelené barvy hladiny vody
+option.WATERCOLOR_B=Násobič modré barvy hladiny vody
+
+option.WATERCOLOR_MODE=Režim barev
+option.WATERCOLOR_MODE.comment=Určuje, jak bude zacházeno s barvou vody. Konstantní: barvy vody se nebudou měnit mezi biomy. Založen na biomu: barvy se mění podle biomu. Založen na biomu (Omezený): Založen na biomu, ale zabraňuje barvě hladiny vody před tím, aby byla v některých biomech divná. §e[*]§r Toto nastavení nefunguje správně na verzích Minecraftu pod 1.13.
+value.WATERCOLOR_MODE.3=Založen na biomu (Omezený)
+value.WATERCOLOR_MODE.2=Založen na biomu
+value.WATERCOLOR_MODE.0=Konstantní
+
+option.BRIGHT_CAVE_WATER=Světlejší mělká/jeskynní voda
+option.BRIGHT_CAVE_WATER.comment=Dělá mělkou vodu a vodu v uzavřených oblastech světlejší pro zlepšení viditelnosti v jeskyních a přidání trochu detailů k barvě mělčích částí oceánů. §e[*]§r Z technických důvodů nebude tento efekt fungovat, pokud je Faktor průhlednosti vody nastaven na více než 199.
+
+option.UNDERWATERCOLOR_R=Násobič červené barvy pod vodou
+option.UNDERWATERCOLOR_G=Násobič zelené barvy pod vodou
+option.UNDERWATERCOLOR_B=Násobič modré barvy pod vodou
+
+option.WATER_BUMPINESS=Síla vln
+option.WATER_BUMPINESS.comment=Upravuje intenzitu vln (normál) na hladině vody.
+
+option.WATER_BUMP_SMALL=Síla vln - Malé vlny
+option.WATER_BUMP_SMALL.comment=Upravuje intenzitu vln, které jsou menší než ostatní.
+
+option.WATER_BUMP_MED=Síla vln - Střední vlny
+option.WATER_BUMP_MED.comment=Upravuje intenzitu vln, které jsou průměrně velké oproti ostatním.
+
+option.WATER_BUMP_BIG=Síla vln - Velké vlny
+option.WATER_BUMP_BIG.comment=Upravuje intenzitu vln, které jsou větší než ostatní.
+
+option.WATER_SPEED_MULT=Rychlost vln
+option.WATER_SPEED_MULT.comment=Upravuje rychlost pohybu vln (normál) na hladině vody.
+
+option.WATER_SIZE_MULT=Velikost vln
+option.WATER_SIZE_MULT.comment=Upravuje, jak velké jsou vlny (normály) na hladině vody.
+
+option.SUN_ANGLE=Úhel Slunce/Měsíce
+option.SUN_ANGLE.comment=Upravuje úhel Slunce/Měsíce vzhledem ke světu během poledne. §a[+]§r Model osvětlení Reimagined je navržen, aby úhel "0" fungoval stejně dobře jako ostatní.
+value.SUN_ANGLE.-1=Určen stylem
+value.SUN_ANGLE.0=0 §r(§bReimagined§r)
+value.SUN_ANGLE.-40=-40 §r(§dUnbound§r)
+
+option.SUN_MOON_STYLE_DEFINE=Styl Slunce/Měsíce
+option.SUN_MOON_STYLE_DEFINE.comment=Určuje styl Slunce/Měsíce. §e[*]§r Toto nastavení může špatně interagovat s některými balíčky modifikací kvůli limitacím s odlišením Slunce/Měsíce/Skyboxu.
+value.SUN_MOON_STYLE_DEFINE.-1=Určen stylem
+value.SUN_MOON_STYLE_DEFINE.1=Reimagined
+value.SUN_MOON_STYLE_DEFINE.2=Unbound
+value.SUN_MOON_STYLE_DEFINE.3=Unbound - menší
+
+option.SUN_MOON_HORIZON=Horizont Slunce/Měsíce
+option.SUN_MOON_HORIZON.comment=Zabrání Slunci/Měsíci před objevením se pod linií horizontu.
+
+option.SUN_MOON_DURING_RAIN=Slunce/Měsíc během deště. §e[*]§r
+option.SUN_MOON_DURING_RAIN.comment=Určuje, jestli budou Slunce a Měsíc viditelné během deště. §e[*]§r Toto nastavení také mění rovnováhu osvětlení během deště.
+
+option.IMPROVED_RAIN_DEFINE=Vylepšené textury počasí
+option.IMPROVED_RAIN_DEFINE.comment=Umožňuje lepší zacházení s texturami počasí, které poskytuje lepší barvy a také opravuje chybu Minecraftu, kde se déšť/sníh neobjevuje za barevným nebo pozměněným sklem.
+value.IMPROVED_RAIN_DEFINE.0=VYP
+value.IMPROVED_RAIN_DEFINE.1=ZAP
+
+option.NIGHT_STAR_AMOUNT=Množství hvězd v noci
+option.NIGHT_STAR_AMOUNT.comment=Určuje množství hvězd na noční obloze.
+value.NIGHT_STAR_AMOUNT.0=Vyp
+value.NIGHT_STAR_AMOUNT.1=Nízké
+value.NIGHT_STAR_AMOUNT.2=Střední
+value.NIGHT_STAR_AMOUNT.3=Vysoké
+value.NIGHT_STAR_AMOUNT.4=Velmi vysoké
+
+option.RAINBOWS=Duhy
+option.RAINBOWS.comment=Zapíná duhy, které se objevují na opačné straně Slunce během rána/večera.
+value.RAINBOWS.0=VYP
+value.RAINBOWS.1=Po dešti
+value.RAINBOWS.3=Vždy
+
+option.RAINBOW_STYLE_DEFINE=Styl duhy
+option.RAINBOW_STYLE_DEFINE.comment=Určuje styl duh. §e[*]§r "Určen stylem" znamená, že toto nastavení bude automaticky určeno nastavením "Vizuální styl" v hlavní nabídce Nastavení shaderů.
+value.RAINBOW_STYLE_DEFINE.-1=Určen stylem
+value.RAINBOW_STYLE_DEFINE.1=Reimagined
+value.RAINBOW_STYLE_DEFINE.4=Unbound
+
+option.AURORA_STYLE_DEFINE=Styl polární záře
+option.AURORA_STYLE_DEFINE.comment=Určuje styl polární záře, která se objevuje na noční obloze.
+value.AURORA_STYLE_DEFINE.-1=Určen stylem
+value.AURORA_STYLE_DEFINE.0=VYP
+value.AURORA_STYLE_DEFINE.1=Reimagined
+value.AURORA_STYLE_DEFINE.2=Unbound
+
+option.AURORA_CONDITION=Podmínka záře
+option.AURORA_CONDITION.comment=Nastavení Podmínka polární záře určuje podmínku/y pro objevení polární záře. §e[*]§r Polární záře se objeví jenom v noci bez ohledu na tomto nastavení
+value.AURORA_CONDITION.-1=Vždy kromě nového Měsíce
+value.AURORA_CONDITION.0=Každou noc
+value.AURORA_CONDITION.1=Úplněk
+value.AURORA_CONDITION.2=Sněžný biom
+value.AURORA_CONDITION.3=Úplněk v sněžném biomu
+value.AURORA_CONDITION.4=Úplněk nebo sněžný biom
+
+option.NIGHT_NEBULAE=§eNoční mlhoviny§r
+option.NIGHT_NEBULAE.comment=Přidá mlhoviny ve stylu galaxií k noční obloze. Tyto mlhoviny jsou procedurálně generované a budou vypadat jinak každou noc. §c[-]§r Tento efekt může mít dopad na výkonu.
+value.NIGHT_NEBULAE.-1=VYP
+value.NIGHT_NEBULAE.1=§eZAP
+
+option.NIGHT_NEBULA_I=Jas nočních mlhovin
+option.NIGHT_NEBULA_I.comment=Upravuje jas nočních mlhovin.
+
+option.RAIN_STYLE=Styl deštivého počasí
+option.RAIN_STYLE.comment=Určuje styl deštivého počasí.
+value.RAIN_STYLE.1=Lehký a teplejší
+value.RAIN_STYLE.2=Těžký a chladnější
+
+option.SPECIAL_BIOME_WEATHER=Zvláštní studené/suché počasí
+option.SPECIAL_BIOME_WEATHER.comment=Mění rovnováhu atmosféry ve studených a suchých biomech, aby to vypadalo jako sněhová nebo písečná bouře.
+
+option.WEATHER_TEX_OPACITY=Průhlednost textur počasí
+option.WEATHER_TEX_OPACITY.comment=Upravuje průhlednost textur pršení/sněžení.
+
+option.SHADOW_SMOOTHING=§eVyhlazování stínů§r
+option.SHADOW_SMOOTHING.comment=Určuje ostrost stínů. §c[-]§r Snížení tohoto nastavení zvětší blikání stínů a ovlivní výkon. §e[*]§r Toto nastavení pouze funguje když je nastavení "Stíny v reálném čase" nastaveno na Nízké nebo vyšší.
+value.SHADOW_SMOOTHING.4=§aVelmi hladké
+value.SHADOW_SMOOTHING.3=§aHladké
+value.SHADOW_SMOOTHING.2=§cOstré [-]
+value.SHADOW_SMOOTHING.1=§cVelmi ostré [-]
+
+option.PIXELATED_SHADOWS=Pixelované stíny
+option.PIXELATED_SHADOWS.comment=Dělá stíny vržené Sluncem a Měsícem pixelované.
+
+option.PIXELATED_BLOCKLIGHT=Pixelované světlo bloků
+option.PIXELATED_BLOCKLIGHT.comment=Dělá světlo vržené bloky pixelované.
+
+option.PIXELATED_AO=Pixelované stíny na hranách
+option.PIXELATED_AO.comment=Dělá Ambient Occlusion Minecraftu pixelované.
+
+option.PIXEL_SCALE=Měřítko pixelování
+option.PIXEL_SCALE.comment=Škálování dělané na rozlišení textur.
+value.PIXEL_SCALE.-2=0.25x
+value.PIXEL_SCALE.-1=0.5x
+value.PIXEL_SCALE.1=1x
+value.PIXEL_SCALE.2=2x
+value.PIXEL_SCALE.3=4x
+value.PIXEL_SCALE.4=8x
+value.PIXEL_SCALE.5=16x
+
+option.BLOOM_ENABLED=§eRozmazání světla§r
+option.BLOOM_ENABLED.comment=Zapíná rozmazanou záři (Bloom) ze světlých objektů a vlhkosti. §c[-]§r Tento efekt může mít dopad na výkon.
+value.BLOOM_ENABLED.-1=VYP
+value.BLOOM_ENABLED.1=§eZAP
+
+option.BLOOM_STRENGTH=Síla rozmazání
+option.BLOOM_STRENGTH.comment=Určuje intenzitu záře na světlých věcech a rozmazání z vlhkosti deště/jeskyní. §c[-]§r Moc velká hodnota může způsobit moc rozmazaný a jasný obraz, zejména ve vlhkých podmínkách.
+value.BLOOM_STRENGTH.0.027=15%
+value.BLOOM_STRENGTH.0.036=20%
+value.BLOOM_STRENGTH.0.045=25%
+value.BLOOM_STRENGTH.0.054=30%
+value.BLOOM_STRENGTH.0.063=35%
+value.BLOOM_STRENGTH.0.072=40%
+value.BLOOM_STRENGTH.0.081=45%
+value.BLOOM_STRENGTH.0.09=50%
+value.BLOOM_STRENGTH.0.10=55%
+value.BLOOM_STRENGTH.0.11=60%
+value.BLOOM_STRENGTH.0.12=65%
+value.BLOOM_STRENGTH.0.13=70%
+value.BLOOM_STRENGTH.0.14=75%
+value.BLOOM_STRENGTH.0.15=80% §c[-]
+value.BLOOM_STRENGTH.0.16=85% §c[-]
+value.BLOOM_STRENGTH.0.17=90% §c[-]
+value.BLOOM_STRENGTH.0.18=95% §c[-]
+value.BLOOM_STRENGTH.0.19=100% §c[-]
+value.BLOOM_STRENGTH.0.21=110% §c[-]
+value.BLOOM_STRENGTH.0.23=120% §c[-]
+value.BLOOM_STRENGTH.0.25=130% §c[-]
+value.BLOOM_STRENGTH.0.28=150% §c[-]
+value.BLOOM_STRENGTH.0.32=180% §c[-]
+value.BLOOM_STRENGTH.10.00=§cŠílená
+
+option.IMAGE_SHARPENING=Ostření obrazu
+option.IMAGE_SHARPENING.comment=Dělá obraz ostřejší použitím filtru. §c[-]§r Až moc ostření může způsobit vizuální artefakty jako aliasing, blikání, šum a jemné změny jasu.
+value.IMAGE_SHARPENING.0=VYP
+value.IMAGE_SHARPENING.1=1x
+value.IMAGE_SHARPENING.2=2x
+value.IMAGE_SHARPENING.3=3x
+value.IMAGE_SHARPENING.4=4x
+value.IMAGE_SHARPENING.5=5x
+value.IMAGE_SHARPENING.6=6x §c[-]
+value.IMAGE_SHARPENING.7=7x §c[-]
+value.IMAGE_SHARPENING.8=8x §c[-]
+value.IMAGE_SHARPENING.9=9x §c[-]
+value.IMAGE_SHARPENING.10=10x §c[-]
+
+option.LENSFLARE_MODE=§eOdlesky na kameře§r
+option.LENSFLARE_MODE.comment=Přidá odlesky od Slunce nebo Měsíce na kameře. §c[-]§r Tento efekt může mít vážný dopad na výkon.
+value.LENSFLARE_MODE.0=VYP
+value.LENSFLARE_MODE.1=§cPouze Slunce - Kruh
+value.LENSFLARE_MODE.2=§cSlunce a Měsíc - Kruh
+value.LENSFLARE_MODE.3=§cPouze Slunce - Čtverec
+value.LENSFLARE_MODE.4=§cSlunce a Měsíc - Čtverec
+
+option.LENSFLARE_I=Intenzita odlesků
+option.LENSFLARE_I.comment=Upravuje sílu efektu odlesků na kameře.
+
+option.TAA_DEFINE=§eTemporální filtrování§r
+option.TAA_DEFINE.comment=Zapíná temporální anti aliasing, což pomáhá vyhladit zrnité efekty, vylepšuje výkon snížením počtu vzorků nějakých těžších efektů a může se správnými nastaveními zmenšit aliasing. §c[-]§r: Vypnutí tohoto nastavení způsobí horší výkon a horší kvalitu efektů, ale může také zlepšit výkon v kombinaci s velmi nízkým nastavením shaderu.
+value.TAA_DEFINE.-1=§Určeno KD
+value.TAA_DEFINE.0=§cVYP [-]
+value.TAA_DEFINE.1=ZAP §a[+]
+
+option.TAA_SMOOTHING=Temporální vyhlazování
+option.TAA_SMOOTHING.comment=Upravuje množství vyhlazování, které použije Temporální filtr. Vyšší hodnoty vytvoří rozmazanější obraz, ale zmenší blikání a zrnění. Rozdíl není patrný, když stojíš na místě.
+value.TAA_SMOOTHING.2=Nízké
+value.TAA_SMOOTHING.3=Střední
+value.TAA_SMOOTHING.4=Vysoké
+
+option.TAA_JITTER=Temporální třesení §e[*]§r
+option.TAA_JITTER.comment=Třesení (jittering) pomáhá Temporálnímu filtru, aby lépe dělal anti-aliasing, ale má nějaké nevýhody. §e[*]§r Vyšší hodnoty zlepší anti-aliasing, ale také způsobí hodně blikání a rozmazání zároveň. §e[*]§r Vysoké Temporální vyhlazování je doporučeno s Plným třesením. §c[-]§r Vypnutí třesení odstraní výhody anti-aliasingu.
+value.TAA_JITTER.0=VYP §c[-]
+value.TAA_JITTER.1=Nízké
+value.TAA_JITTER.2=Střední
+value.TAA_JITTER.3=Plné §e[*]
+
+option.TAA_MOVEMENT_IMPROVEMENT_FILTER=Catmull-Rom vzorkování
+option.TAA_MOVEMENT_IMPROVEMENT_FILTER.comment=Snižuje rozmazání Temporálního filtru použitím pokročilejší metody vzorkování.
+value.TAA_MOVEMENT_IMPROVEMENT_FILTER.0=VYP §c[-]
+value.TAA_MOVEMENT_IMPROVEMENT_FILTER.1=ZAP
+
+option.FXAA_STRENGTH=Síla FXAA
+option.FXAA_STRENGTH.comment=Upravuje intenzitu efektu FXAA. Vyšší hodnoty poskytují lepší anti-aliasing za ceny rozmazanějšího obrazu.
+value.FXAA_STRENGTH.-1=VYP
+
+option.FXAA_TAA_INTERACTION=Snížit FXAA při pohybu
+option.FXAA_TAA_INTERACTION.comment=Snižuje sílu FXAA, když se kamera pohybuje. Vyšší hodnoty vytvářejí ostřejší obraz ale také více blikání.
+value.FXAA_TAA_INTERACTION.0=VYP
+value.FXAA_TAA_INTERACTION.2=20
+value.FXAA_TAA_INTERACTION.4=40
+value.FXAA_TAA_INTERACTION.6=60
+value.FXAA_TAA_INTERACTION.8=80
+value.FXAA_TAA_INTERACTION.10=100
+
+option.DISTANT_LIGHT_BOKEH=Bokeh vzdáleného světla
+option.DISTANT_LIGHT_BOKEH.comment=Dělá, že vzdálené zdroje světla vypadají rozptýlené uplatněním rozmazání jednoho pixelu v dálce. §a[+]§r Tento efekt je lepší s IntegrovanýmPBR+ (volitelné), protože upravuje vzdálené zdroje světla pro lepší vzhled.
+
+option.MOTION_BLUR_EFFECT=§eRozmazání pohybu§r
+option.MOTION_BLUR_EFFECT.comment=Přidává k obrazu rozmazání, když se kamera pohybuje. §c[-]§r Tento efekt může mít dopad na výkon.
+value.MOTION_BLUR_EFFECT.-1=VYP
+value.MOTION_BLUR_EFFECT.1=§eZAP
+
+option.MOTION_BLURRING_STRENGTH=Síla rozmazání pohybu
+option.MOTION_BLURRING_STRENGTH.comment=Upravuje intenzitu rozmazání pohybu.
+
+option.WORLD_BLUR=§eRozostření světa§r
+option.WORLD_BLUR.comment=Zapíná rozostření světa. Vzdálenost: Rozmazání se chová jako mlha, je přidáno podle vzdálenosti od kamery. Hloubka ostrosti: Rozmazání je založeno na bodu zaměření kamery. §c[-]§r Tento efekt může mít vážný dopad na výkon.
+value.WORLD_BLUR.0=§aVYP
+value.WORLD_BLUR.1=§cVzdálenost
+value.WORLD_BLUR.2=§cHloubka ostrosti
+
+option.WB_FOV_SCALED=Rozmazání škálované zorným polem
+option.WB_FOV_SCALED.comment=Škáluje Rozmazání světa s šíří zorného pole kamery. Při menším zorném poli bude rozmazání více intenzivní.
+
+option.WB_CHROMATIC=Chromatické rozostření
+option.WB_CHROMATIC.comment=Přidává chromatickou aberaci k rozmazaným oblastem, což v těchto oblastech odděluje jiné barvy od sebe.
+
+option.WB_ANAMORPHIC=Anamorfické rozostření
+option.WB_ANAMORPHIC.comment=Roztahuje rozmazání v jednom směru. §c[-]§r Toto nastavení může snížit kvalitu Rozostření světa
+
+option.WB_DOF_I=Síla Hloubky ostrosti
+option.WB_DOF_FOCUS=Zaměření Hloubky ostrosti
+option.WB_DOF_FOCUS.comment=Určuje vzdálenost zaostření kamery. Automatické: Bod zaměření bude změněn podle středu obrazovky. Jas: Bod zaměření bude určen nastavením "Jas" v Nastaveních grafiky.
+value.WB_DOF_FOCUS.-1=Jas §e[*]
+value.WB_DOF_FOCUS.0=Automatické
+
+option.WB_DB_DAY_I=Roz. vzd. - Den
+option.WB_DB_NIGHT_I=Roz. vzd. - Noc a interiéry
+option.WB_DB_RAIN_I=Roz. vzd. - Déšť a sníh
+option.WB_DB_WATER_I=Roz. vzd. - Pod vodou
+option.WB_DB_NETHER_I=Roz. vzd. - Nether
+option.WB_DB_END_I=Roz. vzd. - End
+
+option.VIGNETTE_R=Viněta
+option.VIGNETTE_R.comment=Přidává ztmavení kolem okrajů obrazovky.
+
+option.CHROMA_ABERRATION=Chromatická aberace
+option.CHROMA_ABERRATION.comment=Odděluje od sebe jiné barvy kolem okrajů obrazovky. §c[-]§r Chromatická aberace může způsobit, že se obraz zdá rozmazaně; vysoké hodnoty nejsou doporučené pro hraní.
+value.CHROMA_ABERRATION.4=4 §c[-]
+value.CHROMA_ABERRATION.5=5 §c[-]
+value.CHROMA_ABERRATION.6=6 §c[-]
+value.CHROMA_ABERRATION.7=7 §c[-]
+value.CHROMA_ABERRATION.8=8 §c[-]
+
+option.IPBR_EMISSIVE_MODE=Režim svícení IPBR+
+option.IPBR_EMISSIVE_MODE.comment=Určuje zacházení se svítícími texturami v IntegrovanémPBR+. Vybrání možností labPBR nebo seuspbr umožní kompatibilním balíčkům modifikací přepsat IPBR+ svítící textury, když je balíček modifikací má. §c[-]§r Není doporučeno měnit toto nastavení, pokud nevíš, co děláš.
+value.IPBR_EMISSIVE_MODE.1=Pouze IPBR+
+value.IPBR_EMISSIVE_MODE.3=labPBR > IPBR+
+value.IPBR_EMISSIVE_MODE.2=seuspbr > IPBR+
+
+option.IPBR_COMPAT_MODE_DEFINE=Režim kompatibility IPBR+
+option.IPBR_COMPAT_MODE_DEFINE.comment=Mění, jak jsou některé funkce IPBR+ vypočítané, aby byly méně agresivní a způsobovaly méně problémů s balíčky modifikací nebo mody.
+
+option.IPBR_PARTICLE_FEATURES=Funkce částic IPBR+
+option.IPBR_PARTICLE_FEATURES.comment=Zapíná různé funkce pro částice jako například svítící částice lávy nebo lépe zbarvené částice vody.
+
+option.FANCY_GLASS=Vylepšené sklo §c[-]§r
+option.FANCY_GLASS.comment=Vylepšuje normální sklo tím, že k němu přidá průhlednou vrstvu. §c[-]§r Nefunguje na starších verzích Iris. §e[*]§r Podpora textur musí být nastavena na Integrované PBR+.
+
+option.GREEN_SCREEN_LIME=Světle zelené bloky jako pozadí
+option.GREEN_SCREEN_LIME.comment=Mění "Světle zelený beton", "Světle zelená vlna" a "Světle zelený koberec" na zelené pozadí pro editování videa. Tip 1: Vypni "Rozmazání světla" pro zlepšení oddělení. Tip 2: Dej světla pod světle zelené koberce pro osvětlení. Tip 3: Můžeš vypnout Anti-Aliasing (FXAA) a nastavit Kvalitu detailů na Brambora v menu Nastavení výkonu pro vypnutí všeho filtrování a získání dokonalého oddělení na úrovni pixelů.
+
+option.MIRROR_TINTED_GLASS=Kouřové sklo jako zrcadlo
+option.MIRROR_TINTED_GLASS.comment=Zvyšuje odrážlivost a neprůhlednost bloků Kouřového skla. Zapni Odrazy v prostoru světa pro nejlepší výsledky. §c[-]§r Není doporučeno používat 100% zrcadlo při obecném hraní, protože dělá mnoho problémů s odrazy velmi viditelnými.
+value.MIRROR_TINTED_GLASS.0=VYP
+value.MIRROR_TINTED_GLASS.35=35% zrcadlo
+value.MIRROR_TINTED_GLASS.70=70% zrcadlo
+value.MIRROR_TINTED_GLASS.100=100% zrcadlo §c[-]
+
+option.MORE_REFLECTIVE_DISTANT_GLASS=Více odrážlivé sklo v dálce
+option.MORE_REFLECTIVE_DISTANT_GLASS.comment=Zvyšuje odrážlivost a neprůhlednost skla v dálce, aby budovy s okny ze skla vypadaly lépe.
+
+option.HIDE_ARMOR=Skrýt zbroj §e[*]§r
+option.HIDE_ARMOR.comment=Skryje zbroj a krovky, které nosí hráč nebo všechny entity. Krovky jsou pouze ukázány při létání. §e[*]§r Toto nastavení pouze funguje na Iris. §e[*]§r Možnost "Na hlavním hráči" může vypadat ošklivě, když se jiné entity se zbrojí přiblíží velmi blízo k hlavnímu hráči.
+value.HIDE_ARMOR.0=VYP
+value.HIDE_ARMOR.1=Na hlavním hráči §e[*]§r
+value.HIDE_ARMOR.2=Na všech entitách
+
+option.HAND_SWAYING=Houpání ruky
+option.HAND_SWAYING.comment=Přidává pomalý pohyb k ruce hráče, který vypadá jako dýchání.
+value.HAND_SWAYING.0=VYP
+value.HAND_SWAYING.1=Jemné
+value.HAND_SWAYING.2=Normální
+value.HAND_SWAYING.3=Intenzivní
+
+option.LESS_LAVA_FOG=Méně mlhy v lávě nebo sněhu
+option.LESS_LAVA_FOG.comment=Snižuje mlhu v lávě a prašanu pro zlepšení viditelnosti v nich.
+
+option.REDUCE_CLOSE_PARTICLES=Snížit blízké částice
+option.REDUCE_CLOSE_PARTICLES.comment=Snižuje průhlednost částic blízkých ke kameře pro zlepšení viditelnosti.
+
+option.SNOWY_WORLD=Zasněžený svět
+option.SNOWY_WORLD.comment=Pokryje celý svět sněhem.
+
+option.SHOW_LIGHT_LEVEL=Ukázat úrovně světla
+option.SHOW_LIGHT_LEVEL.comment=V Overwoldu: Žlutá znamená, že se monstra mohou objevit v noci, červená znamená, že se mohou objevit kdykoliv. V Netheru nebo Endu: Žlutá znamená, že se některá monstra mohou objevit, červená znamená, že se mohou objevit všechna monstra. §e[*]§r Vypni Vyhlazené stíny pro přesné výsledky.
+value.SHOW_LIGHT_LEVEL.0=VYP
+value.SHOW_LIGHT_LEVEL.1=Drž Pavoučí oko
+value.SHOW_LIGHT_LEVEL.2=Drž zdroj světla
+value.SHOW_LIGHT_LEVEL.3=Vždy ZAP
+
+option.COLOR_CODED_PROGRAMS=Barevně odlišené programy §c[-]§r
+option.COLOR_CODED_PROGRAMS.comment=Ukáže, které programy shaderu jsou používány pro vykreslování geometrie. §c[-]§r Tato možnost je určena pouze pro vývojové účely a neměla by být používána při hře. §e[*]§r Hodnoty barev jsou v souborech shaderu: shaders/lib/misc/colorCodedPrograms.glsl
+
+option.GLOWING_COLORED_PARTICLES=Vynutit svítící částice §c[-]§r
+option.GLOWING_COLORED_PARTICLES.comment=Dělá, že všechny částice, které jsou technicky vzato "zbarvené", budou svítit. §c[-]§r Toto nastavení není doporučeno pro hraní, protože pak bude svítit mnoho částic, které jsou z materiálů, které by vůbec neměly svítit.
+
+option.CAVE_LIGHTING=Násobič osvětlení v jeskyních
+option.CAVE_LIGHTING.comment=Přidává osvětlení navíc k oblastem, které nejsou pod oblohou. §e[*]§r Osvětlení jeskyní je také ovlivněno nastavením "Jas" v Nastavení grafiky. §c[-]§r Drastické změny tohoto nastavení můžou rozbít rovnováhu osvětlení.
+
+option.AMBIENT_MULT=Násobič jasnosti stínů
+option.AMBIENT_MULT.comment=Určuje množství okolního světla ve stínech. §c[-]§r Drastické změny tohoto nastavení můžou rozbít rovnováhu osvětlení.
+
+option.PLAYER_SHADOW=Stín hráče §e[*]§r
+option.PLAYER_SHADOW.comment=Určuje, jestli bude hráč vrhat stín. §e[*]§r Toto nastavení plně funguje pouze na Iris. §e[*]§r Toto nastavení bude zakázáno, pokud jsou "Stíny v reálném čase" vypnuty.
+value.PLAYER_SHADOW.-1=VYP
+value.PLAYER_SHADOW.1=ZAP
+
+option.LEAF_SHADOW_OPTIMISATION_DEFINE=§eOptimalizace stínů na listí§r
+option.LEAF_SHADOW_OPTIMISATION_DEFINE.comment=Zakáže stíny listí a lián v tmavších oblastech pro zlepšení výkonu. §c[-]§r Hlavní nevýhodou této optimalizace je, že pokazí osvětlení s některými balíčky modifikací, které přidávají vylepšené listí. §e[*]§r "Určena KD" znamená, že toto nastavení je určeno nastavením "Kvalita detailů" v Nastavení výkonu, pokud jej nezměníš.
+value.LEAF_SHADOW_OPTIMISATION_DEFINE.-1=§aUrčena KD
+value.LEAF_SHADOW_OPTIMISATION_DEFINE.0=§cVYP
+value.LEAF_SHADOW_OPTIMISATION_DEFINE.1=§aZAP
+
+option.SKY_EFFECT_REFLECTION_DEFINE=§eOdrazy efektů oblohy§r
+option.SKY_EFFECT_REFLECTION_DEFINE.comment=Umožňuje odrazům, aby se v nich objevovaly efekty oblohy jako třeba mraky, hvězdy nebo polární záře. Možnost "ZAP - voda" zapne efekty oblohy na odrazech vody a průhledných objektů, zatímco "ZAP - plné" je také zapne na odrazech bloků. §e[*]§r "Určeno KD" znamená, že toto nastavení je určeno nastavením "Kvalita detailů" v Nastavení výkonu, pokud jej nezměníš.
+value.SKY_EFFECT_REFLECTION_DEFINE.-1=§aUrčeno KD
+value.SKY_EFFECT_REFLECTION_DEFINE.0=§aVYP
+value.SKY_EFFECT_REFLECTION_DEFINE.1=§cZAP - voda
+value.SKY_EFFECT_REFLECTION_DEFINE.2=§4§l§n§oZAP - plné
+
+option.GENERATED_NORMALS=Generované normály
+option.GENERATED_NORMALS.comment=Přidává automaticky generované nerovnosti ke všem povrchům. §e[*]§r Podpora textur musí být nastavena na Integrované PBR+. §e[*]§r Může vypadat divně s některými balíčky modifikací nebo mody, které mají textury s nestandardními rozlišeními.
+
+option.COATED_TEXTURES=Pokryté textury
+option.COATED_TEXTURES.comment=Přidává k texturám automaticky generovaný "prach". §e[*]§r Podpora textur musí být nastavena na Integrované PBR+. §e[*]§r Může vypadat divně s některými balíčky modifikací nebo mody, které mají textury s nestandardními rozlišeními.
+
+option.ENTITY_GN_AND_CT=Povolit GN a PT na entitách
+option.ENTITY_GN_AND_CT.comment=Určuje, jestli se můžou na entitách objevovat Generované normály a Pokryté textury. §e[*]§r Toto nastavení nepovolí GN ani PT na entitách, pokud nejsou zapnutá hlavní nastavení GN nebo PT.
+
+option.GENERATED_NORMAL_MULT=Síla generovaných normál
+option.GENERATED_NORMAL_MULT.comment=Upravuje sílu automaticky generovaných nerovností na površích.
+
+option.GENERATED_NORMAL_RES=Rozlišení gemerovaných normál
+option.GENERATED_NORMAL_RES.comment=Upravuje rozlišení/velikost automaticky generovaných nerovností na površích. §e[*]§r Měj na povědomí, že rozlišení GN také závisí na rozlišení každé textury, což znamená, že balíčky modifikací nebo mody mohou pokazit rozlišení GN na různých blocích.
+
+option.GENERATED_NORMAL_ENTITY_MULT=Gen. normály na entitách
+option.GENERATED_NORMAL_ENTITY_MULT.comment=Upravuje sílu automaticky generovaných nerovností na entitách.
+value.GENERATED_NORMAL_ENTITY_MULT.0=Výchozí
+
+option.COATED_TEXTURE_MULT=Síla pokrytých textur
+option.COATED_TEXTURE_MULT.comment=Upravuje sílu automaticky generovaného "prachu" na texturách.
+
+option.GLOWING_ORE_MASTER=§eZapnout svítící rudy
+option.GLOWING_ORE_MASTER.comment=Zapíná funkčnost svítících rud. §e[*]§r Možnost "Určeno stylem" zapne svítící rudy pouze, pokud je "Vizuální styl" nastaven na "Unbound". §e[*]§r Nastavení níže nebudou fungovat, pokud není toto nastavení zapnuté.
+value.GLOWING_ORE_MASTER.0=VYP
+value.GLOWING_ORE_MASTER.1=Určeno stylem
+value.GLOWING_ORE_MASTER.2=§aZAP
+
+option.GLOWING_ORE_MULT=Síla svitu rud
+option.GLOWING_ORE_MULT.comment=Určuje sílu svícení svítících rud.
+
+option.GLOWING_ORE_IRON=Svítící Železná ruda
+option.GLOWING_ORE_GOLD=Svítící Zlatá ruda
+option.GLOWING_ORE_COPPER=Svítící Měděná ruda
+option.GLOWING_ORE_REDSTONE=Svítící Redstonové ložisko §e[*]§r
+option.GLOWING_ORE_REDSTONE.comment=§e[*]§r Všechna redstonová ložiska budou svítit když jsou "aktivovaná" bez ohledu na tomto nastavení.
+option.GLOWING_ORE_LAPIS=Svítící Ložisko lazuritu
+option.GLOWING_ORE_EMERALD=Svítící Smaragdové ložisko
+option.GLOWING_ORE_DIAMOND=Svítící Diamantové ložisko
+option.GLOWING_ORE_NETHERQUARTZ=Svítící Ložisko netherového křemene
+option.GLOWING_ORE_NETHERGOLD=Svítící Netherová zlatá ruda
+option.GLOWING_ORE_GILDEDBLACKSTONE=Svítící Zlatonosný černokámen
+option.GLOWING_ORE_ANCIENTDEBRIS=Svítící Prastará suť
+option.GLOWING_ORE_MODDED=Svítící Modované rudy §e[*]§r
+option.GLOWING_ORE_MODDED.comment=§e[*]§r Můžeš přidat ID modovaných rud do souboru "Complementary-->shaders-->block.properties", aby svítily. block.properties můžeš otevřít jakýmkoliv textovým editorem jako například Poznámkový blok a pak přidat ID modovaných bloků rud vedle "block.10024=".
+
+option.GLOWING_AMETHYST=Svítící ametyst
+value.GLOWING_AMETHYST.0=VYP
+value.GLOWING_AMETHYST.1=Krystal
+value.GLOWING_AMETHYST.2=Krystal a blok
+
+option.GLOWING_LICHEN=Svítící Světélkující lišejník
+value.GLOWING_LICHEN.0=VYP
+value.GLOWING_LICHEN.1=V uzavřených oblastech
+value.GLOWING_LICHEN.2=Vždy
+
+option.EMISSIVE_REDSTONE_BLOCK=Svítící Redstonový blok
+
+option.EMISSIVE_LAPIS_BLOCK=Svítící Blok lazuritu
+
+option.GLOWING_ARMOR_TRIM=Svítící Ornament zbroje §e[*]§r
+option.GLOWING_ARMOR_TRIM.comment=Dělá, že ornamenty zbroje svítí. §e[*]§r Tato funkce funguje pouze na Iris, protože Optifine nepodporuje detekci ornamentů zbroje.
+
+option.NORMAL_MAP_STRENGTH=Síla normálové mapy
+option.NORMAL_MAP_STRENGTH.comment=Upravuje sílu nerovností na površích. §e[*]§r Podpora textur musí být nastavena na labPBR/seuspbr a musí být použit kompatibilní balíček modifikací.
+
+option.CUSTOM_EMISSION_INTENSITY=Intenzita vlastního svícení
+option.CUSTOM_EMISSION_INTENSITY.comment=Upravuje intenzitu svícení svítících povrchů. §e[*]§r Podpora textur musí být nastavena na labPBR/seuspbr a musí být použit kompatibilní balíček modifikací.
+
+option.POM=§eMapování paralaxní okluze§r
+option.POM.comment=Zapíná 3D efekt na površích. §c[-]§r Tento efekt může mít vážný dopad na výkon. §e[*]§r Podpora textur musí být nastavena na labPBR/seuspbr a musí být použit kompatibilní balíček modifikací.
+value.POM.false=VYP
+value.POM.true=ZAP §c[-]
+
+option.POM_DEPTH=Hloubka MPO
+option.POM_DEPTH.comment=Upravuje hloubku mapování paralaxní okluze. §e[*]§r Podpora textur musí být nastavena na labPBR/seuspbr a musí být použit kompatibilní balíček modifikací.
+
+option.POM_QUALITY=§eKvalita MPO§r
+option.POM_QUALITY.comment=Upravuje ostrost/přesnost mapování paralaxní okluze. §c[-]§r Hodnoty vyšší než 200 mohou mít vážný dopad na výkon. §e[*]§r Hodnoty nižší než 100 vynutí, že "Režim osvětlení MPO" bude "Hladký". §e[*]§r Podpora textur musí být nastavena na labPBR/seuspbr a musí být použit kompatibilní balíček modifikací.
+value.POM_QUALITY.16=16 §e[*]
+value.POM_QUALITY.32=32 §e[*]
+value.POM_QUALITY.64=64 §e[*]
+value.POM_QUALITY.256=256 §c[-]
+value.POM_QUALITY.512=512 §c[-]
+
+option.POM_DISTANCE=§eVzdálenost MPO§r
+option.POM_DISTANCE.comment=Upravuje, jak daleko bude vypočítáváno mapování paralaxní okluze. §e[*]§r Je doporučeno nechat tuto hodnotu pod 50 pro malé zlepšení výkonu. §e[*]§r Podpora textur musí být nastavena na labPBR/seuspbr a musí být použit kompatibilní balíček modifikací.
+value.POM_DISTANCE.64=64 §e[*]
+value.POM_DISTANCE.128=128 §e[*]
+value.POM_DISTANCE.256=256 §e[*]
+value.POM_DISTANCE.512=512 §e[*]
+value.POM_DISTANCE.1024=1024 §e[*]
+
+option.POM_LIGHTING_MODE=Režim osvětlení MPO
+option.POM_LIGHTING_MODE.comment=Upravuje styl osvětlení povrchů ovlivněných MPO. Ostrý: Stěny MPO nedostanou světlo, pokud nejsou obráceny ke světlu. Hladký: Stěny MPO pořád dostanou světlo, jako by nebyly stěny. §e[*]§r Toto nastavení je vynuceno na "Hladký", pokud je kvalita MPO nastavena na méně než 100.
+value.POM_LIGHTING_MODE.1=Hladký
+value.POM_LIGHTING_MODE.2=Ostrý
+
+option.POM_ALLOW_CUTOUT=§eMPO na "vyřezaných" texturách §c[-]§r
+option.POM_ALLOW_CUTOUT.comment=Umožňuje, aby MPO fungovalo na "vyřezaných" částech bloků (jako třeba mezery listů). §c[-]§r Tento efekt může mít vážný dopad na výkon.
+
+option.DIRECTIONAL_BLOCKLIGHT=§eSměrové světlo bloků§r
+option.DIRECTIONAL_BLOCKLIGHT.comment=Přidává hloubku k světlu bloků v závislosi na normále povrchu. §c[-]§r Může v některých situacích způsobit vizuální artefakty. §c[-]§r Tento efekt může mít dopad na výkon. §e[*]§r Podpora textur musí být nastavena na labPBR/seuspbr a musí být použit kompatibilní balíček modifikací.
+value.DIRECTIONAL_BLOCKLIGHT.0=VYP
+value.DIRECTIONAL_BLOCKLIGHT.3=Jemné §c[-]
+value.DIRECTIONAL_BLOCKLIGHT.7=Normální §c[-]
+value.DIRECTIONAL_BLOCKLIGHT.11=Intenzivní §c[-]
+
+option.HELD_LIGHTING_MODE=Dynamické světlo v ruce
+option.HELD_LIGHTING_MODE.comment=Umožňuje zdrojům světla, aby vyplňovaly prostředí světlem, když je držíš v ruce.
+value.HELD_LIGHTING_MODE.0=VYP
+value.HELD_LIGHTING_MODE.1=Jemné
+value.HELD_LIGHTING_MODE.2=Normální
+
+option.BLOCKLIGHT_FLICKERING=Blikání světla bloků
+option.BLOCKLIGHT_FLICKERING.comment=Přidává efekt blikání k světlu vydávanému bloky.
+value.BLOCKLIGHT_FLICKERING.0=VYP
+
+option.WAVING_SPEED=Rychlost vlání
+option.WAVING_SPEED.comment=Upravuje, jak rychle se dějí efekty vlání.
+
+option.WAVING_I=Intenzita vlání
+option.WAVING_I.comment=Upravuje, jak moc se bloky hýbají, když vlají. §c[-]§r Moc vysoké hodnoty mohou způsobit, že se vlající bloky budou překrývat s jinými bloky.
+value.WAVING_I.1.25=1.25 §c[-]
+value.WAVING_I.1.50=1.50 §c[-]
+value.WAVING_I.1.75=1.75 §c[-]
+value.WAVING_I.2.00=2.00 §c[-]
+value.WAVING_I.50.0=§cŠílená
+
+option.NO_WAVING_INDOORS=Žádné vlání v uzavřených prostorech
+option.NO_WAVING_INDOORS.comment=Zabraňuje blokům před vláním v uzavřených prostorech použitím přístupu k obloze. §c[-]§r Zapnutí tohoto nastavení může způsobovat problémy s některými balíčky modifikací nebo mody.
+
+option.WAVING_I_RAIN_MULT=§eNásobič vlání při dešti§r
+option.WAVING_I_RAIN_MULT.comment=Násobí rychlost a intenzitu vlání během deště. §c[-]§r Moc vysoké hodnoty mohou způsobit, že se vlající bloky budou překrývat s jinými bloky. §c[-]§r Toto nastavení může mít dopad na výkon, když je zvýšeno nad 100.
+value.WAVING_I.125=125 §c[-]
+value.WAVING_I.150=150 §c[-]
+value.WAVING_I.175=175 §c[-]
+value.WAVING_I.200=200 §c[-]
+
+option.WAVING_FOLIAGE=Vlající tráva
+option.WAVING_FOLIAGE.comment=Přidává pohyb k trávě a jiné podobné zeleni pro napodobení větru.
+
+option.WAVING_LEAVES=Vlající listy
+option.WAVING_LEAVES.comment=Přidává pohyb k listům pro napodobení větru.
+
+option.WAVING_LAVA=Vlnící se textura lávy
+option.WAVING_LAVA.comment=Přidává stálý pohyb k lávě. §e[*]§r Vlnění lávy není ovlivněno nastavením "Žádné vlání v uzavřených prostorech".
+
+option.WAVING_LILY_PAD=Vlnící se lekníny §c[-]§r
+option.WAVING_LILY_PAD.comment=Přidává pohyb k leknínům a žabím vajíčkům pro napodobení dopadu z vln vody. §c[-]§r Toto způsobuje, že lekníny na blocích s vodou budou neviditelné
+
+option.WAVING_WATER_VERTEX=Vlnící se výška vody
+option.WAVING_WATER_VERTEX.comment=Přidává pohyb k poloze vody pro napodobení větru. §e[*]§r Toto nastavení nesouvisí s nastavením "Síla vln vody".
+
+option.WAVING_RAIN=Vlající textura deště/sněhu
+option.WAVING_RAIN.comment=Přidává pohyb k texturám padajícího deště a sněhu, aby vypadaly více dynamicky.
+
+option.SPECIAL_PORTAL_EFFECTS=Speciální efekty portálů
+option.SPECIAL_PORTAL_EFFECTS.comment=Přidává speciální animace a osvětlení k Netherovým a Endovým portálům a k Endovým branám.
+
+option.REFLECTION_RES=§eRozlišení odrazů§r
+option.REFLECTION_RES.comment=Mění rozlišení PBR odrazů na blocích (a odrazů v prostoru světa, pokud máš toto nastavení zapnuté) pro zlepšení výkonu. §c[-]§r "Plné" rozlišení odrazů může mít v některých situacích mnohem větší dopad na výkon, než je očekáváno. §e[*]§r Tato funkce nefunguje na Optifinu.
+value.REFLECTION_RES.1.0=§4§l§n§oPlné
+value.REFLECTION_RES.0.5=§aPoloviční
+
+option.WORLD_OUTLINE=§eObrys světa§r
+option.WORLD_OUTLINE.comment=Přidává jasné obrysy okolo bloků. §c[-]§r Tento efekt může mít dopad na výkon.
+
+option.WORLD_OUTLINE_THICKNESS=§eTloušťka Obrysu světa§r
+option.WORLD_OUTLINE_THICKNESS.comment=Určuje tloušťku efektu Obrysu světa. §c[-]§r Zvýšení tohoto nastavení může mít dopad na výkon.
+
+option.WORLD_OUTLINE_I=Jas Obrysu světa
+option.WORLD_OUTLINE_I.comment=Určuje, jak intenzivní bude efekt Obrysu světa.
+
+option.WORLD_OUTLINE_ON_ENTITIES=Obrys světa na entitách
+option.WORLD_OUTLINE_ON_ENTITIES.comment=Určuje, jestli se efekt Obrysu světa bude vztahovat na entity. §c[-]§r Toto nastavení nemusí dokonale fungovat s některými PBR balíčky modifikací.
+
+option.WORLD_OUTLINE_SCALED=Obrys světa škálovaný vzdáleností
+option.WORLD_OUTLINE_SCALED.comment=Velikost obrysu světa se bude měnit podle vzdálenosti.
+
+option.DARK_OUTLINE=§eTmavý obrys§r
+option.DARK_OUTLINE.comment=Přidává tmavé obrysy okolo bloků. §c[-]§r Tento efekt může mít dopad na výkon.
+
+option.DARK_OUTLINE_THICKNESS=§eTloušťka Tmavého obrysu§r
+option.DARK_OUTLINE_THICKNESS.comment=Určuje tloušťku efektu Tmavého obrysu. §c[-]§r Zvýšení tohoto nastavení může mít dopad na výkon.
+
+option.RAIN_PUDDLES=Dešťové kaluže
+option.RAIN_PUDDLES.comment=Přidává kaluže vody k terénu během deště. §e[*]§r Nastavení "Kvalita odrazů bloků" musí být zapnuto, aby tento efekt fungoval. §e[*]§r Dešťové kaluže mají problém, že se mohou objevit v interiérech, pokud je střecha ze skla, ale tento problém je vyřešen systémem "Pokročilé trasování barev", když je toto nastavení povoleno.
+value.RAIN_PUDDLES.0=§aVYP
+value.RAIN_PUDDLES.1=§cKaluže při dešti
+value.RAIN_PUDDLES.2=§cPlné pokrytí při dešti
+value.RAIN_PUDDLES.3=§cVždy kaluže
+value.RAIN_PUDDLES.4=§cVždy plné pokrytí
+
+option.UNDERWATER_DISTORTION=Podvodní zkreslení
+option.UNDERWATER_DISTORTION.comment=Přidává jemný lom světla k obrazovce, když je kamera ve vodě.
+
+option.SELECT_OUTLINE=Obrys výběru
+option.SELECT_OUTLINE.comment=Určuje barvu obrysu vybraného bloku.
+value.SELECT_OUTLINE.0=VYP
+value.SELECT_OUTLINE.1=Výchozí
+value.SELECT_OUTLINE.2=Duhový
+value.SELECT_OUTLINE.3=Vybraná barva
+value.SELECT_OUTLINE.4=Různý
+
+option.SELECT_OUTLINE_AUTO_HIDE=Automaticky skrýt Obrys výběru
+option.SELECT_OUTLINE_AUTO_HIDE.comment=Skryje obrys vybraného bloku, když hráč nedrží nic ve své dominantní ruce.
+
+option.SELECT_OUTLINE_I=Jas Obrysu výběru
+option.SELECT_OUTLINE_R=OV červená
+option.SELECT_OUTLINE_G=OV zelená
+option.SELECT_OUTLINE_B=OV modrá
+
+option.MOON_PHASE_INF_LIGHT=Noční osvětlení dle fáze Měsíce
+option.MOON_PHASE_INF_LIGHT.comment=Umožňuje jiným fázím Měsíce, aby měnily jas osvětlení v noci.
+
+option.MOON_PHASE_INF_ATMOSPHERE=Noční atmosféra dle fáze Měsíce
+option.MOON_PHASE_INF_ATMOSPHERE.comment=Umožňuje jiným fázím Měsíce, aby měnily jas atmosféry v noci.
+
+option.MOON_PHASE_INF_REFLECTION=Odraz Měsíce dle fáze Měsíce
+option.MOON_PHASE_INF_REFLECTION.comment=Umožňuje jiným fázím měsíce, aby měnily jas odrazů Měsíce.
+
+option.MOON_PHASE_FULL=Intenzita úplňku
+option.MOON_PHASE_FULL.comment=Upravuje vliv fáze Měsíce během úplňku (nejjasnější fáze).
+
+option.MOON_PHASE_PARTIAL=Intenzita částečného Měsíce
+option.MOON_PHASE_PARTIAL.comment=Upravuje vliv fáze Měsíce během všech fází Měsíce mezi úplňkem a novem. Toto je fáze, kterou v Minecraftu uvidíš nejčastěji.
+
+option.MOON_PHASE_DARK=Intenzita novu
+option.MOON_PHASE_DARK.comment=Upravuje vliv fáze Měsíce během novu (nejtmavější fáze).
+
+option.CONNECTED_GLASS_EFFECT=Propojené sklo
+option.CONNECTED_GLASS_EFFECT.comment=Spojuje mezi sebou všechny typy skla. §e[*]§r Tato funkce pouze funguje, pokud je zapnuté Pokročilé trasování barev v Nastavení výkonu a tvůj systém jej podporuje. §e[*]§r Tato funkce se automaticky vypne, když je nainstalován mod "Continuity".
+
+option.PORTAL_EDGE_EFFECT=Svítící hrany portálů
+option.PORTAL_EDGE_EFFECT.comment=Přidává svítící efekt k hranám Endových a Netherových portálů. §e[*]§r Tato funkce pouze funguje, pokud je zapnuté Pokročilé trasování barev v Nastavení výkonu a tvůj systém jej podporuje.
+
+option.PUDDLE_VOXELIZATION=Opravit kaluže pod sklem
+option.PUDDLE_VOXELIZATION.comment=Zabraňuje vytváření dešťových kaluží v uzavřených prostorech se skleněnými střechami, když je povoleno nastavení Dešťových kaluží. §e[*]§r Tato funkce pouze funguje, pokud je zapnuté Pokročilé trasování barev a Kvalita detailů je nastavena na Vysokou nebo vyšší.
+
+option.COLORED_CANDLE_LIGHT=Zbarvené světlo svíček
+option.COLORED_CANDLE_LIGHT.comment=Světla vrhaná svíčkami budou mít stejnou barvu, jako jejich podstavy. §e[*]§r Svíčky bez zabarvené podstavy budou pořád používat barvu ohně.
+
+option.COLORED_LIGHT_SATURATION=Sytost barevného osvětlení
+option.COLORED_LIGHT_SATURATION.comment=Upravuje, jak syté budou barvy vytvořené Pokročilým trasováním barev včetně loučí. §e[*]§r Není doporučeno měnit tuto hodnotu, protože celkový vzhled je navržen, aby vypadal nejvíce vyrovnaně s výchozí sytostí.
+
+option.ACT_FIRE_COLOR_WARMNESS=Teplota barvy loučí/ohně
+option.ACT_FIRE_COLOR_WARMNESS.comment=Upravuje teplotu barev světla loučí/ohně/luceren, když je zapnuto Pokročilé trasování světel. Měj na povědomí, že tato barva je také ovlivněna nastavením "Sytost barevného osvětlení". §e[*]§r Není doporučeno měnit tuto hodnotu o více než malé množství, protože celkový vzhled je navržen, aby vypadal nejvíce vyrovnaně s výchozí úrovní.
+value.ACT_FIRE_COLOR_WARMNESS.100=Normální
+
+option.COLORED_LIGHT_FOG=§eMlha barevného světla§r
+option.COLORED_LIGHT_FOG.comment=Přidává volumetrickou mlhu k světle bloků, nejvíce je viditelná v noci nebo pod zemí. §e[*]§r Tato funkce pouze funguje, pokud je zapnuté Pokročilé trasování barev v Nastavení výkonu a tvůj systém jej podporuje. §c[-]§r Tento efekt může mít vážný dopad na výkon.
+
+option.COLORED_LIGHT_FOG_I=Intenzita mlhy světla
+option.COLORED_LIGHT_FOG_I.comment=Určuje jas Mlhy barevného světla.
+
+option.LIGHT_COLOR_MULTS=§eNásobiče barev osvětlení
+option.LIGHT_COLOR_MULTS.comment=Umožňuje přizpůsobení barev osvětlení, které jsou viditelné na všech površích.
+
+option.ATM_COLOR_MULTS=§eNásobiče barev atmosféry
+option.ATM_COLOR_MULTS.comment=Umožňuje přizpůsobení barev atmosféry, které jsou hlavně vidět na obloze a mlze.
+
+option.LIGHT_MORNING_R=Násobič červené barvy osvětlení
+option.LIGHT_MORNING_G=Násobič zelené barvy osvětlení
+option.LIGHT_MORNING_B=Násobič modré barvy osvětlení
+option.LIGHT_MORNING_I=Násobič intenzity osvětlení
+option.ATM_MORNING_R=Násobič červené barvy atmosféry
+option.ATM_MORNING_G=Násobič zelené barvy atmosféry
+option.ATM_MORNING_B=Násobič modré barvy atmosféry
+option.ATM_MORNING_I=Násobič intenzity atmosféry
+option.LIGHT_NOON_R=Násobič červené barvy osvětlení
+option.LIGHT_NOON_G=Násobič zelené barvy osvětlení
+option.LIGHT_NOON_B=Násobič modré barvy osvětlení
+option.LIGHT_NOON_I=Násobič intenzity osvětlení
+option.ATM_NOON_R=Násobič červené barvy atmosféry
+option.ATM_NOON_G=Násobič zelené barvy atmosféry
+option.ATM_NOON_B=Násobič modré barvy atmosféry
+option.ATM_NOON_I=Násobič intenzity atmosféry
+option.LIGHT_NIGHT_R=Násobič červené barvy osvětlení
+option.LIGHT_NIGHT_G=Násobič zelené barvy osvětlení
+option.LIGHT_NIGHT_B=Násobič modré barvy osvětlení
+option.LIGHT_NIGHT_I=Násobič intenzity osvětlení
+option.ATM_NIGHT_R=Násobič červené barvy atmosféry
+option.ATM_NIGHT_G=Násobič zelené barvy atmosféry
+option.ATM_NIGHT_B=Násobič modré barvy atmosféry
+option.ATM_NIGHT_I=Násobič intenzity atmosféry
+option.LIGHT_RAIN_R=Násobič červené barvy osvětlení
+option.LIGHT_RAIN_G=Násobič zelené barvy osvětlení
+option.LIGHT_RAIN_B=Násobič modré barvy osvětlení
+option.LIGHT_RAIN_I=Násobič intenzity osvětlení
+option.ATM_RAIN_R=Násobič červené barvy atmosféry
+option.ATM_RAIN_G=Násobič zelené barvy atmosféry
+option.ATM_RAIN_B=Násobič modré barvy atmosféry
+option.ATM_RAIN_I=Násobič intenzity atmosféry
+option.LIGHT_NETHER_R=Násobič červené barvy osvětlení
+option.LIGHT_NETHER_G=Násobič zelené barvy osvětlení
+option.LIGHT_NETHER_B=Násobič modré barvy osvětlení
+option.LIGHT_NETHER_I=Násobič intenzity osvětlení
+option.ATM_NETHER_R=Násobič červené barvy atmosféry
+option.ATM_NETHER_G=Násobič zelené barvy atmosféry
+option.ATM_NETHER_B=Násobič modré barvy atmosféry
+option.ATM_NETHER_I=Násobič intenzity atmosféry
+option.LIGHT_END_R=Násobič červené barvy osvětlení
+option.LIGHT_END_G=Násobič zelené barvy osvětlení
+option.LIGHT_END_B=Násobič modré barvy osvětlení
+option.LIGHT_END_I=Násobič intenzity osvětlení
+option.ATM_END_R=Násobič červené barvy atmosféry
+option.ATM_END_G=Násobič zelené barvy atmosféry
+option.ATM_END_B=Násobič modré barvy atmosféry
+option.ATM_END_I=Násobič intenzity atmosféry
+
+option.XLIGHT_R=Násobič červené barvy světla bloků
+option.XLIGHT_G=Násobič zelené barvy světla bloků
+option.XLIGHT_B=Násobič modré barvy světla bloků
+option.XLIGHT_I=Intenzita světla bloků
+
+option.XLIGHT_CURVE=Kontrast světla bloků
+option.XLIGHT_CURVE.comment=Upravuje, jak rychle slábne intenzita světla bloku, když se oddaluje od zdroje světla.
+
+
+####### Euphoria Patches #######
+profile2.DEFAULT=§bVizuální nastavení:§r Výchozí
+profile2.SPACEAGLE17=§f۞ §kO§fDEBUG (Nepoužívat)§f§kO
+profile2.POPULAR=§bVizuální nastavení: §dPopulární
+profile2.comment=Toto jsou předvolby profilu pro Euphoria Patches. §c[-] VAROVÁNÍ:§r Použití může změnit mnoho různých nastavení a dokonce i rozbít tvoje vlastní.\n\n• Výchozí nastavení jsou výchozí nastavení shaderu Complementary.\n\n• §bPopulární §dNastavení§r je předvolba, která má zapnutá některá z nejpopulárnějších nastavení Euphoria Patches a Complementary.\n\n• Profil Debug je používán pro účely testování a není určen pro běžné uživatele.
+
+#WATERMARK
+option.WATERMARK=Complementary
+option.WATERMARK.comment=Euphoria Patches je tvorba lásky, péče a frustrace, má za cíl co nejlépe doplňovat unikátní zážitek Minecraftu a zároveň přidávat k úžasnému shaderu Complementary. Prosím, neváhej se připojit k milé komunitě Complementary zde: www.complementary.dev/discord. Vodoznak od Elysia
+value.WATERMARK.0=& §dEuphoria §rPatches
+value.WATERMARK.1=& §cE§6u§ep§aho§br§9i§da §rPatches
+value.WATERMARK.2=& §cE§6u§ep§aho§br§9i§da §rPatches - Skryté GUI
+value.WATERMARK.3=a Skryté GUI a drž Pavoučí oko
+value.WATERMARK.4=Černobílý
+option.WATERMARK_SIZE=Velikost vodoznaku
+
+screen.EUPHORIA_SETTINGS=§dKonfigurace Euphoria Patches >
+screen.EUPHORIA_SETTINGS.comment=Nastavení přidaná Euphoria Patches. §bMůžeš podpořit SpacEagle17 na Patreonu nebo Ko-Fi a získat nové exkluzivní vývojové verze. §r§d§l§neuphoriapatches.com/support
+
+screen.ATMOSPHERE=Atmosféra
+screen.ATMOSPHERE.comment=Nastavení týkající se atmosféry.
+screen.CLOUDS=Mraky
+screen.CLOUD_REIMAGINED_SETTINGS_EUPHORIA=Reimagined mraky
+screen.CLOUD_REIMAGINED_SECOND_LAYER_SETTINGS=Druhá vrstva mraků
+screen.CLOUD_UNBOUND_SETTINGS_EUPHORIA=Unbound mraky
+screen.DOUBLE_UNBOUND_CLOUDS_SETTINGS=Dvojité Unbound mraky
+screen.CLOUD_SHADING_SETTINGS=Stínování mraků
+screen.AURORA_SETTINGS=Polární záře
+screen.AURORA_SETTINGS.comment=Nastavení týkající se polární záře.
+screen.AURORA_INFLUENCE_SETTINGS=Vliv polární záře
+screen.AURORA_COLOR_SETTINGS=Barvy polární záře
+screen.AURORA_COLOR_SETTINGS.comment=Nastavení týkající se barvy polární záře.
+screen.END_SKY=Obloha Endu
+screen.END_SKY.comment=Nastavení týkající se oblohy Endu.
+screen.END_BEAMS_SETTINGS=Nastavení Endových paprsků
+screen.END_BEAMS_SETTINGS.comment=Nastavení týkající se Endových paprsků
+screen.END_BEAMS_COLOR_SETTINGS=Barvy Endových paprsků
+screen.END_BEAMS_COLOR_SETTINGS.comment=Nastavení týkající se barvy Endových paprsků.
+screen.END_BEAMS_FLASH_SETTINGS=Nastavení Endových záblesků
+screen.END_BEAMS_FLASH_SETTINGS.comment=Nastavení týkající se Endových paprsků, když se dějí Endové záblesky. Funguje pouze na Minecraft verzi 1.21.9 nebo vyšší.
+screen.END_STAR=Nastavení hvězd v Endu
+screen.END_STAR.comment=Nastavení týkající se hvězd v Endu.
+screen.BLACK_HOLE_SETTINGS=Nastavení Černé díry
+screen.BLACK_HOLE_POSITION_SETTINGS=Pozice Černé díry
+screen.END_NEBULA_SETTINGS=Nastavení Endové mlhoviny
+screen.FIXED_POSITION_BLACK_HOLE_SETTINGS=Pevná poloha
+screen.MOVING_POSITION_BLACK_HOLE_SETTINGS=Pomalu se pohybující
+screen.STAR_COLORS_END=Barvy hvězd v Endu
+screen.STARS_OVERWORLD=Hvězdy
+screen.SHOOTING_STARS_SETTINGS=Padající hvězdy
+screen.STAR_COLORS_OW=Barvy hvězd
+screen.RAIN_SETTINGS=Nastavení deště
+screen.NIGHT_DESATURATION_SETTINGS=Vyblednutí ve tmě
+screen.MOON_PHASED_DESATURATION_SETTINGS=Vyblednutí v noci dle fáze Měsíce
+screen.MOON_PHASED_DESATURATION_SETTINGS.comment=Upravuje množství vyblednutí podle aktuální fáze Měsíce.
+screen.NIGHT_NEBULA_SETTINGS=Noční mlhovina
+screen.NIGHT_NEBULA_COLOR_SETTINGS=Nastavení barev
+screen.NEBULA_STAR_SETTINGS=Nastavení hvězd v mlhovinách
+
+screen.WORLD=Svět
+screen.WORLD.comment=Nastavení týkající se světa.
+screen.BLOOD_MOON_SETTINGS=Nastavení krvavého Měsíce
+screen.OVERWORLD_WORLD=Overworld
+screen.OVERWORLD_BEAM=Paprsky v Overworldu
+screen.OVERWORLD_BEAM.comment=Nastavení týkající se Paprsků v Overworldu
+screen.FOG=Mlha
+screen.FOG.comment=Nastavení týkající se mlhy.
+screen.FOG_CAVE=Mlha v jeskyních
+screen.FOG_CAVE.comment=Nastavení týkající se mlhy v jeskyních.
+screen.FOG_ATMOSPHERIC=Atmosférická mlha
+screen.FOG_ATMOSPHERIC.comment=Nastavení týkající se atmosférické mlhy.
+screen.FOG_BORDER_OVERWORLD=Mlha hranice
+screen.FOG_BORDER_OVERWORLD.comment=Nastavení týkající se mlhy hranice.
+screen.COLORED_LIGHT_FOG_SETTINGS=Mlha barevného světla
+screen.COLORED_LIGHT_FOG_SETTINGS.comment=Nastavení týkající se mlhy barevného světla.
+screen.SEASON=Roční období
+screen.WINTER=Nastavení Zimy
+screen.AUTUMN=Nastavení Podzimu
+screen.SPRING=Nastavení Jara
+screen.SUMMER=Nastavení Léta
+screen.NETHER_WORLD=Nether
+screen.FOG_BORDER_NETHER=Mlha hranice
+screen.FOG_BORDER_NETHER.comment=Nastavení týkající se mlhy hranice.
+screen.HEAT_DISTORTION_SETTINGS=Tepelné zkreslení
+screen.HEAT_DISTORTION_SETTINGS.comment=Nastavení týkající se tepelného zkreslení.
+screen.END_WORLD=End
+screen.END_VOLUMETRIC_SETTINGS=Volumetrické efekty v Endu
+screen.END_AMBIENT=Atmosféra Endu
+screen.FOG_BORDER_END=Mlha hranice
+screen.FOG_BORDER_END.comment=Nastavení týkající se mlhy hranice.
+screen.END_CENTER_LIGHTING_SETTINGS=Osvětlení středu Endu
+screen.LIGHT_SETTINGS=Nastavení světla
+screen.BLOCKLIGHT=Nastavení světla bloků
+screen.BLOCKLIGHT.comment=Nastavení týkající se barvy světla bloků.
+screen.COLORED_LIGHT=Barevné osvětlení
+screen.SSBL_SETTINGS=Barevné osvětlení v prostoru obrazovky (SSBL)
+screen.ACT_SETTINGS=Pokročilé trasování barev
+screen.LIGHTMAP_CURVES_SETTINGS=Křivky světelné mapy
+screen.OVERLAY_NOISE=Textury pokryté šumem
+screen.MOSS_NOISE_SETTINGS=Nastavení pokrytí mechem
+screen.SAND_NOISE_SETTINGS=Nastavení pokrytí pískem
+
+screen.MATERIALS=Materiály
+screen.MATERIALS.comment=Nastavení týkající se materiálů.
+screen.EMISSIVE_MATERIALS=Svítící materiály
+screen.EMISSIVE_FLOWERS_SETTINGS=Svítící květiny
+screen.WATER=Voda
+screen.WATER.comment=Nastavení týkající se vody.
+screen.IPBR_REDSTONE=Integrované PBR Redstonu
+screen.IPBR_REDSTONE.comment=Nastavení týkající se IntegrovanéhoPBR pro redstone.
+screen.DIRECTIONAL_LIGHTMAP_NORMALS_SETTINGS=Normály světelné mapy
+screen.LAVA_SETTINGS=Láva
+screen.LAVA_SETTINGS.comment=Nastavení týkající se lávy.
+screen.END_ROD_SETTINGS=Enderitová tyč
+screen.END_ROD_SETTINGS.comment=Nastavení týkající se enderitových tyčí.
+screen.FOLIAGE_SETTINGS=Zeleň
+screen.FOLIAGE_SETTINGS.comment=Nastavení týkající se zeleni.
+screen.PORTAL_SETTINGS=Nastavení portálů
+screen.PORTAL_SETTINGS.comment=Nastavení týkající se portálů.
+screen.MISC_SETTINGS=Ostatní
+screen.MISC_SETTINGS.comment=Nastavení, která nepatří do žádné jiné kategorie.
+screen.MISC_EMISSIVE_SETTINGS=Jiné svítící věci
+screen.REFLECTION_SETTINGS=Odrazy
+screen.REFLECTION_SETTINGS.comment=Nastavení týkající se odrazů.
+screen.BETTER_LABPBR_SETTINGS=Vylepšené LabPBR
+
+screen.CAMERA=Kamera
+screen.CAMERA.comment=Nastavení týkající se kamery.
+screen.TONEMAP_SETTINGS_EUPHORIA=Rovnováha barev Euphoria
+screen.TONEMAP_SETTINGS_EUPHORIA_SPECIFIC=Nastavení konkrétních tónových map
+screen.ACES=Nastavení ACES
+screen.ACES.comment=Nastavení pro tónovou mapu ACES.
+screen.AGX_SETTINGS=Nastavení AgX
+screen.AGX_SETTINGS.comment=Nastavení pro tónovou mapu AgX.
+screen.BSL_SETTINGS=Nastavení BSL
+screen.BSL_SETTINGS.comment=Nastavení pro tónovou mapu BSL.
+screen.CAMERA_EFFECTS=Efekty kamery
+screen.RETRO_SETTINGS=Nastavení Retro
+screen.STATIC_NOISE_SETTINGS=Nastavení televizního šumu
+screen.HORIZONTAL_NOISE_SETTINGS=Nastavení vodorovného šumu
+screen.VERTICAL_SCREEN_DISPLACEMENT_SETTINGS=Nastavení svislého přesunutí obrazovky
+screen.PIXELATE_SCREEN_SETTINGS=Nastavení pixelizace
+screen.DITHERING_SETTINGS=Nastavení Ditheringu
+screen.PALETTE_SETTINGS=Nastavení palety barev
+screen.SCANLINE_SETTINGS=Nastavení skenovací linky
+screen.HALFTONE_SETTINGS=Nastavení půltónu
+screen.SPEED_LINES_SETTINGS=Nastavení linek rychlosti
+screen.CAMERA_NOISE_OVERLAY_SETTINGS=Nastavení překrytí kamery šumem
+screen.SCREEN_BORDER=Nastavení ohraničení
+screen.LETTERBOX_SETTINGS=Nastavení Letterboxů
+screen.GRID_SETTINGS=Nastavení mřížky
+screen.WATERMARK_SETTINGS=Nastavení vodoznaku
+screen.DOF_SETTINGS=Nastavení Hloubky ostrosti
+screen.DOF_SHAPE_SETTINGS=Nastavení tvaru
+screen.LENS_FLARE_SETTINGS=Nastavení Odlesků na kameře
+screen.LENS_FLARE_SETTINGS.comment=Nastavení týkající se odlesků na kameře.
+
+screen.FUN=Zábava
+screen.FUN.comment=Pobavme se trochu.
+screen.WORLD_CURVATURE_SETTINGS=Zakřivení světa
+screen.WORLD_CURVATURE_SETTINGS.comment=Nastavení týkající se Zakřivení světa.
+screen.RANDOM_BLOCKLIGHT_SETTINGS=Náhodné světlo bloků
+screen.RANDOM_BLOCKLIGHT_SETTINGS.comment=Nastavení týkající se Náhodného světla bloků.
+
+screen.POPULAR_SETTINGS=§dPopulární nastavení
+screen.POPULAR_SETTINGS.comment=Toto jsou některé z nejpopulárnějších nastavení v Euphoria Patches. Kromě Pokročilého trasování barev (které je potřebné pro mnoho efektů), všechny možnosti zde jsou exkluzivní pro Euphoria Patches a nemohou být nalezeny v originálním shaderu Complementary.
+screen.POPULAR_SETTINGS_2=Strana 2
+screen.POPULAR_SETTINGS_3=Strana 3
+screen.EP_VERSION=Euphoria Patches §d1.10.5
+screen.EP_VERSION.comment=§bMůžeš podpořit SpacEagle17 na Patreonu nebo Ko-Fi a získat nové exkluzivní verze ve vývoji. §r§d§l§neuphoriapatches.com/support
+
+screen.MODDED_SETTINGS=Nastavení modů
+screen.MODDED_SETTINGS.comment=Nastavení, která fungují pouze, když máš nainstalované některé mody. Tato nastavení doplňují zážitek hraní s těmito mody a neudělají nic, pokud nemáš potřebné mody.
+screen.PHOTONICS_SETTINGS=Photonics
+screen.PHOTONICS_SETTINGS.comment=Nastavení, která fungují pouze, pokud máš nainstalovaný mod Photonics. https://modrinth.com/mod/photonics
+screen.PHOTONICS_SETTINGS_BASIC=Ostrý režim
+screen.PHOTONICS_SETTINGS_BASIC.comment=Nastavení Ostrého režimu osvětlení.
+screen.PHOTONICS_SETTINGS_RESTIR=ReSTIR režim
+screen.PHOTONICS_SETTINGS_RESTIR.comment=Nastavení ReSTIR režimu osvětlení.
+
+screen.DISTANT_HORIZONS_SETTINGS=Distant Horizons
+screen.DISTANT_HORIZONS_SETTINGS.comment=Nastavení, která fungují pouze, pokud máš nainstalovaný mod Distant Horizons. https://modrinth.com/mod/distanthorizons
+
+screen.MCWIND_SETTINGS=WindLink
+screen.MCWIND_SETTINGS.comment=Nastavení, která fungují pouze, pokud máš nainstalovaný mod WindLink. https://modrinth.com/project/windlink
+
+screen.MODDED_SKYBOX_SETTINGS=Nastavení Skyboxu
+screen.MODDED_SKYBOX_SETTINGS.comment=Nastavení týkající se modů souvisejících s oblohou.
+
+option.DAYLIGHT_CYCLE_FROZEN=Zmražený cyklus denního světla
+option.DAYLIGHT_CYCLE_FROZEN.comment=Vypnout funkci automatické animace mraků, polárních září, kaustik a dalšich efektů s vypnutým herním pravidlem doDaylightCycle/advance_time. Když je toto nastavení zapnuté, animace těchto efektů budou zmražené.
+
+option.SMOOTH_WORLD_ANIMATIONS=Hladké animace světa
+option.SMOOTH_WORLD_ANIMATIONS.comment=Zapíná hladké animace pro mraky, hvězdy a všechno ostatní při přeskočení času pomocí příkazů.
+
+option.AURORA_COLOR_PRESET=Předvolba barev záře
+option.AURORA_COLOR_PRESET.comment=Vyber si mezi výchozím vzhledem/vlastími barvami polární záře, zářemi s měnícími se barvami, kde se barva záře mění každý Minecraftový den/měsíc nebo předvolbami barev. Nebo také hladkou denní, která hladce mění barvu během noci.
+value.AURORA_COLOR_PRESET.-1=§o§lMěnící se - Hladká denní
+value.AURORA_COLOR_PRESET.0=Vlastní
+value.AURORA_COLOR_PRESET.1=§o§lMěnící se - Denně
+value.AURORA_COLOR_PRESET.2=§o§lMěnící se - Měsíčně
+value.AURORA_COLOR_PRESET.3=§9Originální§b Complementary v4
+value.AURORA_COLOR_PRESET.4=§bPe§3r§bm§3af§cr§3o§cst
+value.AURORA_COLOR_PRESET.5=§dKvetoucí §5světla
+value.AURORA_COLOR_PRESET.6=§9Ml§5ho§dvi§5na
+value.AURORA_COLOR_PRESET.7=§5Nebeský §3tanec
+value.AURORA_COLOR_PRESET.8=§aZelený blesk
+value.AURORA_COLOR_PRESET.9=§bÉt§3e§br§di§3c§dká
+value.AURORA_COLOR_PRESET.10=§bLedovcové §9požehnání
+value.AURORA_COLOR_PRESET.11=§5Mysti§9ck§bá
+value.AURORA_COLOR_PRESET.12=§cVo§6d§cn§6í §am§2e§al§2oun
+value.AURORA_COLOR_PRESET.13=§cKrvavá §bkoupel
+value.AURORA_COLOR_PRESET.14=§cD§4u§bc§3h
+
+option.RGB_AURORA=RGB záře
+option.RGB_AURORA.comment=Staň se epickým gamerem s §4R§2G§9B §rzáří.
+
+option.AURORA_UP_R=Horní část - Červená
+option.AURORA_UP_G=Horní část - Zelená
+option.AURORA_UP_B=Horní část - Modrá
+option.AURORA_UP_I=Horní část - Intenzita
+
+option.AURORA_DOWN_R=Spodní část - Červená
+option.AURORA_DOWN_G=Spodní část - Zelená
+option.AURORA_DOWN_B=Spodní část - Modrá
+option.AURORA_DOWN_I=Spodní část - Intenzita
+
+option.AURORA_SIZE=Hustota záře
+option.AURORA_SIZE.comment=Hustota řídí zdánlivou výšku a velikost polární záře
+
+option.AURORA_DRAW_DISTANCE=Vzdálenost vykreslování záře
+option.AURORA_DRAW_DISTANCE.comment=Vzdálenost vykreslování řídí, jak daleko od hráče bude vidět polární záře.
+
+option.AURORA_INFLUENCE=Vliv polární záře
+option.AURORA_INFLUENCE.comment=Barva aurory bude ovlivňovat barvu mraků a terénu.
+
+option.AURORA_CLOUD_INFLUENCE_INTENSITY=Intenzita vlivu na mraky
+option.AURORA_CLOUD_INFLUENCE_INTENSITY.comment=Měň, jak moc bude polární záře ovlivňovat mraky.
+value.AURORA_CLOUD_INFLUENCE_INTENSITY.0.00=VYP
+
+option.AURORA_TERRAIN_INFLUENCE_INTENSITY=Intenzita vlivu na terén
+option.AURORA_TERRAIN_INFLUENCE_INTENSITY.comment=Měň, jak moc bude polární záře ovlivňovat terén.
+value.AURORA_TERRAIN_INFLUENCE_INTENSITY.0.00=VYP
+
+option.RANDOM_AURORA=Náhodný výskyt polární záře
+option.RANDOM_AURORA.comment=Mění pravděpodobnost výskytu polární záře každou noc. Stále respektuje normální podmínky polární záře v nastavení Complementary.
+value.RANDOM_AURORA.0=Výchozí
+value.RANDOM_AURORA.1=10% šance
+value.RANDOM_AURORA.2=20% šance
+value.RANDOM_AURORA.3=30% šance
+value.RANDOM_AURORA.4=40% šance
+value.RANDOM_AURORA.5=50% šance
+value.RANDOM_AURORA.6=60% šance
+value.RANDOM_AURORA.7=70% šance
+value.RANDOM_AURORA.8=80% šance
+value.RANDOM_AURORA.9=90% šance
+
+option.AURORA_NOISE_SCALE=Měřítko šumu záře
+option.AURORA_NOISE_SCALE.comment=Mění měřítko šumu používaného v efektu polární záře.
+
+option.AURORA_PATTERN_WARP=Vířivost
+option.AURORA_PATTERN_WARP.comment=Mění, jak moc se polární záře víří a vlní.
+value.AURORA_PATTERN_WARP.0=VYP
+
+option.AURORA_SATURATION=Sytost polární záře
+option.AURORA_SATURATION.comment=Mění sytost barev polární záře.
+value.AURORA_SATURATION.10=Výchozí
+
+option.AURORA_COLOR_MIX_POWER=Dominantní vrstva
+option.AURORA_COLOR_MIX_POWER.comment=Mění, která vrstva polární záře je nejvýraznější.
+
+option.CLOUD_ROUNDNESS=Zaoblení mraků §e[*]§r
+value.CLOUD_ROUNDNESS.0.025=Velmi hranaté §e[*]§r
+value.CLOUD_ROUNDNESS.0.05=Hranaté §e[*]§r
+value.CLOUD_ROUNDNESS.0.125=Vyvážené
+value.CLOUD_ROUNDNESS.0.2=Kulaté
+option.CLOUD_ROUNDNESS.comment=Mění, jak oblé budou vypadat mraky. §e[*]§r Nižší oblost má za následek více artefaktů šumu
+
+option.REIMAGINED_CLOUDS_OUTLINE=Obrys mraků
+option.REIMAGINED_CLOUDS_OUTLINE.comment=Zapíná obrys kolem Reimagined mraků.
+value.REIMAGINED_CLOUDS_OUTLINE.0=VYP
+
+option.CLOUD_SHADOW_ROUNDNESS=Zaoblení stínů mraků
+value.CLOUD_SHADOW_ROUNDNESS.0.15=Velmi hranaté
+value.CLOUD_SHADOW_ROUNDNESS.0.25=Hranaté
+value.CLOUD_SHADOW_ROUNDNESS.0.35=Kulaté
+option.CLOUD_SHADOW_ROUNDNESS.comment=Mění, jak oblé vypadají stíny mraků.
+
+option.CLOUD_SHADOW_STRENGTH=Síla stínů mraků
+option.CLOUD_SHADOW_STRENGTH.comment=Upravuje pouze tmavost stínů mraků. Nižší hodnoty dělají stíny mraků světlejší, vyšší hodnoty naopak tmavší.
+
+option.CLOUD_SHADOW_FADE_DISTANCE=Vzdálenost stínů mraků
+option.CLOUD_SHADOW_FADE_DISTANCE.comment=Určuje vzdálenost kolem hráče, kde se nebudou objevovat stíny mraků.
+value.CLOUD_SHADOW_FADE_DISTANCE.0=VYP
+
+option.CLOUD_NARROWNESS=Šířka mraků
+option.CLOUD_NARROWNESS.comment=Mění, jak široké vypadají mraky vodorovně.
+
+option.CLOUD_SHADOW_UNBOUND_SIZE=Velikost stínů mraků
+option.CLOUD_SHADOW_UNBOUND_SIZE.comment=Určuje velikost stínů mraků.
+
+option.CLOUD_STRETCH=Výška mraků
+option.CLOUD_TRANSPARENCY=Průhlednost mraků
+option.CLOUD_TRANSPARENCY.comment=Mění průhlednost mraků.
+option.CLOUD_DIRECTION=Směr mraků
+option.CLOUD_DIRECTION.comment=Mění směr, ve kterém se mraky pohybují.
+option.CLOUD_TEXTURE=Textura mraků Minecraftu
+value.CLOUD_TEXTURE.0=Výchozí
+value.CLOUD_TEXTURE.1=Starý Minecraft
+value.CLOUD_TEXTURE.2=Staré Complementary
+
+value.CLOUD_DIRECTION.1=Západ-Východ
+value.CLOUD_DIRECTION.2=Sever-Jih
+option.RAINBOW_CLOUD=Duhové mraky
+value.RAINBOW_CLOUD.0=VYP
+value.RAINBOW_CLOUD.1=10% pokrytí
+value.RAINBOW_CLOUD.2=20% pokrytí
+value.RAINBOW_CLOUD.3=30% pokrytí
+value.RAINBOW_CLOUD.4=40% pokrytí
+value.RAINBOW_CLOUD.5=50% pokrytí
+value.RAINBOW_CLOUD.6=60% pokrytí
+value.RAINBOW_CLOUD.7=70% pokrytí
+value.RAINBOW_CLOUD.8=80% pokrytí
+value.RAINBOW_CLOUD.9=90% pokrytí
+value.RAINBOW_CLOUD.10=100% pokrytí
+
+option.CLOUD_RENDER_DISTANCE=Dohlednost mraků
+option.CLOUD_RENDER_DISTANCE.comment=Mění, jak daleko od hráče se budou vykreslovat mraky.
+
+option.CLOUD_SHADING_AMOUNT=Množství stínování mraků
+option.CLOUD_SHADING_AMOUNT.comment=Určuje, jak moc budou stínované mraky.
+
+option.INVERTED_CLOUD_SHADING=Obrácené stínování mraků
+option.INVERTED_CLOUD_SHADING.comment=Obrací efekt stínování mraků.
+
+option.CLOUD_LIGHT_MULTIPLIER=Násobič světla mraků ve dne
+option.CLOUD_LIGHT_MULTIPLIER.comment=Násobí jas světlé strany mraků ve dne.
+
+option.CLOUD_NIGHT_LIGHT_MULTIPLIER=Násobič světla mraků v noci
+option.CLOUD_NIGHT_LIGHT_MULTIPLIER.comment=Násobí jas světlé strany mraků v noci.
+
+option.CLOUD_AMBIENT_MULTIPLIER=Násobič okolního světla mraků ve dne
+option.CLOUD_AMBIENT_MULTIPLIER.comment=Násobí jas strany mraků s okolním světlem ve dne.
+
+option.CLOUD_NIGHT_AMBIENT_MULTIPLIER=Násobič okolního světla mraků v noci
+option.CLOUD_NIGHT_AMBIENT_MULTIPLIER.comment=Násobí jas strany mraků s okolním světlem v noci.
+
+option.ROTATE_REIMAGINED_CLOUDS_90_NEW=Otočit mraky o 90°
+option.ROTATE_REIMAGINED_CLOUDS_90_NEW.comment=Otočí Reimagined mraky o 90 stupňů.
+
+option.NIGHT_CLOUD_UNBOUND_REMOVE=Množství odstraněných mraků v noci
+option.NIGHT_CLOUD_UNBOUND_REMOVE.comment=Množství mraků, které jsou během noci odstraněny.
+
+option.HIGH_QUALITY_CLOUDS=Vyšší kvalita mraků
+option.HIGH_QUALITY_CLOUDS.comment=Zvyšuje kvalitu mraků na vyšší úroveň, než je možné v normálních nastaveních Complementary. §c[-]§r Zapnutí tohoto nastavení může mít dopad na výkon.
+
+option.CLOUD_LAYER2_SPEED_MULT=Násobič rychlosti mraků vrstvy 2
+
+option.PIXELATED_UNBOUND_CLOUDS=Pixelované Unbound mraky
+option.PIXELATED_UNBOUND_CLOUDS.comment=Dává Unbound mrakům pixelovaný vzhled. Čím vyšší hodnota, tím větší pixely.
+value.PIXELATED_UNBOUND_CLOUDS.0=VYP
+
+option.DOUBLE_UNBOUND_CLOUDS=Dvojité Unbound mraky
+option.DOUBLE_UNBOUND_CLOUDS.comment=Zapíná vykreslování druhé vrstvy Unbound mraků. §c[-]§r Tento efekt může mít dopad na výkon.
+option.CLOUD_UNBOUND_LAYER2_ALTITUDE=Výška druhé vrstvy mraků
+option.CLOUD_UNBOUND_LAYER2_ALTITUDE.comment=Určuje světovou výšku, kde se objeví druhá vrstva mraků.
+option.CLOUD_UNBOUND_LAYER2_HEIGHT=Tloušťka mraků vrstvy 2
+option.CLOUD_UNBOUND_LAYER2_HEIGHT.comment=Určuje geometrickou výšku Unbound mraků ve druhé vrstvě.
+option.CLOUD_UNBOUND_LAYER2_SIZE=Velikost mraků vrstvy 2
+option.CLOUD_UNBOUND_LAYER2_SIZE.comment=Určuje velikost Unbound mraků ve druhé vrstvě.
+option.CLOUD_UNBOUND_LAYER2_AMOUNT=Množství mraků vrstvy 2
+option.CLOUD_UNBOUND_LAYER2_AMOUNT.comment=Určuje množství Unbound mraků ve druhé vrstvě.
+option.CLOUD_UNBOUND_LAYER2_TRANSPARENCY=Průhlednost mraků vrstvy 2
+option.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.comment=Určuje průhlednost Unbound mraků ve druhé vrstvě.
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.0=0.0
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.1=0.05
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.2=0.10
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.3=0.15
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.4=0.20
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.5=0.25
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.6=0.30
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.7=0.35
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.8=0.40
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.9=0.45
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.10=0.50
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.11=0.55
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.12=0.60
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.13=0.65
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.14=0.70
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.15=0.75
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.16=0.80
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.17=0.85
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.18=0.90
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.19=0.95
+value.CLOUD_UNBOUND_LAYER2_TRANSPARENCY.20=1.00
+
+
+option.CLOUD_REIMAGINED_LAYER2_HEIGHT=Tloušťka mraků vrstvy 2
+option.CLOUD_REIMAGINED_LAYER2_HEIGHT.comment=Určuje geometrickou výšku Reimagined mraků ve druhé vrstvě.
+option.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY=Průhlednost mraků vrstvy 2
+option.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.comment=Určuje průhlednost Reimagined mraků ve druhé vrstvě.
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.0=0.0
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.1=0.05
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.2=0.10
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.3=0.15
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.4=0.20
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.5=0.25
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.6=0.30
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.7=0.35
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.8=0.40
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.9=0.45
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.10=0.50
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.11=0.55
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.12=0.60
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.13=0.65
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.14=0.70
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.15=0.75
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.16=0.80
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.17=0.85
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.18=0.90
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.19=0.95
+value.CLOUD_REIMAGINED_LAYER2_TRANSPARENCY.20=1.00
+
+option.CLOUD_SUN_MOON_SHADING=Stínování Slunce/Měsíce
+option.CLOUD_SUN_MOON_SHADING.comment=Zapíná stínování od Slunce a Měsíce na mracích.
+value.CLOUD_SUN_MOON_SHADING.0=VYP
+value.CLOUD_SUN_MOON_SHADING.1=Pouze Měsíc
+value.CLOUD_SUN_MOON_SHADING.2=Pouze Slunce
+value.CLOUD_SUN_MOON_SHADING.3=Obojí
+
+option.E_SKY_COLORR_NEW=Obloha Endu - Červená
+option.E_SKY_COLORG_NEW=Obloha Endu - Zelená
+option.E_SKY_COLORB_NEW=Obloha Endu - Modrá
+option.E_SKY_COLORI=Obloha Endu - Intenzita
+option.END_SKY_FOG_INFLUENCE=Odstín modovaných Endových biomů
+option.END_SKY_FOG_INFLUENCE.comment=Uprav, jak moc bude barva mlhy modovaných biomů ovlivňovat barvy oblohy v Endu a Endových paprsků. Při hodnotě 1.00 budou mít obloha a Endové paprsky stejnou barvu jako barva mlhy, při hodnotě 0.00 nebudou ovlivněné barvou mlhy.
+
+option.GLOWING_EMERALD_BLOCK=Svítící Smaragdový blok
+option.GLOWING_EMERALD_BLOCK.comment=Dělá to, že Smaragdové bloky budou svítit. §e[*]§r Podpora textur musí být nastavena na Integrované PBR+
+
+option.EMISSIVE_ENCHANTING_TABLE=Svítící Oltář očarování
+option.EMISSIVE_ENCHANTING_TABLE.comment=Dělá to, že diamantová část oltáře očarování bude svítit. §e[*]§r Podpora textur musí být nastavena na Integrované PBR+
+
+option.GLOWING_WART=Svítící Bloky bradavičníku
+option.GLOWING_WART.comment=Zapíná animované svítící bloky bradavičníku. §e[*]§r Podpora textur musí být nastavena na Integrované PBR+
+
+option.GLOWING_NETHER_TREES=Svítící Netherové stromy
+option.GLOWING_NETHER_TREES.comment=Zapíná svítící karmínovou/přízračnou třeň.
+
+option.OVERWORLD_BEAMS=Paprsky v Overworldu
+option.OVERWORLD_BEAMS.comment=Zapíná paprsky podobné mlhovině během noci v Overworldu.
+option.OVERWORLD_BEAMS_CONDITION=Podmínka
+option.OVERWORLD_BEAMS_CONDITION.comment=Ve výchozím nastavení se pouze objevují během úplňku, změněním tohoto nastavení se objeví každou noc.
+value.OVERWORLD_BEAMS_CONDITION.0=Úplněk
+value.OVERWORLD_BEAMS_CONDITION.1=Každou noc
+option.OVERWORLD_BEAMS_INTENSITY=Intenzita Paprsků v Overworldu
+option.BEAMS_AMBIENT_INFLUENCE=Vliv barvy mlhy
+option.BEAMS_AMBIENT_INFLUENCE.comment=Paprsky budou mít barvu mlhy při hodnotě 1.00 a barvu definovanou uživatelem při hodnotě 0.00.
+option.OW_BEAM_R_NEW=Paprsky v Overworldu - Červená
+option.OW_BEAM_G_NEW=Paprsky v Overworldu - Zelená
+option.OW_BEAM_B_NEW=Paprsky v Overworldu - Modrá
+
+option.END_BEAMS=Endové paprsky
+option.END_BEAMS.comment=Zapíná v Endu paprsky podobné mlhovině.
+option.END_CRYSTAL_VORTEX=Vír Endových krystalů
+option.END_CRYSTAL_VORTEX.comment=Zapíná paprsky energie, které v Endu vycházejí z Endových krystalů. §4[***]§r Zapíná §cStíny entit§r. §e[*]§r Funguje pouze na Iris. §e[*]§r Nefunguje na MacOS. Vzdálenost stínů v nastavení Complementary ovlivňuje vzdálenost, kde jsou viditelné víry.
+value.END_CRYSTAL_VORTEX.0=VYP
+value.END_CRYSTAL_VORTEX.1=Vír
+value.END_CRYSTAL_VORTEX.2=Léčící paprsek
+value.END_CRYSTAL_VORTEX.3=Obojí
+option.DRAGON_DEATH_EFFECT=Efekt smrti Draka z Endu
+option.DRAGON_DEATH_EFFECT.comment=Nahrazuje paprsky smrti draka volumetrickým efektem. §4[***]§r Zapíná §cStíny entit§r. §e[*]§r Funguje pouze na Iris. §e[*]§r Nefunguje na MacOS.
+value.DRAGON_DEATH_EFFECT.0=VYP
+value.DRAGON_DEATH_EFFECT.1=Volumetrický efekt
+value.DRAGON_DEATH_EFFECT.2=Volumetrický + Originální paprsky
+
+option.END_CRYSTAL_VOXEL_PIXEL=Pixelizace voxelů
+option.END_CRYSTAL_VOXEL_PIXEL.comment=Zapíná pixelizaci voxelů na vírech endových krystalů a efektu smrti draka.
+value.END_CRYSTAL_VOXEL_PIXEL.0=VYP
+
+option.E_BEAMS_AMBIENT_INFLUENCE=Vliv barev prostředí
+option.E_BEAMS_AMBIENT_INFLUENCE.comment=Paprsky budou mít barvu prostředí při hodnotě 1.00 a barvu definovanou uživatelem při hodnotě 0.00. Nevztahuje se na Dračí Endové paprsky.
+option.E_BEAM_R_NEW=Endové paprsky - Červená
+option.E_BEAM_G_NEW=Endové paprsky - Zelená
+option.E_BEAM_B_NEW=Endové paprsky - Modrá
+option.E_BEAM_I=Endové paprsky - Intenzita
+option.E_DRAGON_BEAM_R_NEW=Dračí Endové paprsky - Červená
+option.E_DRAGON_BEAM_R_NEW.comment=Barva Endových paprsků při boji s drakem - Červená.
+option.E_DRAGON_BEAM_G_NEW=Dračí Endové paprsky - Zelená
+option.E_DRAGON_BEAM_G_NEW.comment=Barva Endových paprsků při boji s drakem - Zelená.
+option.E_DRAGON_BEAM_B_NEW=Dračí Endové paprsky - Modrá
+option.E_DRAGON_BEAM_B_NEW.comment=Barva Endových paprsků při boji s drakem - Modrá.
+option.E_DRAGON_BEAM_I=Dračí Endové paprsky - Intenzita
+option.E_DRAGON_BEAM_I.comment=Barva Endových paprsků při boji s drakem - Intenzita.
+option.END_BEAM_SCALE=Škála
+option.END_BEAM_SCALE.comment=Mění škálu Endových paprsků. Vyšší hodnoty je dělají užší, vyšší hodnoty naopak širší.
+option.END_BEAM_DISTANCE_MULTIPLIER=Násobič vzdálenosti
+option.END_BEAM_DISTANCE_MULTIPLIER.comment=Mění vzdálenost, jak daleko nebo blízko ke hráči jsou Endové paprsky. Při vyšších hodnotách budou začínat dál, při nižších naopak blíž.
+option.END_BEAM_POW=Síla paprsků
+option.END_BEAM_POW.comment=Mění sílu, kterou mají paprsky. Vyšší hodnoty je udělají méně intenzivní, nižší hodnoty naopak více intenzivní.
+option.END_BEAM_DIRECTION_BIAS=Svislý směr
+option.END_BEAM_DIRECTION_BIAS.comment=Určuje, která strana středu paprsků je upřednostňována. -100 upřednostňuje spodní stranu, 0 je vyvážené, 100 upřednostňuje horní stranu.
+option.END_BEAM_FLASH_HEIGHT_MULTIPLIER=Násobič výšky záblesku
+option.END_BEAM_FLASH_HEIGHT_MULTIPLIER.comment=Mění výšku Endových paprsků během Endových záblesků.
+option.END_BEAM_FLASH_POW_MULTIPLIER=Násobič síly záblesku
+option.END_BEAM_FLASH_POW_MULTIPLIER.comment=Mění sílu Endových paprsků během Endových záblesků.
+option.END_BEAM_FLASH_NARROWNESS=Úzkost záblesku
+option.END_BEAM_FLASH_NARROWNESS.comment=Mění úzkost zóny ovlivněné Endovým zábleskem. Vyšší hodnoty zmenší ovlivněnou oblast, nižší hodnoty ji naopak zvětší.
+option.END_BEAM_SPEED=Rychlost
+option.END_BEAM_SPEED.comment=Mění rychlost Endových paprsků.
+option.END_BEAM_FOG_BLEND=Prolnutí do terénu
+option.END_BEAM_FOG_BLEND.comment=Mění, jak moc se Endové paprsky prolínají do terénu ve velkých vzdálenostech. §e[*]§r Nižší hodnoty zviditelní hranice chunků.
+
+option.END_STARS=Hvězdy v Endu
+option.END_STARS.comment=Zapni nebo vypni hvězdy v Endu.
+option.END_STAR_BRIGHTNESS=Jas hvězd v Endu
+option.END_STAR_SIZE=Velikost hvězd v Endu
+option.END_STAR_AMOUNT=Množství hvězd v Endu
+value.END_STAR_AMOUNT.0=Nízké
+value.END_STAR_AMOUNT.1=Normální
+value.END_STAR_AMOUNT.2=Vysoké
+value.END_STAR_AMOUNT.3=Velmi vysoké
+value.END_STAR_AMOUNT.4=MNOHO
+option.END_TWINKLING_STARS=Mihotající se hvězdy v Endu
+value.END_TWINKLING_STARS.0=VYP
+value.END_TWINKLING_STARS.1=0.1
+value.END_TWINKLING_STARS.2=0.2
+value.END_TWINKLING_STARS.3=0.3
+value.END_TWINKLING_STARS.4=0.4
+value.END_TWINKLING_STARS.5=0.5
+value.END_TWINKLING_STARS.6=0.6
+value.END_TWINKLING_STARS.7=0.7
+value.END_TWINKLING_STARS.8=0.8
+value.END_TWINKLING_STARS.9=0.9
+value.END_TWINKLING_STARS.10=1.0
+value.END_TWINKLING_STARS.11=1.1
+value.END_TWINKLING_STARS.12=1.2
+value.END_TWINKLING_STARS.13=1.3
+value.END_TWINKLING_STARS.14=1.4
+value.END_TWINKLING_STARS.15=1.5
+value.END_TWINKLING_STARS.16=1.6
+value.END_TWINKLING_STARS.17=1.7
+value.END_TWINKLING_STARS.18=1.8
+value.END_TWINKLING_STARS.19=1.9
+value.END_TWINKLING_STARS.20=2.0
+option.END_STAR_HEMISPHERE=Hemisféra hvězd v Endu
+option.END_STAR_HEMISPHERE.comment=Nastavení pro vykreslování hvězd pouze v horní nebo dolní hemisféře oblohy v Endu.
+value.END_STAR_HEMISPHERE.0=Celá obloha
+value.END_STAR_HEMISPHERE.1=Pouze horní hemisféra
+value.END_STAR_HEMISPHERE.-1=Pouze dolní hemisféra
+
+option.END_NEBULA=Mlhovina v Endu
+option.END_NEBULA.comment=Přidává k obloze Endu procedurálně generovanou mlhovinu podobnou k Nočním mlhovinám ve stylu galaxií. Také upravuje její intenzitu. §c[-]§r Tento efekt může mít dopad na výkon.
+value.END_NEBULA.0=VYP
+
+option.END_NEBULA_RESOLUTION=Rozlišení mlhoviny
+option.END_NEBULA_RESOLUTION.comment=Určuje, do kolika buněk je rozdělena mlhovina, což jí dává pixelovaný vzhled. Při nižších rozlišeních se objeví pozorné zkreslení, protože je nemožné perfektně rozložit čtverce po kouli.
+value.END_NEBULA_RESOLUTION.0=Hladké
+
+option.END_NEBULA_COVERAGE=Pokrytí mlhoviny
+option.END_NEBULA_COVERAGE.comment=Určuje, jak moc oblohy bude pokryto vzorem šumu mlhoviny. Vyšší hodnoty mají za následek tenčí a jemnější tvary.
+
+option.END_NEBULA_GRAININESS=Zrnitost mlhoviny
+option.END_NEBULA_GRAININESS.comment=Určuje, jak moc bílého šumu je přidáno k mlhovině, aby získala zrnitý efekt. Nefunguje, když je Rozlišení mlhoviny nastaveno na Hladké.
+
+option.END_NEBULA_DISTORTION_INTENSITY=Intenzita zakroucení
+option.END_NEBULA_DISTORTION_INTENSITY.comment=Určuje, jak moc je tvar mlhoviny zkroucen od jednoduchého radiálního přechodu.
+
+option.END_NEBULA_QUALITY=Kvalita mlhoviny
+option.END_NEBULA_QUALITY.comment=Určuje, kolik vrstev šumu je používáno k vytvoření mlhoviny. §c[-]§r Tento efekt může mít dopad na výkon.
+value.END_NEBULA_QUALITY.1=Nízká
+value.END_NEBULA_QUALITY.2=Střední
+value.END_NEBULA_QUALITY.3=Vysoká
+value.END_NEBULA_QUALITY.4=Ultra
+value.END_NEBULA_QUALITY.5=Extrémní
+
+option.END_NEBULA_HEMISPHERE=Hemisféra mlhoviny
+option.END_NEBULA_HEMISPHERE.comment=Nastavení pro vykreslování mlhoviny pouze v horní nebo dolní hemisféře oblohy v Endu.
+value.END_NEBULA_HEMISPHERE.0=Celá obloha
+value.END_NEBULA_HEMISPHERE.1=Pouze horní hemisféra
+value.END_NEBULA_HEMISPHERE.-1=Pouze dolní hemisféra
+
+option.END_NEBULA_COLOR_2_INTENSITY=Intenzita druhé barvy
+
+option.END_NEBULA_STAR_BRIGHTNESS=Jas hvězd mlhoviny
+option.END_NEBULA_STAR_BRIGHTNESS.comment=Nastavení pro upravení jasu hvězd v Endové mlhovině.
+value.END_NEBULA_STAR_BRIGHTNESS.0=VYP
+
+option.END_NEBULA_ANIMATION_SPEED=Rychlost animace
+option.END_NEBULA_ANIMATION_SPEED.comment=Určuje rychlost animace Endové mlhoviny.
+
+option.END_NEBULA_SEED=Semínko
+option.END_NEBULA_SEED.comment=Ovládá semínko (seed) použité pro generování Endové mlhoviny.
+
+option.END_NEBULA_ONLY_STARS=Pouze hvězdy
+option.END_NEBULA_ONLY_STARS.comment=Nastavení pro vykreslování pouze hvězd v Endové mlhovině, bez efektu mlhoviny.
+
+option.STAR_BRIGHTNESS=Jas hvězd
+option.STAR_BRIGHTNESS.comment=Nastavení pro upravení jasu hvězd.
+value.STAR_BRIGHTNESS.3=VYP
+value.STAR_BRIGHTNESS.4=0.1
+value.STAR_BRIGHTNESS.5=0.2
+value.STAR_BRIGHTNESS.6=0.3
+value.STAR_BRIGHTNESS.7=0.4
+value.STAR_BRIGHTNESS.8=0.5
+value.STAR_BRIGHTNESS.9=0.6
+value.STAR_BRIGHTNESS.10=0.7
+value.STAR_BRIGHTNESS.11=0.8
+value.STAR_BRIGHTNESS.12=0.9
+value.STAR_BRIGHTNESS.13=1.0
+value.STAR_BRIGHTNESS.14=1.1
+value.STAR_BRIGHTNESS.15=1.2
+value.STAR_BRIGHTNESS.16=1.3
+value.STAR_BRIGHTNESS.17=1.4
+value.STAR_BRIGHTNESS.18=1.5
+value.STAR_BRIGHTNESS.19=1.6
+value.STAR_BRIGHTNESS.20=1.7
+value.STAR_BRIGHTNESS.21=1.8
+value.STAR_BRIGHTNESS.22=1.9
+value.STAR_BRIGHTNESS.23=2.0
+value.STAR_BRIGHTNESS.24=2.1
+value.STAR_BRIGHTNESS.25=2.2
+value.STAR_BRIGHTNESS.26=2.3
+value.STAR_BRIGHTNESS.27=2.4
+value.STAR_BRIGHTNESS.28=2.5
+value.STAR_BRIGHTNESS.29=2.6
+value.STAR_BRIGHTNESS.30=2.7
+value.STAR_BRIGHTNESS.31=2.8
+value.STAR_BRIGHTNESS.32=2.9
+value.STAR_BRIGHTNESS.33=3.0
+
+option.TWINKLING_STARS=Mihotající se hvězdy
+option.TWINKLING_STARS.comment=Udělá, že na tebe hvězdy budou mihotat.
+value.TWINKLING_STARS.0=VYP
+value.TWINKLING_STARS.1=0.1
+value.TWINKLING_STARS.2=0.2
+value.TWINKLING_STARS.3=0.3
+value.TWINKLING_STARS.4=0.4
+value.TWINKLING_STARS.5=0.5
+value.TWINKLING_STARS.6=0.6
+value.TWINKLING_STARS.7=0.7
+value.TWINKLING_STARS.8=0.8
+value.TWINKLING_STARS.9=0.9
+value.TWINKLING_STARS.10=1.0
+value.TWINKLING_STARS.11=1.1
+value.TWINKLING_STARS.12=1.2
+value.TWINKLING_STARS.13=1.3
+value.TWINKLING_STARS.14=1.4
+value.TWINKLING_STARS.15=1.5
+value.TWINKLING_STARS.16=1.6
+value.TWINKLING_STARS.17=1.7
+value.TWINKLING_STARS.18=1.8
+value.TWINKLING_STARS.19=1.9
+value.TWINKLING_STARS.20=2.0
+option.STAR_SIZE=Velikost hvězd
+option.STAR_SIZE.comment=Změň si velikost hvězd.
+
+option.SITUATIONAL_ORES=Situační rudy
+option.SITUATIONAL_ORES.comment=Rudy budou pouze svítit v jeskyních a v noci. §e[*]§r Svítící rudy musí být zapnuté, aby toto fungovalo.
+
+option.GLOWING_RAW_BLOCKS=Svítící vytěžené bloky
+
+option.EMISSION_MULTIPLIER=Násobič svícení
+option.EMISSION_MULTIPLIER.comment=Násobí svícení.
+
+option.UNDERWATER_DISTORTION_STRENGTH=Síla Podvodního zkreslení
+option.UNDERWATER_DISTORTION_STRENGTH.comment=Nastavení pro upravení síly Podvodního zkreslení.
+option.FRESNEL_MULTIPLIER=Síla odrazů hladiny vody pod vodou
+option.FRESNEL_MULTIPLIER.comment=Nastavení, které mění sílu odrazů od hladiny vody, když jsi pod vodou.
+option.SHADER_WATER=Voda shaderu
+option.SHADER_WATER.comment=Přepínač pro zapnutí nebo vypnutí vody shaderu.
+
+option.WATER_GENERATED_NORMALS=Generované normály vody
+
+option.RANDOM_BLOCKLIGHT=Náhodně zbarvené světlo bloků
+option.RANDOM_BLOCKLIGHT.comment=Barva světla bloků bude náhodná v závislosti na souřadnicích světa, nastavení pouze pro zábavu.
+option.RANDOM_BLOCKLIGHT_SIZE=Velikost náhodně zbarveného světla bloků
+option.RANDOM_BLOCKLIGHT_SIZE.comment=Změň velikost barev efektu náhodně zbarveného světla bloků.
+
+option.COATED_TEXTURE_RES=Rozlišení Pokrytých textur
+option.COATED_TEXTURE_RES.comment=Změň rozlišení, ve kterém jsou vykreslovány Pokryté textury. §e[*]§r Podpora textur musí být nastavena na Integrované PBR+ a musí být zapnuté Pokryté textury
+
+option.DIRECTIONAL_LIGHTMAP_NORMALS=Normály světelné mapy
+option.DIRECTIONAL_LIGHTMAP_NORMALS.comment=Umožňuje, aby integrované normálové mapy fungovaly se světlem bloků. §e[*]§r Podpora textur musí být nastavena na Integrované PBR+ a musí být zapnuté Generované normály
+option.DIRECTIONAL_LIGHTMAP_NORMALS_BLOCK_STRENGTH_NEW=Intenzita bloků
+option.DIRECTIONAL_LIGHTMAP_NORMALS_HANDHELD_STRENGTH=Intenzita světla v ruce
+
+option.CAVE_FOG_R_NEW=Mlha v jeskyních - Červená
+option.CAVE_FOG_G_NEW=Mlha v jeskyních - Zelená
+option.CAVE_FOG_B_NEW=Mlha v jeskyních - Modrá
+option.CAVE_FOG_I=Mlha v jeskyních - Intenzita
+option.CAVE_FOG_DENSITY=Hustota Mlhy v jeskyních
+
+option.ATMOSPHERIC_FOG=Atmosférická mlha
+option.ATMOSPHERIC_FOG_R_NEW=Atmosférická mlha - Červená
+option.ATMOSPHERIC_FOG_G_NEW=Atmosférická mlha - Zelená
+option.ATMOSPHERIC_FOG_B_NEW=Atmosférická mlha - Modrá
+option.ATMOSPHERIC_FOG_I=Atmosférická mlha - Intenzita
+option.ATMOSPHERIC_FOG_DENSITY=Hustota Atmosférické mlhy
+option.RADIOACTIVE_ATMOSPHERIC_FOG=Radioaktivní Atmosférická mlha
+option.RADIOACTIVE_ATMOSPHERIC_FOG.comment=Je to jenom jeden nezdravý návyk navíc. Velmi patrná v noci.
+
+option.BORDER_FOG_DISTANCE_OVERWORLD=Vzdálenost Mlhy hranice
+option.BORDER_FOG_DISTANCE_OVERWORLD.comment=Uprav vzdálenost Mlhy hranice v Overworldu.
+value.BORDER_FOG_DISTANCE_OVERWORLD.1=0.25
+value.BORDER_FOG_DISTANCE_OVERWORLD.2=0.40
+value.BORDER_FOG_DISTANCE_OVERWORLD.3=0.50
+value.BORDER_FOG_DISTANCE_OVERWORLD.6=1.00
+value.BORDER_FOG_DISTANCE_OVERWORLD.10=1.25
+value.BORDER_FOG_DISTANCE_OVERWORLD.50=1.50
+value.BORDER_FOG_DISTANCE_OVERWORLD.100=1.75
+value.BORDER_FOG_DISTANCE_OVERWORLD.500=2.00
+value.BORDER_FOG_DISTANCE_OVERWORLD.1000=2.50
+
+option.BORDER_FOG_DENSITY_OVERWORLD=Hustota Mlhy hranice
+option.BORDER_FOG_DENSITY_OVERWORLD.comment=Uprav hustotu Mlhy hranice v Overworldu.
+
+option.BORDER_FOG_DISTANCE_NETHER=Vzdálenost Mlhy hranice
+option.BORDER_FOG_DISTANCE_NETHER.comment=Uprav vzdálenost Mlhy hranice v Netheru.
+value.BORDER_FOG_DISTANCE_NETHER.1=0.25
+value.BORDER_FOG_DISTANCE_NETHER.2=0.40
+value.BORDER_FOG_DISTANCE_NETHER.3=0.50
+value.BORDER_FOG_DISTANCE_NETHER.6=1.00
+value.BORDER_FOG_DISTANCE_NETHER.10=1.25
+value.BORDER_FOG_DISTANCE_NETHER.50=1.50
+value.BORDER_FOG_DISTANCE_NETHER.100=1.75
+value.BORDER_FOG_DISTANCE_NETHER.500=2.00
+value.BORDER_FOG_DISTANCE_NETHER.1000=2.50
+
+option.BORDER_FOG_DENSITY_NETHER=Hustota Mlhy hranice
+option.BORDER_FOG_DENSITY_NETHER.comment=Uprav hustotu Mlhy hranice v Netheru.
+
+option.BORDER_FOG_DISTANCE_END=Vzdálenost Mlhy hranice
+option.BORDER_FOG_DISTANCE_END.comment=Uprav vzdálenost Mlhy hranice v Endu.
+value.BORDER_FOG_DISTANCE_END.1=0.25
+value.BORDER_FOG_DISTANCE_END.2=0.40
+value.BORDER_FOG_DISTANCE_END.3=0.50
+value.BORDER_FOG_DISTANCE_END.6=1.00
+value.BORDER_FOG_DISTANCE_END.10=1.25
+value.BORDER_FOG_DISTANCE_END.50=1.50
+value.BORDER_FOG_DISTANCE_END.100=1.75
+value.BORDER_FOG_DISTANCE_END.500=2.00
+value.BORDER_FOG_DISTANCE_END.1000=2.50
+
+option.BORDER_FOG_DENSITY_END=Hustota Mlhy hranice
+option.BORDER_FOG_DENSITY_END.comment=Uprav hustotu Mlhy hranice v Endu.
+
+option.BORDER_FOG_NETHER=Mlha hranice v Netheru
+option.BORDER_FOG_END=Mlha hranice v Endu
+option.BORDER_FOG_OVERWORLD=Mlha hranice v Overworldu
+
+option.NETHER_PORTAL_VARIATION=Předvolba Netherového portálu
+option.NETHER_PORTAL_VARIATION.comment=Možnost vybrat si mezi různými předvolbami Netherového portálu. §e[*]§r Podpora textur musí být nastavena na Integrované PBR+
+value.NETHER_PORTAL_VARIATION.0=Vanilla
+value.NETHER_PORTAL_VARIATION.1=Complementary
+value.NETHER_PORTAL_VARIATION.2=Fialová prázdnota
+
+option.BIOME_COLORED_NETHER_PORTALS=Chameleónové Netherové portály
+option.BIOME_COLORED_NETHER_PORTALS.comment=Netherové portály v Netheru budou zbarvené podle biomu, ve kterém jsi.
+
+option.NETHER_PORTAL_NOISE=Šum Netherového portálu
+option.NETHER_PORTAL_NOISE.comment=Přidává šum k textuře Netherového portálu, díky čemuž vypadá dynamičtěji.
+value.NETHER_PORTAL_NOISE.0=VYP
+value.NETHER_PORTAL_NOISE.1=Normální
+value.NETHER_PORTAL_NOISE.2=Pixelovaný
+
+option.END_PORTAL_VARIATION=Předvolba Endového portálu
+option.END_PORTAL_VARIATION.comment=Možnost vybrat si mezi různými předvolbami Endového portálu. §e[*]§r Podpora textur musí být nastavena na Integrované PBR+
+value.END_PORTAL_VARIATION.0=Complementary
+value.END_PORTAL_VARIATION.1=Rozmazané šňůry
+value.END_PORTAL_VARIATION.3=Pixelovaná Salsa
+
+option.END_PORTAL_BEAM=Paprsky Endového portálu
+option.END_PORTAL_BEAM.comment=Přidává paprsky světla kolem okrajů Endového portálu. Podobné jako v Minecraft Dungeons. [§e*§r] Funguje pouze na Iris. [§e*§r] Nefunguje na MacOS.
+
+option.SILHOUETTE=Silueta
+option.SILHOUETTE.comment=Po zapnutí budou bloky odvrácené od Slunce černé, užitečné pro snímky obrazovky.
+value.SILHOUETTE.0=VYP
+value.SILHOUETTE.1=Pouze v noci
+value.SILHOUETTE.2=Vždy Zap
+option.SILHOUETTE_BRIGHTNESS=Jas siluety
+
+option.RAIN_ATMOSPHERE=Epická bouřka
+option.RAIN_ATMOSPHERE.comment=Výrazně vylepšuje bouřky, když udeří blesk. §e[*]§r Funguje mnohem lépe s Iris
+
+option.BLUE_SCREEN=Modré pozadí
+option.BLUE_SCREEN.comment=Mění "Modrý beton", "Modrá vlna" a "Modrý koberec" na modré pozadí pro editování videa. Tip 1: Vypni "Rozmazání světla" pro zlepšení oddělení. Tip 2: Dej světla pod modré koberce pro osvětlení. Tip 3: Můžeš vypnout Anti-Aliasing (FXAA) a nastavit Kvalitu detailů na Brambora v menu Nastavení výkonu pro vypnutí všeho filtrování a získání dokonalého oddělení na úrovni pixelů.
+
+option.MIRROR_DIMENSION=Zrcadlová dimenze
+option.MIRROR_DIMENSION.comment=Naučil jsi se umění kouzel a odvážil jsi se vstoupit do zrcadlové dimenze.
+
+option.WORLD_CURVATURE=Zakřivení světa
+option.OVERWORLD_CURVATURE_SIZE=Velikost zakřivení v Overworldu
+option.NETHER_CURVATURE_SIZE=Velikost zakřivení v Netheru
+option.END_CURVATURE_SIZE=Velikost zakřivení v Endu
+
+option.LAVA_VARIATION=Předvolba lávy
+option.LAVA_VARIATION.comment=Žhavé předvolby ve tvém okolí. Vybírej teď!
+value.LAVA_VARIATION.0=Complementary
+value.LAVA_VARIATION.1=Adaptivní šum (Doporučeno)
+value.LAVA_VARIATION.2=Červenající se horkost
+value.LAVA_VARIATION.3=Roztavený sýr
+value.LAVA_VARIATION.4=Tmavé ostrovy
+value.LAVA_VARIATION.5=Chaotický tok
+
+option.LAVA_TEMPERATURE=Teplota lávy
+option.LAVA_TEMPERATURE.comment=Měň teplotu lávy, což ji dělá více červenou nebo bílou.
+
+option.WAVIER_LAVA=Více se vlnící láva
+option.WAVIER_LAVA.comment=Dělá nastavení Vlnící se textura lávy více extrémní v Netheru.
+
+option.LAVA_EMISSION=Svit lávy
+
+option.LAVA_NOISE_INTENSITY=Intenzita šumu lávy
+option.LAVA_NOISE_INTENSITY.comment=Měň průhlednost šumu předvolby lávy.
+
+option.LAVA_NOISE_AMOUNT=Množství šumu lávy
+option.LAVA_NOISE_AMOUNT.comment=Změň množství šumu.
+
+option.LAVA_EDGE_EFFECT=Efekt hrany lávy
+option.LAVA_EDGE_EFFECT.comment=Přidává hranu k lávě, když se dotýká jiných bloků. §e[*]§r Tato funkce pouze funguje, pokud je zapnuto Pokročilé trasování barev v Nastavení výkonu.
+value.LAVA_EDGE_EFFECT.0=VYP
+value.LAVA_EDGE_EFFECT.1=ZAP - Světlý
+value.LAVA_EDGE_EFFECT.2=ZAP - Tmavý
+
+option.NETHER_BRIGHTNESS=Jas Netheru
+option.NETHER_BRIGHTNESS.comment=Změň jas prostředí Netheru.
+
+option.END_ROD_COLOR_PROFILE=Profil Enderitové tyče
+option.END_ROD_COLOR_PROFILE.comment=Měň mezi výchozími barvami Enderitové tyče z Complementary a tvými vlastními. §e[*]§r Podpora textur musí být nastavena na Integrované PBR+
+value.END_ROD_COLOR_PROFILE.0=Complementary
+value.END_ROD_COLOR_PROFILE.1=Vlastní
+value.END_ROD_COLOR_PROFILE.2=Duhový
+value.END_ROD_COLOR_PROFILE.3=Duhový - Pouze Overworld
+option.END_ROD_R=Enderitová tyč - Červená
+option.END_ROD_G=Enderitová tyč - Zelená
+option.END_ROD_B=Enderitová tyč - Modrá
+option.END_ROD_I=Enderitová tyč - Intenzita
+option.RAINBOW_END_ROD_COORD_OFFSET=Posunutí barev duhy
+value.RAINBOW_END_ROD_COORD_OFFSET.0=Synchronizované
+value.RAINBOW_END_ROD_COORD_OFFSET.3=Minimální
+value.RAINBOW_END_ROD_COORD_OFFSET.5=Výchozí
+value.RAINBOW_END_ROD_COORD_OFFSET.7=Střední
+value.RAINBOW_END_ROD_COORD_OFFSET.11=Silné
+value.RAINBOW_END_ROD_COORD_OFFSET.13=Velmi silné
+option.END_ROD_RAINBOW_ANIMATE=Rychlost duhy
+value.END_ROD_RAINBOW_ANIMATE.0.0=VYP
+
+option.REDSTONE_IPBR=IntegrovanéPBR Redstonu
+option.REDSTONE_IPBR.comment=Tato možnost dělá červené pixely na redstonových blocích svítící. Funguje nejlépe s redstonovými balíčky modifikací. §e[*]§r Podpora textur musí být nastavena na Integrované PBR+
+option.REDSTONE_IPBR_R=Detekce červené
+option.REDSTONE_IPBR_R.comment=Změň to, jestli detekce nefunguje s tvým balíčkem modifikací. Zvyš pokud jsou pixely více červené, sniž pokud méně.
+option.REDSTONE_IPBR_G=Detekce zelené
+option.REDSTONE_IPBR_G.comment=Změň to, jestli detekce nefunguje s tvým balíčkem modifikací. Zvyš pokud jsou pixely více zelené, sniž pokud méně.
+option.REDSTONE_IPBR_B=Detekce modré
+option.REDSTONE_IPBR_B.comment=Změň to, jestli detekce nefunguje s tvým balíčkem modifikací. Zvyš pokud jsou pixely více modré, sniž pokud méně.
+option.REDSTONE_IPBR_I=Síla svitu
+option.REDSTONE_IPBR_I.comment=Změň sílu svitu IntegrovanéhoPBR Redstonu
+
+option.LETTERBOXING=Letterboxy
+option.LETTERBOXING.comment=Přidává černé pruhy k hornímu a spodnímu okraji okna.
+value.LETTERBOXING.0=VYP
+value.LETTERBOXING.1=ZAP
+value.LETTERBOXING.2=ZAP - Při plížení
+
+option.ASPECT_RATIO=Poměr stran
+option.ASPECT_RATIO.comment=Změň poměr mezi šířkou a výškou oříznutého obrazu.
+
+option.EXCLUDE_ENTITIES=Vyloučit entity
+option.EXCLUDE_ENTITIES.comment=Změň, jestli by entity měly být vyloučeny z Letterboxů.
+
+option.LETTERBOXING_TRANSPARENCY=Průhlednost Letterboxu
+
+option.BAD_APPLE=Bad Apple
+option.BAD_APPLE.comment=Dělá obrazovku černou, kromě entit, které budou bílé.
+
+option.tonemap=Tónová mapa
+option.tonemap.comment=Mění, která tónová mapa je použita.
+value.tonemap.DoCompTonemap=Výchozí Complementary
+value.tonemap.DoBSLTonemap=BSL/Complementary
+value.tonemap.ACESTonemap=ACES
+value.tonemap.ACESRedModified=ACES upravená červená
+value.tonemap.BurgessTonemap=Burgess
+value.tonemap.LottesTonemap=Lottes
+value.tonemap.uncharted2_tonemap_partial=Uncharted 2 - Částečná
+value.tonemap.uncharted2_filmic=Uncharted 2 - Filmová
+value.tonemap.reinhard2=Reinhard2
+value.tonemap.filmic=Filmová
+value.tonemap.GTTonemap=Gran Turismo
+value.tonemap.uchimura=Uchimura
+value.tonemap.agxTonemap=AgX
+value.tonemap.doSimpleTonemap=Jednoduchá
+
+option.TONEMAP_COMPARISON=Porovnání tónových map
+option.TONEMAP_COMPARISON.comment=Možnost porovnat tónové mapy
+
+option.tonemap_left=Tónová mapa vlevo
+option.tonemap_left.comment=Mění, která tónová mapa je použita.
+value.tonemap_left.DoCompTonemap=Výchozí Complementary
+value.tonemap_left.DoBSLTonemap=BSL/Complementary
+value.tonemap_left.ACESTonemap=ACES
+value.tonemap_left.ACESRedModified=ACES upravená červená
+value.tonemap_left.BurgessTonemap=Burgess
+value.tonemap_left.LottesTonemap=Lottes
+value.tonemap_left.uncharted2_tonemap_partial=Uncharted 2
+value.tonemap_left.uncharted2_filmic=Uncharted 2 - Filmová
+value.tonemap_left.reinhard2=Reinhard2
+value.tonemap_left.filmic=Filmová
+value.tonemap_left.GTTonemap=Gran Turismo
+value.tonemap_left.uchimura=Uchimura
+value.tonemap_left.agxTonemap=AgX
+value.tonemap_left.doSimpleTonemap=Jednoduchá
+
+option.tonemap_right=Tónová mapa vpravo
+option.tonemap_right.comment=Mění, která tónová mapa je použita.
+value.tonemap_right.DoCompTonemap=Výchozí Complementary
+value.tonemap_right.DoBSLTonemap=BSL/Complementary
+value.tonemap_right.ACESTonemap=ACES
+value.tonemap_right.ACESRedModified=ACES upravená červená
+value.tonemap_right.BurgessTonemap=Burgess
+value.tonemap_right.LottesTonemap=Lottes
+value.tonemap_right.uncharted2_tonemap_partial=Uncharted 2
+value.tonemap_right.uncharted2_filmic=Uncharted 2 - Filmová
+value.tonemap_right.reinhard2=Reinhard2
+value.tonemap_right.filmic=Filmová
+value.tonemap_right.GTTonemap=Gran Turismo
+value.tonemap_right.uchimura=Uchimura
+value.tonemap_right.agxTonemap=AgX
+value.tonemap_right.doSimpleTonemap=Jednoduchá
+
+option.ACES_EXPOSURE=Expozice
+option.ACES_EXPOSURE.comment=Uprav celkový jas obrazu.
+option.ACES_WHITE=Bíá křivka
+option.ACES_WHITE.comment=Upravuje, jak snadno světlejší barvy dosahují plné bílé.
+option.ACES_BRIGHTNESS_ROLLOFF=Úpadek jasu
+option.ACES_BRIGHTNESS_ROLLOFF.comment=Upravuje úpadek jasu pro tónovou mapu ACES.
+
+option.AGX_LOOK=Vzhled AgX
+value.AGX_LOOK.0=Výchozí
+value.AGX_LOOK.1=Zlatý
+value.AGX_LOOK.2=Úderný
+value.AGX_LOOK.3=Vlastní
+option.AGX_R=AgX - Červená
+option.AGX_G=AgX - Zelená
+option.AGX_B=AgX - Modrá
+option.AGX_POWER=Síla AgX
+option.AGX_SATURATION=Sytost AgX
+
+option.COLOR_MULTIPLIER_COMPARISON=Porovnání násobičů barev
+option.COLOR_MULTIPLIER_COMPARISON.comment=Tato možnost ti umožní snadno porovnat násobče barev osvětlení a atmosféry k výchozím hodnotám shaderu.
+
+option.REFLECTIVE_WORLD=Vyleštěný svět
+option.REFLECTIVE_WORLD.comment=Celý svět je zrcadlo, ale nemůžeš vidět sebe. RIP.
+
+option.WAVE_EVERYTHING=Vlnit vše
+option.WAVE_EVERYTHING.comment=Dale a tu cuerpo alegría Macarena.
+
+option.INTERACTIVE_FOLIAGE=Interaktivní zeleň
+option.INTERACTIVE_FOLIAGE.comment=Zeleň se bude ohýbat od hráče pro více pohlcující zážitek.
+
+option.EMIN_BOAT=Emin Č L U N
+option.EMIN_BOAT.comment=Jeď na člunech, jak to zamýšlel Emin.
+
+option.MONOTONE_WORLD=Monotónní svět
+option.MONOTONE_WORLD.comment=Zbav svět barev! Wuuuuw!
+value.MONOTONE_WORLD.0=VYP
+value.MONOTONE_WORLD.1=Bílý
+value.MONOTONE_WORLD.2=Černý
+value.MONOTONE_WORLD.3=Šedý
+
+option.SEASONS=Roční období
+option.SEASONS.comment=Mění barvy prostředí podle času světa. V zimě je také sníh! §e[*]§r Je doporučeno nastavit Podporu textur na Integrované PBR+
+value.SEASONS.0=VYP
+value.SEASONS.1=Cyklické
+value.SEASONS.2=Léto
+value.SEASONS.3=Podzim
+value.SEASONS.4=Zima
+value.SEASONS.5=Jaro
+
+option.SEASON_START=Počáteční období
+option.SEASON_START.comment=Roční období, kterým začíná cyklus.
+value.SEASON_START.0=Léto
+value.SEASON_START.1=Podzim
+value.SEASON_START.2=Zima
+value.SEASON_START.3=Jaro
+
+option.SEASON_LENGTH=Doba trvání období
+option.SEASON_LENGTH.comment=Změň dobu trvání ročního období v Minecraftových dnech.
+value.SEASON_LENGTH.1=1 Minecraftový den
+suffix.SEASON_LENGTH=\ Minecraftové/ých dny/ů
+
+option.SEASON_TRANSITION_START=Začátek přechodu
+option.SEASON_TRANSITION_START.comment=Přechod na další roční období začne, když je dosaženo toto procento sezóny.
+value.SEASON_TRANSITION_START.0=Okamžitě
+value.SEASON_TRANSITION_START.1=Polovina období
+value.SEASON_TRANSITION_START.2=66% období
+value.SEASON_TRANSITION_START.3=75% období
+value.SEASON_TRANSITION_START.4=80% období
+value.SEASON_TRANSITION_START.9=90% období
+
+option.SEASON_COLOR_DESATURATION=Vyblednutí barev
+option.SEASON_COLOR_DESATURATION.comment=Barvy prostředí budou více vybledlé během zimy a podzimu z nastavení ročních období.
+
+option.SNOW_CONDITION=Podmínka sněhu
+option.SNOW_CONDITION.comment=Určuje podmínku/y, aby se objevil sníh.
+value.SNOW_CONDITION.0=Sněžný biom a déšť
+value.SNOW_CONDITION.1=Sněžný biom
+value.SNOW_CONDITION.2=Všude
+
+option.SNOW_NOISE_INTENSITY=Intenzita šumu
+option.SNOW_NOISE_INTENSITY.comment=Změň, jak silný je šum sněhu.
+
+option.SNOW_NOISE_REMOVE_INTENSITY=Intenzita odstranění sněhu
+
+option.SNOW_SIZE=Rozlišení sněhu
+option.SNOW_SIZE.comment=Změň rozlišení nebo velikost šumu.
+value.SNOW_SIZE.0=Auto
+
+option.MELTING_RADIUS=Vzdálenost tání
+option.MELTING_RADIUS.comment=Změň, jak daleko od zdrojů světla bude sníh tát.
+
+option.SNOW_TRANSPARENCY=Průhlednost sněhu
+option.SNOW_TRANSPARENCY.comment=Změň průhlednost sněhu.
+
+option.SSS_SEASON_SNOW=SSS sněhu období
+option.SSS_SEASON_SNOW.comment=Přidává podpovrchové rozptylování ke sněhu z nastavení ročního období.
+
+option.WINTER_GREEN_AMOUNT=Množství zeleně v zimě
+
+option.LESS_LEAVES=Méně listí
+value.LESS_LEAVES.0=VYP
+
+option.AUTUMN_CONDITION=Pouze v lese
+
+option.AUTUMN_NOISE_SIZE=Velikost šumu barev
+option.AUTUMN_NOISE_SIZE.comment=Velikost šumu, který vytváří přechod barev listí.
+
+option.LEAVES_ON_GROUND=Listy na zemi
+option.LEAVES_ON_GROUND.comment=Na podzim budou na zemi listy.
+
+option.EXTRA_FLOOR_LEAVES_IN_FORESTS=Listy navíc na zemi v lesích
+option.EXTRA_FLOOR_LEAVES_IN_FORESTS.comment=V lesích bude více listů na zemi.
+
+option.AUTUMN_STRENGTH=Síla podzimu
+option.AUTUMN_STRENGTH.comment=Změň přepsání barvy na podzim.
+
+option.FLOWER_DENSITY=Hustota květin
+option.FLOWER_SIZE=Rozlišení květin
+option.FLOWER_AMOUNT=Množství květin
+value.FLOWER_AMOUNT.0=VYP
+option.SPRING_GREEN_INTENSITY=Intenzita jara
+option.EMISSIVE_SPRING_FLOWERS=Svítící květiny na jaře
+option.EMISSIVE_SPRING_FLOWERS.comment=Možnost zapnout svícení jarních květin z ročních období, pokud používáš možnost Svítící květiny na stránce Materiály nastavení Euphoria
+option.DISABLE_SPRING_IN_DRY_BIOMES=Vypnout v suchých biomech
+
+option.SUMMER_STRENGTH=Síla léta
+
+option.INTENSE_DEEP_DARK=Intenzivní Temná hlubina
+option.INTENSE_DEEP_DARK.comment=Biom Temná hlubina bude více intenzivní. §e[*]§r Hráč musí mít aplikovaný efekt Temnota.
+
+option.END_AMBIENT_INFLUENCE=Vliv barev prostředí
+option.END_AMBIENT_INFLUENCE.comment=Barva okolí je při hodnotě 0.00 výchozí a při hodnotě 1.00 uživatelem definovaná.
+option.END_AMBIENT_R_NEW=Barva prostředí - Červená
+option.END_AMBIENT_G_NEW=Barva prostředí - Zelená
+option.END_AMBIENT_B_NEW=Barva prostředí - Modrá
+option.END_AMBIENT_I=Barva prostředí - Intenzita
+
+option.ATLAS_ROTATION=Otočení atlasu
+option.ATLAS_ROTATION.comment=:).
+
+option.NETHER_NOISE=Šum oblohy Netheru
+option.NETHER_NOISE.comment=Dělá oblohu Netheru nad jeho stropem zajímavější.
+value.NETHER_NOISE.0=VYP
+value.NETHER_NOISE.1=ZAP
+
+option.MCBL_MAIN_DEFINE=Barevné osvětlení Euphoria
+option.MCBL_MAIN_DEFINE.comment=Zapíná vícebarevná světla bloků. Nastav na ACT + Prostor obrazovky pro použití systému v prostoru obrazovky spolu s Pokročilým trasováním barev. ACT + SSBL + Podpora dynamického osvětlení může způsobit nesprávné výsledky v modovaných prostředích - tato možnost by měla být používána pouze ve Vanilla Minecraftu s modem dynamického osvětlení. §e[*]§rFunguje pouze na 1.16.5 a vyšších verzích nebo na Angelica.
+value.MCBL_MAIN_DEFINE.0=VYP
+value.MCBL_MAIN_DEFINE.1=Prostor obrazovky
+value.MCBL_MAIN_DEFINE.2=ACT + Prostor obrazovky
+value.MCBL_MAIN_DEFINE.3=ACT + SSBL + Podpora dynamického osvětlení
+
+option.MCBL_INFLUENCE=Vliv vícebarevného světla bloků
+option.MCBL_INFLUENCE.comment=Určuje, jak moc bude vícebarevné světlo bloků ovlivňovat výchozí barvu světla bloků.
+
+option.SSS_SNOW_ICE=SSS sněhu a ledu
+option.SSS_SNOW_ICE.comment=Přidává podpovrchové rozptylování k blokům sněhu a ledu.
+
+option.BEDROCK_NOISE=Šum podloží
+option.BEDROCK_NOISE.comment=Přidává efekt šumu pod podložím v Netheru a Overworldu.
+
+option.SOUL_SAND_VALLEY_OVERHAUL=Přepracování Údolí písku duší
+option.SOUL_SAND_VALLEY_OVERHAUL.comment=Dělá ohnivé bloky, entity a částice modré v biomu Údolí písku duší.
+
+option.PURPLE_END_FIRE=Fialový oheň v Endu
+option.PURPLE_END_FIRE.comment=Dělá ohnivé bloky, entity a částice fialové v Endu. §e[*]§r Pro nejlepší výsledky musí být možnost Podpora textur nastavena na Integrované PBR+.
+
+option.NO_RAIN_ABOVE_CLOUDS=Žádný déšť nad mraky
+option.NO_RAIN_ABOVE_CLOUDS.comment=Vypíná déšť nad mraky. Nefunguje dobře, pokud byla změněna výška Vanilla mraků se zapnutými Vanilla mraky.
+
+option.RAIN_FADE_TIMER=Časovač slábnutí deště
+option.RAIN_FADE_TIMER.comment=Změň, jak dlouho trvá efektům souvisejícím s deštěm postupné sílení nebo slábnutí, když začne nebo přestane pršet. Ovlivněné efekty jsou mraky, dešťové kaluže, mlha, duha a další. §e[*]§r Funguje pouze na Iris a derivacích.
+
+option.RAIN_TEX_OPACITY_MULTIPLIER=Násobič průhlednosti deště
+option.RAIN_TEX_OPACITY_MULTIPLIER.comment=Změň průhlednost textury částic deště, takže déšť vypadá těžší nebo lehčí.
+option.SNOW_TEX_OPACITY_MULTIPLIER=Násobič průhlednosti sněhu
+option.SNOW_TEX_OPACITY_MULTIPLIER.comment=Změň průhlednost textury částic sněhu, takže sníh vypadá těžší nebo lehčí.
+
+option.DOF_SNEAKING=Rozmazání při plížení a s dalekohledem
+option.DOF_SNEAKING.comment=Aktivuje možnost rozmazání světa pouze při plížení a držení dalekohledu.
+
+option.CLEAR_SKY_WHEN_RAINING=Čiřejší nebe během deště
+option.CLEAR_SKY_WHEN_RAINING.comment=Dělá hvězdy a jiné efekty oblohy trochu viditelné během deště.
+
+option.RETRO_ON=Globální přepínač Retro
+
+option.RETRO_LOOK=Retro vzhled
+option.RETRO_LOOK.comment=Měň mezi různými předvolbami Retro efektu.
+value.RETRO_LOOK.0=VYP
+value.RETRO_LOOK.1=Obrysy
+value.RETRO_LOOK.2=Obrysy - Pouze s nočním viděním
+
+option.RETRO_LOOK_R=Retro vzhled - Červená
+option.RETRO_LOOK_G=Retro vzhled - Zelená
+option.RETRO_LOOK_B=Retro vzhled - Modrá
+option.RETRO_LOOK_I=Retro vzhled - Intenzita
+
+option.CURVE_DISPLAY=Zakřivený displej
+option.CURVE_DISPLAY.comment=Dělá displej zakřivený.
+option.CURVATURE_AMOUNT=Množství zakřivení
+option.BORDER_AMOUNT=Množství hranice
+option.SCREEN_ROUNDNESS=Zaoblení obrazovky
+
+option.STATIC_NOISE=Statický šum
+value.STATIC_NOISE.0=VYP
+option.MIN_STATIC_STRENGTH=Minimální síla
+option.MAX_STATIC_STRENGTH=Maximální síla
+option.STATIC_SPEED=Rychlost statického šumu
+
+option.HORIZONTAL_NOISE=Vodorovný šum
+value.HORIZONTAL_NOISE.0=VYP
+option.HORIZONTAL_NOISE_INTENSITY=Intenzita vodorovného šumu
+option.HORIZONTAL_NOISE_SPEED=Rychlost vodorovného šumu
+
+option.VERTICAL_SCREEN_DISPLACEMENT=Svislé přesunutí obrazovky
+option.VERTICAL_EDGE_GLITCH=Intenzita narušení okraje
+value.VERTICAL_EDGE_GLITCH.1.00=VYP
+option.VERTICAL_SCROLL_SPEED=Rychlost posouvání
+value.VERTICAL_SCROLL_SPEED.0.00=VYP
+option.VERTICAL_STUTTER_SPEED=Rychlost sekání se
+value.VERTICAL_STUTTER_SPEED.0.00=VYP
+option.VERTICAL_SCROLL_FREQUENCY=Častost posunutí
+option.VERTICAL_STUTTER_FREQUENCY=Častost sekání se
+
+option.PIXELATED_SCREEN_SIZE=Velikost pixelů
+option.PIXELATED_SCREEN_SIZE.comment=Aktivuj efekt pixelizace obrazovky a změň velikost pixelů.
+value.PIXELATED_SCREEN_SIZE.0=VYP
+option.PIXELATED_SCREEN_SMOOTHNESS=Hladkost pixelů
+option.PIXELATED_SCREEN_SMOOTHNESS.comment=Mění hladkost efektu pixelizace obrazovky. Vyšší hodnoty způsobí, že se do sebe budou pixely více mísit.
+option.COLOR_LEVELS=Posterizace
+option.COLOR_LEVELS.comment=Zmenšuje počet barev v obrazu pro přidání retro vzhledu.
+option.POSTERIZE_STRENGTH=Síla posterizace
+option.POSTERIZE_STRENGTH.comment=Mění, jak silný je efekt posterizace.
+value.POSTERIZE_STRENGTH.0.0=VYP
+
+option.PALETTE_SWAP=Paleta barev
+option.PALETTE1R=Barva 1 Červená
+option.PALETTE1G=Barva 1 Zelená
+option.PALETTE1B=Barva 1 Modrá
+option.PALETTE2R=Barva 2 Červená
+option.PALETTE2G=Barva 2 Zelená
+option.PALETTE2B=Barva 2 Modrá
+option.PALETTE3R=Barva 3 Červená
+option.PALETTE3G=Barva 3 Zelená
+option.PALETTE3B=Barva 3 Modrá
+option.PALETTE4R=Barva 4 Červená
+option.PALETTE4G=Barva 4 Zelená
+option.PALETTE4B=Barva 4 Modrá
+option.PALETTE5R=Barva 5 Červená
+option.PALETTE5G=Barva 5 Zelená
+option.PALETTE5B=Barva 5 Modrá
+option.PALETTE6R=Barva 6 Červená
+option.PALETTE6G=Barva 6 Zelená
+option.PALETTE6B=Barva 6 Modrá
+option.USE_TEXTURE_PALETTE=Paleta z textury
+option.USE_TEXTURE_PALETTE.comment=Používá PNG obrázek palety ze složky palettes místo GUI nastavení.
+value.USE_TEXTURE_PALETTE.0=Vyp
+
+option.SCREEN_DITHERING=Dithering
+option.SCREEN_DITHERING.comment=Přidává Dithering k obrazovce pro simulaci více barev, než umožňuje paleta.
+option.SCREEN_DITHER_AMOUNT=Množství Ditheringu
+option.SCREEN_DITHER_I=Intenzita Ditheringu
+
+option.SCANLINE=Skenovací linka
+value.SCANLINE.0=VYP
+option.SCANLINE_FREQUENCY=Častost skenovací linky
+option.SCANLINE_SPEED=Rychlost skenovací linky
+option.SCANLINE_AMOUNT=Množství skenovací linky
+option.SCANLINE_NEW_MONOCHROME=Monochromatická barva
+value.SCANLINE_NEW_MONOCHROME.false=VYP
+value.SCANLINE_NEW_MONOCHROME.true=ZAP
+option.SCANLINE_NEW_DIRECTION=Směr skenovací linky
+value.SCANLINE_NEW_DIRECTION.false=Vodorovný
+value.SCANLINE_NEW_DIRECTION.true=Svislý
+option.SCANLINE_R=Násobič červené barvy
+option.SCANLINE_G=Násobič zelené barvy
+option.SCANLINE_B=Násobič modré barvy
+
+option.HALFTONE=Půltón
+option.HALFTONE_MONOCHROME=Odstíny šedi
+option.HALFTONE_BRIGHTNESS=Jas půltónu
+option.HALFTONE_SCALE=Velikost teček
+option.HALFTONE_ANGLE=Úhel teček
+
+option.SPEED_LINES=Linky rychlosti
+value.SPEED_LINES.0=VYP
+value.SPEED_LINES.1=ZAP - Vysoká rychlost
+value.SPEED_LINES.2=ZAP - Vysoká rychlost a běh
+value.SPEED_LINES.3=ZAP
+option.SPEED_LINES_TRANSPARENCY=Průhlednost linek rychlosti
+option.SPEED_LINES_SPEED=Intenzita
+option.SPEED_LINE_THICKNESS=Velikost linek
+
+option.CAMERA_NOISE_OVERLAY=Překrytí kamery šumem
+value.CAMERA_NOISE_OVERLAY.0=VYP
+value.CAMERA_NOISE_OVERLAY.1=Šum 1
+option.CAMERA_NOISE_OVERLAY_INTENSITY=Intenzita šumu
+
+option.LONG_EXPOSURE=Dlouhá expozice
+option.LONG_EXPOSURE.comment=Vypni GUI stisknutím F1 a stůj na místě. Nebeský režim je speciálně vytvořen pro vylepšení vzhledu hvězd a jasných objektů, zatímco objekty v Temporálním režimu by časem zeslabovaly.
+value.LONG_EXPOSURE.0=VYP
+value.LONG_EXPOSURE.1=Nebeská akumulace
+value.LONG_EXPOSURE.2=Temporální vážení
+
+option.TILT_SHIFT=Naklonění X
+option.TILT_SHIFT.comment=Efekt Tilt-Shift - vodorovný
+value.TILT_SHIFT.0=VYP
+
+option.TILT_SHIFT2=Naklonění Y
+option.TILT_SHIFT2.comment=Efekt Tilt-Shift - svislý
+value.TILT_SHIFT2.0=VYP
+
+option.DOF_VIEW_FOCUS_NEW2=§cRovina zaměření s dalekohledem
+option.DOF_VIEW_FOCUS_NEW2.comment=Dělá rovinu zaměření Hloubky ostrosti viditelnou, když je viditelné GUI a hráč drží dalekohled.
+
+option.DOF_SHAPE=Tvar
+option.DOF_SHAPE.comment=Tvar Hloubky ostrosti
+value.DOF_SHAPE.0=Původní
+value.DOF_SHAPE.3=Trojúhelník
+value.DOF_SHAPE.4=Čtverec
+value.DOF_SHAPE.5=Pětiúhelník
+value.DOF_SHAPE.6=Šestiúhelník
+value.DOF_SHAPE.7=Sedmiúhelník
+value.DOF_SHAPE.8=Osmiúhelník
+
+option.DOF_POLYGON_SAMPLES=Vzorky polygonů
+option.DOF_POLYGON_SAMPLES.comment=Počet vzorků, které získat pro tvary polygonů. Při vyšších hodnotách bude tvar hladší. §c[-]§r Výkon se při vyšších hodnotách snižuje.
+
+option.DOF_POLYGON_RINGS=Množství prstenců
+option.DOF_POLYGON_RINGS.comment=Počet prstenců, které používat pro tvary polygonů. Při vyšších hodnotách bude tvar hladší. §c[-]§r Výkon se při vyšších hodnotách snižuje.
+
+option.DOF_SHAPE_ROTATION_DEGREES=Otočení
+option.DOF_SHAPE_ROTATION_DEGREES.comment=Otočení tvaru hloubky ostrosti ve stupních.
+
+option.LET_THERE_BE_COLORS=BUDIŽ BARVY
+
+option.MOSS_NOISE=Šum mechu
+option.MOSS_SIZE=Velikost pixelů
+option.MOSS_NOISE_INTENSITY=Intenzita šumu
+option.MOSS_NOISE_REMOVE_INTENSITY=Intenzita odstranění šumu
+option.MOSS_TRANSPARENCY=Průhlednost mechu
+option.MOSS_IN_CAVES=Mech se objeví
+value.MOSS_IN_CAVES.0=Pouze v Bujných jeskyních
+value.MOSS_IN_CAVES.1=Všude
+value.MOSS_IN_CAVES.2=Nikde
+option.MOSS_SIDE_INTENSITY=Intenzita mechu na stěnách
+option.MOSS_NOISE_DISTANCE=Vzdálenost šumu mechu
+
+option.SAND_NOISE=Šum písku
+option.SAND_CONDITION=Podmínka písku
+value.SAND_CONDITION.0=Pouze v písčitých biomech
+value.SAND_CONDITION.1=Všechny teplé biomy
+value.SAND_CONDITION.2=Všude
+option.SAND_SIZE=Velikost pixelů
+option.SAND_NOISE_INTENSITY=Intenzita šumu
+option.SAND_NOISE_REMOVE_INTENSITY=Intenzita odstranění šumu
+option.SAND_TRANSPARENCY=Průhlednost písku
+option.SAND_IN_CAVES=Písek v jeskyních
+value.SAND_IN_CAVES.true=Zapnutý
+value.SAND_IN_CAVES.false=Vypnutý
+option.SAND_SIDE_INTENSITY=Intenzita písku na stěnách
+option.SAND_NOISE_DISTANCE=Vzdálenost šumu písku
+
+option.MAIN_GRID_INTERVAL=Hlavní mřížka
+value.MAIN_GRID_INTERVAL.1=VYP
+option.SUB_GRID_INTERVAL=Podmřížka
+value.SUB_GRID_INTERVAL.1=VYP
+option.GRID_CONDITION=Podmínka mřížky
+value.GRID_CONDITION.0=Žádná podmínka
+value.GRID_CONDITION.1=Plížení
+value.GRID_CONDITION.2=Držení dalekohledu
+
+option.EMISSIVE_FLOWERS=Svítící květiny
+value.EMISSIVE_FLOWERS.0=VYP
+value.EMISSIVE_FLOWERS.1=ZAP
+value.EMISSIVE_FLOWERS.2=ZAP - Tma nebo pršení
+
+option.EMISSIVE_FLOWERS_TYPE=Typ svítících květin
+value.EMISSIVE_FLOWERS_TYPE.0=Všechny
+value.EMISSIVE_FLOWERS_TYPE.1=Studené barvy
+value.EMISSIVE_FLOWERS_TYPE.2=Teplé barvy
+
+option.EMISSIVE_FLOWERS_STRENGTH=Intenzita svícení
+
+option.DISTANCE_MIN_LIGHT=Slábnutí osvětlení v jeskyních
+option.DISTANCE_MIN_LIGHT.comment=Jeskyně budou tmavší s větší vzdáleností od hráče. Vylepšuje vzhled jeskyní s vyšší hodnotou Osvětlení v jeskyních.
+value.DISTANCE_MIN_LIGHT.0=VYP
+
+option.EMISSIVE_DRAGON_EGG=Svítící Dračí vejce
+
+option.VANILLA_ENTITY_SHADOWS=Stíny entit Vanilla
+option.VANILLA_ENTITY_SHADOWS.comment=Zapíná stíny entit z Vanilla Minecraftu, když jsou vypnuté stíny v reálném čase.
+
+option.FROGLIGHT_SATURATION=Sytost žabosvitu
+value.FROGLIGHT_SATURATION.1=Výchozí
+value.FROGLIGHT_SATURATION.2=2x
+value.FROGLIGHT_SATURATION.3=3x
+
+option.RENKO_CUT=Renkoův řez EP
+option.RENKO_CUT.comment=Zaslouženo po spravedlivém boji v Complisseum.
+
+option.GLITTER_RAIN=Třpytivý déšť
+option.GLITTER_RAIN.comment=Posyp kapky deště třpytkami a strav den třpytěním se.
+value.GLITTER_RAIN.0=VYP
+value.GLITTER_RAIN.1=ZAP - Náhodný čas
+value.GLITTER_RAIN.2=ZAP - Vždy
+
+option.HAND_BLOCKLIGHT_FLICKERING=Blikání světla v ruce
+value.HAND_BLOCKLIGHT_FLICKERING.0=VYP
+
+option.SSS_STRENGTH=Podpovrchové rozptylování
+value.SSS_STRENGTH.0=VYP
+value.SSS_STRENGTH.1=ZAP
+
+option.PIXEL_WATER=Procedurální pixelovaná voda
+option.PIXEL_WATER.comment=Procedurálně generovaná pixelovaná textura vody.
+value.PIXEL_WATER.0=VYP
+value.PIXEL_WATER.1=ZAP
+
+option.PIXELATED_WATER_REFLECTIONS=Pixelované odrazy vody
+option.PIXELATED_WATER_REFLECTIONS.comment=Pixeluje odrazy vody.
+
+option.COMP_WATER_TWEAKS=Úprava vody Complementary
+option.COMP_WATER_TWEAKS.comment=Úprava barvy vody dělaná shaderem
+
+option.CAVE_SMOKE=Kouř v jeskyních
+option.CAVE_SMOKE.comment=Přidává efekt kouře k volumetrické mlze světla bloků v jeskyni. §c[-]§r Tento efekt může mít dopad na výkon. §e[*]§r Tento efekt pouze funguje, pokud je zapnuté Pokročilé trasování barev v Nastavení výkonu.
+
+option.WAVING_SUGAR_CANE=Vlající Cukrová třtina
+
+option.SUN_GLARE_AMOUNT=Množství záře Slunce
+value.SUN_GLARE_AMOUNT.0=VYP
+
+option.MOON_GLARE_AMOUNT=Množství záře Měsíce
+value.MOON_GLARE_AMOUNT.0=VYP
+
+option.SUN_MOON_IPBR=IPBR Slunce/Měsíce
+option.SUN_MOON_IPBR.comment=Zapni nebo vypni IntegrovanéPBR pro Slunce a Měsíc
+value.SUN_MOON_IPBR.0=VYP
+value.SUN_MOON_IPBR.1=Pouze Slunce
+value.SUN_MOON_IPBR.2=Pouze Měsíc
+value.SUN_MOON_IPBR.3=Slunce a Měsíc
+
+option.DAYLIGHT_STARS=Hvězdy ve dne
+option.DAYLIGHT_STARS.comment=Zapne hvězdy během dne
+
+option.FROZEN_TIME=Zmrazený čas
+option.FROZEN_TIME.comment=Zmrazí čas animace shaderu, takže efekty shaderu, které používají animaci založenou na snímkové frekvenci budou zmrazeny a umožní tak dobré porovnávací snímky obrazovky.
+
+option.DARKER_DEPTH_OCEANS=Tmavší hluboké oceány
+option.DARKER_DEPTH_OCEANS.comment=Světlo klesá s hloubkou oceánu
+value.DARKER_DEPTH_OCEANS.0=VYP
+
+option.WEATHER_TEX_R=Textura počasí - Červená
+option.WEATHER_TEX_G=Textura počasí - Zelená
+option.WEATHER_TEX_B=Textura počasí - Modrá
+
+option.EMISSIVE_SOUL_SAND=Svítící oči Písku duší
+option.EMISSIVE_SOUL_SAND.comment=Oči bloku Písek duší budou svítit, když na něm stojíš. §e[*]§r Podpora textur musí být nastavena na Integrované PBR+. Pouze výchozí Vanilla textura.
+
+option.BEACON_BEAM_EMISSION=Svícení paprsku Majáku
+option.BEACON_BEAM_EMISSION.comment=Změň sílu svícení paprsku Majáku
+
+option.PINKER_CHERRY_LEAVES=Růžovější Třešňové listí
+
+option.DISCARD_FOLIAGE_SHADOW=Odstranit stíny zeleně
+option.DISCARD_FOLIAGE_SHADOW.comment=Zabraňuje vrhání stínu zeleni, jako je třeba tráva, květiny, sazenice, plodiny a podobné rostliny. §c[-]§r Tento efekt NEvylepšuje výkon a je to pouze vizuální změna, vlastně technicky vzato zhoršuje výkon o velmi malé množství.
+
+option.LIGHTMAP_CURVES=Křivky světelné mapy
+option.LIGHTMAP_CURVES.comment=Změň křivky světelné mapy světa.
+option.UPPER_LIGHTMAP_CURVE=Horní křivka světelné mapy
+option.UPPER_LIGHTMAP_CURVE.comment=Změň intenzitu horní křivky světelné mapy
+option.LOWER_LIGHTMAP_CURVE=Dolní křivka světelné mapy
+option.LOWER_LIGHTMAP_CURVE.comment=Změň intenzitu dolní křivky světelné mapy
+
+option.ALTERNATIVE_AMETHYST_STYLE=Alternativní Ametyst
+value.ALTERNATIVE_AMETHYST_STYLE.0=Výchozí
+value.ALTERNATIVE_AMETHYST_STYLE.1=Lesklá růžová
+
+option.SHOCKWAVE=Rázová vlna
+value.SHOCKWAVE.0=VYP
+value.SHOCKWAVE.1=Kruh
+value.SHOCKWAVE.2=Čtverec
+option.SHOCKWAVE.comment=Pliž se a zjisti!
+
+option.STAR_LAYER_OW=Vrstva hvězd
+option.STAR_LAYER_OW.comment=Přidává vrstvu větších nebo menších hvězd k stávajícím hvězdám
+value.STAR_LAYER_OW.0=VYP
+value.STAR_LAYER_OW.1=Menší vrstva
+value.STAR_LAYER_OW.2=Větší vrstva
+value.STAR_LAYER_OW.3=Obě vrstvy
+
+option.STAR_LAYER_END=Vrstva hvězd
+option.STAR_LAYER_END.comment=Přidává vrstvu větších nebo menších hvězd k stávajícím hvězdám
+value.STAR_LAYER_END.0=VYP
+value.STAR_LAYER_END.1=Menší vrstva
+value.STAR_LAYER_END.2=Větší vrstva
+value.STAR_LAYER_END.3=Obě vrstvy
+
+option.STAR_ROUNDNESS_END=Kulaté hvězdy
+value.STAR_ROUNDNESS_END.0=VYP
+
+option.STAR_ROUNDNESS_OW=Kulaté hvězdy
+value.STAR_ROUNDNESS_OW.0=VYP
+
+option.STAR_SOFTNESS_OW=Jemnost hvězd
+
+option.STAR_SOFTNESS_END=Jemnost hvězd
+
+option.STAR_COLOR_1_OW_R=Hvězda 1 - Červená
+option.STAR_COLOR_1_OW_G=Hvězda 1 - Zelená
+option.STAR_COLOR_1_OW_B=Hvězda 1 - Modrá
+
+option.STAR_COLOR_2_OW_R=Hvězda 2 - Červená
+option.STAR_COLOR_2_OW_G=Hvězda 2 - Zelená
+option.STAR_COLOR_2_OW_B=Hvězda 2 - Modrá
+
+option.STAR_COLOR_3_OW_R=Hvězda 3 - Červená
+option.STAR_COLOR_3_OW_G=Hvězda 3 - Zelená
+option.STAR_COLOR_3_OW_B=Hvězda 3 - Modrá
+
+option.STAR_COLOR_VARIATION_OW=Intenzita barev
+value.STAR_COLOR_VARIATION_OW.0.0=VYP
+
+option.STAR_COLOR_1_END_R=Hvězda 1 - Červená
+option.STAR_COLOR_1_END_G=Hvězda 1 - Zelená
+option.STAR_COLOR_1_END_B=Hvězda 1 - Modrá
+
+option.STAR_COLOR_2_END_R=Hvězda 2 - Červená
+option.STAR_COLOR_2_END_G=Hvězda 2 - Zelená
+option.STAR_COLOR_2_END_B=Hvězda 2 - Modrá
+
+option.STAR_COLOR_3_END_R=Hvězda 3 - Červená
+option.STAR_COLOR_3_END_G=Hvězda 3 - Zelená
+option.STAR_COLOR_3_END_B=Hvězda 3 - Modrá
+
+option.STAR_COLOR_VARIATION_END=Intenzita barev
+value.STAR_COLOR_VARIATION_END.0.0=VYP
+
+option.CELESTIAL_BOTH_HEMISPHERES=Nebeské objekty po celé obloze
+option.CELESTIAL_BOTH_HEMISPHERES.comment=Vykresluje nebeské objekty (hvězdy, Slunce, Měsíc, mlhovina) přes celou oblohu a ne jenom nad horizontem, což vytváří více pohlcující efekt skyboxu.
+
+option.SHOOTING_STARS=Padající hvězdy
+option.SHOOTING_STARS_SIZE=Velikost
+option.SHOOTING_STARS_SIZE.comment=Změň velikost padajících hvězd. Při vyšší hodnotě budou větší padající hvězdy.
+option.SHOOTING_STARS_SPEED=Rychlost
+option.SHOOTING_STARS_CHANCE=Šance
+option.SHOOTING_STARS_CHANCE.comment=Šance, že se objeví padající hvězda - při vyšší hodnotě se budou padající hvězdy objevovat častěji.
+option.SHOOTING_STARS_COUNT=Množství
+option.SHOOTING_STARS_COUNT.comment=Jak moc padajících hvězd se objeví na obloze najednou
+option.SHOOTING_STARS_LINE_THICKNESS=Tloušťka čáry
+option.SHOOTING_STARS_LINE_THICKNESS.comment=Změň šířku čáry za padajícími hvězdami.
+option.SHOOTING_STARS_TRAIL_LENGTH=Délka čáry
+option.SHOOTING_STARS_TRAIL_LENGTH.comment=Změň délku čáry za padajícími hvězdami.
+
+option.HIDE_VANILLA_STARS=Skrýt Vanilla hvězdy
+option.HIDE_VANILLA_STARS.comment=Skryje na obloze hvězdy Vanilla Minecraftu.
+
+option.SITUATIONAL_GLOWING_TRIMS=Situační svítící Ornamenty
+option.SITUATIONAL_GLOWING_TRIMS.comment=Ornamenty zbroje budou pouze svítit v jeskyních a v noci. §e[*]§r Svítící Ornamenty zbroje musí být zapnuté, aby toto fungovalo.
+
+option.DO_IPBR_LIGHTS=Světla ACT IPBR
+option.DO_IPBR_LIGHTS.comment=Toto nastavení dělá bloky, které normálně nejsou zdrojem světla, svítící, pokud jsou svítící v shaderu. (Doporučeno zapnout)
+
+option.NIGHT_DESATURATION=Vyblednutí ve tmě
+option.NIGHT_DESATURATION.comment=Snižuje sytost barev prostředí ve tmavých oblastech.
+
+option.NIGHT_DESATURATION_OW=Intenzita v Overworldu
+value.NIGHT_DESATURATION_OW.0=VYP
+value.NIGHT_DESATURATION_OW.300=Černobílá
+
+option.NIGHT_DESATURATION_NETHER=Intenzita v Netheru
+value.NIGHT_DESATURATION_NETHER.0=VYP
+value.NIGHT_DESATURATION_NETHER.300=Černobílá
+
+option.NIGHT_DESATURATION_END=Intenzita v Endu
+value.NIGHT_DESATURATION_END.0=VYP
+value.NIGHT_DESATURATION_END.300=Černobílá
+
+option.NIGHT_CAVE_DESATURATION=Vyblednutí v jeskyních
+option.NIGHT_CAVE_DESATURATION.comment=Snižuje sytost barev prostředí v jeskyních.
+value.NIGHT_CAVE_DESATURATION.0=VYP
+
+option.NIGHT_DESATURATION_REMOVE_NEAR_LIGHTS=Odstranit v blízkosti světel
+option.NIGHT_DESATURATION_REMOVE_NEAR_LIGHTS.comment=Odstraňuje efekt vyblednutí v blízkosti zdrojů světla.
+option.NIGHT_DESATURATION_REMOVE_LIGHTS_IN_HAND=Odstranit se světlem v ruce
+option.NIGHT_DESATURATION_REMOVE_LIGHTS_IN_HAND.comment=Odstraňuje efekt vyblednutí při držení zdroje světla.
+option.NIGHT_DESATURATION_REMOVE_NIGHT_VISION=Odstranit s Nočním viděním
+option.NIGHT_DESATURATION_REMOVE_NIGHT_VISION.comment=Odstraňuje efekt vyblednutí při používání Nočního vidění.
+option.PURKINJE_RENDER_DISTANCE_FADE=Zeslabení v dálce
+option.PURKINJE_RENDER_DISTANCE_FADE_NETHER=Zeslabení v dálce v Netheru
+option.PURKINJE_RENDER_DISTANCE_FADE_END=Zeslabení v dálce v Endu
+option.NO_PURKINJE_IN_SKYBOX=Žádné vyblednutí skyboxu
+
+option.MOON_PHASE_INF_PURKINJE=Vyblednutí v noci dle fáze Měsíce
+option.MOON_PHASED_DESATURATION_SETTINGS.comment=Upravuje množství vyblednutí podle aktuální fáze Měsíce.
+
+option.MOON_PHASE_FULL_PURKINJE=Úplněk
+option.MOON_PHASE_FULL_PURKINJE.comment=Síla vyblednutí během úplňku (nejjasnější fáze).
+value.MOON_PHASE_FULL_PURKINJE.0=VYP
+value.MOON_PHASE_FULL_PURKINJE.300=Černobílá
+
+option.MOON_PHASE_PARTIAL_PURKINJE=Částečný měsíc
+option.MOON_PHASE_PARTIAL_PURKINJE.comment=Síla vyblednutí během všech fází Měsíce mezi úplňkem a novem. Toto je fáze, kterou v Minecraftu uvidíš nejčastěji.
+value.MOON_PHASE_PARTIAL_PURKINJE.0=VYP
+value.MOON_PHASE_PARTIAL_PURKINJE.300=Černobílá
+
+option.MOON_PHASE_DARK_PURKINJE=Nov
+option.MOON_PHASE_DARK_PURKINJE.comment=Síla vyblednutí během novu (nejtemnější fáze).
+value.MOON_PHASE_DARK_PURKINJE.0=VYP
+value.MOON_PHASE_DARK_PURKINJE.300=Černobílá
+
+option.DELTARUNE_BATTLE_BACKGROUND=Pozadí bitvy z Deltarune
+value.DELTARUNE_BATTLE_BACKGROUND.0=VYP
+value.DELTARUNE_BATTLE_BACKGROUND.1=ZAP - Pouze obloha
+value.DELTARUNE_BATTLE_BACKGROUND.2=ZAP - Kromě entit
+
+option.END_CRYSTAL_EMISSION=Svícení Endových krystalů
+
+option.CLEAR_WATER_SPOTS=Čirá místa vody
+option.CLEAR_WATER_SPOTS.comment=Přidává čirá místa k vodě pro přidání nějaké rozmanitosti. §e[*]§r Vyžaduje určitý typ vln vody, buď Unbound nebo Reimagined s vlnami.
+
+option.ACT_ORE_INTENSITY=Intenzita ACT rud
+option.ACT_ORE_INTENSITY.comment=Změň intenzitu světla rud Pokročilého trasování barev.
+value.ACT_ORE_INTENSITY.0.0=VYP
+
+option.ENTITIES_ARE_LIGHT=Entity jsou světlo
+
+option.WATER_CAUSTIC_STRENGTH=Síla kaustik vody
+option.WATER_CAUSTIC_STRENGTH.comment=Změň sílu efektu kaustik ve vodě.
+
+option.ROUGHNESS_MULTIPLIER=Maska drsnosti
+option.ROUGHNESS_MULTIPLIER.comment=Změň, kde jsou materiály drsné.
+
+option.ROUGHNESS_INTENSITY=Intenzita drsnosti
+option.ROUGHNESS_INTENSITY.comment=Změň drsnost materiálů a udělej je více nebo méně lesklé.
+
+option.BLURRED_REFLECTIONS_I=Rozostřené odrazy
+option.BLURRED_REFLECTIONS_I.comment=Změň intenzitu rozostřených odrazů na materiálech. §e[*]§r Při nižších hodnotách tohoto nastavení je velmi doporučeno používat PLNÉ rozlišení odrazů.
+value.BLURRED_REFLECTIONS_I.0=VYP
+value.BLURRED_REFLECTIONS_I.10=Výchozí
+
+option.REFLECTION_RESPONSIVENESS=Reaktivita odrazů
+option.REFLECTION_RESPONSIVENESS.comment=Odrazy budou rychleji reagovat na pohyb, což snižuje "loudavý" efekt, který můžou mít. §e[*]§r Vyšší hodnoty mohou způsobit vyšší zrnitost odrazů.
+value.REFLECTION_RESPONSIVENESS.0.0=Výchozí
+
+option.BETTER_LABPBR=Vylepšené LabPBR
+option.BETTER_LABPBR.comment=Mění vzhled LabPBR materiálů, aby více odpovídaly tomu, co zamýšlel vývojář balíčku modifikací. §e[*]§r Toto nastavení funguje, pouze když je "Podpora textur" nastavena na LabPBR
+
+option.BETTER_LABPBR_REFLECTIONS=Vylepšené odrazy
+option.BETTER_LABPBR_REFRACTIONS=Podpora lomu světla
+option.BETTER_LABPBR_REFRACTIONS.comment=Průhledné bloky se budou řídit normálami LabPBR, budou lomit světlo a zkreslovat, co je za nimi.
+value.BETTER_LABPBR_REFRACTIONS.0=VYP
+suffix.BETTER_LABPBR_REFRACTIONS=%
+
+option.BETTER_LABPBR_POROSITY=Podpora pórovitosti
+option.BETTER_LABPBR_POROSITY.comment=LabPBR materiály, které jsou vystavené dešti budou tmavnout podle jejich pórovitosti a získají odrážlivý mokrý lesk. §e[*]§r Toto nastavení pouze funguje, pokud je "Podpora textur" nastavena na LabPBR
+
+value.MCWIND_NETHER_FOG.0=VYP
+value.MCWIND_NETHER_FOG.1=ZAP
+

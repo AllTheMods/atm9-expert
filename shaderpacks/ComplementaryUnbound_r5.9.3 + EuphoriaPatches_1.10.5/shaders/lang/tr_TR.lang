@@ -1,0 +1,249 @@
+#shaders/lang/tr_TR.lang
+
+Contribute=Resmi çevirilere buradan katkıda bulunun: https://www.euphoriapatches.com/lang - Bu URL'yi değiştirmeyin.
+
+option.LANG_FILE_HEADER=Topluluk tarafından hazırlanan çeviri dosyaları; çeviri güncel olmayabilir. SpacEagle17, bunların doğruluğunu garanti edemez.
+option.TRANSLATORS=Flowingday16
+
+shaderDescription=§cComplementary Shaders r5.9.3§r + §dEuphoria Patches 1.10.5§r\nComplementary'yi çok daha fazla özgün isteğe bağlı özellik ve ayarla genişleten, SpacEagle17 imzalı bir eklenti.\nGeliştirici sürümleri: §dwww.euphoriapatches.com/support§r
+
+#Profiles
+profile.POTATO=Patates
+profile.VERYLOW=Çok Düşük
+profile.LOW=Düşük
+profile.MEDIUM=Orta
+profile.HIGH=Yüksek (Varsayılan)
+profile.VERYHIGH=Çok Yüksek
+profile.ULTRA=Aşırı Yüksek
+profile.COMPLEMENTARY=Ekstrem
+profile.comment=Shader profilleri, görsel kalite ile performans arasındaki en optimize dengeyi sağlayacak şekilde performans ayarlarını değiştirir. §e[*]§r Ne yaptığınızı tam olarak bilmiyorsanız, ayarlarınız için bu profillerden birini kullanmanız önerilir. §e[*]§r Etkilenen tüm ayarlar "Performans Ayarları" menüsünde bulunabilir.
+
+#Information
+screen.INFORMATION=Bilgi
+screen.INFORMATION.comment=\nBu bölüm, yalnızca bilgi sağlamak amacıyla var olan düğmeleri içerir.
+
+screen.INFORMATION2=Complementary Bilgi
+screen.INFORMATION2.comment=Bu bölüm, yalnızca bilgi sağlamak amacıyla var olan düğmeleri içerir.
+
+option.info0=\nFarenizi bir düğmenin üzerine getirin.
+value.info0.0=
+option.info0.comment=Bu bölüm, yalnızca bilgi sağlamak amacıyla var olan düğmeleri içerir.
+
+option.info1=\nPerformansı nasıl artırabilirim?
+value.info1.0=
+option.info1.comment=- Minecraft'ta performans karmaşık bir konudur çünkü pek çok faktörden etkilenir; ancak şu yöntemleri deneyebilirsiniz: - Optifine yerine Iris+Sodium modlarını kullanın; zira Optifine sorunludur ve hatta bazı durumlarda bu açıklamanın geri kalanını okumanıza bile engel olabilir. - "Profile" (Profil) shader ayarını düşürün; bu ayarlar, en iyi görsel/performans dengesi için özenle test edilmiştir. - Görüş mesafesini (render distance) azaltın; bunu, seçtiğiniz "Profile" ayarının "shadow distance" (gölge mesafesi) değerinden 2-4 chunk daha yüksek olacak şekilde ayarlamanızı öneririm (örneğin, "High" profili için 16 chunk, "Potato" profili için 6 chunk). - Çözünürlüğün aşırı yüksek olmadığından emin olun; orta seviye sistemler için 1920x1080 idealdir, üst seviye sistemler için 1440p uygundur, ancak 4K gereksiz derecede yüksektir. - Çok sayıda mod kullanmadığınızdan emin olun; bunların çoğu "optimizasyon modu" olsa bile, genellikle shader'lar konusunda pek bir fayda sağlamazlar. Ayrıca, özellikle daha karmaşık bitki örtüsü veya yaprak detayları ekleyen bazı kaynak paketlerinin (resource packs) ciddi miktarda performans kaybına yol açtığını da belirtmek gerekir.
+
+option.info2=En iyi ayarlar nelerdir?
+value.info2.0=
+option.info2.comment=- En iyi ayarlar kişisel tercihe bağlıdır, ancak varsayılan "Profil" seçeneklerini kullanmak çoğu kişi için en iyiye yakın sonucu verecektir. - Varsayılan ayarlar; görsel kalite ile performans dengesi büyük ölçüde gözetilerek, yıllar süren topluluk değerlendirmeleri, testler ve geri bildirimler ışığında şekillendirilmiştir. - Yine de dilediğiniz gibi ince ayarlar yapmaktan ve bunu yaparken keyif almaktan çekinmeyin!
+
+option.info3=Profil veya Görsel Stil Nedir?
+value.info3.0=
+option.info3.comment=- "Profil" ayarı, tercihe dayalı ayarları etkilemeden "Performans Ayarları" menüsündeki ayarları değiştirir. - "Görsel Stil", tercihe dayalı birçok ayarda bulunan "Stile Göre Ayarla" değerlerini değiştirir ancak performansı önemli ölçüde etkilemez. - Complementary Reimagined ile Unbound arasındaki tek fark, "Görsel Stil"in varsayılan seçeneğidir.
+
+option.info4=RP Desteği nedir?
+value.info4.0=
+option.info4.comment=- RP Desteği (RP Support) seçeneği, shader paketinin Minecraft'taki farklı blokları nasıl ele alacağını belirler. - Örneğin, §bIntegratedPBR+§r altın blokları yansıtıcı nesneler olarak değerlendirirken; §elabPBR§r veya §eseuspbr§r, shader'a bu özelliği tanıtmak için bir kaynak paketi (resource pack) yüklemenizi gerektirir. - RP Desteği'ni §aBasic§r (Temel) olarak ayarlamak, su gibi birkaç istisna dışında hiçbir bloğun "özel" muamele görmemesini sağlar.
+
+option.info5=Sarı ayarlar nelerdir?
+value.info5.0=
+option.info5.comment=- Sarı renkli bir ayar ismi, söz konusu ayarın "Performans Ayarları" kategorisinde yer almamasına rağmen performansı ölçülebilir düzeyde etkilediği anlamına gelir. - Eğer bu ayarın etkinleştirilmesi seçeneğin metnini kırmızıya dönüştürüyorsa, bu durum performans maliyetinin çok yüksek olduğu anlamına gelir.
+
+option.info6=Önerilen modlar var mı?
+value.info6.0=
+option.info6.comment=- Vazgeçilmez olan Iris ve Sodium'un yanı sıra, daha iyi bir performans için "Optimized Block Entities" veya "Enhanced Block Entities" gibi bir blok varlığı (block-entity) optimizasyon modu kullanmanızı öneririm. - Bunun dışında, çözünürlüğü kolayca ayarlamak için "RenderScale" modu da işinize yarayabilir. - Ayrıca, aşırı yüksek performans maliyeti olmadan çok uzak görüş mesafeleri (render distance) elde etmenizi sağlayan "Voxy" veya "Distant Horizons" modlarından da bahsetmekte fayda var; bu modlardan birini kullanıyorsanız, normal görüş mesafesini 8-12 chunk seviyesinde tutup Voxy ile 64-256 chunk veya Distant Horizons ile 64-128 chunk değerinde bir görüş mesafesi kullanmanızı tavsiye ederim. - Son olarak, shader listenize daha fazla işlevsellik ve ayar sunan, modifiye edilmiş bir "Complementary" sürümü ekleyen "Euphoria Patches" modunu da edinebilirsiniz; bu mod, bahsi geçen modifiye edilmiş Complementary-Euphoria shader paketini kullanmadığınız durumlarda bile (örneğin çok yüksek dünya koordinatlarında renkli ışıklandırmanın düzgün çalışmasını sağlamak gibi) çeşitli Iris düzeltmeleri ve iyileştirmeleri sunar.
+
+option.info7=Soru sormak veya sorun bildirmek için
+value.info7.0=
+option.info7.comment=- Lütfen sorularınız için Complementary Discord sunucusunu ya da GitHub sayfasındaki "issues" (sorunlar) bölümünü kullanın. - www.complementary.dev/discord - www.complementary.dev/github
+
+option.info8=Topluluğa nasıl katılınır?
+value.info8.0=
+option.info8.comment=- Dost canlısı topluluğumuza katılmak ve geliştiriciler ya da deneyimli topluluk üyeleriyle iletişime geçebilmek için Complementary Discord sunucusuna katılabilirsiniz. - www.complementary.dev/discord
+
+option.info9=Complementary'yi nasıl destekleyebilirsiniz?
+value.info9.0=
+option.info9.comment=- Complementary'yi desteklemenin en iyi yolu onu arkadaşlarınızla veya sosyal medyada paylaşmaktır; ancak ana geliştiriciyi (yani beni!) Patreon üzerinden doğrudan da destekleyebilirsiniz. - www.patreon.com/emingt
+
+option.info10=Emeği Geçenler
+value.info10.0=
+option.info10.comment=- EminGT: Complementary'nin ana geliştiricisi. - Capt Tatsu: BSL Shaders'ın geliştiricisi; Complementary'nin hayata geçmesini sağlayan asıl etken onun cömertliğiydi. - Özel Teşekkürler: IMS212, sp614x, Chocapic13, Robobo1221, SixthSurge, null511, fayer3, catlikecoding, Builderb0y, Jessie, SpacEagle17, isuewo, flytrap, gri573, FoZy-STYLE, plazmal, aceralex
+
+option.info11=§dEuphoria Patches nedir ?
+value.info11.0=
+option.info11.comment=\nEuphoria Patches, SpacEagle17 tarafından geliştirilen ve Complementary Shaders için hazırlanan bir eklentidir. Bu eklenti, Complementary'yi elle hazırlanmış daha fazla isteğe bağlı özellik ve ayarla genişletmeyi amaçlar.
+
+option.info12=Euphoria Patches Ayarları
+value.info12.0=
+option.info12.comment=Tüm Euphoria seçenekleri varsayılan olarak devre dışı bırakılmıştır; kullanıcı hangilerini etkinleştireceğine kendisi karar verebilir. "Popüler Ayarlar" (Popular Settings) kategorisi altında, Euphoria Patches'ın en çok tercih edilen özelliklerini bulabilirsiniz. Sayısız başka ayar daha mevcuttur ve her güncellemeyle yenileri eklenmektedir; ayarları kurcalayıp keşfetmenin keyfini çıkarın!
+
+option.info13=Euphoria Mod Desteği
+value.info13.0=
+option.info13.comment=Euphoria Patches, varsayılan modlu blok desteği sunarak (bkz. block.properties) modlu blokları standart Complementary'ye kıyasla daha iyi desteklemeyi amaçlar. Otomatik ışık yayma (emission) uygulanan ışık kaynağı algılama ve otomatik SSS uygulanan bitki örtüsü modeli algılama özellikleri içerir.
+
+option.info14=Topluluğa katılın
+value.info14.0=
+option.info14.comment=Sorularınız için, eğlenceli bir topluluğa katılmak ve en son gelişmelerden haberdar olmak adına Euphoria Patches Discord sunucusuna gelin. §d§l§neuphoriapatches.com/discord
+
+option.info15=Euphoria Patches Emeği Geçenler
+value.info15.0=
+option.info15.comment=Emeği geçenlerin tam listesine §deuphoriapatches.com/credits§r adresinden ulaşılabilir. isuewo - Euphoria Patches'ın eski ortak geliştiricisi. EminGT: Complementary'nin ana geliştiricisi. Capt Tatsu, gri573, FoZy STYLE, JoKerTech, SixthSurge, WoMspace (diğer adıyla Sasha), Septonious, fayer3, Xonk, Memokii, dragoncat, TheNukeLore, dbrighthd, Surisen (Ruri), Acer (Alex), Folox_, Helgust.
+
+option.info16=§d§nEuphoria Patches'a nasıl destek olunur?
+value.info16.0=
+option.info16.comment=Yeni güncellemeleri takip edip başkalarıyla paylaşarak Euphoria Patches'a destek olabilir; ayrıca Patreon veya Ko-Fi üzerinden SpacEagle17'ye doğrudan destek vererek özel beta sürümlerine erişebilirsiniz. §d§l§neuphoriapatches.com/support
+
+option.info17=Beta Sürümü: SpacEagle17 Patreon
+value.info17.0=
+option.info17.comment=SpacEagle17'yi Patreon veya Ko-Fi üzerinden destekleyebilir ve özel geliştirme sürümlerine erişebilirsiniz. §d§l§neuphoriapatches.com/support
+
+option.info18=Complementary r5.9.3 için
+value.info18.0=
+option.info18.comment=Euphoria Yamaları'nı yüklediğiniz için teşekkür ederiz :)
+
+option.info19=§aYENİ GÜNCELLEME
+value.info19.0=
+option.info19.comment=EuphoriaPatcher Mod'un yeni bir sürümü mevcut. Modrinth üzerinden indirin: https://euphoriapatches.com/download.
+
+option.info20=
+value.info20.0=
+option.info20.comment=EuphoriaPatcher Mod'un yeni bir sürümü mevcut. Modrinth üzerinden indirin: https://euphoriapatches.com/download.
+
+option.info21=Sıkça Sorulan Sorular
+value.info21.0=
+option.info21.comment=Sıkça sorulan soruların yanıtlarını bulmak için SSS sayfasına göz atın. §d§l§neuphoriapatches.com/faq
+
+option.info22=\n§dKaydırarak Erişilebilen Diğer Ayarlar
+value.info22.0=
+option.info22.comment=Büyük GUI boyutlarında bazı ayarlar gizli kalabilir; aşağı kaydırmak bu ayarları görünür hale getirecektir.
+
+#Style
+option.SHADER_STYLE=Görsel Stil
+option.SHADER_STYLE.comment=Shader paketinin varsayılan görsel stilini belirler. §bReimagined§r: Minecraft'ın kendine özgü görsel unsurlarını korurken onu tamamlar. §dUnbound§r: Minecraft'ın görsellerini yarı gerçekçi bir fantezi tarzıyla yeniden ele alır. §e[*]§r Etkilenen ayarlar: Su Stili, Bulut Stili, Güneş/Ay Stili, Güneş/Ay Açısı, Aurora Stili, Parlayan Cevherler.
+value.SHADER_STYLE.1=
+value.SHADER_STYLE.4=
+
+#Screens
+screen.PERFORMANCE_SETTINGS=§ePerformans Ayarları§r
+screen.PERFORMANCE_SETTINGS.comment=Performansla doğrudan ilişkili olan ve farklı gölgelendirici profilleri tarafından değiştirilen ayarlar.
+
+screen.ATMOSPHERE_SETTINGS=Atmosfer
+screen.ATMOSPHERE_SETTINGS.comment=Atmosferle ilgili ayarlar.
+
+screen.ATM_COLOR_SETTINGS=Atmosfer Renk Çarpanları
+screen.ATM_COLOR_SETTINGS.comment=Çoğunlukla gökyüzü ve siste görülen atmosfer renklerinin özelleştirilmesini sağlar.
+
+screen.MORNING_ATM_MULTS=Gün Doğumu/Gün Batımı Saati
+screen.NOON_ATM_MULTS=Öğle Vakti
+screen.NIGHT_ATM_MULTS=Gece Vakti
+screen.RAIN_ATM_MULTS=Yağmurlu Hava
+screen.NETHER_ATM_MULTS=Nether Boyutu
+screen.END_ATM_MULTS=End Boyutu
+
+screen.CLOUD_SETTINGS=Bulutlar
+screen.CLOUD_SETTINGS.comment=Bulutlarla ilgili ayarlar.
+
+screen.CLOUD_COLOR_SETTINGS=Bulut Rengi
+screen.CLOUD_COLOR_SETTINGS.comment=Bulutların rengini değiştirmeye yönelik ayarlar.
+
+screen.CLOUD_UNBOUND_SETTINGS=\nUnbound Bulut Ayarları
+screen.CLOUD_REIMAGINED_SETTINGS=Reimagined Bulut Ayarları
+
+screen.FOG_SETTINGS=Sis
+screen.FOG_SETTINGS.comment=\nÇeşitli sis türleriyle ilgili ayarlar
+
+screen.SUN_MOON_SETTINGS=Güneş / Ay
+screen.SUN_MOON_SETTINGS.comment=Güneş ve ay ile ilgili ayarlar.
+
+screen.NETHER_SETTINGS=Nether Boyutu
+screen.NETHER_SETTINGS.comment=Nether boyutuyla ilgili ayarlar.
+
+screen.END_SETTINGS=End Boyutu
+screen.END_SETTINGS.comment=End boyutuyla ilgili ayarlar.
+
+screen.WEATHER_SETTINGS=Yağmur / Hava Durumu
+screen.WEATHER_SETTINGS.comment=\nHava koşullarıyla ilgili ayarlar
+
+screen.CAMERA_SETTINGS=Kamera
+screen.CAMERA_SETTINGS.comment=Görünüm/Kamera ile ilgili ayarlar.
+
+screen.TONEMAP_SETTINGS=\nRenk Dengesi
+screen.TONEMAP_SETTINGS.comment=\nGörsellerin renk dengesini belirleyen ayarlar.
+
+screen.COLORGRADING_SETTINGS=Renk Düzenleme
+screen.COLORGRADING_SETTINGS.comment=Nihai renk kanallarını karıştırmaya yönelik ayarlar.
+
+screen.WORLD_BLUR_SETTINGS=Dünya Bulanıklığı
+screen.WORLD_BLUR_SETTINGS.comment=Gösterişli dünya bulanıklaştırma efektleriyle ilgili ayarlar.
+
+screen.TAA_SETTINGS=Zamansal Filtre Ayarları
+screen.TAA_SETTINGS.comment=Zamansal kenar yumuşatmanın (temporal anti-aliasing) davranışını belirleyen ayarlar.
+
+screen.MATERIAL_SETTINGS=Malzemeler
+screen.MATERIAL_SETTINGS.comment=Minecraft'daki malzemelerle ilgili ayarlar.
+
+screen.IPBR_SETTINGS=IntegratedPBR+ Malzemeleri
+screen.IPBR_SETTINGS.comment=IntegratedPBR+ özellikleriyle ilgili ayarlar.
+
+screen.GLOWING_ORE_SETTINGS.comment=Cevher bloklarının yaydığı ışığı ayarlama ayarları.
+
+screen.GLOWING_STUFF_SETTINGS=Işıldayan Şeyler
+screen.GLOWING_STUFF_SETTINGS.comment=Çeşitli blokların yaydığı ışığı ayarlamaya yönelik ayarlar.
+
+screen.OTHER_IPBR_SETTINGS=Diğer IPBR+ Özellikleri
+screen.OTHER_IPBR_SETTINGS.comment=Çeşitli IntegratedPBR+ ayarları.
+
+screen.CUSTOM_PBR_SETTINGS=labPBR/seuspbr Materyalleri
+
+screen.LIGHTING_SETTINGS=Aydınlatma
+
+screen.LIGHT_COLOR_SETTINGS.comment=Tüm yüzeylerde görülen aydınlatma renklerinin özelleştirilmesini sağlar.
+
+screen.MORNING_LIGHT_MULTS=Gün Doğumu/Gün Batımı Saati
+screen.NOON_LIGHT_MULTS=\nÖğle Vakti
+screen.NIGHT_LIGHT_MULTS=Gece Vakti
+screen.RAIN_LIGHT_MULTS=Yağmurlu Hava
+screen.NETHER_LIGHT_MULTS=Nether Boyutu
+screen.END_LIGHT_MULTS=End Boyutu
+
+screen.BLOCKLIGHT_SETTINGS=\nBlok Işığı §e[*]§r
+screen.BLOCKLIGHT_SETTINGS.comment=\nIşık kaynağı bloklarından yayılan aydınlatmayı ayarlamaya yarayan ayarlar. §e[*]§r Gelişmiş Renk İzleme (Advanced Color Tracing) ayarı etkinleştirilmişse, kırmızı/yeşil/mavi renk ayarları çoğu ışığı etkilemeyecektir.
+
+screen.MOON_PHASE_INF_SETTINGS=Ay Evrelerinin Etkisi
+screen.MOON_PHASE_INF_SETTINGS.comment=Farklı ay evrelerinin gece aydınlatmasını nasıl etkileyeceğini belirleyen ayarlar.
+
+screen.ACT_FEATURES_SETTINGS=CT'ye Özel Özellikler §e[*]§r
+screen.ACT_FEATURES_SETTINGS.comment=Gelişmiş Renk İzleme'ye (Advanced Color Tracing) özgü özelliklerle ilgili ayarlar. §e[*]§r Bu özellikler, yalnızca Performans Ayarları'nda Gelişmiş Renk İzleme açık olduğunda ve sisteminiz bunu desteklediğinde çalışır.
+
+screen.PIXELATED_LIGHTING_SETTINGS=Pikselli Aydınlatma
+screen.PIXELATED_LIGHTING_SETTINGS.comment=Belirli ışıklandırma efektlerini pikselli hale getiren ayarlar.
+
+screen.WATER_SETTINGS=Su
+screen.WATER_SETTINGS.comment=\nSuyla ilgili ayarlar.
+
+screen.WATER_COLOR_SETTINGS=Su Yüzeyi Rengi
+screen.UNDERWATER_COLOR_SETTINGS=Sualtı Rengi
+
+screen.WATER_WAVE_SETTINGS=Dalgalanan Su Normalleri §e[*]§r
+screen.WATER_WAVE_SETTINGS.comment=Su üzerinde görülen yüzey yönü dalgalarını (normalleri) özelleştirme ayarları. §e[*]§r Bu ayarlar yalnızca Su Stili "Reimagined + Waves" veya "Unbound" olarak ayarlandığında çalışır.
+
+screen.WAVING_SETTINGS=Dalgalanan Dokular
+screen.WAVING_SETTINGS.comment=Dalgalanan dokularla ilgili ayarlar.
+
+screen.OTHER_SETTINGS=Diğer
+screen.OTHER_SETTINGS.comment=Başka hiçbir kategoriye girmeyen ayarlar.
+
+screen.SELECT_OUTLINE_SETTINGS=\nSeçim Taslağı
+screen.SELECT_OUTLINE_SETTINGS.comment=Blok seçim ana hatlarını değiştiren ayarlar.
+
+screen.WORLD_OUTLINE_SETTINGS=\nDünya Ana Hatları
+screen.WORLD_OUTLINE_SETTINGS.comment=\nİsteğe bağlı dış hat efektleriyle ilgili ayarlar.
+
+#Settings
+option.RP_MODE=
+option.RP_MODE.comment=
+
+####### Euphoria Patches #######
+
+#WATERMARK
+

@@ -522,4 +522,17 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('2x gtceu:reactor_core_casing')        
         .duration(100)
         .EUt(MV);
+
+    const grovePlan = [
+    { ore: 'minecraft:coal_ore',           chance: 90, output: '' },
+    { ore: 'minecraft:iron_ore',           chance: 80, output: '' },
+    { ore: 'minecraft:nether_quartz_ore',  chance: 70, output: '' },
+    { ore: 'minecraft:redstone_ore',       chance: 50, output: '' },
+    { ore: 'minecraft:copper_ore',         chance: 50, output: '' },
+    { ore: 'minecraft:gold_ore',           chance: 30, output: '' },
+    { ore: 'minecraft:emerald_ore',        chance: 20, output: '' },
+    { ore: 'minecraft:lapis_ore',          chance: 20, output: '' },
+    { ore: 'minecraft:diamond_ore',        chance: 15, output: '' },
+    { ore: 'minecraft:ancient_debris',     chance: 5,  output: '' }
+]
 });
