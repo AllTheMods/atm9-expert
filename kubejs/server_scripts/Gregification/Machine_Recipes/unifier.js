@@ -17,4 +17,12 @@ ServerEvents.recipes(allthemods => {
                 .itemOutputs('10x gtceu:sulfur_dust')
                 .duration(1)
                 .EUt(LV);
+
+        
+        allthemods.recipes.gtceu.unifier(`gregification:will_unification`)
+                .inputFluids(`#forge:will 144`)
+                .outputFluids(`gtceu:demon 144`)
+                .duration(1)
+                .EUt(LV);
+	
 });

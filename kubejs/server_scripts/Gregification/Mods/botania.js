@@ -77,7 +77,7 @@ ServerEvents.recipes(allthemods => {
     
 
     allthemods.recipes.gtceu.mana_converter('mana_to_portal_fluid')
-        .inputFluids('#forge:mana_essence 1000')
+        .inputFluids('#forge:mana 1000')
         .outputFluids('gtceu:alfheim_portal_fluid 1000')
         .addData('ebf_temp', 3600)
         .duration(100)
@@ -213,14 +213,14 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.petal_apothecary('gregification:livingrock')
         .itemInputs('8x #forge:stone')
         .itemOutputs('8x botania:livingrock')
-        .inputFluids('#forge:mana_essence 1000')
+        .inputFluids('#forge:mana 1000')
         .duration(infusionDuration)
         .EUt(petalVoltage);
 
     allthemods.recipes.gtceu.petal_apothecary('gregification:livingwood')
         .itemInputs('8x #minecraft:logs')
         .itemOutputs('8x botania:livingwood')
-        .inputFluids('#forge:mana_essence 1000')
+        .inputFluids('#forge:mana 1000')
         .duration(infusionDuration)
         .EUt(petalVoltage);
 
@@ -439,7 +439,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.assembler('gregification/mana_infuser')
         .itemInputs('gtceu:iv_machine_hull', '2x gtceu:iv_electric_pump', '2x gtceu:iv_electric_piston', '2x #gtceu:circuits/iv', '8x #forge:plates/semi_stable_clathrate')
         .itemOutputs('gtceu:mana_infuser')
-        .inputFluids('#forge:mana_essence 9200')
+        .inputFluids('#forge:mana 9200')
         .duration(600)
         .EUt(IV);
 

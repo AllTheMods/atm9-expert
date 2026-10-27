@@ -125,6 +125,5 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
                 .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setMaxGlobalLimited(2)))
             .where('#', Predicates.air())
             .build())
-        .workableCasingModel('gtceu:block/casings/blood_splash_casing/blood_splash_casing',
-            'gtceu:block/multiblock/sanguine_synthesizer');
+        .workableCasingModel('gtceu:block/casings/sanguine_vessel_casing/sanguine_vessel_casing','gtceu:block/multiblock/sanguine_synthesizer');
 });

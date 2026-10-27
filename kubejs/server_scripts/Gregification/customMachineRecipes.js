@@ -855,9 +855,9 @@ ServerEvents.recipes(allthemods => {
         { id: 'water_filtration_plant', tier: 'hv', fluid: true, extra: ['4x gtceu:filter_casing'], extraFluids: ['#forge:soldering_alloy 1000'] },
         { id: 'hydro_electromagnetic_separator', tier: 'hv', fluid: true, extra: ['2x gtceu:tempered_glass', '2x gtceu:magnetic_steel_rod'], extraFluids: ['#forge:soldering_alloy 1000'] },
         { id: 'fractional_gas_separator', tier: 'hv', fluid: true, extra: ['4x #forge:rotors/stainless_steel', '4x gtceu:tempered_glass'], extraFluids: ['#forge:soldering_alloy 1000'] },
-        { id: 'botanical_factory', tier: 'hv', fluid: true, extra: ['2x botania:bifrost_perm', '4x botania:rune_mana'], extraFluids: ['#forge:mana_essence 16000'] },
-        { id: 'large_mana_burner', tier: 'hv', fluid: true, extra: ['4x #gtceu:wires/quadruple/kanthal', '4x botania:rune_mana'], extraFluids: ['#forge:mana_essence 16000'] },
-        { id: 'large_mana_converter', tier: 'hv', fluid: true, extra: ['4x #forge:gears/terrasteel', '2x botania:bifrost_perm'], extraFluids: ['#forge:mana_essence 16000'] },
+        { id: 'botanical_factory', tier: 'hv', fluid: true, extra: ['2x botania:bifrost_perm', '4x botania:rune_mana'], extraFluids: ['#forge:mana 16000'] },
+        { id: 'large_mana_burner', tier: 'hv', fluid: true, extra: ['4x #gtceu:wires/quadruple/kanthal', '4x botania:rune_mana'], extraFluids: ['#forge:mana 16000'] },
+        { id: 'large_mana_converter', tier: 'hv', fluid: true, extra: ['4x #forge:gears/terrasteel', '2x botania:bifrost_perm'], extraFluids: ['#forge:mana 16000'] },
 
         // EV tier -> assembler (1 extra fluid)
         { id: 'ozonation_plant', tier: 'ev', fluid: true, extra: ['4x gtceu:titanium_normal_fluid_pipe'], extraFluids: ['#forge:polytetrafluoroethylene 1000'] },

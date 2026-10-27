@@ -733,7 +733,7 @@ ServerEvents.recipes(allthemods => {
             '64x botania:rune_greed',
             'allthetweaks:atm_star'
         ],
-        '#forge:mana_essence 1024000',
+        '#forge:mana 1024000',
         6000,
         LuV, 16, null, 0
     );
@@ -752,7 +752,7 @@ ServerEvents.recipes(allthemods => {
             '64x botania:rune_greed',
             'allthetweaks:atm_star'
         ],
-        '#forge:mana_essence 1024000',
+        '#forge:mana 1024000',
         6000,
         LuV, 16, 'creative_mana_tablet', 1
     );
@@ -765,7 +765,7 @@ ServerEvents.recipes(allthemods => {
             'ae2additions:super_cell_component_65m',
             'allthetweaks:atm_star'
         ],
-        '#forge:mana_essence 1024000',
+        '#forge:mana 1024000',
         6000,
         LuV, 16, null, 1
     );

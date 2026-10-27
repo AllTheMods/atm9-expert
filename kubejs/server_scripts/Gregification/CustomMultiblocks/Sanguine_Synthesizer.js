@@ -21,7 +21,13 @@ ServerEvents.recipes(allthemods => {
     };
     const arcDuration = 600;
     const arcVoltage = EV;
-    
+
+    const forgeDuration = 100;
+    const forgeVoltage = HV;
+
+    const arrayDuration = 200;
+    const arrayVoltage = HV;
+
     allthemods.recipes.gtceu.sanguine_alchemy('gregification:thermal_spark')
         .itemInputs('botania:corporea_spark', '#forge:exquisite_gems/nitro_crystal', '4x #forge:rounds/pink_slime', '#forge:rings/draconium_awakened')
         .notConsumable('gtceu:technomancy_orb')
@@ -29,7 +35,7 @@ ServerEvents.recipes(allthemods => {
         .duration(1000)
         .EUt(LuV);
 
-    allthemods.forEachRecipe({ type: 'bloodmagic:arc' }, rawRecipe => {        
+    allthemods.forEachRecipe({ type: 'bloodmagic:arc' }, rawRecipe => {
         let safeID = String(rawRecipe.getId()).replace(/[^a-z0-9]/gi, '_');
         try {
             let recipe = JSON.parse(rawRecipe.json);
@@ -159,5 +165,83 @@ ServerEvents.recipes(allthemods => {
             console.error(`FAILED recipe ID: ${safeID} — ${err}`);
         }
     });
-    
+
+    allthemods.forEachRecipe({ type: 'bloodmagic:soulforge' }, rawRecipe => {
+        let safeID = String(rawRecipe.getId()).replace(/[^a-z0-9]/gi, '_');
+        try {
+            let recipe = JSON.parse(rawRecipe.json);
+
+            let inputItems = [];
+            ['input0', 'input1', 'input2', 'input3'].forEach(slot => {
+                let ing = recipe[slot];
+                if (!ing) return;
+                if (ing.item) {
+                    inputItems.push(ing.item);
+                } else if (ing.tag) {
+                    inputItems.push('#' + ing.tag);
+                }
+            });
+
+            let outputStack = 'minecraft:air';
+            if (recipe.output && recipe.output.item) {
+                let count = recipe.output.count || 1;
+                if (recipe.output.nbt) {
+                    outputStack = Item.of(recipe.output.item, count, recipe.output.nbt);
+                } else {
+                    outputStack = count > 1 ? `${count}x ${recipe.output.item}` : recipe.output.item;
+                }
+            }
+
+            let totalWill = Math.round((recipe.drain || 0) * forgeDuration);
+
+            let builder = allthemods.recipes.gtceu.sanguine_forge('gregification:sanguine_forge/' + safeID)
+                .itemInputs(inputItems)
+                .itemOutputs(outputStack)
+                .duration(forgeDuration)
+                .EUt(forgeVoltage);
+
+            if (totalWill > 0) builder.inputFluids('#forge:will ' + totalWill);
+        } catch (err) {
+            console.error(`FAILED recipe ID: ${safeID} — ${err}`);
+        }
+    });
+
+
+
+    allthemods.forEachRecipe({ type: 'bloodmagic:array' }, rawRecipe => {
+        let safeID = String(rawRecipe.getId()).replace(/[^a-z0-9]/gi, '_');
+        try {
+            let recipe = JSON.parse(rawRecipe.json);
+
+            if (!recipe.output || !recipe.output.item || recipe.output.item === 'minecraft:bedrock') return;
+
+            let pick = ing => {
+                if (!ing) return null;
+                if (ing.item) return ing.item;
+                if (ing.tag) return '#' + ing.tag;
+                return null;
+            };
+
+            let base = pick(recipe.baseinput);
+            let added = pick(recipe.addedinput);
+            if (!base || !added) return;
+
+            let count = recipe.output.count || 1;
+            let outputStack;
+            if (recipe.output.nbt) {
+                outputStack = Item.of(recipe.output.item, count, recipe.output.nbt);
+            } else {
+                outputStack = count > 1 ? `${count}x ${recipe.output.item}` : recipe.output.item;
+            }
+
+            allthemods.recipes.gtceu.sanguine_array('gregification:sanguine_array/' + safeID)
+                .itemInputs([base, added])
+                .itemOutputs(outputStack)
+                .duration(arrayDuration)
+                .EUt(arrayVoltage);
+        } catch (err) {
+            console.error(`FAILED recipe ID: ${safeID} — ${err}`);
+        }
+    });
+
 });
