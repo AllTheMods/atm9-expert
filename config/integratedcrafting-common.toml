@@ -9,17 +9,17 @@
 		#Enabling this option will log all recipe validation failures in crafting interfaces into the server logs
 		logRecipeValidationFailures = true
 		#The minimal update frequency in ticks to use for crafting interfaces.
-		minCraftingInterfaceUpdateFreq = 5
+		minCraftingInterfaceUpdateFreq = 10
 
 [general]
 
 	[general.general]
 		#The base energy usage for the crafting interface per crafting job being processed.
 		interfaceCraftingBaseConsumption = 5
-		#The base energy usage for the crafting writer.
-		craftingWriterBaseConsumption = 1
 		#The base energy usage for the attuned crafting interface per crafting job being processed.
 		interfaceCraftingAttunedBaseConsumption = 10
+		#The base energy usage for the crafting writer.
+		craftingWriterBaseConsumption = 1
 
 [core]
 

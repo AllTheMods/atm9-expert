@@ -17,6 +17,8 @@
 	sfqEnergy = 2.0
 	#Remove common materials(Stone, Dirt, Grass, Sand, etc.) obtained by Chunk Destroyer
 	removeCommonMaterialsByCD = true
+	#Remove fluids after Chunk Destroyer finishes working. Recommended to set `false` as some issues are reported in #371
+	removeFluidAfterFinishedByCD = false
 	#Remove MarkerPlus guide line if player is too far from the marker.
 	reduceMarkerGuideLineIfPlayerIsFar = false
 	#Remove adjacent frames when quarry is removed.
@@ -26,6 +28,9 @@
 	#The range limit(unit: blocks) of ChunkDestroyer. Set -1 or 0 to remove limitation.
 	#Range: > -1
 	chunkDestroyerLimit = -1
+	#The max distance(unit: blocks) Flexible Marker can reach
+	#Range: 16 ~ 4096
+	flexMarkerMaxDistance = 256
 	#True to allow pipes to extract items in WorkbenchPlus
 	allowWorkbenchExtraction = false
 	#Use simple chunk load function.
@@ -33,11 +38,6 @@
 	enableChunkLoader = false
 	#Trace quarry work
 	logAllQuarryWork = false
-	#The max distance(unit: blocks) Flexible Marker can reach
-	#Range: 16 ~ 4096
-	flexMarkerMaxDistance = 256
-	#Remove fluids after Chunk Destroyer finishes working. Recommended to set `false` as some issues are reported in #371
-	removeFluidAfterFinishedByCD = false
 	#Custom player
 	customPlayer = false
 
@@ -61,12 +61,12 @@
 	quarry = true
 	remote_placer = false
 	remove_bedrock_module = false
+	repeat_tick_module = false
 	replacer = false
 	replacer_module = false
 	solid_fuel_quarry = true
 	spawner_controller = false
 	workbench = true
-	repeat_tick_module = false
 
 #Power settings of each machines
 [powers]
