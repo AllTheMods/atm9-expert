@@ -4,9 +4,5 @@
   {"type":"item_stack","value":"{Count:1b,id:\"gtceu:botanical_factory\"}"},
   {"type":"item_stack","value":"{Count:1b,id:\"gtceu:orechid_grove\"}"},
   {"type":"item_stack","value":"{Count:1b,id:\"gtceu:arcane_atelier\"}"},
-  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:hv_botanical_brewery\"}"},
-  {"type":"item_stack","value":"{Count:1b,id:\"allthetweaks:oblivion_shard\"}"},
-  {"type":"item_stack","value":"{Count:1b,id:\"allthetweaks:withers_compass\"}"},
-  {"type":"item_stack","value":"{Count:1b,id:\"allthetweaks:nexium_emitter\"}"},
-  {"type":"item_stack","value":"{Count:1b,id:\"allthetweaks:improbable_probability_device\"}"}
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:hv_botanical_brewery\"}"}
 ]
