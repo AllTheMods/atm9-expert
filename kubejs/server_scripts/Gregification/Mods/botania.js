@@ -496,7 +496,7 @@ ServerEvents.recipes(allthemods => {
             '2x botania:rune_mana'
         )
         .inputFluids('#forge:mana 5000')
-        .itemOutputs('2x gtceu:overgrown_plating_casing')        
+        .itemOutputs('2x gtceu:overgrown_plating_casing')
         .duration(100)
         .EUt(MV);
 
@@ -507,7 +507,7 @@ ServerEvents.recipes(allthemods => {
             '4x botania:livingwood'
         )
         .inputFluids('#forge:mana 10000')
-        .itemOutputs('2x gtceu:overgrown_conduit_casing')        
+        .itemOutputs('2x gtceu:overgrown_conduit_casing')
         .duration(100)
         .EUt(MV);
 
@@ -519,20 +519,38 @@ ServerEvents.recipes(allthemods => {
             '4x botania:mana_diamond'
         )
         .inputFluids('#forge:mana 2000')
-        .itemOutputs('2x gtceu:reactor_core_casing')        
+        .itemOutputs('2x gtceu:reactor_core_casing')
         .duration(100)
         .EUt(MV);
 
-    const grovePlan = [
-    { ore: 'minecraft:coal_ore',           chance: 90, output: '' },
-    { ore: 'minecraft:iron_ore',           chance: 80, output: '' },
-    { ore: 'minecraft:nether_quartz_ore',  chance: 70, output: '' },
-    { ore: 'minecraft:redstone_ore',       chance: 50, output: '' },
-    { ore: 'minecraft:copper_ore',         chance: 50, output: '' },
-    { ore: 'minecraft:gold_ore',           chance: 30, output: '' },
-    { ore: 'minecraft:emerald_ore',        chance: 20, output: '' },
-    { ore: 'minecraft:lapis_ore',          chance: 20, output: '' },
-    { ore: 'minecraft:diamond_ore',        chance: 15, output: '' },
-    { ore: 'minecraft:ancient_debris',     chance: 5,  output: '' }
-]
+    const manaCost = 100000;
+    const duration = 800;
+    const eut = HV;
+
+    const groveOres = [
+        { ore: 'coal', chance: 90, output: 'gtceu:raw_coal' },
+        { ore: 'iron', chance: 80, output: 'minecraft:raw_iron' },
+        { ore: 'nether_quartz', chance: 70, output: 'gtceu:raw_nether_quartz' },
+        { ore: 'redstone', chance: 50, output: 'gtceu:raw_redstone' },
+        { ore: 'copper', chance: 50, output: 'minecraft:raw_copper' },
+        { ore: 'gold', chance: 30, output: 'minecraft:raw_gold' },
+        { ore: 'emerald', chance: 20, output: 'gtceu:raw_emerald' },
+        { ore: 'lapis', chance: 20, output: 'gtceu:raw_lapis' },
+        { ore: 'diamond', chance: 15, output: 'gtceu:raw_diamond' },
+        { ore: 'ancient_debris', chance: 5, output: 'minecraft:ancient_debris' },
+        { ore: 'iesnium', chance: 1, output: 'occultism:raw_iesnium' },
+        { ore: 'demonite', chance: 1, output: 'bloodmagic:rawdemonite' }
+    ];
+
+    let grove = allthemods.recipes.gtceu.orechid_grove('gregification:orechid_grove')
+        .itemInputs('64x minecraft:stone', '16x minecraft:netherrack')
+        .input(GTX.MANA, manaCost)
+        .duration(duration)
+        .EUt(eut);
+
+    groveOres.forEach(function (o) {
+        if (!o.output) return;
+        grove.chancedOutput('8x ' + o.output, o.chance * 100, 0);
+    });
+
 });

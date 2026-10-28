@@ -1036,6 +1036,8 @@
     "gtceu.sanguine_array": "Sanguine Array",    
     "block.gtceu.sanguine_array": "Sanguine Alchemy Array",    
     "block.gtceu.overgrown_plating_casing": "Overgrown Plating Casing",
+    "block.gtceu.orechid_grove": "Orechid Grove",
+    "gtceu.orechid_grove": "Orechid Grove",
     "block.gtceu.reactor_core_casing": "Reactor Core Casing",
     "block.gtceu.overgrown_conduit_casing": "Overgrown Conduit Casing"
 }
