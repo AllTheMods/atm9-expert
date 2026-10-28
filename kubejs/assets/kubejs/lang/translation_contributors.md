@@ -27,8 +27,8 @@ Korean
 - ArcTrooper (https://github.com/ArcTrooper210)
 - J-YonKen (https://github.com/J-YonKen)
 
-Portuguese 
-- oRuiva (https://github.com/oRuiva)
+Brazilian Portuguese 
+- PrincessStellar (https://github.com/PrincessStellar)
 
 German
 - Aquamatik (https://github.com/Aquamatik)

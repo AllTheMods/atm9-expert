@@ -1,5 +1,5 @@
 {
-	"atm9.modpack.title": "All The Mods 9",
+	"atm9.modpack.title": "All The Mods 9 - Expert",
 
 
 	"atm9.chapters.1.title": "환영합니다",
@@ -66,7 +66,7 @@
 
 	"atm9.quest.welcome.team": "팀 만들기",
 	"atm9.quest.welcome.commands": "유용한 명령어",
-	"atm9.quest.welcome.welcome": "&dAll The Mods 9에 오신 것을 환영합니다!",
+	"atm9.quest.welcome.welcome": "&dAll The Mods 9 - Expert에 오신 것을 환영합니다!",
 	"atm9.quest.welcome.quests": "퀘스트",
 	"atm9.quest.welcome.claims": "청크 클레임",
 	"atm9.quest.welcome.translations": "모든 번역",
@@ -215,7 +215,7 @@
 	"atm9.quest.tips.subt.sleep": "ZZZzzz... 잠잘 시간이네요.",
 	"atm9.quest.tips.subt.sink": "원자로 냉각제로 사용 가능",
 	"atm9.quest.tips.subt.spawner": "Apotheosis 스포너 변경사항",
-	"atm9.quest.tips.subt.mahou": "ATM9 Mahou 변경사항",
+	"atm9.quest.tips.subt.mahou": "ATM9 - Expert Mahou 변경사항",
 	"atm9.quest.tips.subt.powah": "파워? 파와입니다!",
 	
 

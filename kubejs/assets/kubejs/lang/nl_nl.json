@@ -1,5 +1,7 @@
 {
-   "atm9.modpack.title": "All The Mods 9",
+	"atm9.modpack.title": "All The Mods 9 - Expert",
+
+
 	"atm9.chapters.1.title": "Welcome",
 	"atm9.chapters.2.title": "Allthemodium",
 	"atm9.chapters.3.title": "Bounty Board",
@@ -80,7 +82,7 @@
     "atm9.quest.welcome.translations": "Alle vertalingen",
     "atm9.quest.welcome.desc.team": "Als je een team voor jou en je vrienden wilt maken, gebruik dan het commando &a/ftbteams party create (naam van team)&r om het team aan te maken!",
     "atm9.quest.welcome.desc.commands": "Er zijn tal van nuttige opdrachten binnen ATM. Hier zijn er een paar: \\n \\n &e/sethome&r (naam van huis) | Laten we een huis instellen waar je naar terug kunt teleporteren met behulp van /home (naam). Voorbeeld: /sethome farm - teleporteer vervolgens met /home farm \\n \\n &e/spawn&r | Dit zal je teleporteren naar de spawn van je bovenwereld. \\n \\n &e/rtp&r | 'Random Teleport' teleporteert je naar een willekeurige locatie in de wereld. \\n \\n Opmerking: deze opdrachten hebben cooldowns en limieten. Als je ze wilt wijzigen, kun je het configuratiebestand bewerken dat je hier kunt vinden: \\n \\n - Voor singleplayer | &osaves/(naam van opslag)/serverconfig/ftbessentials.snbt&r \\n \\n - Voor servers | &oworld/serverconfig/ftbessentials.snbt&r",
-    "atm9.quest.welcome.desc.welcome1": "ATM9 is een aanrechtpakket waarmee je de wereld van gemodificeerde Minecraft op je eigen manier kunt verkennen!",
+    "atm9.quest.welcome.desc.welcome1": "ATM9 - Expert is een aanrechtpakket waarmee je de wereld van gemodificeerde Minecraft op je eigen manier kunt verkennen!",
     "atm9.quest.welcome.desc.welcome2": "Als je vragen of problemen hebt, sluit je dan gerust aan bij de ATM-discord!",
     "atm9.quest.welcome.desc.quests1": "In dit modpack zijn Quests optioneel. Mods staan ​​niet achter het voltooien van speurtochten!",
     "atm9.quest.welcome.desc.quests2": "De individuele missielijnen buiten de hoofdmissielijn zijn bedoeld als mod-gidsen. Als je de voortgang wilt volgen, bekijk dan zeker de hoofdmissielijn!",
@@ -213,7 +215,7 @@
     "atm9.quest.tips.subt.sleep": "ZZZzz...",
     "atm9.quest.tips.subt.sink": "Kan worden gebruikt als reactorkoelmiddel",
     "atm9.quest.tips.subt.spawner": "Apotheose Spawner-wijzigingen",
-    "atm9.quest.tips.subt.mahou": "ATM9 Mahou-wijzigingen",
+    "atm9.quest.tips.subt.mahou": "ATM9 - Expert Mahou-wijzigingen",
     "atm9.quest.tips.subt.powah": "Stroom??  POWAH!",
     "atm9.quest.chapter1.welcome": "&eWelkom bij het hoofdstuk Aan de slag&r!",
     "atm9.quest.chapter1.crafting": "Het vaartuig in Minecraft plaatsen",
@@ -278,7 +280,7 @@
     "atm9.quest.chapter1.drawer": "&aFunctionele opslag&r",
     "atm9.quest.chapter1.backpack": "<a>Verfijnde rugzakken<& r>",
     "atm9.quest.chapter1.chest": "&2Geavanceerde opslag&r",
-    "atm9.quest.chapter1.desc.welcome": "ATM9 is een &aKitchensink&r-pakket, wat betekent dat je de modpack kunt verkennen en spelen zoals jij dat wilt! \\n \\n Er is echter een eindspeldoel: de &6ATM-ster&r worden! \\n \\n Deze opdrachtenreeks dient als gids voor alle spelers, of je nu helemaal nieuw bent bij Minecraft of eerdere ATM-pakketten hebt gespeeld. Het zal je ook begeleiden bij het maken van de ster. \\n \\n Verzamel, net als bij bijna elk modpack, wat hout om aan de slag te gaan!",
+    "atm9.quest.chapter1.desc.welcome": "ATM9 - Expert is een &aKitchensink&r-pakket, wat betekent dat je de modpack kunt verkennen en spelen zoals jij dat wilt! \\n \\n Er is echter een eindspeldoel: de &6ATM-ster&r worden! \\n \\n Deze opdrachtenreeks dient als gids voor alle spelers, of je nu helemaal nieuw bent bij Minecraft of eerdere ATM-pakketten hebt gespeeld. Het zal je ook begeleiden bij het maken van de ster. \\n \\n Verzamel, net als bij bijna elk modpack, wat hout om aan de slag te gaan!",
     "atm9.quest.chapter1.desc.crafting": "Natuurlijk kun je je inventaris inrichten met behulp van het 2x2-knutselraster, maar daarmee kom je niet ver. We moeten upgraden door een Crafting Table te maken!",
     "atm9.quest.chapter1.desc.crafting_stick": "Persoonlijk heb ik er een hekel aan om naar een blok te moeten rennen om te knutselen. Dat is waar de &2Crafting Stick&r goed van pas komt! \\n \\n Dit item werkt als een &adraagbare knutseltafel&r! \\n \\n Tip: je kunt dit ook in je &aCurios&r-slot plaatsen en een &bKeybind&r instellen om het te openen!",
     "atm9.quest.chapter1.desc.wooden_pick": "Of je nu een ervaren modded-speler bent, of een complete noob op het gebied van MC, iedereen moet een &2Houten houweel&r maken. \\n \\n Met pikhouwelen kun je de meeste stenen en metalen blokken breken. Deze houten gaat niet lang mee, dus zorg ervoor dat je er wat &3Kasseien&r bij verzamelt!",
