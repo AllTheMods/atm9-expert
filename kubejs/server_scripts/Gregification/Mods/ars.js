@@ -276,4 +276,44 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('2x gtceu:glyph_core_casing')
         .duration(100)
         .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_hephaestus_plating_casing')
+        .itemInputs(
+            '4x forbidden_arcanus:polished_darkstone',
+            '#forge:plates/stainless_steel',
+            '#forge:plates/copper'
+        )
+        .itemOutputs('2x gtceu:hephaestus_plating_casing')
+        .duration(100)
+        .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_forge_rune_casing')
+        .itemInputs(
+            '2x gtceu:hephaestus_plating_casing',
+            '2x forbidden_arcanus:arcane_crystal',
+            '2x #forge:plates/gold'
+        )
+        .itemOutputs('2x gtceu:forge_rune_casing')
+        .duration(100)
+        .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_soulstone_casing')
+        .itemInputs(
+            '4x minecraft:soul_sand',
+            '#forge:plates/stainless_steel',
+            '#forge:plates/silver'
+        )
+        .itemOutputs('2x gtceu:soulstone_casing')
+        .duration(100)
+        .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_soul_conduit_casing')
+        .itemInputs(
+            '2x gtceu:soulstone_casing',
+            '2x forbidden_arcanus:arcane_crystal',
+            '2x #forge:plates/silver'
+        )
+        .itemOutputs('2x gtceu:soul_conduit_casing')
+        .duration(100)
+        .EUt(LV);
 });

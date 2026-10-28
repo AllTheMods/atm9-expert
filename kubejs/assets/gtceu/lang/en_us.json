@@ -1046,5 +1046,15 @@
     "block.gtceu.arcane_atelier": "Arcane Atelier",
     "block.gtceu.sourcestone_plating_casing": "Sourcestone Plating Casing",
     "block.gtceu.source_conduit_casing": "Source Conduit Casing",
-    "block.gtceu.glyph_core_casing": "Glyph Core Casing"
+    "block.gtceu.glyph_core_casing": "Glyph Core Casing",
+    "gtceu.botanical_brewery": "Botanical Brewery",
+    "block.gtceu.botanical_brewery": "Botanical Brewery",
+    "gtceu.enchanting_apparatus": "Enchanting Apparatus",
+    "block.gtceu.enchanting_apparatus": "Enchanting Apparatus",
+    "gtceu.scribes_table": "Scribe's Table",
+    "block.gtceu.scribes_table": "Scribe's Table",
+    "block.gtceu.hephaestus_plating_casing": "Hephaestus Plating Casing",
+    "block.gtceu.forge_rune_casing": "Forge Rune Casing",
+    "block.gtceu.soulstone_casing": "Soulstone Casing",
+    "block.gtceu.soul_conduit_casing": "Soul Conduit Casing"
 }

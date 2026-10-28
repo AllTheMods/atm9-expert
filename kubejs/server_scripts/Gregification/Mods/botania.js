@@ -595,7 +595,8 @@ ServerEvents.recipes(allthemods => {
         }).filter(item => item != null);
         inputItems.push('botania:vial');
 
-        let outputItem = Item.of('botania:vial', '{brewKey:"' + recipe.brew + '"}');
+        //let outputItem = Item.of('botania:vial', '{brewKey:"' + recipe.brew + '"}');
+        let outputItem = Item.of('botania:vial', ('{brewKey:"' + recipe.brew + '"}').toString()).strongNBT();
         let safeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
 
         allthemods.recipes.gtceu.botanical_brewery(safeID)

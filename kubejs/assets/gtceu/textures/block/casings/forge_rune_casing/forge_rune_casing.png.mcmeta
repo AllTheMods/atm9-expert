@@ -1,0 +1,9 @@
+{
+  "ldlib": {
+    "connection": "gtceu:block/casings/forge_rune_casing/forge_rune_casing_ctm"
+  },
+  "animation": {
+    "frametime": 2,
+    "interpolate": false
+  }
+}

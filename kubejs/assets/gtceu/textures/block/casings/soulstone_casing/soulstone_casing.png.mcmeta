@@ -1,0 +1,9 @@
+{
+  "ldlib": {
+    "connection": "gtceu:block/casings/soulstone_casing/soulstone_casing_ctm"
+  },
+  "animation": {
+    "frametime": 2,
+    "interpolate": false
+  }
+}
