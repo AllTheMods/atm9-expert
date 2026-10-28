@@ -1,5 +1,5 @@
 {
-	"atm9.modpack.title": "All The Mods 9",
+	"atm9.modpack.title": "All The Mods 9 - Expert",
 
 
 	"atm9.chapters.1.title": "Bienvenidx",
@@ -68,7 +68,7 @@
 	
 	"atm9.quest.welcome.team": "Creando Grupos",
 	"atm9.quest.welcome.commands": "Comandos utiles",
-	"atm9.quest.welcome.welcome": "&dBienvenidx a All The Mods 9!",
+	"atm9.quest.welcome.welcome": "&dBienvenidx a All The Mods 9 - Expert!",
 	"atm9.quest.welcome.quests": "Misiones",
 	"atm9.quest.welcome.claims": "Reclamando Chunks",
 	"atm9.quest.welcome.translations": "All The Translations",
@@ -76,7 +76,7 @@
 	
 	"atm9.quest.welcome.desc.team": "Si quieres crear un grupo para tí y para tus amigxs, usa el comando &a/ftbteams party create (nombre del grupo)&r para crear un grupo!",
 	"atm9.quest.welcome.desc.commands": "Hay bastantes comandos utiles dentro de ATM. Aqui hay algunos: \\n \\n &e/sethome&r (nombre de tu base) | Te deja poner un punto de teletransporte a tu base /home (nombre de tu base). Ejemplo: /sethome granja - para teletransportarte usa /home granja \\n \\n &e/spawn&r | Este te permite teletransportarte al spawn de tu overworld. \\n \\n &e/rtp&r | 'Random Teleport' Te permite teletransportarte de forma aleatoria en tu mundo. \\n \\n Ten en cuenta: Estos comandos tiene un limite y un tiempo de espera. Si quieres cambiar estos, puedes editarlos en la configuracion: \\n \\n - Para Un Jugador | &osaves/(nombre de tu mundo)/serverconfig/ftbessentials.snbt&r \\n \\n - Para servidores | &oworld/serverconfig/ftbessentials.snbt",
-	"atm9.quest.welcome.desc.welcome1": "ATM9 es un kitchensink pack (mejor conocidos como packs sin progresion directa) los cuales te dejan empezar con cualquier mod sin ningun limite!",
+	"atm9.quest.welcome.desc.welcome1": "ATM9 - Expert es un kitchensink pack (mejor conocidos como packs sin progresion directa) los cuales te dejan empezar con cualquier mod sin ningun limite!",
 	"atm9.quest.welcome.desc.welcome2": "Si tienes algun tipo de pregunta o problema, sientete bienvenidx a unirte al discord!",
 	"atm9.quest.welcome.desc.quests1": "En este modpack, las Misiones son opcionales. Los Mods no están bloqueados para completar ninguna misión!",
 	"atm9.quest.welcome.desc.quests2": "Las misiones individuales de ciertos mods estan para servir como una guia. Si gustas seguir una progresion, asegurate de echarle un ojo a las misiones principales!",
@@ -290,7 +290,7 @@
 	"atm9.quest.chapter1.backpack": "&aSophisticated Backpacks",
 	"atm9.quest.chapter1.chest": "&2Sophisticated Storage",
 
-	"atm9.quest.chapter1.desc.welcome": "ATM9 es un pack &aKitchensink&r, el cual podemos seguir cualquier tipo de progresión sin necesidad de tener que avanzar sí o sí en las misiones! \\n \\n Sin embargo, hay un objetivo principal: Crear La &6ATM Star&r! \\n \\n Esta sección de misiones junto con las otras están para ayudarte y servirte como una guía, si eres nuevx en Minecraft o has jugado modpacks de ATM previos. Las misiones también te guiarán para craftear la Estrella. \\n \\n Como cualquier otro modpack o mundo, recolecta un poco de madera para empezar la aventura!",
+	"atm9.quest.chapter1.desc.welcome": "ATM9 - Expert es un pack &aKitchensink&r, el cual podemos seguir cualquier tipo de progresión sin necesidad de tener que avanzar sí o sí en las misiones! \\n \\n Sin embargo, hay un objetivo principal: Crear La &6ATM Star&r! \\n \\n Esta sección de misiones junto con las otras están para ayudarte y servirte como una guía, si eres nuevx en Minecraft o has jugado modpacks de ATM previos. Las misiones también te guiarán para craftear la Estrella. \\n \\n Como cualquier otro modpack o mundo, recolecta un poco de madera para empezar la aventura!",
 	"atm9.quest.chapter1.desc.crafting": "Claro, puedes usar la cuadrícula de 2x2 que tenemos disponible en el inventario, pero eso no será suficiente. ¡Necesitamos una Mesa de Trabajo!",
 	"atm9.quest.chapter1.desc.crafting_stick": "Personalmente, detesto tener que cargar un bloque extra en el inventario. Ahí es cuando la &2Crafting Stick&r viene a ayudar! \\n \\n Este ítem sirve como una &aMesa de Crafteos Portátil&r! \\n \\n Tip: También la puedes colocar en la parte de los &aCurios&r y asigna una &bTecla&r para abrirla!",
 	"atm9.quest.chapter1.desc.wooden_pick": "No importa si ya llevas tiempo jugando Minecraft con mods, o recién vas empezando con MC, todxs tienen que hacer un &2Pico de Madera&r. \\n \\n Los picos te ayudarán para romper varios bloques, incluyendo los bloques de metal. Pero no nos durará mucho, asegúrate de recolectar un poco de &3Piedra Labrada&r con el pico!",

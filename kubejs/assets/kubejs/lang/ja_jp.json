@@ -1,5 +1,5 @@
 {
-	"atm9.modpack.title": "All The Mods 9",
+	"atm9.modpack.title": "All The Mods 9 - Expert",
 
 
 	"atm9.chapters.1.title": "ようこそ",
@@ -66,7 +66,7 @@
 
 	"atm9.quest.welcome.team": "チーム作成",
 	"atm9.quest.welcome.commands": "便利なコマンド",
-	"atm9.quest.welcome.welcome": "&dAll The Mods 9へようこそ！",
+	"atm9.quest.welcome.welcome": "&dAll The Mods 9 - Expertへようこそ！",
 	"atm9.quest.welcome.quests": "クエスト",
 	"atm9.quest.welcome.claims": "チャンクの主張",
 	"atm9.quest.welcome.translations": "All The Translations",
@@ -218,7 +218,7 @@
 	"atm9.quest.tips.subt.sleep": "ZZZzzz... 眠りの時間ですね。",
 	"atm9.quest.tips.subt.sink": "リアクター冷却剤として使用可能です",
 	"atm9.quest.tips.subt.spawner": "Apotheosisスポナーの変更点",
-	"atm9.quest.tips.subt.mahou": "ATM9 Mahouの変更点",
+	"atm9.quest.tips.subt.mahou": "ATM9 - Expert Mahouの変更点",
 	"atm9.quest.tips.subt.powah": "パワー？ POWAHです！",
 
 

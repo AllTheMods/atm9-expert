@@ -1,5 +1,5 @@
 {
-	"atm9.modpack.title": "All The Mods 9",
+	"atm9.modpack.title": "All The Mods 9 - Expert",
 
 
 	"atm9.chapters.1.title": "Benvenuto",
@@ -76,14 +76,14 @@
 	
 	"atm9.quest.welcome.team": "Creare una Squadra",
 	"atm9.quest.welcome.commands": "Comandi Utili",
-	"atm9.quest.welcome.welcome": "&dBenvenuto su All The Mods 9!",
+	"atm9.quest.welcome.welcome": "&dBenvenuto su All The Mods 9 - Expert!",
 	"atm9.quest.welcome.quests": "Obiettivi",
 	"atm9.quest.welcome.claims": "Claimare Chunk",
 	"atm9.quest.welcome.translations": "All The Translations",
 	
 	"atm9.quest.welcome.desc.team": "Se vuoi creare una squadra per te e i tuoi amici, usa il comando &a/ftbteams party create (nome della squadra)&r per creare una squadra!",
 	"atm9.quest.welcome.desc.commands": "Ci sono un sacco di comandi utili in ATM. Eccone alcuni: \\n \\n &e/sethome&r (nome casa) | Ti permette di impostare una casa a cui ti puoi teletrasportare usando /home (casa). Esempio: /sethome farm - poi teletrasportati con /home farm \\n \\n &e/spawn&r | Questo ti teletrasporta al tuo spawn. \\n \\n &e/rtp&r | 'Random Teleport' Ti teletrasporta in un punto a caso del mondo. \\n \\n Nota bene: Questi comandi hanno conti alla rovescia e limiti. Se vorresti cambiarli, puoi modificare il file config che puoi trovare qui: \\n \\n - Per il Singleplayer | &osaves/(nome del salvataggio)/serverconfig/ftbessentials.snbt&r \\n \\n - Per i Server | &oworld/serverconfig/ftbessentials.snbt&r",
-	"atm9.quest.welcome.desc.welcome1": "ATM9 è un modpack 'kitchensink' che ti permette di esplorare il mondo di Minecraft moddato a modo tuo!",
+	"atm9.quest.welcome.desc.welcome1": "ATM9 - Expert è un modpack 'kitchensink' che ti permette di esplorare il mondo di Minecraft moddato a modo tuo!",
 	"atm9.quest.welcome.desc.welcome2": "Se hai domande o problemi, Sentiti libero di entrare nel server Discord di ATM!",
 	"atm9.quest.welcome.desc.quests1": "In questo modpack, gli Obiettivi sono opzionali. Le Mod non sono bloccate dietro il completamento degli Obiettivi!",
 	"atm9.quest.welcome.desc.quests2": "Gli Obiettivi individuali al di fuori degli Obiettivi principali servono come guida alle Mod. Se vuoi seguire la progressione, assicurati di controllare gli Obiettivi Principali!",
@@ -296,7 +296,7 @@
 	"atm9.quest.chapter1.backpack": "&aSophisticated Backpacks&r",
 	"atm9.quest.chapter1.chest": "&2Sophisticated Storage&r",
 	
-	"atm9.quest.chapter1.desc.welcome": "ATM9 is a &aKitchensink&r pack, meaning you are free to explore and play the modpack any way that you want! \\n \\n However, there is an endgame goal: Making the &6ATM Star&r! \\n \\n This questline serves as a guide for all players, whether you are brand new to Minecraft or you've played through previous ATM packs. It will also guide you to crafting the Star. \\n \\n Just like almost every modpack, gather some wood to get started!",
+	"atm9.quest.chapter1.desc.welcome": "ATM9 - Expert is a &aKitchensink&r pack, meaning you are free to explore and play the modpack any way that you want! \\n \\n However, there is an endgame goal: Making the &6ATM Star&r! \\n \\n This questline serves as a guide for all players, whether you are brand new to Minecraft or you've played through previous ATM packs. It will also guide you to crafting the Star. \\n \\n Just like almost every modpack, gather some wood to get started!",
 	"atm9.quest.chapter1.desc.crafting": "Sure, you could craft in your inventory using the 2x2 crafting grid, but that won't get you far. We need to upgrade by making a Crafting Table!",
 	"atm9.quest.chapter1.desc.crafting_stick": "Personally, I hate having to run to a block just to craft. That's where the &2Crafting Stick&r comes in! \\n \\n This item works as a &aPortable Crafting Table&r! \\n \\n Tip: You can also put this in your &aCurios&r slot and set a &bKeybind&r to open it!",
 	"atm9.quest.chapter1.desc.wooden_pick": "Whether you are an experienced modded player, or a complete noob to MC, everyone has to make a &2Wooden Pickaxe&r. \\n \\n Pickaxes allow you to break most stone and metal blocks. This wooden one won't last long, so make sure to gather some &3Cobblestone&r with it!",

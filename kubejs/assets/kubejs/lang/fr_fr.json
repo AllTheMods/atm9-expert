@@ -1,5 +1,5 @@
 {
-	"atm9.modpack.title": "All The Mods 9",
+	"atm9.modpack.title": "All The Mods 9 - Expert",
 
 
 	"atm9.chapters.1.title": "Bienvenue",
@@ -56,7 +56,7 @@
 
 	"atm9.quest.welcome.team": "Créer une Équipe",
 	"atm9.quest.welcome.commands": "Commandes Utiles",
-	"atm9.quest.welcome.welcome": "&dBienvenue dans All The Mods 9!",
+	"atm9.quest.welcome.welcome": "&dBienvenue dans All The Mods 9 - Expert!",
 	"atm9.quest.welcome.quests": "Quêtes",
 	"atm9.quest.welcome.claims": "Claims des chunks",
 
@@ -68,7 +68,7 @@
 	"atm9.quest.welcome.desc.commands5": "Remarque : Ces commandes ont des délais de récupération et des limites. Si vous souhaitez les modifier, vous pouvez éditer le fichier de configuration qui se trouve ici:",
 	"atm9.quest.welcome.desc.commands6": "- Pour le mode solo | &osaves/(Nom de la sauvegarde)/serverconfig/ftbessentials.snbt",
 	"atm9.quest.welcome.desc.commands7": "- Pour les serveurs | &oworld/serverconfig/ftbessentials.snbt",
-	"atm9.quest.welcome.desc.welcome1": "ATM9 est un pack 'kitchensink' qui vous permet d'explorer le monde de Minecraft moddé à votre manière!",
+	"atm9.quest.welcome.desc.welcome1": "ATM9 - Expert est un pack 'kitchensink' qui vous permet d'explorer le monde de Minecraft moddé à votre manière!",
 	"atm9.quest.welcome.desc.welcome2": "Si vous avez des questions ou des problèmes, n'hésitez pas à rejoindre le discord d'ATM!",
 	"atm9.quest.welcome.desc.quests1": "Dans ce modpack, les quêtes sont facultatives. Les mods ne sont pas bloqués derrière l'achèvement de quêtes!",
 	"atm9.quest.welcome.desc.quests2": "Les lignes de quêtes individuelles en dehors de la ligne principale des quêtes sont censées servir de guides pour les mods. Si vous souhaitez suivre la progression, assurez-vous de consulter la ligne principale des quêtes!",

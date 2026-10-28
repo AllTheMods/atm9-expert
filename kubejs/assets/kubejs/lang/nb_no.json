@@ -1,5 +1,5 @@
 {
-	"atm9.modpack.title": "All The Mods 9",
+	"atm9.modpack.title": "All The Mods 9 - Expert",
 
 
 	"atm9.chapters.1.title": "Velkommen",
@@ -65,14 +65,14 @@
 
 	"atm9.quest.welcome.team": "Opprette et team",
 	"atm9.quest.welcome.commands": "Nyttige kommandoer",
-	"atm9.quest.welcome.welcome": "&dVelkommen til All The Mods 9!",
+	"atm9.quest.welcome.welcome": "&dVelkommen til All The Mods 9 - Expert!",
 	"atm9.quest.welcome.quests": "Oppdrag",
 	"atm9.quest.welcome.claims": "Hevde Chunks",
 	"atm9.quest.welcome.translations": "All The Translations",
 
 	"atm9.quest.welcome.desc.team": "Hvis du vil lage et lag for deg og vennene dine, bruk kommandoen &a/ftbteams party create (navn på team)&r for å lage laget!    ",
 	"atm9.quest.welcome.desc.commands": "Det er mange nyttige kommandoer i ATM. Her er noen: \\n \\n &e/sethome&r (navn på hjemmet) | La oss angi et hjem som du kan teleportere tilbake til ved å bruke /home (navn). Eksempel: /sethome farm - deretter teleporter med /home farm \\n \\n &e/spawn&r | Dette vil teleportere deg til gyten til oververdenen din. \\n \\n &e/rtp&r | 'Random Teleport' vil teleportere deg til et tilfeldig sted i verden. \\n \\n Merk: Disse kommandoene har nedkjøling og begrensninger. Hvis du vil endre dem, kan du redigere konfigurasjonsfilen som finnes her: \\n \\n - For Singleplayer | &osaves/(navn på lagring)/serverconfig/ftbesentials.snbt&r \\n \\n - For servere | &oworld/serverconfig/ftbesentials.snbt&r",
-	"atm9.quest.welcome.desc.welcome1": "ATM9 er en kjøkkenvask-pakke som lar deg utforske verden av modifiserte Minecraft på din egen måte!    ",
+	"atm9.quest.welcome.desc.welcome1": "ATM9 - Expert er en kjøkkenvask-pakke som lar deg utforske verden av modifiserte Minecraft på din egen måte!    ",
 	"atm9.quest.welcome.desc.welcome2": "Hvis du har spørsmål eller problemer, kan du gjerne bli med i ATM-discorden!",
 	"atm9.quest.welcome.desc.quests1": "I denne modpakken er oppdrag valgfrie. Mods er ikke lukket bak å fullføre noen oppdrag!",
 	"atm9.quest.welcome.desc.quests2": "De individuelle oppdragslinjene utenfor hovedoppdragslinjen er ment å tjene som mod-guider. Hvis du vil følge progresjonen, sørg for å sjekke ut hovedoppdragslinjen!    ",
@@ -217,7 +217,7 @@
 	"atm9.quest.tips.subt.sleep": "ZZZzzz...",
 	"atm9.quest.tips.subt.sink": "Can be used as Reactor Coolant",
 	"atm9.quest.tips.subt.spawner": "Apotheosis Spawner Changes",
-	"atm9.quest.tips.subt.mahou": "ATM9 Mahou Changes",
+	"atm9.quest.tips.subt.mahou": "ATM9 - Expert Mahou Changes",
 	"atm9.quest.tips.subt.powah": "Power??  POWAH!",
 	
 	
@@ -285,7 +285,7 @@
 	"atm9.quest.chapter1.backpack": "&aSophisticated Backpacks&r",
 	"atm9.quest.chapter1.chest": "&2Sophisticated Storage&r",
 	
-	"atm9.quest.chapter1.desc.welcome": "ATM9 is a &aKitchensink&r pack, meaning you are free to explore and play the modpack any way that you want! \\n \\n However, there is an endgame goal: Making the &6ATM Star&r! \\n \\n This questline serves as a guide for all players, whether you are brand new to Minecraft or you've played through previous ATM packs. It will also guide you to crafting the Star. \\n \\n Just like almost every modpack, gather some wood to get started!",
+	"atm9.quest.chapter1.desc.welcome": "ATM9 - Expert is a &aKitchensink&r pack, meaning you are free to explore and play the modpack any way that you want! \\n \\n However, there is an endgame goal: Making the &6ATM Star&r! \\n \\n This questline serves as a guide for all players, whether you are brand new to Minecraft or you've played through previous ATM packs. It will also guide you to crafting the Star. \\n \\n Just like almost every modpack, gather some wood to get started!",
 	"atm9.quest.chapter1.desc.crafting": "Sure, you could craft in your inventory using the 2x2 crafting grid, but that won't get you far. We need to upgrade by making a Crafting Table!",
 	"atm9.quest.chapter1.desc.crafting_stick": "Personally, I hate having to run to a block just to craft. That's where the &2Crafting Stick&r comes in! \\n \\n This item works as a &aPortable Crafting Table&r! \\n \\n Tip: You can also put this in your &aCurios&r slot and set a &bKeybind&r to open it!",
 	"atm9.quest.chapter1.desc.wooden_pick": "Whether you are an experienced modded player, or a complete noob to MC, everyone has to make a &2Wooden Pickaxe&r. \\n \\n Pickaxes allow you to break most stone and metal blocks. This wooden one won't last long, so make sure to gather some &3Cobblestone&r with it!",
