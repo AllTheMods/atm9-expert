@@ -688,7 +688,7 @@ ServerEvents.recipes(allthemods => {
         if (fluidOut) { recipe.outputFluids(fluidOut) }
     };
 
-    const chalks = [
+    const chalksImpure = [
         'white',
         'orange',
         'magenta',
@@ -707,7 +707,7 @@ ServerEvents.recipes(allthemods => {
         'black'
     ];
     
-    chalks.forEach(chalk => {
+    chalksImpure.forEach(chalk => {
         addSpiritInfuser([`occultism:chalk_${chalk}_impure`], null, `occultism:chalk_${chalk}`, null, MV, 200);
     });
 
