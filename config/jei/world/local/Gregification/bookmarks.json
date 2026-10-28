@@ -2,6 +2,5 @@
   {"version":1},
   {"type":"item_stack","value":"{Count:1b,id:\"gtceu:sanguine_synthesizer\"}"},
   {"type":"item_stack","value":"{Count:1b,id:\"gtceu:botanical_factory\"}"},
-  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:orechid_grove\"}"},
-  {"type":"recipe","value":"gtceu:black_hole#gregification:black_hole/black_hole/fifth_element#fluid_stack\u0026fluid:gtceu:fifth_element"}
+  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:orechid_grove\"}"}
 ]

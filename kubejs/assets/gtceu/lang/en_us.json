@@ -1038,6 +1038,8 @@
     "block.gtceu.overgrown_plating_casing": "Overgrown Plating Casing",
     "block.gtceu.orechid_grove": "Orechid Grove",
     "gtceu.orechid_grove": "Orechid Grove",
+    "block.gtceu.sanguine_feeder": "Sanguine Feeder",
+    "gtceu.sanguine_feeder": "Sanguine Feeder",
     "block.gtceu.reactor_core_casing": "Reactor Core Casing",
     "block.gtceu.overgrown_conduit_casing": "Overgrown Conduit Casing"
 }

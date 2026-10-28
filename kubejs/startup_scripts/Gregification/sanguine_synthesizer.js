@@ -58,6 +58,14 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
         .setMaxIOSize(2, 1, 1, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ASSEMBLER, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.SCIENCE);
+
+    allthemods.create('sanguine_feeder')
+        .category('sanguine_feeder')
+        .setEUIO('none')
+        .setMaxIOSize(1, 0, 2, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ASSEMBLER, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.BOILER);
+        
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
@@ -126,4 +134,28 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
             .where('#', Predicates.air())
             .build())
         .workableCasingModel('gtceu:block/casings/sanguine_vessel_casing/sanguine_vessel_casing','gtceu:block/multiblock/sanguine_synthesizer');
+
+    allthemods.create('sanguine_feeder', 'multiblock')
+        .rotationState(RotationState.NON_Y_AXIS)
+        .recipeTypes([GTRecipeTypes.get('sanguine_feeder')])
+        .appearanceBlock(() => Block.getBlock('gtceu:sanguine_vessel_casing'))
+        .pattern(definition => FactoryBlockPattern.start()
+            .aisle('CCC', 'CBC', 'CCC')
+            .aisle('CBC', 'B#B', 'CBC')
+            .aisle('CKC', 'CBC', 'CCC')
+            .where('K', Predicates.controller(Predicates.blocks(definition.get())))
+            .where('B', Predicates.blocks('gtceu:blood_splash_casing'))
+            .where('C', Predicates.blocks('gtceu:sanguine_vessel_casing')
+                .or(Predicates.abilities(GTX.BLOOD_INPUT).setExactLimit(1))
+                .or(Predicates.abilities(GTX.BLOOD_OUTPUT).setExactLimit(1))
+                .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(1))
+                .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(1))
+            )
+            .where('#', Predicates.air())
+            .build()
+        )
+        .workableCasingModel(
+            'gtceu:block/casings/sanguine_vessel_casing/sanguine_vessel_casing',
+            'gtceu:block/multiblock/sanguine_synthesizer'
+        );
 });

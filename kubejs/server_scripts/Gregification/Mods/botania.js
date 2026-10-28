@@ -523,34 +523,59 @@ ServerEvents.recipes(allthemods => {
         .duration(100)
         .EUt(MV);
 
-    const manaCost = 100000;
-    const duration = 800;
-    const eut = HV;
-
-    const groveOres = [
-        { ore: 'coal', chance: 90, output: 'gtceu:raw_coal' },
-        { ore: 'iron', chance: 80, output: 'minecraft:raw_iron' },
-        { ore: 'nether_quartz', chance: 70, output: 'gtceu:raw_nether_quartz' },
-        { ore: 'redstone', chance: 50, output: 'gtceu:raw_redstone' },
-        { ore: 'copper', chance: 50, output: 'minecraft:raw_copper' },
-        { ore: 'gold', chance: 30, output: 'minecraft:raw_gold' },
-        { ore: 'emerald', chance: 20, output: 'gtceu:raw_emerald' },
-        { ore: 'lapis', chance: 20, output: 'gtceu:raw_lapis' },
-        { ore: 'diamond', chance: 15, output: 'gtceu:raw_diamond' },
-        { ore: 'ancient_debris', chance: 5, output: 'minecraft:ancient_debris' },
-        { ore: 'iesnium', chance: 1, output: 'occultism:raw_iesnium' },
-        { ore: 'demonite', chance: 1, output: 'bloodmagic:rawdemonite' }
-    ];
-
-    let grove = allthemods.recipes.gtceu.orechid_grove('gregification:orechid_grove')
+    const oreMana = 100000;
+    const oreDuration = 400;
+    const oreEut = HV;
+ 
+    const chemMana = 150000;
+    const chemDuration = 500;
+    const chemEut = HV;
+ 
+    const metalMana = 200000;
+    const metalDuration = 600;
+    const metalEut = HV;
+ 
+    allthemods.recipes.gtceu.orechid_grove('gregification:orechid_grove')
         .itemInputs('64x minecraft:stone', '16x minecraft:netherrack')
-        .input(GTX.MANA, manaCost)
-        .duration(duration)
-        .EUt(eut);
-
-    groveOres.forEach(function (o) {
-        if (!o.output) return;
-        grove.chancedOutput('8x ' + o.output, o.chance * 100, 0);
-    });
+        .input(GTX.MANA, oreMana)
+        .chancedOutput('8x gtceu:raw_coal', 9000, 0)
+        .chancedOutput('8x minecraft:raw_iron', 8000, 0)
+        .chancedOutput('8x gtceu:raw_nether_quartz', 7000, 0)
+        .chancedOutput('8x gtceu:raw_redstone', 5000, 0)
+        .chancedOutput('8x minecraft:raw_copper', 5000, 0)
+        .chancedOutput('8x minecraft:raw_gold', 3000, 0)
+        .chancedOutput('8x gtceu:raw_emerald', 2000, 0)
+        .chancedOutput('8x gtceu:raw_lapis', 2000, 0)
+        .chancedOutput('8x gtceu:raw_diamond', 1500, 0)
+        .chancedOutput('8x minecraft:ancient_debris', 500, 0)
+        .chancedOutput('8x occultism:raw_iesnium', 100, 0)
+        .chancedOutput('8x bloodmagic:rawdemonite', 100, 0)
+        .duration(oreDuration)
+        .EUt(oreEut);
+ 
+    allthemods.recipes.gtceu.orechid_grove('gregification:orechid_grove_chemical')
+        .itemInputs('64x minecraft:stone', '16x minecraft:netherrack')
+        .input(GTX.MANA, chemMana)
+        .chancedOutput('32x gtceu:raw_sulfur', 9000, 0)
+        .chancedOutput('32x gtceu:raw_fluorite', 7000, 0)
+        .chancedOutput('32x gtceu:raw_rock_salt', 7000, 0)
+        .chancedOutput('32x gtceu:raw_apatite', 6000, 0)
+        .chancedOutput('32x gtceu:raw_cinnabar', 5000, 0)
+        .chancedOutput('32x gtceu:raw_barite', 4000, 0)
+        .chancedOutput('32x gtceu:raw_lepidolite', 3000, 0)
+        .duration(chemDuration)
+        .EUt(chemEut);
+ 
+    allthemods.recipes.gtceu.orechid_grove('gregification:orechid_grove_metallurgical')
+        .itemInputs('64x minecraft:stone', '16x minecraft:netherrack', '16x minecraft:end_stone')
+        .input(GTX.MANA, metalMana)
+        .chancedOutput('32x gtceu:raw_stibnite', 7000, 0)
+        .chancedOutput('32x gtceu:raw_chromite', 6000, 0)
+        .chancedOutput('32x gtceu:raw_pyrolusite', 6000, 0)
+        .chancedOutput('32x gtceu:raw_pentlandite', 6000, 0)
+        .chancedOutput('32x gtceu:raw_sphalerite', 5000, 0)
+        .chancedOutput('32x gtceu:raw_scheelite', 1500, 0)
+        .duration(metalDuration)
+        .EUt(metalEut);
 
 });
