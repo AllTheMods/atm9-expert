@@ -598,7 +598,7 @@ ServerEvents.recipes(allthemods => {
         let outputItem = Item.of('botania:vial', '{brewKey:"' + recipe.brew + '"}');
         let safeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
 
-        allthemods.recipes.gtceu.botanical_brewery(`gregification:brewer/${safeID}`)
+        allthemods.recipes.gtceu.botanical_brewery(safeID)
             .itemInputs(inputItems)
             .itemOutputs(outputItem)
             .inputFluids(`#forge:mana ${brewMana}`)
