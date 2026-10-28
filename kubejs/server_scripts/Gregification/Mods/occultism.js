@@ -4,7 +4,7 @@
 // Verify both assumptions against 2-3 entries in-game before trusting the full list.
 
 ServerEvents.recipes(allthemods => {
-    const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+    const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
     const customOres = [
         { ore: 'hellish', weight: 500 },
         { ore: 'terraria', weight: 500 },
@@ -14,21 +14,21 @@ ServerEvents.recipes(allthemods => {
 
 
     function parseItemRef(ref) {
-    if (typeof ref === 'string') {
-        return ref;
-    }
-    if (ref && typeof ref === 'object') {
-        if (ref.tag) {
-            return `#${ref.tag}`;
+        if (typeof ref === 'string') {
+            return ref;
         }
-        if (ref.item) {
-            let count = ref.count || 1;
-            return count > 1 ? `${count}x ${ref.item}` : ref.item;
+        if (ref && typeof ref === 'object') {
+            if (ref.tag) {
+                return `#${ref.tag}`;
+            }
+            if (ref.item) {
+                let count = ref.count || 1;
+                return count > 1 ? `${count}x ${ref.item}` : ref.item;
+            }
         }
+        return null;
     }
-    return null;
-    }
-    function bareNameForId(itemRef) {        
+    function bareNameForId(itemRef) {
         return itemRef.replace(/^#/, '').replace(/^\d+x\s*/i, '');
     }
 
@@ -37,7 +37,7 @@ ServerEvents.recipes(allthemods => {
 
         let inputItem = parseItemRef(data.item);
         let outputItem = parseItemRef(data.result ? data.result.item : null);
-        
+
 
         if (!outputItem || !inputItem) {
             //console.error(`[bio_electrical_infuser] Skipping ${recipe.id} - non-string item reference`);
@@ -52,8 +52,8 @@ ServerEvents.recipes(allthemods => {
             .itemInputs(inputItem)
             .itemOutputs(outputItem)
             .duration(data.duration);
-        
-        switch (outputItem) {            
+
+        switch (outputItem) {
             case 'evilcraft:bowl_of_promises_tier0':
                 bio_recipe.circuit(4);
                 break;
@@ -66,7 +66,7 @@ ServerEvents.recipes(allthemods => {
             case 'evilcraft:bowl_of_promises_tier3':
                 bio_recipe.circuit(3);
                 break;
-            default:                
+            default:
                 break;
         }
 
@@ -106,5 +106,33 @@ ServerEvents.recipes(allthemods => {
         .duration(1000)
         .EUt(IV)
 
+    allthemods.recipes.gtceu.assembler('gregification:craft_otherstone_casing')
+        .itemInputs(
+            '4x occultism:otherstone',
+            '#forge:plates/umbral_steel',
+            '#forge:plates/silver'
+        )
+        .itemOutputs('2x gtceu:otherstone_casing')
+        .duration(100)
+        .EUt(LV);
 
+    allthemods.recipes.gtceu.assembler('gregification:craft_spirit_flame_casing')
+        .itemInputs(
+            '2x gtceu:otherstone_casing',
+            '#forge:gems/glass',
+            '2x #forge:plates/silver'
+        )
+        .itemOutputs('2x gtceu:spirit_flame_casing')
+        .duration(100)
+        .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_ritual_brass_casing')
+        .itemInputs(
+            '2x gtceu:otherstone_casing',
+            '4x #forge:plates/brass',
+            '#forge:plates/gold'
+        )
+        .itemOutputs('2x gtceu:ritual_brass_casing')
+        .duration(100)
+        .EUt(LV);
 })

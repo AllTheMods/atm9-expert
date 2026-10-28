@@ -1033,8 +1033,8 @@
     "block.gtceu.sanguine_forge": "Sanguine Tartaric Forge",
     "gtceu.sanguine_arc": "Sanguine Reaction Chamber",
     "block.gtceu.sanguine_arc": "Sanguine Reaction Chamber",
-    "gtceu.sanguine_array": "Sanguine Array",    
-    "block.gtceu.sanguine_array": "Sanguine Alchemy Array",    
+    "gtceu.sanguine_array": "Sanguine Array",
+    "block.gtceu.sanguine_array": "Sanguine Alchemy Array",
     "block.gtceu.overgrown_plating_casing": "Overgrown Plating Casing",
     "block.gtceu.orechid_grove": "Orechid Grove",
     "gtceu.orechid_grove": "Orechid Grove",
@@ -1056,5 +1056,8 @@
     "block.gtceu.hephaestus_plating_casing": "Hephaestus Plating Casing",
     "block.gtceu.forge_rune_casing": "Forge Rune Casing",
     "block.gtceu.soulstone_casing": "Soulstone Casing",
-    "block.gtceu.soul_conduit_casing": "Soul Conduit Casing"
+    "block.gtceu.soul_conduit_casing": "Soul Conduit Casing",
+    "block.gtceu.otherstone_casing": "Otherstone Plating Casing",
+    "block.gtceu.spirit_flame_casing": "Spirit Flame Casing",
+    "block.gtceu.ritual_brass_casing": "Ritual Brass Casing"
 }

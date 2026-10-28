@@ -9,7 +9,7 @@ ServerEvents.recipes(allthemods => {
     const EUStage7 = UHV; //uhv
     const EUStage8 = UEV; //uev
 
-    const soulExtractor = (inputs, fluidIn, outputs, fluidOut, duration, eu, cID) => {
+    const soulExtractor = (inputs, fluidIn, outputs, fluidOut, duration, eu, cID, program) => {
 
         let id;
         if (cID){
@@ -32,6 +32,9 @@ ServerEvents.recipes(allthemods => {
             .itemInputs(inputs)
             .duration(duration)
             .EUt(eu);
+        if (program) {
+            recipe.circuit(program);
+        }
 
         if (outputs && outputs.length > 0) {
             recipe.itemOutputs(outputs)
@@ -47,7 +50,7 @@ ServerEvents.recipes(allthemods => {
 
     //Item.of('mysticalagriculture:soul_jar', '{Souls:8.0d,Type:"mysticalagriculture:cow"}')
     //{type: '', item: '', total: , amount: },
-    const soouls = [        
+    const souls = [        
         {type: 'fish', item: 'minecraft:cod', total: 6.0, amount: 12},
         {type: 'spider', item: 'minecraft:string', total: 10.0, amount: 40},
         {type: 'basalz', item: 'thermal:basalz_rod', total: 6.0, amount: 12},
@@ -85,9 +88,9 @@ ServerEvents.recipes(allthemods => {
         {type: 'ghast', item: 'minecraft:ghast_tear', total: 4.0, amount: 8},
         {type: 'sheep', item: '#forge:wool', total: 8.0, amount: 40},     
     ];
-    soouls.forEach(soul => {
+    souls.forEach(soul => {
         let output = Item.of('mysticalagriculture:soul_jar', `{Souls:${soul.total}d,Type:"mysticalagriculture:${soul.type}"}`).strongNBT();
-        soulExtractor([`${soul.amount}x ${soul.item}`], null, [output], null, 600, EUStage1, `${soul.type}_${soul.item.split(':').pop()}`);
+        soulExtractor([`${soul.amount}x ${soul.item}`], null, [output], null, 600, EUStage1, `${soul.type}_${soul.item.split(':').pop()}`, 1);
     });
 
     soulExtractor(['forbidden_arcanus:soul_extractor', '128x minecraft:soul_sand'], 'gtceu:water_stage_3 2000', '128x forbidden_arcanus:soulless_sand', 'gtceu:soul 2000', 800, EUStage3);

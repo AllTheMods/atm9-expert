@@ -141,8 +141,8 @@ ServerEvents.recipes(allthemods => {
         // --- STEP 4: Register Recipe ---
         allthemods.recipes.gtceu.seed_fabricator(recipeId)
             .itemInputs(b, `4x ${t.item}`, ingredient)
-            .inputFluids('#forge:saturated_tau 1000')
-            .inputFluids('#forge:saturated_life_fertilizer 1000')
+            .inputFluids(`#forge:saturated_tau ${tKey*1000}`)
+            .inputFluids(`#forge:saturated_life_fertilizer ${tKey*1000}`)
             .inputFluids(water)
             .itemOutputs(seedItem)
             .duration(t.dur)

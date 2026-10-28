@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtceu:block/casings/ritual_brass_casing/ritual_brass_casing"
+  }
+}
