@@ -3,7 +3,7 @@
 	#Enable No Startup Messages module
 	noStartupMessagesEnabled = true
 	#A list of word sequences that if contained in a message will be stopped.
-	noStartupMessagesMessages = ["Railcraft Reborn: A new version", "You are using a beta version of Railcraft Reborn", "You are using a development version of Railcraft Reborn", "This game is using an alpha build of Ender IO"]
+	noStartupMessagesMessages = ["Railcraft Reborn: A new version", "You are using a beta version of Railcraft Reborn", "You are using a development version of Railcraft Reborn", "This game is using an alpha build of Ender IO", "Hello, thank you for downloading Terralith"]
 
 [Recipes]
 	#Disable recipe advancements
