@@ -1057,4 +1057,11 @@
     "block.gtceu.forge_rune_casing": "Revestimento de Runa de Forja",
     "block.gtceu.soulstone_casing": "Revestimento de Pedra das Almas",
     "block.gtceu.soul_conduit_casing": "Revestimento de Condutor de Almas"
+    "gtceu.botanical_brewery": "Cervejaria Botânica",
+    "block.gtceu.botanical_brewery": "Cervejaria Botânica",
+    "gtceu.enchanting_apparatus": "Aparato de Encantamento",
+    "block.gtceu.enchanting_apparatus": "Aparato de Encantamento",
+    "block.gtceu.otherstone_casing": "Revestimento de Blindagem de Pedra do Outro Mundo",
+    "block.gtceu.spirit_flame_casing": "Revestimento de Chama Espiritual",
+    "block.gtceu.ritual_brass_casing": "Revestimento de Latão Ritualístico"
 }
