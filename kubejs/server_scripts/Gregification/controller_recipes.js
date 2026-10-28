@@ -253,4 +253,5 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('gtceu:magnetic_containment_chamber')
         .duration(600)
         .EUt(UV);
+    
 });

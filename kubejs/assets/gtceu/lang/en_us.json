@@ -1041,5 +1041,10 @@
     "block.gtceu.sanguine_feeder": "Sanguine Feeder",
     "gtceu.sanguine_feeder": "Sanguine Feeder",
     "block.gtceu.reactor_core_casing": "Reactor Core Casing",
-    "block.gtceu.overgrown_conduit_casing": "Overgrown Conduit Casing"
+    "block.gtceu.overgrown_conduit_casing": "Overgrown Conduit Casing",
+    "gtceu.arcane_atelier": "Arcane Atelier",
+    "block.gtceu.arcane_atelier": "Arcane Atelier",
+    "block.gtceu.sourcestone_plating_casing": "Sourcestone Plating Casing",
+    "block.gtceu.source_conduit_casing": "Source Conduit Casing",
+    "block.gtceu.glyph_core_casing": "Glyph Core Casing"
 }

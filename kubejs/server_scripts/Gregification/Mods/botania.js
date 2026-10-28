@@ -578,4 +578,31 @@ ServerEvents.recipes(allthemods => {
         .duration(metalDuration)
         .EUt(metalEut);
 
+    const brewMana = 4000;
+    const brewDuration = 200;
+    const brewVoltage = HV;
+
+    allthemods.forEachRecipe({ type: 'botania:brew' }, rawRecipe => {
+        let recipe = JSON.parse(rawRecipe.json);
+
+        let inputItems = recipe.ingredients.map(ingredient => {
+            if (ingredient.item) {
+                return ingredient.item;
+            } else if (ingredient.tag) {
+                return '#' + ingredient.tag;
+            }
+            return null;
+        }).filter(item => item != null);
+        inputItems.push('botania:vial');
+
+        let outputItem = Item.of('botania:vial', '{brewKey:"' + recipe.brew + '"}');
+        let safeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
+
+        allthemods.recipes.gtceu.botanical_brewery(`gregification:brewer/${safeID}`)
+            .itemInputs(inputItems)
+            .itemOutputs(outputItem)
+            .inputFluids(`#forge:mana ${brewMana}`)
+            .duration(brewDuration)
+            .EUt(brewVoltage);
+    });
 });

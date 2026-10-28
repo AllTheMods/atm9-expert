@@ -20,6 +20,13 @@ StartupEvents.registry('block', allthemods => {
 });
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
+    allthemods.create('botanical_brewery')
+        .category('botanical_brewery')
+        .setMaxIOSize(7, 1, 1, 0)
+        .setSound(GTSoundEntries.CHEMICAL)
+        .setSlotOverlay(false, false, GuiTextures.BREWER_OVERLAY)
+        .setSlotOverlay(false, true, GuiTextures.FLUID_TANK_OVERLAY)
+    
     allthemods.create('orechid_grove')
         .category('orechid_grove')
         .setMaxIOSize(3, 15, 0, 0)
@@ -145,7 +152,7 @@ GTCEuStartupEvents.registry("gtceu:machine", allthemods => {
 
     allthemods.create('botanical_factory', 'multiblock')              
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes('petal_apothecary', 'runic_altar', 'mana_infuser', 'mana_pool', 'alfheim_trader')
+        .recipeTypes('petal_apothecary', 'runic_altar', 'mana_infuser', 'mana_pool', 'alfheim_trader', 'botanical_brewery')
         .appearanceBlock(() => Block.getBlock('gtceu:overgrown_plating_casing'))
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
         .pattern(definition => FactoryBlockPattern.start()
@@ -319,6 +326,15 @@ GTCEuStartupEvents.registry("gtceu:machine", allthemods => {
                 .recipeType("alfheim_trader")
                 .workableTieredHullModel("gtceu:block/machines/assembler")
         );   
+
+    allthemods.create("botanical_brewery", "simple")
+        .tiers(GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
+        .definition((tier, builder) =>
+            builder
+                .rotationState(RotationState.NON_Y_AXIS)
+                .recipeType("botanical_brewery")
+                .workableTieredHullModel("gtceu:block/machines/brewery")
+        );
 
     allthemods.create('orechid_grove', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)

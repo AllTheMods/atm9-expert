@@ -127,6 +127,8 @@ ServerEvents.recipes(allthemods => {
         { machine: '_alfheim_trader', startTier: 3, endTier: 8 },
         { machine: '_mana_pool', startTier: 3, endTier: 8 },
         { machine: '_imbument_chamber', startTier: 3, endTier: 8 },
+        { machine: '_enchanting_apparatus', startTier: 3, endTier: 8 },
+        { machine: '_scribes_table', startTier: 3, endTier: 8 },
         //{ machine: '_alchemical_workbench', startTier: 4, endTier: 8 },
         { machine: '_sanguine_alchemy', startTier: 1, endTier: 8 },
         { machine: '_sanguine_forge', startTier: 1, endTier: 8 },
@@ -139,6 +141,7 @@ ServerEvents.recipes(allthemods => {
         { machine: '_unifier', startTier: 2, endTier: 8 },        
         { machine: '_gem_polisher', startTier: 6, endTier: 8 },
         { machine: '_gem_crusher', startTier: 3, endTier: 8 },
+        { machine: '_botanical_brewery', startTier: 3, endTier: 8 },
     ]
 
     machineTiers.forEach(tData => {
@@ -153,6 +156,45 @@ ServerEvents.recipes(allthemods => {
         let motor = `gtceu:${tData.tier}_electric_motor`;
 
         customMachines.forEach(mData => {
+            if (mData.machine == '_botanical_brewery' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                allthemods.shaped(`gtceu:${tData.tier}_botanical_brewery`, [
+                    'TAT',
+                    'CHC',
+                    'TUT'
+                ], {
+                    H: hull,
+                    A: 'botania:brewery',
+                    U: pump,
+                    C: circuit,
+                    T: plate
+                }).id(`gregification:${tData.tier}_botanical_brewery`);
+            }
+            if (mData.machine == '_enchanting_apparatus' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                allthemods.shaped(`gtceu:${tData.tier}_enchanting_apparatus`, [
+                    'TAT',
+                    'CHC',
+                    'TUT'
+                ], {
+                    H: hull,
+                    A: 'ars_nouveau:enchanting_apparatus',
+                    U: pump,
+                    C: circuit,
+                    T: plate
+                }).id(`gregification:${tData.tier}_enchanting_apparatus`);
+            }
+            if (mData.machine == '_scribes_table' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                allthemods.shaped(`gtceu:${tData.tier}_scribes_table`, [
+                    'TAT',
+                    'CHC',
+                    'TUT'
+                ], {
+                    H: hull,
+                    A: 'ars_nouveau:scribes_table',
+                    U: pump,
+                    C: circuit,
+                    T: plate
+                }).id(`gregification:${tData.tier}_scribes_table`);
+            }
             if (mData.machine == '_mana_converter' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
                 allthemods.shaped(`gtceu:${tData.tier}_mana_converter`, [
                     'TPT',
@@ -835,6 +877,22 @@ ServerEvents.recipes(allthemods => {
             D: 'minecraft:diamond'
         }
     )
+    
+    allthemods.recipes.gtceu.assembler('gregification:craft_arcane_atelier')
+        .itemInputs(
+            'gtceu:hv_machine_hull',
+            '#gtceu:circuits/hv',
+            '2x gtceu:hv_electric_pump',
+            '2x gtceu:hv_electric_motor',
+            '2x #forge:plates/stainless_steel',
+            '2x ars_nouveau:arcane_pedestal',
+            '1x ars_nouveau:enchanting_apparatus',
+            '2x gtceu:sourcestone_plating_casing'
+        )
+        .inputFluids('#forge:source 16000')
+        .itemOutputs('gtceu:arcane_atelier')
+        .duration(300)
+        .EUt(HV);
 
 
 });
