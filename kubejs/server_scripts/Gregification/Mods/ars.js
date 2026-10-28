@@ -1,128 +1,319 @@
 ServerEvents.recipes(allthemods => {
-    const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+    const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA;
 
-    const fire = 'ars_nouveau:fire_essence';
-    const air = 'ars_nouveau:air_essence';
-    const manipulation = 'ars_nouveau:manipulation_essence';
-    const anima = 'ars_elemental:anima_essence';
-    const abjuration = 'ars_nouveau:abjuration_essence';
-    const earth = 'ars_nouveau:earth_essence';
-    const conjuration = 'ars_nouveau:conjuration_essence';
-    const water = 'ars_nouveau:water_essence';
+    const imbuementDuration = 300;
+    const imbuementVoltage = EV;
 
+    const apparatusDuration = 300;
+    const apparatusVoltage = EV;
 
+    const scribeDuration = 200;
+    const scribeVoltage = EV;
+    const scribeSourcePerExp = 100;
 
-    //should be a total of 30 recipes
-    const recipes = [
-        { input: ['#minecraft:arrows', '#forge:gems/source', air, 'ars_nouveau:wilden_horn'], output: 'ars_nouveau:split_arrow', source: 100 },
-        { input: ['#minecraft:arrows', '#forge:gems/source', air, 'ars_nouveau:wilden_spike'], output: 'ars_nouveau:pierce_arrow', source: 100 },
-        { input: ['#minecraft:arrows', '#forge:gems/source', air, '#forge:gems/diamond'], output: 'ars_nouveau:amplify_arrow', source: 100 },
+    const essenceSource = 2500;
+    const essenceDuration = 300;
+    const essenceVoltage = EV;
 
+    const animaSource = 3500;
+    const animaDuration = 300;
+    const animaVoltage = EV;
 
-        { input: ['7x #forge:dyes', '#forge:gems/quartz'], output: 'ars_elemental:rainbow_prism_lens', source: 2000 },
-        { input: [earth, fire, water, air, abjuration, conjuration, manipulation, anima, 'ars_nouveau:wilden_tribute'], output: '5x ars_elemental:mark_of_mastery', source: 10000 },
+    const mobJarSource = 16000;
+    const mobJarDuration = 5000;
+    const mobJarVoltage = IV;
 
-        { input: [manipulation, 'ars_nouveau:glyph_decelerate', '#forge:gems/quartz'], output: 'ars_elemental:deceleration_prism_lens', source: 2000 },
-        { input: [manipulation, 'ars_nouveau:glyph_accelerate', '#forge:gems/quartz'], output: 'ars_elemental:acceleration_prism_lens', source: 2000 },        
-        { input: [manipulation, 'ars_nouveau:glyph_pierce', '#forge:gems/quartz'], output: 'ars_elemental:piercing_prism_lens', source: 2000 },
+    const imbuementSkip = [
+        'ars_nouveau:abjuration_essence', 'ars_nouveau:conjuration_essence', 'ars_nouveau:manipulation_essence',
+        'ars_nouveau:air_essence', 'ars_nouveau:water_essence', 'ars_nouveau:earth_essence', 'ars_nouveau:fire_essence',
+        'ars_elemental:anima_essence', 'minecraft:gold_ingot', 'occultism:silver_ingot'
+    ];
 
-        { input: [manipulation, 'ars_elemental:glyph_arc_projectile', '#forge:gems/quartz'], output: 'ars_elemental:arc_prism_lens', source: 2000 },
-        { input: [manipulation, 'ars_elemental:glyph_homing_projectile', '#forge:gems/quartz'], output: 'ars_elemental:homing_prism_lens', source: 2000 },
+    allthemods.forEachRecipe({ type: 'ars_nouveau:imbuement' }, rawRecipe => {
+        let recipe = JSON.parse(rawRecipe.json);
+        if (imbuementSkip.indexOf(recipe.output) >= 0) return;
 
+        let keys = [];
+        let counts = {};
+        let addInput = ingredient => {
+            let key = null;
+            if (ingredient.item) {
+                key = ingredient.item;
+            } else if (ingredient.tag) {
+                key = '#' + ingredient.tag;
+            }
+            if (key == null) return;
+            if (counts[key] == null) {
+                counts[key] = 0;
+                keys.push(key);
+            }
+            counts[key] += 1;
+        };
 
-        { input: [`3x ${water}`, '3x #forge:ingots/gold', '#forge:gems/amethyst'], output: 'ars_elemental:lesser_water_focus', source: 5000 },
-        { input: [`3x ${fire}`, '3x #forge:ingots/gold', '#forge:gems/amethyst'], output: 'ars_elemental:lesser_fire_focus', source: 5000 },
-        { input: [`3x ${air}`, '3x #forge:ingots/gold', '#forge:gems/amethyst'], output: 'ars_elemental:lesser_air_focus', source: 5000 },
-        { input: [`3x ${earth}`, '3x #forge:ingots/gold', '#forge:gems/amethyst'], output: 'ars_elemental:lesser_earth_focus', source: 5000 },
+        addInput(recipe.input);
+        (recipe.pedestalItems || []).forEach(pedestal => {
+            addInput(pedestal.item || pedestal);
+        });
 
+        let inputItems = keys.map(key => counts[key] > 1 ? counts[key] + 'x ' + key : key);
 
-        { input: [`3x ${water}`, 'ars_elemental:water_focus', 'ars_nouveau:spell_turret'], output: 'ars_elemental:water_turret', source: 5000 },
-        { input: [`3x ${fire}`, 'ars_elemental:fire_focus', 'ars_nouveau:spell_turret'], output: 'ars_elemental:fire_turret', source: 5000 },
-        { input: [`3x ${air}`, 'ars_elemental:air_focus', 'ars_nouveau:spell_turret'], output: 'ars_elemental:manipulation_turret', source: 5000 },
-        { input: [`3x ${earth}`, 'ars_elemental:earth_focus', 'ars_nouveau:spell_turret'], output: 'ars_elemental:earth_turret', source: 5000 },
+        let count = recipe.count || 1;
+        let outputItem = count > 1 ? count + 'x ' + recipe.output : recipe.output;
+        let safeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
 
-        { input: [`3x ${manipulation}`, 'ars_nouveau:shapers_focus', 'ars_nouveau:spell_turret'], output: 'ars_elemental:air_turret', source: 5000 },
-        
-        
-        
-
-        { input: ['#forge:gems/lapis'], output: 'ars_nouveau:source_gem', source: 500 },
-        { input: ['#forge:storage_blocks/lapis'], output: 'ars_nouveau:source_gem_block', source: 2000 },
-        
-        { input: ['#forge:gems/amethyst'], output: 'ars_nouveau:source_gem', source: 500, c: 2 },
-        { input: ['#forge:storage_blocks/amethyst'], output: 'ars_nouveau:source_gem_block', source: 2000, c: 2 }
-    ]
-    recipes.forEach(mat => {
-        let rID = mat.c ? `gregification:craft_${mat.output.split(":")[1]}_${mat.c}` : `gregification:craft_${mat.output.split(":")[1]}`;
-        allthemods.recipes.gtceu.imbument_chamber()
-            .itemInputs(mat.input)
-            .inputFluids(`#forge:source ${mat.source}`,)
-            .itemOutputs(mat.output)
-            .EUt(EV)            
-            .duration(300)
-    });
-    //jar
-    allthemods.shaped('ars_nouveau:source_jar',
-        [
-            'STS',
-            'G G',
-            'STS'
-
-        ],
-        {
-            S: 'ars_nouveau:sourcestone',
-            T: 'ars_nouveau:archwood_slab',
-            G: 'gtceu:tempered_glass'
-
-        }).id(`gregification:ars/source_jar`);
-
-    //ars essences
-    const essences = ['abjuration', 'conjuration', 'manipulation', 'air', 'water', 'earth', 'fire']
-    essences.forEach((essence, index) => {
-        allthemods.recipes.gtceu.imbument_chamber(`gregification:craft_essence_${essence}`)
-            .inputFluids('#forge:source 2500',)
-            .itemOutputs(`ars_nouveau:${essence}_essence`)
-            .EUt(EV)
-            .circuit(index + 1)
-            .duration(300)
+        allthemods.recipes.gtceu.imbument_chamber(safeID)
+            .itemInputs(inputItems)
+            .inputFluids(`#forge:source ${recipe.source}`)
+            .itemOutputs(outputItem)
+            .duration(imbuementDuration)
+            .EUt(imbuementVoltage);
     });
 
-    allthemods.recipes.gtceu.imbument_chamber(`gregification:mob_jar`)
-        .itemInputs('#forge:exquisite_gems/vengeful', '#forge:exquisite_gems/destructive', '5x gtceu:laminated_glass', '3x ars_nouveau:sourcestone')
-        .inputFluids('#forge:source 16000',)
-        .itemOutputs('ars_nouveau:mob_jar')
-        .EUt(IV)
-        .duration(5000);
+    allthemods.forEachRecipe({ type: 'ars_nouveau:enchanting_apparatus' }, rawRecipe => {
+        let recipe = JSON.parse(rawRecipe.json);
+        if (recipe.keepNbtOfReagent) return;
 
-    allthemods.recipes.gtceu.imbument_chamber(`gregification:craft_anima`)
-        .inputFluids('#forge:source 3500',)
+        let keys = [];
+        let counts = {};
+        let addInput = ingredient => {
+            let key = null;
+            if (ingredient.item) {
+                key = ingredient.item;
+            } else if (ingredient.tag) {
+                key = '#' + ingredient.tag;
+            }
+            if (key == null) return;
+            if (counts[key] == null) {
+                counts[key] = 0;
+                keys.push(key);
+            }
+            counts[key] += 1;
+        };
+
+        addInput(recipe.reagent[0]);
+        (recipe.pedestalItems || []).forEach(pedestal => {
+            addInput(pedestal.item && typeof pedestal.item == 'object' ? pedestal.item : pedestal);
+        });
+
+        let inputItems = keys.map(key => counts[key] > 1 ? counts[key] + 'x ' + key : key);
+
+        let count = recipe.output.count || 1;
+        let outputItem = count > 1 ? count + 'x ' + recipe.output.item : recipe.output.item;
+        let safeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
+
+        let gtRecipe = allthemods.recipes.gtceu.enchanting_apparatus(safeID)
+            .itemInputs(inputItems)
+            .itemOutputs(outputItem)
+            .duration(apparatusDuration)
+            .EUt(apparatusVoltage);
+        if (recipe.sourceCost > 0) {
+            gtRecipe.inputFluids(`#forge:source ${recipe.sourceCost}`);
+        }
+    });
+
+    allthemods.forEachRecipe({ type: 'ars_nouveau:glyph' }, rawRecipe => {
+        let recipe = JSON.parse(rawRecipe.json);
+
+        let keys = [];
+        let counts = {};
+        recipe.inputItems.forEach(input => {
+            let ingredient = input.item && typeof input.item == 'object' ? input.item : input;
+            let key = null;
+            if (ingredient.item) {
+                key = ingredient.item;
+            } else if (ingredient.tag) {
+                key = '#' + ingredient.tag;
+            }
+            if (key == null) return;
+            if (counts[key] == null) {
+                counts[key] = 0;
+                keys.push(key);
+            }
+            counts[key] += 1;
+        });
+
+        let inputItems = keys.map(key => counts[key] > 1 ? counts[key] + 'x ' + key : key);
+
+        let count = recipe.count || 1;
+        let outputItem = count > 1 ? count + 'x ' + recipe.output : recipe.output;
+        let safeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
+
+        let gtRecipe = allthemods.recipes.gtceu.scribes_table(safeID)
+            .itemInputs(inputItems)
+            .itemOutputs(outputItem)
+            .duration(scribeDuration)
+            .EUt(scribeVoltage);
+        if (recipe.exp > 0) {
+            gtRecipe.inputFluids(`#forge:source ${recipe.exp * scribeSourcePerExp}`);
+        }
+    });
+
+    allthemods.recipes.gtceu.imbument_chamber('gregification:craft_essence_abjuration')
+        .inputFluids('#forge:source ' + essenceSource)
+        .itemOutputs('ars_nouveau:abjuration_essence')
+        .circuit(1)
+        .duration(essenceDuration)
+        .EUt(essenceVoltage);
+
+    allthemods.recipes.gtceu.imbument_chamber('gregification:craft_essence_conjuration')
+        .inputFluids('#forge:source ' + essenceSource)
+        .itemOutputs('ars_nouveau:conjuration_essence')
+        .circuit(2)
+        .duration(essenceDuration)
+        .EUt(essenceVoltage);
+
+    allthemods.recipes.gtceu.imbument_chamber('gregification:craft_essence_manipulation')
+        .inputFluids('#forge:source ' + essenceSource)
+        .itemOutputs('ars_nouveau:manipulation_essence')
+        .circuit(3)
+        .duration(essenceDuration)
+        .EUt(essenceVoltage);
+
+    allthemods.recipes.gtceu.imbument_chamber('gregification:craft_essence_air')
+        .inputFluids('#forge:source ' + essenceSource)
+        .itemOutputs('ars_nouveau:air_essence')
+        .circuit(4)
+        .duration(essenceDuration)
+        .EUt(essenceVoltage);
+
+    allthemods.recipes.gtceu.imbument_chamber('gregification:craft_essence_water')
+        .inputFluids('#forge:source ' + essenceSource)
+        .itemOutputs('ars_nouveau:water_essence')
+        .circuit(5)
+        .duration(essenceDuration)
+        .EUt(essenceVoltage);
+
+    allthemods.recipes.gtceu.imbument_chamber('gregification:craft_essence_earth')
+        .inputFluids('#forge:source ' + essenceSource)
+        .itemOutputs('ars_nouveau:earth_essence')
+        .circuit(6)
+        .duration(essenceDuration)
+        .EUt(essenceVoltage);
+
+    allthemods.recipes.gtceu.imbument_chamber('gregification:craft_essence_fire')
+        .inputFluids('#forge:source ' + essenceSource)
+        .itemOutputs('ars_nouveau:fire_essence')
+        .circuit(7)
+        .duration(essenceDuration)
+        .EUt(essenceVoltage);
+
+    allthemods.recipes.gtceu.imbument_chamber('gregification:craft_anima')
+        .inputFluids('#forge:source ' + animaSource)
         .itemOutputs('ars_elemental:anima_essence')
-        .EUt(EV)
         .circuit(10)
-        .duration(300);
-    
+        .duration(animaDuration)
+        .EUt(animaVoltage);
+
+    allthemods.recipes.gtceu.imbument_chamber('gregification:mob_jar')
+        .itemInputs('#forge:exquisite_gems/vengeful', '#forge:exquisite_gems/destructive', '5x gtceu:laminated_glass', '3x ars_nouveau:sourcestone')
+        .inputFluids('#forge:source ' + mobJarSource)
+        .itemOutputs('ars_nouveau:mob_jar')
+        .duration(mobJarDuration)
+        .EUt(mobJarVoltage);
+
+    allthemods.shaped('ars_nouveau:source_jar', [
+        'STS',
+        'G G',
+        'STS'
+    ], {
+        S: 'ars_nouveau:sourcestone',
+        T: 'ars_nouveau:archwood_slab',
+        G: 'gtceu:tempered_glass'
+    }).id('gregification:ars/source_jar');
+
     allthemods.recipes.gtceu.assembler('gregification:ars/sourcestone')
         .itemInputs('#forge:dusts/source', '#forge:frames/aluminium', '2x bloodmagic:reinforcedslate', '2x #forge:dusts/plascrete')
-        .inputFluids('#forge:steel 288 ')
+        .inputFluids('#forge:steel 288')
         .itemOutputs('4x ars_nouveau:sourcestone')
         .duration(500)
         .EUt(MV);
 
     allthemods.recipes.gtceu.assembler('gregification:ars/arcane_pedestal')
-        .itemInputs('gtceu:mv_machine_hull','2x ars_nouveau:sourcestone', '#forge:exquisite_gems/source', '4x #forge:plates/gold')
+        .itemInputs('gtceu:mv_machine_hull', '2x ars_nouveau:sourcestone', '#forge:exquisite_gems/source', '4x #forge:plates/gold')
         .itemOutputs('ars_nouveau:arcane_pedestal')
         .duration(500)
-        .EUt(MV);    
+        .EUt(MV);
 
     allthemods.recipes.gtceu.assembler('gregification:ars/enchanting_apparatus')
-        .itemInputs('gtceu:mv_machine_hull','2x ars_nouveau:sourcestone', '#forge:exquisite_gems/diamond', '4x #forge:plates/gold')
+        .itemInputs('gtceu:mv_machine_hull', '2x ars_nouveau:sourcestone', '#forge:exquisite_gems/diamond', '4x #forge:plates/gold')
         .itemOutputs('ars_nouveau:enchanting_apparatus')
         .duration(500)
-        .EUt(MV);    
+        .EUt(MV);
 
     allthemods.recipes.gtceu.assembler('gregification:ars/imbuement_chamber')
         .itemInputs('gtceu:mv_machine_hull', '4x #forge:plates/gold', '#evilcraft:gems/dark_power', '6x #forge:planks/archwood')
         .itemOutputs('ars_nouveau:imbuement_chamber')
         .duration(500)
-        .EUt(MV);    
+        .EUt(MV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_sourcestone_plating_casing')
+        .itemInputs(
+            '4x ars_nouveau:sourcestone',
+            '#forge:plates/stainless_steel',
+            '#forge:plates/gold'
+        )
+        .itemOutputs('2x gtceu:sourcestone_plating_casing')
+        .duration(100)
+        .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_source_conduit_casing')
+        .itemInputs(
+            '2x gtceu:sourcestone_plating_casing',
+            '4x ars_nouveau:source_gem',
+            '2x #forge:plates/gold'
+        )
+        .itemOutputs('2x gtceu:source_conduit_casing')
+        .duration(100)
+        .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_glyph_core_casing')
+        .itemInputs(
+            '2x gtceu:sourcestone_plating_casing',
+            '2x ars_nouveau:manipulation_essence',
+            '2x ars_nouveau:conjuration_essence',
+            '#forge:plates/gold'
+        )
+        .itemOutputs('2x gtceu:glyph_core_casing')
+        .duration(100)
+        .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_hephaestus_plating_casing')
+        .itemInputs(
+            '4x forbidden_arcanus:polished_darkstone',
+            '#forge:plates/stainless_steel',
+            '#forge:plates/copper'
+        )
+        .itemOutputs('2x gtceu:hephaestus_plating_casing')
+        .duration(100)
+        .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_forge_rune_casing')
+        .itemInputs(
+            '2x gtceu:hephaestus_plating_casing',
+            '2x forbidden_arcanus:arcane_crystal',
+            '2x #forge:plates/gold'
+        )
+        .itemOutputs('2x gtceu:forge_rune_casing')
+        .duration(100)
+        .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_soulstone_casing')
+        .itemInputs(
+            '4x minecraft:soul_sand',
+            '#forge:plates/stainless_steel',
+            '#forge:plates/silver'
+        )
+        .itemOutputs('2x gtceu:soulstone_casing')
+        .duration(100)
+        .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_soul_conduit_casing')
+        .itemInputs(
+            '2x gtceu:soulstone_casing',
+            '2x forbidden_arcanus:arcane_crystal',
+            '2x #forge:plates/silver'
+        )
+        .itemOutputs('2x gtceu:soul_conduit_casing')
+        .duration(100)
+        .EUt(LV);
 });

@@ -1,3 +1,30 @@
+StartupEvents.registry('block', allthemods => {
+    allthemods.create('gtceu:hephaestus_plating_casing')
+        .displayName('Hephaestus Plating Casing')
+        .hardness(5.0)
+        .resistance(10.0)
+        .soundType('metal')
+        .tagBlock('gtceu:casings');
+    allthemods.create('gtceu:forge_rune_casing')
+        .displayName('Forge Rune Casing')
+        .hardness(5.0)
+        .resistance(10.0)
+        .soundType('metal')
+        .tagBlock('gtceu:casings');
+    allthemods.create('gtceu:soulstone_casing')
+        .displayName('Soulstone Casing')
+        .hardness(5.0)
+        .resistance(10.0)
+        .soundType('metal')
+        .tagBlock('gtceu:casings');
+    allthemods.create('gtceu:soul_conduit_casing')
+        .displayName('Soul Conduit Casing')
+        .hardness(5.0)
+        .resistance(10.0)
+        .soundType('metal')
+        .tagBlock('gtceu:casings');
+});
+
 GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create('industrial_dissolution_chamber')
         .category('dissolution')

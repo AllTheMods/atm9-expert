@@ -3,10 +3,10 @@
  
 # ...except the folders we actually want to track
 !/kubejs/
-!/config/
-!/defaultconfigs/
-!/packmenu/
-!/shaderpacks/
+#!/config/
+#!/defaultconfigs/
+#!/packmenu/
+#!/shaderpacks/
  
 # and this file itself
 !/.gitignore

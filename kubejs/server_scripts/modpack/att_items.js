@@ -31,11 +31,11 @@ ServerEvents.recipes(allthemods => {
   //cataclysm removed 
     // Withers Compass
     allthemods.shaped('allthetweaks:withers_compass', ['DCD', 'ABA', 'DED'], {
-      A: 'minecraft:barrier',
+      A: 'occultism:chalk_void',
       B: 'industrialforegoing:wither_builder',
       C: 'deeperdarker:heart_of_the_deep',
       D: 'bloodmagic:speedrune2',
-      E: 'minecraft:barrier'
+      E: 'productivebees:withered'
     }).id('allthemods:allthetweaks/withers_compass')
 
   // Philosopher's Fuel
@@ -55,7 +55,7 @@ ServerEvents.recipes(allthemods => {
   // Improbable Probability Device
   allthemods.shaped('allthetweaks:improbable_probability_device', ['ABA', 'CGE', 'FDF'], {
     A: 'mekanism:pellet_antimatter',
-    B: 'minecraft:barrier',
+    B: 'gtceu:samarium_cobalt_magnetic_rotor',
     C: ['extradisks:1048576k_storage_part', 'extradisks:1048576k_fluid_storage_part', 'megacells:cell_component_256m'],
     D: 'advgenerators:power_capacitor_tier3',
     E: 'rftoolsutility:flight_module',
@@ -72,8 +72,8 @@ ServerEvents.recipes(allthemods => {
       E: 'ae2:singularity',
       C: 'immersiveengineering:railgun',
       G: 'exchangers:end_exchanger',
-	  S: 'minecraft:barrier',
-	  Q: 'minecraft:barrier'
+	    S: 'gtceu:atomic_clock',
+	    Q: 'gtceu:germanium_diode'
     }).id('allthemods:allthetweaks/nexium_emitter')
 
   // Pulsating Black Hole
@@ -104,8 +104,8 @@ ServerEvents.recipes(allthemods => {
     A: 'forbidden_arcanus:eternal_stella',
     C: Item.of('evilcraft:mace_of_destruction', '{Fluid: {FluidName: "evilcraft:blood", Amount: 4000}}').weakNBT(),
     B: 'evilcraft:piercing_vengeance_focus',
-	  U: 'minecraft:barrier',
-	  L: 'minecraft:barrier'
+	  U: 'gtceu:technomancy_orb',
+	  L: 'gtceu:camphor_incense'
   }).id('allthemods:allthetweaks/oblivion_shard')
 
   // Creative Essence

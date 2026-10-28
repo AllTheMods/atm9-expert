@@ -496,7 +496,7 @@ ServerEvents.recipes(allthemods => {
             '2x botania:rune_mana'
         )
         .inputFluids('#forge:mana 5000')
-        .itemOutputs('2x gtceu:overgrown_plating_casing')        
+        .itemOutputs('2x gtceu:overgrown_plating_casing')
         .duration(100)
         .EUt(MV);
 
@@ -507,7 +507,7 @@ ServerEvents.recipes(allthemods => {
             '4x botania:livingwood'
         )
         .inputFluids('#forge:mana 10000')
-        .itemOutputs('2x gtceu:overgrown_conduit_casing')        
+        .itemOutputs('2x gtceu:overgrown_conduit_casing')
         .duration(100)
         .EUt(MV);
 
@@ -519,20 +519,91 @@ ServerEvents.recipes(allthemods => {
             '4x botania:mana_diamond'
         )
         .inputFluids('#forge:mana 2000')
-        .itemOutputs('2x gtceu:reactor_core_casing')        
+        .itemOutputs('2x gtceu:reactor_core_casing')
         .duration(100)
         .EUt(MV);
 
-    const grovePlan = [
-    { ore: 'minecraft:coal_ore',           chance: 90, output: '' },
-    { ore: 'minecraft:iron_ore',           chance: 80, output: '' },
-    { ore: 'minecraft:nether_quartz_ore',  chance: 70, output: '' },
-    { ore: 'minecraft:redstone_ore',       chance: 50, output: '' },
-    { ore: 'minecraft:copper_ore',         chance: 50, output: '' },
-    { ore: 'minecraft:gold_ore',           chance: 30, output: '' },
-    { ore: 'minecraft:emerald_ore',        chance: 20, output: '' },
-    { ore: 'minecraft:lapis_ore',          chance: 20, output: '' },
-    { ore: 'minecraft:diamond_ore',        chance: 15, output: '' },
-    { ore: 'minecraft:ancient_debris',     chance: 5,  output: '' }
-]
+    const oreMana = 100000;
+    const oreDuration = 400;
+    const oreEut = HV;
+ 
+    const chemMana = 150000;
+    const chemDuration = 500;
+    const chemEut = HV;
+ 
+    const metalMana = 200000;
+    const metalDuration = 600;
+    const metalEut = HV;
+ 
+    allthemods.recipes.gtceu.orechid_grove('gregification:orechid_grove')
+        .itemInputs('64x minecraft:stone', '16x minecraft:netherrack')
+        .input(GTX.MANA, oreMana)
+        .chancedOutput('8x gtceu:raw_coal', 9000, 0)
+        .chancedOutput('8x minecraft:raw_iron', 8000, 0)
+        .chancedOutput('8x gtceu:raw_nether_quartz', 7000, 0)
+        .chancedOutput('8x gtceu:raw_redstone', 5000, 0)
+        .chancedOutput('8x minecraft:raw_copper', 5000, 0)
+        .chancedOutput('8x minecraft:raw_gold', 3000, 0)
+        .chancedOutput('8x gtceu:raw_emerald', 2000, 0)
+        .chancedOutput('8x gtceu:raw_lapis', 2000, 0)
+        .chancedOutput('8x gtceu:raw_diamond', 1500, 0)
+        .chancedOutput('8x minecraft:ancient_debris', 500, 0)
+        .chancedOutput('8x occultism:raw_iesnium', 100, 0)
+        .chancedOutput('8x bloodmagic:rawdemonite', 100, 0)
+        .duration(oreDuration)
+        .EUt(oreEut);
+ 
+    allthemods.recipes.gtceu.orechid_grove('gregification:orechid_grove_chemical')
+        .itemInputs('64x minecraft:stone', '16x minecraft:netherrack')
+        .input(GTX.MANA, chemMana)
+        .chancedOutput('32x gtceu:raw_sulfur', 9000, 0)
+        .chancedOutput('32x gtceu:raw_fluorite', 7000, 0)
+        .chancedOutput('32x gtceu:raw_rock_salt', 7000, 0)
+        .chancedOutput('32x gtceu:raw_apatite', 6000, 0)
+        .chancedOutput('32x gtceu:raw_cinnabar', 5000, 0)
+        .chancedOutput('32x gtceu:raw_barite', 4000, 0)
+        .chancedOutput('32x gtceu:raw_lepidolite', 3000, 0)
+        .duration(chemDuration)
+        .EUt(chemEut);
+ 
+    allthemods.recipes.gtceu.orechid_grove('gregification:orechid_grove_metallurgical')
+        .itemInputs('64x minecraft:stone', '16x minecraft:netherrack', '16x minecraft:end_stone')
+        .input(GTX.MANA, metalMana)
+        .chancedOutput('32x gtceu:raw_stibnite', 7000, 0)
+        .chancedOutput('32x gtceu:raw_chromite', 6000, 0)
+        .chancedOutput('32x gtceu:raw_pyrolusite', 6000, 0)
+        .chancedOutput('32x gtceu:raw_pentlandite', 6000, 0)
+        .chancedOutput('32x gtceu:raw_sphalerite', 5000, 0)
+        .chancedOutput('32x gtceu:raw_scheelite', 1500, 0)
+        .duration(metalDuration)
+        .EUt(metalEut);
+
+    const brewMana = 4000;
+    const brewDuration = 200;
+    const brewVoltage = HV;
+
+    allthemods.forEachRecipe({ type: 'botania:brew' }, rawRecipe => {
+        let recipe = JSON.parse(rawRecipe.json);
+
+        let inputItems = recipe.ingredients.map(ingredient => {
+            if (ingredient.item) {
+                return ingredient.item;
+            } else if (ingredient.tag) {
+                return '#' + ingredient.tag;
+            }
+            return null;
+        }).filter(item => item != null);
+        inputItems.push('botania:vial');
+
+        //let outputItem = Item.of('botania:vial', '{brewKey:"' + recipe.brew + '"}');
+        let outputItem = Item.of('botania:vial', ('{brewKey:"' + recipe.brew + '"}').toString()).strongNBT();
+        let safeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
+
+        allthemods.recipes.gtceu.botanical_brewery(safeID)
+            .itemInputs(inputItems)
+            .itemOutputs(outputItem)
+            .inputFluids(`#forge:mana ${brewMana}`)
+            .duration(brewDuration)
+            .EUt(brewVoltage);
+    });
 });

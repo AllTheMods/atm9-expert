@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtceu:block/casings/sourcestone_plating_casing/sourcestone_plating_casing"
+  }
+}

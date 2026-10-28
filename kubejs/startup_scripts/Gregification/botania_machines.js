@@ -20,6 +20,19 @@ StartupEvents.registry('block', allthemods => {
 });
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
+    allthemods.create('botanical_brewery')
+        .category('botanical_brewery')
+        .setMaxIOSize(7, 1, 1, 0)
+        .setSound(GTSoundEntries.CHEMICAL)
+        .setSlotOverlay(false, false, GuiTextures.BREWER_OVERLAY)
+        .setSlotOverlay(false, true, GuiTextures.FLUID_TANK_OVERLAY)
+    
+    allthemods.create('orechid_grove')
+        .category('orechid_grove')
+        .setMaxIOSize(3, 15, 0, 0)
+        .setSound(GTSoundEntries.COOLING)
+        .setSlotOverlay(false, false, GuiTextures.FURNACE_OVERLAY_1)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT);
 
     allthemods.create ('elven_forge')
         .category('elven_forge')
@@ -139,7 +152,7 @@ GTCEuStartupEvents.registry("gtceu:machine", allthemods => {
 
     allthemods.create('botanical_factory', 'multiblock')              
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes('petal_apothecary', 'runic_altar', 'mana_infuser', 'mana_pool', 'alfheim_trader')
+        .recipeTypes('petal_apothecary', 'runic_altar', 'mana_infuser', 'mana_pool', 'alfheim_trader', 'botanical_brewery')
         .appearanceBlock(() => Block.getBlock('gtceu:overgrown_plating_casing'))
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
         .pattern(definition => FactoryBlockPattern.start()
@@ -313,4 +326,51 @@ GTCEuStartupEvents.registry("gtceu:machine", allthemods => {
                 .recipeType("alfheim_trader")
                 .workableTieredHullModel("gtceu:block/machines/assembler")
         );   
+
+    allthemods.create("botanical_brewery", "simple")
+        .tiers(GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
+        .definition((tier, builder) =>
+            builder
+                .rotationState(RotationState.NON_Y_AXIS)
+                .recipeType("botanical_brewery")
+                .workableTieredHullModel("gtceu:block/machines/brewery")
+        );
+
+    allthemods.create('orechid_grove', 'multiblock')
+        .rotationState(RotationState.NON_Y_AXIS)
+        .recipeTypes('orechid_grove')
+        .appearanceBlock(() => Block.getBlock('gtceu:overgrown_plating_casing'))
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
+        .pattern(definition => FactoryBlockPattern.start()
+            .aisle('NCCCCCN', 'NLLLLLN', 'NLLLLLN', 'NLLLLLN', 'NLLLLLN', 'CCCECCC')
+            .aisle('CCCCCCC', 'LDDDDDL', 'LOOOOOL', 'LAAAAAL', 'LGGGGGL', 'CCCCCCC')
+            .aisle('CCCCCCC', 'LDDDDDL', 'LOOOOOL', 'LAAAAAL', 'LGGGGGL', 'CCCCCCC')
+            .aisle('CCCCCCC', 'LDDDDDL', 'LOOOOOL', 'LAAAAAL', 'LGGGGGL', 'CCCECCC')
+            .aisle('CCCCCCC', 'LDDDDDL', 'LOOOOOL', 'LAAAAAL', 'LGGGGGL', 'CCCCCCC')
+            .aisle('CCCCCCC', 'LDDDDDL', 'LOOOOOL', 'LAAAAAL', 'LGGGGGL', 'CCCCCCC')
+            .aisle('NCCKCCN', 'NLLLLLN', 'NLLLLLN', 'NLLLLLN', 'NLLLLLN', 'CCCCCCC')
+            .where('K', Predicates.controller(Predicates.blocks(definition.get())))
+            .where('D', Predicates.blocks('minecraft:dirt')
+                .or(Predicates.blocks('minecraft:grass_block'))
+                .or(Predicates.blocks('minecraft:coarse_dirt'))
+                .or(Predicates.blocks('minecraft:podzol'))
+                .or(Predicates.blocks('minecraft:rooted_dirt')))
+            .where('O', Predicates.blocks('botania:orechid'))
+            .where('A', Predicates.air())
+            .where('G', Predicates.blocks('minecraft:glowstone'))
+            .where('N', Predicates.blocks('gtceu:overgrown_conduit_casing'))
+            .where('L', Predicates.blocks('botania:elf_glass'))
+            .where('E', Predicates.blocks('gtceu:reactor_core_casing'))
+            .where('C', Predicates.blocks('gtceu:overgrown_plating_casing')
+                .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+                .or(Predicates.abilities(GTX.MANA_INPUT).setMaxGlobalLimited(1))
+                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
+                .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
+            )
+            .build()
+        )
+        .workableCasingModel(
+            'gtceu:block/casings/overgrown_plating_casing/overgrown_plating_casing',
+            'gtceu:block/multiblock/botanical_factory'
+        );
 });

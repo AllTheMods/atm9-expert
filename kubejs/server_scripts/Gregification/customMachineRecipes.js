@@ -127,6 +127,8 @@ ServerEvents.recipes(allthemods => {
         { machine: '_alfheim_trader', startTier: 3, endTier: 8 },
         { machine: '_mana_pool', startTier: 3, endTier: 8 },
         { machine: '_imbument_chamber', startTier: 3, endTier: 8 },
+        { machine: '_enchanting_apparatus', startTier: 3, endTier: 8 },
+        { machine: '_scribes_table', startTier: 3, endTier: 8 },
         //{ machine: '_alchemical_workbench', startTier: 4, endTier: 8 },
         { machine: '_sanguine_alchemy', startTier: 1, endTier: 8 },
         { machine: '_sanguine_forge', startTier: 1, endTier: 8 },
@@ -139,6 +141,7 @@ ServerEvents.recipes(allthemods => {
         { machine: '_unifier', startTier: 2, endTier: 8 },        
         { machine: '_gem_polisher', startTier: 6, endTier: 8 },
         { machine: '_gem_crusher', startTier: 3, endTier: 8 },
+        { machine: '_botanical_brewery', startTier: 3, endTier: 8 },
     ]
 
     machineTiers.forEach(tData => {
@@ -153,6 +156,45 @@ ServerEvents.recipes(allthemods => {
         let motor = `gtceu:${tData.tier}_electric_motor`;
 
         customMachines.forEach(mData => {
+            if (mData.machine == '_botanical_brewery' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                allthemods.shaped(`gtceu:${tData.tier}_botanical_brewery`, [
+                    'TAT',
+                    'CHC',
+                    'TUT'
+                ], {
+                    H: hull,
+                    A: 'botania:brewery',
+                    U: pump,
+                    C: circuit,
+                    T: plate
+                }).id(`gregification:${tData.tier}_botanical_brewery`);
+            }
+            if (mData.machine == '_enchanting_apparatus' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                allthemods.shaped(`gtceu:${tData.tier}_enchanting_apparatus`, [
+                    'TAT',
+                    'CHC',
+                    'TUT'
+                ], {
+                    H: hull,
+                    A: 'ars_nouveau:enchanting_apparatus',
+                    U: pump,
+                    C: circuit,
+                    T: plate
+                }).id(`gregification:${tData.tier}_enchanting_apparatus`);
+            }
+            if (mData.machine == '_scribes_table' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                allthemods.shaped(`gtceu:${tData.tier}_scribes_table`, [
+                    'TAT',
+                    'CHC',
+                    'TUT'
+                ], {
+                    H: hull,
+                    A: 'ars_nouveau:scribes_table',
+                    U: pump,
+                    C: circuit,
+                    T: plate
+                }).id(`gregification:${tData.tier}_scribes_table`);
+            }
             if (mData.machine == '_mana_converter' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
                 allthemods.shaped(`gtceu:${tData.tier}_mana_converter`, [
                     'TPT',
@@ -835,88 +877,22 @@ ServerEvents.recipes(allthemods => {
             D: 'minecraft:diamond'
         }
     )
+    
+    allthemods.recipes.gtceu.assembler('gregification:craft_arcane_atelier')
+        .itemInputs(
+            'gtceu:hv_machine_hull',
+            '#gtceu:circuits/hv',
+            '2x gtceu:hv_electric_pump',
+            '2x gtceu:hv_electric_motor',
+            '2x #forge:plates/stainless_steel',
+            '2x ars_nouveau:arcane_pedestal',
+            '1x ars_nouveau:enchanting_apparatus',
+            '2x gtceu:sourcestone_plating_casing'
+        )
+        .inputFluids('#forge:source 16000')
+        .itemOutputs('gtceu:arcane_atelier')
+        .duration(300)
+        .EUt(HV);
 
 
-
-
-    //lazy controllers need to change
-    const materialFor = {
-        hv: 'stainless_steel',
-        ev: 'titanium',
-        iv: 'tungsten_steel',
-        luv: 'rhodium_plated_palladium',
-        zpm: 'naquadah_alloy',
-        uv: 'darmstadtium',
-        uhv: 'neutronium'
-    };
-
-    const controllers = [
-        // HV tier -> assembler (1 extra fluid)
-        { id: 'water_filtration_plant', tier: 'hv', fluid: true, extra: ['4x gtceu:filter_casing'], extraFluids: ['#forge:soldering_alloy 1000'] },
-        { id: 'hydro_electromagnetic_separator', tier: 'hv', fluid: true, extra: ['2x gtceu:tempered_glass', '2x gtceu:magnetic_steel_rod'], extraFluids: ['#forge:soldering_alloy 1000'] },
-        { id: 'fractional_gas_separator', tier: 'hv', fluid: true, extra: ['4x #forge:rotors/stainless_steel', '4x gtceu:tempered_glass'], extraFluids: ['#forge:soldering_alloy 1000'] },
-        { id: 'botanical_factory', tier: 'hv', fluid: true, extra: ['2x botania:bifrost_perm', '4x botania:rune_mana'], extraFluids: ['#forge:mana 16000'] },
-        { id: 'large_mana_burner', tier: 'hv', fluid: true, extra: ['4x #gtceu:wires/quadruple/kanthal', '4x botania:rune_mana'], extraFluids: ['#forge:mana 16000'] },
-        { id: 'large_mana_converter', tier: 'hv', fluid: true, extra: ['4x #forge:gears/terrasteel', '2x botania:bifrost_perm'], extraFluids: ['#forge:mana 16000'] },
-
-        // EV tier -> assembler (1 extra fluid)
-        { id: 'ozonation_plant', tier: 'ev', fluid: true, extra: ['4x gtceu:titanium_normal_fluid_pipe'], extraFluids: ['#forge:polytetrafluoroethylene 1000'] },
-
-        // IV tier -> assembler (1 extra fluid)
-        { id: 'flocculation_plant', tier: 'iv', fluid: true, extra: ['4x gtceu:tungsten_steel_normal_fluid_pipe'], extraFluids: ['gtceu:polyaluminium_chloride 8000'] },
-        { id: 'drone_station', tier: 'iv', fluid: false, extra: ['gtceu:tungsten_steel_crate', '4x #forge:gears/enderium'], extraFluids: ['gtceu:lubricant 4000'] },
-
-        // LuV tier -> assembly_line (2 extra fluids)
-        { id: 'microbial_filtration_array', tier: 'luv', fluid: true, extra: ['4x #forge:gears/rhodium_plated_palladium', '4x gtceu:cleanroom_glass'], extraFluids: ['#forge:selenium 2000', '#forge:ionized_oxygen 2000'] },
-
-        // ZPM tier -> assembly_line (2 extra fluids)
-        { id: 'laser_purification', tier: 'zpm', fluid: true, extra: ['4x gtceu:fusion_glass', '4x gtceu:superconducting_coil'], extraFluids: ['#forge:soldering_alloy 2000', '#forge:hafnium 2000'] },
-        { id: 'oil_processing_plant', tier: 'zpm', fluid: true, extra: ['16x gtceu:rubidium_foil', '4x gtceu:laminated_glass'], extraFluids: ['#forge:polybenzimidazole 2000', '#forge:selenium 2000'] },
-
-        // UV tier -> assembly_line (2 extra fluids)
-        { id: 'cryogenic_unit', tier: 'uv', fluid: true, extra: ['2x #forge:rotors/strontium', '4x ad_astra:ice_shard', '4x #forge:gears/gadolinium'], extraFluids: ['#forge:blue_ice 16000', '#forge:tellurium 2000'] },
-
-        // UHV tier -> assembly_line (2 extra fluids)
-        { id: 'baryonic_separator', tier: 'uhv', fluid: false, extra: ['4x gtceu:superconducting_coil', '4x #forge:plates/rubidium'], extraFluids: ['#forge:naquadria 2000', '#forge:rubidium 2000'] },
-        { id: 'baryonic_stabilizer', tier: 'uhv', fluid: true, extra: ['4x gtceu:fusion_coil', '4x #forge:gears/rubidium'], extraFluids: ['#forge:naquadria 2000', '#forge:rubidium 2000'] },
-        { id: 'magnetic_containment_chamber', tier: 'uhv', fluid: true, extra: ['4x #forge:gears/francium', '4x #forge:plates/germanium'], extraFluids: ['#forge:selenium 2000', '#forge:radium 2000'] },
-    ];
-
-    const assemblerTiers = ['hv', 'ev', 'iv'];
-    const assemblyLineTiers = ['luv', 'zpm', 'uv', 'uhv'];
-    const eutFor = { hv: HV, ev: EV, iv: IV, luv: LuV, zpm: ZPM, uv: UV, uhv: UHV };
-    const circuitCountFor = { hv: 1, ev: 1, iv: 1, luv: 2, zpm: 2, uv: 2, uhv: 2 };
-
-    controllers.forEach(function (c) {
-        let hull = 'gtceu:' + c.tier + '_machine_hull';
-        let circuit = circuitCountFor[c.tier] + 'x #gtceu:circuits/' + c.tier;
-        let plate = '2x #forge:plates/' + materialFor[c.tier];
-        let movementPart = c.fluid
-            ? '2x gtceu:' + c.tier + '_electric_pump'
-            : '2x gtceu:' + c.tier + '_conveyor_module';
-        let motor = '2x gtceu:' + c.tier + '_electric_motor';
-        let eu = eutFor[c.tier];
-
-        let inputs = [hull, circuit, movementPart, motor, plate].concat(c.extra);
-        //console.error (inputs)
-        if (assemblerTiers.indexOf(c.tier) !== -1) {
-            let recipe = allthemods.recipes.gtceu.assembler('bacteria/craft_' + c.id);
-            recipe.itemInputs.apply(recipe, inputs);
-            if (c.extraFluids && c.extraFluids.length) {
-                recipe.inputFluids.apply(recipe, c.extraFluids);
-            }
-            recipe.itemOutputs('gtceu:' + c.id)
-                .duration(300)
-                .EUt(eu);
-        } else if (assemblyLineTiers.indexOf(c.tier) !== -1) {
-            let recipe = allthemods.recipes.gtceu.assembly_line('bacteria/craft_' + c.id);
-            recipe.itemInputs.apply(recipe, inputs);
-            if (c.extraFluids && c.extraFluids.length) {
-                recipe.inputFluids.apply(recipe, c.extraFluids);
-            }
-            recipe.itemOutputs('gtceu:' + c.id)
-                .duration(600)
-                .EUt(eu);
-        }
-    });
 });
