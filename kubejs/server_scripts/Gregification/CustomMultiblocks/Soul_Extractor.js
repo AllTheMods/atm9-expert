@@ -96,8 +96,8 @@ ServerEvents.recipes(allthemods => {
         soulExtractor([`${soul.amount}x ${soul.item}`], null, [output], null, 600, EUStage1, `${soul.type}_${soul.item.split(':').pop()}`, 1);
     });
 
-    soulExtractor(['forbidden_arcanus:soul_extractor', '128x minecraft:soul_sand'], '#forge:water_stage_3 2000', '128x forbidden_arcanus:soulless_sand', '#forge:soul 2000', 800, EUStage3);
-    soulExtractor(['128x minecraft:ghast_tear', '128x #forge:dusts/redstone', '128x #forge:dusts/glowstone'], '#forge:water_stage_3 16000', null, '#forge:aureal 5000', 800, EUStage2, 'gregification:aureal_from_base_materials');
+    soulExtractor(['forbidden_arcanus:soul_extractor', '128x minecraft:soul_sand'], '#forge:water_stage_3 2000', '128x forbidden_arcanus:soulless_sand', 'gtceu:soul 2000', 800, EUStage3);
+    soulExtractor(['128x minecraft:ghast_tear', '128x #forge:dusts/redstone', '128x #forge:dusts/glowstone'], '#forge:water_stage_3 16000', null, 'gtceu:aureal 5000', 800, EUStage2, 'gregification:aureal_from_base_materials');
     
     
 
