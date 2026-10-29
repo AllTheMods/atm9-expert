@@ -1,3 +1,6 @@
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
+
 ServerEvents.recipes(event => {
  event.recipes.gtceu.assembly_line('superheated_pyrolyzing_oven')
      .itemInputs('6x #gtceu:circuits/luv',
@@ -43,3 +46,6 @@ ServerEvents.recipes(event => {
      .stationResearch(b => b.researchStack(Item.of('gtceu:alloy_blast_smelter')).EUt(2097152).CWUt(144, 32000))
 
      })
+
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

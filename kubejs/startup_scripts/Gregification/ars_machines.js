@@ -1,3 +1,6 @@
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
+
 StartupEvents.registry('block', allthemods => {
     allthemods.create('gtceu:sourcestone_plating_casing')
         .displayName('Sourcestone Plating Casing')
@@ -112,3 +115,6 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
             'gtceu:block/multiblock/arcane_atelier'
         )
 });
+
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

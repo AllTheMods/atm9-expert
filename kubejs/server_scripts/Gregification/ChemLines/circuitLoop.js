@@ -1,3 +1,6 @@
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
+
 // Priority: 0
 // Builds every UHV+ circuit recipe from the global.circuit* arrays in startup_scripts/circuits.js:
 //   - the part / smd / chipset / core / board / soc step recipes (generic walker)
@@ -253,3 +256,6 @@ ServerEvents.recipes(allthemods => {
 
     console.info('[circuits] registered ' + stepCount + ' step recipes and ' + stageCount + ' stage recipes')
 })
+
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

@@ -1,3 +1,6 @@
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
+
 GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
     allthemods.create("advanced_cracking_unit", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -29,3 +32,6 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
             "gtceu:block/multiblock/cracking_unit");
 
 })
+
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

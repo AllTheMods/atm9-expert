@@ -1,3 +1,6 @@
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
+
 // Unified ore database: one row per ore, drives BOTH the Industrial Foregoing laser drill and the Occultism miners.
 // Default laser/miner recipes are disabled with the no-op override zips, so only rows here exist in-game.
 //
@@ -328,3 +331,6 @@ ServerEvents.recipes(allthemods => {
         }).id(miner.idPrefix + e.n);
     });
 });
+
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
