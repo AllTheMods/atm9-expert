@@ -6,7 +6,7 @@ ServerEvents.recipes(allthemods => {
     let TenebriumEU = UV;
     
     allthemods.recipes.gtceu.sifter('gregification:tenebrius_sifting')
-        .itemInputs('forge:dusts/tenebrius')
+        .itemInputs('#forge:dusts/tenebrius')
         .itemOutputs('gtceu:unrefined_tenebrius_dust')
         .chancedOutput('bloodmagic:sand_hellforged', 1500, 1500)
         .chancedOutput('occultism:iesnium_dust', 1500, 1500)

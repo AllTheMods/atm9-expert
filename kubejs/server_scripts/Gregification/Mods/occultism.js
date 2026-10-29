@@ -138,6 +138,26 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('2x gtceu:ritual_brass_casing')
         .duration(100)
         .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_dark_gem_casing')
+        .itemInputs(
+            '4x evilcraft:dark_gem',
+            '#forge:plates/umbral_steel',
+            '#forge:plates/silver'
+        )
+        .itemOutputs('2x gtceu:dark_gem_casing')
+        .duration(100)
+        .EUt(MV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_blood_vein_casing')
+        .itemInputs(
+            '2x gtceu:dark_gem_casing',
+            '2x bloodmagic:bloodstonebrick',
+            '#forge:plates/deorum'
+        )
+        .itemOutputs('2x gtceu:blood_vein_casing')
+        .duration(100)
+        .EUt(MV);
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

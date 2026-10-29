@@ -1059,5 +1059,7 @@
     "block.gtceu.soul_conduit_casing": "Soul Conduit Casing",
     "block.gtceu.otherstone_casing": "Otherstone Plating Casing",
     "block.gtceu.spirit_flame_casing": "Spirit Flame Casing",
-    "block.gtceu.ritual_brass_casing": "Ritual Brass Casing"
+    "block.gtceu.ritual_brass_casing": "Ritual Brass Casing",
+    "block.gtceu.dark_gem_casing": "Dark Gem Plating Casing",
+    "block.gtceu.blood_vein_casing": "Blood Vein Casing"
 }
