@@ -66,14 +66,14 @@
 		worldInteractionEvents = true
 		#If an anonymous mod startup analytics request may be sent to our analytics service.
 		analytics = false
+		#For how many ticks importers/exporters should fail to process before they can start sleeping.
+		inventoryUnchangedTickCount = 3
 		#If items should be ejected into the world when a block is broken and not all items fit into the target. Will be voided otherwise.
 		ejectItemsOnBlockDropOverflow = true
 		#How many ticks importers/exporters should sleep until checking targets again when they were previously unchanged.
-		inventoryUnchangedTickTimeout = 10
+		inventoryUnchangedTickTimeout = 20
 		#If items should be ejected into the world when item movement failed due to item handlers declaring inconsistent movement in simulation mode. If disabled, items can be voided.
 		ejectItemsOnInconsistentSimulationMovement = true
 		#If the version checker should be enabled.
 		versionChecker = false
-		#For how many ticks importers/exporters should fail to process before they can start sleeping.
-		inventoryUnchangedTickCount = 3
 

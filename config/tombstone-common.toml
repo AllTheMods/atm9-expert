@@ -45,28 +45,28 @@
 	points_plunder_player_grave = -2
 	#Points for zombie villager exorcism [0..500|default:20]
 	#Range: 0 ~ 500
-	points_exorcism_zombie_villager = 3
-	#Points for tablet of cupidity [-500..0|default:-10]
-	#Range: -500 ~ 0
-	points_tablet_of_cupidity = -2
-	#Points for Pray of Protection [0..500|default:20]
-	#Range: 0 ~ 500
-	points_pray_of_protection = 2
+	points_exorcism_zombie_villager = 20
 	#Points for zombifying a villager [-500..0|default:-20]
 	#Range: -500 ~ 0
 	points_zombify_villager = -20
-	#Points for using a Potion of Earthly Garden [0..500|default:10]
-	#Range: 0 ~ 500
-	points_earthly_garden = 10
-	#Points for killing one of your tamed creatures [-500..0|default:-10]
-	#Range: -500 ~ 0
-	points_kill_tamed_creature = -10
 	#Points for killing some entities decreasing alignment [-500..0|default:-10]
 	#Range: -500 ~ 0
 	points_kill_decreasing_alignment = -10
 	#Points for killing some entities increasing alignment [0..500|default:10]
 	#Range: 0 ~ 500
 	points_kill_increasing_alignment = 10
+	#Points for tablet of cupidity [-500..0|default:-10]
+	#Range: -500 ~ 0
+	points_tablet_of_cupidity = -2
+	#Points for Pray of Protection [0..500|default:20]
+	#Range: 0 ~ 500
+	points_pray_of_protection = 2
+	#Points for using a Potion of Earthly Garden [0..500|default:10]
+	#Range: 0 ~ 500
+	points_earthly_garden = 10
+	#Points for killing one of your tamed creatures [-500..0|default:-10]
+	#Range: -500 ~ 0
+	points_kill_tamed_creature = -10
 
 #Miscellaneous options
 [general]

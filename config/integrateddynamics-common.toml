@@ -18,6 +18,8 @@
 		ingredientNetworkObserverThreads = 4
 		#The frequency in ticks at which ingredient network should be observed after a position's contents are changed.
 		ingredientNetworkObserverFrequencyForced = 0
+		#If variable card IDs should be logged during evaluation. This is useful for debugging crashes caused by card evaluation.
+		logCardEvaluation = false
 		#The maximum number of integer digits to include in the result of the compact operator
 		numberCompactMaximumIntegerDigits = 3
 		#The ingredient network observation frequency slowdown rate in ticks.
@@ -44,8 +46,6 @@
 		operatorRecursionLimit = 256
 		#If the version checker should be enabled.
 		versionChecker = false
-		#If variable card IDs should be logged during evaluation. This is useful for debugging crashes caused by card evaluation.
-		logCardEvaluation = false
 
 [general]
 
@@ -60,6 +60,8 @@
 		audioWriterBaseConsumption = 1
 		#The base energy usage for the inventory reader.
 		inventoryReaderBaseConsumption = 1
+		#The minimum update intervals to enforce for specific parts. You can add entries in the form of 'integrateddynamics:machine_reader:10', where '10' refers to the number of ticks.
+		partMinimumUpdateIntervals = []
 		#The base energy usage for the dynamic light panel.
 		panelLightDynamicBaseConsumption = 0
 		#The base energy usage for the entity reader.
@@ -88,6 +90,8 @@
 		redstoneReaderBaseConsumption = 1
 		#The base energy usage for the materializer.
 		materializerBaseConsumption = 1
+		#The minimum update interval to enforce for all parts, in number of ticks.
+		partsMinimumUpdateInterval = 1
 		#The base energy usage for the world reader.
 		worldReaderBaseConsumption = 1
 		#The base energy usage for the display panel when does not have a variable.
@@ -96,6 +100,8 @@
 		redstoneWriterBaseConsumption = 1
 		#The base energy usage for the variable store.
 		variablestoreBaseConsumption = 4
+		#The base energy usage for the delayer.
+		delayerBaseConsumption = 2
 		#The base energy usage for the effect writer.
 		effectWriterBaseConsumption = 1
 		#The base energy usage for the mono-directional connector.
@@ -106,32 +112,30 @@
 		diagnosticsWebServerPort = 3030
 		#The base energy usage for the machine reader.
 		machineReaderBaseConsumption = 1
-		#The minimum update intervals to enforce for specific parts. You can add entries in the form of 'integrateddynamics:machine_reader:10', where '10' refers to the number of ticks.
-		partMinimumUpdateIntervals = []
-		#The minimum update interval to enforce for all parts, in number of ticks.
-		partsMinimumUpdateInterval = 1
-		#The base energy usage for the delayer.
-		delayerBaseConsumption = 2
 
 [machine]
 
 	[machine.general]
 		#The maximum offset in blocks a part can target.
 		maxPartOffset = 32
+		#When true, disable the collision for cable.
+		disableCableCollision = false
+		#The maximum values that Part Offset items will have when dropped from a broken part.
+		enchancementOffsetPartDropValue = 4
 		#Priority list of mod id's when determining tag-based recipe outputs.
 		recipeTagOutputModPriorities = []
 		#The default update frequency in ticks to use for new parts.
-		defaultPartUpdateFreq = 1
+		defaultPartUpdateFreq = 20
 		#The NBT tags that are not allowed to be read by displaying NBT tags or performing operations on them.
 		nbtTagBlacklist = []
 		#The maximum offset in blocks a directional connector can look for its target.
 		maxDirectionalConnectorOffset = 512
 		#The distance from which part offsets should be shown.
 		partOffsetRenderDistance = 16
-		#The maximum values that Part Offset items will have when dropped from a broken part.
-		enchancementOffsetPartDropValue = 4
-		#When true, disable the collision for cable.
-		disableCableCollision = false
+
+	[machine.coal_generator]
+		#The energy production rate (in RF/t) of the coal generator.
+		energyPerTick = 20
 
 	[machine.cable]
 		#If cable shapes should be determined dynamically. Disable this if FPS issues would occur.
@@ -170,10 +174,6 @@
 		consumptionRate = 80
 		#The energy capacity of a mechanical drying basin.
 		capacity = 100000
-
-	[machine.coal_generator]
-		#The energy production rate (in RF/t) of the coal generator.
-		energyPerTick = 20
 
 [worldgeneration]
 

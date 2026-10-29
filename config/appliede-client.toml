@@ -1,4 +1,0 @@
-#How many different colours should be used to represent higher tiers of EMC in storage
-#Range: > 1
-emcTierColours = 10
-

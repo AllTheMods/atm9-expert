@@ -10,11 +10,11 @@
 	rightClickCraftsStack = true
 	#We both know JEI is much better. This option hides Vanilla's crafting book button instead of moving it.
 	hideVanillaCraftingGuide = true
+	#Use an alternative client-side balancing algorithm. It might be faster, or it might be slower, depending on the input. Try it if regular client-side balancing is causing lagspikes.
+	hyperOptimizedClientsideBalancing = false
 	#Set to 'DEFAULT' to enable both buttons and hotkeys. Set to 'BUTTONS' to enable buttons only. Set to 'HOTKEYS' to enable hotkeys only. Set to 'DISABLED' to disable completely.
 	#Allowed Values: DEFAULT, BUTTONS, HOTKEYS, DISABLED
 	mode = "DEFAULT"
 	#Add mod ids here of mods that you wish to disable Crafting Tweaks support for.
 	disabledAddons = []
-	#Use an alternative client-side balancing algorithm. It might be faster, or it might be slower, depending on the input. Try it if regular client-side balancing is causing lagspikes.
-	hyperOptimizedClientsideBalancing = false
 

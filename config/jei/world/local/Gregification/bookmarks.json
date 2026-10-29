@@ -1,8 +1,0 @@
-[
-  {"version":1},
-  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:sanguine_synthesizer\"}"},
-  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:botanical_factory\"}"},
-  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:orechid_grove\"}"},
-  {"type":"item_stack","value":"{Count:1b,id:\"gtceu:arcane_atelier\"}"},
-  {"type":"recipe","value":"gtceu:assembler#gregification:assembler/assembler/hostilenetworks_sim_chamber#item_stack\u0026hostilenetworks:sim_chamber"}
-]
