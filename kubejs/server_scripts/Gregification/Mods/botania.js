@@ -120,9 +120,18 @@ ServerEvents.recipes(allthemods => {
             }
             return null;
         }).filter(item => item != null);
-        inputItems.push('#forge:seeds');
 
         let outputItem = recipe.output.item;
+
+        let hasBee = inputItems.some(input => {
+            let cleanInput = input.startsWith('#') ? input.substring(1) : input;
+            return cleanInput.includes('bee');
+        }) || outputItem.includes('bee');
+
+        if (hasBee) return;
+
+        inputItems.push('#forge:seeds');
+
         let safeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
         allthemods.recipes.gtceu.petal_apothecary(safeID)
             .itemInputs(inputItems)
@@ -241,6 +250,7 @@ ServerEvents.recipes(allthemods => {
         .duration(infusionDuration)
         .EUt(petalVoltage);
 
+                  
     const pureBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:pure"}}').strongNBT();
     const terraBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:terrasteel"}}').strongNBT();
     const manaBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:mana"}}').strongNBT();
@@ -249,9 +259,25 @@ ServerEvents.recipes(allthemods => {
     const manaSteel = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:manasteel"}}').strongNBT();
     const ironBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:iron"}}').strongNBT();
 
+    allthemods.recipes.gtceu.petal_apothecary('gregification:orechid')
+        .itemInputs(
+            '2x #botania:petals/gray',
+            '#botania:petals/yellow',
+            '#botania:petals/green',
+            '#botania:petals/red',
+            'botania:rune_pride',
+            'botania:rune_greed',
+            'botania:redstone_root',
+            'botania:pixie_dust',
+            '#forge:seeds'
+        )
+        .itemOutputs('botania:orechid')
+        .inputFluids(`${stage1} 1000`)
+        .duration(petalDuration)
+        .EUt(petalVoltage);
 
     allthemods.recipes.gtceu.petal_apothecary('pure_bee')
-        .itemInputs(['minecraft:bee_spawn_egg', '3x #botania:petals/white', 'productivebees:honey_treat', 'minecraft:bee_spawn_egg'])
+        .itemInputs(['minecraft:bee_spawn_egg', '3x #botania:petals/white', 'productivebees:honey_treat'])
         .itemOutputs(pureBee)
         .inputFluids(`${stage3} 10000`)
         .duration(petalDuration)
