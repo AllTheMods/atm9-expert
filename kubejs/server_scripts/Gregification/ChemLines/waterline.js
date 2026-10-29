@@ -37,13 +37,13 @@ ServerEvents.recipes(allthemods => {
         .EUt(EUStage1);
 
     allthemods.recipes.gtceu.ozonation_plant('gregification:water_stage_2')        
-        .inputFluids('gtceu:water_stage_1 900', '#forge:ozone 1000')
+        .inputFluids('#forge:water_stage_1 900', '#forge:ozone 1000')
         .outputFluids('gtceu:water_stage_2 800')
         .duration(duration*.9)
         .EUt(EUStage2);
     
     allthemods.recipes.gtceu.flocculation_plant('gregification:water_stage_3')
-        .inputFluids('gtceu:water_stage_2 800', '#forge:polyaluminium_chloride 1000')
+        .inputFluids('#forge:water_stage_2 800', '#forge:polyaluminium_chloride 1000')
         .outputFluids('gtceu:water_stage_3 700', 'gtceu:spent_flocculant_slurry 1000')
         .duration(duration*.8)
         .EUt(EUStage3);
@@ -70,7 +70,7 @@ ServerEvents.recipes(allthemods => {
     //this is where we get some bacteria!
     allthemods.recipes.gtceu.microbial_filtration_array('gregification:water_stage_4')
         .chancedInput('#forge:dusts/sodium_hydroxide', 2500, 0)
-        .inputFluids('gtceu:water_stage_3 700')
+        .inputFluids('#forge:water_stage_3 700')
         .chancedFluidInput('#forge:hydrochloric_acid 1000', 2500,0)
         .outputFluids('gtceu:water_stage_4 600')
         .duration(duration*.7)
@@ -83,7 +83,7 @@ ServerEvents.recipes(allthemods => {
         .chancedInput('#forge:lenses/eternal', 1000, 0)
         .chancedInput('#forge:lenses/nether_star', 1000, 0)
         .chancedInput('#forge:lenses/source', 1000, 0)        
-        .inputFluids('gtceu:water_stage_4 600')
+        .inputFluids('#forge:water_stage_4 600')
         .outputFluids('gtceu:water_stage_5 500')
         .duration(duration*.6)
         .EUt(EUStage5);
@@ -91,7 +91,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.cryogenic_unit('gregification:water_stage_6')
         .chancedFluidInput('#forge:super_coolant 100', 2500,0)
         .chancedFluidInput('#forge:helium_plasma 100', 2500,0)
-        .inputFluids('gtceu:water_stage_5 500')
+        .inputFluids('#forge:water_stage_5 500')
         .outputFluids('gtceu:water_stage_6 400')
         .duration(duration*.5)
         .EUt(EUStage6);
@@ -103,7 +103,7 @@ ServerEvents.recipes(allthemods => {
         .chancedInput('gtceu:bottom_quark', 500, 0)
         .chancedInput('gtceu:strange_quark', 500, 0)
         .chancedInput('gtceu:charm_quark', 500, 0)
-        .inputFluids('gtceu:water_stage_6 400')
+        .inputFluids('#forge:water_stage_6 400')
         .outputFluids('gtceu:purest_water 300')
         .duration(duration*.4)
         .EUt(EUStage7);

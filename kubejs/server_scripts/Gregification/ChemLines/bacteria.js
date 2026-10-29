@@ -74,7 +74,7 @@ ServerEvents.recipes(allthemods => {
         // Step 1: Bacterial Vat
         allthemods.recipes.gtceu.bacterial_vat(`gregification:bacteria/${strainName}_seed_culture`)
             .itemInputs(pichia.base)
-            .inputFluids('#forge:rotten_flesh 1000', 'gtceu:water_stage_1 250')
+            .inputFluids('#forge:rotten_flesh 1000', '#forge:water_stage_1 250')
             .itemOutputs(pichia.seedCulture)
             .duration(DUR)
             .EUt(LUV);
@@ -82,7 +82,7 @@ ServerEvents.recipes(allthemods => {
         // Step 2: Bacterial Growth Chamber
         allthemods.recipes.gtceu.bacterial_growth_chamber(`gregification:bacteria/${strainName}_cultivated`)
             .itemInputs(pichia.seedCulture)
-            .inputFluids('#forge:biomass 1000', 'gtceu:water_stage_2 250') // TODO: confirm real biomass fluid/item id
+            .inputFluids('#forge:biomass 1000', '#forge:water_stage_2 250') // TODO: confirm real biomass fluid/item id
             .itemOutputs(pichia.cultivatedBacteria)
             .duration(DUR)
             .EUt(LUV);
@@ -90,7 +90,7 @@ ServerEvents.recipes(allthemods => {
         // Step 3: Chemical Reactor
         allthemods.recipes.gtceu.chemical_reactor(`gregification:bacteria/${strainName}_vegetative`)
             .itemInputs(pichia.cultivatedBacteria)
-            .inputFluids('#forge:glycerol 1000', 'gtceu:water_stage_3 250')
+            .inputFluids('#forge:glycerol 1000', '#forge:water_stage_3 250')
             .itemOutputs(pichia.vegetativeCulture)
             .duration(DUR)
             .EUt(LUV);
@@ -98,7 +98,7 @@ ServerEvents.recipes(allthemods => {
         // Step 4: Mixer
         allthemods.recipes.gtceu.mixer(`gregification:bacteria/${strainName}_matrix`)
             .itemInputs(pichia.vegetativeCulture, '#forge:dusts/agar') // TODO: confirm real agar id
-            .inputFluids('gtceu:water_stage_4 250')
+            .inputFluids('#forge:water_stage_4 250')
             .itemOutputs(pichia.bacterialMatrix)
             .duration(DUR)
             .EUt(LUV);
@@ -106,7 +106,7 @@ ServerEvents.recipes(allthemods => {
         // Step 5: Chemical Reactor
         allthemods.recipes.gtceu.chemical_reactor(`gregification:bacteria/${strainName}_mutated`)
             .itemInputs(pichia.bacterialMatrix, '#forge:dusts/protactinium')
-            .inputFluids('#forge:mutagen 100', 'gtceu:water_stage_5 250')
+            .inputFluids('#forge:mutagen 100', '#forge:water_stage_5 250')
             .itemOutputs(pichia.mutatedBacterium)
             .duration(DUR)
             .EUt(LUV);

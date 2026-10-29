@@ -58,7 +58,7 @@ ServerEvents.recipes(allthemods => {
                 "64x #forge:sapling",
             ],
             [
-                "gtceu:aureal 1000",
+                "#forge:aureal 1000",
                 "#forge:soul 10",
                 '#forge:blood 1000',
                 "gtceu:distilled_water 10000"
@@ -79,7 +79,7 @@ ServerEvents.recipes(allthemods => {
             "2x #forge:gems/lapis"
         ],
         [
-            "gtceu:aureal 1000",
+            "#forge:aureal 1000",
             "#forge:soul 8",
             '#forge:blood 2000'
         ],
@@ -97,7 +97,7 @@ ServerEvents.recipes(allthemods => {
             "2x #forge:dusts/blaze"
         ],
         [
-            "gtceu:aureal 200",
+            "#forge:aureal 200",
             "#forge:soul 4",
             '#forge:blood 1250'
         ],
@@ -116,7 +116,7 @@ ServerEvents.recipes(allthemods => {
             "2x minecraft:pointed_dripstone"
         ],
         [
-            "gtceu:aureal 300",
+            "#forge:aureal 300",
             "#forge:soul 9",
             '#forge:blood 1500'
         ],
@@ -135,7 +135,7 @@ ServerEvents.recipes(allthemods => {
             "3x minecraft:phantom_membrane"
         ],
         [
-            "gtceu:aureal 1000",
+            "#forge:aureal 1000",
             "#forge:soul 3",
             '#forge:blood 2250'
         ],
@@ -153,7 +153,7 @@ ServerEvents.recipes(allthemods => {
             "1x forbidden_arcanus:stellarite_piece"
         ],
         [
-            "gtceu:aureal 1000",
+            "#forge:aureal 1000",
             "#forge:soul 500",
             '#forge:blood 1000'
         ],
@@ -175,7 +175,7 @@ ServerEvents.recipes(allthemods => {
             "#forge:ingots/elementium",
         ],
         [
-            "gtceu:aureal 100",
+            "#forge:aureal 100",
             "#forge:soul 20",
             '#forge:blood 2000'
         ],
@@ -193,7 +193,7 @@ ServerEvents.recipes(allthemods => {
             "2x forbidden_arcanus:eternal_stella"
         ],
         [
-            "gtceu:aureal 82",
+            "#forge:aureal 82",
             "#forge:soul 1",
             '#forge:blood 1000'
         ],

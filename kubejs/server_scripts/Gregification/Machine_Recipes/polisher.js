@@ -81,7 +81,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.gem_polisher('ae2_damaged_to_chipped')
         .itemInputs('ae2:damaged_budding_quartz')
         .chancedInput('gtceu:polishing_wheel', 1000, 0)
-        .inputFluids('gtceu:water_stage_1 288')
+        .inputFluids('#forge:water_stage_1 288')
         .itemOutputs('ae2:chipped_budding_quartz')
         .duration(150)
         .EUt(EV);
@@ -89,7 +89,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.gem_polisher('ae2_chipped_to_flawed')
         .itemInputs('ae2:chipped_budding_quartz')
         .chancedInput('gtceu:polishing_wheel', 1000, 0)
-        .inputFluids('gtceu:water_stage_2 288')
+        .inputFluids('#forge:water_stage_2 288')
         .itemOutputs('ae2:flawed_budding_quartz')
         .duration(200)
         .EUt(EV);
@@ -97,7 +97,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.gem_polisher('ae2_flawed_to_flawless')
         .itemInputs('ae2:flawed_budding_quartz')
         .chancedInput('gtceu:polishing_wheel', 1000, 0)
-        .inputFluids('gtceu:water_stage_3 288')
+        .inputFluids('#forge:water_stage_3 288')
         .itemOutputs('ae2:flawless_budding_quartz')
         .duration(250)
         .EUt(EV);

@@ -61,7 +61,7 @@ ServerEvents.recipes(allthemods => {
     addFusion(
         [            
             '#forge:naquadria_stage_3_plasma 72',
-            '#forge:polonium 72'
+            '#forge:einsteinium 72'
         ],
         'gtceu:naquadria_stage_4_plasma 72',
         ZPM,
