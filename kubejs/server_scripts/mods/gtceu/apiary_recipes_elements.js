@@ -1,3 +1,6 @@
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
+
 // priority: 10
 // Apiary I / II recipes for the 96 element bees (ChemLib replacements).
 // Each bee's flower is listed here, so these bees no longer depend on the Productive Bees jar's ChemLib data.
@@ -168,3 +171,6 @@ ServerEvents.recipes(allthemods => {
         }
     })
 })
+
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

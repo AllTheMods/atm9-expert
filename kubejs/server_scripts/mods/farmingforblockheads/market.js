@@ -1,7 +1,7 @@
-/*
- This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9.
- As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
-  farming for blockheads custom market additions
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
+
+/*  farming for blockheads custom market additions
   authored by EnigmaQuip
   for use in ATM8
   Ported to ATM9 by Mitchell52
@@ -71,3 +71,6 @@ ServerEvents.highPriorityData(allthemods => {
     }
   })
 })
+
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

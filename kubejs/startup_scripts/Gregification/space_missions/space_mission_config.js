@@ -1,3 +1,6 @@
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
+
 global.SPACE = {
     VOLTAGE_NAMES: ['HV', 'EV', 'IV', 'LuV', 'ZPM', 'UV'],
     SHIP_TIER_VOLTAGE: { 1: 'HV', 2: 'EV', 3: 'IV', 4: 'LuV', 5: 'ZPM', 6: 'UV' },
@@ -171,3 +174,6 @@ global.SPACE_DESTINATIONS = [
     {"id":"infinity_fracture","name":"Infinity fracture","mk":6,"d":200,"data":"C","gate":"","haul":[["infinity",128,"ore"]]},
     {"id":"hell","name":"Hell","mk":3,"d":7,"data":"T","gate":"","haul":[["exquisite_demon_gem",64,"item"],["exquisite_corrosive_gem",32,"item"],["exquisite_destructive_gem",32,"item"],["exquisite_vengeful_gem",32,"item"],["exquisite_steadfast_gem",32,"item"]]},
 ];
+
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

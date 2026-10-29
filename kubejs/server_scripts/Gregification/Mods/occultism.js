@@ -1,3 +1,6 @@
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
+
 // Adds every custom ore as a possible Eldritch Miner output at weight 1.
 // Assumes ore item id pattern: gtceu:<name>_ore
 // Assumes ore tag pattern:     forge:ores/<name>
@@ -136,3 +139,6 @@ ServerEvents.recipes(allthemods => {
         .duration(100)
         .EUt(LV);
 })
+
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

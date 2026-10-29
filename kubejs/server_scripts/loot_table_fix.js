@@ -1,3 +1,6 @@
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
+
 // @ts-nocheck
 ServerEvents.genericLootTables(allthemods => {
     const brokenTables = [
@@ -55,3 +58,6 @@ ServerEvents.genericLootTables(allthemods => {
 ServerEvents.recipes(allthemods => {
     allthemods.remove({ id: 'tconstruct:tools/parts/fake_storage_block_casting' });
 });
+
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

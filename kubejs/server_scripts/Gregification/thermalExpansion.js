@@ -1,3 +1,6 @@
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
+
 //@ts-check
 const rodMetals = ['iron', 'gold', 'copper', 'tin', 'lead', 'silver', 'nickel', 'aluminum', 'zinc', 'osmium', 'steel', 'brass' ];
 const rodMetalsATM = [ 'allthemodium', 'vibranium', 'unobtainium' ];
@@ -79,3 +82,6 @@ ServerEvents.recipes(allthemods => {
    
     
 });
+
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

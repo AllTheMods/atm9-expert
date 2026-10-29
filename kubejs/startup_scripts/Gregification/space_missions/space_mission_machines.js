@@ -1,3 +1,6 @@
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
+
 GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     for (var t = 1; t <= 6; t++) {
         allthemods.create('destination_encoder_t' + t)
@@ -158,3 +161,6 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
             'gtceu:block/multiblock/large_chemical_reactor'
         )
 })
+
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
