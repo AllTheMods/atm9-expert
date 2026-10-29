@@ -15,6 +15,11 @@ ServerEvents.recipes(allthemods => {
         { water: stage4, n: 4 }
     ];
 
+    const CATALYST_ITEM_IDS = {
+        'botania:alchemy_catalyst': 'botania:alchemy_catalyst',
+        'botania:conjuration_catalyst': 'botania:conjuration_catalyst'
+    };
+
     stages.forEach(s => {
         allthemods.recipes.gtceu.mana_converter(`eu_to_source_${s.n}`)
             .inputFluids(`${s.water} 200`)
@@ -78,20 +83,7 @@ ServerEvents.recipes(allthemods => {
     });
 
 
-    allthemods.recipes.gtceu.assembler('gregification:craft_sanguine_synthesizer')
-        .itemInputs(
-            'gtceu:hv_machine_hull',
-            '#gtceu:circuits/hv',
-            '2x gtceu:hv_electric_pump',
-            '2x gtceu:hv_electric_motor',
-            '2x #forge:plates/stainless_steel',
-            '2x gtceu:sanguine_vessel_casing',
-            '4x bloodmagic:demonslate'
-        )
-        .inputFluids('#forge:blood 16000')
-        .itemOutputs('gtceu:sanguine_synthesizer')
-        .duration(300)
-        .EUt(HV);
+
 
     allthemods.recipes.gtceu.mana_converter('mana_to_portal_fluid')
         .inputFluids('#forge:mana 1000')
@@ -108,8 +100,30 @@ ServerEvents.recipes(allthemods => {
     const runicVoltage = EV;
     const infusionVoltage = IV;
 
+    const readStack = obj => {
+        if (!obj) return 'minecraft:air';
+        let id = obj.item || obj;
+        let count = obj.count || 1;
+        if (obj.nbt) {
+            let nbtString = typeof obj.nbt === 'string' ? obj.nbt : JSON.stringify(obj.nbt);
+            return Item.of(id, count, nbtString).strongNBT();
+        }
+        return count > 1 ? `${count}x ${id}` : id;
+    };
+
+    const readIngredient = ing => {
+        let actual = ing.ingredient || ing;
+        if (actual.tag) return '#' + actual.tag;
+        if (actual.item && actual.nbt) {
+            let nbtString = typeof actual.nbt === 'string' ? actual.nbt : JSON.stringify(actual.nbt);
+            return Item.of(actual.item, nbtString).strongNBT();
+        }
+        if (actual.item) return actual.item;
+        return null;
+    };
+
     //petal apothecary
-    allthemods.forEachRecipe({ type: 'botania:petal_apothecary' }, rawRecipe => {
+    /*allthemods.forEachRecipe({ type: 'botania:petal_apothecary' }, rawRecipe => {
         let recipe = JSON.parse(rawRecipe.json);
 
         let inputItems = recipe.ingredients.map(ingredient => {
@@ -139,9 +153,25 @@ ServerEvents.recipes(allthemods => {
             .inputFluids(`${stage1} 1000`)
             .duration(petalDuration)
             .EUt(petalVoltage);
+    });*/
+
+    allthemods.forEachRecipe({ type: 'botania:petal_apothecary' }, rawRecipe => {
+        let recipe = JSON.parse(rawRecipe.json);
+        let inputItems = recipe.ingredients.map(readIngredient).filter(item => item != null);
+        let reagent = recipe.reagent ? readIngredient(recipe.reagent) : null;
+        if (!reagent || reagent === '#botania:seed_apothecary_reagent') reagent = '#forge:seeds';
+        inputItems.push(reagent);        
+        let safeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
+        allthemods.recipes.gtceu.petal_apothecary(safeID)
+            .itemInputs(inputItems)
+            .itemOutputs(readStack(recipe.output))
+            .inputFluids(`${stage1} 1000`)
+            .duration(petalDuration)
+            .EUt(petalVoltage);
     });
 
     //runic altar
+    /*
     allthemods.forEachRecipe({ type: 'botania:runic_altar' }, rawRecipe => {
         let recipe = JSON.parse(rawRecipe.json);
 
@@ -192,7 +222,7 @@ ServerEvents.recipes(allthemods => {
             .duration(runicDuration)
             .EUt(HV);
     });
-
+    
     //mana infuser
     allthemods.forEachRecipe({ type: 'botania:terra_plate' }, rawRecipe => {
         let recipe = JSON.parse(rawRecipe.json);
@@ -235,127 +265,6 @@ ServerEvents.recipes(allthemods => {
             .duration(infusionDuration)
             .EUt(infusionVoltage);
     });
-
-    allthemods.recipes.gtceu.petal_apothecary('gregification:livingrock')
-        .itemInputs('8x #forge:stone')
-        .itemOutputs('8x botania:livingrock')
-        .inputFluids('#forge:mana 1000')
-        .duration(infusionDuration)
-        .EUt(petalVoltage);
-
-    allthemods.recipes.gtceu.petal_apothecary('gregification:livingwood')
-        .itemInputs('8x #minecraft:logs')
-        .itemOutputs('8x botania:livingwood')
-        .inputFluids('#forge:mana 1000')
-        .duration(infusionDuration)
-        .EUt(petalVoltage);
-
-                  
-    const pureBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:pure"}}').strongNBT();
-    const terraBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:terrasteel"}}').strongNBT();
-    const manaBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:mana"}}').strongNBT();
-    const elementiumBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:elementium"}}').strongNBT();
-    const alfBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:alfsteel"}}').strongNBT();
-    const manaSteel = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:manasteel"}}').strongNBT();
-    const ironBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:iron"}}').strongNBT();
-
-    allthemods.recipes.gtceu.petal_apothecary('gregification:orechid')
-        .itemInputs(
-            '2x #botania:petals/gray',
-            '#botania:petals/yellow',
-            '#botania:petals/green',
-            '#botania:petals/red',
-            'botania:rune_pride',
-            'botania:rune_greed',
-            'botania:redstone_root',
-            'botania:pixie_dust',
-            '#forge:seeds'
-        )
-        .itemOutputs('botania:orechid')
-        .inputFluids(`${stage1} 1000`)
-        .duration(petalDuration)
-        .EUt(petalVoltage);
-
-    allthemods.recipes.gtceu.petal_apothecary('pure_bee')
-        .itemInputs(['minecraft:bee_spawn_egg', '3x #botania:petals/white', 'productivebees:honey_treat'])
-        .itemOutputs(pureBee)
-        .inputFluids(`${stage3} 10000`)
-        .duration(petalDuration)
-        .EUt(petalVoltage);
-    allthemods.recipes.gtceu.runic_altar('mana_bee')
-        .itemInputs([pureBee, '4x botania:rune_mana', 'botania:livingrock'])
-        .itemOutputs(manaBee)
-        .inputFluids('#forge:mana 1000000')
-        .duration(petalDuration)
-        .EUt(runicVoltage);
-    allthemods.recipes.gtceu.mana_infuser('terra_bee')
-        .itemInputs([manaSteel, 'botania:mana_pearl', 'botania:mana_diamond'])
-        .itemOutputs(terraBee)
-        .inputFluids('#forge:mana 500000')
-        .duration(infusionDuration)
-        .EUt(infusionVoltage);
-    allthemods.recipes.gtceu.mana_infuser('alf_bee')
-        .itemInputs([elementiumBee, 'botania:pixie_dust', 'botania:dragonstone'])
-        .itemOutputs(alfBee)
-        .inputFluids('#forge:mana 500000')
-        .duration(infusionDuration)
-        .EUt(infusionVoltage);
-
-
-    allthemods.recipes.gtceu.mana_infuser('unobtainium_allthemodium_alloy_block')
-        .itemInputs(['#forge:storage_blocks/unobtainium', '#forge:storage_blocks/allthemodium', 'allthemodium:piglich_heart_block'])
-        .itemOutputs('allthemodium:unobtainium_allthemodium_alloy_block')
-        .inputFluids('#forge:mana 8100000')
-        .duration(infusionDuration)
-        .EUt(infusionVoltage);
-
-    allthemods.recipes.gtceu.mana_infuser('unobtainium_vibranium_alloy_block')
-        .itemInputs(['#forge:storage_blocks/unobtainium', '#forge:storage_blocks/vibranium', 'allthemodium:piglich_heart_block'])
-        .itemOutputs('allthemodium:unobtainium_vibranium_alloy_block')
-        .inputFluids('#forge:mana 8100000')
-        .duration(infusionDuration)
-        .EUt(infusionVoltage);
-
-    allthemods.recipes.gtceu.mana_infuser('vibranium_allthemodium_alloy_block')
-        .itemInputs(['#forge:storage_blocks/allthemodium', '#forge:storage_blocks/vibranium', 'allthemodium:piglich_heart_block'])
-        .itemOutputs('allthemodium:vibranium_allthemodium_alloy_block')
-        .inputFluids('#forge:mana 8100000')
-        .duration(infusionDuration)
-        .EUt(infusionVoltage);
-
-    allthemods.recipes.gtceu.mana_infuser('unobtainium_vibranium_alloy_ingot')
-        .itemInputs(['#forge:ingots/unobtainium', '#forge:ingots/vibranium', 'allthemodium:piglich_heart'])
-        .itemOutputs('allthemodium:unobtainium_vibranium_alloy_ingot')
-        .inputFluids('#forge:mana 1000000')
-        .duration(infusionDuration)
-        .EUt(infusionVoltage);
-
-    allthemods.recipes.gtceu.mana_infuser('vibranium_allthemodium_alloy_ingot')
-        .itemInputs(['#forge:ingots/vibranium', '#forge:ingots/allthemodium', 'allthemodium:piglich_heart'])
-        .itemOutputs('allthemodium:vibranium_allthemodium_alloy_ingot')
-        .inputFluids('#forge:mana 1000000')
-        .duration(infusionDuration)
-        .EUt(infusionVoltage);
-
-    allthemods.recipes.gtceu.mana_infuser('unobtainium_allthemodium_alloy_ingot')
-        .itemInputs(['#forge:ingots/unobtainium', '#forge:ingots/allthemodium', 'allthemodium:piglich_heart'])
-        .itemOutputs('allthemodium:unobtainium_allthemodium_alloy_ingot')
-        .inputFluids('#forge:mana 1000000')
-        .duration(infusionDuration)
-        .EUt(infusionVoltage);
-
-    allthemods.recipes.gtceu.mana_infuser('mythicbotany:alfsteel_ingot')
-        .itemInputs(['botania:elementium_ingot', 'botania:pixie_dust', 'botania:mana_pearl'])
-        .itemOutputs('mythicbotany:alfsteel_ingot')
-        .inputFluids('#forge:mana 1000000')
-        .duration(infusionDuration)
-        .EUt(infusionVoltage);
-
-    const CATALYST_ITEM_IDS = {
-        'botania:alchemy_catalyst': 'botania:alchemy_catalyst',
-        'botania:conjuration_catalyst': 'botania:conjuration_catalyst'
-    };
-
 
     allthemods.forEachRecipe({ type: 'botania:mana_infusion' }, rawRecipe => {
         let baseSafeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
@@ -415,8 +324,205 @@ ServerEvents.recipes(allthemods => {
             console.error(`FAILED recipe ID: ${baseSafeID} — ${err}`);
         }
     });
+    */
+
+    allthemods.forEachRecipe({ type: 'botania:mana_infusion' }, rawRecipe => {
+        let baseSafeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
+        try {
+            let recipe = JSON.parse(rawRecipe.json);
+
+            let outputItem = readStack(recipe.output);
+            let manaCost = recipe.mana || 0;
+
+            let rawInput = recipe.input;
+            let inputEntries = Array.isArray(rawInput) ? rawInput : [rawInput];
+
+            inputEntries.forEach(function (inputEntry, index) {
+                let inputItem = inputEntry ? readIngredient(inputEntry) : null;
+                if (!inputItem) return;
+
+                let safeID = inputEntries.length > 1 ? `${baseSafeID}_alt${index}` : baseSafeID;
+
+                let builder = allthemods.recipes.gtceu.mana_pool(safeID)
+                    .itemInputs([inputItem])
+                    .itemOutputs(outputItem)
+                    .inputFluids(`#forge:mana ${manaCost}`)
+                    .duration(10)
+                    .EUt(HV);
+
+                if (recipe.catalyst && recipe.catalyst.block) {
+                    let catalystItem = CATALYST_ITEM_IDS[recipe.catalyst.block];
+                    if (catalystItem) {
+                        try {
+                            builder.notConsumable(catalystItem);
+                        } catch (err) {
+                            console.error(`notConsumable FAILED for ${safeID}: ${err}`);
+                        }
+                    }
+                }
+            });
+
+        } catch (err) {
+            console.error(`FAILED recipe ID: ${baseSafeID} — ${err}`);
+        }
+    });
+
+    allthemods.forEachRecipe({ type: 'botania:runic_altar' }, rawRecipe => {
+        let recipe = JSON.parse(rawRecipe.json);
+
+        let inputItems = (recipe.ingredients || []).map(readIngredient).filter(item => item != null);
+        inputItems.push('botania:livingrock');
+
+        let outputItems = [readStack(recipe.output || recipe.result)];
+        inputItems.forEach(input => {
+            if (typeof input === 'string' && input.includes('rune')) {
+                outputItems.push(input);
+            }
+        });
+
+        let manaCost = recipe.mana ?? 5000;
+        let safeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
+
+        allthemods.recipes.gtceu.runic_altar(safeID)
+            .itemInputs(inputItems)
+            .itemOutputs(outputItems)
+            .inputFluids(`#forge:mana ${manaCost}`)
+            .duration(runicDuration)
+            .EUt(HV);
+    });
+
+    allthemods.forEachRecipe({ type: 'botania:terra_plate' }, rawRecipe => {
+        let recipe = JSON.parse(rawRecipe.json);
+
+        let inputItems = (recipe.ingredients || []).map(readIngredient).filter(item => item != null);
+        let safeID = rawRecipe.getId().toString().replace(/[^a-z0-9]/gi, '_');
+        let manaCost = recipe.mana ?? 5000;
+
+        allthemods.recipes.gtceu.mana_infuser(safeID)
+            .itemInputs(inputItems)
+            .itemOutputs(readStack(recipe.result || recipe.output))
+            .inputFluids(`#forge:mana ${manaCost}`)
+            .duration(infusionDuration)
+            .EUt(infusionVoltage);
+    });
 
 
+
+    allthemods.recipes.gtceu.petal_apothecary('gregification:livingrock')
+        .itemInputs('8x #forge:stone')
+        .itemOutputs('8x botania:livingrock')
+        .inputFluids('#forge:mana 1000')
+        .duration(infusionDuration)
+        .EUt(petalVoltage);
+
+    allthemods.recipes.gtceu.petal_apothecary('gregification:livingwood')
+        .itemInputs('8x #minecraft:logs')
+        .itemOutputs('8x botania:livingwood')
+        .inputFluids('#forge:mana 1000')
+        .duration(infusionDuration)
+        .EUt(petalVoltage);
+
+    allthemods.recipes.gtceu.petal_apothecary('gregification:orechid')
+        .itemInputs(
+            '2x #botania:petals/gray',
+            '#botania:petals/yellow',
+            '#botania:petals/green',
+            '#botania:petals/red',
+            'botania:rune_pride',
+            'botania:rune_greed',
+            'botania:redstone_root',
+            'botania:pixie_dust',
+            '#forge:seeds'
+        )
+        .itemOutputs('botania:orechid')
+        .inputFluids(`${stage1} 1000`)
+        .duration(petalDuration)
+        .EUt(petalVoltage);
+
+    //const pureBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:pure"}}').strongNBT();
+    //const terraBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:terrasteel"}}').strongNBT();
+    //const manaBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:mana"}}').strongNBT();
+    const elementiumBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:elementium"}}').strongNBT();
+    const alfBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:alfsteel"}}').strongNBT();
+    const manaSteel = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:manasteel"}}').strongNBT();
+    const ironBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:iron"}}').strongNBT();
+
+    /*
+    allthemods.recipes.gtceu.petal_apothecary('pure_bee')
+        .itemInputs(['minecraft:bee_spawn_egg', '3x #botania:petals/white', 'productivebees:honey_treat'])
+        .itemOutputs(pureBee)
+        .inputFluids(`${stage3} 10000`)
+        .duration(petalDuration)
+        .EUt(petalVoltage);
+    allthemods.recipes.gtceu.runic_altar('mana_bee')
+        .itemInputs([pureBee, '4x botania:rune_mana', 'botania:livingrock'])
+        .itemOutputs(manaBee)
+        .inputFluids('#forge:mana 1000000')
+        .duration(petalDuration)
+        .EUt(runicVoltage);
+    allthemods.recipes.gtceu.mana_infuser('terra_bee')
+        .itemInputs([manaSteel, 'botania:mana_pearl', 'botania:mana_diamond'])
+        .itemOutputs(terraBee)
+        .inputFluids('#forge:mana 500000')
+        .duration(infusionDuration)
+        .EUt(infusionVoltage);
+    */
+    allthemods.recipes.gtceu.mana_infuser('alf_bee')
+        .itemInputs([elementiumBee, 'botania:pixie_dust', 'botania:dragonstone'])
+        .itemOutputs(alfBee)
+        .inputFluids('#forge:mana 500000')
+        .duration(infusionDuration)
+        .EUt(infusionVoltage);
+
+
+    allthemods.recipes.gtceu.mana_infuser('unobtainium_allthemodium_alloy_block')
+        .itemInputs(['#forge:storage_blocks/unobtainium', '#forge:storage_blocks/allthemodium', 'allthemodium:piglich_heart_block'])
+        .itemOutputs('allthemodium:unobtainium_allthemodium_alloy_block')
+        .inputFluids('#forge:mana 8100000')
+        .duration(infusionDuration)
+        .EUt(infusionVoltage);
+
+    allthemods.recipes.gtceu.mana_infuser('unobtainium_vibranium_alloy_block')
+        .itemInputs(['#forge:storage_blocks/unobtainium', '#forge:storage_blocks/vibranium', 'allthemodium:piglich_heart_block'])
+        .itemOutputs('allthemodium:unobtainium_vibranium_alloy_block')
+        .inputFluids('#forge:mana 8100000')
+        .duration(infusionDuration)
+        .EUt(infusionVoltage);
+
+    allthemods.recipes.gtceu.mana_infuser('vibranium_allthemodium_alloy_block')
+        .itemInputs(['#forge:storage_blocks/allthemodium', '#forge:storage_blocks/vibranium', 'allthemodium:piglich_heart_block'])
+        .itemOutputs('allthemodium:vibranium_allthemodium_alloy_block')
+        .inputFluids('#forge:mana 8100000')
+        .duration(infusionDuration)
+        .EUt(infusionVoltage);
+
+    allthemods.recipes.gtceu.mana_infuser('unobtainium_vibranium_alloy_ingot')
+        .itemInputs(['#forge:ingots/unobtainium', '#forge:ingots/vibranium', 'allthemodium:piglich_heart'])
+        .itemOutputs('allthemodium:unobtainium_vibranium_alloy_ingot')
+        .inputFluids('#forge:mana 1000000')
+        .duration(infusionDuration)
+        .EUt(infusionVoltage);
+
+    allthemods.recipes.gtceu.mana_infuser('vibranium_allthemodium_alloy_ingot')
+        .itemInputs(['#forge:ingots/vibranium', '#forge:ingots/allthemodium', 'allthemodium:piglich_heart'])
+        .itemOutputs('allthemodium:vibranium_allthemodium_alloy_ingot')
+        .inputFluids('#forge:mana 1000000')
+        .duration(infusionDuration)
+        .EUt(infusionVoltage);
+
+    allthemods.recipes.gtceu.mana_infuser('unobtainium_allthemodium_alloy_ingot')
+        .itemInputs(['#forge:ingots/unobtainium', '#forge:ingots/allthemodium', 'allthemodium:piglich_heart'])
+        .itemOutputs('allthemodium:unobtainium_allthemodium_alloy_ingot')
+        .inputFluids('#forge:mana 1000000')
+        .duration(infusionDuration)
+        .EUt(infusionVoltage);
+
+    allthemods.recipes.gtceu.mana_infuser('mythicbotany:alfsteel_ingot')
+        .itemInputs(['botania:elementium_ingot', 'botania:pixie_dust', 'botania:mana_pearl'])
+        .itemOutputs('mythicbotany:alfsteel_ingot')
+        .inputFluids('#forge:mana 1000000')
+        .duration(infusionDuration)
+        .EUt(infusionVoltage);
 
     allthemods.recipes.gtceu.mana_pool('bacteria_mana_pool_manasteel_bee')
         .itemInputs(ironBee)

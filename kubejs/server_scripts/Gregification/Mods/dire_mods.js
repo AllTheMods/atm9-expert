@@ -67,7 +67,8 @@ ServerEvents.recipes(allthemods => {
         B: battery,
         C: circuit,
         E: emitter,
-        S: sensor
+        S: sensor,
+        F: field
     }).id('gregification:spatial_piper');
 
     allthemods.shaped('spatialtoolscmp:portable_spatial_piper', [

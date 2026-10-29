@@ -168,6 +168,21 @@ ServerEvents.recipes(allthemods => {
         .duration(100)
         .EUt(MV);
 
+    allthemods.recipes.gtceu.assembler('gregification:craft_sanguine_synthesizer')
+        .itemInputs(
+            'gtceu:hv_machine_hull',
+            '#gtceu:circuits/hv',
+            '2x gtceu:hv_electric_pump',
+            '2x gtceu:hv_electric_motor',
+            '2x #forge:plates/stainless_steel',
+            '2x gtceu:sanguine_vessel_casing',
+            '4x bloodmagic:demonslate'
+        )
+        .inputFluids('#forge:blood 16000')
+        .itemOutputs('gtceu:sanguine_synthesizer')
+        .duration(300)
+        .EUt(HV);
+
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

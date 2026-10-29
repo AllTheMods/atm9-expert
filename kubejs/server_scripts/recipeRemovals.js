@@ -117,6 +117,7 @@ ServerEvents.recipes(allthemods => {
 
     
     const moreRemovals = [
+        'productivetrees:sawmill',
         'create:mixing/andesite_alloy', 'create:mixing/andesite_alloy_from_zinc',
         'tconstruct:compat/create/andesite_alloy_iron', 'tconstruct:compat/create/andesite_alloy_zinc',
         'itemcollectors:basic_collector', 'itemcollectors:advanced_collector',
