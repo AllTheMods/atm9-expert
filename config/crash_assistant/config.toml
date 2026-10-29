@@ -270,7 +270,7 @@
 	#Enable feature.
 	#Note: This option is ignored if general.help_link is default (CHANGE_ME).
 	#Notifies if in your community (Discord/GitHub) piracy is not supported. Recommended to enable for modpacks.
-	enabled = false
+	enabled = true
 	#Delay in seconds for the OK button when piracy warning is shown.
 	#Set to 0 or -1 to disable the delay.
 	delay = 10
