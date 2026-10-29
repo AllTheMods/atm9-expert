@@ -1,8 +1,6 @@
 
 #Personal Options that can be edited even on server
 [client]
-	#Allows the ghost to appear around you during Halloween [false/true|default:true]
-	allow_halloween_ghost = false
 	#Shows the magic circles when using some items [false/true|default:true]
 	show_magic_circle = true
 	#Shows all the infos in the tooltip of items [false/true|default:true]
@@ -13,6 +11,8 @@
 	skip_respawn_screen = false
 	#Shows shield particles on villager [false/true|default:true]
 	show_shield_particle = true
+	#Allows the ghost to appear around you during Halloween [false/true|default:true]
+	allow_halloween_ghost = false
 	#Shows only the elapsed minecraft days since the death on graves [false/true|default:false]
 	date_in_mc_time = false
 	#Display or not the messages of gain of points in knowledge of death [false/true|default:true]

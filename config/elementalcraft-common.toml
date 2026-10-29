@@ -124,6 +124,22 @@
 			#Range: 0 ~ 10
 			inscriberMaxRunes = 3
 
+		[elementalcraft.instruments.waterMills]
+			#The max amount of element consumed by the Water Mills per tick.
+			#Range: 0 ~ 1000
+			waterMillsTransferSpeed = 5
+			#The max amount of runes on Water Mills.
+			#Range: 0 ~ 10
+			waterMillMaxRunes = 2
+
+		[elementalcraft.instruments.airMills]
+			#The max amount of element consumed by the Air Mills per tick.
+			#Range: 0 ~ 1000
+			airMillsTransferSpeed = 25
+			#The max amount of runes on Air Mills.
+			#Range: 0 ~ 10
+			airMillMaxRunes = 3
+
 		[elementalcraft.instruments.purifier]
 			#The max amount of element consumed by the Ore Purifier per tick.
 			#Range: 0 ~ 1000
@@ -177,22 +193,6 @@
 			#The max amount of runes an order sorter can have.
 			#Range: 0 ~ 10
 			sorterMaxRunes = 3
-
-		[elementalcraft.instruments.waterMills]
-			#The max amount of element consumed by the Water Mills per tick.
-			#Range: 0 ~ 1000
-			waterMillsTransferSpeed = 5
-			#The max amount of runes on Water Mills.
-			#Range: 0 ~ 10
-			waterMillMaxRunes = 2
-
-		[elementalcraft.instruments.airMills]
-			#The max amount of element consumed by the Air Mills per tick.
-			#Range: 0 ~ 1000
-			airMillsTransferSpeed = 25
-			#The max amount of runes on Air Mills.
-			#Range: 0 ~ 10
-			airMillMaxRunes = 3
 
 	#Pure Infuser and pedestals config
 	[elementalcraft.pureInfuser]
