@@ -123,7 +123,8 @@ ServerEvents.recipes(allthemods => {
         'mekanism:cardboard_box', 'buildinggadgets2:gadget_building', 'buildinggadgets2:gadget_exchanging',
         
         'buildinggadgets2:gadget_copy_paste', 'buildinggadgets2:gadget_cut_paste', 'buildinggadgets2:gadget_destruction',
-        'mininggadgets:mininggadget_simple', 'mininggadgets:mininggadget_fancy', 'mininggadgets:mininggadget'
+        'mininggadgets:mininggadget_simple', 'mininggadgets:mininggadget_fancy', 'mininggadgets:mininggadget',
+        'spatialtoolscmp:portable_spatial_storage', 'spatialtoolscmp:portable_spatial_cloner', 'spatialtoolscmp:portable_spatial_replacer', 'spatialtoolscmp:portable_spatial_piper', 'spatialtoolscmp:spatial_io_port'
 
     ];
     

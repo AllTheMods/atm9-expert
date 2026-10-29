@@ -18,6 +18,71 @@ ServerEvents.recipes(allthemods => {
     const plate = '#forge:plates/tungsten_steel'
     const field = 'gtceu:iv_field_generator'
     const battery = '#gtceu:batteries/iv'
+    const emitter = 'gtceu:iv_emitter'
+    const sensor = 'gtceu:iv_sensor'
+
+    allthemods.shaped('spatialtoolscmp:portable_spatial_storage', [
+        'PCP',
+        'EBS',
+        'PPP'
+    ], {
+        P: plate,        
+        B: battery,
+        C: circuit,
+        E: emitter,
+        S: sensor
+    }).id('gregification:spatial_storage');
+
+    allthemods.shaped('spatialtoolscmp:portable_spatial_cloner', [
+        'PCP',
+        'EBS',
+        'PFP'
+    ], {
+        P: plate,
+        F: field,
+        B: battery,
+        C: circuit,
+        E: emitter,
+        S: sensor
+    }).id('gregification:spatial_cloner');
+
+    allthemods.shaped('spatialtoolscmp:portable_spatial_replacer', [
+        'PPP',
+        'SBE',
+        'PCP'
+    ], {
+        P: plate,        
+        B: battery,
+        C: circuit,
+        E: emitter,
+        S: sensor
+    }).id('gregification:spatial_replacer');
+
+    allthemods.shaped('spatialtoolscmp:portable_spatial_piper', [
+        'SFE',
+        'PBP',
+        'PCP'
+    ], {
+        P: plate,        
+        B: battery,
+        C: circuit,
+        E: emitter,
+        S: sensor
+    }).id('gregification:spatial_piper');
+
+    allthemods.shaped('spatialtoolscmp:portable_spatial_piper', [
+        'PTP',
+        'PHP',
+        'PCP'
+    ], {
+        P: plate,
+        H: 'gtceu:iv_machine_hull',
+        T: 'gtceu:iv_electric_piston',
+        C: circuit
+        
+    }).id('gregification:spatial_piper');
+
+
     
     allthemods.shaped('buildinggadgets2:gadget_building', [
         'PFP',
