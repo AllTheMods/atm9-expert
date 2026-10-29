@@ -557,10 +557,11 @@ const materials = [
         .cable({ voltage: 2147483647, loss: 2 })
         .color(0x7a0606).iconSet('NETHERSTAR').ingot().dust().fluid().materialsAll().singularity().pipe()
         .unify({ block: 'projecte:red_matter_block', ingot: 'projecte:red_matter' }),
-
-    new MaterialDef('dark_gem')
+                    
+    new MaterialDef('dark_gem').ore().gem()
+        .byproducts(['coagulite', 'iron'])
         .color(0x262626).iconSet('NETHERSTAR').gem()
-        .unify({ gemFlawless: true, gemExquisite: true, gem: 'evilcraft:dark_gem', dust: 'evilcraft:dark_gem_crushed', block: 'evilcraft:dark_block' }),
+        .unify({ gemFlawless: true, gemExquisite: true, gem: 'evilcraft:dark_gem', dust: 'evilcraft:dark_gem_crushed', block: 'evilcraft:dark_block', ore: 'evilcraft:dark_ore' }),
 
     new MaterialDef('dark_power_gem')
         .color(0x2f0a0b).iconSet('NETHERSTAR').gem()
@@ -1157,11 +1158,7 @@ const materials = [
 
     new MaterialDef('cubic_zirconia').dust().gem().fluid().color(0xD8ECF2).iconSet('DIAMOND').formula('ZrO2').components('1x zirconium, 2x oxygen'),
 
-    //cables might be redundant
-    new MaterialDef('dark_gem').ore().dust().gem().color(0x191919).iconSet('DIAMOND')
-        .byproducts(['coagulite', 'iron'])
-        .unify({ ore: 'evilcraft:dark_ore', dust: 'evilcraft:dark_gem_crushed', gem: 'evilcraft:dark_gem', gemFlawless: true, gemExquisite: true }),
-        
+    //cables might be redundant   
     new MaterialDef('hellforged').ore().element('hellforged').color(0xC1D5EC).iconSet('METALLIC').ingot().fluid().materialsAll().singularity()
         .byproducts(['coagulite', 'gold', 'hellforged'])
         .unify({ block: 'bloodmagic:dungeon_metal', dust: 'bloodmagic:sand_hellforged', ingot: 'bloodmagic:ingot_hellforged', rawOre: 'bloodmagic:rawdemonite', ore: 'bloodmagic:dungeon_ore' }),
