@@ -1,6 +1,0 @@
-
-#Rendering settings shared by every mod built on Immersive Convergence
-[rendering]
-	#Disables most lighting code for models rendered dynamically (TESR). May improve FPS. Affects various multiblocks.
-	disable_fancy_tesr = false
-

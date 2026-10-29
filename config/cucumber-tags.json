@@ -1,9 +1,14 @@
 {
   "__comment": "Instructions: https://blakesmods.com/docs/cucumber/tags-config",
+  "forge:silicon": "forestry:silicon",
   "forge:dusts/saltpeter": "railcraft:saltpeter_dust",
+  "forge:ingots/iridium": "alltheores:iridium_ingot",
   "forge:dusts/niter": "railcraft:saltpeter_dust",
   "forge:ingots/chrome": "null",
   "forge:ingots/titanium": "null",
   "forge:ingots/mithril": "null",
+  "forge:gems/peridot": "alltheores:peridot",
+  "forge:ingots/platinum": "alltheores:platinum_ingot",
+  "forge:ingots/graphite": "bigreactors:graphite_ingot",
   "forge:rubber": "productivetrees:cured_rubber"
 }

@@ -1,8 +1,0 @@
-#*****************************************
-#* Programmed Circuit Card Common Config *
-#*****************************************
-#Maximum depth for searching connected machines in subnet tree.
-#Higher values allow deeper traversal but may impact performance.
-#Range: 0 ~ 100
-search_depth = 5
-

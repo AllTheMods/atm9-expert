@@ -4,6 +4,11 @@
 	#Blacklisted Sounds - add the name of the sounds to blacklist, separated with comma
 	#Default: "ui.", "music.", "ambient."
 	forbiddenSounds = ["ui.", "music.", "ambient."]
+	#General mod muffling, any sound from these mods will be muffled down to the provided volume. 
+	#Name of the mod and desired volume, separated by ":" 
+	#Example: "minecraft:50", "extremesoundmuffler:0"
+	#Default: empty
+	modsMuffled = []
 	#Allow the "ALL" sounds list to include the blacklisted sounds?
 	#Default: false
 	lawfulAllList = false
@@ -20,11 +25,6 @@
 	#Whether or not use the dark theme
 	#Default: false
 	useDarkTheme = false
-	#General mod muffling, any sound from these mods will be muffled down to the provided volume. 
-	#Name of the mod and desired volume, separated by ":" 
-	#Example: "minecraft:50", "extremesoundmuffler:0"
-	#Default: empty
-	modsMuffled = []
 
 #Inventory button settings
 [inventory_button]

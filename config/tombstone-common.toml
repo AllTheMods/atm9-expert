@@ -61,7 +61,6 @@
 	#Points for Pray of Protection [0..500|default:20]
 	#Range: 0 ~ 500
 	points_pray_of_protection = 2
-
 	#Points for using a Potion of Earthly Garden [0..500|default:10]
 	#Range: 0 ~ 500
 	points_earthly_garden = 10

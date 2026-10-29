@@ -1,5 +1,0 @@
-
-["reaction chamber"]
-	#Enable/disable reaction chamber's item rendering. Saves on performance if there are a considerable amount of them running at the same time.
-	enableEffects = true
-

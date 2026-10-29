@@ -1,8 +1,0 @@
-
-#Silver Ore World Generation Settings
-[SilverOre]
-	#Generate silver ore in the Overworld (stone & deepslate variants).
-	generateSilverOre = true
-	#Generate the extra surface silver ore veins in Badlands biomes.
-	generateSilverBadlandsBonus = true
-
