@@ -120,7 +120,10 @@ ServerEvents.recipes(allthemods => {
         'create:mixing/andesite_alloy', 'create:mixing/andesite_alloy_from_zinc',
         'tconstruct:compat/create/andesite_alloy_iron', 'tconstruct:compat/create/andesite_alloy_zinc',
         'itemcollectors:basic_collector', 'itemcollectors:advanced_collector',
-        'mekanism:cardboard_box'
+        'mekanism:cardboard_box', 'buildinggadgets2:gadget_building', 'buildinggadgets2:gadget_exchanging',
+        
+        'buildinggadgets2:gadget_copy_paste', 'buildinggadgets2:gadget_cut_paste', 'buildinggadgets2:gadget_destruction',
+        'mininggadgets:mininggadget_simple', 'mininggadgets:mininggadget_fancy', 'mininggadgets:mininggadget'
 
     ];
     
