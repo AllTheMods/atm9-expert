@@ -68,7 +68,7 @@ ServerEvents.recipes(allthemods => {
         .EUt(EUComplex);
 
     allthemods.recipes.gtceu.chemical_reactor('gregification:cineole_from_adduct')
-        .itemInputs('gtceu:cineole_phosphate_dust')
+        .itemInputs('#forge:dusts/cineole_phosphate')
         .inputFluids('minecraft:water 1000')
         .outputFluids('gtceu:cineole 750', 'gtceu:phosphoric_acid 500')
         .duration(duration)

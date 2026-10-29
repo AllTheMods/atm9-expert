@@ -135,7 +135,7 @@ ServerEvents.recipes(allthemods => {
         .duration(duration).EUt(EUSimple);
 
     allthemods.recipes.gtceu.chemical_reactor('gregification:poison_from_amygdalin')
-        .itemInputs('gtceu:amygdalin_dust')
+        .itemInputs('#forge:dusts/amygdalin')
         .inputFluids('gtceu:enzyme_solution 250')
         .outputFluids('evilcraft:poison 50')
         .duration(duration).EUt(EUSimple);

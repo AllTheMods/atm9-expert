@@ -406,7 +406,7 @@ ServerEvents.recipes(allthemods => {
 
     //gtceu - ae2 quartize conversion
     allthemods.recipes.gtceu.autoclave('quartzite_to_certus_conversion')
-        .itemInputs('gtceu:quartzite_gem')
+        .itemInputs('#forge:gems/quartzite')
         .inputFluids('gtceu:distilled_water 100')
         .itemOutputs('ae2:certus_quartz_crystal')
         .duration(60)
