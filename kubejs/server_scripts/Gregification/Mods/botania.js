@@ -693,7 +693,7 @@ ServerEvents.recipes(allthemods => {
         .input(GTX.MANA, chemMana)
         .chancedOutput('32x gtceu:raw_sulfur', 9000, 0)
         .chancedOutput('32x gtceu:raw_fluorite', 7000, 0)
-        .chancedOutput('32x evilcraft:dark_gem', 7000, 0)
+        .chancedOutput('32x gtceu:raw_dark_gem', 7000, 0)        
         .chancedOutput('32x gtceu:raw_rock_salt', 7000, 0)
         .chancedOutput('32x gtceu:raw_apatite', 6000, 0)
         .chancedOutput('32x gtceu:raw_cinnabar', 5000, 0)

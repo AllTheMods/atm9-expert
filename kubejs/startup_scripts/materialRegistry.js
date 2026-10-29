@@ -250,7 +250,11 @@ MaterialDef.prototype.modify = function () { this.traits.isModification = true; 
 
 // ---- resolved in later phases ----
 MaterialDef.prototype.byproducts = function (list) { this.byproductList = list; return this; };
-MaterialDef.prototype.unify = function (map) { this.unifyMap = map; return this; };
+MaterialDef.prototype.unify = function (map) {
+    if (!this.unifyMap) this.unifyMap = {};
+    Object.keys(map).forEach(key => { this.unifyMap[key] = map[key]; });
+    return this;
+};
 
 MaterialDef.prototype.removeFlags = function () {
     let f = Array.prototype.slice.call(arguments);

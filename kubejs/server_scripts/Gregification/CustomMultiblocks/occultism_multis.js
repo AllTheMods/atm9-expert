@@ -588,6 +588,14 @@ ServerEvents.recipes(allthemods => {
     );
 
     addRitual(
+        ['bloodmagic:infusedslate', 'gtceu:quantum_eye', '4x #forge:rounds/pink_slime', 'pneumaticcraft:printed_circuit_board', '4x #forge:plates/polybenzimidazole', 'evilcraft:corrupted_tear'],
+        'forbidden_arcanus:artisan_relic',
+        'posucs_convocation',
+        120,
+        'artisian_relic'
+    );
+
+    addRitual(
         ['#forge:storage_blocks/diamond', 'minecraft:ghast_tear', '#forge:storage_blocks/iesnium', '#forge:storage_blocks/emerald'],
         Item.of('occultism:spawn_egg/marid', '{EntityTag:{spiritJob:{factoryId:"occultism:crush_tier4",conversionTimer:0},spiritMaxAge:-1,spiritAge:0}}').strongNBT(),
         'fatmas_incentivized_attraction',

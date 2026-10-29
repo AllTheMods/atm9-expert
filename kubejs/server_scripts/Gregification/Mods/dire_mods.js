@@ -71,19 +71,6 @@ ServerEvents.recipes(allthemods => {
         F: field
     }).id('gregification:spatial_piper');
 
-    allthemods.shaped('spatialtoolscmp:portable_spatial_piper', [
-        'PTP',
-        'PHP',
-        'PCP'
-    ], {
-        P: plate,
-        H: 'gtceu:iv_machine_hull',
-        T: 'gtceu:iv_electric_piston',
-        C: circuit
-        
-    }).id('gregification:spatial_piper');
-
-
     
     allthemods.shaped('buildinggadgets2:gadget_building', [
         'PFP',
