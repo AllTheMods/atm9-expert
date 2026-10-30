@@ -1,10 +1,15 @@
 {
+	always_invisible: true
 	autofocus_id: "3E75AFE3482834C5"
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "railcraft"
 	group: "2B51AC12041E3F89"
-	icon: "railcraft:steam_locomotive"
+	icon: {
+		Count: 1
+		id: "railcraft:steam_locomotive"
+		tag: { }
+	}
 	id: "2FB24A5A597459FC"
 	images: [
 		{

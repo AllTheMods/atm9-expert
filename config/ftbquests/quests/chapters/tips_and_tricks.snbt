@@ -501,35 +501,6 @@
 			y: 6.0d
 		}
 		{
-			description: ["{atm9.quest.tips.desc.stick}"]
-			id: "0790D3BB481162A6"
-			rewards: [{
-				id: "2D7265C36210BDDB"
-				type: "xp"
-				xp: 10
-			}]
-			tasks: [
-				{
-					id: "6038387EA35404CD"
-					item: "crafting_on_a_stick:crafting_table"
-					type: "item"
-				}
-				{
-					id: "0BF4F9C40FF717DE"
-					item: "crafting_on_a_stick:smithing_table"
-					type: "item"
-				}
-				{
-					id: "405411318EA7A80C"
-					item: "crafting_on_a_stick:anvil"
-					type: "item"
-				}
-			]
-			title: "{atm9.quest.tips.stick}"
-			x: -0.5d
-			y: 5.5d
-		}
-		{
 			description: ["{atm9.quest.tips.desc.powah}"]
 			icon: "mekanismgenerators:gas_burning_generator"
 			id: "437AF6A8A63413A8"
@@ -547,37 +518,6 @@
 			title: "{atm9.quest.tips.powah}"
 			x: 5.5d
 			y: 6.0d
-		}
-		{
-			description: ["{atm9.quest.tips.desc.mahou}"]
-			icon: {
-				Count: 1
-				ForgeCaps: {
-					Parent: {
-						MAHOUTSUKAI_ATTACK_CAP: 0.0d
-						MAHOUTSUKAI_ATTACK_DAMAGE: 0.0f
-					}
-				}
-				id: "mahoutsukai:morgan"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "51CEE80605BFF40C"
-			rewards: [{
-				id: "2E8A795741E4854D"
-				type: "xp"
-				xp: 10
-			}]
-			subtitle: "{atm9.quest.tips.subt.mahou}"
-			tasks: [{
-				id: "655D747AB2AECCF2"
-				title: "Mahou Tsukai"
-				type: "checkmark"
-			}]
-			title: "{atm9.quest.tips.mahou}"
-			x: 5.0d
-			y: 5.5d
 		}
 		{
 			description: ["{atm9.quest.tips.desc.spawner}"]
@@ -638,6 +578,24 @@
 			]
 			x: 1.0d
 			y: 4.5d
+		}
+		{
+			description: ["Your first priority should be getting to the mining dimension to gain access to GregTech ores. The recipe for the teleporter has been changed and no longer requires allthemodium."]
+			id: "38027FA5052017E2"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "0F7E93B5AE4A328E"
+				table_id: 4804065436311136435L
+				type: "random"
+			}]
+			tasks: [{
+				id: "547F078771DBD7FB"
+				item: "allthemodium:teleport_pad"
+				type: "item"
+			}]
+			title: "Mining Dimension"
+			x: -0.5d
+			y: 5.5d
 		}
 	]
 	title: "{atm9.chapters.4.title}"
