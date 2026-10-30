@@ -22,6 +22,16 @@ ServerEvents.recipes(allthemods => {
 	
  
 
+    allthemods.shaped('4x ae2:blank_pattern', [
+        'GFG',
+        'FCF',
+        'AAA'
+    ], {
+        G: 'ae2:quartz_glass',
+        F: '#forge:fine_wires/fluix',
+        C: '#gtceu:circuits/mv',
+        A: '#forge:plates/aluminum'
+    }).id('gregification:ae2/blank_pattern')
 
 	
 	// Network casing 
