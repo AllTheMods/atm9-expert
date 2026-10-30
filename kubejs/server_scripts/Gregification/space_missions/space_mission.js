@@ -151,13 +151,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('gtceu:cosmic_research')
         .duration(S.COMPILE_DURATION)
         .EUt(OpV);
-
-    allthemods.recipes.gtceu.research_compiler('gregification:space/compile/cosmic_research')
-        .itemInputs(S.COSMIC_FRAGMENTS_NEEDED + 'x gtceu:cosmic_research_fragment')
-        .circuit(1)
-        .itemOutputs('gtceu:cosmic_research')
-        .duration(S.COMPILE_DURATION)
-        .EUt(OpV);
+    
 
     const fragmentDuration = 4800
     const fragmentEut = UIV;

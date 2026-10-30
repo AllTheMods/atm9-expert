@@ -133,7 +133,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
 GTCEuStartupEvents.registry("gtceu:machine", allthemods => {
 
      allthemods.create('pure_daisy', 'simple')
-        .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV)
+        .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
         .definition((tier, builder) =>
             builder
                 .rotationState(RotationState.NON_Y_AXIS)
