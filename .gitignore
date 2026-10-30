@@ -3,7 +3,7 @@
  
 # ...except the folders we actually want to track
 !/kubejs/
-#!/config/
+!/config/
 #!/defaultconfigs/
 #!/packmenu/
 #!/shaderpacks/
