@@ -19,18 +19,18 @@ ServerEvents.recipes(allthemods => {
 	//flux casing
 	addAssembler(
     [
-        'gtceu:iv_machine_casing',
+        'gtceu:zpm_machine_casing',
 		'#forge:frames/enderium',
         '4x #forge:plates/draconium',
 		'4x #forge:plates/gadolinium',
 		'4x #forge:rods/hop_graphite',
 		'4x #forge:screws/end_steel',
-        'gtceu:iv_field_generator',
-		'bloodmagic:demonslate'
+        'gtceu:zpm_field_generator',
+		'bloodmagic:etherealslate'
     ],
     'gtceu:polytetrafluoroethylene 576',
     'gtceu:flux_casing',
-    IV,
+    LuV,
     800
 	);
 
@@ -40,7 +40,7 @@ ServerEvents.recipes(allthemods => {
 			'gtceu:flux_casing',
 			'gtceu:computer_monitor_cover',
 			'4x fluxnetworks:flux_core',
-			'2x #gtceu:circuits/iv',			
+			'2x #gtceu:circuits/zpm',			
 			'4x #forge:plates/draconium',
 			'4x #forge:plates/gadolinium',
 			'#forge:frames/hop_graphite'
@@ -48,7 +48,7 @@ ServerEvents.recipes(allthemods => {
 		],
 		'gtceu:soldering_alloy 288',
 		'fluxnetworks:flux_controller',
-		IV,
+		ZPM,
 		600
 	);
 
@@ -57,7 +57,7 @@ ServerEvents.recipes(allthemods => {
 		[
 			'gtceu:flux_casing',
 			'2x fluxnetworks:flux_core',
-			'gtceu:iv_sensor',
+			'gtceu:zpm_sensor',
 			'2x #forge:plates/enderium',
 			'4x #forge:rods/gadolinium',
 			'4x #forge:screws/draconium'
@@ -65,7 +65,7 @@ ServerEvents.recipes(allthemods => {
 		],
 		'gtceu:polytetrafluoroethylene 144',
 		'fluxnetworks:flux_plug',
-		IV,
+		ZPM,
 		300
 	);
 
@@ -74,14 +74,14 @@ ServerEvents.recipes(allthemods => {
 		[
 			'gtceu:flux_casing',
 			'2x fluxnetworks:flux_core',
-			'gtceu:iv_emitter',
+			'gtceu:zpm_emitter',
 			'2x #forge:plates/enderium',
 			'4x #forge:rods/gadolinium',
 			'4x #forge:screws/draconium'
 		],
 		'gtceu:polytetrafluoroethylene 144',
 		'fluxnetworks:flux_point',
-		IV,
+		ZPM,
 		300
 	);
 		
@@ -90,12 +90,12 @@ ServerEvents.recipes(allthemods => {
 		[
 			'gtceu:flux_casing',
 			'4x fluxnetworks:flux_core',
-			'2x #gtceu:batteries/ev',
+			'2x #gtceu:batteries/zpm',
 			'4x botania:bifrost_perm'
 		],
 		'gtceu:polytetrafluoroethylene 144',
 		'fluxnetworks:basic_flux_storage',
-		IV,
+		ZPM,
 		200
 	);
 })
