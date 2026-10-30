@@ -686,6 +686,7 @@ ServerEvents.recipes(allthemods => {
         .chancedOutput('8x occultism:raw_iesnium', 100, 0)
         .chancedOutput('8x bloodmagic:rawdemonite', 100, 0)
         .duration(oreDuration)
+        .circuit(1)
         .EUt(oreEut);
  
     allthemods.recipes.gtceu.orechid_grove('gregification:orechid_grove_chemical')
@@ -700,6 +701,7 @@ ServerEvents.recipes(allthemods => {
         .chancedOutput('32x gtceu:raw_barite', 4000, 0)
         .chancedOutput('32x gtceu:raw_lepidolite', 3000, 0)
         .duration(chemDuration)
+        .circuit(2)
         .EUt(chemEut);
  
     allthemods.recipes.gtceu.orechid_grove('gregification:orechid_grove_metallurgical')
@@ -711,6 +713,7 @@ ServerEvents.recipes(allthemods => {
         .chancedOutput('32x gtceu:raw_pentlandite', 6000, 0)
         .chancedOutput('32x gtceu:raw_sphalerite', 5000, 0)
         .chancedOutput('32x gtceu:raw_scheelite', 1500, 0)
+        .circuit(3)
         .duration(metalDuration)
         .EUt(metalEut);
 
