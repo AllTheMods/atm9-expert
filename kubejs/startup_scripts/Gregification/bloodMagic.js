@@ -3,7 +3,7 @@
 
 const GTX = Java.loadClass('com.gtextras.api.GTX');
 
-   
+
 StartupEvents.registry('block', allthemods => {
     allthemods.create('gtceu:sanguine_vessel_casing')
         .displayName('Sanguine Vessel Casing')
@@ -26,7 +26,13 @@ StartupEvents.registry('block', allthemods => {
 });
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
-    
+    allthemods.create('sanguine_ritual')
+        .category('sanguine_ritual')
+        .setEUIO('in') // Machine takes power IN
+        .setMaxIOSize(16, 16, 1, 1) // Item In, Item Out, Fluid In, Fluid Out
+        .setProgressBar(GuiTextures.COMPRESSOR_OVERLAY, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.COMPRESSOR)
+
     allthemods.create('sanguine_synthesis')
         .category('sanguine_synthesis')
         .setEUIO('in')
@@ -61,14 +67,6 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
         .setMaxIOSize(2, 1, 1, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ASSEMBLER, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.SCIENCE);
-
-    allthemods.create('sanguine_feeder')
-        .category('sanguine_feeder')
-        .setEUIO('none')
-        .setMaxIOSize(1, 0, 2, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ASSEMBLER, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.BOILER);
-        
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
@@ -136,31 +134,52 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
                 .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setMaxGlobalLimited(2)))
             .where('#', Predicates.air())
             .build())
-        .workableCasingModel('gtceu:block/casings/sanguine_vessel_casing/sanguine_vessel_casing','gtceu:block/multiblock/sanguine_synthesizer');
+        .workableCasingModel('gtceu:block/casings/sanguine_vessel_casing/sanguine_vessel_casing', 'gtceu:block/multiblock/sanguine_synthesizer');
 
-    allthemods.create('sanguine_feeder', 'multiblock')
+    
+    allthemods.create('sanguine_ritual', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes([GTRecipeTypes.get('sanguine_feeder')])
-        .appearanceBlock(() => Block.getBlock('gtceu:sanguine_vessel_casing'))
+        .recipeType('sanguine_ritual')
+        .appearanceBlock(GTBlocks.CASING_STAINLESS_CLEAN)
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
         .pattern(definition => FactoryBlockPattern.start()
-            .aisle('CCC', 'CBC', 'CCC')
-            .aisle('CBC', 'B#B', 'CBC')
-            .aisle('CKC', 'CBC', 'CCC')
+            .aisle('CCCCCCCCCCC', 'CGGGGGGGGGC', 'CUUUUUUUUUC', 'C         C', 'C         C', 'C         C', 'C         C', 'C         C')
+            .aisle('CRRRRCRRRRC', 'G         G', 'UHHH   HHHU', '  UUUUUUU  ', '           ', '           ', '           ', '           ')
+            .aisle('CRRRRCRRRRC', 'G         G', 'UHRH   HRHU', ' URH   HRU ', '  RUUUUUR  ', '  R     R  ', '  R     R  ', '           ')
+            .aisle('CRRCCCCCRRC', 'G  H   H  G', 'UHHH   HHHU', ' UHH   HHU ', '  UHHHHHU  ', '    UUU    ', '           ', '           ')
+            .aisle('CRRCCCCCRRC', 'G   CGC   G', 'U   CGC   U', ' U  CGC  U ', '  UHCCCHU  ', '   UGGGU   ', '           ', '           ')
+            .aisle('CCCCCCCCCCC', 'G   GFG   G', 'U   GFG   U', ' U  GFG  U ', '  UHCFCHU  ', '   UGFGU   ', '     B     ', '           ')
+            .aisle('CRRCCCCCRRC', 'G   CGC   G', 'U   CGC   U', ' U  CGC  U ', '  UHCCCHU  ', '   UGGGU   ', '           ', '           ')
+            .aisle('CRRCCCCCRRC', 'G  H   H  G', 'UHHH   HHHU', ' UHH   HHU ', '  UHHHHHU  ', '    UUU    ', '           ', '           ')
+            .aisle('CRRRRCRRRRC', 'G         G', 'UHRH   HRHU', ' URH   HRU ', '  RUUUUUR  ', '  R     R  ', '  R     R  ', '           ')
+            .aisle('CRRRRCRRRRC', 'G         G', 'UHHH   HHHU', '  UUUUUUU  ', '           ', '           ', '           ', '           ')
+            .aisle('CCCCCKCCCCC', 'CGGGGGGGGGC', 'CUUUUUUUUUC', 'C         C', 'C         C', 'C         C', 'C         C', 'C         C')
             .where('K', Predicates.controller(Predicates.blocks(definition.get())))
-            .where('B', Predicates.blocks('gtceu:blood_splash_casing'))
-            .where('C', Predicates.blocks('gtceu:sanguine_vessel_casing')
-                .or(Predicates.abilities(GTX.BLOOD_INPUT).setExactLimit(1))
-                .or(Predicates.abilities(GTX.BLOOD_OUTPUT).setExactLimit(1))
-                .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(1))
-                .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(1))
+            .where('B', Predicates.blocks('bloodmagic:altar'))
+            .where('R', Predicates.blocks('bloodmagic:bloodstonebrick'))
+            .where('U', Predicates.blocks('bloodmagic:blankrune')
+                .or(Predicates.blocks('bloodmagic:speedrune'))
+                .or(Predicates.blocks('bloodmagic:sacrificerune'))
+                .or(Predicates.blocks('bloodmagic:selfsacrificerune'))
+                .or(Predicates.blocks('bloodmagic:dislocationrune'))
+                .or(Predicates.blocks('bloodmagic:altarcapacityrune'))
+                .or(Predicates.blocks('bloodmagic:bettercapacityrune'))
+                .or(Predicates.blocks('bloodmagic:orbcapacityrune'))
+                .or(Predicates.blocks('bloodmagic:accelerationrune'))
+                .or(Predicates.blocks('bloodmagic:chargingrune'))
             )
-            .where('#', Predicates.air())
+            .where('F', Predicates.blocks('gtceu:hv_hermetic_casing'))
+            .where('H', Predicates.blocks('gtceu:hsla_steel_frame'))
+            .where('G', Predicates.blocks('botania:bifrost_perm'))
+            .where('C', Predicates.blocks('gtceu:clean_machine_casing')
+                .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
+                .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
+            )
+            .where(' ', Predicates.any())
             .build()
         )
-        .workableCasingModel(
-            'gtceu:block/casings/sanguine_vessel_casing/sanguine_vessel_casing',
-            'gtceu:block/multiblock/sanguine_synthesizer'
-        );
+        .workableCasingModel('gtceu:block/casings/solid/machine_casing_clean_stainless_steel', 'gtceu:block/multiblock/distillation_tower')
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

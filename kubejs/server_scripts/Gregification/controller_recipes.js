@@ -4,6 +4,62 @@
 ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA;
 
+    allthemods.recipes.gtceu.assembler('gregification:craft_sanguine_feeder')
+        .itemInputs(
+            'gtceu:mv_machine_hull',
+            '#gtceu:circuits/mv',
+            '2x gtceu:mv_electric_pump',
+            '2x #forge:plates/stainless_steel',
+            '4x gtceu:blood_splash_casing',
+            '2x bloodmagic:demonslate'
+        )
+        .inputFluids('#forge:blood 8000')
+        .itemOutputs('gtceu:sanguine_feeder')
+        .duration(300)
+        .EUt(MV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_mana_feeder')
+        .itemInputs(
+            'gtceu:mv_machine_hull',
+            '#gtceu:circuits/mv',
+            '2x gtceu:mv_electric_pump',
+            '2x #forge:plates/stainless_steel',
+            '4x gtceu:overgrown_conduit_casing',
+            '2x botania:rune_mana'
+        )
+        .inputFluids('#forge:mana 8000')
+        .itemOutputs('gtceu:mana_feeder')
+        .duration(300)
+        .EUt(MV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_will_feeder')
+        .itemInputs(
+            'gtceu:mv_machine_hull',
+            '#gtceu:circuits/mv',
+            '2x gtceu:mv_electric_pump',
+            '2x #forge:plates/stainless_steel',
+            '4x gtceu:will_orb_casing',
+            '2x bloodmagic:demonslate'
+        )
+        .inputFluids('#forge:will 288')
+        .itemOutputs('gtceu:will_feeder')
+        .duration(300)
+        .EUt(MV);
+
+    allthemods.recipes.gtceu.assembler('gregification:craft_source_feeder')
+        .itemInputs(
+            'gtceu:mv_machine_hull',
+            '#gtceu:circuits/mv',
+            '2x gtceu:mv_electric_pump',
+            '2x #forge:plates/stainless_steel',
+            '4x gtceu:source_conduit_casing',
+            '2x ars_nouveau:source_gem'
+        )
+        .inputFluids('#forge:source 8000')
+        .itemOutputs('gtceu:source_feeder')
+        .duration(300)
+        .EUt(MV);
+
     allthemods.recipes.gtceu.assembler('gregification:craft_water_filtration_plant')
         .itemInputs(
             'gtceu:hv_machine_hull',
