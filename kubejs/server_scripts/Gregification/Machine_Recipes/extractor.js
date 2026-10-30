@@ -13,7 +13,7 @@ ServerEvents.recipes(allthemods => {
         .outputFluids('integrateddynamics:menril_resin 1000')
         .duration(150)
         .EUt(MV);
-        
+
     ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue', 'brown', 'green', 'red', 'black'].forEach(color => {
         allthemods.recipes.gtceu.extractor(`gregification:petal_from_${color}_flower`)
             .itemInputs(`botania:${color}_mystical_flower`)
@@ -21,7 +21,7 @@ ServerEvents.recipes(allthemods => {
             .duration(150)
             .EUt(MV);
 
-        allthemods.recipes.gtceu.extractor(`gregification:petal_from_${color}_flower`)
+        allthemods.recipes.gtceu.extractor(`gregification:petal_from_${color}_tall_flower`)
             .itemInputs(`botania:${color}_double_flower`)
             .itemOutputs(`8x botania:${color}_petal`)
             .duration(150)
