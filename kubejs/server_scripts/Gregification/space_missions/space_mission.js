@@ -157,7 +157,7 @@ ServerEvents.recipes(allthemods => {
     const fragmentEut = UIV;
 
     allthemods.recipes.gtceu.research_compiler('gregification:space/knowledge_fragment')
-        .itemInputs('1024x gtceu:cosmic_research')
+        .itemInputs('1024x gtceu:cosmic_knowledge')
         .circuit(4)
         .itemOutputs('gtceu:cosmic_knowledge_fragment')
         .duration(fragmentDuration)
@@ -169,7 +169,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.research_compiler('gregification:space/knowledge_from_fragments')
         .itemInputs('10x gtceu:cosmic_knowledge_fragment')
         .circuit(5)
-        .itemOutputs('gtceu:cosmic_knowledge')
+        .itemOutputs('gtceu:cosmic_knowledge_compendium')
         .duration(knowledgeDuration)
         .EUt(knowledgeEut)
         

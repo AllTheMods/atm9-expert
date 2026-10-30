@@ -54,9 +54,9 @@ ServerEvents.recipes(allthemods => {
         ['gtceu:marble', [{ output: 'gtceu:marble_dust', chance: 1 },                   { output: 'gtceu:magnesium_dust', chance: 0.2 }, { output: 'gtceu:calcite_dust', chance: 0.4 }, { output: 'alltheores:zinc_nugget', chance: 0.4 }], 250],
         ['minecraft:deepslate', [{ output: 'gtceu:deepslate_dust', chance: 1 },         { output: 'gtceu:silicon_dioxide_dust', chance: 0.1 }, { output: 'gtceu:biotite_dust', chance: 0.7 }, { output: 'alltheores:aluminum_nugget', chance: 0.2 }], 250],
         ['minecraft:blackstone', [{ output: 'gtceu:blackstone_dust', chance: 1 },       { output: 'create:crushed_raw_lead', chance: 0.5 }, { output: 'alltheores:silver_nugget', chance: 0.5 }], 250],
-        ['minecraft:mossy_cobblestone', [{ output: 'gtceu:stone_dust', chance: 1 },     { output: 'gtceu:bio_chaff', chance: 0.4 }, { output: 'create:crushed_raw_nickel', chance: 0.4 }, { output: 'alltheores:tin_nugget', chance: 0.2 }], 250],
+        ['minecraft:mossy_cobblestone', [{ output: 'gtceu:stone_dust', chance: 1 },     { output: 'gtceu:bio_chaff', chance: 0.4 }, { output: 'create:crushed_raw_nickel', chance: 0.2 }, { output: 'alltheores:tin_nugget', chance: 0.4 }], 250],
         ['create:scorchia', [{ output: 'gtceu:stone_dust', chance: 1 },                 { output: 'create:crushed_raw_lead', chance: 0.6 }, { output: 'alltheores:lead_nugget', chance: 0.4 }], 250],
-        ['create:scoria', [{ output: 'gtceu:stone_dust', chance: 1 },                   { output: 'create:crushed_raw_silver', chance: 0.6 }, { output: 'alltheores:tin_nugget', chance: 0.4 }], 250],
+        ['create:scoria', [{ output: 'gtceu:stone_dust', chance: 1 },                   { output: 'create:crushed_raw_silver', chance: 0.4 }, { output: 'alltheores:tin_nugget', chance: 0.6 }], 250],
 
         ['tconstruct:earth_slime_crystal_block', [{ output: 'gtceu:malachite_dust',          chance: 0.4 }, { output: 'create:crushed_raw_nickel',    chance: 0.3 }, { output: 'alltheores:zinc_nugget',     chance: 0.3 }], 250],
         ['tconstruct:sky_slime_crystal_block',   [{ output: 'gtceu:lapis_dust',              chance: 0.2 }, { output: 'create:crushed_raw_silver',   chance: 0.4 }, { output: 'alltheores:aluminum_nugget', chance: 0.4 }], 250],

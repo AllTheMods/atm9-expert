@@ -8,7 +8,11 @@ StartupEvents.registry('item', event => {
     event.create('gtceu:cosmic_knowledge_fragment')
         .displayName('Cosmic Knowledge Fragment')
         .tooltip('Fragment of cosmic knowledge.');
-        
+
+    event.create('gtceu:cosmic_knowledge_compendium')
+        .displayName('Cosmic Knowledge Compendium')
+        .tooltip('A compendium of cosmic knowledge.');
+
     event.create('gtceu:forty_two')
         .displayName('42')
         .tooltip('Meaning of Life');
