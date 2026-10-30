@@ -744,6 +744,24 @@ ServerEvents.recipes(allthemods => {
             .duration(brewDuration)
             .EUt(brewVoltage);
     });
+
+    const livingrockDuration = 1200
+    const livingrockEut = LV
+
+    allthemods.recipes.gtceu.pure_daisy('livingrock')
+        .itemInputs('8x #forge:stone')
+        .itemOutputs('8x botania:livingrock')
+        .duration(livingrockDuration)
+        .EUt(livingrockEut)
+
+    const livingwoodDuration = 1200
+    const livingwoodEut = LV
+
+    allthemods.recipes.gtceu.pure_daisy('livingwood_log')
+        .itemInputs('8x #minecraft:logs')
+        .itemOutputs('8x botania:livingwood_log')
+        .duration(livingwoodDuration)
+        .EUt(livingwoodEut)
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

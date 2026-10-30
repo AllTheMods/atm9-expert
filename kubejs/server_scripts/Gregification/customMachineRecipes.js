@@ -145,6 +145,7 @@ ServerEvents.recipes(allthemods => {
         { machine: '_gem_polisher', startTier: 6, endTier: 8 },
         { machine: '_gem_crusher', startTier: 3, endTier: 8 },
         { machine: '_botanical_brewery', startTier: 3, endTier: 8 },
+        { machine: '_pure_daisy', startTier: 1, endTier: 8 },
     ]
 
     machineTiers.forEach(tData => {
@@ -159,6 +160,19 @@ ServerEvents.recipes(allthemods => {
         let motor = `gtceu:${tData.tier}_electric_motor`;
 
         customMachines.forEach(mData => {
+            if (mData.machine == '_pure_daisy' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                allthemods.shaped(`gtceu:${tData.tier}_pure_daisy`, [
+                    'TAT',
+                    'THT',
+                    'TCT'
+                ], {
+                    H: hull,
+                    A: 'botania:pure_daisy',                    
+                    C: circuit,
+                    T: plate
+                }).id(`gregification:${tData.tier}_pure_daisy`);
+            }
+
             if (mData.machine == '_botanical_brewery' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
                 allthemods.shaped(`gtceu:${tData.tier}_botanical_brewery`, [
                     'TAT',

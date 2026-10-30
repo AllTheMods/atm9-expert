@@ -5,6 +5,14 @@ StartupEvents.registry('item', event => {
 
     event.create('gtceu:raw_model_neuron').displayName('Raw Model Neuron')
 
+    event.create('gtceu:cosmic_knowledge_fragment')
+        .displayName('Cosmic Knowledge Fragment')
+        .tooltip('Fragment of cosmic knowledge.');
+        
+    event.create('gtceu:forty_two')
+        .displayName('42')
+        .tooltip('Meaning of Life');
+
     event.create('gtceu:technomancy_orb')
         .displayName('Technomancy Orb')
         .tooltip('Orb of Technomantic Ascendancy')

@@ -23,6 +23,15 @@ StartupEvents.registry('block', allthemods => {
 });
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
+
+    allthemods.create('pure_daisy')
+        .category('pure_daisy')
+        .setEUIO('in')
+        .setMaxIOSize(1, 1, 0, 0)
+        .setSound(GTSoundEntries.COOLING)
+        .setSlotOverlay(false, false, GuiTextures.FURNACE_OVERLAY_1)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT)
+
     allthemods.create('botanical_brewery')
         .category('botanical_brewery')
         .setMaxIOSize(7, 1, 1, 0)
@@ -32,7 +41,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     
     allthemods.create('orechid_grove')
         .category('orechid_grove')
-        .setMaxIOSize(3, 15, 0, 0)
+        .setMaxIOSize(9, 15, 0, 0)
         .setSound(GTSoundEntries.COOLING)
         .setSlotOverlay(false, false, GuiTextures.FURNACE_OVERLAY_1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT);
@@ -122,6 +131,16 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
  
 
 GTCEuStartupEvents.registry("gtceu:machine", allthemods => {
+
+     allthemods.create('pure_daisy', 'simple')
+        .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV)
+        .definition((tier, builder) =>
+            builder
+                .rotationState(RotationState.NON_Y_AXIS)
+                .recipeType('pure_daisy')
+                .workableTieredHullModel('gtceu:block/machines/extractor')
+        )
+
      allthemods.create('elven_forge', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('elven_forge')
@@ -155,7 +174,7 @@ GTCEuStartupEvents.registry("gtceu:machine", allthemods => {
 
     allthemods.create('botanical_factory', 'multiblock')              
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes('petal_apothecary', 'runic_altar', 'mana_infuser', 'mana_pool', 'alfheim_trader', 'botanical_brewery')
+        .recipeTypes('petal_apothecary', 'runic_altar', 'mana_infuser', 'mana_pool', 'alfheim_trader', 'botanical_brewery', 'pure_daisy')
         .appearanceBlock(() => Block.getBlock('gtceu:overgrown_plating_casing'))
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
         .pattern(definition => FactoryBlockPattern.start()

@@ -328,8 +328,8 @@
     "block.gtceu.large_mana_burner": "Large Mana Burner",
     "gtceu.large_mana_converter": "Large Mana Converter",
     "block.gtceu.large_mana_converter": "Large Mana Converter",
-    "gtceu.imbument_chamber": "Imbuent Chamber",
-    "block.gtceu.imbument_chamber": "Imbuent Chamber",
+    "gtceu.imbument_chamber": "Imbument Chamber",
+    "block.gtceu.imbument_chamber": "Imbument Chamber",
     "gtceu.mana_infuser": "Mana Infuser",
     "block.gtceu.mana_infuser": "Mana Infuser",
     "gtceu.mana_pool": "Mana Pool",
@@ -1067,5 +1067,9 @@
     "block.gtceu.will_feeder": "Will Feeder",
     "gtceu.will_feeder": "Will Feeder",
     "block.gtceu.source_feeder": "Source Feeder",
-    "gtceu.source_feeder": "Source Feeder"
+    "gtceu.source_feeder": "Source Feeder",
+    "block.gtceu.pure_daisy": "Pure Daisy",
+    "gtceu.pure_daisy": "Pure Daisy",
+    "item.gtceu.cosmic_knowledge_fragment": "Cosmic Knowledge Fragment",
+    "item.gtceu.forty_two": "42"
 }

@@ -150,8 +150,35 @@ ServerEvents.recipes(allthemods => {
         .circuit(1)
         .itemOutputs('gtceu:cosmic_research')
         .duration(S.COMPILE_DURATION)
-        .EUt(MV);
+        .EUt(OpV);
 
+    allthemods.recipes.gtceu.research_compiler('gregification:space/compile/cosmic_research')
+        .itemInputs(S.COSMIC_FRAGMENTS_NEEDED + 'x gtceu:cosmic_research_fragment')
+        .circuit(1)
+        .itemOutputs('gtceu:cosmic_research')
+        .duration(S.COMPILE_DURATION)
+        .EUt(OpV);
+
+    const fragmentDuration = 4800
+    const fragmentEut = UIV;
+
+    allthemods.recipes.gtceu.research_compiler('gregification:space/knowledge_fragment')
+        .itemInputs('1024x gtceu:cosmic_research')
+        .circuit(4)
+        .itemOutputs('gtceu:cosmic_knowledge_fragment')
+        .duration(fragmentDuration)
+        .EUt(fragmentEut)
+
+    const knowledgeDuration = 2400
+    const knowledgeEut = UXV;
+
+    allthemods.recipes.gtceu.research_compiler('gregification:space/knowledge_from_fragments')
+        .itemInputs('10x gtceu:cosmic_knowledge_fragment')
+        .circuit(5)
+        .itemOutputs('gtceu:cosmic_knowledge')
+        .duration(knowledgeDuration)
+        .EUt(knowledgeEut)
+        
     const reclaim = (id, input) => {
         const r = allthemods.recipes.gtceu.scrap_reclaimer('gregification:space/reclaim/' + id)
             .itemInputs(S.SCRAP_BATCH + 'x ' + input)
