@@ -1268,13 +1268,13 @@
     "curseForgeHash": 1691185042,
     "modrinthHash": "17e332d7192db5b7d54bccd8f7a9cadd8ceaa478"
   },
-  "gtextras-0.19.4.jar": {
-    "jarName": "gtextras-0.19.4.jar",
+  "gtextras-0.19.8.jar": {
+    "jarName": "gtextras-0.19.8.jar",
     "modId": "gtextras",
     "name": "GT Extras",
-    "version": "0.19.4",
-    "curseForgeHash": 2590668846,
-    "modrinthHash": "98bf8d372bf6992eed84c4a5ecd06047feb2e1d2"
+    "version": "0.19.8",
+    "curseForgeHash": 1006122055,
+    "modrinthHash": "d75de714d7c1aa8907aadd1dd3c84d729da5b9f8"
   },
   "gtpipezcompat-1.20.1-1.0.0.jar": {
     "jarName": "gtpipezcompat-1.20.1-1.0.0.jar",
@@ -1553,14 +1553,6 @@
     "curseForgeHash": 2481270670,
     "modrinthHash": "4a2c5e7d00d41502b57dd6f06f0d6bb794307088"
   },
-  "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar": {
-    "jarName": "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
-    "modId": "konkrete",
-    "name": "Konkrete",
-    "version": "1.8.0",
-    "curseForgeHash": 3537653842,
-    "modrinthHash": "2019d821bed9071daabed43979433a5473ceee49"
-  },
   "kotlinforforge-4.11.0-all.jar": {
     "jarName": "kotlinforforge-4.11.0-all.jar",
     "curseForgeHash": 598972634,
@@ -1613,22 +1605,6 @@
     "version": "1.20.1-5.0.14",
     "curseForgeHash": 1104941069,
     "modrinthHash": "d75610b0c34626cea8b1155a47d28333cc1f58a2"
-  },
-  "lionfishapi-3.0.jar": {
-    "jarName": "lionfishapi-3.0.jar",
-    "modId": "lionfishapi",
-    "name": "LionfishAPI",
-    "version": "3.0",
-    "curseForgeHash": 970646236,
-    "modrinthHash": "79d0404f87fa066480b18c844c1e0b1c5f5475f9"
-  },
-  "lithostitched-forge-1.20.1-1.4.11.jar": {
-    "jarName": "lithostitched-forge-1.20.1-1.4.11.jar",
-    "modId": "lithostitched",
-    "name": "Lithostitched",
-    "version": "1.4.11",
-    "curseForgeHash": 940772176,
-    "modrinthHash": "d1a755de84ee5d8910ff1e65e815473056e93ece"
   },
   "logprot-1.20.1-3.5.jar": {
     "jarName": "logprot-1.20.1-3.5.jar",
@@ -2546,14 +2522,6 @@
     "version": "3.12.1.231",
     "curseForgeHash": 3705667497,
     "modrinthHash": "8a9a09e625ee106cf8befa953c372af4e955116c"
-  },
-  "TerraBlender-forge-1.20.1-3.0.1.10.jar": {
-    "jarName": "TerraBlender-forge-1.20.1-3.0.1.10.jar",
-    "modId": "terrablender",
-    "name": "TerraBlender",
-    "version": "3.0.1.10",
-    "curseForgeHash": 921691151,
-    "modrinthHash": "3bd99fb59e8b06b04e78b5153790c1e08b2be5dc"
   },
   "Terralith_1.20.x_v2.5.4.jar": {
     "jarName": "Terralith_1.20.x_v2.5.4.jar",
