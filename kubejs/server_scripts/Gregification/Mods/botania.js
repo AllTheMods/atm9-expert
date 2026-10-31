@@ -407,7 +407,8 @@ ServerEvents.recipes(allthemods => {
     });
 
 
-
+    /*
+    moved to pure daisy
     allthemods.recipes.gtceu.petal_apothecary('gregification:livingrock')
         .itemInputs('8x #forge:stone')
         .itemOutputs('8x botania:livingrock')
@@ -417,10 +418,11 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.petal_apothecary('gregification:livingwood')
         .itemInputs('8x #minecraft:logs')
-        .itemOutputs('8x botania:livingwood')
+        .itemOutputs('8x botania:livingwood_log')
         .inputFluids('#forge:mana 1000')
         .duration(infusionDuration)
         .EUt(petalVoltage);
+        */
 
     allthemods.recipes.gtceu.petal_apothecary('gregification:orechid')
         .itemInputs(

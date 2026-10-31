@@ -117,6 +117,7 @@ ServerEvents.recipes(allthemods => {
 
     
     const moreRemovals = [
+        'create:crafting/kinetics/mechanical_drill',
         'productivetrees:sawmill', 'ae2:network/crafting/patterns_blank',
         'create:mixing/andesite_alloy', 'create:mixing/andesite_alloy_from_zinc',
         'tconstruct:compat/create/andesite_alloy_iron', 'tconstruct:compat/create/andesite_alloy_zinc',

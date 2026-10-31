@@ -121,6 +121,20 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.shapeless('gtceu:andesite_alloy_dust', ['4x #forge:dusts/andesite', '4x #forge:dusts/zinc']).id('gregification:andesite_alloy_dust');
 
+    allthemods.shaped('create:mechanical_drill',
+        [
+            'PCP',
+            'PHP',
+            'PDP'
+        ],
+        {
+            H: 'gtceu:mv_machine_hull',
+            P: '#forge:plates/aluminium',
+            C: 'create:andesite_casing',
+            D: 'gtceu:gtceu:vanadium_steel_drill_head'
+        }
+    ).id('gregification:create/mechanical_drill');
+
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
