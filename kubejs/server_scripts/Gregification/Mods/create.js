@@ -97,6 +97,14 @@ ServerEvents.recipes(allthemods => {
         crushDust(metal.ingot, metal.dust);
     });
 
+  
+    
+    //without this recipe, you have to use steam age gt to get to andesite alloy, not sure if I should add it or not
+    /*allthemods.shapeless('gtceu:andesite_dust', ['#forge:tools/mortars', 'minecraft:andesite'])
+        .damageIngredient('#forge:tools/mortars')
+        .id('gregification:andesite_dust_from_mortar')*/
+
+
     allthemods.recipes.gtceu.assembler('gregification:crafting/steam_engine')
         .itemInputs('gtceu:mv_machine_hull', 'gtceu:mv_electric_pump', '2x #gtceu:circuits/mv', 'create:copper_casing', '4x forbidden_arcanus:spawner_scrap')
         .inputFluids('#forge:soldering_alloy 288')
