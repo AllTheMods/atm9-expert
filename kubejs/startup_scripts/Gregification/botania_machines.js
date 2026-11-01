@@ -40,8 +40,9 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
         .setSlotOverlay(false, true, GuiTextures.FLUID_TANK_OVERLAY)
     
     allthemods.create('orechid_grove')
+        .setEUIO('in')
         .category('orechid_grove')
-        .setMaxIOSize(9, 15, 0, 0)
+        .setMaxIOSize(9, 15, 1, 0)
         .setSound(GTSoundEntries.COOLING)
         .setSlotOverlay(false, false, GuiTextures.FURNACE_OVERLAY_1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT);
