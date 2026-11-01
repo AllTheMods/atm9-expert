@@ -33,6 +33,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT)
 
     allthemods.create('botanical_brewery')
+        .setEUIO('in')
         .category('botanical_brewery')
         .setMaxIOSize(7, 1, 1, 0)
         .setSound(GTSoundEntries.CHEMICAL)
@@ -49,6 +50,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
 
     allthemods.create ('elven_forge')
         .category('elven_forge')
+        .setEUIO('in')
         .setMaxIOSize(6, 3, 1, 0)
         .setSound(GTSoundEntries.FURNACE)
         .setSlotOverlay(false, false, GuiTextures.FURNACE_OVERLAY_1)
