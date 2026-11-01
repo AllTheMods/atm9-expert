@@ -131,7 +131,7 @@ ServerEvents.recipes(allthemods => {
             H: 'gtceu:mv_machine_hull',
             P: '#forge:plates/aluminium',
             C: 'create:andesite_casing',
-            D: 'gtceu:gtceu:vanadium_steel_drill_head'
+            D: 'gtceu:vanadium_steel_drill_head'
         }
     ).id('gregification:create/mechanical_drill');
 
