@@ -48,6 +48,16 @@ ServerEvents.recipes(allthemods => {
 
     //compressed iron block
     addPC(
+        '#forge:hot_ingots/umbral_steel',
+        'gtceu:umbral_steel_ingot',
+        null,
+        null,
+        0,
+        1
+    );
+
+    //compressed iron block
+    addPC(
         '4x #forge:storage_blocks/iron',
         '4x pneumaticcraft:compressed_iron_block',
         null,
@@ -58,11 +68,11 @@ ServerEvents.recipes(allthemods => {
 
     //compressed iron ingot
     addPC(
-        '32x #forge:ingots/iron',
-        '32x pneumaticcraft:ingot_iron_compressed',
+        '36x #forge:ingots/iron',
+        '36x pneumaticcraft:ingot_iron_compressed',
         null,
         null,        
-        0,        
+        0,
         1
     );
 
@@ -72,7 +82,7 @@ ServerEvents.recipes(allthemods => {
         '4x gtceu:wrought_iron_block',
         null,
         null,        
-        2,        
+        2,
         2
     );
 
