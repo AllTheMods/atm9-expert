@@ -1071,5 +1071,16 @@
     "block.gtceu.pure_daisy": "Pure Daisy",
     "gtceu.pure_daisy": "Pure Daisy",
     "item.gtceu.cosmic_knowledge_fragment": "Cosmic Knowledge Fragment",
-    "item.gtceu.forty_two": "42"
+    "item.gtceu.forty_two": "42",
+    "gtceu.digit_generator": "Digit Generator",
+    "block.gtceu.digital_generator": "Digital Generator",
+    "gtceu.alu": "ALU",
+    "block.gtceu.alu": "ALU",
+    "gtceu.numeric_compressor": "Numeric Compressor",
+    "block.gtceu.numeric_compressor": "Numeric Compressor",
+    "gtceu.deep_thought": "Deep Thought",
+    "block.gtceu.deep_thought": "Deep Thought",
+    "block.gtceu.segment_casing": "Segment Casing",
+    "block.gtceu.panel_casing": "Panel Casing",
+    "block.gtceu.display_casing": "Display Casing"
 }

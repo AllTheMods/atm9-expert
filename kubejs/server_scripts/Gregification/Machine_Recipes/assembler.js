@@ -44,7 +44,7 @@ ServerEvents.recipes(allthemods => {
             '2x #gtceu:circuits/iv',
             '2x gtceu:iv_electric_piston',
             'gtceu:iv_machine_hull',
-            '#forge:frames/terrasteel'            
+            '#forge:frames/terrasteel'
         ],
         [
             'gtceu:soldering_alloy 576',
@@ -1031,28 +1031,28 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.assembler('gregification:coil/draconium')
         .itemInputs('8x #gtceu:wires/double/draconium', '8x #forge:foils/gaia')
-        .inputFluids('#forge:darmstadtium 144')
+        .inputFluids('#forge:nobelium 288')
         .itemOutputs('kubejs:draconium_coil_block')
         .duration(600)
         .EUt(UHV);
 
     allthemods.recipes.gtceu.assembler('gregification:coil/draconium_awakened')
         .itemInputs('8x #gtceu:wires/double/draconium_awakened', '8x #forge:foils/insanite')
-        .inputFluids('#forge:neutronium 144')        
+        .inputFluids('#forge:lawrencium 288')
         .itemOutputs('kubejs:draconium_awakened_coil_block')
         .duration(600)
         .EUt(UEV);
 
     allthemods.recipes.gtceu.assembler('gregification:coil/etrium')
         .itemInputs('8x #gtceu:wires/double/etrium', '8x #forge:foils/organic_polymer')
-        .inputFluids('#forge:dark_matter 144')
+        .inputFluids('#forge:mendelevium 288')
         .itemOutputs('kubejs:etrium_coil_block')
         .duration(600)
         .EUt(UIV);
 
     allthemods.recipes.gtceu.assembler('gregification:coil/infinity')
         .itemInputs('8x #gtceu:wires/double/infinity', '8x #forge:foils/chaos_plastic')
-        .inputFluids('#forge:red_matter 144')
+        .inputFluids('#forge:roentgenium 288')
         .itemOutputs('kubejs:infinity_coil_block')
         .duration(600)
         .EUt(UXV);
