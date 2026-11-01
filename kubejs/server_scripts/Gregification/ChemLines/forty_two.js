@@ -37,7 +37,7 @@ ServerEvents.recipes(allthemods => {
             '4x gtceu:advanced_computer_casing',
             '4x gtceu:computer_heat_vent',
             '8x #forge:plates/neutronium',
-            '8x #forge:plates/moscovium'
+            '8x #forge:plates/moscovium_roentgenium_alloy'
         )
         .inputFluids('#forge:tennessine 2304')
         .itemOutputs('gtceu:digital_generator')
@@ -52,8 +52,8 @@ ServerEvents.recipes(allthemods => {
             '8x gtceu:computer_casing',
             '4x gtceu:computer_heat_vent',
             '8x #forge:plates/neutronium',
-            '8x #forge:plates/moscovium',
-            '8x #forge:plates/livermorium'
+            '8x #forge:plates/moscovium_roentgenium_alloy',
+            '8x #forge:plates/livermorium_astatine_alloy'
         )
         .inputFluids('#forge:tennessine 2304')
         .itemOutputs('gtceu:alu')
@@ -68,7 +68,7 @@ ServerEvents.recipes(allthemods => {
             '4x gtceu:advanced_computer_casing',
             '4x gtceu:computer_heat_vent',
             '16x #forge:plates/neutronium',
-            '16x #forge:plates/moscovium',
+            '16x #forge:plates/moscovium_roentgenium_alloy',
             '16x #forge:plates/mendelevium'
         )
         .inputFluids('#forge:tennessine 2304')

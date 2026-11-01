@@ -1,6 +1,6 @@
 {
   "ldlib": {
-    "connection": "gtceu:block/coils/draconium_awakened_ctm"
+    "connection": "kubejs:block/coils/draconium_awakened_ctm"
   },
   "animation": {
     "frametime": 2,

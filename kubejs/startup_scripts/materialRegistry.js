@@ -1804,7 +1804,7 @@ const materials = [
         .ignoreAllOrePrefixes(),
 
     new MaterialDef('glycerol').modify().gem().flags(GTMaterialFlags.CRYSTALLIZABLE)
-        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true }),
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'pneumaticcraft:glycerol' }),
 
     new MaterialDef('cadmium').modify().ingot().flags(GTMaterialFlags.GENERATE_ROD),
 

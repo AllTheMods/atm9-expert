@@ -1,6 +1,6 @@
 {
   "ldlib": {
-    "connection": "gtceu:block/coils/draconium_awakened_bloom_ctm",
+    "connection": "kubejs:block/coils/draconium_awakened_bloom_ctm",
     "emissive": true
   },
   "shimmer": {

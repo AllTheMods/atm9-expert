@@ -1,7 +1,6 @@
 {
-  "loader": "ldlib:renderer",
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "gtceu:block/coils/draconium_awakened_bloom"
+    "all": "kubejs:block/coils/draconium_awakened_bloom"
   }
 }

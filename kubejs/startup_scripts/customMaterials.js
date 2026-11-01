@@ -36,7 +36,7 @@ StartupEvents.registry('block', allthemods => {
 
     ]
 
-    allthemods.create(`draconium_coil_block`, "gtceu:coil")
+    allthemods.create(`gtceu:draconium_coil_block`, "gtceu:coil")
         //.textureAll('kubejs:block/coils/draconium_coil_block')
         .temperature(11200)
         .level(20)
@@ -46,7 +46,7 @@ StartupEvents.registry('block', allthemods => {
         .hardness(5)
         .soundType("metal");
 
-    allthemods.create(`draconium_awakened_coil_block`, "gtceu:coil")
+    allthemods.create(`gtceu:draconium_awakened_coil_block`, "gtceu:coil")
         //.textureAll('kubejs:block/coils/draconium_awakened_coil_block')
         .temperature(12800)
         .level(24)
@@ -56,7 +56,7 @@ StartupEvents.registry('block', allthemods => {
         .hardness(5)
         .soundType("metal");
 
-    allthemods.create(`etrium_coil_block`, "gtceu:coil")
+    allthemods.create(`gtceu:etrium_coil_block`, "gtceu:coil")
         //.textureAll('kubejs:block/coils/etrium_coil_block')
         .temperature(13500)
         .level(28)
@@ -66,7 +66,7 @@ StartupEvents.registry('block', allthemods => {
         .hardness(5)
         .soundType("metal");
 
-    allthemods.create(`infinity_coil_block`, "gtceu:coil")
+    allthemods.create(`gtceu:infinity_coil_block`, "gtceu:coil")
         //.textureAll('kubejs:block/coils/infinity_coil_block')
         .temperature(15000)
         .level(32)

@@ -1,0 +1,9 @@
+{
+  "ldlib": {
+    "connection": "kubejs:block/coils/draconium_ctm"
+  },
+  "animation": {
+    "frametime": 2,
+    "interpolate": false
+  }
+}
