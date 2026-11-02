@@ -142,8 +142,8 @@
     "block.gtceu.sanguine_refinery": "Sanguine Refinery",
     "gtceu.printer": "3D Printer",
     "block.gtceu.printer": "3D Printer",
-    "gtceu.black_hole": "Black Hole Compressor",
-    "block.gtceu.black_hole": "Black Hole Compressor",
+    "gtceu.black_hole_compressor": "Black Hole Compressor",
+    "block.gtceu.black_hole_compressor": "Black Hole Compressor",
     "gtceu.atmospheric_collector": "Atmospheric Collector",
     "block.gtceu.atmospheric_collector": "Atmospheric Collector",
     "gtceu.mega_chemical_reactor": "Mega Chemical Reactor",
@@ -1082,5 +1082,14 @@
     "block.gtceu.deep_thought": "Deep Thought",
     "block.gtceu.segment_casing": "Segment Casing",
     "block.gtceu.panel_casing": "Panel Casing",
-    "block.gtceu.display_casing": "Display Casing"
+    "block.gtceu.display_casing": "Display Casing",
+    "block.gtceu.black_hole_casing": "Black Hole Casing",
+    "block.gtceu.accretion_disk_casing": "Accretion Disk Casing",
+    "block.gtceu.white_hole_casing": "White Hole Casing",
+    "block.gtceu.white_hole_jet_up": "Light Spire (Up)",
+    "block.gtceu.white_hole_jet_down": "Light Spire (Down)",
+    "block.gtceu.black_hole": "Black Hole",
+    "block.gtceu.white_hole": "White Hole",
+    "gtceu.black_hole": "Black Hole",
+    "gtceu.white_hole": "White Hole"
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtceu:block/casings/white_hole_jet_down/white_hole_jet_down"
+  }
+}

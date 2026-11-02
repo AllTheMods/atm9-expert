@@ -19,7 +19,7 @@ ServerEvents.recipes(allthemods => {
         id = `gregification:black_hole/${outputName}`;
     }
 
-    let recipe = allthemods.recipes.gtceu.black_hole(id)
+    let recipe = allthemods.recipes.gtceu.black_hole_compressor(id)
         .itemInputs(inputs)
         .duration(duration)
         .EUt(eu);
@@ -69,7 +69,7 @@ ServerEvents.recipes(allthemods => {
     };
     
     addAssemblyLine(
-        'gtceu:black_hole',
+        'gtceu:black_hole_compressor',
         [
             'gtceu:luv_machine_hull',
             '4x gtceu:luv_electric_piston',

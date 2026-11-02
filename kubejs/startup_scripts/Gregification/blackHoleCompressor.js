@@ -2,8 +2,8 @@
 // As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
-    allthemods.create('black_hole')
-        .category('black_hole')
+    allthemods.create('black_hole_compressor')
+        .category('black_hole_compressor')
         .setEUIO('in') // Machine takes power IN
         .setMaxIOSize(32, 4, 4, 4) // Item In, Item Out, Fluid In, Fluid Out
         .setProgressBar(GuiTextures.COMPRESSOR_OVERLAY, FillDirection.LEFT_TO_RIGHT)
@@ -11,9 +11,9 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
 })
 
 GTCEuStartupEvents.registry('gtceu:machine', allthemods => {    
-    allthemods.create('black_hole', 'multiblock')        
+    allthemods.create('black_hole_compressor', 'multiblock')        
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeType('black_hole')         
+        .recipeType('black_hole_compressor')         
         .appearanceBlock(GTBlocks.CASING_PTFE_INERT)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('    CCCCC    ', '    GGCGG    ', '    GGCGG    ', '   CCCCCCC   ', '   GGGCGGG   ', '      C      ', '             ', '             ', '             ') //6
