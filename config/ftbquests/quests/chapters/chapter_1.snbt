@@ -1,0 +1,27 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chapter_1"
+	group: "2084F3F6FB861C5B"
+	id: "41D9EEBC842D8F7A"
+	order_index: 0
+	quest_links: [ ]
+	quests: [{
+		description: [
+			"Due to the nature of a Expert pack, quests will need to be mostly rewritten for this pack."
+			""
+			"The pack is currently in Beta, we will work on quests as we continue development."
+			""
+			"Report any issues you find (or if you want to help with the pack) head to:"
+			"https://github.com/AllTheMods/atm9-expert"
+		]
+		id: "4076A7F324F66F32"
+		tasks: [{
+			id: "3B5CD511AB0EAF9A"
+			type: "checkmark"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "Chapter 1"
+}
