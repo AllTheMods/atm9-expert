@@ -150,6 +150,20 @@ ServerEvents.recipes(allthemods => {
         .outputFluids('minecraft:water 12000')
         .duration(leachDuration)
         .EUt(leachEUt);
+
+    allthemods.recipes.gtceu.chemical_reactor('gregification:silicate_leach/calcium_fluoride_processing')
+        .itemInputs('#forge:dusts/calcium_fluoride')
+        .inputFluids('#forge:sulfuric_acid 1000')
+        .itemOutputs('gtceu:calcium_sulfate_dust')
+        .outputFluids('gtceu:hydrofluoric_acid 2000')
+        .duration(leachDuration)
+        .EUt(leachEUt);
+
+    allthemods.recipes.gtceu.chemical_reactor('gregification:silicate_leach/calcium_hydroxide_synthesis')
+        .itemInputs(['#forge:dusts/calcium_sulfate', '2x #forge:dusts/sodium_hydroxide'])
+        .itemOutputs(['gtceu:calcium_hydroxide_dust', 'gtceu:sodium_sulfate_dust'])
+        .duration(leachDuration)
+        .EUt(leachEUt);
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
