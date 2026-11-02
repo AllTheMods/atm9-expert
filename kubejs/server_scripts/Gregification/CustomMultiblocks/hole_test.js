@@ -8,7 +8,7 @@ ServerEvents.recipes(allthemods => {
 
     const releaseEBCDuration = feedEBCDuration / 2;
     const ebcEU = UV;
-    
+
 
     //test recipes
     allthemods.recipes.gtceu.black_hole('gregification:test/black_hole_feed_er')
@@ -16,7 +16,7 @@ ServerEvents.recipes(allthemods => {
         .output(GTX.BRIDGE, 'einstein_rosen item gtceu:bose_einstein_condensate 1')
         .circuit(1)
         .duration(feedEBCDuration);
-        
+
 
     allthemods.recipes.gtceu.black_hole('gregification:test/black_hole_tr')
         .itemInputs('1024x gtceu:bose_einstein_condensate')
@@ -34,7 +34,7 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.white_hole('gregification:test/white_hole_release_tr')
         .input(GTX.BRIDGE, 'einstein_rosen item gtceu:bose_einstein_condensate 1024')
-        .itemOutputs('gtceu:tesseract')        
+        .itemOutputs('gtceu:tesseract')
         .circuit(2)
         .duration(releaseEBCDuration)
         .EUt(ebcEU);
@@ -165,11 +165,7 @@ ServerEvents.recipes(allthemods => {
         .duration(whiteHoleDuration)
         .EUt(whiteHoleEut);
 
-    allthemods.shapeless('gregification:release_white_hole_flip1')
-        .itemInputs('gtceu:white_hole_jet_up')
-        .itemOutputs('gtceu:white_hole_jet_down');
-    
-    allthemods.shapeless('gregification:release_white_hole_flip2')
-        .itemInputs('gtceu:white_hole_jet_down')
-        .itemOutputs('gtceu:white_hole_jet_up');
+
+    allthemods.shapeless('gtceu:white_hole_jet_down', ['gtceu:white_hole_jet_up']).id('gregification:release_white_hole_flip1')
+    allthemods.shapeless('gtceu:white_hole_jet_up', ['gtceu:white_hole_jet_down']).id('gregification:release_white_hole_flip2')
 })
