@@ -157,13 +157,13 @@
     "curseForgeHash": 2672921062,
     "modrinthHash": "acb6b854e441014ad864c10ff2f42444e8754ebb"
   },
-  "allthetweaks-1.20.1-47.2.20-2.4.2-all.jar": {
-    "jarName": "allthetweaks-1.20.1-47.2.20-2.4.2-all.jar",
+  "allthetweaks-1.20.1-47.2.20-2.4.4-all.jar": {
+    "jarName": "allthetweaks-1.20.1-47.2.20-2.4.4-all.jar",
     "modId": "allthetweaks",
     "name": "AllTheTweaks",
-    "version": "2.4.2",
-    "curseForgeHash": 3947342882,
-    "modrinthHash": "bacdfc719137bab2724aac04e002ce64dd0e4299"
+    "version": "2.4.4",
+    "curseForgeHash": 2219641961,
+    "modrinthHash": "27d57876351728a62515309cdbbd7be6e8960113"
   },
   "allthewizardgear-1.20.1-1.1.12.jar": {
     "jarName": "allthewizardgear-1.20.1-1.1.12.jar",
@@ -916,13 +916,13 @@
     "curseForgeHash": 1104815069,
     "modrinthHash": "bdebde180017d3736d1cc71b2a89c290e144d392"
   },
-  "entityculling-forge-1.8.2-mc1.20.1.jar": {
-    "jarName": "entityculling-forge-1.8.2-mc1.20.1.jar",
+  "entityculling-forge-1.11.3-mc1.20.1.jar": {
+    "jarName": "entityculling-forge-1.11.3-mc1.20.1.jar",
     "modId": "entityculling",
     "name": "EntityCulling",
-    "version": "1.8.2",
-    "curseForgeHash": 2988713852,
-    "modrinthHash": "0a465a4dbbc4b21b3465bb15796635b5c1024cf4"
+    "version": "1.11.3",
+    "curseForgeHash": 216250924,
+    "modrinthHash": "d3c513e88ef9f5cdd7e27d17d923d4dca69c6d55"
   },
   "EpheroLib-1.20.1-FORGE-1.2.0.jar": {
     "jarName": "EpheroLib-1.20.1-FORGE-1.2.0.jar",
@@ -940,13 +940,13 @@
     "curseForgeHash": 1271676245,
     "modrinthHash": "66c44811b2972871aa6855b89c45e05d509efed9"
   },
-  "EvilCraft-1.20.1-1.3.4.jar": {
-    "jarName": "EvilCraft-1.20.1-1.3.4.jar",
+  "EvilCraft-1.20.1-1.3.5.jar": {
+    "jarName": "EvilCraft-1.20.1-1.3.5.jar",
     "modId": "evilcraft",
     "name": "EvilCraft",
-    "version": "1.3.4",
-    "curseForgeHash": 1332029371,
-    "modrinthHash": "1317e25105aff92a5f07466f30bedea1508a5969"
+    "version": "1.3.5",
+    "curseForgeHash": 4015277210,
+    "modrinthHash": "64b4ad34896428912952aa9f70f586bafcff3240"
   },
   "Exchangers-1.20.1-3.5.1.jar": {
     "jarName": "Exchangers-1.20.1-3.5.1.jar",
@@ -996,13 +996,13 @@
     "curseForgeHash": 3410925093,
     "modrinthHash": "c9443039b15b8c1e1bcfe32ccf5fca78234d209b"
   },
-  "farsight-1.20.1-5.7.jar": {
-    "jarName": "farsight-1.20.1-5.7.jar",
+  "farsight-1.20.1-5.8.jar": {
+    "jarName": "farsight-1.20.1-5.8.jar",
     "modId": "farsight_view",
     "name": "Farsight mod",
-    "version": "1.20.1-5.7",
-    "curseForgeHash": 1139364126,
-    "modrinthHash": "72622e8619c5531fe0d78ec026fe83c6c035a7c7"
+    "version": "1.20.1-5.8",
+    "curseForgeHash": 658945144,
+    "modrinthHash": "25e610f2e2758e3364a3bd43e148f17cc0c85d1b"
   },
   "FastFurnace-1.20.1-8.0.2.jar": {
     "jarName": "FastFurnace-1.20.1-8.0.2.jar",
@@ -1268,13 +1268,13 @@
     "curseForgeHash": 1691185042,
     "modrinthHash": "17e332d7192db5b7d54bccd8f7a9cadd8ceaa478"
   },
-  "gtextras-0.19.8.jar": {
-    "jarName": "gtextras-0.19.8.jar",
+  "gtextras-0.21.0.jar": {
+    "jarName": "gtextras-0.21.0.jar",
     "modId": "gtextras",
     "name": "GT Extras",
-    "version": "0.19.8",
-    "curseForgeHash": 1006122055,
-    "modrinthHash": "d75de714d7c1aa8907aadd1dd3c84d729da5b9f8"
+    "version": "0.21.0",
+    "curseForgeHash": 2873563130,
+    "modrinthHash": "e4cf3116eae98096fb35e348fb7eccd707d71182"
   },
   "gtpipezcompat-1.20.1-1.0.0.jar": {
     "jarName": "gtpipezcompat-1.20.1-1.0.0.jar",
@@ -1340,13 +1340,13 @@
     "curseForgeHash": 2883883786,
     "modrinthHash": "6e7f110cb4ef9c22bf557cd54248546548d56c66"
   },
-  "ImmersiveConvergence-1.20.1-1.0.0-b90-release.jar": {
-    "jarName": "ImmersiveConvergence-1.20.1-1.0.0-b90-release.jar",
+  "ImmersiveConvergence-1.20.1-1.0.0-b96-release.jar": {
+    "jarName": "ImmersiveConvergence-1.20.1-1.0.0-b96-release.jar",
     "modId": "immersiveconvergence",
     "name": "Immersive Convergence",
-    "version": "1.0.0-b90-release",
-    "curseForgeHash": 4079869368,
-    "modrinthHash": "df0c7d0fb5941bdc021ab66f8547f14e773189b9"
+    "version": "1.0.0-b96-release",
+    "curseForgeHash": 1026227438,
+    "modrinthHash": "1a8a850ba46ee18ef78b9d73dba63ad3a922f85e"
   },
   "ImmersiveEngineering-1.20.1-10.2.0-183.jar": {
     "jarName": "ImmersiveEngineering-1.20.1-10.2.0-183.jar",
@@ -1355,6 +1355,14 @@
     "version": "1.20.1-10.2.0-183",
     "curseForgeHash": 1984535685,
     "modrinthHash": "b6e403e0e5be1802268be366ad1a7791f07fb793"
+  },
+  "immersivefixes-1.8.0.jar": {
+    "jarName": "immersivefixes-1.8.0.jar",
+    "modId": "immersivefixes",
+    "name": "ImmersiveFixes",
+    "version": "1.8.0",
+    "curseForgeHash": 2202588078,
+    "modrinthHash": "888945a73572b9d92d128256d6adaabcb6a03f6c"
   },
   "ImmersivePetroleum-1.20.1-4.3.1-36b.jar": {
     "jarName": "ImmersivePetroleum-1.20.1-4.3.1-36b.jar",
@@ -1372,21 +1380,21 @@
     "curseForgeHash": 2520059299,
     "modrinthHash": "2df8bbdbfa832ae1069e5173e58d3f2e0877d854"
   },
-  "IntegratedCrafting-1.20.1-1.4.9.jar": {
-    "jarName": "IntegratedCrafting-1.20.1-1.4.9.jar",
+  "IntegratedCrafting-1.20.1-1.4.10.jar": {
+    "jarName": "IntegratedCrafting-1.20.1-1.4.10.jar",
     "modId": "integratedcrafting",
     "name": "IntegratedCrafting",
-    "version": "1.4.9",
-    "curseForgeHash": 2505731487,
-    "modrinthHash": "6e26b6530f49b707f002c7e33d3f02e322e0212e"
+    "version": "1.4.10",
+    "curseForgeHash": 2891225373,
+    "modrinthHash": "8c9864885b2a9ec00a4090c18508173b0e17e459"
   },
-  "IntegratedDynamics-1.20.1-1.31.3.jar": {
-    "jarName": "IntegratedDynamics-1.20.1-1.31.3.jar",
+  "IntegratedDynamics-1.20.1-1.31.4.jar": {
+    "jarName": "IntegratedDynamics-1.20.1-1.31.4.jar",
     "modId": "integrateddynamics",
     "name": "IntegratedDynamics",
-    "version": "1.31.3",
-    "curseForgeHash": 1805794889,
-    "modrinthHash": "f566a718656656730ef6ce424de41d8ca13c709a"
+    "version": "1.31.4",
+    "curseForgeHash": 374919067,
+    "modrinthHash": "dc30d83c89aeb2d72b212af220f1ad9505d8d3ff"
   },
   "IntegratedTerminals-1.20.1-1.7.0.jar": {
     "jarName": "IntegratedTerminals-1.20.1-1.7.0.jar",
@@ -1553,10 +1561,10 @@
     "curseForgeHash": 2481270670,
     "modrinthHash": "4a2c5e7d00d41502b57dd6f06f0d6bb794307088"
   },
-  "kotlinforforge-4.11.0-all.jar": {
-    "jarName": "kotlinforforge-4.11.0-all.jar",
-    "curseForgeHash": 598972634,
-    "modrinthHash": "1fd8acfd75a2be2dc3cdcc7e816482b2e427d6e5"
+  "kotlinforforge-4.12.0-all.jar": {
+    "jarName": "kotlinforforge-4.12.0-all.jar",
+    "curseForgeHash": 2392977662,
+    "modrinthHash": "962fdb760409d6d71cbf079235f1ca94e3863a22"
   },
   "kubejs-forge-2001.6.5-build.26.jar": {
     "jarName": "kubejs-forge-2001.6.5-build.26.jar",
@@ -1646,13 +1654,13 @@
     "curseForgeHash": 3456636743,
     "modrinthHash": "0bc2e4ed0c4f8a6b4711c5315176e15b147084c2"
   },
-  "MCT-ImmersiveTechnology-1.20.1-2.1.0-b7435-release.jar": {
-    "jarName": "MCT-ImmersiveTechnology-1.20.1-2.1.0-b7435-release.jar",
+  "MCT-ImmersiveTechnology-1.20.1-2.1.0-b7445-release.jar": {
+    "jarName": "MCT-ImmersiveTechnology-1.20.1-2.1.0-b7445-release.jar",
     "modId": "immersivetechnology",
     "name": "Immersive Technology",
-    "version": "2.1.0-b7435-release",
-    "curseForgeHash": 726650978,
-    "modrinthHash": "27deebedf7055e8ed31860bdcb2173672d072e6a"
+    "version": "2.1.0-b7445-release",
+    "curseForgeHash": 1583103774,
+    "modrinthHash": "5f406c494a0d1b376d60d942a50ec38dd31f2337"
   },
   "Measurements-forge-1.20.1-2.0.1.jar": {
     "jarName": "Measurements-forge-1.20.1-2.0.1.jar",
@@ -2246,13 +2254,13 @@
     "curseForgeHash": 1182168522,
     "modrinthHash": "57e1474cb437337ec78e8cbfd6c10fb6cfc9c829"
   },
-  "rftoolsbuilder-1.20-6.0.10.jar": {
-    "jarName": "rftoolsbuilder-1.20-6.0.10.jar",
+  "rftoolsbuilder-1.20-6.0.11.jar": {
+    "jarName": "rftoolsbuilder-1.20-6.0.11.jar",
     "modId": "rftoolsbuilder",
     "name": "RFToolsBuilder",
-    "version": "1.20-6.0.10",
-    "curseForgeHash": 3826519549,
-    "modrinthHash": "01ef833c8fdde002024b2118132e499f6fd9477e"
+    "version": "1.20-6.0.11",
+    "curseForgeHash": 1394102068,
+    "modrinthHash": "e005940d8852356c976f697d3403059b1674b335"
   },
   "rftoolscontrol-1.20-7.0.4.jar": {
     "jarName": "rftoolscontrol-1.20-7.0.4.jar",
@@ -2419,13 +2427,13 @@
     "curseForgeHash": 3477473770,
     "modrinthHash": "f7fa1fd0c633b10f98d7f0f97766b95aac1a2dc0"
   },
-  "sophisticatedbackpacks-1.20.1-3.26.17.2231.jar": {
-    "jarName": "sophisticatedbackpacks-1.20.1-3.26.17.2231.jar",
+  "sophisticatedbackpacks-1.20.1-3.26.19.2239.jar": {
+    "jarName": "sophisticatedbackpacks-1.20.1-3.26.19.2239.jar",
     "modId": "sophisticatedbackpacks",
     "name": "Sophisticated Backpacks",
-    "version": "3.26.17.2231",
-    "curseForgeHash": 911295522,
-    "modrinthHash": "4feaf58a62e0f51331b150da564c815c7bbcf920"
+    "version": "3.26.19.2239",
+    "curseForgeHash": 1413615907,
+    "modrinthHash": "2975679d144573be7e7d4c20444ea41b2016539b"
   },
   "sophisticatedbackpackscreateintegration-1.20.1-0.1.13.193.jar": {
     "jarName": "sophisticatedbackpackscreateintegration-1.20.1-0.1.13.193.jar",
@@ -2435,21 +2443,21 @@
     "curseForgeHash": 4107514048,
     "modrinthHash": "e3ea1cefc51fe66d8225a3d2e3d3a97986b3359d"
   },
-  "sophisticatedcore-1.20.1-1.5.17.2435.jar": {
-    "jarName": "sophisticatedcore-1.20.1-1.5.17.2435.jar",
+  "sophisticatedcore-1.20.1-1.5.21.2444.jar": {
+    "jarName": "sophisticatedcore-1.20.1-1.5.21.2444.jar",
     "modId": "sophisticatedcore",
     "name": "Sophisticated Core",
-    "version": "1.5.17.2435",
-    "curseForgeHash": 2814138213,
-    "modrinthHash": "f388ccc167d1cfdb83dbc42cb9ff97f882789c6d"
+    "version": "1.5.21.2444",
+    "curseForgeHash": 726606758,
+    "modrinthHash": "29228c9c321d3f50afbe6ab3e180be6d3680a606"
   },
-  "sophisticatedstorage-1.20.1-1.5.10.2204.jar": {
-    "jarName": "sophisticatedstorage-1.20.1-1.5.10.2204.jar",
+  "sophisticatedstorage-1.20.1-1.5.13.2212.jar": {
+    "jarName": "sophisticatedstorage-1.20.1-1.5.13.2212.jar",
     "modId": "sophisticatedstorage",
     "name": "Sophisticated Storage",
-    "version": "1.5.10.2204",
-    "curseForgeHash": 3005554724,
-    "modrinthHash": "17b9998a9bf1a45096baf797ca8122bb8bdfec53"
+    "version": "1.5.13.2212",
+    "curseForgeHash": 2869242853,
+    "modrinthHash": "ae98354b779e4c0011ddb51fae44a64646995c0a"
   },
   "sophisticatedstoragecreateintegration-1.20.1-0.1.26.245.jar": {
     "jarName": "sophisticatedstoragecreateintegration-1.20.1-0.1.26.245.jar",
@@ -2635,13 +2643,13 @@
     "curseForgeHash": 2054440897,
     "modrinthHash": "e9ef48672f01b076ea3b8c7c5e6a139c2491a67c"
   },
-  "tombstone-1.20.1-9.1.3.jar": {
-    "jarName": "tombstone-1.20.1-9.1.3.jar",
+  "tombstone-1.20.1-9.1.5.jar": {
+    "jarName": "tombstone-1.20.1-9.1.5.jar",
     "modId": "tombstone",
     "name": "Corail Tombstone",
-    "version": "9.1.3",
-    "curseForgeHash": 2567976154,
-    "modrinthHash": "ff251740748251f6b7ff4daf4d2d9626236d5451"
+    "version": "9.1.5",
+    "curseForgeHash": 1930748078,
+    "modrinthHash": "0d9cb76b6162c672a7aca40771e5749a97ebb451"
   },
   "ToolBelt-1.20.1-1.20.03.jar": {
     "jarName": "ToolBelt-1.20.1-1.20.03.jar",
