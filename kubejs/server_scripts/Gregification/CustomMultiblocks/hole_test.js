@@ -74,7 +74,7 @@ ServerEvents.recipes(allthemods => {
             '2x gtceu:black_hole_casing',
             '4x #forge:plates/nobelium',
             '2x #forge:rods/long/neutronium',
-            '8x #forge:plates/nobelium'
+            '8x #forge:plates/meitnerium'
         )
         .inputFluids('#forge:red_matter 288')
         .itemOutputs('2x gtceu:accretion_disk_casing')
