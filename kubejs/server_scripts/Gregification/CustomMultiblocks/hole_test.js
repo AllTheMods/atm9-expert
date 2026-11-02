@@ -164,4 +164,12 @@ ServerEvents.recipes(allthemods => {
         .stationResearch(b => b.researchStack('gtceu:black_hole').EUt(whiteHoleEut / 4).CWUt(whiteHoleCwut))
         .duration(whiteHoleDuration)
         .EUt(whiteHoleEut);
+
+    allthemods.shapeless('gregification:release_white_hole_flip1')
+        .itemInputs('gtceu:white_hole_jet_up')
+        .itemOutputs('gtceu:white_hole_jet_down');
+    
+    allthemods.shapeless('gregification:release_white_hole_flip2')
+        .itemInputs('gtceu:white_hole_jet_down')
+        .itemOutputs('gtceu:white_hole_jet_up');
 })

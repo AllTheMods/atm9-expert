@@ -80,7 +80,6 @@
 	"atm9.chapters.47.title": "Cataclysm",
 	"atm9.chapters.48.title": "Twilight Forest",
 	"atm9.chapters.66.title": "The Undergarden",
-	"atm9.chapters.68.title": "ProjectE",
 
 
 	"atm9.quest.welcome.team": "Creating a Team",
@@ -92,11 +91,11 @@
 
 	"atm9.quest.welcome.desc.team": "If you want to create a team for you and your friends, use the command &a/ftbteams party create (name of team)&r to create the team!",
 	"atm9.quest.welcome.desc.commands": "There are plenty of helpful commands within ATM. Here are a few:\\n\\n&e/sethome&r (name of home) | Let's you set a home that you can teleport back to using /home (name). Example: /sethome farm - then teleport with /home farm\\n\\n&e/spawn&r | This will teleport you to the spawn of your overworld.\\n\\n&e/rtp&r | 'Random Teleport' will teleport you to a random location in the world.\\n\\nNote: These commands have cooldowns and limits. If you'd like to change them, you can edit the config file which can be found here:\\n\\n- For Singleplayer | &osaves/(name of save)/serverconfig/ftbessentials.snbt&r\\n\\n- For Servers | &oworld/serverconfig/ftbessentials.snbt",
-	"atm9.quest.welcome.desc.welcome1": "&6All the Mods 9: Expert&r is a rebuilt, &nGregTech-driven&r take on ATM9.\\n\\Forget the usual ATM approach of progressing through each mod on its own. Here, you actually have to use &oall the mods&r to advance.",
+	"atm9.quest.welcome.desc.welcome1": "ATM9 - Expert is a kitchensink pack that allows you to explore the world of modded Minecraft in your own way!",
 	"atm9.quest.welcome.desc.welcome2": "If you have any questions or issues, feel free to join the ATM discord!",
-	"atm9.quest.welcome.desc.quests1": "Quests are here to help you progress in the pack, or in the mods. Mods are not gated behind completing quests, so only need to come here if you need help.",
+	"atm9.quest.welcome.desc.quests1": "In this modpack, Quests are optional. Mods are not gated behind completing any quests!",
 	"atm9.quest.welcome.desc.quests2": "The individual questlines outside of the Main questline are meant to serve as mod guides. If you want to follow the progression, make sure to check out the Main Questline!",
-	"atm9.quest.welcome.desc.quests3": "",
+	"atm9.quest.welcome.desc.quests3": "Most of the quests in the pack are also made by &2AlfredGG&r. Quests are hard work, so if you'd like to support him, you can click on his player image below!",
 	"atm9.quest.welcome.desc.claims1": "To claim chunks, open up your map using &6M&r, then click the &aClaim Map&r icon in the top left.",
 	"atm9.quest.welcome.desc.claims2": "To claim a chunk, left click and drag to claim.",
 	"atm9.quest.welcome.desc.claims3": "To force load a chunk, shift-left click the chunk. If done properly, you'll see lines across the chunk.",
