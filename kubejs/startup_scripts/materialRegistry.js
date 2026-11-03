@@ -549,12 +549,27 @@ const materials = [
         .unify({ dust: 'ae2:fluix_dust', gem: 'ae2:fluix_crystal' }),
 
     new MaterialDef('atm_star')
-        .dust().fluid().gem().color(0xFFC107).iconSet('SHINY')
-        .unify({ gemFlawless: true, gemExquisite: true, gem: 'allthetweaks:atm_star', block: 'allthetweaks:atm_star_block' }),
+        .dust().fluid().ingot().dust().color(0xFFC107).iconSet('SHINY').noSmelting()
+        .blast({ temp: COIL_TEMPS.NAQUADAH, eut: LuV, duration: 4000 })
+        //.unify({ gemFlawless: true, gemExquisite: true, gem: 'allthetweaks:atm_star', block: 'allthetweaks:atm_star_block' }),
+        .unify({ ingot: 'allthetweaks:atm_star', block: 'allthetweaks:atm_star_block', nugget: 'allthetweaks:atm_star_shard' }),
+    
+    new MaterialDef('atm_trio')
+        .dust().color(0x9A9F7C).iconSet('SHINY').components('1x allthemodium, 1x vibranium, 1x unobtainium').formula('AtmTrio'),
+
+    new MaterialDef('unobtainium_allthemodium_alloy')
+        .dust().ingot().color(0xBD5D5E).iconSet('SHINY').components('1x unobtainium, 1x allthemodium').formula('⬙⟡')
+        .unify({ dust: 'allthemodium:unobtainium_allthemodium_alloy_dust', ingot: 'allthemodium:unobtainium_allthemodium_alloy_ingot', block: 'allthemodium:unobtainium_allthemodium_alloy_block' }),
+    new MaterialDef('unobtainium_vibranium_alloy')
+        .dust().ingot().color(0x35679D).iconSet('SHINY').components('1x unobtainium, 1x vibranium').formula('⬙≋')
+        .unify({ dust: 'allthemodium:unobtainium_vibranium_alloy_dust', ingot: 'allthemodium:unobtainium_vibranium_alloy_ingot', block: 'allthemodium:unobtainium_vibranium_alloy_block' }),
+    new MaterialDef('vibranium_allthemodium_alloy')
+        .dust().ingot().color(0x679158).iconSet('SHINY').components('1x vibranium, 1x allthemodium').formula('≋⟡')
+        .unify({ dust: 'allthemodium:vibranium_allthemodium_alloy_dust', ingot: 'allthemodium:vibranium_allthemodium_alloy_ingot', block: 'allthemodium:vibranium_allthemodium_alloy_block' }),
 
     new MaterialDef('dark_matter')
         .cable({ voltage: 536870912, loss: 2 })
-        .color(0x3b173f).iconSet('NETHERSTAR').ingot().dust().fluid().materialsAll().singularity().pipe()
+        .color(0x3b173f).iconSet('NETHERSTAR').dust().fluid()
         .unify({ block: 'projecte:dark_matter_block', ingot: 'projecte:dark_matter' }),
 
     new MaterialDef('red_matter')

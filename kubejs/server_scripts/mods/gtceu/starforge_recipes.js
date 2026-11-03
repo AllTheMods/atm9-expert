@@ -202,7 +202,7 @@ ServerEvents.recipes(allthemods => {
 		.duration(432000)
 		.EUt(ULV)
 	
-	allthemods.recipes.gtceu.star_forge('atm_star_from_shards')
+	/*allthemods.recipes.gtceu.star_forge('atm_star_from_shards')
 		.itemInputs(
 			[
 				'54x allthetweaks:atm_star_shard',
@@ -211,7 +211,7 @@ ServerEvents.recipes(allthemods => {
 		.itemOutputs('allthetweaks:atm_star')
 		.chancedOutput(Item.of('allthetweaks:atm_star'), 20, 20)
 		.duration(108000)
-		.EUt(ULV)
+		.EUt(ULV)*/
 	
 	allthemods.recipes.gtceu.star_forge('greg_star_from_shards')
 		.itemInputs(

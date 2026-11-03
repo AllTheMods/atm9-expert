@@ -12,7 +12,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create('awakening_altar')
         .category('awakening_altar')
         .setEUIO('in') // Machine takes power IN
-        .setMaxIOSize(8, 3, 6, 3)
+        .setMaxIOSize(12, 3, 6, 3)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.CHEMICAL)	
 })

@@ -115,11 +115,12 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs(['1x gtceu:creative_energy'])
         .duration(2400 * 16).EUt(UV)
 
+    /*
     allthemods.recipes.gtceu.micro_universe_collector('atm_star_blocks')
         .itemInputs(['124416x allthetweaks:atm_star_shard', '2304x allthetweaks:patrick_star'])
         .itemOutputs(['256x allthetweaks:atm_star_block'])
         .chancedOutput(Item.of('allthetweaks:atm_star_block', 256), 200, 20)
-        .duration(20 * 48).EUt(UEV)
+        .duration(20 * 48).EUt(UEV)*/
 
     allthemods.recipes.gtceu.micro_universe_collector('greg_star_blocks')
         .itemInputs(['124416x kubejs:greg_star_shard', '2304x kubejs:star_housing'])

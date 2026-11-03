@@ -34,6 +34,7 @@ ServerEvents.recipes(allthemods => {
     acceptMirrored: false
   }).id('allthemods:allthetweaks/atm_star')
   
+  /*
   allthemods.custom({
     type: "create:mechanical_crafting",
     pattern: [
@@ -53,7 +54,7 @@ ServerEvents.recipes(allthemods => {
     },
     result: Ingredient.of('allthetweaks:atm_star').toJson(),
     acceptMirrored: false
-  }).id('allthemods:allthetweaks/atm_shard_star')
+  }).id('allthemods:allthetweaks/atm_shard_star')*/
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9.

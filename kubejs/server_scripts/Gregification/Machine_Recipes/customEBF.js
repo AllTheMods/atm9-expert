@@ -57,6 +57,8 @@ ServerEvents.recipes(allthemods => {
     addEBF(['2x #forge:dusts/curium_fluoride', '3x #forge:dusts/calcium'], '#forge:argon 1000', ['2x gtceu:curium_ingot', '3x gtceu:calcium_fluoride_dust'], null, COIL_TEMPS.TRITANIUM, 800, UV);    
     addEBF(['#forge:dusts/steel', '#forge:dusts/dark_gem'], null, 'gtceu:hot_umbral_steel_ingot', null, COIL_TEMPS.CUPRONICKEL, 400, LV);
 
+    addEBF(['#forge:dusts/atm_star', '#forge:dusts/atm_trio'], '#forge:antimatter 16', 'allthetweaks:atm_star', null, COIL_TEMPS.NAQUADAH, 2400, ZPM);
+
     ['erbium', 'holmium', 'thulium'].forEach(el => {
         addEBF([`2x #forge:dusts/${el}_fluoride`, '3x #forge:dusts/calcium'], '#forge:argon 1000', [`2x gtceu:${el}_ingot`, '3x gtceu:calcium_fluoride_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);
     });
