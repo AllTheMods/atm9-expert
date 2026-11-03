@@ -117,7 +117,16 @@ ServerEvents.recipes(allthemods => {
 
     
     const moreRemovals = [
-        'create:crafting/kinetics/mechanical_drill',
+        'alltheores:aluminum_gear', 'alltheores:iridium_gear', 'thermal:parts/lead_gear', 'railcraft:lead_gear',
+        'thermal:parts/nickel_gear', 'railcraft:nickel_gear', 'alltheores:osmium_gear', 'alltheores:platinum_gear', 'thermal:parts/silver_gear', 
+        'railcraft:silver_gear', 'railcraft:tin_gear', 'forestry:gear_tin', 'alltheores:uranium_gear', 'railcraft:zinc_gear', 'alltheores:zinc_gear', 
+        'railcraft:steel_gear', 'thermal:parts/steel_gear',
+        'thermal:parts/invar_gear', 'railcraft:invar_gear', 'thermal:parts/electrum_gear', 'railcraft:bronze_gear', 'forestry:gear_bronze', 
+        'railcraft:iron_gear', 'forestry:gear_iron', 'industrialforegoing:iron_gear', 'enderio:iron_gear', 'industrialforegoing:gold_gear',
+        'thermal:parts/gold_gear', 'railcraft:gold_gear', 'thermal:parts/diamond_gear', 'industrialforegoing:diamond_gear',
+        'railcraft:copper_gear', 'forestry:gear_copper', 'thermal:parts/enderium_gear', 'thermal:parts/lumium_gear', 'thermal:parts/signalum_gear', 'thermal:parts/constantan_gear',
+        'railcraft:brass_gear', 'alltheores:brass_gear', 'allthemodium:allthemodium_gear', 'allthemodium:vibranium_gear', 'allthemodium:unobtainium_gear',
+        'sophisticatedbackpacks:backpack', 'create:crafting/kinetics/mechanical_drill',
         'productivetrees:sawmill', 'ae2:network/crafting/patterns_blank',
         'create:mixing/andesite_alloy', 'create:mixing/andesite_alloy_from_zinc',
         'tconstruct:compat/create/andesite_alloy_iron', 'tconstruct:compat/create/andesite_alloy_zinc',

@@ -1790,18 +1790,34 @@ const materials = [
     new MaterialDef('bastnasite').modify()
         .byproducts(['rare_earth', 'gadolinium', 'neodymium']),    
 
-    new MaterialDef('uranium').modify()
+    new MaterialDef('uranium').modify().flags(GTMaterialFlags.GENERATE_GEAR)
         .byproducts(['thorium', 'plutonium'])
-        .unify({ rawOre: 'alltheores:raw_uranium', ore: 'alltheores:uranium_ore', oreDeepslate: 'alltheores:deepslate_uranium_ore', oreNetherrack: 'alltheores:nether_uranium_ore' }),
+        .unify({ gear: 'alltheores:uranium_gear', rawOre: 'alltheores:raw_uranium', ore: 'alltheores:uranium_ore', oreDeepslate: 'alltheores:deepslate_uranium_ore', oreNetherrack: 'alltheores:nether_uranium_ore' }),
 
-    new MaterialDef('zinc').modify().plasma()
+    new MaterialDef('zinc').modify().plasma().flags(GTMaterialFlags.GENERATE_GEAR)
         .byproducts(['cadmium', 'lead', 'silver'])
-        .unify({ rawOre: 'alltheores:raw_zinc', ore: 'alltheores:zinc_ore', oreDeepslate: 'alltheores:deepslate_zinc_ore', oreNetherrack: 'alltheores:nether_zinc_ore' }),
+        .unify({  gear: 'alltheores:zinc_gear',rawOre: 'alltheores:raw_zinc', ore: 'alltheores:zinc_ore', oreDeepslate: 'alltheores:deepslate_zinc_ore', oreNetherrack: 'alltheores:nether_zinc_ore' }),
 
-    new MaterialDef('osmium').modify()
+    new MaterialDef('osmium').modify().flags(GTMaterialFlags.GENERATE_GEAR)
         .byproducts(['nickel', 'iron'])
-        .unify({ rawOre: 'alltheores:raw_osmium' })
+        .unify({ gear: 'alltheores:osmium_gear',rawOre: 'alltheores:raw_osmium' })
         .ignoreAllOrePrefixes(),
+    
+    new MaterialDef('constantan').color(0xD39A6A).components('1x copper, 1x nickel').iconSet('METALLIC').components('1x copper, 1x nickel').ingot().fluid().materialsAll()
+        .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: HV, duration: 400 })
+        .unify({ dust: 'alltheores:constantan_dust', nugget: 'alltheores:constantan_nugget', ingot: 'alltheores:constantan_ingot', block: 'alltheores:constantan_block', plate: 'alltheores:constantan_plate', gear: 'alltheores:constantan_gear', rod: 'alltheores:constantan_rod' }),
+    
+    new MaterialDef('aluminium').modify().flags(GTMaterialFlags.GENERATE_GEAR).unify({ gear: 'alltheores:aluminum_gear' }),
+    new MaterialDef('brass').modify().flags(GTMaterialFlags.GENERATE_GEAR).unify({ gear: 'alltheores:brass_gear' }),
+    new MaterialDef('bronze').modify().flags(GTMaterialFlags.GENERATE_GEAR).unify({ gear: 'alltheores:bronze_gear' }),    
+    new MaterialDef('copper').modify().flags(GTMaterialFlags.GENERATE_GEAR).unify({ gear: 'alltheores:copper_gear' }),
+    new MaterialDef('electrum').modify().flags(GTMaterialFlags.GENERATE_GEAR).unify({ gear: 'alltheores:electrum_gear' }),
+    new MaterialDef('gold').modify().flags(GTMaterialFlags.GENERATE_GEAR).unify({ gear: 'alltheores:gold_gear' }),
+    new MaterialDef('lead').modify().flags(GTMaterialFlags.GENERATE_GEAR).unify({ gear: 'alltheores:lead_gear' }),
+    new MaterialDef('nickel').modify().flags(GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_ROD).unify({ gear: 'alltheores:nickel_gear', rod: 'alltheores:nickel_rod' }),
+    new MaterialDef('platinum').modify().flags(GTMaterialFlags.GENERATE_GEAR).unify({ gear: 'alltheores:platinum_gear' }),
+    new MaterialDef('silver').modify().flags(GTMaterialFlags.GENERATE_GEAR).unify({ gear: 'alltheores:silver_gear' }),
+    new MaterialDef('tin').modify().flags(GTMaterialFlags.GENERATE_GEAR).unify({ gear: 'alltheores:tin_gear' }),
 
     new MaterialDef('glycerol').modify().gem().flags(GTMaterialFlags.CRYSTALLIZABLE)
         .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'pneumaticcraft:glycerol' }),

@@ -300,58 +300,59 @@ ServerEvents.recipes(allthemods => {
 
         }
     );
-/*
-    replaceShaped('minecraft:flint_and_steel',null,
-        [
-            'G  ',
-            ' S ',
-            '   '
-        ],
+
+    allthemods.recipes.gtceu.assembler('gregification:backpack_assembly')
+            .itemInputs(
+                'ironjetpacks:strap',
+                '#forge:chests/wooden',
+                '4x #forge:leather',
+                '4x #forge:string'
+            )
+            .inputFluids('#forge:glue 576')
+            .itemOutputs('sophisticatedbackpacks:backpack')
+            .duration(600)
+            .EUt(LV);
+    /*
+    //backpacks
+    const backpackDuration = 600;
+    const backPacks = [
+        { tier: null, prevTier: null, eu: LV, fluid:'#forge:glue' },
+        { tier: 'copper', prevTier: null, eu: LV, fluid:'#forge:glue' },
+        { tier: 'iron', prevTier: 'copper', eu: LV, fluid:'#forge:glue' },
+        { tier: 'gold', prevTier: 'iron', eu: MV, fluid:'#forge:glue' },
+        { tier: 'diamond', prevTier: 'gold', eu: MV, fluid:'#forge:glue' }        
+    ]
+    backPacks.forEach(backpack => {
+        if (backpack.tier == null) {
+             allthemods.recipes.gtceu.assembler('gregification:backpack_assembly')
+            .itemInputs(
+                'ironjetpacks:strap',
+                '#forge:chests/wooden',
+                '4x #forge:leather',
+                '4x #forge:string'
+            )
+            .inputFluids(`${backpack.fluid} 576`)
+            .itemOutputs('sophisticatedbackpacks:backpack')
+            .duration(backpackDuration)
+            .EUt(backpack.eu);
+        }
+        else
         {
-            G: 'minecraft:flint',
-            S: '#forge:plates/steel'
+            let pMat = backpack.prevTier == null ? 'sophisticatedbackpacks:backpack' : `sophisticatedbackpacks:${backpack.prevTier}_backpack`;
+            let pRod = backpack.prevTier == null ? '#forge:rods/wood' : `#forge:rods/${backpack.prevTier}`;
+            allthemods.recipes.gtceu.assembler(`gregification:backpack_assembly_${backpack.tier}`)
+            .itemInputs(
+                'ironjetpacks:strap',
+                pMat,
+                `6x #forge:plates/${backpack.tier}`,
+                `2x ${pRod}`
+            )
+            .inputFluids(`${backpack.fluid} 576`)
+            .itemOutputs(`sophisticatedbackpacks:${backpack.tier}_backpack`)
+            .duration(backpackDuration)
+            .EUt(backpack.eu);
         }
-    );
-
-    replaceShaped('minecraft:cauldron',null,
-        [
-            'I I',
-            'I I',
-            'III'
-        ],
-        {            
-            I: '#forge:plates/steel'
-        }
-    );
-
-    replaceShaped('minecraft:enchanting_table',null,
-        [
-            ' R ',
-            'ORO',
-            'SSS'
-        ],
-        {      
-            R: 'minecraft:blaze_rod',
-            S: '#forge:plates/steel',
-            O: '#forge:plates/obsidian'
-        }
-    );
-    
-
-    replaceShaped('minecraft:brewing_stand',null,
-        [
-            ' M ',
-            'DOD',
-            'OOO'
-        ],
-        {      
-            M: 'botania:rune_mana',      
-            D: '#forge:exquisite_gems/diamond',
-            O: '#forge:plates/obsidian'
-        }
-    );
-    
-*/ 
+    });*/
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
