@@ -1,4 +1,7 @@
 {
+  "ldlib": {
+    "connection": "gtceu:block/casings/print_bed_casing/print_bed_casing_ctm"
+  },
   "animation": {
     "frametime": 4,
     "interpolate": false

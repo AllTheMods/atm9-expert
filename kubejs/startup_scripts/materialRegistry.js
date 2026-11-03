@@ -569,7 +569,7 @@ const materials = [
 
     new MaterialDef('dark_matter')
         .cable({ voltage: 536870912, loss: 2 })
-        .color(0x3b173f).iconSet('NETHERSTAR').dust().fluid()
+        .color(0x3b173f).iconSet('NETHERSTAR').ingot().dust().fluid().materialsAll().singularity().pipe()
         .unify({ block: 'projecte:dark_matter_block', ingot: 'projecte:dark_matter' }),
 
     new MaterialDef('red_matter')
@@ -1230,7 +1230,7 @@ const materials = [
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
         .unify({ ingot: 'enderio:soularium_ingot', block: 'enderio:soularium_block', nugget: 'enderio:soularium_nugget' }),
 
-    new MaterialDef('blazing_soularium').components('1x soularium').color(0x56402C).iconSet('METALLIC').ingot()
+    new MaterialDef('blazing_soularium').components('1x soularium').color(0x56402C).iconSet('METALLIC').ingot().noDecomp()
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
         .unify({ ingot: true, dust: true, block: true, nugget: true, dustSmall: true, dustTiny: true }),
 
@@ -1239,7 +1239,7 @@ const materials = [
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: MV, duration: 400 })
         .unify({ ingot: 'enderio:energetic_alloy_ingot', block: 'enderio:energetic_alloy_block', nugget: 'enderio:energetic_alloy_nugget' }),
 
-    new MaterialDef('blazing_energetic_alloy').components('1x energetic_alloy').color(0xFFB933).iconSet('METALLIC').ingot()        
+    new MaterialDef('blazing_energetic_alloy').components('1x energetic_alloy').color(0xFFB933).iconSet('METALLIC').ingot().noDecomp()
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: MV, duration: 400 })        
         .unify({ ingot: true, dust: true, block: true, nugget: true, dustSmall: true, dustTiny: true }),
 

@@ -63,6 +63,7 @@ ServerEvents.recipes(allthemods => {
     G: 'ad_astra:jet_suit'
     }).id('allthemods:allthetweaks/improbable_probability_device')
   
+    /*
     // Nexium Emitter
     allthemods.shaped('allthetweaks:nexium_emitter', ['ASB', 'QCF', 'GED'], {
       A: 'powah:player_transmitter_nitro',
@@ -74,7 +75,7 @@ ServerEvents.recipes(allthemods => {
       G: 'exchangers:end_exchanger',
 	    S: 'gtceu:atomic_clock',
 	    Q: 'gtceu:germanium_diode'
-    }).id('allthemods:allthetweaks/nexium_emitter')
+    }).id('allthemods:allthetweaks/nexium_emitter')*/
 
   // Pulsating Black Hole
   allthemods.custom({

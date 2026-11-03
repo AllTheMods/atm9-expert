@@ -1,4 +1,7 @@
 {
+  "ldlib": {
+    "connection": "gtceu:block/casings/emitter_head_casing/emitter_head_casing_ctm"
+  },
   "animation": {
     "frametime": 3,
     "interpolate": false
