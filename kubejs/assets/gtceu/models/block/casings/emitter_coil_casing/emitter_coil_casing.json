@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtceu:block/casings/emitter_coil_casing/emitter_coil_casing"
+  }
+}

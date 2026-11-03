@@ -970,14 +970,14 @@ ServerEvents.recipes(allthemods => {
     addAssemblyLine(
         'gtceu:printer',
         [
-            'gtceu:uv_machine_hull',
+            'gtceu:zpm_machine_hull',
             '4x #forge:plates/empowered_restonia',
             '4x #forge:plates/empowered_diamatine',
             '4x #forge:plates/empowered_palis',
             '4x #forge:plates/empowered_emeradic',
-            '2x #gtceu:circuits/uv',
-            '4x gtceu:uv_electric_motor',
-            '2x gtceu:uv_electric_pump',
+            '2x #gtceu:circuits/zpm',
+            '4x gtceu:zpm_electric_motor',
+            '2x gtceu:zpm_electric_pump',
             '6x gtceu:yttrium_barium_cuprate_single_cable'
         ],
         [
@@ -985,8 +985,8 @@ ServerEvents.recipes(allthemods => {
             'gtceu:soldering_alloy 1440'
         ],
         2400,
-        UV,
-        'gtceu:uv_reconstructor'
+        ZPM,
+        'gtceu:zpm_reconstructor'
     );
 
     //alchemical casing

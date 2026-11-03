@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gtceu:block/casings/print_bed_casing/print_bed_casing"
+    }
+  }
+}
