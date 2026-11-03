@@ -1,0 +1,77 @@
+#Prefer a recipe bookmark when bookmarking a recipe output. When disabled, bookmark the output ingredient.
+preferRecipeBookmarkOnOutput = true
+#Hide JEI's native add-to-bookmark button in recipe layouts.
+hideRecipeBookmarkButton = true
+#Show a creative-mode item tab bar above JEI's ingredient list.
+creativeTabBarEnabled = false
+#Show the current page number on the creative-mode item tab bar.
+creativeTabPageNumberEnabled = false
+#Creative-tab ids pinned to the front of the tab order. Right-click a tab in the selector to change this list.
+pinnedCreativeTabs = []
+#Open JEI++'s ingredient directory when clicking a recipe slot with multiple output items.
+recipeIngredientDirectoryEnabled = true
+#Collapse related item variants in JEI's ingredient list. Click a group to expand it.
+stackGroupingEnabled = false
+#Add recipe-tree and crafting-assistant buttons to JEI recipe layouts.
+recipeTreeEnabled = true
+#Recipe type ids excluded from the recipe tree, for example ["minecraft:blasting"].
+disabledRecipeTypes = []
+#Allow Ctrl-left-click in the recipe-tree bookmarks to automatically craft missing intermediate steps.
+automaticCraftingEnabled = true
+#Collapse different NBT/component variants of the same item, such as potions and enchanted books.
+nbtGroupingEnabled = false
+#Enable JSON-defined item tag groups in config/jei_plus_plus/stack_groups.
+tagGroupingEnabled = true
+#Enable custom JSON stack groups in config/jei_plus_plus/stack_groups.
+jsonGroupingEnabled = true
+#Mix matching default groups from different mod namespaces. JSON groups are always explicit.
+mixNamespaceGroups = false
+
+#Each built-in suffix group can be disabled independently.
+[defaultGroups]
+	wool = true
+	carpet = true
+	concrete = true
+	concrete_powder = true
+	terracotta = true
+	glazed_terracotta = true
+	stained_glass = true
+	stained_glass_pane = true
+	candle = true
+	bed = true
+	banner = true
+	shulker_box = true
+	planks = true
+	stripped_logs = true
+	logs = true
+	stripped_wood = true
+	wood = true
+	slab = true
+	stairs = true
+	wall = true
+	fence_gate = true
+	fence = true
+	door = true
+	trapdoor = true
+	button = true
+	pressure_plate = true
+	glass = true
+	pane = true
+	ore = true
+	raw_material = true
+	ingot = true
+	nugget = true
+	sword = true
+	pickaxe = true
+	axe = true
+	shovel = true
+	hoe = true
+	boat = true
+	sapling = true
+	seed = true
+	flower = true
+	leaves = true
+	rail = true
+	hanging_sign = true
+	sign = true
+
