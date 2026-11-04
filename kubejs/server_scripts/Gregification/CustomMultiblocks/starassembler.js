@@ -71,19 +71,26 @@ ServerEvents.recipes(allthemods => {
         .duration(starAssemblerControllerDuration)
         .EUt(starAssemblerControllerEut)
       
-    const starComponents = [
-        'allthetweaks:oblivion_shard',
-        'allthetweaks:dragon_soul',
-        'allthetweaks:nexium_emitter',
-        'allthetweaks:philosophers_fuel',
-        'allthetweaks:improbable_probability_device',
-        'allthetweaks:dimensional_seed',
-        'allthetweaks:pulsating_black_hole',
-        'allthetweaks:withers_compass',
-        'allthetweaks:patrick_star',
-        'mysticalagradditions:creative_essence',
-        '#forge:storage_blocks/atm_trio'
-    ]
+    const atmStarDuration = 12000
+    const atmStarEut = ZPM
+
+    allthemods.recipes.gtceu.star_assembler('gregification:star_assembler/atm_star')
+        .itemInputs([
+            'allthetweaks:oblivion_shard',
+            'allthetweaks:dragon_soul',
+            'allthetweaks:nexium_emitter',
+            'allthetweaks:philosophers_fuel',
+            'allthetweaks:improbable_probability_device',
+            'allthetweaks:dimensional_seed',
+            'allthetweaks:pulsating_black_hole',
+            'allthetweaks:withers_compass',
+            'allthetweaks:patrick_star',
+            'mysticalagradditions:creative_essence',
+            '8x #forge:storage_blocks/atm_trio'
+        ])
+        .itemOutputs('allthetweaks:atm_star')
+        .duration(atmStarDuration)
+        .EUt(atmStarEut)
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

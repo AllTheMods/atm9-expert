@@ -3,6 +3,16 @@
 
 StartupEvents.registry('item', allthemods => {
 
+    /*End Game Items
+    42
+    stabilized tesseract
+    cosmic copendium
+    cosmic research
+    curse breaker
+    greg star
+
+
+    */
     allthemods.create('gtceu:bose_einstein_condensate')
         .displayName('Bose-Einstein Condensate')
         .tooltip('Matter at the edge of absolute zero')
