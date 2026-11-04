@@ -516,12 +516,13 @@ ServerEvents.recipes(allthemods => {
         coils.chaotic
     );
 
+    const dragonModel = Item.of('hostilenetworks:data_model', '{data_model:{data:1254,id:"hostilenetworks:ender_dragon"}}').strongNBT();
 
     draconicInfuser(
         [
             'draconicevolution:chaotic_core',
             '8x draconicevolution:dragon_heart',
-            'allthetweaks:mini_exit',
+            dragonModel,
             '16x gtceu:eldritch_cloth',
             '32x #forge:ingots/fireite',
             '4x gtceu:draconium_casing',
