@@ -517,6 +517,37 @@ ServerEvents.recipes(allthemods => {
     );
 
 
+    draconicInfuser(
+        [
+            'draconicevolution:chaotic_core',
+            '8x draconicevolution:dragon_heart',
+            'allthetweaks:mini_exit',
+            '16x gtceu:eldritch_cloth',
+            '32x #forge:ingots/fireite',
+            '4x gtceu:draconium_casing',
+            '4x apotheosis:draconic_endshelf',
+            '#forge:singularities/undeath',
+            'gtceu:technomancy_orb'
+        ],
+        [
+            '#forge:soul 14400',
+            '#forge:experience 28800',
+            '#forge:dragonsteel 28800'
+
+        ],
+        ['allthetweaks:dragon_soul'],
+        [],
+        TIER.chaotic,
+        TIME.very_long,
+        coils.chaotic
+    );
+            
+
+
+
+        //mysticalagradditions:gaia_spirit_crux
+//gtceu:magical_soil
+
 
     //reactor injector
     draconicInfuser(

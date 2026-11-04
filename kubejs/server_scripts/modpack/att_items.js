@@ -3,6 +3,7 @@
 
 ServerEvents.recipes(allthemods => {
   // Dragon Soul
+  /*
   allthemods.shaped('allthetweaks:dragon_soul', ['CDA', 'SNI', 'BGE'], {
     C: 'mysticalagradditions:dragon_scale',
     D: 'occultism:soul_gem',
@@ -14,7 +15,9 @@ ServerEvents.recipes(allthemods => {
 	G: 'productivebees:inactive_dragon_egg',
     E: 'ars_nouveau:summon_focus'
   }).id('allthemods:allthetweaks/dragon_soul')
+  */
 
+  /*
   // Dimensional Seed Recipe
   allthemods.shaped('allthetweaks:dimensional_seed', ['ABC', 'DEF', 'GHI'], {
     A: 'allthecompressed:netherrack_6x',
@@ -27,7 +30,8 @@ ServerEvents.recipes(allthemods => {
     H: 'allthecompressed:emerald_block_4x',
     I: 'allthecompressed:diamond_block_4x'
   }).id('allthemods:allthetweaks/dimensional_seed')
-
+*/
+  /*
   //cataclysm removed 
     // Withers Compass
     allthemods.shaped('allthetweaks:withers_compass', ['DCD', 'ABA', 'DED'], {
@@ -37,7 +41,8 @@ ServerEvents.recipes(allthemods => {
       D: 'bloodmagic:speedrune2',
       E: 'productivebees:withered'
     }).id('allthemods:allthetweaks/withers_compass')
-
+  */
+ /*
   // Philosopher's Fuel
   allthemods.shaped('allthetweaks:philosophers_fuel', ['ABC', 'DEF', 'GHI'], {
   A: 'generatorgalore:ender_generator',
@@ -50,8 +55,10 @@ ServerEvents.recipes(allthemods => {
 	H: 'twilightforest:twilight_portal_miniature_structure',
   I: 'silentgear:tyrian_steel_block'
   }).id('allthemods:allthetweaks/philosophers_fuel')
+  */
 
   //computer craft removed
+  /*
   // Improbable Probability Device
   allthemods.shaped('allthetweaks:improbable_probability_device', ['ABA', 'CGE', 'FDF'], {
     A: 'mekanism:pellet_antimatter',
@@ -62,7 +69,7 @@ ServerEvents.recipes(allthemods => {
     F: Item.of('powah:battery_nitro', '{powah_tile_data:{energy_stored_main_energy:2000000000L}}').weakNBT(),
     G: 'ad_astra:jet_suit'
     }).id('allthemods:allthetweaks/improbable_probability_device')
-  
+  */
     /*
     // Nexium Emitter
     allthemods.shaped('allthetweaks:nexium_emitter', ['ASB', 'QCF', 'GED'], {
@@ -77,6 +84,7 @@ ServerEvents.recipes(allthemods => {
 	    Q: 'gtceu:germanium_diode'
     }).id('allthemods:allthetweaks/nexium_emitter')*/
 
+    /*
   // Pulsating Black Hole
   allthemods.custom({
     type: 'pneumaticcraft:pressure_chamber',
@@ -98,8 +106,10 @@ ServerEvents.recipes(allthemods => {
       }
     ]
   }).id('allthemods:pressure/allthetweaks/pulsating_black_hole')
+    */
 
   //needs corner items
+  /*
   // Oblivion Shard
   allthemods.shaped('allthetweaks:oblivion_shard', ['UAB', 'ACA', 'BAL'], {
     A: 'forbidden_arcanus:eternal_stella',
@@ -108,13 +118,15 @@ ServerEvents.recipes(allthemods => {
 	  U: 'gtceu:technomancy_orb',
 	  L: 'gtceu:camphor_incense'
   }).id('allthemods:allthetweaks/oblivion_shard')
+  */
 
+  /*
   // Creative Essence
   allthemods.shaped('mysticalagradditions:creative_essence', ['CAC', 'ABA', 'CAC'], {
     A: 'mysticalagradditions:insanium_block',
     C: 'mysticalagradditions:insanium_gemstone_block',
     B: 'mysticalagriculture:master_infusion_crystal'
-  }).id('allthemods:allthetweaks/creative_essence')
+  }).id('allthemods:allthetweaks/creative_essence')*/
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9.

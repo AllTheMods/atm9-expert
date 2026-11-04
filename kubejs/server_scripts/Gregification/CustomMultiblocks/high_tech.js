@@ -354,13 +354,13 @@ ServerEvents.recipes(allthemods => {
         .chancedOutput('forbidden_arcanus:crimson_stone', 1000, 1000)
         .chancedOutput('forbidden_arcanus:elementarium', 2000, 1000)
         .chancedOutput('forbidden_arcanus:divine_pact', 1000, 1000)
-        .chancedOutput('forbidden_arcanus:maledictus_pact', 1000, 1000)
+        .chancedOutput('forbidden_arcanus:maledictus_pact', 2000, 1000)
         .inputFluids('#forge:kerosene 10000')
         .duration(8000)
         .EUt(EV)
         .circuit(5);
 
-    allthemods.shapeless('gtceu:blueprint_blank', ['minecraft:paper', '#forge:small_dusts/lapis']).id('gregification:blank_blueprint')
+    
 
 
     const createModelBlueprints = (machineID, creature, BPitemID, outputs, inputs, fluids, duration, EUt, CWU, customID, skipBlueprints) => {

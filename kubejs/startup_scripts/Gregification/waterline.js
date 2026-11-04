@@ -34,7 +34,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create('laser_purification')
         .category('laser_purification')
         .setEUIO('in')
-        .setMaxIOSize(9, 9, 1, 1)
+        .setMaxIOSize(9, 9, 3, 3)
         .setSound(GTSoundEntries.SCIENCE)
         .setProgressBar(GuiTextures.PROGRESS_BAR_MASS_FAB, FillDirection.LEFT_TO_RIGHT)
 

@@ -30,7 +30,8 @@ ServerEvents.recipes(allthemods => {
         { nbt: 'Desulfovibrio', name: 'Desulfovibrio' },
         { nbt: 'Clostridium', name: 'Clostridium Cellulose-Alpha' },
         { nbt: 'CaulobacterCrescentus', name: 'Caulobacter crescentus' },
-        { nbt: 'PHABioplastic', name: 'PHA Bioplastic Strain' }
+        { nbt: 'PHABioplastic', name: 'PHA Bioplastic Strain' },
+        { nbt: 'CuproSymbiont', name: 'Cupro Symbiont' }
 
     ];
 

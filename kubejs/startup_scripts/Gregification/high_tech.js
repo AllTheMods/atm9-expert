@@ -12,7 +12,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create('super_critical_heat_exchanger')
         .category('super_critical_heat_exchanger')
         .setEUIO('in')
-        .setMaxIOSize(0, 0, 2, 2) // Item In, Item Out, Fluid In, Fluid Out
+        .setMaxIOSize(0, 1, 2, 2) // Item In, Item Out, Fluid In, Fluid Out
         .setSlotOverlay(false, true, GuiTextures.FLUID_TANK_OVERLAY)
         .setSlotOverlay(true, true, GuiTextures.BREWER_OVERLAY)
         .setProgressBar(GuiTextures.COMPRESSOR_OVERLAY, FillDirection.LEFT_TO_RIGHT)

@@ -3,7 +3,7 @@
 
 ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
-    let TenebriumEU = UV;
+    let TenebriumEU = LuV;
     
     allthemods.recipes.gtceu.sifter('gregification:tenebrius_sifting')
         .itemInputs('#forge:dusts/tenebrius')
@@ -30,7 +30,7 @@ ServerEvents.recipes(allthemods => {
     
     allthemods.recipes.gtceu.centrifuge('gregification:tenebrius_dust_processing')
         .itemInputs('#forge:dusts/purified_tenebrius')
-        .chancedOutput('gtceu:small_tenebrium_dust', 5000, 1500)
+        .chancedOutput('gtceu:tenebrium_dust', 7000, 1500)
         .duration(800)
         .EUt(TenebriumEU);
 });

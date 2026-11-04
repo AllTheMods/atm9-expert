@@ -71,6 +71,13 @@ StartupEvents.registry('item', allthemods => {
         .tooltip('Atomic Core')
         //.rarity('ie_masterwork')
 
+    allthemods.create('gtceu:stabilized_tesseract')
+        .displayName('Stabilized Tesseract')
+
+    allthemods.create('gtceu:curse_breaker')
+        .displayName('Curse Breaker')
+        .tooltip('For Jonh')
+
     allthemods.create('gtceu:blood_coated_blade')        
         .displayName('Blood Coated Blade')
         .tooltip('A blade coated with the essence of blood.')

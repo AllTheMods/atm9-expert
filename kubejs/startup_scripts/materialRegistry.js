@@ -548,6 +548,13 @@ const materials = [
         .components('1x redstone, 1x certus_quartz, 1x nether_quartz')
         .unify({ dust: 'ae2:fluix_dust', gem: 'ae2:fluix_crystal' }),
 
+    new MaterialDef('ink').fluid().color(0x1B2240).iconSet('FLUID').noDecomp().formula('C·H2O').components('1x carbon, 2x hydrogen, 1x oxygen').gem()
+        .unify({ gemFlawless: true, gemExquisite: true, dustSmall: true, dustTiny: true, gem: 'minecraft:ink_sac' }),
+
+    new MaterialDef('oblivion').dust().color(0x3A2A55).iconSet('DULL').noDecomp(),
+    new MaterialDef('oblivion_essence').gem().color(0x6A4CC4).iconSet('AMETHYST').noDecomp().noBlocks()
+        .unify({ dustSmall: true, dustTiny: true, block: true }),
+
     new MaterialDef('atm_star')
         .dust().fluid().ingot().dust().color(0xFFC107).iconSet('SHINY').noSmelting()
         .blast({ temp: COIL_TEMPS.NAQUADAH, eut: LuV, duration: 4000 })
@@ -2054,6 +2061,9 @@ const materials = [
     new MaterialDef('ytterbium').modify().dust().ingot().fluid().materialsBasic(),
 
     new MaterialDef('super_critical_steam').fluid().gas().color(0xE8B8A0).iconSet('FLUID').components('2x hydrogen, 1x oxygen').formula('H2O').noDecomp(),
+    new MaterialDef('sodium_vapor').noDecomp().fluid().gas().color(0xF2D34B).iconSet('FLUID').components('1x sodium').formula('Na'),
+    new MaterialDef('laser_cooled_sodium').noDecomp().fluid().color(0x7FC8E8).iconSet('FLUID').components('1x sodium').formula('Na(uK)'),
+    new MaterialDef('ultracold_sodium').noDecomp().fluid().color(0x3A6FE0).iconSet('FLUID').components('1x sodium').formula('Na(nK)'),
 
     //nuclear materials rework
     new MaterialDef('thorium_waste_solution').fluid().color(0xB89A3C).iconSet('RADIOACTIVE'),

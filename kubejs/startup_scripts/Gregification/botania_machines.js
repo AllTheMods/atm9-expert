@@ -51,7 +51,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create ('elven_forge')
         .category('elven_forge')
         .setEUIO('in')
-        .setMaxIOSize(6, 3, 1, 0)
+        .setMaxIOSize(12, 3, 1, 0)
         .setSound(GTSoundEntries.FURNACE)
         .setSlotOverlay(false, false, GuiTextures.FURNACE_OVERLAY_1)
         .setSlotOverlay(false, true, GuiTextures.FLUID_TANK_OVERLAY)

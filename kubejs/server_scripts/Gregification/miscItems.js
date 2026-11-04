@@ -3,11 +3,11 @@
 
 //@ts-check
 ServerEvents.recipes(allthemods => {
-   
-    const replaceShaped = (recipeID, itemID, schema, ingredients) => {        
+
+    const replaceShaped = (recipeID, itemID, schema, ingredients) => {
         allthemods.shaped(itemID || recipeID, schema, ingredients).id(recipeID);
     }
-  
+
     //'simplemagnets:basic_demagnetization_coil', 'simplemagnets:advanced_demagnetization_coil','simplemagnets:basicmagnet','simplemagnets:advancedmagnet',
     allthemods.shapeless('simplemagnets:basic_demagnetization_coil', ['simplemagnets:basicmagnet', 'gtceu:lv_machine_hull']).id('gregification:basic_demagnetization_coil');
 
@@ -25,6 +25,8 @@ ServerEvents.recipes(allthemods => {
         C: "#gtceu:circuits/lv"
     }).id('gregification:basicmagnet');
 
+    
+
     allthemods.shaped('simplemagnets:advancedmagnet', [
         'T L',
         'ERE',
@@ -38,40 +40,40 @@ ServerEvents.recipes(allthemods => {
     }).id('gregification:advancedmagnet');
 
     allthemods.shaped('gtceu:element_fire', [
-		' E ',
-		'EBE',
-		' E '
-	], {	
-		E: 'gtceu:elemental_fire_singularity',
-		B: 'gtceu:element_blank'
-	}).id('gregification:element_fire');
+        ' E ',
+        'EBE',
+        ' E '
+    ], {
+        E: 'gtceu:elemental_fire_singularity',
+        B: 'gtceu:element_blank'
+    }).id('gregification:element_fire');
 
     allthemods.shaped('gtceu:element_water', [
-		' E ',
-		'EBE',
-		' E '
-	], {		
-		E: 'gtceu:elemental_water_singularity',
-		B: 'gtceu:element_blank'
-	}).id('gregification:element_water');
+        ' E ',
+        'EBE',
+        ' E '
+    ], {
+        E: 'gtceu:elemental_water_singularity',
+        B: 'gtceu:element_blank'
+    }).id('gregification:element_water');
 
     allthemods.shaped('gtceu:element_air', [
-		' E ',
-		'EBE',
-		' E '
-	], {		
-		E: 'gtceu:elemental_air_singularity',
-		B: 'gtceu:element_blank'
-	}).id('gregification:element_air');
+        ' E ',
+        'EBE',
+        ' E '
+    ], {
+        E: 'gtceu:elemental_air_singularity',
+        B: 'gtceu:element_blank'
+    }).id('gregification:element_air');
 
     allthemods.shaped('gtceu:element_earth', [
-		' E ',
-		'EBE',
-		' E '
-	], {		
-		E: 'gtceu:elemental_earth_singularity',
-		B: 'gtceu:element_blank'
-	}).id('gregification:element_earth');
+        ' E ',
+        'EBE',
+        ' E '
+    ], {
+        E: 'gtceu:elemental_earth_singularity',
+        B: 'gtceu:element_blank'
+    }).id('gregification:element_earth');
 
     allthemods.shaped('projecte:philosophers_stone',
         [
@@ -113,7 +115,7 @@ ServerEvents.recipes(allthemods => {
             E: "gtceu:quantum_eye",
             P: "#forge:plates/end_steel"
         }
-        
+
     ).id("gregification:advanced_collector")
 
 
@@ -143,7 +145,7 @@ ServerEvents.recipes(allthemods => {
             E: "enderchests:ender_chest"
         }
     );
-    
+
     // --- ENDER TANK ---
     replaceShaped("endertanks:bucket", "endertanks:ender_bucket",
         [
@@ -157,12 +159,12 @@ ServerEvents.recipes(allthemods => {
             B: "endertanks:ender_tank"
         }
     );
-    
+
     //--- ENTANGLED ---
     replaceShaped("entangled:block", null,
         ['PLP',
-         'LBL',
-         'POP'
+            'LBL',
+            'POP'
         ],
         {
             B: "gtceu:magical_bio_composite",
@@ -174,10 +176,10 @@ ServerEvents.recipes(allthemods => {
     );
     replaceShaped("entangled:item", null,
         [' PL',
-         'POP',
-         'OP '
+            'POP',
+            'OP '
         ],
-        {            
+        {
             P: "#forge:plates/enderium",
             O: "#forge:rods/long/unobtainium",
             L: "enderio:vibrant_crystal"
@@ -257,7 +259,7 @@ ServerEvents.recipes(allthemods => {
             C: "#forge:gears/deorum"
         }
     );
-    
+
     replaceShaped("easy_villagers:iron_farm", null,
         [
             'GGG',
@@ -287,7 +289,7 @@ ServerEvents.recipes(allthemods => {
         }
     );
     //---teleport pad---
-    replaceShaped("allthemodium:teleport_pad",null,
+    replaceShaped("allthemodium:teleport_pad", null,
         [
             'GEG',
             'GCG',
@@ -302,16 +304,49 @@ ServerEvents.recipes(allthemods => {
     );
 
     allthemods.recipes.gtceu.assembler('gregification:backpack_assembly')
-            .itemInputs(
-                'ironjetpacks:strap',
-                '#forge:chests/wooden',
-                '4x #forge:leather',
-                '4x #forge:string'
-            )
-            .inputFluids('#forge:glue 576')
-            .itemOutputs('sophisticatedbackpacks:backpack')
-            .duration(600)
-            .EUt(LV);
+        .itemInputs(
+            'ironjetpacks:strap',
+            '#forge:chests/wooden',
+            '4x #forge:leather',
+            '4x #forge:string'
+        )
+        .inputFluids('#forge:glue 576')
+        .itemOutputs('sophisticatedbackpacks:backpack')
+        .duration(600)
+        .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:silent_blueprint')
+        .itemInputs(
+            '4x #forge:paper',
+            '#forge:small_dusts/redstone'
+        )
+        .inputFluids('#forge:ink 144')
+        .itemOutputs('silentgear:blueprint_paper')
+        .duration(600)        
+        .EUt(LV);
+
+    allthemods.recipes.gtceu.assembler('gregification:silent_blueprint_wood')
+        .itemInputs(
+            '4x #forge:paper',
+            '#forge:small_dusts/wood'
+        )
+        .inputFluids('#forge:glue 144')
+        .itemOutputs('silentgear:template_board')
+        .duration(600)        
+        .EUt(LV);
+   
+    allthemods.recipes.gtceu.assembler('gregification:greg_blueprint')
+        .itemInputs(
+            '4x #forge:paper',
+            '#forge:small_dusts/lapis',            
+
+        )        
+        .inputFluids('#forge:ink 144')
+        .itemOutputs('gtceu:blueprint_blank')
+        .duration(600)
+        .EUt(LV);
+
+
     /*
     //backpacks
     const backpackDuration = 600;

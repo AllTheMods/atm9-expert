@@ -163,6 +163,49 @@ ServerEvents.recipes(allthemods => {
         null
     )
 
+
+    hephaestus(
+        [
+            'minecraft:nether_star',
+            '4x #forge:double_plates/abyssal',
+            'forbidden_arcanus:soulless_sand'
+        ],
+        [
+            '#forge:soul 500',
+            '#forge:blood 2500',
+            '#forge:aureal 500'
+        ],
+        ['forbidden_arcanus:dark_nether_star'],
+        600,
+        IV,
+        null,
+        'gregification:hephaestus_forge/dark_nether_star'
+    )
+
+    hephaestus(
+        [
+            '#forge:exquisite_gems/eternal',
+            '#forge:exquisite_gems/oblivion_essence',
+            'evilcraft:piercing_vengeance_focus',
+            'forbidden_arcanus:maledictus_pact',
+            '4x #forge:frames/bedrockium',
+            'waystones:warp_dust',
+            '#forge:singularities/garmonbozia',
+            'forbidden_arcanus:dark_nether_star',
+            'gtceu:camphor_incense'
+        ],
+        [
+            "#forge:aureal 25000",
+            '#forge:blood 250000',
+            '#forge:primordial_cosmic_soup 10000'
+            
+        ],
+        "allthetweaks:oblivion_shard",
+        4800,
+        LuV,
+        null
+    )
+
     //ferrognetic mixture
     hephaestus(
         [

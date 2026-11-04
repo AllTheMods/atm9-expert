@@ -65,12 +65,19 @@ ServerEvents.recipes(allthemods => {
     const launchEUt = UV;
     const launchArrows = 1024;
     const neuronChance = 500;
+    const curseChance = 5000;
     const selfAwareData = 1254;
 
     allthemods.recipes.gtceu.subatomic_projectile_launcher('gregification:subatomic_projectile_launch')
         .itemInputs(launchArrows + 'x minecraft:arrow')
         .notConsumable('hostilenetworks:blank_data_model')
         .chancedOutput('gtceu:raw_model_neuron', neuronChance, 0)
+        .duration(launchDuration)
+        .EUt(launchEUt);
+
+    allthemods.recipes.gtceu.subatomic_projectile_launcher('gregification:curse_breaker')
+        .itemInputs(launchArrows + 'x minecraft:arrow', '#forge:ingots/atm_star')                
+        .chancedOutput('gtceu:curse_breaker', curseChance, 1000)
         .duration(launchDuration)
         .EUt(launchEUt);
 
