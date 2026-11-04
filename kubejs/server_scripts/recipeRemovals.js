@@ -117,7 +117,7 @@ ServerEvents.recipes(allthemods => {
 
     
     const moreRemovals = [
-        'mekanism:processing/bronze/ingot/from_nuggets',
+        'mekanism:processing/bronze/ingot/from_nuggets', 'bloodmagic:sacrificial_dagger',
         'projecte:alchemical_coal', 'projecte:conversions/mobius_fuel_to_alchemical_coal',
         'projecte:mobius_fuel', 'projecte:conversions/aeternalis_fuel_to_mobius_fuel',
         'projecte:aeternalis_fuel', 'projecte:conversions/mobius_fuel_to_alchemical_coal',

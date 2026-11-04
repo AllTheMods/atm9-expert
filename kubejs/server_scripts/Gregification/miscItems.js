@@ -303,6 +303,19 @@ ServerEvents.recipes(allthemods => {
         }
     );
 
+    allthemods.shaped('bloodmagic:sacrificialdagger',
+        [
+            ' I ',
+            'DID',
+            ' G '
+        ],
+        {
+            I: "#forge:plates/iron",
+            D: "evilcraft:dark_gem",
+            G: "#forge:plates/gold"
+        }
+    ).id('gregification:sacrificial_dagger')
+
     allthemods.recipes.gtceu.assembler('gregification:backpack_assembly')
         .itemInputs(
             'ironjetpacks:strap',
