@@ -1104,5 +1104,10 @@
     "block.gtceu.lattice_casing": "Lattice Casing",
     "block.gtceu.emitter_coil_casing": "Emitter Coil Casing",
     "block.gtceu.print_bed_casing": "Print Bed Casing",
-    "block.gtceu.emitter_head_casing": "Emitter Head Casing"
+    "block.gtceu.emitter_head_casing": "Emitter Head Casing",
+    "block.gtceu.star_frame_casing": "Star Frame Casing",
+    "block.gtceu.star_internal_casing": "Star Internal Casing",
+    "block.gtceu.star_pipe_casing": "Star Pipe Casing",
+    "block.gtceu.star_assembler": "Star Assembler",
+    "gtceu.star_assembler": "ATM Star Assembly Complex"
 }

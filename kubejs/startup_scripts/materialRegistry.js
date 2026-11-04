@@ -562,7 +562,7 @@ const materials = [
         .unify({ ingot: 'allthetweaks:atm_star', block: 'allthetweaks:atm_star_block', nugget: 'allthetweaks:atm_star_shard' }),
     
     new MaterialDef('atm_trio')
-        .dust().color(0x9A9F7C).iconSet('SHINY').components('1x allthemodium, 1x vibranium, 1x unobtainium').formula('AtmTrio'),
+        .dust().ingot().block().color(0x9A9F7C).iconSet('SHINY').components('1x allthemodium, 1x vibranium, 1x unobtainium').formula('AtmTrio'),
 
     new MaterialDef('unobtainium_allthemodium_alloy')
         .dust().ingot().color(0xBD5D5E).iconSet('SHINY').components('1x unobtainium, 1x allthemodium').formula('⬙⟡')
@@ -1538,7 +1538,9 @@ const materials = [
         .byproducts(['gold', 'sulfur', 'nether_quartz'])
         .ignoreAllOrePrefixes(),
 
-    new MaterialDef('crimson_iron').ore().color(0xee4f7f).iconSet('METALLIC')
+    
+
+    new MaterialDef('crimson_iron').ore().ingot().flags(GTMaterialFlags.GENERATE_PLATE).color(0xee4f7f).iconSet('METALLIC')
         .unify({ ingot: 'silentgear:crimson_iron_ingot', block: 'silentgear:crimson_iron_block', nugget: 'silentgear:crimson_iron_nugget', dust: 'silentgear:crimson_iron_dust', rawOre: 'silentgear:raw_crimson_iron', oreNetherrack: 'silentgear:crimson_iron_ore' })
         .byproducts(['iron', 'redstone', 'nether_quartz']),
 

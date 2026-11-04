@@ -421,8 +421,8 @@ ServerEvents.recipes(allthemods => {
 
             if (ritual.fluids && ritual.fluids.length > 0) {
                 ritual.fluids.forEach(f => {
-                    let fluidAmount = (f.amount / 100) * 4;
-                    recipe.inputFluids(Fluid.of(f.fluid, fluidAmount));
+                    let fluidAmount = f.fluid.charAt(0) === '#' ? f.amount : Math.round((f.amount / 100) * 4);
+                    recipe.inputFluids(`${f.fluid} ${fluidAmount}`);
                 });
             }
         }
@@ -602,7 +602,7 @@ ServerEvents.recipes(allthemods => {
         '4x #forge:plates/technetium',
         'botania:rune_pride'
 
-    ],'allthetweaks:withers_compass','atm_awakening','4800','gregification:withers_compass')
+    ],'allthetweaks:withers_compass','atm_awakening','4800','withers_compass')
 
     addRitual(
         ['#forge:dusts/iron', '#forge:dusts/gold', '#forge:dusts/copper', '#forge:dusts/silver'],
