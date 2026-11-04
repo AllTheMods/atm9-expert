@@ -1,7 +1,4 @@
 {
-  "ldlib": {
-    "connection": "gtceu:block/casings/star_internal_casing/star_internal_casing_ctm"
-  },
   "animation": {
     "frametime": 2,
     "interpolate": false

@@ -26,7 +26,7 @@ ServerEvents.recipes(allthemods => {
         if (program) recipe.circuit(program);
     };
 
-    addMixer(['#forge:dusts/thorn_rose', '#forge:dusts/oblivion_essence'], '2x gtceu:oblivion_essence_dust', LuV, 800);
+    addMixer(['#forge:dusts/thorn_rose', '#forge:dusts/oblivion'], '2x gtceu:oblivion_essence_dust', LuV, 800);
     addMixer(['#forge:dusts/unobtainium_allthemodium_alloy', '#forge:dusts/unobtainium_vibranium_alloy', '#forge:dusts/vibranium_allthemodium_alloy'], '2x gtceu:atm_trio_dust', ZPM, 1400);
     addMixer(['3x #forge:dusts/neodymium', '#forge:dusts/promethium'], '4x gtceu:neodymium_promethium_dopant_dust', ZPM, 400);
     addMixer(['3x #forge:dusts/neodymium', '#forge:dusts/terbium'], '4x gtceu:neodymium_terbium_dopant_dust', ZPM, 400);
