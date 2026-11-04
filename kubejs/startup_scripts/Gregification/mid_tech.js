@@ -47,6 +47,8 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
 })
 
 GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
+    var chanceBoost = Java.loadClass('com.gregtechceu.gtceu.api.recipe.chance.boost.ChanceBoostFunction').OVERCLOCK;
+    GTRecipeTypes.get('subatomic_projectile_launcher').setChanceFunction(chanceBoost);
     allthemods.create('subatomic_projectile_launcher', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('subatomic_projectile_launcher')
