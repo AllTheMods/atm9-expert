@@ -23,7 +23,7 @@ ServerEvents.recipes(allthemods => {
         .notConsumable('6x gtceu:uev_emitter')
         .notConsumable('gtceu:samarium_cobalt_magnetic_rotor')
         .inputFluids('#forge:sodium_vapor 8000')
-        .inputFluids('#forge:liquid_helium 100')
+        .inputFluids('#forge:liquid_helium 10000')
         .outputFluids('gtceu:laser_cooled_sodium 4000')
         .duration(coolDuration)
         .EUt(coolEut)

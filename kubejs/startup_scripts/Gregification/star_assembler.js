@@ -70,7 +70,7 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
             .build()
         )
         .workableCasingModel(
-            'gtceu:block/casings/star_pipe_casing/star_pipe_casing',
+            'gtceu:block/casings/star_internal_casing/star_internal_casing',
             'gtceu:block/multiblock/star_assembler'
         )
 })

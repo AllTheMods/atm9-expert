@@ -562,7 +562,7 @@ const materials = [
         .unify({ ingot: 'allthetweaks:atm_star', block: 'allthetweaks:atm_star_block', nugget: 'allthetweaks:atm_star_shard' }),
     
     new MaterialDef('atm_trio')
-        .dust().ingot().block().color(0x9A9F7C).iconSet('SHINY').components('1x allthemodium, 1x vibranium, 1x unobtainium').formula('AtmTrio'),
+        .dust().ingot().color(0x9A9F7C).iconSet('SHINY').components('1x allthemodium, 1x vibranium, 1x unobtainium').formula('AtmTrio'),
 
     new MaterialDef('unobtainium_allthemodium_alloy')
         .dust().ingot().color(0xBD5D5E).iconSet('SHINY').components('1x unobtainium, 1x allthemodium').formula('⬙⟡')

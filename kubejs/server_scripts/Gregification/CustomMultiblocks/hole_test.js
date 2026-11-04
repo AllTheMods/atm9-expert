@@ -23,8 +23,8 @@ ServerEvents.recipes(allthemods => {
         {
             in: 'gtceu:tesseract',
             resonance: 200,
-            packet1: {Out: 1, circuit: 1},
-            packet2: {Out: 1024, circuit: 2},
+            packet1: {Out: 1, circuit: 3},
+            packet2: {Out: 1024, circuit: 4},
             final: 'gtceu:stabilized_tesseract',
             additional: ['#forge:frames/infinity', '4x #forge:plates/adamantium', '4x #forge:plates/sunnarium', '4x #forge:plates/neutronium', '4x #forge:plates/lunarium']
         }
