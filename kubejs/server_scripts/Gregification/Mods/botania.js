@@ -610,6 +610,23 @@ ServerEvents.recipes(allthemods => {
         .duration(1000)
         .EUt(ZPM);
 
+    allthemods.recipes.gtceu.elven_forge('gregification/elven_forge/improbable_probability_device')
+        .itemInputs(
+            '32x #forge:exquisite_gems/nitro_crystal',            
+            'gtceu:tachyon',
+            '32x #forge:frames/alfsteel',
+            '4x gtceu:samarium_cobalt_magnetic_rotor',
+            '#forge:plates/adamantium',
+            'industrialforegoing:machine_frame_supreme',
+            'enderio:sentient_ender',
+            '8x gtceu:selenium_rectifier',
+            '#forge:plates/tenebrium'
+        )
+        .itemOutputs('allthetweaks:improbable_probability_device')
+        .inputFluids('allthemodium:soul_lava 10000', '#forge:hafnium 7200', '#forge:elementium 7200')
+        .duration(4000)
+        .EUt(ZPM);
+
     allthemods.recipes.gtceu.electric_blast_furnace(`gregification:blasting_adamantium_dust`)
         .itemInputs('#forge:dusts/adamantium')
         .itemOutputs('gtceu:hot_adamantium_ingot')

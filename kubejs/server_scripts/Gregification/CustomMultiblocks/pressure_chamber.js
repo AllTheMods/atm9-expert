@@ -191,17 +191,19 @@ ServerEvents.recipes(allthemods => {
 
     //pulsating black hole
     addPC(
-        ['mythicbotany:mjoellnir',
-            'apotheosis:sigil_of_withdrawal',
-            'evilcraft:lightning_bomb',
-            'forbidden_arcanus:dark_rune_block',
-            'thermal_extra:abyssal_rf_coil_xfer_augment',
-            'occultism:stable_wormhole',
-            'irons_spellbooks:fire_upgrade_orb',            
-            'ae2:quantum_ring',
-            Item.of('pneumaticcraft:micromissiles', '{Damage:0}').strongNBT()],
+        [
+            'industrialforegoing:black_hole_controller',
+            '64x #forge:fine_wires/allthemodium',
+            '16x #forge:storage_blocks/empowered_void_crystal',
+            'gtceu:plutonic_quark',
+            'gtceu:californium_neutron_source',
+            '16x #forge:plates/sunnarium',
+            '16x #forge:plates/lunarium',
+            'gtceu:preon',
+            '#forge:gems/antimatter'
+        ],
         'allthetweaks:pulsating_black_hole',
-        null,
+        ['#forge:terrazine 4000','#forge:vibranium 14400', 'gtceu:super_critical_steam 2000'],
         null,
         5,
         null,

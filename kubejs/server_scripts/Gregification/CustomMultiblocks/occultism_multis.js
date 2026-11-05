@@ -28,10 +28,31 @@ ServerEvents.recipes(allthemods => {
         crystal: 'occultism:spirit_attuned_crystal',
         skull: 'minecraft:skeleton_skull',
         wither: 'minecraft:wither_skeleton_skull',
-        incense: 'gtceu:camphor_incense'
+        incense: 'gtceu:camphor_incense',
+        atm_field: 'gtceu:luv_field_generator',
+        atm_circuit: '#gtceu:circuits/zpm',
+        piglich: 'allthemodium:piglich_heart'
     };
 
     const rituals = [
+        {
+            tier: 7,
+            name: 'atm_awakening',
+            fluids: [
+                { fluid: chalks.pink, amount: 720 },
+                { fluid: chalks.light_blue, amount: 720 },
+                { fluid: chalks.green, amount: 720 },
+                { fluid: '#forge:necrotic_acid', amount: 32000 },
+                { fluid: '#forge:terephthalic_acid', amount: 2000 },
+                { fluid: '#forge:hexafluorozirconic_acid', amount: 16000 }
+            ],
+             items: [
+                { item: regalia.incense, amount: 8 },
+                { item: regalia.atm_field, amount: 8 },
+                { item: regalia.atm_circuit, amount: 8 },
+                { item: regalia.piglich, amount: 8 }
+            ]
+        },
         {
             tier: 7,
             name: 'osorins_unbound_calling',
@@ -376,7 +397,7 @@ ServerEvents.recipes(allthemods => {
         const baseDuration = (duration) ? duration * 20 : 100;
 
         
-        const eu = GTValues.VA[ritual.tier + 1];
+        const eu = GTValues.VA[ritual.tier];
         const finalDuration = baseDuration * ritual.tier;
 
         const baseID = customId
@@ -400,8 +421,8 @@ ServerEvents.recipes(allthemods => {
 
             if (ritual.fluids && ritual.fluids.length > 0) {
                 ritual.fluids.forEach(f => {
-                    let fluidAmount = (f.amount / 100) * 4;
-                    recipe.inputFluids(Fluid.of(f.fluid, fluidAmount));
+                    let fluidAmount = f.fluid.charAt(0) === '#' ? f.amount : Math.round((f.amount / 100) * 4);
+                    recipe.inputFluids(`${f.fluid} ${fluidAmount}`);
                 });
             }
         }
@@ -570,6 +591,18 @@ ServerEvents.recipes(allthemods => {
 
     //console.error (`[ritual_auto_import] Finished processing ${i} occultism:ritual recipes.`);
     
+    addRitual([
+        'occultism:chalk_void',
+        '#forge:singularities/compressed_iron',
+        '#forge:singularities/hellforged',
+        '4x #forge:plates/kevlar',
+        '4x gtceu:betavoltaic_microcell',
+        'occultism:witherite_dust',
+        '16x #forge:exquisite_gems/blazing_pyrotheum',
+        '4x #forge:plates/technetium',
+        'botania:rune_pride'
+
+    ],'allthetweaks:withers_compass','atm_awakening','4800','withers_compass')
 
     addRitual(
         ['#forge:dusts/iron', '#forge:dusts/gold', '#forge:dusts/copper', '#forge:dusts/silver'],

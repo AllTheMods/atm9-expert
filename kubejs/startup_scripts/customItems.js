@@ -3,6 +3,16 @@
 
 StartupEvents.registry('item', allthemods => {
 
+    /*End Game Items
+    42
+    stabilized tesseract
+    cosmic copendium
+    cosmic research
+    curse breaker
+    greg star
+
+
+    */
     allthemods.create('gtceu:bose_einstein_condensate')
         .displayName('Bose-Einstein Condensate')
         .tooltip('Matter at the edge of absolute zero')
@@ -70,6 +80,13 @@ StartupEvents.registry('item', allthemods => {
         .displayName('Atomic Core')
         .tooltip('Atomic Core')
         //.rarity('ie_masterwork')
+
+    allthemods.create('gtceu:stabilized_tesseract')
+        .displayName('Stabilized Tesseract')
+
+    allthemods.create('gtceu:curse_breaker')
+        .displayName('Curse Breaker')
+        .tooltip('For Jonh')
 
     allthemods.create('gtceu:blood_coated_blade')        
         .displayName('Blood Coated Blade')

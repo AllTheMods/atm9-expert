@@ -102,6 +102,30 @@ ServerEvents.recipes(allthemods => {
         200
     );
 
+    addMA(
+        [            
+            '4x mysticalexpansion:divinium_essence',
+            '4x #forge:gems/awakened_supremium',
+            '16x farmingforblockheads:red_fertilizer',
+            '4x #forge:dusts/picolinic_acid',
+            '#forge:singularities/source',
+            '#forge:singularities/mana_essence',
+            '8x #forge:frames/swift_alloy',
+            '64x botanypots:terracotta_botany_pot',
+            'occultism:cruelty_essence'
+
+        ],        
+        [
+            '#forge:fire_essence 28800',
+            '#forge:water_essence 28800',
+            '#forge:air_essence 28800',
+            '#forge:earth_essence 28800'
+        ],        
+        'mysticalagradditions:creative_essence',
+        LuV,
+        2000
+    );
+
     const awakenedBlock = Item.of('allthemodium:unobtainium_vibranium_alloy_block', "{HideFlags:1,display:{Name:'[{\"text\":\"Awakened Unobtainium-Vibranium Alloy Block\",\"italic\":false}]'}}").enchant('unbreaking', 1).toJson()
     addMA(
         [            
@@ -123,10 +147,10 @@ ServerEvents.recipes(allthemods => {
     
     addMA(
         [            
-            '32x #forge:singularities/fiery',
-            '32x #forge:singularities/steeleaf',
-            '32x #forge:singularities/carminite',
-            '32x #forge:singularities/knightmetal',
+            '#forge:singularities/fiery',
+            '#forge:singularities/steeleaf',
+            '#forge:singularities/carminite',
+            '#forge:singularities/knightmetal',
         ],        
         [
             `#forge:fire_essence ${quantity2}`,
@@ -177,6 +201,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('4x farmingforblockheads:red_fertilizer')
         .inputFluids('#forge:liquid_fertilizer 1000')
         .duration(120)
+        .circuit(1)
         .EUt(HV);
 
     // better recipe
@@ -185,7 +210,25 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('16x farmingforblockheads:red_fertilizer')
         .inputFluids('#forge:liquid_fertilizer 1000')
         .duration(120)
+        .circuit(2)
         .EUt(EV);
+
+    allthemods.recipes.gtceu.mixer(`allthemods:gregification/assembler/green_fertilizer_x4`)
+        .itemInputs(Clostridium, '#forge:dusts/phosphorus_pentoxide', '#forge:dusts/calcium_nitrate', '#forge:dusts/thallium_sulfate', '#forge:dusts/potassium_carbonate')
+        .itemOutputs('4x farmingforblockheads:red_fertilizer')
+        .inputFluids('#forge:liquid_fertilizer 1000')
+        .duration(120)
+        .circuit(3)
+        .EUt(HV);
+
+    // better recipe
+    allthemods.recipes.gtceu.mixer(`allthemods:gregification/assembler/green_fertilizer_16x`)
+        .itemInputs(Clostridium, '#forge:dusts/phosphorus_pentoxide', '#forge:dusts/calcium_nitrate', '#forge:dusts/thallium_sulfate', '#forge:dusts/potash', '#forge:dusts/iron_hydroxide')
+        .itemOutputs('16x farmingforblockheads:red_fertilizer')
+        .inputFluids('#forge:liquid_fertilizer 1000')
+        .duration(120)
+        .circuit(4)
+        .EUt(EV);   
 
     //esences
     essences.forEach(essence => {

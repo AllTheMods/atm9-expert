@@ -17,13 +17,13 @@ ServerEvents.recipes(allthemods => {
             .inputFluids(`#forge:${plasma}_plasma ${plasmaExchnage}`, water)
             .outputFluids(`gtceu:${plasma} ${plasmaExchnage}`, steam)
             .duration(plasmaExchangeDuration)
-            .EUt(UV);
+            .EUt(ZPM);
 
         allthemods.recipes.gtceu.super_critical_heat_exchanger(`gregification:sche/${plasma}_heating`)
             .inputFluids(`#forge:${plasma} ${plasmaExchnage}`, steam)
             .outputFluids(`gtceu:${plasma}_plasma ${plasmaExchnage}`, water)
             .duration(plasmaExchangeDuration)
-            .EUt(UV);
+            .EUt(ZPM);
     });
     
 });

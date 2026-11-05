@@ -49,8 +49,14 @@ allthemods.recipes.gtceu.macerator('gregification:arcane_crystal_dust')
 allthemods.recipes.gtceu.macerator('gregification:thorn_rose_dust')
         .itemInputs('twilightforest:thorn_rose')
         .itemOutputs('gtceu:thorn_rose_dust')
-        .duration(800)
-        .EUt(UV);
+        .duration(100)
+        .EUt(HV);
+
+allthemods.recipes.gtceu.macerator('gregification:oblivion_flower_dust')
+        .itemInputs('naturesaura:end_flower')
+        .itemOutputs('gtceu:oblivion_dust')
+        .duration(100)
+        .EUt(HV);
 
 allthemods.recipes.gtceu.macerator('gregification:waystone_dust')
         .itemInputs('#waystones:waystones')

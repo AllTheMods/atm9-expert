@@ -1007,7 +1007,13 @@
     "material.gtceu.slime_waste_water": "Slime Waste Water",
     "material.gtceu.blazing_energetic_alloy": "Blazing Energetic Alloy",
     "material.gtceu.tiny_atm_star_dust": "Tiny ATM Star Dust",
-
+    "material.gtceu.atm_trio": "ATM Trio",
+    "material.gtceu.ink": "Ink",    
+    "material.gtceu.oblivion": "Oblivion",
+    "material.gtceu.oblivion_essence": "Oblivion Essence",
+    "material.gtceu.sodium_vapor": "Sodium Vapor",
+    "material.gtceu.laser_cooled_sodium": "Laser-Cooled Sodium",
+    "material.gtceu.ultracold_sodium": "Ultracold Sodium",
     "gtceu.destination_encoder_t1": "Destination Encoder Mk1",
     "gtceu.destination_encoder_t2": "Destination Encoder Mk2",
     "gtceu.destination_encoder_t3": "Destination Encoder Mk3",
@@ -1098,5 +1104,10 @@
     "block.gtceu.lattice_casing": "Lattice Casing",
     "block.gtceu.emitter_coil_casing": "Emitter Coil Casing",
     "block.gtceu.print_bed_casing": "Print Bed Casing",
-    "block.gtceu.emitter_head_casing": "Emitter Head Casing"
+    "block.gtceu.emitter_head_casing": "Emitter Head Casing",
+    "block.gtceu.star_frame_casing": "Star Frame Casing",
+    "block.gtceu.star_internal_casing": "Star Internal Casing",
+    "block.gtceu.star_pipe_casing": "Star Pipe Casing",
+    "block.gtceu.star_assembler": "Star Assembler",
+    "gtceu.star_assembler": "ATM Star Assembly Complex"
 }

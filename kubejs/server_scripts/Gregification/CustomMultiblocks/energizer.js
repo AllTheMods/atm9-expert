@@ -33,6 +33,50 @@ ServerEvents.recipes(allthemods => {
             .addData('ebf_temp', tempTiers[tier]);
     };
 
+    
+
+    addEnergize(
+        'mysticalagradditions:insanium_coal',
+        'projecte:alchemical_coal',
+        5000,
+        3,
+        'alchemical_coal'
+    );
+
+    addEnergize(
+        'projecte:alchemical_coal',
+        'projecte:mobius_fuel',
+        5000,
+        4,
+        'mobius_fuel'
+    );
+
+    addEnergize(
+        'projecte:mobius_fuel',
+        'projecte:aeternalis_fuel',
+        5000,
+        5,
+        'aeternalis_fuel'
+    );
+
+    addEnergize(
+        [
+            'twilightforest:twilight_portal_miniature_structure',
+            'projecte:aeternalis_fuel',
+            '4x #forge:plates/insanite',
+            '#forge:storage_blocks/tyrian_steel',
+            '4x powah:capacitor_nitro',
+            '4x #forge:frames/strontium_aluminate',
+            'gtceu:thorium_berkelium_single',
+            'gtceu:thermal_spark',
+            '4x #forge:exquisite_gems/zephyrean_aerotheum'
+        ],
+        'allthetweaks:philosophers_fuel',
+        100000,
+        6,
+        'philosophers_fuel'
+    );
+
     addEnergize(
         ['#forge:ingots/iron', '#forge:ingots/gold'],
         '2x powah:steel_energized',

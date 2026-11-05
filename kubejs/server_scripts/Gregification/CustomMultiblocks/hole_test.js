@@ -10,34 +10,58 @@ ServerEvents.recipes(allthemods => {
     const ebcEU = UV;
 
 
-    //test recipes
-    allthemods.recipes.gtceu.black_hole('gregification:test/black_hole_feed_er')
-        .itemInputs('gtceu:bose_einstein_condensate')
-        .output(GTX.BRIDGE, 'einstein_rosen item gtceu:bose_einstein_condensate 1')
-        .circuit(1)
-        .duration(feedEBCDuration);
 
 
-    allthemods.recipes.gtceu.black_hole('gregification:test/black_hole_tr')
-        .itemInputs('1024x gtceu:bose_einstein_condensate')
-        .output(GTX.BRIDGE, 'einstein_rosen item gtceu:bose_einstein_condensate 1024')
-        .circuit(2)
-        .duration(feedEBCDuration);
+    const holeLoop = [
+        {
+            in: 'gtceu:bose_einstein_condensate',
+            resonance: 200,
+            packet1: {Out: 1, circuit: 1},
+            packet2: {Out: 1024, circuit: 2},
+            final: 'gtceu:tesseract'
+        },
+        {
+            in: 'gtceu:tesseract',
+            resonance: 200,
+            packet1: {Out: 1, circuit: 3},
+            packet2: {Out: 1024, circuit: 4},
+            final: 'gtceu:stabilized_tesseract',
+            additional: ['#forge:frames/infinity', '4x #forge:plates/adamantium', '4x #forge:plates/sunnarium', '4x #forge:plates/neutronium', '4x #forge:plates/lunarium']
+        }
+    ]
+    holeLoop.forEach(loop => {
+        let b1 = allthemods.recipes.gtceu.black_hole(`gregification:test/black_hole_feed_${loop.in.replace(':', '_')}_1`)
+            .itemInputs(`${loop.packet1.Out}x ${loop.in}`)
+            .output(GTX.BRIDGE, `einstein_rosen item ${loop.in} ${loop.packet1.Out}`)
+            .circuit(loop.packet1.circuit)
+            .duration(feedEBCDuration);
 
-    allthemods.recipes.gtceu.white_hole('gregification:test/white_hole_release_er')
-        .input(GTX.BRIDGE, 'einstein_rosen item gtceu:bose_einstein_condensate 1')
-        .itemOutputs('gtceu:bose_einstein_condensate')
-        .output(GTX.BRIDGE, 'einstein_rosen data resonance 200')
-        .circuit(1)
-        .duration(releaseEBCDuration)
-        .EUt(ebcEU);
+        let b2 = allthemods.recipes.gtceu.black_hole(`gregification:test/black_hole_feed_${loop.in.replace(':', '_')}_2`)
+            .itemInputs(`${loop.packet2.Out}x ${loop.in}`)
+            .output(GTX.BRIDGE, `einstein_rosen item ${loop.in} ${loop.packet2.Out}`)
+            .circuit(loop.packet2.circuit)
+            .duration(feedEBCDuration);
+        
+        let w1 = allthemods.recipes.gtceu.white_hole(`gregification:test/white_hole_release_${loop.in.replace(':', '_')}_1`)
+            .input(GTX.BRIDGE, `einstein_rosen item ${loop.in} ${loop.packet1.Out}`)
+            .itemOutputs(loop.in)
+            .output(GTX.BRIDGE, `einstein_rosen data resonance ${loop.resonance}`)
+            .circuit(loop.packet1.circuit)
+            .duration(releaseEBCDuration)
+            .EUt(ebcEU);
 
-    allthemods.recipes.gtceu.white_hole('gregification:test/white_hole_release_tr')
-        .input(GTX.BRIDGE, 'einstein_rosen item gtceu:bose_einstein_condensate 1024')
-        .itemOutputs('gtceu:tesseract')
-        .circuit(2)
-        .duration(releaseEBCDuration)
-        .EUt(ebcEU);
+        let w2 = allthemods.recipes.gtceu.white_hole(`gregification:test/white_hole_release_${loop.in.replace(':', '_')}_2`)
+            .input(GTX.BRIDGE, `einstein_rosen item ${loop.in} ${loop.packet2.Out}`)            
+            .itemOutputs(loop.final)
+            .output(GTX.BRIDGE, `einstein_rosen data resonance ${loop.resonance}`)
+            .circuit(loop.packet2.circuit)
+            .duration(releaseEBCDuration)
+            .EUt(ebcEU);
+            if (loop.additional) {
+                w2.itemInputs(loop.additional)                
+            }
+    });
+
 
     const blackHoleCasingDuration = 200
     const blackHoleCasingEut = UXV

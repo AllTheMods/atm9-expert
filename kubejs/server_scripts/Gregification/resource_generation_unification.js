@@ -199,7 +199,7 @@ ServerEvents.recipes(allthemods => {
     { n: 'monazite', t: 3, dim: 'end', lens: 5, y: [20, 58], miner: 'foliot' },
     { n: 'naquadah', t: 3, dim: 'end', lens: 6, y: [20, 45], miner: 'foliot' },
     { n: 'azure_silver', t: 3, dim: 'end', lens: 7, y: [29, 41], miner: 'foliot' },
-    { n: 'crimson_iron', t: 3, dim: 'end', lens: 7, y: [20, 32], miner: 'foliot' },
+    { n: 'crimson_iron', t: 2, dim: 'nether', lens: 6, y: [29, 41], miner: 'foliot' },
     { n: 'draconium', t: 3, dim: 'end', lens: 7, y: [35, 47], miner: 'foliot', ore: 'draconicevolution:end_draconium_ore' },
     { n: 'eclipsealloy', t: 3, dim: 'end', lens: 7, y: [25, 37], miner: 'foliot', ore: 'justdirethings:raw_eclipsealloy_ore', raw: 'justdirethings:raw_eclipsealloy' },
     { n: 'echo_shard', t: 3, dim: 'end', lens: 8, y: [20, 45], miner: 'foliot', mw: 20, lw: 1, item: 'minecraft:echo_shard' },

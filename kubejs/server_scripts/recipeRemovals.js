@@ -117,6 +117,13 @@ ServerEvents.recipes(allthemods => {
 
     
     const moreRemovals = [
+        'mekanism:processing/bronze/ingot/from_nuggets', 'bloodmagic:sacrificial_dagger',
+        'projecte:alchemical_coal', 'projecte:conversions/mobius_fuel_to_alchemical_coal',
+        'projecte:mobius_fuel', 'projecte:conversions/aeternalis_fuel_to_mobius_fuel',
+        'projecte:aeternalis_fuel', 'projecte:conversions/mobius_fuel_to_alchemical_coal',
+        
+        'silentgear:blueprint_paper', 'mekanism:atmstarshard/atm_star_shard', 'imersiveengineering:atmstarshard/atm_star_shard',
+        'silentgear:template_board', 'forbidden_arcanus:dark_nether_star',
         'alltheores:aluminum_gear', 'alltheores:iridium_gear', 'thermal:parts/lead_gear', 'railcraft:lead_gear',
         'thermal:parts/nickel_gear', 'railcraft:nickel_gear', 'alltheores:osmium_gear', 'alltheores:platinum_gear', 'thermal:parts/silver_gear', 
         'railcraft:silver_gear', 'railcraft:tin_gear', 'forestry:gear_tin', 'alltheores:uranium_gear', 'railcraft:zinc_gear', 'alltheores:zinc_gear', 
@@ -257,7 +264,7 @@ ServerEvents.recipes(allthemods => {
 
         'wirelesschargers:basic_wireless_player_charger', 'wirelesschargers:advanced_wireless_player_charger',
         'wirelesschargers:basic_wireless_block_charger', 'wirelesschargers:advanced_wireless_block_charger',
-        'gtceu:smelting/smelt_dust_germanium_to_ingot', 'farmingforblockheads:red_fertilizer', 'mekanism:structural_glass', 'mekanismgenerators:reactor/glass',
+        'gtceu:smelting/smelt_dust_germanium_to_ingot', 'farmingforblockheads:red_fertilizer', 'farmingforblockheads:green_fertilizer', 'mekanism:structural_glass', 'mekanismgenerators:reactor/glass',
         'productivebees:upgrades/time',
         'powah:crafting/capacitor_basic', 'powah:crafting/capacitor_hardened', 'powah:crafting/capacitor_blazing',
         'powah:crafting/capacitor_niotic', 'powah:crafting/capacitor_spirited', 'powah:crafting/capacitor_nitro',        

@@ -75,14 +75,18 @@ ServerEvents.recipes(allthemods => {
             '8x gtceu:germanium_diode',
             'industrialforegoing:laser_drill',
             '2x gtceu:data_module',
-            '16x gtceu:gravi_star',
+            'gtceu:gravi_star',
             '2x gtceu:zpm_emitter'
         )
         .inputFluids('industrialforegoing:ether_gas 1000', '#forge:enderium 36864', '#forge:meat 36864')
         .itemOutputs('allthetweaks:nexium_emitter')
         .duration(nexiumEmitterDuration)
-        .EUt(nexiumEmitterEut)
+        .EUt(nexiumEmitterEut);
+
+
 })
+
+
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
 // As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

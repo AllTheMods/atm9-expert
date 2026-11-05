@@ -114,7 +114,7 @@ ServerEvents.recipes(allthemods => {
 
     replaceShaped('functionalstorage:simple_compacting_drawer', null,
         [
-            'TPT',
+            'TTT',
             'SMS',
             'PTP'
         ],
@@ -126,7 +126,7 @@ ServerEvents.recipes(allthemods => {
         }
     );
     
-    allthemods.shapeless('functionalstorage:compacting_framed_drawer', ['functionalstorage:compacting_drawer', '#forge:frames/aluminium']).id('gregification:framed_compacting_drawer');
+    allthemods.shapeless('functionalstorage:compacting_framed_drawer',        ['functionalstorage:compacting_drawer', '#forge:frames/aluminium']).id('gregification:framed_compacting_drawer');
     allthemods.shapeless('functionalstorage:framed_simple_compacting_drawer', ['functionalstorage:simple_compacting_drawer', '#forge:frames/aluminium']).id('gregification:framed_simple_compacting_drawer');
     
 
