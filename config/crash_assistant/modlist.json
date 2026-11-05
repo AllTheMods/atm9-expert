@@ -565,13 +565,13 @@
     "curseForgeHash": 1042174266,
     "modrinthHash": "ab2cd0f0a409ea6f9b2f9bb67a57f3fe7077fd8b"
   },
-  "configuration-forge-1.20.1-3.1.0.jar": {
-    "jarName": "configuration-forge-1.20.1-3.1.0.jar",
+  "configuration-forge-3.1.1-1.20.1.jar": {
+    "jarName": "configuration-forge-3.1.1-1.20.1.jar",
     "modId": "configuration",
     "name": "Configuration",
-    "version": "3.1.0",
-    "curseForgeHash": 3130708032,
-    "modrinthHash": "8757a9f1d47f48463765d1d202cdadc41c84f6b0"
+    "version": "3.1.1",
+    "curseForgeHash": 2689846574,
+    "modrinthHash": "f27a1d1da0f9be72c5ff6ad588081c9491d8c366"
   },
   "connectedglass-1.1.14-forge-mc1.20.1.jar": {
     "jarName": "connectedglass-1.1.14-forge-mc1.20.1.jar",
@@ -1268,13 +1268,13 @@
     "curseForgeHash": 1691185042,
     "modrinthHash": "17e332d7192db5b7d54bccd8f7a9cadd8ceaa478"
   },
-  "gtextras-0.21.0.jar": {
-    "jarName": "gtextras-0.21.0.jar",
+  "gtextras-0.21.4.jar": {
+    "jarName": "gtextras-0.21.4.jar",
     "modId": "gtextras",
     "name": "GT Extras",
-    "version": "0.21.0",
-    "curseForgeHash": 2873563130,
-    "modrinthHash": "e4cf3116eae98096fb35e348fb7eccd707d71182"
+    "version": "0.21.4",
+    "curseForgeHash": 1563467559,
+    "modrinthHash": "189a40af738a907fee41a2d67bfd319e38a117cf"
   },
   "gtpipezcompat-1.20.1-1.0.0.jar": {
     "jarName": "gtpipezcompat-1.20.1-1.0.0.jar",
@@ -1420,13 +1420,13 @@
     "curseForgeHash": 3526522799,
     "modrinthHash": "fafa9ca25f05724221a5cede4891a491beaab960"
   },
-  "InventoryProfilesNext-forge-1.20-1.10.20.jar": {
-    "jarName": "InventoryProfilesNext-forge-1.20-1.10.20.jar",
-    "modId": "inventoryprofilesnext",
-    "name": "Inventory Profiles Next",
-    "version": "1.10.20",
-    "curseForgeHash": 2510845465,
-    "modrinthHash": "979e74fa10b24a7d7c4d9aeb5824b80f4f9235cf"
+  "invtweaks-1.20.1-1.2.2.jar": {
+    "jarName": "invtweaks-1.20.1-1.2.2.jar",
+    "modId": "invtweaks",
+    "name": "Inventory Tweaks Refoxed",
+    "version": "1.2.2",
+    "curseForgeHash": 388114874,
+    "modrinthHash": "37e62b3aebc73aa8830407cfaed588d582b28fc1"
   },
   "ironfurnaces-1.20.1-4.1.8.jar": {
     "jarName": "ironfurnaces-1.20.1-4.1.8.jar",
@@ -1505,6 +1505,14 @@
     "curseForgeHash": 2298786945,
     "modrinthHash": "3bbb49d85ee2f6a236f279816a62f0501d032db3"
   },
+  "jei_plus_plus-1.0.8a-1.20.1.jar": {
+    "jarName": "jei_plus_plus-1.0.8a-1.20.1.jar",
+    "modId": "jei_plus_plus",
+    "name": "JEI++",
+    "version": "1.0.8a-1.20.1",
+    "curseForgeHash": 3202527770,
+    "modrinthHash": "0d850c4540b1b3cb7c586695b746e33e62bdecc3"
+  },
   "jmi-forge-1.20.1-0.14-48.jar": {
     "jarName": "jmi-forge-1.20.1-0.14-48.jar",
     "modId": "jmi",
@@ -1553,6 +1561,14 @@
     "curseForgeHash": 3560569568,
     "modrinthHash": "2747c58f439c37a01139d35cab59ca1a54114009"
   },
+  "justzoom_forge_3.1.0_MC_1.20.1.jar": {
+    "jarName": "justzoom_forge_3.1.0_MC_1.20.1.jar",
+    "modId": "justzoom",
+    "name": "Just Zoom",
+    "version": "3.1.0",
+    "curseForgeHash": 3623352892,
+    "modrinthHash": "9b421058072bc809457832227d85b7ef268892a2"
+  },
   "kjsindustrialforegoing-1.0.jar": {
     "jarName": "kjsindustrialforegoing-1.0.jar",
     "modId": "kjsindustrialforegoing",
@@ -1560,6 +1576,14 @@
     "version": "1.0",
     "curseForgeHash": 2481270670,
     "modrinthHash": "4a2c5e7d00d41502b57dd6f06f0d6bb794307088"
+  },
+  "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar": {
+    "jarName": "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+    "modId": "konkrete",
+    "name": "Konkrete",
+    "version": "1.8.0",
+    "curseForgeHash": 3537653842,
+    "modrinthHash": "2019d821bed9071daabed43979433a5473ceee49"
   },
   "kotlinforforge-4.12.0-all.jar": {
     "jarName": "kotlinforforge-4.12.0-all.jar",
@@ -1598,14 +1622,6 @@
     "curseForgeHash": 288200020,
     "modrinthHash": "b341bc49b53a1e1e2566e369339ab66bb53167c6"
   },
-  "libIPN-forge-1.20-4.0.2.jar": {
-    "jarName": "libIPN-forge-1.20-4.0.2.jar",
-    "modId": "libipn",
-    "name": "libIPN",
-    "version": "4.0.2",
-    "curseForgeHash": 3322103168,
-    "modrinthHash": "3e7c7fcdc037a6ae3d9146e718d87fc83f88f6d5"
-  },
   "LibX-1.20.1-5.0.14.jar": {
     "jarName": "LibX-1.20.1-5.0.14.jar",
     "modId": "libx",
@@ -1630,13 +1646,13 @@
     "curseForgeHash": 1036440574,
     "modrinthHash": "1ec77a7df8adbf3290a296bf25b8f99f37a60020"
   },
-  "Mantle-1.20.1-1.11.117.jar": {
-    "jarName": "Mantle-1.20.1-1.11.117.jar",
+  "Mantle-1.20.1-1.11.128.jar": {
+    "jarName": "Mantle-1.20.1-1.11.128.jar",
     "modId": "mantle",
     "name": "Mantle",
-    "version": "1.11.117",
-    "curseForgeHash": 4130372343,
-    "modrinthHash": "0d6af73ad4f11fe685aa466cedd2786b7bc57245"
+    "version": "1.11.128",
+    "curseForgeHash": 1512280140,
+    "modrinthHash": "602bcad5fcb9f7a49c57f897cf4abe28bc8261d7"
   },
   "matc-1.6.0.jar": {
     "jarName": "matc-1.6.0.jar",
@@ -2222,13 +2238,13 @@
     "curseForgeHash": 3839877584,
     "modrinthHash": "8d008954747ad6633b85f3ccfa0523807a400e8b"
   },
-  "reliquary-1.20.1-2.0.66.1577.jar": {
-    "jarName": "reliquary-1.20.1-2.0.66.1577.jar",
+  "reliquary-1.20.1-2.0.67.1583.jar": {
+    "jarName": "reliquary-1.20.1-2.0.67.1583.jar",
     "modId": "reliquary",
     "name": "Reliquary",
-    "version": "2.0.66.1577",
-    "curseForgeHash": 4201117497,
-    "modrinthHash": "a7cce5273e05e211ff9d5eeeb93a6a2adde745b4"
+    "version": "2.0.67.1583",
+    "curseForgeHash": 3442080972,
+    "modrinthHash": "b69c367578d14d3b99f73ce7b48d0769b9c1685c"
   },
   "resourcefulconfig-forge-1.20.1-2.1.3.jar": {
     "jarName": "resourcefulconfig-forge-1.20.1-2.1.3.jar",
@@ -2443,21 +2459,21 @@
     "curseForgeHash": 4107514048,
     "modrinthHash": "e3ea1cefc51fe66d8225a3d2e3d3a97986b3359d"
   },
-  "sophisticatedcore-1.20.1-1.5.21.2444.jar": {
-    "jarName": "sophisticatedcore-1.20.1-1.5.21.2444.jar",
+  "sophisticatedcore-1.20.1-1.5.26.2457.jar": {
+    "jarName": "sophisticatedcore-1.20.1-1.5.26.2457.jar",
     "modId": "sophisticatedcore",
     "name": "Sophisticated Core",
-    "version": "1.5.21.2444",
-    "curseForgeHash": 726606758,
-    "modrinthHash": "29228c9c321d3f50afbe6ab3e180be6d3680a606"
+    "version": "1.5.26.2457",
+    "curseForgeHash": 2824403513,
+    "modrinthHash": "e4c32b7f1d42c8692ae1c2001d743a9eea52c771"
   },
-  "sophisticatedstorage-1.20.1-1.5.13.2212.jar": {
-    "jarName": "sophisticatedstorage-1.20.1-1.5.13.2212.jar",
+  "sophisticatedstorage-1.20.1-1.5.15.2220.jar": {
+    "jarName": "sophisticatedstorage-1.20.1-1.5.15.2220.jar",
     "modId": "sophisticatedstorage",
     "name": "Sophisticated Storage",
-    "version": "1.5.13.2212",
-    "curseForgeHash": 2869242853,
-    "modrinthHash": "ae98354b779e4c0011ddb51fae44a64646995c0a"
+    "version": "1.5.15.2220",
+    "curseForgeHash": 2133337487,
+    "modrinthHash": "d592e3282234da7b6ab73cc0b12f1e0eda2da067"
   },
   "sophisticatedstoragecreateintegration-1.20.1-0.1.26.245.jar": {
     "jarName": "sophisticatedstoragecreateintegration-1.20.1-0.1.26.245.jar",
@@ -2507,13 +2523,13 @@
     "curseForgeHash": 3016368264,
     "modrinthHash": "f80f9eed728966adcfbcc848633e789645057281"
   },
-  "supermartijn642corelib-1.1.26-forge-mc1.20.1.jar": {
-    "jarName": "supermartijn642corelib-1.1.26-forge-mc1.20.1.jar",
+  "supermartijn642corelib-1.1.26a-forge-mc1.20.1.jar": {
+    "jarName": "supermartijn642corelib-1.1.26a-forge-mc1.20.1.jar",
     "modId": "supermartijn642corelib",
     "name": "SuperMartijn642\u0027s Core Lib",
-    "version": "1.1.26",
-    "curseForgeHash": 2155300177,
-    "modrinthHash": "bc1a5671bdaf76cb284bb607715238c995247351"
+    "version": "1.1.26+a",
+    "curseForgeHash": 2065580327,
+    "modrinthHash": "60137bb03fe7dec06dad5ad88d729e993c619df4"
   },
   "supplementaries-1.20-3.1.44-forge.jar": {
     "jarName": "supplementaries-1.20-3.1.44-forge.jar",
@@ -2627,13 +2643,13 @@
     "curseForgeHash": 2961129688,
     "modrinthHash": "42f206a50434324695d23a574765dcb3c6f183df"
   },
-  "titanium-1.20.1-3.8.35.jar": {
-    "jarName": "titanium-1.20.1-3.8.35.jar",
+  "titanium-1.20.1-3.8.37.jar": {
+    "jarName": "titanium-1.20.1-3.8.37.jar",
     "modId": "titanium",
     "name": "Titanium",
-    "version": "3.8.35",
-    "curseForgeHash": 3090781311,
-    "modrinthHash": "5f62877e68fb326c35cf847e615512d7dd801b20"
+    "version": "3.8.37",
+    "curseForgeHash": 852828443,
+    "modrinthHash": "eaf9d82e05d42c507b60e68e6d4622b5afeef392"
   },
   "ToastControl-1.20.1-8.0.3.jar": {
     "jarName": "ToastControl-1.20.1-8.0.3.jar",
