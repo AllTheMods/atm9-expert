@@ -1,0 +1,1446 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "steam"
+	group: "2084F3F6FB861C5B"
+	icon: "gtceu:bronze_brick_casing"
+	id: "57997913E7C2B597"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5A3D5ADE71AAC435"]
+			id: "6EA1FDF8D0677A79"
+			tasks: [
+				{
+					id: "597C918CFAE8E21F"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:raw_materials/copper"
+						}
+					}
+					title: "Any #forge:raw_materials/copper"
+					type: "item"
+				}
+				{
+					id: "5CA25DEB137FABB7"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:raw_materials/tin"
+						}
+					}
+					title: "Any #forge:raw_materials/tin"
+					type: "item"
+				}
+				{
+					id: "2F11A95A99ACEF59"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:raw_materials/iron"
+						}
+					}
+					title: "Any #forge:raw_materials/iron"
+					type: "item"
+				}
+				{
+					id: "7389EF7FE962537E"
+					item: "minecraft:clay_ball"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.resources_one.title}"
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			icon: "minecraft:oak_log"
+			id: "1D42FB2623013DEE"
+			subtitle: "{atm9e.quest.steam.logs.sub}"
+			tasks: [{
+				id: "66E9113E66C5DEB0"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:logs"
+					}
+				}
+				title: "Any #minecraft:logs"
+				type: "item"
+			}]
+			title: "{atm9e.quest.steam.logs.title}"
+			x: -8.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1D42FB2623013DEE"]
+			description: ["{atm9e.quest.steam.flint.info}"]
+			id: "47B12ECF314C34E1"
+			tasks: [{
+				id: "5F7997C83B1830A1"
+				item: "minecraft:flint"
+				type: "item"
+			}]
+			title: "{atm9e.quest.steam.flint.title}"
+			x: -6.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["47B12ECF314C34E1"]
+			icon: "minecraft:crafting_table"
+			id: "667B2C1D7C948AA4"
+			subtitle: "{atm9e.quest.steam.crafting.sub}"
+			tasks: [
+				{
+					count: 2L
+					id: "31945052FB6194E7"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "minecraft:logs"
+						}
+					}
+					title: "Any #minecraft:logs"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "368D3385CB86E1A1"
+					item: { Count: 2, id: "minecraft:flint" }
+					type: "item"
+				}
+				{
+					id: "7EBD53848A5974B4"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:workbench"
+						}
+					}
+					title: "Any #forge:workbench"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.crafting.title}"
+			x: -4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"685229AACEAFF434"
+				"667B2C1D7C948AA4"
+				"47B12ECF314C34E1"
+			]
+			icon: "minecraft:furnace"
+			id: "5A3D5ADE71AAC435"
+			subtitle: "{atm9e.quest.steam.furnace.sub}"
+			tasks: [
+				{
+					count: 6L
+					id: "478AB7E020901C38"
+					item: { Count: 6, id: "minecraft:cobblestone" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "0C65669455A0D971"
+					item: { Count: 3, id: "minecraft:flint" }
+					type: "item"
+				}
+				{
+					id: "6969957E73DD99D2"
+					item: "minecraft:furnace"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.furnace.title}"
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"667B2C1D7C948AA4"
+				"47B12ECF314C34E1"
+			]
+			id: "685229AACEAFF434"
+			subtitle: "{atm9e.quest.steam.flint_tool.sub}"
+			tasks: [
+				{
+					id: "08A09952A0692DF3"
+					item: {
+						Count: 1
+						id: "gtceu:flint_sword"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								AttackDamage: 4.0f
+								AttackSpeed: -2.4f
+								DefaultEnchantments: [{
+									id: "minecraft:fire_aspect"
+									lvl: 1s
+								}]
+								MaxDamage: 63
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0F6B3AD8859DE15E"
+					item: {
+						Count: 1
+						id: "gtceu:flint_pickaxe"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								TorchPlacing: 1b
+							}
+							GT.Tool: {
+								DefaultEnchantments: [{
+									id: "minecraft:fire_aspect"
+									lvl: 1s
+								}]
+								HarvestLevel: 1
+								MaxDamage: 63
+								ToolSpeed: 4.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1FC17B261A9C6B79"
+					item: {
+						Count: 1
+						id: "gtceu:flint_axe"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								DisableShields: 1b
+								TreeFelling: 1b
+							}
+							GT.Tool: {
+								DefaultEnchantments: [{
+									id: "minecraft:fire_aspect"
+									lvl: 1s
+								}]
+								HarvestLevel: 1
+								MaxDamage: 63
+								ToolSpeed: 2.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "205768920DCEBC76"
+					item: {
+						Count: 1
+						id: "gtceu:flint_shovel"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								DefaultEnchantments: [{
+									id: "minecraft:fire_aspect"
+									lvl: 1s
+								}]
+								HarvestLevel: 1
+								MaxDamage: 63
+								ToolSpeed: 4.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.flint_tool.title}"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6EA1FDF8D0677A79"]
+			id: "1FBEFEEF1A6AA7FA"
+			tasks: [{
+				id: "72995EF6135BD541"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			title: "{atm9e.quest.steam.iron.title}"
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["6EA1FDF8D0677A79"]
+			id: "23A09D22E046F859"
+			tasks: [{
+				id: "6BD39E87ADC35154"
+				item: "minecraft:copper_ingot"
+				type: "item"
+			}]
+			title: "{atm9e.quest.steam.copper.title}"
+			x: 2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["6EA1FDF8D0677A79"]
+			id: "00E9971477B30D81"
+			tasks: [{
+				id: "531D6117E33B1A5C"
+				item: "alltheores:tin_ingot"
+				type: "item"
+			}]
+			title: "{atm9e.quest.steam.tin.title}"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"1FBEFEEF1A6AA7FA"
+				"5A3D5ADE71AAC435"
+			]
+			id: "02BBA7377F7FD937"
+			subtitle: "{atm9e.quest.steam.wrought_iron.sub}"
+			tasks: [{
+				id: "47820FB4943A7D1E"
+				item: "gtceu:wrought_iron_ingot"
+				type: "item"
+			}]
+			title: "{atm9e.quest.steam.wrought_iron.title}"
+			x: 0.0d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"1FBEFEEF1A6AA7FA"
+				"23A09D22E046F859"
+				"00E9971477B30D81"
+			]
+			dependency_requirement: "one_completed"
+			id: "78C68D72D5977C06"
+			tasks: [
+				{
+					id: "26C933AE7B6B7C95"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_hammers"
+						}
+					}
+					title: "Any #gtceu:tools/crafting_hammers"
+					type: "item"
+				}
+				{
+					id: "6E6BBDCE1F1434ED"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_files"
+						}
+					}
+					optional_task: true
+					title: "Any #gtceu:tools/crafting_files"
+					type: "item"
+				}
+				{
+					id: "262D6A73B569D03B"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_saws"
+						}
+					}
+					optional_task: true
+					title: "Any #gtceu:tools/crafting_saws"
+					type: "item"
+				}
+				{
+					id: "396D36428DA48146"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_screwdrivers"
+						}
+					}
+					optional_task: true
+					title: "Any #gtceu:tools/crafting_screwdrivers"
+					type: "item"
+				}
+				{
+					id: "57F90059DE779EA5"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_mortars"
+						}
+					}
+					optional_task: true
+					title: "Any #gtceu:tools/crafting_mortars"
+					type: "item"
+				}
+				{
+					id: "54E7922C82A02721"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_wrenches"
+						}
+					}
+					optional_task: true
+					title: "Any #gtceu:tools/crafting_wrenches"
+					type: "item"
+				}
+				{
+					id: "51710E51354514F6"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_wire_cutters"
+						}
+					}
+					optional_task: true
+					title: "Any #gtceu:tools/crafting_wire_cutters"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.gt_tools.title}"
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["78C68D72D5977C06"]
+			description: ["{atm9e.quest.steam.bronze.info}"]
+			id: "3261F1AF3916C462"
+			tasks: [
+				{
+					id: "02DA690DBCA5D705"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:dusts/copper"
+						}
+					}
+					title: "Any #forge:dusts/copper"
+					type: "item"
+				}
+				{
+					id: "574833299D3D6811"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:dusts/tin"
+						}
+					}
+					title: "Any #forge:dusts/tin"
+					type: "item"
+				}
+				{
+					id: "5BF8B10CE4054367"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:dusts/bronze"
+						}
+					}
+					title: "Any #forge:dusts/bronze"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.bronze.title}"
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["78C68D72D5977C06"]
+			description: ["{atm9e.quest.steam.brick.info}"]
+			icon: "minecraft:brick"
+			id: "7B0747D77F702312"
+			tasks: [
+				{
+					id: "2684416E88969B8A"
+					item: "gtceu:brick_wooden_form"
+					type: "item"
+				}
+				{
+					id: "372AB2A20C07C419"
+					item: "gtceu:compressed_clay"
+					type: "item"
+				}
+				{
+					id: "48CC8C1D192D2386"
+					item: "minecraft:brick"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.brick.title}"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3261F1AF3916C462"]
+			id: "041CF53A2F76A0B1"
+			tasks: [{
+				id: "5D1B8700F915B27A"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:plates/bronze"
+					}
+				}
+				title: "Any #forge:plates/bronze"
+				type: "item"
+			}]
+			title: "{atm9e.quest.steam.bronze_plate.title}"
+			x: 8.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7B0747D77F702312"]
+			description: ["{atm9e.quest.steam.bricks.info}"]
+			icon: "minecraft:bricks"
+			id: "362F04FF1316FCCE"
+			tasks: [
+				{
+					id: "40BE16E91FE741B7"
+					item: "minecraft:water_bucket"
+					type: "item"
+				}
+				{
+					id: "751E08B47E1C9741"
+					item: "minecraft:bricks"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.bricks.title}"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"041CF53A2F76A0B1"
+				"362F04FF1316FCCE"
+			]
+			description: ["{atm9e.quest.steam.boiler.info}"]
+			id: "43A440DDAFAAB3EB"
+			subtitle: "{atm9e.quest.steam.boiler.sub}"
+			tasks: [{
+				id: "698DABB3BEFA5228"
+				item: "gtceu:lp_steam_solid_boiler"
+				type: "item"
+			}]
+			title: "{atm9e.quest.steam.boiler.title}"
+			x: 9.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["43A440DDAFAAB3EB"]
+			id: "0F77D4C0292A406F"
+			tasks: [{
+				id: "48C02AB036D90B07"
+				title: "Steam"
+				type: "checkmark"
+			}]
+			title: "{atm9e.quest.steam.steam.title}"
+			x: 13.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["0F77D4C0292A406F"]
+			id: "0922F952BFBA32A9"
+			tasks: [{
+				id: "33F0EAB498A9291B"
+				item: "gtceu:lp_steam_forge_hammer"
+				type: "item"
+			}]
+			x: 12.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0F77D4C0292A406F"]
+			id: "11A7E41F82F74E80"
+			tasks: [{
+				id: "5494854D539FAC16"
+				item: "gtceu:lp_steam_rock_crusher"
+				type: "item"
+			}]
+			x: 12.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0F77D4C0292A406F"]
+			id: "04D246F2AB4DFF9E"
+			tasks: [{
+				id: "1A2CB754C22A5114"
+				item: "gtceu:lp_steam_miner"
+				type: "item"
+			}]
+			x: 14.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0F77D4C0292A406F"]
+			id: "498925722F4BDE31"
+			tasks: [{
+				id: "2608844F3A663775"
+				item: "gtceu:lp_steam_furnace"
+				type: "item"
+			}]
+			x: 14.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0F77D4C0292A406F"]
+			id: "0E07CD5D9841864B"
+			tasks: [{
+				id: "000B6967EA62CEAC"
+				item: "gtceu:lp_steam_macerator"
+				type: "item"
+			}]
+			x: 17.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["0F77D4C0292A406F"]
+			id: "4345AAF07264B817"
+			tasks: [{
+				id: "7A33BED272B0B972"
+				item: "gtceu:lp_steam_alloy_smelter"
+				type: "item"
+			}]
+			x: 17.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["0F77D4C0292A406F"]
+			id: "3FD2C6A30E7522AA"
+			tasks: [{
+				id: "5B3815439214B74D"
+				item: "gtceu:lp_steam_extractor"
+				type: "item"
+			}]
+			x: 17.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["0F77D4C0292A406F"]
+			id: "2E79E262DC11812E"
+			tasks: [{
+				id: "02246DC45FED8F1D"
+				item: "gtceu:lp_steam_compressor"
+				type: "item"
+			}]
+			x: 17.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0E07CD5D9841864B"]
+			description: ["{atm9e.quest.steam.andesite.info}"]
+			icon: "create:andesite_alloy"
+			id: "05B5E4018FFBA9D8"
+			tasks: [
+				{
+					id: "5F2081A12943B366"
+					item: "gtceu:andesite_dust"
+					type: "item"
+				}
+				{
+					id: "67A3807416DAEA98"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:dusts/zinc"
+						}
+					}
+					title: "Any #forge:dusts/zinc"
+					type: "item"
+				}
+				{
+					id: "06743134759BBC82"
+					item: "gtceu:andesite_alloy_dust"
+					type: "item"
+				}
+				{
+					id: "1CF67C2DD6052E1C"
+					item: "gtceu:andesite_alloy_ingot"
+					type: "item"
+				}
+				{
+					id: "67425C5CC398E2FC"
+					item: "create:andesite_alloy"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.andesite.title}"
+			x: 20.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["05B5E4018FFBA9D8"]
+			icon: "create:large_cogwheel"
+			icon_scale: 2.0d
+			id: "455DA322ED2BBDD1"
+			shape: "none"
+			size: 2.0d
+			subtitle: "{atm9e.quest.steam.create.sub}"
+			tasks: [{
+				id: "143A152562398294"
+				title: "Create"
+				type: "checkmark"
+			}]
+			title: "{atm9e.quest.steam.create.title}"
+			x: 22.999999999999986d
+			y: -5.169047619047618d
+		}
+		{
+			dependencies: [
+				"0E07CD5D9841864B"
+				"2E79E262DC11812E"
+				"4345AAF07264B817"
+				"3FD2C6A30E7522AA"
+			]
+			dependency_requirement: "one_completed"
+			id: "2642C9521C65F18D"
+			tasks: [{
+				id: "18BF4537627AA116"
+				type: "checkmark"
+			}]
+			title: "{atm9e.quest.steam.checkmark_one.title}"
+			x: 20.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["2642C9521C65F18D"]
+			description: [
+				"{atm9e.quest.steam.blast_furnace.info}"
+				""
+				"{atm9e.quest.steam.blast_furnace.info_two}"
+			]
+			icon: "gtceu:primitive_blast_furnace"
+			id: "7BE3D1ED55FBA70C"
+			tasks: [
+				{
+					id: "3FA30EEE50F1CB82"
+					item: "gtceu:primitive_blast_furnace"
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "730DAD960FB12223"
+					item: { Count: 32, id: "gtceu:firebricks" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 27L
+					id: "02F9E0C491D807A4"
+					item: { Count: 27, id: "immersiveengineering:blastbrick" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 34L
+					id: "4342691A0759D40D"
+					item: { Count: 34, id: "railcraft:blast_furnace_bricks" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.blast_furnace.title}"
+			x: 23.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7BE3D1ED55FBA70C"]
+			dependency_requirement: "one_completed"
+			icon: "alltheores:steel_ingot"
+			id: "36714EB9FD36EF64"
+			tasks: [{
+				id: "3D396B5CB055E22C"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/steel"
+					}
+				}
+				title: "Any #forge:ingots/steel"
+				type: "item"
+			}]
+			title: "{atm9e.quest.steam.steel.title}"
+			x: 26.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["36714EB9FD36EF64"]
+			description: ["{atm9e.quest.steam.glass.info}"]
+			icon: "minecraft:glass"
+			id: "4C34769FA03399E0"
+			tasks: [
+				{
+					id: "7E942E35A1AFF615"
+					item: "gtceu:quartz_sand_dust"
+					type: "item"
+				}
+				{
+					id: "7D7EAD5139070BB6"
+					item: "gtceu:flint_dust"
+					type: "item"
+				}
+				{
+					id: "6CB560336195DF0B"
+					item: "gtceu:glass_dust"
+					type: "item"
+				}
+				{
+					id: "76B91EE09E4B756D"
+					item: "gtceu:block_casting_mold"
+					type: "item"
+				}
+				{
+					id: "11564F9305C59AE2"
+					item: "minecraft:glass"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.glass.title}"
+			x: 29.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["36714EB9FD36EF64"]
+			icon: "allthetweaks:mini_nether"
+			id: "65D21A295AC21F43"
+			tasks: [
+				{
+					id: "4F00974957B7857F"
+					item: {
+						Count: 1
+						id: "minecraft:flint_and_steel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					dimension: "minecraft:the_nether"
+					id: "55EBAC3CE754AAE1"
+					type: "dimension"
+				}
+			]
+			title: "{atm9e.quest.steam.nether.title}"
+			x: 29.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["36714EB9FD36EF64"]
+			id: "358895C76ACD8EB5"
+			tasks: [
+				{
+					id: "017D9F243F26430D"
+					item: "gtceu:hp_steam_furnace"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6D4CD78E8121C0F8"
+					item: "gtceu:hp_steam_extractor"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "200BC5304C640FA4"
+					item: "gtceu:hp_steam_macerator"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "34B53A53AEDA8F85"
+					item: "gtceu:hp_steam_compressor"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "5FD557E4101E8F97"
+					item: "gtceu:hp_steam_forge_hammer"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7F91AC3F7794CE35"
+					item: "gtceu:hp_steam_alloy_smelter"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1F88399F84A8F479"
+					item: "gtceu:hp_steam_rock_crusher"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1C8232B31AB2AE6D"
+					item: "gtceu:hp_steam_miner"
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.steel_machine.title}"
+			x: 29.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4C34769FA03399E0"]
+			id: "3C87111E5328AC1B"
+			tasks: [{
+				id: "41DED4737B6F8737"
+				type: "checkmark"
+			}]
+			title: "{atm9e.quest.steam.checkmark_two.title}"
+			x: 32.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["3C87111E5328AC1B"]
+			id: "7B4F875C94662602"
+			tasks: [
+				{
+					id: "29A824377D048D89"
+					item: "gtceu:sticky_resin"
+					type: "item"
+				}
+				{
+					id: "5DC18B6FF0D71AD7"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					id: "18101B2381BCD925"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:dusts/sulfur"
+						}
+					}
+					title: "Any #forge:dusts/sulfur"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.resources_two.title}"
+			x: 35.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7B4F875C94662602"]
+			icon: "gtceu:resin_printed_circuit_board"
+			id: "1F7A724F8F2E8198"
+			tasks: [
+				{
+					id: "6BD6001A41037535"
+					item: "gtceu:resin_circuit_board"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "168113D515D00541"
+					item: "gtceu:copper_single_wire"
+					type: "item"
+				}
+				{
+					id: "0CA8D8F9BC7E9D89"
+					item: "gtceu:resin_printed_circuit_board"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.resin_board.title}"
+			x: 38.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7B4F875C94662602"]
+			icon: "gtceu:vacuum_tube"
+			id: "57E54E315C5EC68B"
+			tasks: [
+				{
+					id: "424B0EFCEFCC1E10"
+					item: "gtceu:ball_casting_mold"
+					type: "item"
+				}
+				{
+					id: "4EFC8C7F5C257558"
+					item: "gtceu:glass_tube"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "4460D2DC357E8D3B"
+					item: "gtceu:copper_single_wire"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "470DEE84DA3839C6"
+					item: "gtceu:steel_bolt"
+					type: "item"
+				}
+				{
+					id: "0AF50FE682358723"
+					item: "gtceu:vacuum_tube"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.tube.title}"
+			x: 38.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["7B4F875C94662602"]
+			icon: "gtceu:resistor"
+			id: "120D7F8F8257FA3A"
+			tasks: [
+				{
+					count: 2L
+					id: "1893E8C8EC039990"
+					item: "gtceu:copper_single_wire"
+					type: "item"
+				}
+				{
+					id: "26BC5B6CE8AD1A55"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:dusts/coal"
+						}
+					}
+					title: "Any #forge:dusts/coal"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7AB56EBED58A1080"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "4D2E130B8579EB2D"
+					item: { Count: 2, id: "gtceu:sticky_resin" }
+					type: "item"
+				}
+				{
+					id: "33BA7D84029C1805"
+					item: "gtceu:resistor"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.resistor.title}"
+			x: 38.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["7B4F875C94662602"]
+			icon: "gtceu:red_alloy_single_cable"
+			id: "1AB5B3BDBB7CC638"
+			tasks: [
+				{
+					id: "51983C41375D2806"
+					item: "gtceu:red_alloy_dust"
+					type: "item"
+				}
+				{
+					id: "333FDCBA8D72C0AB"
+					item: "gtceu:red_alloy_single_wire"
+					type: "item"
+				}
+				{
+					id: "7DE9DF718ED36229"
+					item: "gtceu:raw_rubber_dust"
+					type: "item"
+				}
+				{
+					id: "3F3835E97C57C8AD"
+					item: "gtceu:sulfur_dust"
+					type: "item"
+				}
+				{
+					id: "249967A30A28F8AE"
+					item: "gtceu:rubber_ingot"
+					type: "item"
+				}
+				{
+					id: "5596D58BC9DC8E50"
+					item: "gtceu:red_alloy_single_cable"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.red_alloy.title}"
+			x: 38.0d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"57E54E315C5EC68B"
+				"1F7A724F8F2E8198"
+				"1AB5B3BDBB7CC638"
+				"120D7F8F8257FA3A"
+			]
+			icon: "gtceu:basic_electronic_circuit"
+			id: "13C7FD83F4D6E006"
+			tasks: [
+				{
+					count: 3L
+					id: "14FAC70A1C0457EF"
+					item: "gtceu:red_alloy_single_cable"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1E5D5362D0929808"
+					item: { Count: 2, id: "gtceu:vacuum_tube" }
+					type: "item"
+				}
+				{
+					id: "616A6102C62DBB5C"
+					item: "gtceu:resin_printed_circuit_board"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7D702E97F52A616D"
+					item: { Count: 2, id: "gtceu:resistor" }
+					type: "item"
+				}
+				{
+					id: "15559DC623A83BE3"
+					item: "alltheores:steel_plate"
+					type: "item"
+				}
+				{
+					id: "660ABBC43C0C0866"
+					item: "gtceu:basic_electronic_circuit"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.lv_circuit.title}"
+			x: 41.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["0F77D4C0292A406F"]
+			description: ["{atm9e.quest.steam.coke.info}"]
+			id: "5017A455DFF31840"
+			tasks: [
+				{
+					count: 25L
+					id: "0AD708E7A405A42E"
+					item: "gtceu:coke_oven_bricks"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "66BEE7569E614BCE"
+					item: "gtceu:coke_oven"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "46B89C9B16D7C532"
+					item: "gtceu:coke_oven_hatch"
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 26L
+					id: "4A0E0B45EEA6192E"
+					item: "railcraft:coke_oven_bricks"
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 27L
+					id: "73CC54C3FAE0895D"
+					item: "immersiveengineering:cokebrick"
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.coke.title}"
+			x: 13.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["13C7FD83F4D6E006"]
+			icon: "gtceu:lv_machine_hull"
+			icon_scale: 2.0d
+			id: "61BC0CB061DA1601"
+			shape: "none"
+			size: 4.0d
+			subtitle: "{atm9e.quest.steam.lv.sub}"
+			tasks: [
+				{
+					count: 3L
+					id: "10ED347BE64DAE61"
+					item: "gtceu:tin_single_cable"
+					type: "item"
+				}
+				{
+					id: "6B537D5CF24D9210"
+					item: "gtceu:lv_machine_casing"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "764A357B8F82B3F1"
+					item: { Count: 3, id: "gtceu:wrought_iron_plate" }
+					type: "item"
+				}
+				{
+					id: "64A19FBD7A1A54BF"
+					item: "gtceu:lv_machine_hull"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.lv.title}"
+			x: 45.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["0F77D4C0292A406F"]
+			description: ["{atm9e.quest.steam.multis.info}"]
+			id: "14E37F8A66B3B1D0"
+			tasks: [
+				{
+					id: "1382D83C8C25682E"
+					item: "gtceu:steam_grinder"
+					type: "item"
+				}
+				{
+					id: "008221918D126FBC"
+					item: "gtceu:steam_oven"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.multis.title}"
+			x: 13.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["2642C9521C65F18D"]
+			id: "7679F13D56162C25"
+			tasks: [
+				{
+					id: "0B1B8F39AE1A7EAC"
+					item: "evilcraft:eternal_water"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "510372A19A687692"
+					item: "gtceu:primitive_pump"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6A77D7E7436B68C5"
+					item: "cookingforblockheads:sink"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "37F80E74404E3D54"
+					item: "create:mechanical_pump"
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.water.title}"
+			x: 20.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["455DA322ED2BBDD1"]
+			id: "1A4F86AC26E39877"
+			tasks: [{
+				id: "46181E32BAF2CBAD"
+				item: "allthemodium:teleport_pad"
+				type: "item"
+			}]
+			x: 26.0d
+			y: -5.0d
+		}
+		{
+			dependencies: [
+				"47B12ECF314C34E1"
+				"1D42FB2623013DEE"
+				"667B2C1D7C948AA4"
+			]
+			id: "28C25EFB984D0086"
+			subtitle: "{atm9e.quest.steam.chest.sub}"
+			tasks: [{
+				id: "0E1C64C49493C606"
+				item: "minecraft:chest"
+				type: "item"
+			}]
+			title: "{atm9e.quest.steam.chest.title}"
+			x: -6.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["28C25EFB984D0086"]
+			icon: "minecraft:chest"
+			icon_scale: 2.0d
+			id: "20058997F2128575"
+			shape: "none"
+			size: 2.0d
+			subtitle: "{atm9e.quest.steam.storage.sub}"
+			tasks: [{
+				id: "5B5321528425A424"
+				type: "checkmark"
+			}]
+			title: "{atm9e.quest.steam.storage.title}"
+			x: -3.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["4C34769FA03399E0"]
+			icon: "evilcraft:condensed_blood"
+			icon_scale: 2.0d
+			id: "71AB50820F1F5A5B"
+			shape: "none"
+			size: 2.0d
+			subtitle: "{atm9e.quest.steam.evil.sub}"
+			tasks: [{
+				id: "157BB1805874EB12"
+				type: "checkmark"
+			}]
+			title: "{atm9e.quest.steam.evil.title}"
+			x: 33.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["4C34769FA03399E0"]
+			id: "65FE7DCF211E0E32"
+			tasks: [
+				{
+					id: "543B06B043028F8B"
+					item: "gtceu:lp_steam_liquid_boiler"
+					type: "item"
+				}
+				{
+					id: "7189DAFDD49FBEA9"
+					item: "gtceu:hp_steam_liquid_boiler"
+					type: "item"
+				}
+				{
+					id: "418440C8F4AFDAA1"
+					item: "gtceu:lp_steam_solar_boiler"
+					type: "item"
+				}
+				{
+					id: "4381C9FAAD5C5D2F"
+					item: "gtceu:hp_steam_solar_boiler"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.boiler_two.title}"
+			x: 32.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["36714EB9FD36EF64"]
+			description: ["{atm9e.quest.steam.mold.info}"]
+			id: "24CEE78DD4E24459"
+			tasks: [{
+				id: "3AA4C3E62035F661"
+				item: "gtceu:empty_mold"
+				type: "item"
+			}]
+			title: "{atm9e.quest.steam.mold.title}"
+			x: 26.0d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"00E9971477B30D81"
+				"78C68D72D5977C06"
+			]
+			id: "6C75D4F9E2F9215A"
+			subtitle: "{atm9e.quest.steam.tin_pipe.sub}"
+			tasks: [{
+				id: "0DD484AE0C5810B3"
+				item: "gtceu:tin_normal_item_pipe"
+				type: "item"
+			}]
+			title: "{atm9e.quest.steam.tin_pipe.title}"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["041CF53A2F76A0B1"]
+			id: "6E99DCF23A14CCC3"
+			tasks: [
+				{
+					id: "1A077B2DA2109414"
+					item: "gtceu:bronze_small_fluid_pipe"
+					type: "item"
+				}
+				{
+					id: "1DA8BE9C97AEDCAD"
+					item: "gtceu:bronze_normal_fluid_pipe"
+					type: "item"
+				}
+			]
+			title: "{atm9e.quest.steam.bronze_pipe.title}"
+			x: 10.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["5A3D5ADE71AAC435"]
+			icon: "bloodmagic:altar"
+			id: "0CBDB196B7DB7309"
+			shape: "none"
+			size: 2.0d
+			subtitle: "{atm9e.quest.steam.blood_altar.sub}"
+			tasks: [{
+				id: "6F019DC6F6A4954F"
+				type: "checkmark"
+			}]
+			title: "{atm9e.quest.steam.blood_altar.title}"
+			x: -1.0d
+			y: -3.0d
+		}
+	]
+	title: "{atm9e.quest.steam.chapter}"
+}
