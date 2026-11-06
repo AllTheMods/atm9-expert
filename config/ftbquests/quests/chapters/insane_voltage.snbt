@@ -738,7 +738,7 @@
 				""
 				"{atm9.quest.gregtech.iv.desc.advancedSMDCapacitor.2}"
 				""
-				"{\"clickEvent\": {\"action\": \"change_page\", \"value\": \"2EE52FD7129D3D87\"}, \"text\": \"How to: Rarest Metal Mixture\", \"color\": \"yellow\", \"hoverEvent\": { \"action\":\"show_text\", \"contents\": { \"text\":\"Click here to open the quest!\" } }}"
+				"{atm9.quest.extra.insane_voltage.description.bf125c799f}"
 			]
 			id: "599BABC83E76A711"
 			rewards: [
@@ -799,7 +799,7 @@
 				"64F77D41B2D057B8"
 			]
 			description: [
-				"[ \"You'll need \", { \"text\": \"Laminated Glass\", \"color\": \"green\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"0907800ED4793F96\" } }, \" to make this\" ]"
+				"{atm9.quest.extra.insane_voltage.description.a029db0fdc}"
 				""
 				"{atm9.quest.gregtech.iv.desc.makeHSSVariants.1}"
 			]
@@ -1404,7 +1404,7 @@
 		}
 		{
 			dependencies: ["7E407CDBFD85E65F"]
-			description: ["[ \"Some \", { \"text\": \"Acetic Acid\", \"underlined\": \"true\", \"color\": \"aqua\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"7E407CDBFD85E65F\" }, \"hoverEvent\": { \"action\":\"show_text\", \"contents\": { \"text\":\"Click here for the Acetic Acid quest\" } } }, \" and Calcite Dust in a \", { \"text\": \"Chemical Reactor\", \"color\":\"yellow\" }, \" will get you this\" ]"]
+			description: ["{atm9.quest.extra.insane_voltage.description.2322ceb5d1}"]
 			hide_dependency_lines: true
 			id: "646918F4D700749B"
 			rewards: [{
@@ -2656,12 +2656,12 @@
 		{
 			can_repeat: false
 			description: [
-				"This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks."
-				"As all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission."
+				"{atm9.quest.extra.an_introduction.description.b1e1034170}"
+				"{atm9.quest.extra.an_introduction.description.0f5ef769f8}"
 				""
 				""
 				""
-				"This quest is intentionally hidden, if you're seeing this, you're in editing mode."
+				"{atm9.quest.extra.an_introduction.description.9ac7917306}"
 			]
 			disable_toast: true
 			hide_details_until_startable: true
@@ -2681,12 +2681,12 @@
 				{
 					disable_toast: true
 					id: "5F01CDDCA2549DC3"
-					title: "Quests By AllTheMods"
+					title: "{atm9.quest.extra.an_introduction.title.8b3aca5269}"
 					type: "checkmark"
 				}
 				{
 					id: "78FED3ADEBDCD785"
-					title: "Quests By AllTheMods"
+					title: "{atm9.quest.extra.an_introduction.title.8b3aca5269}"
 					type: "checkmark"
 				}
 			]

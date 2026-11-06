@@ -41,3 +41,6 @@ Italian
 
 Turkish
 - AstroAlchemist (https://github.com/altugcetin)
+
+Simplified Chinese (AI-assisted, adapted from an existing ATM9 1.1.1 translation patch; Expert additions and terminology corrections),
+- He-wei-gui (https://github.com/He-wei-gui)

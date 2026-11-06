@@ -76,6 +76,6 @@
 			weight: 5.0f
 		}
 	]
-	title: "&5Essence Bag"
+	title: "{atm9.quest.extra.EssenceBag.title.822be76334}"
 	use_title: true
 }

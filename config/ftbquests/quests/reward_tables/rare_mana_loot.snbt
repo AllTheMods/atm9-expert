@@ -13,6 +13,6 @@
 		{ item: "botania:black_lotus", weight: 2.0f }
 		{ item: "botania:blacker_lotus" }
 	]
-	title: "&9Rare Mana Materials Loot Bag&r"
+	title: "{atm9.quest.extra.rare_mana_loot.title.a77b265407}"
 	use_title: true
 }

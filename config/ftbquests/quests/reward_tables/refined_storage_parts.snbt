@@ -7,6 +7,6 @@
 		{ count: 2, item: "refinedstorage:improved_processor", weight: 20.0f }
 		{ item: "refinedstorage:advanced_processor", weight: 5.0f }
 	]
-	title: "Refined Storage Basic Parts"
+	title: "{atm9.quest.extra.refined_storage_parts.title.e17ea0b8bb}"
 	use_title: true
 }

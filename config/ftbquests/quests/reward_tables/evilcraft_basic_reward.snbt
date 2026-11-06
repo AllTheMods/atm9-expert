@@ -92,6 +92,6 @@
 			weight: 5.0f
 		}
 	]
-	title: "EvilCraft Basic Reward"
+	title: "{atm9.quest.extra.evilcraft_basic_reward.title.a285e5e795}"
 	use_title: true
 }

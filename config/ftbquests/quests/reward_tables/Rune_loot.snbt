@@ -9,6 +9,6 @@
 		{ item: "botania:rune_air" }
 		{ item: "botania:rune_mana" }
 	]
-	title: "&9Rune Loot Chest&r"
+	title: "{atm9.quest.extra.Rune_loot.title.b1914f9560}"
 	use_title: true
 }

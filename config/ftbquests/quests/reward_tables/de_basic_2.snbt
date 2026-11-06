@@ -9,5 +9,5 @@
 		{ item: "minecraft:nether_star", weight: 0.5f }
 		{ count: 2, item: "draconicevolution:wyvern_energy_core" }
 	]
-	title: "DE Wyvern"
+	title: "{atm9.quest.extra.de_basic_2.title.41d87ad8a1}"
 }

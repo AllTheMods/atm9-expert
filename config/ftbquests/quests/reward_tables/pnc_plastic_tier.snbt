@@ -29,6 +29,6 @@
 		{ item: "pneumaticcraft:pcb_blueprint", weight: 0.5f }
 		{ item: "pneumaticcraft:solar_wafer" }
 	]
-	title: "PNC: Plastic Tier"
+	title: "{atm9.quest.extra.pnc_plastic_tier.title.571b71a819}"
 	use_title: true
 }

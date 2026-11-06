@@ -34,5 +34,5 @@
 		{ count: 12, item: "gtceu:naquadah_alloy_ingot", random_bonus: 12, weight: 10.0f }
 		{ count: 6, item: "gtceu:europium_ingot", random_bonus: 6, weight: 8.0f }
 	]
-	title: "GT ZPM Basic Rewards"
+	title: "{atm9.quest.extra.gt_zpm.title.a924e5ba00}"
 }
