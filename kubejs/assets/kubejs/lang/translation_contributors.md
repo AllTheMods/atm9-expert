@@ -38,3 +38,6 @@ Dutch
 
 Italian
 - Il-mostro-di-gioacchinopoli (https://github.com/Il-mostro-di-gioacchinopoli)
+
+Turkish
+- AstroAlchemist (https://github.com/altugcetin)
