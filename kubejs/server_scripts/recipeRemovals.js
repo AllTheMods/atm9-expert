@@ -117,6 +117,11 @@ ServerEvents.recipes(allthemods => {
 
     
     const moreRemovals = [
+        'cookingforblockheads:sink', 'evilcraft:crafting/eternal_water', 'tconstruct:common/basalt_blast_furnace',
+        'tconstruct:smeltery/melting/metal/iron/chain_boots', 
+        'tconstruct:smeltery/melting/metal/iron/chain_chestplate',
+        'tconstruct:smeltery/melting/metal/iron/chain_leggings',
+        'tconstruct:smeltery/melting/metal/iron/chain_helmet',
         'mekanism:processing/bronze/ingot/from_nuggets', 'bloodmagic:sacrificial_dagger',
         'projecte:alchemical_coal', 'projecte:conversions/mobius_fuel_to_alchemical_coal',
         'projecte:mobius_fuel', 'projecte:conversions/aeternalis_fuel_to_mobius_fuel',

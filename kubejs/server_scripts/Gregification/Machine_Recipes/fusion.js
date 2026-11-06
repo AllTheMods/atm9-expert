@@ -33,6 +33,13 @@ ServerEvents.recipes(allthemods => {
         return recipe;
     };
     
+
+    //stage 2 chaos
+    //stage 3 einsteinium
+    //stage 4 antimatter
+    //awakened draconium awakened
+
+
     //naquadria stage 2
     addFusion(
         [            
@@ -49,7 +56,7 @@ ServerEvents.recipes(allthemods => {
     addFusion(
         [            
             '#forge:naquadria_stage_2_plasma 72',
-            '#forge:liquid_chaos 72'
+            '#forge:einsteinium 72'
         ],
         'gtceu:naquadria_stage_3_plasma 72',
         LuV,
@@ -61,7 +68,7 @@ ServerEvents.recipes(allthemods => {
     addFusion(
         [            
             '#forge:naquadria_stage_3_plasma 72',
-            '#forge:einsteinium 72'
+            '#forge:antimatter 72'
         ],
         'gtceu:naquadria_stage_4_plasma 72',
         ZPM,
@@ -73,7 +80,7 @@ ServerEvents.recipes(allthemods => {
     addFusion(
         [            
             '#forge:naquadria_stage_4_plasma 72',
-            '#forge:antimatter_plasma 72'
+            '#forge:draconium_awakened 72'
         ],
         'gtceu:naquadria_awakened_plasma 72',
         UV,

@@ -316,6 +316,33 @@ ServerEvents.recipes(allthemods => {
         }
     ).id('gregification:sacrificial_dagger')
 
+    allthemods.shaped('cookingforblockheads:sink',
+        [
+            'PPP',
+            'PEP',
+            'TTT'
+        ],
+        {
+            T: "#minecraft:terracotta",
+            P: "#forge:plates/steel",
+            E: "evilcraft:bucket_eternal_water"
+        }
+    ).id('gregification:cookingforblockheads_sink')
+
+    allthemods.shaped('evilcraft:eternal_water',
+        [
+            'PPP',
+            'PEP',
+            'TTT'
+        ],
+        {
+            T: "#minecraft:terracotta",
+            P: "#forge:plates/aluminium",
+            E: "evilcraft:bucket_eternal_water"
+        }
+    ).id('gregification:evilcraft_eternal_water')
+
+
     allthemods.recipes.gtceu.assembler('gregification:backpack_assembly')
         .itemInputs(
             'ironjetpacks:strap',
