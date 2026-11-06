@@ -1,0 +1,51 @@
+All The Mods 9 Expert
+======
+This is the official repository and issue-tracker for All The Mods 9 Expert 1.20.1
+
+**All the Mods 9: Expert** is a rebuilt, **GregTech-driven** take on ATM9. Forget the usual ATM approach of progressing through each mod on its own. Here, you actually have to use *all the mods* to advance.
+
+This pack actually started as a __solo fan project__ by [Phrost](https://github.com/phrostt), 9 months of one-man **Gregification** that grew into an official ATM pack with help from the team, and we'd love for the community to help it keep growing!
+__If you find issues or want to help improve the pack, we'd love the help!__
+
+Does "All The Mods" *really* contain ALL THE MODS? No, of course not.
+
+Need Help?
+======
+When reporting an issue, please follow the templates!
+
+|You can also find us on Discord for help<br>or just to chat as well as Reddit|
+|:------------:|
+|<a href="https://discord.gg/3paFjuRfz9"><img src="https://discordapp.com/assets/fc0b01fe10a0b8c602fb0106d8189d9b.png" alt="Join us on Discord!"  width="200" height="68"></a>|
+|<a href="https://www.reddit.com/r/allthemods"><img src="https://www.redditstatic.com/about/assets/reddit-logo.png" alt="/r/AllTheMods on Reddit"  width="200" height="67"></a>|
+<br>
+
+#### Modpacks:
++ [![All The Mods 0](http://cf.way2muchnoise.eu/372309.svg "ATM0") All The Mods 0 - ATM0](https://www.curseforge.com/minecraft/modpacks/all-the-mods-0)
++ [![All The Mods 1](http://cf.way2muchnoise.eu/242462.svg "ATM1") All The Mods 1 - ATM1](https://www.curseforge.com/minecraft/modpacks/all-the-mods)
++ [![All The Mods 2](http://cf.way2muchnoise.eu/253707.svg "ATM2") All The Mods 2 - ATM2](https://www.curseforge.com/minecraft/modpacks/all-the-mods-2)
++ [![All The Mods 3](http://cf.way2muchnoise.eu/269708.svg "ATM3") All The Mods 3 - ATM3](https://www.curseforge.com/minecraft/modpacks/all-the-mods-3)
++ [![All The Mods 3](http://cf.way2muchnoise.eu/301845.svg "ATM3R") All The Mods 3 - Remix - ATM3R](https://www.curseforge.com/minecraft/modpacks/all-the-mods-3-remix)
++ [![All The Mods 3 Expert](http://cf.way2muchnoise.eu/325396.svg "ATM3E") All The Mods 3 - Expert - ATM3E](https://www.curseforge.com/minecraft/modpacks/all-the-mods-3-expert)
++ [![All The Mods 4](http://cf.way2muchnoise.eu/316059.svg "ATM4") All The Mods 4 - ATM4](https://www.curseforge.com/minecraft/modpacks/all-the-mods-4)
++ [![All The Mods 5](http://cf.way2muchnoise.eu/357494.svg "ATM5") All The Mods 5 - ATM5](https://www.curseforge.com/minecraft/modpacks/all-the-mods-5)
++ [![All The Mods 6](http://cf.way2muchnoise.eu/381671.svg "ATM6") All The Mods 6 - ATM6](https://www.curseforge.com/minecraft/modpacks/all-the-mods-6)
++ [![All The Mods SLOP2](http://cf.way2muchnoise.eu/432480.svg "ATMSLOP2") All The Mods - Slice of Pi2](https://www.curseforge.com/minecraft/modpacks/all-the-mods-slice-of-pi2-atm-slop2)
++ [![All The Mods 6S](http://cf.way2muchnoise.eu/442246.svg "ATM6S") All The Mods 6 - To the Sky - ATM6Sky](https://www.curseforge.com/minecraft/modpacks/all-the-mods-6-to-the-sky-atm6s)
++ [![All The Magic Spellbound](http://cf.way2muchnoise.eu/500199.svg "ATMSpell") All The Magic Spellbound - ATMS](https://www.curseforge.com/minecraft/modpacks/all-the-magic-spellbound)
++ [![All The Mods 7](http://cf.way2muchnoise.eu/426926.svg "ATM7") All The Mods 7 - ATM7](https://www.curseforge.com/minecraft/modpacks/all-the-mods-7)
++ [![All The Mods 7Sky](http://cf.way2muchnoise.eu/655739.svg "ATM7S") All The Mods 7 - To the Sky - ATM7Sky](https://www.curseforge.com/minecraft/modpacks/all-the-mods-7-to-the-sky)
++ [![All The Mods 8](http://cf.way2muchnoise.eu/520914.svg "ATM8") All The Mods 8 - ATM8](https://www.curseforge.com/minecraft/modpacks/all-the-mods-8)
++ [![All The Mods Gravitas](http://cf.way2muchnoise.eu/807446.svg "ATMG") All The Mods - Gravitas - ATMG](https://www.curseforge.com/minecraft/modpacks/all-the-mods-gravitas)
++ [![All The Mods 9](http://cf.way2muchnoise.eu/715572.svg "ATM9") All The Mods 9 - ATM9](https://www.curseforge.com/minecraft/modpacks/all-the-mods-9)
++ [![All The Mods 9 - No Frills](http://cf.way2muchnoise.eu/959010.svg "ATM9-NF") All The Mods 9 - ATM9 - No Frills](https://www.curseforge.com/minecraft/modpacks/all-the-mods-9-no-frills)
++ [![All The Mods Gravitas²](http://cf.way2muchnoise.eu/949996.svg "ATMG²") All The Mods - Gravitas² - ATMG²](https://www.curseforge.com/minecraft/modpacks/all-the-mods-gravitas2)
++ [![Maul The Odds](http://cf.way2muchnoise.eu/987792.svg "MTO") Maul The Odds - MTO](https://www.curseforge.com/minecraft/modpacks/maul-the-odds)
++ [![All The Mods 9Sky](http://cf.way2muchnoise.eu/967745.svg "ATM9Sky") All The Mods 9 - To The Sky - ATM9Sky](https://www.curseforge.com/minecraft/modpacks/all-the-mods-9-to-the-sky)
++ [![ATM9 Expert](http://cf.way2muchnoise.eu/1769568.svg "ATM9 Expert") All the Mods 9 Expert](https://www.curseforge.com/minecraft/modpacks/all-the-mods-9-expert)
++ [![All The Mods 10](http://cf.way2muchnoise.eu/925200.svg "ATM10") All The Mods 10 - ATM10](https://www.curseforge.com/minecraft/modpacks/all-the-mods-10)
++ [![All The Mods 10Sky](http://cf.way2muchnoise.eu/1298402.svg "ATM10Sky") All The Mods 10 - To The Sky - ATM10Sky](https://www.curseforge.com/minecraft/modpacks/all-the-mods-10-sky)
++ [![All The Magic Arcana](http://cf.way2muchnoise.eu/1190911.svg "ATMA") All The Magic - Arcana - ATMA](https://www.curseforge.com/minecraft/modpacks/all-the-magic-arcana)
++ [![All The Mods 10 Lite](http://cf.way2muchnoise.eu/1298400.svg "ATM10L") All The Mods 10 Lite - ATM10L](https://www.curseforge.com/minecraft/modpacks/all-the-mods-10-lite)
++ [![All The Mons](http://cf.way2muchnoise.eu/1356598.svg "ATMons") All The Mons - ATMons](https://www.curseforge.com/minecraft/modpacks/all-the-mons)
++ [![All The Mods 10 - Aeronautics Edition](http://cf.way2muchnoise.eu/1644918.svg "ATM10A") All The Mods 10 - Aeronautics Edition - ATM10A](https://www.curseforge.com/minecraft/modpacks/all-the-mods-10-aeronautics)
++ [![All The Mods 11](https://cf.way2muchnoise.eu/1148445.svg "ATM11") All The Mods 11 - ATM11](https://www.curseforge.com/minecraft/modpacks/all-the-mods-11)
