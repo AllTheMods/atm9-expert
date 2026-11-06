@@ -26,6 +26,6 @@
 		{ count: 2, item: "gtceu:annealed_copper_bolt", random_bonus: 3, weight: 6.0f }
 		{ item: "gtceu:transistor", random_bonus: 1 }
 	]
-	title: "GT MV Basic Rewards"
+	title: "{atm9.quest.extra.gt_mv_basic_rewards.title.6011950fee}"
 	use_title: true
 }

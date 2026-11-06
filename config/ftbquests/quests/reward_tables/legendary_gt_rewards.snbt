@@ -22,5 +22,5 @@
 		{ item: "gtceu:uv_input_hatch" }
 		{ item: "gtceu:uv_output_hatch" }
 	]
-	title: "Legendary GT Rewards"
+	title: "{atm9.quest.extra.legendary_gt_rewards.title.ecb0c43d47}"
 }

@@ -9,6 +9,6 @@
 		{ id: "1DA67E79B40AB130", title: "{atm9.chapters.group.6.}" }
 		{ id: "02FE661031A105D8", title: "{atm9.chapters.group.7.}" }
 		{ id: "752CDE464613A1ED", title: "{atm9.chapters.group.8.}" }
-		{ id: "46D49B1102629CD3", title: "Forestry" }
+		{ id: "46D49B1102629CD3", title: "{atm9.quest.extra.chapter_groups.title.a033c55d3e}" }
 	]
 }

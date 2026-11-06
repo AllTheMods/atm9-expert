@@ -32,5 +32,5 @@
 		{ count: 16, item: "gtceu:rare_earth_dust", random_bonus: 32, weight: 10.0f }
 		{ count: 6, item: "gtceu:ruridit_dust", random_bonus: 12, weight: 10.0f }
 	]
-	title: "GT LuV Basic Rewards"
+	title: "{atm9.quest.extra.gt_luv_rewards.title.9259fb4efe}"
 }

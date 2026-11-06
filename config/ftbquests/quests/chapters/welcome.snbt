@@ -18,7 +18,7 @@
 		{
 			click: "https://discord.gg/3paFjuRfz9"
 			height: 1.0d
-			hover: ["Join the Discord!"]
+			hover: ["{atm9.quest.extra.welcome.hover.8bde7dfb48}"]
 			image: "ftbchunks:textures/waypoint_default.png"
 			rotation: 0.0d
 			width: 1.0d
@@ -160,15 +160,15 @@
 		{
 			description: [
 				"{atm9.quest.welcome.desc.translations}"
-				"&lTranslator List&r (as of pack version v0.3.6)"
-				"&9Spanish&r by &2radzratz&r, &2abel102389&r, &2arivio&r, and &2metabodiru&r."
-				"&9Norwegian&r (Bokmål) by &2Permest&r."
-				"&9Portugese&r by &2oruiva&r."
-				"&9Japanese&r by &2fishlife1 (flll)&r."
-				"&9Korean&r by &2J-YonKen&r."
-				"&9German&r by &2Aquamatik&r."
-				"&9Dutch&r by &2NeofastFTL&r."
-				"&9Italian&r by &2Il-mostro-di-gioacchinopoli&r."
+				"{atm9.quest.extra.welcome.description.146dd3ccd4}"
+				"{atm9.quest.extra.welcome.description.bc161d6914}"
+				"{atm9.quest.extra.welcome.description.27604a8575}"
+				"{atm9.quest.extra.welcome.description.19c683695a}"
+				"{atm9.quest.extra.welcome.description.2e8dcbcdd5}"
+				"{atm9.quest.extra.welcome.description.f2a0a37deb}"
+				"{atm9.quest.extra.welcome.description.11706498f5}"
+				"{atm9.quest.extra.welcome.description.84f0daffa1}"
+				"{atm9.quest.extra.welcome.description.2cc78f79b3}"
 			]
 			icon: {
 				Count: 1
@@ -197,12 +197,12 @@
 		{
 			can_repeat: false
 			description: [
-				"This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks."
-				"As all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission."
+				"{atm9.quest.extra.an_introduction.description.b1e1034170}"
+				"{atm9.quest.extra.an_introduction.description.0f5ef769f8}"
 				""
 				""
 				""
-				"This quest is intentionally hidden, if you're seeing this, you're in editing mode."
+				"{atm9.quest.extra.an_introduction.description.9ac7917306}"
 			]
 			disable_toast: true
 			hide_details_until_startable: true
@@ -222,12 +222,12 @@
 				{
 					disable_toast: true
 					id: "7EBE873AF3D96C0C"
-					title: "Quests By AllTheMods"
+					title: "{atm9.quest.extra.an_introduction.title.8b3aca5269}"
 					type: "checkmark"
 				}
 				{
 					id: "0CD6D7231BCDC4E3"
-					title: "Quests By AllTheMods"
+					title: "{atm9.quest.extra.an_introduction.title.8b3aca5269}"
 					type: "checkmark"
 				}
 			]

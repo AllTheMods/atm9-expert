@@ -9,6 +9,6 @@
 		{ item: "ae2:fluix_dust", random_bonus: 1 }
 		{ count: 2, item: "ae2:charged_certus_quartz_crystal", random_bonus: 2, weight: 5.0f }
 	]
-	title: "AE2 Basic Rewards"
+	title: "{atm9.quest.extra.ae2_basic_rewards.title.371b6bc5dd}"
 	use_title: true
 }

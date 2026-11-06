@@ -32,5 +32,5 @@
 		{ count: 16, item: "gtceu:raw_neodymium", random_bonus: 16, weight: 10.0f }
 		{ count: 6, item: "gtceu:graphene_dust", random_bonus: 6, weight: 10.0f }
 	]
-	title: "GT IV Basic Rewards"
+	title: "{atm9.quest.extra.gt_iv_basic_rewards.title.28cd570d23}"
 }

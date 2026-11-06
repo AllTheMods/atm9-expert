@@ -14,6 +14,6 @@
 		{ item: "powah:niotic_crystal_block", weight: 2.0f }
 		{ item: "powah:spirited_crystal_block" }
 	]
-	title: "Powah: Spirited Loot Reward"
+	title: "{atm9.quest.extra.powah_spirited.title.385bdfef90}"
 	use_title: true
 }
