@@ -1,0 +1,1618 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "blood_magic_greg"
+	group: "02FE661031A105D8"
+	icon: "bloodmagic:altar"
+	id: "5BAD703E716A3BD7"
+	order_index: 10
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"{atm9.quest.bloodMagic.desc.welcome.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.welcome.2}"
+				""
+				"{atm9.quest.bloodMagic.desc.welcome.3}"
+			]
+			id: "526605942F2A6DB3"
+			rewards: [{
+				id: "25D44C5C212C6A70"
+				item: {
+					Count: 1
+					id: "patchouli:guide_book"
+					tag: {
+						"patchouli:book": "bloodmagic:guide"
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "6A12063BF71CB04F"
+				title: "Start Here"
+				type: "checkmark"
+			}]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["526605942F2A6DB3"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.gettingStarted.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.gettingStarted.2}"
+				""
+				"{atm9.quest.bloodMagic.desc.gettingStarted.3}"
+				""
+				"{atm9.quest.bloodMagic.desc.gettingStarted.4}"
+				""
+				"{atm9.quest.bloodMagic.desc.gettingStarted.5}"
+				""
+				""
+				"IMPORTANT: blood will slowly drain from your altar, and make sure to read blood requirement!"
+			]
+			id: "7CC38E6CFD38B760"
+			shape: "pentagon"
+			size: 1.5d
+			tasks: [
+				{
+					icon: "bloodmagic:altar"
+					id: "116B0D62F12F5E93"
+					item: "bloodmagic:altar"
+					type: "item"
+				}
+				{
+					id: "32AE17FBC2A4DFEA"
+					item: {
+						Count: 1
+						id: "bloodmagic:sacrificialdagger"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["061AA0571021C80E"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.infusingLifeEssence.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.infusingLifeEssence.2}"
+			]
+			icon: "bloodmagic:blankslate"
+			id: "2096E77CBDFC27CB"
+			rewards: [{
+				count: 5
+				id: "66452C3A773B56CE"
+				item: "gtceu:blank_slate_casing"
+				type: "item"
+			}]
+			subtitle: "You are going to want to batch craft"
+			tasks: [
+				{
+					id: "31FF0864A5E7ED71"
+					item: "gtceu:blank_slate_casing"
+					type: "item"
+				}
+				{
+					id: "15410D0D3359CCE5"
+					item: "bloodmagic:blankslate"
+					type: "item"
+				}
+			]
+			title: "Blank Slate"
+			x: -0.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7CC38E6CFD38B760"]
+			description: [
+				"If you are wondering how to get blood into your assembler, the easiest way is with evil craft. Craft a blood extractor and fill it with blood. Then in the assembler simply add it to the fluid."
+				""
+				"If you are also confused on Umbral Steel, look for the hot ingot in the ebf"
+				"- The dust requires steel and crushed dark gem from evil craft"
+				""
+				"Highly recommend crafting multiple. YOU WILL NEED THEM"
+			]
+			icon: "gtceu:blank_slate_casing"
+			id: "061AA0571021C80E"
+			rewards: [{
+				count: 8
+				id: "7EF1FB155F34C02D"
+				item: "gtceu:blank_slate_casing"
+				type: "item"
+			}]
+			shape: "octagon"
+			size: 1.0d
+			subtitle: "Wondering how to Get the Materials?"
+			tasks: [
+				{
+					id: "1ADBA3830833FE23"
+					title: "How to Get Blank Slate Casing"
+					type: "checkmark"
+				}
+				{
+					id: "298FC4B83F582F2D"
+					item: "gtceu:slate_casing"
+					type: "item"
+				}
+				{
+					id: "1A4E24D372AF86B6"
+					item: "gtceu:blank_slate_casing"
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "Blank Slate Casing"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7CC38E6CFD38B760"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.weakBloodOrbFeatures.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.weakBloodOrbFeatures.2}"
+				""
+				"{atm9.quest.bloodMagic.desc.weakBloodOrbFeatures.3}"
+				""
+				"{atm9.quest.bloodMagic.desc.weakBloodOrbFeatures.4}"
+			]
+			id: "4638BDEAA795103C"
+			tasks: [{
+				id: "1D984EA6D625EA94"
+				item: "bloodmagic:weakbloodorb"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"2096E77CBDFC27CB"
+				"31093D864BC2460E"
+			]
+			description: [
+				"{atm9.quest.bloodMagic.desc.hellfireForgeIntro.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.hellfireForgeIntro.2}"
+			]
+			id: "6B156613C6E8DC31"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "2A61907DD70774A5"
+				item: "bloodmagic:soulforge"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"2096E77CBDFC27CB"
+				"4638BDEAA795103C"
+			]
+			description: [
+				"{atm9.quest.bloodMagic.desc.alchemyTable.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.alchemyTable.2}"
+			]
+			id: "1E609A53A6953503"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "37106F6FF4612522"
+				item: "bloodmagic:alchemytable"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7CC38E6CFD38B760"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.collectingDemonicWill.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.collectingDemonicWill.2}"
+				""
+				"{atm9.quest.bloodMagic.desc.collectingDemonicWill.3}"
+			]
+			id: "31093D864BC2460E"
+			tasks: [
+				{
+					count: 5L
+					id: "6C24717CA3949501"
+					item: "bloodmagic:soulsnare"
+					type: "item"
+				}
+				{
+					id: "6A9EEA348202C70F"
+					item: {
+						Count: 1
+						id: "bloodmagic:basemonstersoul"
+						tag: {
+							souls: 5.0d
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Collecting Demon Will"
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["78E211F2E1C18E13"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.upgradingAltar.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.upgradingAltar.2}"
+			]
+			icon: "bloodmagic:altar"
+			id: "7957642CD16BF701"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				count: 8L
+				id: "2D09DCBBE00EF95D"
+				item: "bloodmagic:blankrune"
+				type: "item"
+			}]
+			title: "Tier 2 Blood Altar"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2096E77CBDFC27CB"]
+			description: [
+				"To get Blank Runes to upgrade our altar from tier 1 to tier 2, you will first need rune casing"
+				""
+				"You will need pneumatic craft stone and manasteel."
+			]
+			id: "78E211F2E1C18E13"
+			tasks: [{
+				count: 8L
+				id: "2ECB052338D2D224"
+				item: "gtceu:rune_casing"
+				type: "item"
+			}]
+			title: "Rune Casings"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7957642CD16BF701"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.altarMobSacrifice.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.altarMobSacrifice.2}"
+				""
+				"{atm9.quest.bloodMagic.desc.altarMobSacrifice.3}"
+			]
+			id: "7CC0501F9A60373C"
+			tasks: [{
+				id: "367EDDA399686945"
+				item: "bloodmagic:daggerofsacrifice"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7957642CD16BF701"]
+			description: ["With blank runes, you can craft any of the other rune types (not reinforced though). All you need is some magic from other mods, and a lv assembler"]
+			icon: "bloodmagic:sacrificerune"
+			id: "2B2CC1E50EF86D5D"
+			tasks: [{
+				id: "4A1E0EF7C1104DDE"
+				title: "Runes"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6333DFDC5E3208E8"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.upgradeAltarTier3.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.upgradeAltarTier3.2}"
+				""
+				"{atm9.quest.bloodMagic.desc.upgradeAltarTier3.3}"
+				""
+				"{atm9.quest.bloodMagic.desc.upgradeAltarTier3.4}"
+				""
+				"{atm9.quest.bloodMagic.desc.upgradeAltarTier3.5}"
+			]
+			icon: "bloodmagic:altar"
+			id: "2F0BBD5C66995B18"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				count: 20L
+				icon: "bloodmagic:blankrune"
+				id: "5A032705A81A173B"
+				item: { Count: 28, id: "bloodmagic:blankrune" }
+				title: "Tier 3 Blood Altar"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7957642CD16BF701"]
+			description: ["{atm9.quest.bloodMagic.subt.lp25k}"]
+			id: "0BF1A22B6D42A2BD"
+			tasks: [{
+				id: "7F8A3B30AA060AA4"
+				item: "bloodmagic:apprenticebloodorb"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7957642CD16BF701"]
+			description: ["{atm9.quest.bloodMagic.desc.upgradeJourney.1}"]
+			id: "6333DFDC5E3208E8"
+			tasks: [{
+				id: "12578A10FECEAA3F"
+				item: "bloodmagic:reinforcedslate"
+				type: "item"
+			}]
+			title: "Reinforced Slate"
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2F0BBD5C66995B18"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.imbuedSlates.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.imbuedSlates.2}"
+			]
+			id: "7AA45B4EF9D49EF0"
+			tasks: [{
+				id: "161A3ACDD8B40C8F"
+				item: "bloodmagic:infusedslate"
+				type: "item"
+			}]
+			title: "Imbued Slate"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7957642CD16BF701"]
+			description: [
+				"Need to cool energetic alloy or soularium, look at their hot blazing forms"
+				""
+				"Definitely won't allow you to skip some progression. Shhhh"
+			]
+			id: "6AA486DEE345C51B"
+			tasks: [
+				{
+					id: "105A3E31B82C01B7"
+					title: "Cooling Ingots"
+					type: "checkmark"
+				}
+				{
+					id: "79CF9A695976BF72"
+					item: "gtceu:hot_blazing_energetic_alloy_ingot"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "18080BDF065950AC"
+					item: "gtceu:hot_blazing_soularium_ingot"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2F0BBD5C66995B18"]
+			description: ["{atm9.quest.bloodMagic.subt.lp150k}"]
+			id: "2E6F1D261D690CB8"
+			tasks: [{
+				id: "026E79A28F235664"
+				item: "bloodmagic:magicianbloodorb"
+				type: "item"
+			}]
+			x: 7.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6333DFDC5E3208E8"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.ritualPreparation.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.ritualPreparation.2}"
+				""
+				"{atm9.quest.bloodMagic.desc.ritualPreparation.3}"
+			]
+			id: "53440D26D168E573"
+			tasks: [
+				{
+					id: "7087578B7ED92154"
+					item: "bloodmagic:masterritualstone"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "4BCCE5E0B1F0D1A5"
+					item: "bloodmagic:ritualstone"
+					type: "item"
+				}
+			]
+			title: "Tier 1 Rituals"
+			x: 5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7AA45B4EF9D49EF0"]
+			description: ["{atm9.quest.bloodMagic.desc.alchemicalChamber.2}"]
+			id: "125772FFC095F651"
+			tasks: [{
+				id: "266B9375C2F32C9F"
+				item: "bloodmagic:alchemicalreactionchamber"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"7AA45B4EF9D49EF0"
+				"33C4444729487807"
+			]
+			icon: "bloodmagic:altar"
+			id: "5AC5D9360E12A6D6"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				count: 28L
+				id: "24D45F06F35D82BA"
+				item: "bloodmagic:blankrune"
+				type: "item"
+			}]
+			title: "Tier 4 Blood Altar"
+			x: 11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5AC5D9360E12A6D6"]
+			description: ["{atm9.quest.bloodMagic.subt.lp1M}"]
+			id: "3FAEE9B5B1924E2A"
+			tasks: [{
+				id: "1F45A6C921A365FF"
+				item: "bloodmagic:masterbloodorb"
+				type: "item"
+			}]
+			x: 11.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"6B9BE71CAA6FCFBB"
+				"173E6943D532FDF2"
+			]
+			icon: "bloodmagic:altar"
+			id: "35D91AB2A515E918"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				count: 52L
+				id: "623A0851130663C0"
+				item: "bloodmagic:blankrune"
+				type: "item"
+			}]
+			title: "Tier 5 Blood Altar"
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5AC5D9360E12A6D6"]
+			id: "6B9BE71CAA6FCFBB"
+			tasks: [{
+				id: "2C66E08A4F07928F"
+				item: "bloodmagic:demonslate"
+				type: "item"
+			}]
+			x: 13.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["35D91AB2A515E918"]
+			id: "078D0E9F1C9EA1DF"
+			tasks: [{
+				id: "4267B0910BA3C31F"
+				item: "bloodmagic:archmagebloodorb"
+				type: "item"
+			}]
+			x: 15.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["35D91AB2A515E918"]
+			id: "16536DBB3472FF99"
+			tasks: [{
+				id: "0BE2D1FF56625175"
+				item: "bloodmagic:etherealslate"
+				type: "item"
+			}]
+			x: 17.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["16536DBB3472FF99"]
+			description: ["{atm9.quest.bloodMagic.desc.demonRealmLoot}"]
+			icon: "bloodmagic:sacrificerune2"
+			id: "031CC87E535A7FF2"
+			tasks: [{
+				id: "0A3AC0E9FBEBA853"
+				title: "Reinforced Slate"
+				type: "checkmark"
+			}]
+			title: "Reinforced Runes"
+			x: 18.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"125772FFC095F651"
+				"762C469CADFCF812"
+			]
+			description: [
+				"{atm9.quest.bloodMagic.desc.demonWillStock.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.demonWillStock.2}"
+				""
+				"{atm9.quest.bloodMagic.desc.demonWillStock.3}"
+			]
+			id: "6A452531C34060C4"
+			tasks: [
+				{
+					id: "6AE5B54B9B28EE96"
+					item: "bloodmagic:weakbloodshard"
+					type: "item"
+				}
+				{
+					id: "6964EC9DE7524F2D"
+					item: {
+						Count: 1
+						id: "bloodmagic:sanguinereverter"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 11.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["16536DBB3472FF99"]
+			description: ["There is definitely no use of the imbuement slate..... Right?"]
+			icon: "bmaddon:blood_generator"
+			id: "73975CB16C9299D6"
+			subtitle: "Will there be more?"
+			tasks: [
+				{
+					id: "3DA3E94A74EBED3A"
+					title: "The End?"
+					type: "checkmark"
+				}
+				{
+					id: "45BA5FC30C0F0B7A"
+					item: "bmaddon:blood_generator"
+					type: "item"
+				}
+			]
+			x: 19.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["53440D26D168E573"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.ritualDiviner.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.ritualDiviner.2}"
+				""
+				"{atm9.quest.bloodMagic.desc.ritualDiviner.3}"
+				""
+				"{atm9.quest.bloodMagic.desc.ritualDiviner.4}"
+			]
+			icon: "bloodmagic:ritualdiviner"
+			id: "66A0DA3679405B23"
+			tasks: [
+				{
+					id: "57CB29DEDAB8E9AF"
+					item: "bloodmagic:ritualdiviner"
+					type: "item"
+				}
+				{
+					id: "27ADC84160427964"
+					item: "bloodmagic:activationcrystalweak"
+					type: "item"
+				}
+			]
+			x: 5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6B156613C6E8DC31"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.sentientSwordIntro.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.sentientSwordIntro.2}"
+			]
+			id: "0F77A73F6FFEFACC"
+			tasks: [{
+				id: "7EA3B3D8848E2D71"
+				item: {
+					Count: 1
+					id: "bloodmagic:soulsword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -3.5d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"1E609A53A6953503"
+				"4638BDEAA795103C"
+			]
+			description: [
+				"{atm9.quest.bloodMagic.desc.lavaSigil.1}"
+				""
+				"The Divination Sigil has two primatry uses:"
+				"{atm9.quest.bloodMagic.desc.divinationSigil.3}"
+				""
+				"{atm9.quest.bloodMagic.desc.divinationSigil.4}"
+				""
+				"The water sigil {atm9.quest.bloodMagic.desc.waterSourceCreation}"
+			]
+			icon: "bloodmagic:lavasigil"
+			id: "106163C4D7BDBB1A"
+			tasks: [
+				{
+					id: "46ED0D3AF66F5651"
+					title: "Tier 1"
+					type: "checkmark"
+				}
+				{
+					id: "399F1237686BE365"
+					item: "bloodmagic:lavasigil"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "47118A2253AF14CF"
+					item: "bloodmagic:divinationsigil"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "53D7E6906B448BD1"
+					item: "bloodmagic:watersigil"
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "Tier 1 Sigils"
+			x: -4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"0BF1A22B6D42A2BD"
+				"1E609A53A6953503"
+			]
+			description: [
+				"{atm9.quest.bloodMagic.desc.airSigil.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.voidSigil.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.seersSigil.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.minersSigil.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.greenGroveSigil.1}"
+			]
+			icon: "bloodmagic:airsigil"
+			id: "60E4A03BC9C9A7DF"
+			tasks: [
+				{
+					id: "6DFF5A26479BDB63"
+					title: "Tier 2"
+					type: "checkmark"
+				}
+				{
+					id: "1DD4899CCCF960E6"
+					item: "bloodmagic:airsigil"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "3B7691BD5254ECD4"
+					item: "bloodmagic:voidsigil"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0D4037C75002BC47"
+					item: "bloodmagic:seersigil"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "237017E394E73F1C"
+					item: {
+						Count: 1
+						id: "bloodmagic:miningsigil"
+						tag: { }
+					}
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7194A87662053A08"
+					item: {
+						Count: 1
+						id: "bloodmagic:growthsigil"
+						tag: { }
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "Tier 2 Sigils"
+			x: 3.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"2E6F1D261D690CB8"
+				"1E609A53A6953503"
+			]
+			description: [
+				"{atm9.quest.bloodMagic.desc.bloodLamp.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.holding.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.magnetism.1}"
+			]
+			icon: "bloodmagic:bloodlightsigil"
+			id: "774BEF91C0E12E7E"
+			tasks: [
+				{
+					id: "53F8D770A278A2F7"
+					title: "Tier 3 Reagants"
+					type: "checkmark"
+				}
+				{
+					icon: "bloodmagic:bloodlightsigil"
+					id: "5FFF55348BF15CC3"
+					item: "bloodmagic:reagentmagnetism"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "497F60B01C6D43F0"
+					item: {
+						Count: 1
+						id: "bloodmagic:sigilofholding"
+						tag: {
+							currentSigil: 5
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6CEDC324D0D195A3"
+					item: {
+						Count: 1
+						id: "bloodmagic:sigilofmagnetism"
+						tag: { }
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 7.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"3FAEE9B5B1924E2A"
+				"1E609A53A6953503"
+			]
+			description: [
+				"{atm9.quest.bloodMagic.desc.telepositionSigil.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.suppressionSigil.1}"
+			]
+			icon: "bloodmagic:reagentsuppression"
+			id: "439071B4656FFFAE"
+			tasks: [
+				{
+					id: "1CA5080CB94BE8A9"
+					title: "Tier 4"
+					type: "checkmark"
+				}
+				{
+					id: "33B555200848C5F7"
+					item: "bloodmagic:telepositionsigil"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "4143E0215881C447"
+					item: {
+						Count: 1
+						id: "bloodmagic:sigilofsuppression"
+						tag: { }
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 11.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1E609A53A6953503"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.arcaneAshes.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.arcaneAshes.2}"
+			]
+			id: "7A30E9A9FD3A6759"
+			tasks: [{
+				id: "172C2423908023AA"
+				item: {
+					Count: 1
+					id: "bloodmagic:arcaneashes"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["2F0BBD5C66995B18"]
+			description: [
+				"Tired of sacrificing creatures in world, well let me present to you the virtual sacrificer."
+				"Look at JEI recipes for what to give it"
+			]
+			id: "7D085237D880697B"
+			tasks: [{
+				id: "5B8DDC12D485277E"
+				item: "sanguine_networks:virtual_sacrificer"
+				type: "item"
+			}]
+			x: 9.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["774BEF91C0E12E7E"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.livingEquipment.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.livingEquipment.2}"
+				""
+				"{atm9.quest.bloodMagic.desc.livingEquipment.3}"
+				""
+				"{atm9.quest.bloodMagic.desc.livingEquipment.4}"
+			]
+			id: "339DA3427044D11C"
+			tasks: [
+				{
+					id: "26F2A2DD1339984F"
+					item: {
+						Count: 1
+						id: "bloodmagic:livinghelmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "30A8CEEF624C5A4B"
+					item: {
+						Count: 1
+						id: "bloodmagic:livingplate"
+						tag: {
+							Damage: 0
+							livingStats: {
+								evolved: 0b
+								maxPoints: 100
+								upgrades: [ ]
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4D85166C13B35F0B"
+					item: {
+						Count: 1
+						id: "bloodmagic:livingleggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1CA4588B9F1A2DE8"
+					item: {
+						Count: 1
+						id: "bloodmagic:livingboots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 7.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["66A0DA3679405B23"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.tauFruitUsage.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.tauFruitUsage.2}"
+				""
+				"{atm9.quest.bloodMagic.desc.tauFruitUsage.3}"
+			]
+			id: "040F16A4ED8E513C"
+			tasks: [{
+				id: "217CDD3C7F22F17D"
+				item: "bloodmagic:weak_tau"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["040F16A4ED8E513C"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.fruitThirsts.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.fruitThirsts.2}"
+			]
+			id: "762C469CADFCF812"
+			tasks: [{
+				id: "4E6B2CED602C16A0"
+				item: "bloodmagic:strong_tau"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6A452531C34060C4"]
+			description: ["The 4 pillars require this block on top for the tier 4 blood altar"]
+			id: "33C4444729487807"
+			tasks: [{
+				count: 4L
+				id: "443DA90C31ECFB1F"
+				item: { Count: 4, id: "bloodmagic:largebloodstonebrick" }
+				type: "item"
+			}]
+			x: 11.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6B9BE71CAA6FCFBB"]
+			description: ["These are the casings needed for blood magic multis"]
+			id: "1D7DA6A910B0D3C3"
+			tasks: [
+				{
+					id: "6DF75744B38BF477"
+					title: "Greg Multis"
+					type: "checkmark"
+				}
+				{
+					id: "5008FCD8E3EBB052"
+					item: "gtceu:blood_splash_casing"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1F0BEC8171D05168"
+					item: "gtceu:sanguine_vessel_casing"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "3C89AD0A0D31B4F5"
+					item: "gtceu:will_orb_casing"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 13.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1D7DA6A910B0D3C3"]
+			description: [
+				"Useful for your blood transferring needs"
+				""
+				"What you want more info?"
+				""
+				"The Sanguine feeder can input any form of blood: solid or liquid, and can ouput one of three types of blood: life essence (Blood Magic), blood (Evilcraft), or sanguine concentrate (gtceu)."
+				""
+				"To link use a linking tool"
+			]
+			icon: "gtceu:sanguine_feeder"
+			id: "300B12DD25A4EC5E"
+			tasks: [
+				{
+					id: "05F740F05ABB9C04"
+					item: "gtceu:sanguine_feeder"
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "30CF06E21AB9F592"
+					item: { Count: 6, id: "gtceu:blood_splash_casing" }
+					type: "item"
+				}
+				{
+					count: 17L
+					id: "75D22EA08119CCE9"
+					item: { Count: 17, id: "gtceu:sanguine_vessel_casing" }
+					type: "item"
+				}
+			]
+			x: 14.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1D7DA6A910B0D3C3"]
+			description: [
+				"An all in one Blood Magic Multi. Why use a forge or an alchemy table. Those are so last year..."
+				""
+				"Simply input will or blood and whatever items for the recipe."
+				""
+				"DON'T FORGET TO SELECT MACHINE TYPE: Sanguine Synthesis, Sanguine Alchemy, Sanguine Forge, Sanguine Array, and Sanguine Reaction Chamber."
+			]
+			icon: "gtceu:sanguine_synthesizer"
+			id: "3F9C3F0CAD207200"
+			tasks: [
+				{
+					id: "693EB2E426076BA1"
+					item: "gtceu:sanguine_synthesizer"
+					type: "item"
+				}
+				{
+					count: 52L
+					id: "38BE4D822CA59241"
+					item: { Count: 52, id: "gtceu:will_orb_casing" }
+					type: "item"
+				}
+				{
+					count: 17L
+					id: "28F9BC82B3151006"
+					item: { Count: 17, id: "gtceu:blood_splash_casing" }
+					type: "item"
+				}
+				{
+					count: 40L
+					id: "4664D769E6FD9A30"
+					item: { Count: 40, id: "gtceu:sanguine_vessel_casing" }
+					type: "item"
+				}
+			]
+			x: 13.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1D7DA6A910B0D3C3"]
+			description: [
+				"Useful for will transferring needs."
+				""
+				"Same as the sanguine feeder, except with will."
+				""
+				"Will input hatches can accept tartaric gems (will not consume the gem, just the will) and demonic crystals. The output hatch can ouptut any type of will, and the bus can output any type of solid will."
+				""
+				"Types of will: raw, corrosive, destructive, vengeful, and steadfast"
+			]
+			icon: "gtceu:will_feeder"
+			id: "3136DAF5BCF85668"
+			tasks: [
+				{
+					id: "03CF819AD4EA7042"
+					item: "gtceu:will_feeder"
+					type: "item"
+				}
+				{
+					count: 17L
+					id: "62792ADBC7BDA7BC"
+					item: { Count: 17, id: "gtceu:will_orb_casing" }
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "2CBBA5A5F6BE8AB3"
+					item: { Count: 6, id: "gtceu:sanguine_vessel_casing" }
+					type: "item"
+				}
+			]
+			x: 16.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["6B9BE71CAA6FCFBB"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.duskRitualDiviner}"
+				""
+				"{atm9.quest.bloodMagic.desc.duskRitualDiviner.2}"
+			]
+			id: "5B8A7165B9539B1C"
+			tasks: [
+				{
+					id: "324107669166B758"
+					item: {
+						Count: 1
+						id: "bloodmagic:duskscribetool"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "574503C31AD6265F"
+					item: "bloodmagic:ritualdivinerdusk"
+					type: "item"
+				}
+			]
+			title: "Tier 2 Rituals"
+			x: 13.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5B8A7165B9539B1C"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.pathwayToEndlessRealm.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.pathwayToEndlessRealm.2}"
+				""
+				"{atm9.quest.bloodMagic.desc.pathwayToEndlessRealm.3}"
+			]
+			id: "4B110C03324211AD"
+			tasks: [{
+				id: "54E56771506A05CB"
+				item: "bloodmagic:rawdemonite"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4B110C03324211AD"]
+			description: ["Tier 5 block, this time no pillars"]
+			id: "173E6943D532FDF2"
+			tasks: [{
+				count: 4L
+				id: "15C872F9B31DE667"
+				item: { Count: 4, id: "bloodmagic:dungeon_metal" }
+				type: "item"
+			}]
+			x: 15.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["66A0DA3679405B23"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.hiddenRealm.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.hiddenRealm.2}"
+			]
+			id: "4BEACECF06AC7B0A"
+			optional: true
+			tasks: [{
+				id: "17F32CA41A52FF18"
+				item: "bloodmagic:simplekey"
+				type: "item"
+			}]
+			title: "Dungeon Key"
+			x: 3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["4B110C03324211AD"]
+			description: ["A lot of recipes require some form of hellforge ingots, so make a lot"]
+			id: "3BD1B04CCF02E628"
+			shape: "hexagon"
+			tasks: [{
+				id: "4A1D1ECF3C2A209E"
+				item: "bloodmagic:ingot_hellforged"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["3BD1B04CCF02E628"]
+			description: [
+				"A lot of productive bees is gated behind blood magic. But hey if you are at this quest, then you can now make all that stuff."
+				""
+				""
+				"Now Buzzzz off"
+			]
+			id: "17E4CF2542DF96DB"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "7C11D71B5B175221"
+				item: "productivebees:upgrade_base"
+				type: "item"
+			}]
+			title: "Unlocking Bees"
+			x: 17.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6B156613C6E8DC31"]
+			description: [
+				"{atm9.quest.bloodMagic.desc.demonicWillStorage.1}"
+				""
+				"{atm9.quest.bloodMagic.desc.demonicWillStorage.2}"
+				""
+				"{atm9.quest.bloodMagic.desc.demonicWillStorage.3}"
+				""
+				"{atm9.quest.bloodMagic.desc.demonicWillStorage.4}"
+			]
+			id: "0C9DE47BE56D2663"
+			tasks: [{
+				id: "7ADF7AEC83FF03DF"
+				item: {
+					Count: 1
+					id: "bloodmagic:soulgempetty"
+					tag: {
+						souls: 64.0d
+					}
+				}
+				type: "item"
+			}]
+			x: -0.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["0C9DE47BE56D2663"]
+			description: ["{atm9.quest.bloodMagic.desc.willStorageUpgrade.1}"]
+			id: "0506B7FD236B3CAC"
+			tasks: [{
+				id: "1AF0B78B2951095B"
+				item: {
+					Count: 1
+					id: "bloodmagic:soulgemlesser"
+					tag: {
+						souls: 256.0d
+					}
+				}
+				type: "item"
+			}]
+			x: -0.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0506B7FD236B3CAC"]
+			description: ["{atm9.quest.bloodMagic.desc.willStorageUpgrade.2}"]
+			id: "76C80CBBE0078896"
+			tasks: [{
+				id: "48B15FCB0A2A81D7"
+				item: {
+					Count: 1
+					id: "bloodmagic:soulgemcommon"
+					tag: {
+						souls: 1024.0d
+					}
+				}
+				type: "item"
+			}]
+			x: -0.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["76C80CBBE0078896"]
+			description: ["{atm9.quest.bloodMagic.desc.willStorageUpgrade.3}"]
+			id: "56035DD169DE0FC2"
+			tasks: [{
+				id: "0DA207CB2A6E3128"
+				item: {
+					Count: 1
+					id: "bloodmagic:soulgemgreater"
+					tag: {
+						souls: 4096.0d
+					}
+				}
+				type: "item"
+			}]
+			x: -0.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["7AA45B4EF9D49EF0"]
+			description: ["Automated Blood Altar, for all your automation needs. Using the Sanguine Feeder you can input all the blood needed."]
+			icon: "gtceu:sanguine_ritual"
+			id: "10DBC531CC6F4B87"
+			tasks: [
+				{
+					id: "36E232B91DB083EE"
+					item: "gtceu:sanguine_ritual"
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "5BC3A67CBADC71BE"
+					item: { Count: 64, id: "gtceu:hsla_steel_frame" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "7808492FC01109FA"
+					item: { Count: 5, id: "gtceu:hv_hermetic_casing" }
+					type: "item"
+				}
+				{
+					count: 114L
+					id: "5048D15412D0B842"
+					item: { Count: 114, id: "gtceu:clean_machine_casing" }
+					type: "item"
+				}
+				{
+					count: 68L
+					id: "7CA6C7DFB768EBFC"
+					item: { Count: 68, id: "bloodmagic:bloodstonebrick" }
+					type: "item"
+				}
+				{
+					count: 96L
+					id: "7531155D5141BF4F"
+					item: { Count: 96, id: "bloodmagic:blankrune" }
+					type: "item"
+				}
+				{
+					count: 56L
+					id: "613F921BF65BBB8C"
+					item: { Count: 56, id: "botania:bifrost_perm" }
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: -1.0d
+		}
+		{
+			description: [
+				"Gregtech now has blood magic multis, and with that blood hatches. Blood input hatches accept all types of blood, solid or liquid, and can ouput one of three types of blood: life essence (Blood Magic), blood (Evilcraft), or sanguine concentrate (gtceu)."
+				""
+				"Will input hatches can accept tartaric gems (will not consume the gem, just the will) and demonic crystals. The output hatch can ouptut any type of will, and the bus can output any type of solid will. "
+				"Types of will: raw, corrosive, destructive, vengeful, and steadfast"
+			]
+			id: "3EB087C9F8A0C7E6"
+			tasks: [
+				{
+					id: "63FC5320DD3C8606"
+					title: "Blood Hatches"
+					type: "checkmark"
+				}
+				{
+					id: "62BFFBB3AD545B16"
+					item: "gtextras:blood_input_hatch_lv"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "00BAD9D8D41FD72A"
+					item: "gtextras:blood_output_hatch_lv"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0D17011DF1FCB89C"
+					item: "gtextras:will_input_hatch_lv"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "74EE966C7ED93134"
+					item: "gtextras:will_output_hatch_lv"
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "Blood Magic Hatches"
+			x: -6.0d
+			y: -1.5d
+		}
+		{
+			description: [
+				"Sanguine Forge is a single block machine Hellfire forge"
+				""
+				"Sanguine Alchemy is a single block machine alchemy table"
+				""
+				"Sanguine Arc Furnace, as you may have picked up by now is the single block machine for the arc furnace"
+				""
+				"Sanguine Array is the machine for recipes you normally have to make with arcane ashes"
+				""
+				"All of these machines will later be replaced with the Sanguine Synthesizer Multi"
+				""
+				"TIP: to get blood into machines simple import liquid blood. HINT: Evilcraft has very simple ways of getting liquid blood"
+				""
+				"TIP 2: Simple Fluid extract will for liquid will"
+			]
+			id: "24949EA2FDB45D10"
+			tasks: [
+				{
+					id: "0D27E8283C7B7C8C"
+					title: "Blood Magic Single Blocks"
+					type: "checkmark"
+				}
+				{
+					id: "552D5BFACFDAB95A"
+					item: "gtceu:lv_sanguine_forge"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6E753E958AF6896E"
+					item: "gtceu:lv_sanguine_alchemy"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "39AF531090E2B803"
+					item: "gtceu:lv_sanguine_arc"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "30F739801E7648C8"
+					item: "gtceu:lv_sanguine_array"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: -3.0d
+		}
+		{
+			description: [
+				"The Sanguine Refinery has one purpose, turn blood from either evilcraft or blood magic, and turn it into sanguine concrete."
+				""
+				"Which is used in many recipes"
+			]
+			id: "47539B8245DC9F58"
+			tasks: [{
+				id: "4E6BA7801C764ABC"
+				item: "gtceu:mv_sanguine_refinery"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["6B156613C6E8DC31"]
+			description: [
+				"You will need a lot of will in this pack. Crystals are a good source for all that will. "
+				""
+				"Demon Crucible: Simply put in a charged tartaric gem or any aspect of demon will or demon crystal. As needed the will will slowly be consumed to make demon aura. Some rituals may need the will aura, the main benefit is the ability to create demon will crystals."
+				"NOTE: aura is chunk based, if you wish to move it around craft a demon pylon or multiple:"
+				""
+				"Demon Crystallizer: Will slowly consume the aura to produce will crystals. First cost is 100 will and the subsequent spires cost 45 will each. Largest crystal cluster can be up to 7 spires. If you have more than 512 total will in your inventory you can harvest the crystal (right click), will remove all but the central spire."
+				"NOTE: there is an easier way to get the demon crystals via ritual of the Resonance of the Faceted Crystal"
+			]
+			id: "34290CAB2CA94D00"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "28CE09A84A1B6F8F"
+					item: "bloodmagic:demoncrucible"
+					type: "item"
+				}
+				{
+					id: "3CB41DCD2D29441C"
+					item: "bloodmagic:demoncrystallizer"
+					type: "item"
+				}
+			]
+			title: "Obtaining Will Crystals"
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5B8A7165B9539B1C"]
+			description: [
+				"Breaks apart a well grown Raw crystal cluster into separately aspected crystal clusters. "
+				"Activation cost: 20,000 LP, usage 1000 LP"
+				""
+				"Spire must be at least 5, and will turn it into each aspected will crystal cluster on the four element ritual stones. Please consult the book for setup."
+			]
+			icon: "bloodmagic:defaultcrystal"
+			id: "581C31383476CAA8"
+			rewards: [
+				{
+					id: "3C23FD6E108FFB0F"
+					item: "bloodmagic:corrosivecrystal"
+					type: "item"
+				}
+				{
+					icon: "bloodmagic:vengefulcrystal"
+					id: "57FFBDC5B30F1827"
+					item: "bloodmagic:corrosivecrystal"
+					type: "item"
+				}
+				{
+					id: "44B5FCAC2170C4EE"
+					item: "bloodmagic:destructivecrystal"
+					type: "item"
+				}
+				{
+					id: "275A66FB63C5EEB2"
+					item: "bloodmagic:steadfastcrystal"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "Resonance of the Faceted Crystal"
+			tasks: [
+				{
+					id: "2CACAD27E36B0424"
+					item: "bloodmagic:defaultcrystal"
+					type: "item"
+				}
+				{
+					id: "5B25A6D239807D06"
+					item: "bloodmagic:masterritualstone"
+					type: "item"
+				}
+				{
+					count: 20L
+					id: "7EF24C294336596B"
+					item: { Count: 44, id: "bloodmagic:blankrune" }
+					type: "item"
+				}
+			]
+			x: 12.5d
+			y: 4.5d
+		}
+		{
+			description: ["Used for linking the feeder's too where they need to go"]
+			id: "3D775054E7885DC4"
+			tasks: [{
+				id: "25D7F6EE34885DAC"
+				item: "gtextras:link_tool"
+				type: "item"
+			}]
+			x: 14.5d
+			y: -5.5d
+		}
+	]
+	title: "Blood Magic Greg"
+}
