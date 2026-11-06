@@ -24,7 +24,7 @@
 			y: 0.0d
 		}
 	]
-	order_index: 11
+	order_index: 10
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
@@ -40,7 +40,6 @@
 				"7AD22973EDC05877"
 				"64FD043694770843"
 				"078F7CEE4CAC39D6"
-				"5C6F8FE4BA28807E"
 				"768951FBE8A5C934"
 			]
 			description: [
@@ -147,6 +146,11 @@
 							}
 						}
 					}
+					type: "item"
+				}
+				{
+					id: "3A7757557B4F582B"
+					item: "allthetweaks:trophy_atm"
 					type: "item"
 				}
 			]
@@ -578,59 +582,6 @@
 			y: 3.0d
 		}
 		{
-			description: ["{atm9.quest.gregtech.star.desc.unobtainium}"]
-			icon: "computercraft:computer_advanced"
-			id: "5C6F8FE4BA28807E"
-			rewards: [
-				{
-					id: "5AC196B0241610D3"
-					item: "reliquary:pedestals/passive/black_passive_pedestal"
-					type: "item"
-				}
-				{
-					id: "1DBF22541766EC89"
-					item: {
-						Count: 1
-						id: "gtceu:neutronium_hoe"
-						tag: {
-							Damage: 0
-							DisallowContainerItem: 0b
-							GT.Behaviours: {
-								RelocateMinedBlocks: 1b
-							}
-							GT.Tool: {
-								MaxDamage: 65534
-							}
-							HideFlags: 2
-							Unbreakable: 1b
-							display: {
-								Name: "{\"text\":\"Champion of Computers\"}"
-							}
-						}
-					}
-					type: "item"
-				}
-			]
-			shape: "square"
-			size: 1.5d
-			subtitle: "{atm9.quest.gregtech.star.subt.advancedComputers}"
-			tasks: [
-				{
-					count: 32L
-					id: "4FA25206854F9ADC"
-					item: "computercraft:computer_advanced"
-					type: "item"
-				}
-				{
-					id: "76495B10C6046626"
-					item: "gtceu:wetware_processor_mainframe"
-					type: "item"
-				}
-			]
-			x: 7.5d
-			y: -2.25d
-		}
-		{
 			dependencies: [
 				"5AAD0E516762BA53"
 				"3673893C88EB5EDE"
@@ -713,7 +664,7 @@
 				}
 			]
 			x: 7.5d
-			y: -6.0d
+			y: -3.75d
 		}
 		{
 			description: [
@@ -1509,8 +1460,8 @@
 				item: "enderio:prescient_crystal"
 				type: "item"
 			}]
-			x: 9.5d
-			y: -6.5d
+			x: 7.5d
+			y: -5.5d
 		}
 		{
 			description: ["{atm9.quest.gregtech.star.desc.prescientCrystal.1}"]
@@ -1527,8 +1478,8 @@
 				item: "enderio:weather_crystal"
 				type: "item"
 			}]
-			x: 9.5d
-			y: -5.5d
+			x: 9.151785714285708d
+			y: -3.7142857142857153d
 		}
 		{
 			description: ["{atm9.quest.gregtech.star.desc.weatheringTheStorm.1}"]
@@ -1545,8 +1496,8 @@
 				item: "exchangers:eio_exchanger_core_tier3"
 				type: "item"
 			}]
-			x: 10.5d
-			y: -6.0d
+			x: 9.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["73E639487E878948"]
