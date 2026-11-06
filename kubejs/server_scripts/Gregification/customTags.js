@@ -25,6 +25,8 @@ ServerEvents.tags('fluid', allthemods => {
 	['corrosive','vengeful','destructive','demon','steadfast'].forEach(tag => {
 		allthemods.add('forge:will', `gtceu:${tag}`);
 	});	
+	allthemods.add('forge:dusts/coke', 'immersiveengineering:dust_coke')
+	allthemods.add('forge:gems/coke', 'immersiveengineering:coal_coke', 'railcraft:coal_coke')	
 })
 
 ServerEvents.tags('item', allthemods => {	

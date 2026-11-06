@@ -116,7 +116,10 @@ ServerEvents.recipes(allthemods => {
     allthemods.remove(beeRemovals);
 
     
-    const moreRemovals = [
+    const moreRemovals = [       
+        'gtceu:extractor/extract_atm_star_shard', 
+        'tconstruct:smeltery/casting/scorched/foundry_controller', 'terralith:piston_alt',
+        'artifacts:eternal_steak_furnace','artifacts:eternal_steak_smoker', 'artifacts:eternal_steak_campfire','enderio:smelting/artifacts/eternal_steak_furnace',
         'cookingforblockheads:sink', 'evilcraft:crafting/eternal_water', 'tconstruct:common/basalt_blast_furnace',
         'tconstruct:smeltery/melting/metal/iron/chain_boots', 
         'tconstruct:smeltery/melting/metal/iron/chain_chestplate',

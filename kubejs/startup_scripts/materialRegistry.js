@@ -24,6 +24,24 @@ const FluidPipeProperties = Java.loadClass('com.gregtechceu.gtceu.api.data.chemi
 
 const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
 
+const SingularityFlagBuilder = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlag$Builder');
+const SingularityIconType = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconType');
+
+const SINGULARITY_FLAG = new SingularityFlagBuilder('generate_singularity').build();
+const SINGULARITY_ICON = new SingularityIconType('singularity');
+
+GTCEuStartupEvents.registry('gtceu:tag_prefix', allthemods => {
+    allthemods.create('singularity')
+        .idPattern('%s_singularity')
+        .defaultTagPath('singularities/%s')
+        .unformattedTagPath('singularities')
+        .langValue('%s Singularity')
+        .materialIconType(SINGULARITY_ICON)
+        .unificationEnabled(true)
+        .generateItem(true)
+        .generationCondition(material => material.hasFlag(SINGULARITY_FLAG));
+});
+
 MaterialDef.COIL_TEMPS = {
     CUPRONICKEL: 1800,
     KANTHAL: 2700,
@@ -172,7 +190,8 @@ MaterialDef.prototype.electroDecomp = function () { return this.flags(GTMaterial
 MaterialDef.prototype.centrifugeDecomp = function () { return this.flags(GTMaterialFlags.DECOMPOSITION_BY_CENTRIFUGING); }; // optional: force the centrifuge
 MaterialDef.prototype.noSmelting = function () { return this.flags(GTMaterialFlags.NO_SMELTING); };
 MaterialDef.prototype.noBlocks = function () { return this.flags(GTMaterialFlags.EXCLUDE_BLOCK_CRAFTING_RECIPES); };
-MaterialDef.prototype.singularity = function () { return this.flags(CMMEMaterialFlags.GENERATE_SINGULARITY); };
+//MaterialDef.prototype.singularity = function () { return this.flags(CMMEMaterialFlags.GENERATE_SINGULARITY); };
+MaterialDef.prototype.singularity = function () { return this.flags(SINGULARITY_FLAG); };
 MaterialDef.prototype.ignoreAllOrePrefixes = function () {
     this.traits.ignoreAllOrePrefixes = true;
     this.traits.keepOrePrefixes = [];

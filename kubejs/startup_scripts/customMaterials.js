@@ -238,5 +238,70 @@ GTCEuStartupEvents.registry("gtceu:material_icon_set", allthemods => {
 
 })
 
+
+const TagUtil = Java.loadClass('com.gregtechceu.gtceu.api.data.tag.TagUtil');
+const ItemRegistry = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries').ITEM;
+
+function makeMaterialTag(base) {
+    return (tp, mat) => TagUtil.createModTag(ItemRegistry, base + '/' + mat.getName());
+}
+
+function makeFixedTag(path) {
+    return (tp, mat) => TagUtil.createModTag(ItemRegistry, path);
+}
+
+function addGtAliases(prefix, paths) {
+    paths.forEach(path => {
+        if (path.endsWith('/%s')) {
+            prefix.customTagPath(path, makeMaterialTag(path.substring(0, path.length - 3)));
+        } else {
+            prefix.customTagPath(path, makeFixedTag(path));
+        }
+    });
+}
+
+function pipePaths(kind, size) {
+    const paths = [];
+    if (kind == 'fluid') {
+        paths.push('pipes/fluid/' + size + '/%s', 'pipes/fluid/' + size, 'pipes/fluid');
+    } else {
+        paths.push('pipes/' + kind + '/' + size + '/%s', 'pipes/' + kind + '/' + size, 'pipes/' + kind);
+    }
+    paths.push('pipes', 'pipes/' + kind + '/%s', 'pipes/%s', 'pipes/' + size + '/%s', 'pipes/' + size);
+    return paths;
+}
+
+function sizedPaths(root, size) {
+    return [root + '/' + size + '/%s', root + '/' + size, root, root + '/%s'];
+}
+
+addGtAliases(TagPrefix.pipeTinyFluid, pipePaths('fluid', 'tiny'));
+addGtAliases(TagPrefix.pipeSmallFluid, pipePaths('fluid', 'small'));
+addGtAliases(TagPrefix.pipeNormalFluid, pipePaths('fluid', 'medium'));
+addGtAliases(TagPrefix.pipeLargeFluid, pipePaths('fluid', 'large'));
+addGtAliases(TagPrefix.pipeHugeFluid, pipePaths('fluid', 'huge'));
+
+addGtAliases(TagPrefix.pipeSmallItem, pipePaths('item', 'small'));
+addGtAliases(TagPrefix.pipeNormalItem, pipePaths('item', 'medium'));
+addGtAliases(TagPrefix.pipeLargeItem, pipePaths('item', 'large'));
+addGtAliases(TagPrefix.pipeHugeItem, pipePaths('item', 'huge'));
+
+addGtAliases(TagPrefix.pipeSmallRestrictive, pipePaths('restrictive', 'small'));
+addGtAliases(TagPrefix.pipeNormalRestrictive, pipePaths('restrictive', 'medium'));
+addGtAliases(TagPrefix.pipeLargeRestrictive, pipePaths('restrictive', 'large'));
+addGtAliases(TagPrefix.pipeHugeRestrictive, pipePaths('restrictive', 'huge'));
+
+addGtAliases(TagPrefix.wireGtSingle, sizedPaths('wires', 'single'));
+addGtAliases(TagPrefix.wireGtDouble, sizedPaths('wires', 'double'));
+addGtAliases(TagPrefix.wireGtQuadruple, sizedPaths('wires', 'quadruple'));
+addGtAliases(TagPrefix.wireGtOctal, sizedPaths('wires', 'octal'));
+addGtAliases(TagPrefix.wireGtHex, sizedPaths('wires', 'hex'));
+
+addGtAliases(TagPrefix.cableGtSingle, sizedPaths('cables', 'single'));
+addGtAliases(TagPrefix.cableGtDouble, sizedPaths('cables', 'double'));
+addGtAliases(TagPrefix.cableGtQuadruple, sizedPaths('cables', 'quadruple'));
+addGtAliases(TagPrefix.cableGtOctal, sizedPaths('cables', 'octal'));
+addGtAliases(TagPrefix.cableGtHex, sizedPaths('cables', 'hex'));
+
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
 // As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
