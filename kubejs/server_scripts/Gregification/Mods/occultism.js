@@ -111,7 +111,7 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.assembler('gregification:craft_otherstone_casing')
         .itemInputs(
-            '4x occultism:otherstone',
+            '4x pneumaticcraft:compressed_stone',
             '#forge:plates/umbral_steel',
             '#forge:plates/silver'
         )
