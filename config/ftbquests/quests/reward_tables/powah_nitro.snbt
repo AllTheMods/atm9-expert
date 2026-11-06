@@ -13,6 +13,6 @@
 		{ item: "powah:nitro_crystal_block" }
 		{ item: "powah:solar_panel_nitro" }
 	]
-	title: "Powah: Nitro Loot Reward"
+	title: "{atm9.quest.extra.powah_nitro.title.52d1f7d1ea}"
 	use_title: true
 }

@@ -67,5 +67,6 @@
     "atm9e.quest.steam.resistor.title": "Resistors",
     "atm9e.quest.steam.lv_circuit.title": "Basic Electronic Circuit",
     "atm9e.quest.steam.lv.title": "Low Voltage",
-    "atm9e.quest.steam.lv.sub": "LV Chapter Unlock."
+    "atm9e.quest.steam.lv.sub": "LV Chapter Unlock.",
+	"atm9e.quest.steam.bricks.info": "Collect a water bucket and bricks. See JEI for recipes."
 }

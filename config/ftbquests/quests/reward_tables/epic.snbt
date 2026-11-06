@@ -93,6 +93,6 @@
 			xp_levels: 50
 		}
 	]
-	title: "&dEpic Reward"
+	title: "{atm9.quest.extra.epic.title.f2d6616cf3}"
 	use_title: true
 }

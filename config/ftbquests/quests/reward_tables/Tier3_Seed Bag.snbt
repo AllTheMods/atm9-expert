@@ -36,6 +36,6 @@
 		{ item: "mysticalagradditions:tertium_coal", random_bonus: 3, weight: 5.0f }
 		{ item: "mysticalagradditions:tertium_coal_block", weight: 3.0f }
 	]
-	title: "&cTier 3 Seed Bag"
+	title: "{atm9.quest.extra.Tier3_Seed Bag.title.a7bc359ad5}"
 	use_title: true
 }

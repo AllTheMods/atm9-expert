@@ -21,6 +21,6 @@
 	pause_game: false
 	progression_mode: "flexible"
 	show_lock_icons: true
-	title: "All the Mods 9"
+	title: "{atm9.quest.extra.data.title.273a459284}"
 	version: 13
 }

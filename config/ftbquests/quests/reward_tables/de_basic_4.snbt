@@ -9,5 +9,5 @@
 		{ count: 2, item: "draconicevolution:awakened_draconium_block", weight: 2.0f }
 		{ count: 2, item: "draconicevolution:chaotic_energy_core" }
 	]
-	title: "DE Chaotic"
+	title: "{atm9.quest.extra.de_basic_4.title.4138c2b3ed}"
 }
