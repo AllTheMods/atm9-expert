@@ -4786,7 +4786,7 @@
 	"atm9.quest.gregtech.steam.automation": "Automation",
 	"atm9.quest.gregtech.steam.desc.copperIngotCrafting": "One &6Copper Ingot&r and four &cRedstone Dust&r in the &eAlloy Smelter&r creates this lovely ingot",
 	"atm9.quest.gregtech.steam.desc.redAlloyCableCrafting": "Red Alloy Cable is an integral part of crafting the &bLV Circuit&r and getting out of the Steam Age",
-
+	
 
 	"atm9.quest.gregtech.lv.desc.machineUpgrade.1": "Upgrading your machines will grant you access to new recipes and increase their processing speed",
 	"atm9.quest.gregtech.lv.desc.machineUpgrade.2": "This is called overclocking and can be configured in the GUI of the machine if you do not want to overclock (to conserve power for example)",
@@ -7446,7 +7446,16 @@
 	"atm9.quest.proje.desc.RM": "A catalyst for the &6&lATM Star.&r&r \\n \\nThis can also be used to make several OP endgame items from ProjectE!",
 	"atm9.quest.proje.desc.dmpedestal": "This is used in combination with several rings and stones in order to get effects such as regeneration, saturation, and even crop growth! Place the ring/stone on top, then shift+right click the pedestal.",
 	"atm9.quest.proje.desc.RMuse": "Red Matter can be used for the same purposes as Dark Matter, except better in every way! You can make an &bEnergy Condenser MK2&r which does instant item conversion, make an Energy CondensorMK2 even or you can make a &bRing of Arcana&r, which is effectively an all-in-one ring! Very OP!",
-
+	"atm9.quest.proje.RM": "Using Red Matter!",
+	"atm9.quest.proje.covdust": "Covalence Dusts",
+	"atm9.quest.proje.darkm": "Using Dark Matter!",
+	"atm9.quest.proje.desc.rmuse": "Red Matter can be used for the same purposes as Dark Matter, except better in every way! You can make an &bEnergy Condenser MK2&r which does instant item conversion, make an Energy CondensorMK2 even or you can make a &bRing of Arcana&r, which is effectively an all-in-one ring! Very OP!",
+	"atm9.quest.proje.dmarmor": "Dark Matter Armor",
+	"atm9.quest.proje.dmtools": "Dark Matter Tools",
+	"atm9.quest.proje.subt.gen": "Passive EMC Generation",
+	"atm9.quest.proje.subt.trans": "Better than an Energy Condenser",
+	"atm9.quest.proje.tip": "Tip",
+	"atm9.quest.proje.welcome": "Welcome to &aProjectE",
 
 
 

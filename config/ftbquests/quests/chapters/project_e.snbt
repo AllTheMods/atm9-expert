@@ -950,23 +950,6 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["0366439B3678C01F"]
-			description: ["{atm9.quest.proje.desc.heat}"]
-			id: "567C57E1D7ABB282"
-			rewards: [{
-				id: "53700E31E776B76C"
-				type: "xp"
-				xp: 10
-			}]
-			tasks: [{
-				id: "2DA0EEA9F4383921"
-				title: "{atm9.quest.proje.heat}"
-				type: "checkmark"
-			}]
-			x: 24.0d
-			y: -2.5d
-		}
-		{
 			dependencies: ["4C71677D32D87637"]
 			description: ["{atm9.quest.proje.desc.anti}"]
 			id: "2AF07DE427A5D90D"
