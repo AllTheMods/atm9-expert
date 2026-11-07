@@ -337,7 +337,7 @@ ServerEvents.recipes(allthemods => {
         ],
         {
             T: "#minecraft:terracotta",
-            P: "#forge:plates/aluminium",
+            P: "#forge:plates/aluminum",
             E: "evilcraft:bucket_eternal_water"
         }
     ).id('gregification:evilcraft_eternal_water')
