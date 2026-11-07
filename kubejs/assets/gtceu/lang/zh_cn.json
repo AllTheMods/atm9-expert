@@ -1109,5 +1109,6 @@
     "block.gtceu.star_internal_casing": "星体内部外壳",
     "block.gtceu.star_pipe_casing": "星体管道外壳",
     "block.gtceu.star_assembler": "星体汇编器",
-    "gtceu.star_assembler": "ATM 之星装配综合体"
+    "gtceu.star_assembler": "ATM 之星装配综合体",
+    "tagprefix.singularity": "%s奇点"
 }
