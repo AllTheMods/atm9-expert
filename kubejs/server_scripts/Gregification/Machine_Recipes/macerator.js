@@ -93,6 +93,13 @@ allthemods.recipes.gtceu.macerator('gregification:yttrium_aluminium_garnet_dust'
         .itemOutputs('gtceu:yttrium_aluminium_garnet_dust')
         .duration(100)
         .EUt(LuV);
+
+allthemods.recipes.gtceu.macerator('gregification:magma_block_to_magma_cream_dust')
+    .itemInputs('minecraft:magma_block')
+    .itemOutputs('4x gtceu:magma_cream_dust')
+    .duration(400)
+    .EUt(2);
+
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

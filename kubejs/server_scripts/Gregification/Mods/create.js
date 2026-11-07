@@ -97,8 +97,8 @@ ServerEvents.recipes(allthemods => {
         crushDust(metal.ingot, metal.dust);
     });
 
-  
-    
+
+
     //without this recipe, you have to use steam age gt to get to andesite alloy, not sure if I should add it or not
     /*allthemods.shapeless('gtceu:andesite_dust', ['#forge:tools/mortars', 'minecraft:andesite'])
         .damageIngredient('#forge:tools/mortars')
@@ -134,6 +134,30 @@ ServerEvents.recipes(allthemods => {
             D: 'gtceu:vanadium_steel_drill_head'
         }
     ).id('gregification:create/mechanical_drill');
+
+    allthemods.custom({
+        type: 'create:mixing',
+        ingredients: [            
+            { tag: 'forge:dusts/charcoal' },
+            { tag: 'forge:dusts/gunpowder' },
+            { tag: 'forge:dusts/niter' },
+            { item: 'minecraft:glass_bottle' }
+        ],
+        results: [
+            { item: 'minecraft:fire_charge', count: 1 }
+        ]
+    }).id('gregification:mixing/fire_charge');
+
+    allthemods.custom({
+        type: 'create:mixing',
+        ingredients: [
+            { tag: 'forge:dusts/magma_cream' },
+            { fluid: 'minecraft:lava', amount: 1000 }
+        ],
+        results: [
+            { item: 'minecraft:magma_cream' }
+        ]
+    }).id('gregification:mixing/magma_cream');
 
 })
 

@@ -1616,6 +1616,8 @@ const materials = [
 
     new MaterialDef('aureal').fluid().gem().color(0xA1C2F7).iconSet('SHINY'),
 
+    new MaterialDef('magma_cream').dust().color(0xD66A1F).iconSet('DULL'),
+
     new MaterialDef('fire_essence').fluid().gem().color(0xD74C4C).iconSet('FLUID')
         .unify({ gem: 'mysticalagriculture:fire_essence' }),
 

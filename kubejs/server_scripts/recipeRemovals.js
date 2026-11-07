@@ -120,7 +120,13 @@ ServerEvents.recipes(allthemods => {
 
 
 
-    const moreRemovals = [       
+    const moreRemovals = [
+        'thermal:energy_duct_4', 'thermal:fluid_duct_4', 'thermal:fluid_duct_windowed_4',
+        'thermal:energy_limiter_attachment_2', 'thermal:filter_attachment_2', 'thermal:servo_attachment_2', 'thermal:turbo_servo_attachment_2',
+        'minecraft:white_carpet', 'minecraft:orange_carpet', 'minecraft:magenta_carpet', 'minecraft:light_blue_carpet',
+        'minecraft:yellow_carpet', 'minecraft:lime_carpet', 'minecraft:pink_carpet', 'minecraft:gray_carpet',
+        'minecraft:light_gray_carpet', 'minecraft:cyan_carpet', 'minecraft:purple_carpet', 'minecraft:blue_carpet',
+        'minecraft:brown_carpet', 'minecraft:green_carpet', 'minecraft:red_carpet', 'minecraft:black_carpet',
         'ironfurnaces:furnaces/iron_furnace', 'ironfurnaces:furnaces/iron_furnace2', 'ironfurnaces:furnaces/gold_furnace', 'ironfurnaces:furnaces/gold_furnace2',
         'ironfurnaces:furnaces/diamond_furnace', 'ironfurnaces:furnaces/emerald_furnace', 'ironfurnaces:furnaces/obsidian_furnace',
         'ironfurnaces:furnaces/obsidian_furnace2', 'ironfurnaces:furnaces/crystal_furnace', 'ironfurnaces:furnaces/netherite_furnace',
