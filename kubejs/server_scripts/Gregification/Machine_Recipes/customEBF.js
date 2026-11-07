@@ -59,6 +59,7 @@ ServerEvents.recipes(allthemods => {
 
     addEBF(['#forge:dusts/atm_star', '#forge:dusts/atm_trio'], '#forge:antimatter 16', 'allthetweaks:atm_star', null, COIL_TEMPS.NAQUADAH, 2400, ZPM);
     addEBF(['artifacts:everlasting_beef','bloodmagic:demonslate'], '#forge:meat 16000', 'artifacts:eternal_steak', null, COIL_TEMPS.NAQUADAH, 2400, ZPM);
+    addEBF('#forge:dusts/draconium', '#forge:liquid_dragon_breath 2000', 'gtceu:hot_draconium_ingot', null, COIL_TEMPS.TRINIUM, 2400, ZPM);
 
     ['erbium', 'holmium', 'thulium'].forEach(el => {
         addEBF([`2x #forge:dusts/${el}_fluoride`, '3x #forge:dusts/calcium'], '#forge:argon 1000', [`2x gtceu:${el}_ingot`, '3x gtceu:calcium_fluoride_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);

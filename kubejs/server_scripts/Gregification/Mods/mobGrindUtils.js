@@ -116,7 +116,7 @@ ServerEvents.recipes(allthemods => {
         C: '#forge:circuits/iv',
         H: 'gtceu:hv_machine_hull',
         P: '#forge:plates/unobtainium',
-        W: '#forge:wires/hex/cadmium_copper'
+        W: '#gtceu:wires/hex/cadmium_copper'
     }).id('gregification:mob_grinding_utils/fan')
     
     allthemods.shaped('mob_grinding_utils:saw_upgrade_looting', [

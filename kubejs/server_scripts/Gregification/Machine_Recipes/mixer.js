@@ -314,7 +314,7 @@ ServerEvents.recipes(allthemods => {
             '#forge:dusts/glowstone'
         ],
         '3x gtceu:energetic_alloy_dust',
-        HV,
+        MV,
         100
     );
 
@@ -325,7 +325,7 @@ ServerEvents.recipes(allthemods => {
             '#forge:dusts/soul_sand'
         ],
         '2x gtceu:soularium_dust',
-        HV,
+        MV,
         100
     );
 

@@ -319,6 +319,39 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('2x gtceu:soul_conduit_casing')
         .duration(100)
         .EUt(LV);
+
+    allthemods.shaped('ars_nouveau:novice_spell_book', [
+        'PSP',
+        'PBP',
+        'PMP'
+    ], {
+        P: 'gtceu:blueprint_blank',
+        S: 'ars_nouveau:source_gem',
+        B: '#forge:books',
+        M: 'botania:rune_mana'
+    }).id('gregification:novice_spell_book');
+
+    allthemods.shaped('ars_nouveau:apprentice_spell_book', [
+        'PSP',
+        'PBP',
+        'PMP'
+    ], {
+        P: '#forge:plates/manasteel',
+        S: 'minecraft:ender_eye',
+        B: 'ars_nouveau:novice_spell_book',
+        M: 'bloodmagic:demonslate'
+    }).id('gregification:apprentice_spell_book');
+
+    allthemods.shaped('ars_nouveau:archmage_spell_book', [
+        'PSP',
+        'PBP',
+        'PMP'
+    ], {
+        P: '#forge:plates/terrasteel',
+        S: 'minecraft:totem_of_undying',
+        B: 'ars_nouveau:apprentice_spell_book',
+        M: 'ars_nouveau:wilden_tribute'
+    }).id('gregification:archmage_spell_book');
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

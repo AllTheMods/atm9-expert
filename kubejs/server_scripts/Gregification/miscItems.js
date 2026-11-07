@@ -25,7 +25,7 @@ ServerEvents.recipes(allthemods => {
         C: "#gtceu:circuits/lv"
     }).id('gregification:basicmagnet');
 
-    
+
 
     allthemods.shaped('simplemagnets:advancedmagnet', [
         'T L',
@@ -362,7 +362,7 @@ ServerEvents.recipes(allthemods => {
         )
         .inputFluids('#forge:ink 144')
         .itemOutputs('silentgear:blueprint_paper')
-        .duration(600)        
+        .duration(600)
         .EUt(LV);
 
     allthemods.recipes.gtceu.assembler('gregification:silent_blueprint_wood')
@@ -372,15 +372,15 @@ ServerEvents.recipes(allthemods => {
         )
         .inputFluids('#forge:glue 144')
         .itemOutputs('silentgear:template_board')
-        .duration(600)        
+        .duration(600)
         .EUt(LV);
-   
+
     allthemods.recipes.gtceu.assembler('gregification:greg_blueprint')
         .itemInputs(
             '4x #forge:paper',
-            '#forge:small_dusts/lapis',            
+            '#forge:small_dusts/lapis',
 
-        )        
+        )
         .inputFluids('#forge:ink 144')
         .itemOutputs('gtceu:blueprint_blank')
         .duration(600)
@@ -428,6 +428,67 @@ ServerEvents.recipes(allthemods => {
             .EUt(backpack.eu);
         }
     });*/
+
+
+    const ironFurnaces = [
+        { material: 'copper', prefix: 'lv', eu: LV, fluid: '#forge:polyethylene', coil: 'gtceu:cupronickel_coil_block' },
+        { material: 'iron', prefix: 'lv', eu: LV, fluid: '#forge:polyethylene', coil: 'gtceu:cupronickel_coil_block' },
+        { material: 'silver', prefix: 'mv', eu: MV, fluid: '#forge:polyethylene', coil: 'gtceu:kanthal_coil_block' },
+        { material: 'gold', prefix: 'mv', eu: MV, fluid: '#forge:polyethylene', coil: 'gtceu:kanthal_coil_block' },
+        { material: 'diamond', prefix: 'hv', eu: HV, fluid: '#forge:polytetrafluoroethylene', coil: 'gtceu:nichrome_coil_block' },
+        { material: 'emerald', prefix: 'hv', eu: HV, fluid: '#forge:polytetrafluoroethylene', coil: 'gtceu:nichrome_coil_block' },
+        { material: 'crystal', prefix: 'ev', eu: EV, fluid: '#forge:polytetrafluoroethylene', coil: 'gtceu:rtm_alloy_coil_block' },
+        { material: 'obsidian', prefix: 'ev', eu: EV, fluid: '#forge:polytetrafluoroethylene', coil: 'gtceu:rtm_alloy_coil_block' },
+        { material: 'netherite', prefix: 'iv', eu: IV, fluid: '#forge:polybenzimidazole', coil: 'gtceu:hssg_coil_block' },
+        { material: 'allthemodium', prefix: 'iv', eu: IV, fluid: '#forge:polybenzimidazole', coil: 'gtceu:hssg_coil_block' },
+        { material: 'vibranium', prefix: 'luv', eu: LuV, fluid: '#forge:polybenzimidazole', coil: 'gtceu:naquadah_coil_block' },
+        { material: 'unobtainium', prefix: 'zpm', eu: ZPM, fluid: '#forge:polybenzimidazole', coil: 'gtceu:trinium_coil_block' }
+    ];
+
+    ironFurnaces.forEach((furnace, index) => {
+        let tier = index > 0 ? `ironfurnaces:${ironFurnaces[index - 1].material}_furnace` : 'minecraft:furnace';
+        let plate = furnace.material == 'crystal' ? '#forge:plates/nether_star' : `#forge:plates/${furnace.material}`;
+        allthemods.recipes.gtceu.assembler(`gregification:${furnace.material}_furnace`)
+            .itemInputs(`gtceu:${furnace.prefix}_machine_hull`, tier, `2x #gtceu:circuits/${furnace.prefix}`, `6x ${plate}`, furnace.coil)
+            .inputFluids(`${furnace.fluid} 576`)
+            .itemOutputs(`ironfurnaces:${furnace.material}_furnace`)
+            .duration(600)
+            .EUt(furnace.eu);
+
+        allthemods.recipes.gtceu.assembler(`gregification:${furnace.material}_upgrade`)
+            .itemInputs(`gtceu:${furnace.prefix}_machine_hull`, `2x #gtceu:circuits/${furnace.prefix}`, `6x ${plate}`, furnace.coil)
+            .inputFluids(`${furnace.fluid} 576`)
+            .itemOutputs(`ironfurnaces:upgrade_${furnace.material}`)
+            .duration(600)
+            .EUt(furnace.eu);
+    });
+
+    allthemods.recipes.gtceu.assembler('gregification:augment_generator')
+        .itemInputs('2x gtceu:lpic_chip', 'gtceu:hv_voltage_coil', '2x #gtceu:cables/gold', '4x #gtceu:circuits/hv')
+        .inputFluids('#forge:sodium_potassium 1000')
+        .itemOutputs('ironfurnaces:augment_generator')
+        .duration(400)
+        .EUt(HV);
+
+    allthemods.recipes.gtceu.assembler('gregification:augment_factory')
+        .itemInputs('8x #gtceu:circuits/iv', '8x #forge:plates/tungsten_carbide', '16x #gtceu:wires/quadruple/platinum')
+        .inputFluids('#forge:tungsten_steel 576')
+        .itemOutputs('ironfurnaces:augment_factory')
+        .duration(400)
+        .EUt(IV);
+
+    allthemods.recipes.gtceu.assembler('gregification:augment_speed')
+        .itemInputs('8x #gtceu:circuits/hv', '8x #forge:plates/energetic_alloy', '16x #gtceu:wires/quadruple/cadmium_copper')
+        .inputFluids('#forge:glycerol 576')
+        .itemOutputs('ironfurnaces:augment_speed')
+        .duration(400)
+        .EUt(EV);
+
+    allthemods.recipes.gtceu.assembler('gregification:augment_fuel')
+        .itemInputs('2x #gtceu:circuits/lv', '2x #forge:plates/steel', '4x #gtceu:wires/single/cupronickel')
+        .itemOutputs('ironfurnaces:augment_fuel')
+        .duration(400)
+        .EUt(LV);
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

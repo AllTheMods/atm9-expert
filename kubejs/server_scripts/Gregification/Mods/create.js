@@ -17,7 +17,7 @@ ServerEvents.recipes(allthemods => {
         }).id(id)
     }
 
-    bendPlate('forge:ingots/tin_alloy_ingot', 'gtceu:tin_alloy_plate')
+    bendPlate('forge:ingots/tin_alloy', 'gtceu:tin_alloy_plate')
     bendPlate('forge:ingots/wrought_iron', 'gtceu:wrought_iron_plate')
 
 

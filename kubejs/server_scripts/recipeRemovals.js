@@ -116,7 +116,25 @@ ServerEvents.recipes(allthemods => {
     allthemods.remove(beeRemovals);
 
     
+    
+
+
+
     const moreRemovals = [       
+        'ironfurnaces:furnaces/iron_furnace', 'ironfurnaces:furnaces/iron_furnace2', 'ironfurnaces:furnaces/gold_furnace', 'ironfurnaces:furnaces/gold_furnace2',
+        'ironfurnaces:furnaces/diamond_furnace', 'ironfurnaces:furnaces/emerald_furnace', 'ironfurnaces:furnaces/obsidian_furnace',
+        'ironfurnaces:furnaces/obsidian_furnace2', 'ironfurnaces:furnaces/crystal_furnace', 'ironfurnaces:furnaces/netherite_furnace',
+        'ironfurnaces:furnaces/copper_furnace', 'ironfurnaces:furnaces/silver_furnace', 'ironfurnaces:furnaces/silver_furnace2',
+        'ironfurnaces:furnaces/allthemodium_furnace', 'ironfurnaces:furnaces/vibranium_furnace', 'ironfurnaces:furnaces/unobtainium_furnace',
+        'ironfurnaces:upgrades/upgrade_iron', 'ironfurnaces:upgrades/upgrade_gold', 'ironfurnaces:upgrades/upgrade_diamond',
+        'ironfurnaces:upgrades/upgrade_emerald', 'ironfurnaces:upgrades/upgrade_obsidian', 'ironfurnaces:upgrades/upgrade_crystal',
+        'ironfurnaces:upgrades/upgrade_netherite', 'ironfurnaces:upgrades/upgrade_copper', 'ironfurnaces:upgrades/upgrade_silver',
+        'ironfurnaces:upgrades/upgrade_obsidian2', 'ironfurnaces:upgrades/upgrade_iron2', 'ironfurnaces:upgrades/upgrade_gold2',
+        'ironfurnaces:upgrades/upgrade_silver2', 'ironfurnaces:upgrades/upgrade_allthemodium', 'ironfurnaces:upgrades/upgrade_vibranium',
+        'ironfurnaces:upgrades/upgrade_unobtainium', 'ironfurnaces:augments/augment_factory', 'ironfurnaces:augments/augment_generator',
+        'ironfurnaces:augments/augment_speed', 'ironfurnaces:augments/augment_fuel', 'ars_nouveau:novice_spell_book', 'ars_nouveau:apprentice_spell_book_upgrade',
+        'ars_nouveau:archmage_spell_book_upgrade',
+        
         'gtceu:extractor/extract_atm_star_shard', 
         'tconstruct:smeltery/casting/scorched/foundry_controller', 'terralith:piston_alt',
         'artifacts:eternal_steak_furnace','artifacts:eternal_steak_smoker', 'artifacts:eternal_steak_campfire','enderio:smelting/artifacts/eternal_steak_furnace',
