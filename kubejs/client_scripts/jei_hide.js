@@ -7,6 +7,10 @@ JEIEvents.hideItems(allthemods => {
     
     modsToHide.forEach(mod => {
         allthemods.hide({ mod: mod, custom: (stack) => {
+            // Filled variants of these tanks are handled precisely in jei_hide_extra.js.
+            if (/^mekanism:(basic|advanced|elite|ultimate|creative)_fluid_tank$/.test(stack.id) || stack.id === 'evilcraft:dark_tank') {
+                return false;
+            }
             // This checks if the item is a "variant" (fluid-filled)
             return stack.nbt != null || stack.id.includes('bucket');
         }});
