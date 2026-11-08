@@ -24,10 +24,7 @@ ServerEvents.tags('fluid', allthemods => {
 	allthemods.add('forge:source', 'gtceu:source');
 	['corrosive','vengeful','destructive','demon','steadfast'].forEach(tag => {
 		allthemods.add('forge:will', `gtceu:${tag}`);
-	});	
-	allthemods.add('forge:dusts/coke', 'immersiveengineering:dust_coke')
-	allthemods.add('forge:plates/aluminium', 'alltheores:aluminum_plate')
-	allthemods.add('forge:gems/coke', 'immersiveengineering:coal_coke', 'railcraft:coal_coke')	
+	});		
 })
 
 ServerEvents.tags('item', allthemods => {	
@@ -47,6 +44,10 @@ ServerEvents.tags('item', allthemods => {
 			if (Item.exists(id)) allthemods.add('forge:mixed_gem_material', id)
 		})
 	})
+
+	allthemods.add('forge:dusts/coke', 'immersiveengineering:dust_coke')
+	allthemods.add('forge:plates/aluminium', 'alltheores:aluminum_plate')
+	allthemods.add('forge:gems/coke', 'immersiveengineering:coal_coke', 'railcraft:coal_coke')	
 
 	allthemods.add('occultism:miner/foliot', 'occultism:miner_foliot_unspecialized')
 	allthemods.add('occultism:miner/djinni', 'occultism:miner_djinni_ores')
