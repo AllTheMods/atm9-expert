@@ -26,6 +26,7 @@ ServerEvents.tags('fluid', allthemods => {
 		allthemods.add('forge:will', `gtceu:${tag}`);
 	});	
 	allthemods.add('forge:dusts/coke', 'immersiveengineering:dust_coke')
+	allthemods.add('forge:plates/aluminium', 'alltheores:aluminum_plate')
 	allthemods.add('forge:gems/coke', 'immersiveengineering:coal_coke', 'railcraft:coal_coke')	
 })
 
