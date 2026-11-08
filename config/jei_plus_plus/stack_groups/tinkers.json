@@ -1,0 +1,734 @@
+{
+  "groups": [
+    {
+      "id": "atm9expert:tinkers/parts/adze_head",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Adze Head",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:adze_head"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/arrow_head",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Arrow Head",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:arrow_head"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/arrow_shaft",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Arrow Shaft",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:arrow_shaft"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/boots_plating",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Boots Plating",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:boots_plating"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/bow_grip",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Bow Grip",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:bow_grip"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/bow_limb",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Bow Limb",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:bow_limb"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/bowstring",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Bowstring",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:bowstring"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/broad_axe_head",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Broad Axe Head",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:broad_axe_head"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/broad_blade",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Broad Blade",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:broad_blade"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/chestplate_plating",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Chestplate Plating",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:chestplate_plating"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/fletching",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Fletching",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:fletching"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/hammer_head",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Hammer Head",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:hammer_head"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/helmet_plating",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Helmet Plating",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:helmet_plating"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/laces",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Laces",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:laces"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/large_plate",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Large Plate",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:large_plate"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/leggings_plating",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Leggings Plating",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:leggings_plating"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/maille",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Maille",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:maille"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/pick_head",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Pick Head",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:pick_head"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/repair_kit",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Repair Kit",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:repair_kit"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/ribcage",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Ribcage",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:ribcage"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/shell",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Shell",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:shell"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/shield_core",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Shield Core",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:shield_core"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/small_axe_head",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Small Axe Head",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:small_axe_head"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/small_blade",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Small Blade",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:small_blade"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/tool_binding",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Tool Binding",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:tool_binding"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/tool_handle",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Tool Handle",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:tool_handle"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/tough_binding",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Tough Binding",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:tough_binding"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/parts/tough_handle",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Tough Handle",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:tough_handle"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/arrow",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Arrow",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:arrow"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/battlesign",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Battlesign",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:battlesign"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/broad_axe",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Broad Axe",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:broad_axe"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/cleaver",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Cleaver",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:cleaver"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/crossbow",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Crossbow",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:crossbow"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/dagger",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Dagger",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:dagger"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/earth_staff",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Earth Staff",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:earth_staff"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/ender_staff",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Ender Staff",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:ender_staff"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/excavator",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Excavator",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:excavator"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/fishing_rod",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Fishing Rod",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:fishing_rod"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/flint_and_brick",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Flint And Brick",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:flint_and_brick"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/hand_axe",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Hand Axe",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:hand_axe"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/ichor_staff",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Ichor Staff",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:ichor_staff"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/javelin",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Javelin",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:javelin"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/kama",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Kama",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:kama"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/longbow",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Longbow",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:longbow"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/mattock",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Mattock",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:mattock"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/melting_pan",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Melting Pan",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:melting_pan"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/minotaur_axe",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Minotaur Axe",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:minotaur_axe"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/pickadze",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Pickadze",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:pickadze"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/pickaxe",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Pickaxe",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:pickaxe"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/plate_boots",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Plate Boots",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:plate_boots"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/plate_chestplate",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Plate Chestplate",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:plate_chestplate"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/plate_helmet",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Plate Helmet",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:plate_helmet"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/plate_leggings",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Plate Leggings",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:plate_leggings"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/plate_shield",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Plate Shield",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:plate_shield"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/scythe",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Scythe",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:scythe"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/shuriken",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Shuriken",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:shuriken"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/sky_staff",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Sky Staff",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:sky_staff"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/sledge_hammer",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Sledge Hammer",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:sledge_hammer"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/slime_boots",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Slime Boots",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:slime_boots"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/slime_helmet",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Slime Helmet",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:slime_helmet"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/slime_leggings",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Slime Leggings",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:slime_leggings"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/slime_wings",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Slime Wings",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:slime_wings"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/slimy_chestplate",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Slimy Chestplate",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:slimy_chestplate"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/swasher",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Swasher",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:swasher"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/sword",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Sword",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:sword"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/throwing_axe",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Throwing Axe",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:throwing_axe"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/travelers_boots",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Travelers Boots",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:travelers_boots"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/travelers_chestplate",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Travelers Chestplate",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:travelers_chestplate"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/travelers_helmet",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Travelers Helmet",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:travelers_helmet"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/travelers_leggings",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Travelers Leggings",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:travelers_leggings"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/travelers_shield",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Travelers Shield",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:travelers_shield"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/vein_hammer",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: Vein Hammer",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:vein_hammer"
+      ]
+    },
+    {
+      "id": "atm9expert:tinkers/equipment/war_pick",
+      "type": "jei_plus_plus:group",
+      "name": "Tinkers: War Pick",
+      "enabled": true,
+      "priority": 300,
+      "contents": [
+        "tconstruct:war_pick"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "groups": [
+    {
+      "id": "atm9expert:magic/gems",
+      "type": "jei_plus_plus:group",
+      "name": "Apotheosis / Iron's Spells: Gems",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "apotheosis:gem"
+      ]
+    },
+    {
+      "id": "atm9expert:magic/scrolls",
+      "type": "jei_plus_plus:group",
+      "name": "Iron's Spells: Scrolls",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "irons_spellbooks:scroll"
+      ]
+    },
+    {
+      "id": "atm9expert:magic/charm_fragments",
+      "type": "jei_plus_plus:group",
+      "name": "Reliquary: Charm Fragments",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "reliquary:mob_charm_fragment"
+      ]
+    }
+  ]
+}

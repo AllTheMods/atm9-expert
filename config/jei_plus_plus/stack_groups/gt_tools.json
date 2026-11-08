@@ -1,0 +1,196 @@
+{
+  "groups": [
+    {
+      "id": "atm9expert:gt/tools/sword",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Sword",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_sword$"
+    },
+    {
+      "id": "atm9expert:gt/tools/pickaxe",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Pickaxe",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_pickaxe$"
+    },
+    {
+      "id": "atm9expert:gt/tools/shovel",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Shovel",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_shovel$"
+    },
+    {
+      "id": "atm9expert:gt/tools/axe",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Axe",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_axe$"
+    },
+    {
+      "id": "atm9expert:gt/tools/hoe",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Hoe",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_hoe$"
+    },
+    {
+      "id": "atm9expert:gt/tools/mining_hammer",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Mining Hammer",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_mining_hammer$"
+    },
+    {
+      "id": "atm9expert:gt/tools/spade",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Spade",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_spade$"
+    },
+    {
+      "id": "atm9expert:gt/tools/scythe",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Scythe",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_scythe$"
+    },
+    {
+      "id": "atm9expert:gt/tools/saw",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Saw",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_saw$"
+    },
+    {
+      "id": "atm9expert:gt/tools/hammer",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Hammer",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:(?!.*_mining_hammer$)[a-z0-9_]+_hammer$"
+    },
+    {
+      "id": "atm9expert:gt/tools/mallet",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Mallet",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_mallet$"
+    },
+    {
+      "id": "atm9expert:gt/tools/wrench",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Wrench",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_wrench$"
+    },
+    {
+      "id": "atm9expert:gt/tools/file",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: File",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_file$"
+    },
+    {
+      "id": "atm9expert:gt/tools/crowbar",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Crowbar",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_crowbar$"
+    },
+    {
+      "id": "atm9expert:gt/tools/screwdriver",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Screwdriver",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_screwdriver$"
+    },
+    {
+      "id": "atm9expert:gt/tools/mortar",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Mortar",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_mortar$"
+    },
+    {
+      "id": "atm9expert:gt/tools/wire_cutter",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Wire Cutter",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_wire_cutter$"
+    },
+    {
+      "id": "atm9expert:gt/tools/knife",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Knife",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:(?!.*_butchery_knife$)[a-z0-9_]+_knife$"
+    },
+    {
+      "id": "atm9expert:gt/tools/butchery_knife",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Butchery Knife",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_butchery_knife$"
+    },
+    {
+      "id": "atm9expert:gt/tools/plunger",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Plunger",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_plunger$"
+    },
+    {
+      "id": "atm9expert:gt/tools/shears",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Shears",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_shears$"
+    },
+    {
+      "id": "atm9expert:gt/tools/drill",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Drill",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_drill$"
+    },
+    {
+      "id": "atm9expert:gt/tools/chainsaw",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Chainsaw",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_chainsaw$"
+    },
+    {
+      "id": "atm9expert:gt/tools/buzzsaw",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Buzzsaw",
+      "enabled": true,
+      "priority": 300,
+      "regex": "^gtceu:[a-z0-9_]+_buzzsaw$"
+    }
+  ]
+}

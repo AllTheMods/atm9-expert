@@ -1,0 +1,40 @@
+{
+  "groups": [
+    {
+      "id": "atm9expert:bees/genes",
+      "type": "jei_plus_plus:group",
+      "name": "Productive Bees: Gene Samples",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "productivebees:gene"
+      ]
+    },
+    {
+      "id": "atm9expert:gendustry/genes",
+      "type": "jei_plus_plus:group",
+      "name": "Gendustry: Gene Samples",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "gendustry:gene_sample"
+      ]
+    },
+    {
+      "id": "atm9expert:bees/combs",
+      "type": "jei_plus_plus:regex",
+      "name": "Productive Bees: Honeycombs",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^productivebees:(?:configurable_honeycomb|honeycomb_[a-z0-9_]+|sugarbag_honeycomb)$"
+    },
+    {
+      "id": "atm9expert:bees/comb_blocks",
+      "type": "jei_plus_plus:regex",
+      "name": "Productive Bees: Comb Blocks",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^productivebees:(?:configurable_comb|comb_[a-z0-9_]+)$"
+    }
+  ]
+}

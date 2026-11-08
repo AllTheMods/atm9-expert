@@ -1,0 +1,124 @@
+{
+  "groups": [
+    {
+      "id": "atm9expert:storage/barrel",
+      "type": "jei_plus_plus:group",
+      "name": "Sophisticated Storage: Barrel",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "sophisticatedstorage:barrel"
+      ]
+    },
+    {
+      "id": "atm9expert:storage/copper_barrel",
+      "type": "jei_plus_plus:group",
+      "name": "Sophisticated Storage: Copper Barrel",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "sophisticatedstorage:copper_barrel"
+      ]
+    },
+    {
+      "id": "atm9expert:storage/iron_barrel",
+      "type": "jei_plus_plus:group",
+      "name": "Sophisticated Storage: Iron Barrel",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "sophisticatedstorage:iron_barrel"
+      ]
+    },
+    {
+      "id": "atm9expert:storage/gold_barrel",
+      "type": "jei_plus_plus:group",
+      "name": "Sophisticated Storage: Gold Barrel",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "sophisticatedstorage:gold_barrel"
+      ]
+    },
+    {
+      "id": "atm9expert:storage/diamond_barrel",
+      "type": "jei_plus_plus:group",
+      "name": "Sophisticated Storage: Diamond Barrel",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "sophisticatedstorage:diamond_barrel"
+      ]
+    },
+    {
+      "id": "atm9expert:storage/netherite_barrel",
+      "type": "jei_plus_plus:group",
+      "name": "Sophisticated Storage: Netherite Barrel",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "sophisticatedstorage:netherite_barrel"
+      ]
+    },
+    {
+      "id": "atm9expert:storage/chest",
+      "type": "jei_plus_plus:group",
+      "name": "Sophisticated Storage: Chest",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "sophisticatedstorage:chest"
+      ]
+    },
+    {
+      "id": "atm9expert:storage/copper_chest",
+      "type": "jei_plus_plus:group",
+      "name": "Sophisticated Storage: Copper Chest",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "sophisticatedstorage:copper_chest"
+      ]
+    },
+    {
+      "id": "atm9expert:storage/iron_chest",
+      "type": "jei_plus_plus:group",
+      "name": "Sophisticated Storage: Iron Chest",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "sophisticatedstorage:iron_chest"
+      ]
+    },
+    {
+      "id": "atm9expert:storage/gold_chest",
+      "type": "jei_plus_plus:group",
+      "name": "Sophisticated Storage: Gold Chest",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "sophisticatedstorage:gold_chest"
+      ]
+    },
+    {
+      "id": "atm9expert:storage/diamond_chest",
+      "type": "jei_plus_plus:group",
+      "name": "Sophisticated Storage: Diamond Chest",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "sophisticatedstorage:diamond_chest"
+      ]
+    },
+    {
+      "id": "atm9expert:storage/netherite_chest",
+      "type": "jei_plus_plus:group",
+      "name": "Sophisticated Storage: Netherite Chest",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "sophisticatedstorage:netherite_chest"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "groups": [
+    {
+      "id": "atm9expert:gt/cable/single",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: 1x Cables",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^gtceu:[a-z0-9_]+_single_cable$"
+    },
+    {
+      "id": "atm9expert:gt/cable/double",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: 2x Cables",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^gtceu:[a-z0-9_]+_double_cable$"
+    },
+    {
+      "id": "atm9expert:gt/cable/quadruple",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: 4x Cables",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^gtceu:[a-z0-9_]+_quadruple_cable$"
+    },
+    {
+      "id": "atm9expert:gt/cable/octal",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: 8x Cables",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^gtceu:[a-z0-9_]+_octal_cable$"
+    },
+    {
+      "id": "atm9expert:gt/cable/hex",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: 16x Cables",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^gtceu:[a-z0-9_]+_hex_cable$"
+    },
+    {
+      "id": "atm9expert:gt/wire/single",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: 1x Wires",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^gtceu:[a-z0-9_]+_single_wire$"
+    },
+    {
+      "id": "atm9expert:gt/wire/double",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: 2x Wires",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^gtceu:[a-z0-9_]+_double_wire$"
+    },
+    {
+      "id": "atm9expert:gt/wire/quadruple",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: 4x Wires",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^gtceu:[a-z0-9_]+_quadruple_wire$"
+    },
+    {
+      "id": "atm9expert:gt/wire/octal",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: 8x Wires",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^gtceu:[a-z0-9_]+_octal_wire$"
+    },
+    {
+      "id": "atm9expert:gt/wire/hex",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: 16x Wires",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^gtceu:[a-z0-9_]+_hex_wire$"
+    },
+    {
+      "id": "atm9expert:gt/fluid_buckets",
+      "type": "jei_plus_plus:regex",
+      "name": "GregTech: Fluid Buckets",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^gtceu:[a-z0-9_]+_bucket$"
+    },
+    {
+      "id": "atm9expert:materials/tiny_dusts",
+      "type": "jei_plus_plus:group",
+      "name": "Tiny Piles of Dust",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "#forge:tiny_dusts"
+      ]
+    },
+    {
+      "id": "atm9expert:materials/small_dusts",
+      "type": "jei_plus_plus:group",
+      "name": "Small Piles of Dust",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "#forge:small_dusts"
+      ]
+    },
+    {
+      "id": "atm9expert:materials/dusts",
+      "type": "jei_plus_plus:group",
+      "name": "Dusts",
+      "enabled": true,
+      "priority": 200,
+      "contents": [
+        "#forge:dusts"
+      ],
+      "exclusions": [
+        "#forge:tiny_dusts",
+        "#forge:small_dusts",
+        "#forge:impure_dusts",
+        "#forge:pure_dusts"
+      ]
+    }
+  ]
+}

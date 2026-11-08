@@ -1,0 +1,44 @@
+{
+  "groups": [
+    {
+      "id": "atm9expert:ores/moon",
+      "type": "jei_plus_plus:regex",
+      "name": "Moon: Ores",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^ad_astra:moon_[a-z0-9_]+_ore$"
+    },
+    {
+      "id": "atm9expert:ores/mars",
+      "type": "jei_plus_plus:regex",
+      "name": "Mars: Ores",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^ad_astra:mars_[a-z0-9_]+_ore$"
+    },
+    {
+      "id": "atm9expert:ores/mercury",
+      "type": "jei_plus_plus:regex",
+      "name": "Mercury: Ores",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^ad_astra:mercury_[a-z0-9_]+_ore$"
+    },
+    {
+      "id": "atm9expert:ores/venus",
+      "type": "jei_plus_plus:regex",
+      "name": "Venus: Ores",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^ad_astra:venus_[a-z0-9_]+_ore$"
+    },
+    {
+      "id": "atm9expert:ores/glacio",
+      "type": "jei_plus_plus:regex",
+      "name": "Glacio: Ores",
+      "enabled": true,
+      "priority": 200,
+      "regex": "^ad_astra:glacio_[a-z0-9_]+_ore$"
+    }
+  ]
+}

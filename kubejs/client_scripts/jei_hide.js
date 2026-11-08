@@ -2,11 +2,16 @@
 // As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
 
 JEIEvents.hideItems(allthemods => {
+	const GTToolItemForJeiGroups = Java.loadClass('com.gregtechceu.gtceu.api.item.tool.GTToolItem');
 	
 	const modsToHide = ['mekanism', 'evilcraft', 'gtceu'];
     
     modsToHide.forEach(mod => {
         allthemods.hide({ mod: mod, custom: (stack) => {
+            // Keep GT tools and fluid buckets available for the pack's collapsible JEI++ groups.
+            if (mod === 'gtceu' && (stack.item instanceof GTToolItemForJeiGroups || stack.id.endsWith('_bucket'))) {
+                return false;
+            }
             // This checks if the item is a "variant" (fluid-filled)
             return stack.nbt != null || stack.id.includes('bucket');
         }});
