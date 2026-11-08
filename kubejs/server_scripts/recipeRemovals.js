@@ -14,6 +14,9 @@ ServerEvents.tags('block_entity_type', event => {
 
 ServerEvents.recipes(allthemods => {
 
+    //PHASING OUT FOR REMOVAL
+    allthemods.remove({ id: /^generatorgalore:/ });
+
     allthemods.remove({ id: /^productivebees:bee_produce\/chemlib\/.*/ })
     allthemods.remove({ id: /^productivebees:bee_breeding\/chemlib\/.*/ })
 
