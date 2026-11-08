@@ -129,7 +129,7 @@ ServerEvents.recipes(allthemods => {
         ],
         {
             H: 'gtceu:mv_machine_hull',
-            P: '#forge:plates/aluminium',
+            P: '#forge:plates/aluminum',
             C: 'create:andesite_casing',
             D: 'gtceu:vanadium_steel_drill_head'
         }
