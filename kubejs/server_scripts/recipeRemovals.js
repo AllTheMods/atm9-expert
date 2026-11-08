@@ -713,6 +713,7 @@ ServerEvents.recipes(allthemods => {
 
     // Input Removals
     allthemods.remove({ input: '#alltheores:ore_hammers' });
+    allthemods.remove({ output: '#alltheores:ore_hammers' });
     allthemods.remove({
         input: 'immersiveengineering:hammer',
         not: [
