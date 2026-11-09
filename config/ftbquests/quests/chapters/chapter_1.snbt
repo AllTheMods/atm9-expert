@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "chapter_1"
 	group: "2084F3F6FB861C5B"
+	icon: "botania:cosmetic_questgiver_mark"
 	id: "41D9EEBC842D8F7A"
 	order_index: 0
 	quest_links: [ ]
@@ -16,6 +17,8 @@
 			"https://github.com/AllTheMods/atm9-expert"
 		]
 		id: "4076A7F324F66F32"
+		shape: "gear"
+		size: 3.0d
 		tasks: [{
 			id: "3B5CD511AB0EAF9A"
 			type: "checkmark"
@@ -23,5 +26,5 @@
 		x: 0.0d
 		y: 0.0d
 	}]
-	title: "Chapter 1"
+	title: "About Quests"
 }
