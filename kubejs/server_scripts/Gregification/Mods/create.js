@@ -112,12 +112,19 @@ ServerEvents.recipes(allthemods => {
         .duration(600)
         .EUt(MV);
 
-    allthemods.recipes.gtceu.assembler('gregification:crafting/blaze_burner')
-        .itemInputs('gtceu:mv_machine_hull', '6x #forge:plates/steel', 'reliquary:molten_core', 'gtceu:cupronickel_coil_block')
-        .inputFluids('#forge:soldering_alloy 288')
-        .itemOutputs('create:blaze_burner')
-        .duration(300)
-        .EUt(MV);
+    allthemods.shaped('create:empty_blaze_burner',
+        [
+            'sps',
+            'pSp',
+            'sns'
+        ],
+        {
+            s: '#forge:screws/steel',
+            p: '#forge:double_plates/steel',
+            S: '#gtceu:tools/crafting_screwdrivers',
+            n: 'minecraft:netherrack'
+        }
+    ).id('gregification:create/empty_blaze_burner')
 
     allthemods.shapeless('gtceu:andesite_alloy_dust', ['4x #forge:dusts/andesite', '4x #forge:dusts/zinc']).id('gregification:andesite_alloy_dust');
 
