@@ -13,12 +13,12 @@ ServerEvents.recipes(allthemods => {
     sophisticatedWoods.forEach(wood => {
         allthemods.shapeless(
             Item.of('sophisticatedstorage:chest', '{woodType:"' + wood + '"}'),
-            ['#forge:chests', '#forge:plates/redstone', '#forge:plates/redstone', '#forge:plates/steel', '#forge:plates/steel', 'minecraft:' + wood + '_planks']
+            ['minecraft:chest', '#forge:plates/redstone', '#forge:plates/redstone', '#forge:plates/steel', '#forge:plates/steel', 'minecraft:' + wood + '_planks']
         ).id('gregification:sophisticated_chest_' + wood);
 
         allthemods.shapeless(
             Item.of('sophisticatedstorage:barrel', '{woodType:"' + wood + '"}'),
-            ['#forge:barrels', '#forge:plates/redstone', '#forge:plates/redstone', '#forge:plates/steel', '#forge:plates/steel', 'minecraft:' + wood + '_planks']
+            ['minecraft:barrel', '#forge:plates/redstone', '#forge:plates/redstone', '#forge:plates/steel', '#forge:plates/steel', 'minecraft:' + wood + '_planks']
         ).id('gregification:sophisticated_barrel_' + wood);
     });
     allthemods.shapeless(
