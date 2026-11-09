@@ -62,13 +62,14 @@ ServerEvents.recipes(allthemods => {
         .duration(duration)
         .EUt(eut);
 
+    /*
     allthemods.recipes.gtceu.electrolyzer('gregification:mixed_gem/magnesium_electrolysis')
         .itemInputs('4x #forge:dusts/magnesium_chloride')
         .itemOutputs('2x gtceu:magnesium_dust')
         .outputFluids('gtceu:chlorine 4000')
         .duration(duration)
         .EUt(eut);
-
+    */
     allthemods.recipes.gtceu.electrolyzer('gregification:mixed_gem/calcium_electrolysis')
         .itemInputs('4x #forge:dusts/calcium_chloride')
         .itemOutputs('2x gtceu:calcium_dust')
