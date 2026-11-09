@@ -16,6 +16,7 @@ ServerEvents.recipes(allthemods => {
 
     //PHASING OUT FOR REMOVAL
     allthemods.remove({ id: /^generatorgalore:/ });
+    allthemods.remove({ id: /^enderio_evolution:/ });
 
     allthemods.remove({ id: /^productivebees:bee_produce\/chemlib\/.*/ })
     allthemods.remove({ id: /^productivebees:bee_breeding\/chemlib\/.*/ })
