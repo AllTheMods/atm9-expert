@@ -5,54 +5,156 @@
 	group: "02FE661031A105D8"
 	icon: "bloodmagic:altar"
 	id: "5BAD703E716A3BD7"
-	order_index: 10
+	images: [
+		{
+			height: 3.0d
+			image: "atm:textures/questpics/bloodmagic/bloodmagic_tier1.png"
+			rotation: 0.0d
+			width: 3.0d
+			x: -19.0d
+			y: 7.5d
+		}
+		{
+			height: 4.5d
+			image: "atm:textures/questpics/bloodmagic/bloodmagic_tier3.png"
+			rotation: 0.0d
+			width: 9.0d
+			x: 0.0d
+			y: 11.5d
+		}
+		{
+			height: 7.0d
+			image: "atm:textures/questpics/bloodmagic/bloodmagic_tier4.png"
+			rotation: 0.0d
+			width: 14.0d
+			x: 9.0d
+			y: 13.0d
+		}
+		{
+			height: 10.0d
+			image: "atm:textures/questpics/bloodmagic/bloodmagic_tier5.png"
+			rotation: 0.0d
+			width: 14.0d
+			x: 21.5d
+			y: 12.0d
+		}
+		{
+			height: 2.0d
+			image: "atm:textures/questpics/helper_arrow.png"
+			rotation: 145.0d
+			width: 3.0d
+			x: -16.5d
+			y: 5.5d
+		}
+		{
+			height: 3.5d
+			image: "atm:textures/questpics/bloodmagic/bloodmagic_tier2.png"
+			rotation: 0.0d
+			width: 4.5d
+			x: -7.5d
+			y: 9.5d
+		}
+		{
+			height: 2.0d
+			image: "atm:textures/questpics/helper_arrow.png"
+			rotation: 120.0d
+			width: 3.0d
+			x: -5.5d
+			y: 6.5d
+		}
+		{
+			height: 2.0d
+			image: "atm:textures/questpics/helper_arrow.png"
+			rotation: 90.0d
+			width: 2.0d
+			x: 0.0d
+			y: 8.5d
+		}
+		{
+			height: 2.0d
+			image: "atm:textures/questpics/helper_arrow.png"
+			rotation: 75.0d
+			width: 3.0d
+			x: 7.335714285714317d
+			y: 7.8904761904762d
+		}
+		{
+			height: 2.0d
+			image: "atm:textures/questpics/helper_arrow.png"
+			rotation: 45.0d
+			width: 3.0d
+			x: 13.0d
+			y: 5.5d
+		}
+		{
+			height: 5.0d
+			image: "occultism:item/pentacle"
+			rotation: 0.0d
+			width: 5.0d
+			x: 19.5d
+			y: 3.0d
+		}
+	]
+	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
 			description: [
-				"{atm9.quest.bloodMagic.desc.welcome.1}"
+				"{atm9e.quest.bloodmagic.desc.welcome.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.welcome.2}"
+				"{atm9e.quest.bloodmagic.desc.welcome.2}"
 				""
-				"{atm9.quest.bloodMagic.desc.welcome.3}"
+				"{atm9e.quest.bloodmagic.desc.welcome.3}"
 			]
 			id: "526605942F2A6DB3"
-			rewards: [{
-				id: "25D44C5C212C6A70"
-				item: {
-					Count: 1
-					id: "patchouli:guide_book"
-					tag: {
-						"patchouli:book": "bloodmagic:guide"
+			rewards: [
+				{
+					id: "25D44C5C212C6A70"
+					item: {
+						Count: 1
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "bloodmagic:guide"
+						}
 					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					id: "373903986C9FDC3F"
+					type: "xp"
+					xp: 50
+				}
+			]
 			tasks: [{
 				id: "6A12063BF71CB04F"
 				title: "Start Here"
 				type: "checkmark"
 			}]
-			x: -6.0d
-			y: 0.0d
+			x: -16.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["526605942F2A6DB3"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.gettingStarted.1}"
+				"{atm9e.quest.bloodmagic.desc.gettingStarted.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.gettingStarted.2}"
+				"{atm9e.quest.bloodmagic.desc.gettingStarted.2}"
 				""
-				"{atm9.quest.bloodMagic.desc.gettingStarted.3}"
+				"{atm9e.quest.bloodmagic.desc.gettingStarted.3}"
 				""
-				"{atm9.quest.bloodMagic.desc.gettingStarted.4}"
+				"{atm9e.quest.bloodmagic.desc.gettingStarted.4}"
 				""
-				"{atm9.quest.bloodMagic.desc.gettingStarted.5}"
+				"{atm9e.quest.bloodmagic.desc.gettingStarted.5}"
 				""
 				""
-				"IMPORTANT: blood will slowly drain from your altar, and make sure to read blood requirement!"
+				"{atm9e.quest.bloodmagic.desc.gettingStarted.6}"
 			]
 			id: "7CC38E6CFD38B760"
+			rewards: [{
+				id: "3FF028FBBE11F65E"
+				type: "xp"
+				xp: 50
+			}]
 			shape: "pentagon"
 			size: 1.5d
 			tasks: [
@@ -72,25 +174,32 @@
 					type: "item"
 				}
 			]
-			x: -4.0d
-			y: 0.0d
+			x: -14.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["061AA0571021C80E"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.infusingLifeEssence.1}"
+				"{atm9e.quest.bloodmagic.desc.infusingLifeEssence.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.infusingLifeEssence.2}"
+				"{atm9e.quest.bloodmagic.desc.infusingLifeEssence.2}"
 			]
 			icon: "bloodmagic:blankslate"
 			id: "2096E77CBDFC27CB"
-			rewards: [{
-				count: 5
-				id: "66452C3A773B56CE"
-				item: "gtceu:blank_slate_casing"
-				type: "item"
-			}]
-			subtitle: "You are going to want to batch craft"
+			rewards: [
+				{
+					count: 5
+					id: "66452C3A773B56CE"
+					item: "gtceu:blank_slate_casing"
+					type: "item"
+				}
+				{
+					id: "5A8ADFAE5D95D65E"
+					type: "xp"
+					xp: 50
+				}
+			]
+			subtitle: "{atm9e.quest.bloodmagic.blank_slate.sub}"
 			tasks: [
 				{
 					id: "31FF0864A5E7ED71"
@@ -103,31 +212,38 @@
 					type: "item"
 				}
 			]
-			title: "Blank Slate"
-			x: -0.5d
-			y: 0.0d
+			title: "{atm9e.quest.bloodmagic.blank_slate.title}"
+			x: -10.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["7CC38E6CFD38B760"]
 			description: [
-				"If you are wondering how to get blood into your assembler, the easiest way is with evil craft. Craft a blood extractor and fill it with blood. Then in the assembler simply add it to the fluid."
+				"{atm9e.quest.bloodmagic.blank_slate_casing.desc1}"
 				""
-				"If you are also confused on Umbral Steel, look for the hot ingot in the ebf"
-				"- The dust requires steel and crushed dark gem from evil craft"
+				"{atm9e.quest.bloodmagic.blank_slate_casing.desc2}"
+				"{atm9e.quest.bloodmagic.blank_slate_casing.desc3}"
 				""
-				"Highly recommend crafting multiple. YOU WILL NEED THEM"
+				"{atm9e.quest.bloodmagic.blank_slate_casing.desc4}"
 			]
 			icon: "gtceu:blank_slate_casing"
 			id: "061AA0571021C80E"
-			rewards: [{
-				count: 8
-				id: "7EF1FB155F34C02D"
-				item: "gtceu:blank_slate_casing"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 8
+					id: "7EF1FB155F34C02D"
+					item: "gtceu:blank_slate_casing"
+					type: "item"
+				}
+				{
+					id: "4C65874F39C5C47F"
+					type: "xp"
+					xp: 50
+				}
+			]
 			shape: "octagon"
 			size: 1.0d
-			subtitle: "Wondering how to Get the Materials?"
+			subtitle: "{atm9e.quest.bloodmagic.blank_slate_casing.sub}"
 			tasks: [
 				{
 					id: "1ADBA3830833FE23"
@@ -146,29 +262,34 @@
 					type: "item"
 				}
 			]
-			title: "Blank Slate Casing"
-			x: -2.0d
-			y: 0.0d
+			title: "{atm9e.quest.bloodmagic.blank_slate_casing.title}"
+			x: -12.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["7CC38E6CFD38B760"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.weakBloodOrbFeatures.1}"
+				"{atm9e.quest.bloodmagic.desc.weakBloodOrbFeatures.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.weakBloodOrbFeatures.2}"
+				"{atm9e.quest.bloodmagic.desc.weakBloodOrbFeatures.2}"
 				""
-				"{atm9.quest.bloodMagic.desc.weakBloodOrbFeatures.3}"
+				"{atm9e.quest.bloodmagic.desc.weakBloodOrbFeatures.3}"
 				""
-				"{atm9.quest.bloodMagic.desc.weakBloodOrbFeatures.4}"
+				"{atm9e.quest.bloodmagic.desc.weakBloodOrbFeatures.4}"
 			]
 			id: "4638BDEAA795103C"
+			rewards: [{
+				id: "2C5FBFCEAA38BFC4"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "1D984EA6D625EA94"
 				item: "bloodmagic:weakbloodorb"
 				type: "item"
 			}]
-			x: -4.0d
-			y: -2.0d
+			x: -14.0d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -176,11 +297,16 @@
 				"31093D864BC2460E"
 			]
 			description: [
-				"{atm9.quest.bloodMagic.desc.hellfireForgeIntro.1}"
+				"{atm9e.quest.bloodmagic.desc.hellfireForgeIntro.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.hellfireForgeIntro.2}"
+				"{atm9e.quest.bloodmagic.desc.hellfireForgeIntro.2}"
 			]
 			id: "6B156613C6E8DC31"
+			rewards: [{
+				id: "31DE9E483BF19407"
+				type: "xp"
+				xp: 50
+			}]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
@@ -188,8 +314,8 @@
 				item: "bloodmagic:soulforge"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 2.0d
+			x: -12.0d
+			y: 5.5d
 		}
 		{
 			dependencies: [
@@ -197,11 +323,16 @@
 				"4638BDEAA795103C"
 			]
 			description: [
-				"{atm9.quest.bloodMagic.desc.alchemyTable.1}"
+				"{atm9e.quest.bloodmagic.desc.alchemyTable.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.alchemyTable.2}"
+				"{atm9e.quest.bloodmagic.desc.alchemyTable.2}"
 			]
 			id: "1E609A53A6953503"
+			rewards: [{
+				id: "5654E31A09292899"
+				type: "xp"
+				xp: 50
+			}]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
@@ -209,19 +340,24 @@
 				item: "bloodmagic:alchemytable"
 				type: "item"
 			}]
-			x: -2.0d
-			y: -2.0d
+			x: -12.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["7CC38E6CFD38B760"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.collectingDemonicWill.1}"
+				"{atm9e.quest.bloodmagic.desc.collectingDemonicWill.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.collectingDemonicWill.2}"
+				"{atm9e.quest.bloodmagic.desc.collectingDemonicWill.2}"
 				""
-				"{atm9.quest.bloodMagic.desc.collectingDemonicWill.3}"
+				"{atm9e.quest.bloodmagic.desc.collectingDemonicWill.3}"
 			]
 			id: "31093D864BC2460E"
+			rewards: [{
+				id: "321835ABAEFF754B"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					count: 5L
@@ -241,19 +377,24 @@
 					type: "item"
 				}
 			]
-			title: "Collecting Demon Will"
-			x: -4.0d
-			y: 2.0d
+			title: "{atm9e.quest.bloodmagic.collectingDemonicWill.title}"
+			x: -14.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["78E211F2E1C18E13"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.upgradingAltar.1}"
+				"{atm9e.quest.bloodmagic.desc.upgradingAltar.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.upgradingAltar.2}"
+				"{atm9e.quest.bloodmagic.desc.upgradingAltar.2}"
 			]
 			icon: "bloodmagic:altar"
 			id: "7957642CD16BF701"
+			rewards: [{
+				id: "44E8438D395E07EF"
+				type: "xp"
+				xp: 50
+			}]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
@@ -262,74 +403,94 @@
 				item: "bloodmagic:blankrune"
 				type: "item"
 			}]
-			title: "Tier 2 Blood Altar"
-			x: 3.0d
-			y: 0.0d
+			title: "{atm9e.quest.bloodmagic.tier_2_blood_altar.title}"
+			x: -4.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["2096E77CBDFC27CB"]
 			description: [
-				"To get Blank Runes to upgrade our altar from tier 1 to tier 2, you will first need rune casing"
+				"{atm9e.quest.bloodmagic.rune_casings.desc1}"
 				""
-				"You will need pneumatic craft stone and manasteel."
+				"{atm9e.quest.bloodmagic.rune_casings.desc2}"
 			]
 			id: "78E211F2E1C18E13"
+			rewards: [{
+				id: "67F977594B5310DD"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				count: 8L
 				id: "2ECB052338D2D224"
 				item: "gtceu:rune_casing"
 				type: "item"
 			}]
-			title: "Rune Casings"
-			x: 1.0d
-			y: 0.0d
+			title: "{atm9e.quest.bloodmagic.rune_casings.title}"
+			x: -9.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["7957642CD16BF701"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.altarMobSacrifice.1}"
+				"{atm9e.quest.bloodmagic.desc.altarMobSacrifice.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.altarMobSacrifice.2}"
+				"{atm9e.quest.bloodmagic.desc.altarMobSacrifice.2}"
 				""
-				"{atm9.quest.bloodMagic.desc.altarMobSacrifice.3}"
+				"{atm9e.quest.bloodmagic.desc.altarMobSacrifice.3}"
 			]
 			id: "7CC0501F9A60373C"
+			rewards: [{
+				id: "2E889AD7F5CA3436"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "367EDDA399686945"
 				item: "bloodmagic:daggerofsacrifice"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -1.5d
+			x: -8.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["7957642CD16BF701"]
-			description: ["With blank runes, you can craft any of the other rune types (not reinforced though). All you need is some magic from other mods, and a lv assembler"]
+			description: ["{atm9e.quest.bloodmagic.runes.desc1}"]
 			icon: "bloodmagic:sacrificerune"
 			id: "2B2CC1E50EF86D5D"
+			rewards: [{
+				id: "2710E2DB79130E1B"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "4A1E0EF7C1104DDE"
 				title: "Runes"
 				type: "checkmark"
 			}]
-			x: 4.0d
-			y: -1.5d
+			x: -3.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["6333DFDC5E3208E8"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.upgradeAltarTier3.1}"
+				"{atm9e.quest.bloodmagic.desc.upgradeAltarTier3.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.upgradeAltarTier3.2}"
+				"{atm9e.quest.bloodmagic.desc.upgradeAltarTier3.2}"
 				""
-				"{atm9.quest.bloodMagic.desc.upgradeAltarTier3.3}"
+				"{atm9e.quest.bloodmagic.desc.upgradeAltarTier3.3}"
 				""
-				"{atm9.quest.bloodMagic.desc.upgradeAltarTier3.4}"
+				"{atm9e.quest.bloodmagic.desc.upgradeAltarTier3.4}"
 				""
-				"{atm9.quest.bloodMagic.desc.upgradeAltarTier3.5}"
+				"{atm9e.quest.bloodmagic.desc.upgradeAltarTier3.5}"
 			]
 			icon: "bloodmagic:altar"
 			id: "2F0BBD5C66995B18"
+			rewards: [{
+				id: "348B6C23BFD5B8BD"
+				type: "xp"
+				xp: 50
+			}]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
@@ -340,59 +501,79 @@
 				title: "Tier 3 Blood Altar"
 				type: "item"
 			}]
-			x: 7.0d
-			y: 0.0d
+			x: 0.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["7957642CD16BF701"]
-			description: ["{atm9.quest.bloodMagic.subt.lp25k}"]
+			description: ["{atm9e.quest.bloodmagic.subt.lp25k}"]
 			id: "0BF1A22B6D42A2BD"
+			rewards: [{
+				id: "5E85388774E78114"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "7F8A3B30AA060AA4"
 				item: "bloodmagic:apprenticebloodorb"
 				type: "item"
 			}]
-			x: 3.0d
-			y: -2.0d
+			x: -4.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["7957642CD16BF701"]
-			description: ["{atm9.quest.bloodMagic.desc.upgradeJourney.1}"]
+			description: ["{atm9e.quest.bloodmagic.desc.upgradeJourney.1}"]
 			id: "6333DFDC5E3208E8"
+			rewards: [{
+				id: "5593CC31630A5218"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "12578A10FECEAA3F"
 				item: "bloodmagic:reinforcedslate"
 				type: "item"
 			}]
-			title: "Reinforced Slate"
-			x: 5.0d
-			y: 0.0d
+			title: "{atm9e.quest.bloodmagic.upgradeJourney.title}"
+			x: -2.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["2F0BBD5C66995B18"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.imbuedSlates.1}"
+				"{atm9e.quest.bloodmagic.desc.imbuedSlates.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.imbuedSlates.2}"
+				"{atm9e.quest.bloodmagic.desc.imbuedSlates.2}"
 			]
 			id: "7AA45B4EF9D49EF0"
+			rewards: [{
+				id: "223C5D2616348C09"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "161A3ACDD8B40C8F"
 				item: "bloodmagic:infusedslate"
 				type: "item"
 			}]
-			title: "Imbued Slate"
-			x: 9.0d
-			y: 0.0d
+			title: "{atm9e.quest.bloodmagic.imbuedSlates.title}"
+			x: 2.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["7957642CD16BF701"]
 			description: [
-				"Need to cool energetic alloy or soularium, look at their hot blazing forms"
+				"{atm9e.quest.bloodmagic.coolingIngots.desc1}"
 				""
-				"Definitely won't allow you to skip some progression. Shhhh"
+				"{atm9e.quest.bloodmagic.coolingIngots.desc2}"
 			]
 			id: "6AA486DEE345C51B"
+			rewards: [{
+				id: "1E9B726D0B7EF55D"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "105A3E31B82C01B7"
@@ -412,31 +593,41 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: 1.5d
+			x: -8.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["2F0BBD5C66995B18"]
-			description: ["{atm9.quest.bloodMagic.subt.lp150k}"]
+			description: ["{atm9e.quest.bloodmagic.subt.lp150k}"]
 			id: "2E6F1D261D690CB8"
+			rewards: [{
+				id: "774FF844940ECB58"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "026E79A28F235664"
 				item: "bloodmagic:magicianbloodorb"
 				type: "item"
 			}]
-			x: 7.0d
-			y: -2.0d
+			x: 0.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["6333DFDC5E3208E8"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.ritualPreparation.1}"
+				"{atm9e.quest.bloodmagic.desc.ritualPreparation.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.ritualPreparation.2}"
+				"{atm9e.quest.bloodmagic.desc.ritualPreparation.2}"
 				""
-				"{atm9.quest.bloodMagic.desc.ritualPreparation.3}"
+				"{atm9e.quest.bloodmagic.desc.ritualPreparation.3}"
 			]
 			id: "53440D26D168E573"
+			rewards: [{
+				id: "5B4E9E4136FC4702"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "7087578B7ED92154"
@@ -450,21 +641,26 @@
 					type: "item"
 				}
 			]
-			title: "Tier 1 Rituals"
-			x: 5.0d
-			y: 2.0d
+			title: "{atm9e.quest.bloodmagic.tier1_rituals.title}"
+			x: -2.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["7AA45B4EF9D49EF0"]
-			description: ["{atm9.quest.bloodMagic.desc.alchemicalChamber.2}"]
+			description: ["{atm9e.quest.bloodmagic.desc.alchemicalChamber.2}"]
 			id: "125772FFC095F651"
+			rewards: [{
+				id: "33CF1A2B81B33F9E"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "266B9375C2F32C9F"
 				item: "bloodmagic:alchemicalreactionchamber"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 2.0d
+			x: 2.0d
+			y: 5.5d
 		}
 		{
 			dependencies: [
@@ -473,6 +669,11 @@
 			]
 			icon: "bloodmagic:altar"
 			id: "5AC5D9360E12A6D6"
+			rewards: [{
+				id: "54C552B820DA9D96"
+				type: "xp"
+				xp: 50
+			}]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
@@ -481,21 +682,26 @@
 				item: "bloodmagic:blankrune"
 				type: "item"
 			}]
-			title: "Tier 4 Blood Altar"
-			x: 11.0d
-			y: 0.0d
+			title: "{atm9e.quest.bloodmagic.tier_4_blood_altar.title}"
+			x: 6.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["5AC5D9360E12A6D6"]
-			description: ["{atm9.quest.bloodMagic.subt.lp1M}"]
+			description: ["{atm9e.quest.bloodmagic.subt.lp1M}"]
 			id: "3FAEE9B5B1924E2A"
+			rewards: [{
+				id: "579BEB9710C814C9"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "1F45A6C921A365FF"
 				item: "bloodmagic:masterbloodorb"
 				type: "item"
 			}]
-			x: 11.0d
-			y: -2.0d
+			x: 6.0d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -504,6 +710,11 @@
 			]
 			icon: "bloodmagic:altar"
 			id: "35D91AB2A515E918"
+			rewards: [{
+				id: "71D4E0B65B824CF7"
+				type: "xp"
+				xp: 50
+			}]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
@@ -512,56 +723,76 @@
 				item: "bloodmagic:blankrune"
 				type: "item"
 			}]
-			title: "Tier 5 Blood Altar"
-			x: 15.0d
-			y: 0.0d
+			title: "{atm9e.quest.bloodmagic.tier_5_blood_altar.title}"
+			x: 10.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["5AC5D9360E12A6D6"]
 			id: "6B9BE71CAA6FCFBB"
+			rewards: [{
+				id: "52AB96BF73651881"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "2C66E08A4F07928F"
 				item: "bloodmagic:demonslate"
 				type: "item"
 			}]
-			x: 13.0d
-			y: 0.0d
+			x: 8.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["35D91AB2A515E918"]
 			id: "078D0E9F1C9EA1DF"
+			rewards: [{
+				id: "514D5BB25033F594"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "4267B0910BA3C31F"
 				item: "bloodmagic:archmagebloodorb"
 				type: "item"
 			}]
-			x: 15.0d
-			y: -2.0d
+			x: 10.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["35D91AB2A515E918"]
 			id: "16536DBB3472FF99"
+			rewards: [{
+				id: "71D1B15EEABEF5E4"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "0BE2D1FF56625175"
 				item: "bloodmagic:etherealslate"
 				type: "item"
 			}]
-			x: 17.0d
-			y: 0.0d
+			x: 12.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["16536DBB3472FF99"]
-			description: ["{atm9.quest.bloodMagic.desc.demonRealmLoot}"]
+			description: ["{atm9e.quest.bloodmagic.desc.demonRealmLoot}"]
 			icon: "bloodmagic:sacrificerune2"
 			id: "031CC87E535A7FF2"
+			rewards: [{
+				id: "196FAC1093671300"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "0A3AC0E9FBEBA853"
 				title: "Reinforced Slate"
 				type: "checkmark"
 			}]
-			title: "Reinforced Runes"
-			x: 18.0d
-			y: -1.5d
+			title: "{atm9e.quest.bloodmagic.reinforced_runes.title}"
+			x: 12.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -569,13 +800,18 @@
 				"762C469CADFCF812"
 			]
 			description: [
-				"{atm9.quest.bloodMagic.desc.demonWillStock.1}"
+				"{atm9e.quest.bloodmagic.desc.demonWillStock.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.demonWillStock.2}"
+				"{atm9e.quest.bloodmagic.desc.demonWillStock.2}"
 				""
-				"{atm9.quest.bloodMagic.desc.demonWillStock.3}"
+				"{atm9e.quest.bloodmagic.desc.demonWillStock.3}"
 			]
 			id: "6A452531C34060C4"
+			rewards: [{
+				id: "16744C8B0305303E"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "6AE5B54B9B28EE96"
@@ -594,43 +830,27 @@
 					type: "item"
 				}
 			]
-			x: 11.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["16536DBB3472FF99"]
-			description: ["There is definitely no use of the imbuement slate..... Right?"]
-			icon: "bmaddon:blood_generator"
-			id: "73975CB16C9299D6"
-			subtitle: "Will there be more?"
-			tasks: [
-				{
-					id: "3DA3E94A74EBED3A"
-					title: "The End?"
-					type: "checkmark"
-				}
-				{
-					id: "45BA5FC30C0F0B7A"
-					item: "bmaddon:blood_generator"
-					type: "item"
-				}
-			]
-			x: 19.0d
-			y: 0.0d
+			x: 6.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["53440D26D168E573"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.ritualDiviner.1}"
+				"{atm9e.quest.bloodmagic.desc.ritualDiviner.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.ritualDiviner.2}"
+				"{atm9e.quest.bloodmagic.desc.ritualDiviner.2}"
 				""
-				"{atm9.quest.bloodMagic.desc.ritualDiviner.3}"
+				"{atm9e.quest.bloodmagic.desc.ritualDiviner.3}"
 				""
-				"{atm9.quest.bloodMagic.desc.ritualDiviner.4}"
+				"{atm9e.quest.bloodmagic.desc.ritualDiviner.4}"
 			]
 			icon: "bloodmagic:ritualdiviner"
 			id: "66A0DA3679405B23"
+			rewards: [{
+				id: "37C8FC4F1CD53789"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "57CB29DEDAB8E9AF"
@@ -643,17 +863,22 @@
 					type: "item"
 				}
 			]
-			x: 5.0d
-			y: 4.0d
+			x: -2.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["6B156613C6E8DC31"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.sentientSwordIntro.1}"
+				"{atm9e.quest.bloodmagic.desc.sentientSwordIntro.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.sentientSwordIntro.2}"
+				"{atm9e.quest.bloodmagic.desc.sentientSwordIntro.2}"
 			]
 			id: "0F77A73F6FFEFACC"
+			rewards: [{
+				id: "753165E76484D6A4"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "7EA3B3D8848E2D71"
 				item: {
@@ -665,8 +890,8 @@
 				}
 				type: "item"
 			}]
-			x: -3.5d
-			y: 3.5d
+			x: -13.5d
+			y: 7.0d
 		}
 		{
 			dependencies: [
@@ -674,17 +899,22 @@
 				"4638BDEAA795103C"
 			]
 			description: [
-				"{atm9.quest.bloodMagic.desc.lavaSigil.1}"
+				"{atm9e.quest.bloodmagic.desc.lavaSigil.1}"
 				""
-				"The Divination Sigil has two primatry uses:"
-				"{atm9.quest.bloodMagic.desc.divinationSigil.3}"
+				"{atm9e.quest.bloodmagic.tier_1_sigils.desc1}"
+				"{atm9e.quest.bloodmagic.desc.divinationSigil.3}"
 				""
-				"{atm9.quest.bloodMagic.desc.divinationSigil.4}"
+				"{atm9e.quest.bloodmagic.desc.divinationSigil.4}"
 				""
-				"The water sigil {atm9.quest.bloodMagic.desc.waterSourceCreation}"
+				"The water sigil {atm9e.quest.bloodmagic.desc.waterSourceCreation}"
 			]
 			icon: "bloodmagic:lavasigil"
 			id: "106163C4D7BDBB1A"
+			rewards: [{
+				id: "04A5FEF4855CB3E6"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "46ED0D3AF66F5651"
@@ -710,9 +940,9 @@
 					type: "item"
 				}
 			]
-			title: "Tier 1 Sigils"
-			x: -4.0d
-			y: -4.0d
+			title: "{atm9e.quest.bloodmagic.tier_1_sigils.title}"
+			x: -14.0d
+			y: -0.5d
 		}
 		{
 			dependencies: [
@@ -720,18 +950,23 @@
 				"1E609A53A6953503"
 			]
 			description: [
-				"{atm9.quest.bloodMagic.desc.airSigil.1}"
+				"{atm9e.quest.bloodmagic.desc.airSigil.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.voidSigil.1}"
+				"{atm9e.quest.bloodmagic.desc.voidSigil.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.seersSigil.1}"
+				"{atm9e.quest.bloodmagic.desc.seersSigil.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.minersSigil.1}"
+				"{atm9e.quest.bloodmagic.desc.minersSigil.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.greenGroveSigil.1}"
+				"{atm9e.quest.bloodmagic.desc.greenGroveSigil.1}"
 			]
 			icon: "bloodmagic:airsigil"
 			id: "60E4A03BC9C9A7DF"
+			rewards: [{
+				id: "730BACAD11929183"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "6DFF5A26479BDB63"
@@ -777,9 +1012,9 @@
 					type: "item"
 				}
 			]
-			title: "Tier 2 Sigils"
-			x: 3.0d
-			y: -4.0d
+			title: "{atm9e.quest.bloodmagic.tier_2_sigils.title}"
+			x: -4.0d
+			y: -0.5d
 		}
 		{
 			dependencies: [
@@ -787,14 +1022,19 @@
 				"1E609A53A6953503"
 			]
 			description: [
-				"{atm9.quest.bloodMagic.desc.bloodLamp.1}"
+				"{atm9e.quest.bloodmagic.desc.bloodLamp.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.holding.1}"
+				"{atm9e.quest.bloodmagic.desc.holding.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.magnetism.1}"
+				"{atm9e.quest.bloodmagic.desc.magnetism.1}"
 			]
 			icon: "bloodmagic:bloodlightsigil"
 			id: "774BEF91C0E12E7E"
+			rewards: [{
+				id: "560364CE057025EA"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "53F8D770A278A2F7"
@@ -831,8 +1071,8 @@
 					type: "item"
 				}
 			]
-			x: 7.0d
-			y: -4.0d
+			x: 0.0d
+			y: -0.5d
 		}
 		{
 			dependencies: [
@@ -840,12 +1080,17 @@
 				"1E609A53A6953503"
 			]
 			description: [
-				"{atm9.quest.bloodMagic.desc.telepositionSigil.1}"
+				"{atm9e.quest.bloodmagic.desc.telepositionSigil.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.suppressionSigil.1}"
+				"{atm9e.quest.bloodmagic.desc.suppressionSigil.1}"
 			]
 			icon: "bloodmagic:reagentsuppression"
 			id: "439071B4656FFFAE"
+			rewards: [{
+				id: "79938AD36D56840A"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "1CA5080CB94BE8A9"
@@ -869,17 +1114,22 @@
 					type: "item"
 				}
 			]
-			x: 11.0d
-			y: -4.0d
+			x: 6.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["1E609A53A6953503"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.arcaneAshes.1}"
+				"{atm9e.quest.bloodmagic.desc.arcaneAshes.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.arcaneAshes.2}"
+				"{atm9e.quest.bloodmagic.desc.arcaneAshes.2}"
 			]
 			id: "7A30E9A9FD3A6759"
+			rewards: [{
+				id: "4E80FFDC23656E99"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "172C2423908023AA"
 				item: {
@@ -891,36 +1141,46 @@
 				}
 				type: "item"
 			}]
-			x: -2.0d
-			y: -4.0d
+			x: -12.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["2F0BBD5C66995B18"]
 			description: [
-				"Tired of sacrificing creatures in world, well let me present to you the virtual sacrificer."
-				"Look at JEI recipes for what to give it"
+				"{atm9e.quest.bloodmagic.virtualsacrificer.desc1}"
+				"{atm9e.quest.bloodmagic.virtualsacrificer.desc2}"
 			]
 			id: "7D085237D880697B"
+			rewards: [{
+				id: "100540DBE8CDE6AA"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "5B8DDC12D485277E"
 				item: "sanguine_networks:virtual_sacrificer"
 				type: "item"
 			}]
-			x: 9.0d
-			y: -2.0d
+			x: 2.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["774BEF91C0E12E7E"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.livingEquipment.1}"
+				"{atm9e.quest.bloodmagic.desc.livingEquipment.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.livingEquipment.2}"
+				"{atm9e.quest.bloodmagic.desc.livingEquipment.2}"
 				""
-				"{atm9.quest.bloodMagic.desc.livingEquipment.3}"
+				"{atm9e.quest.bloodmagic.desc.livingEquipment.3}"
 				""
-				"{atm9.quest.bloodMagic.desc.livingEquipment.4}"
+				"{atm9e.quest.bloodmagic.desc.livingEquipment.4}"
 			]
 			id: "339DA3427044D11C"
+			rewards: [{
+				id: "63FE711BD2B5BB73"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "26F2A2DD1339984F"
@@ -972,60 +1232,80 @@
 					type: "item"
 				}
 			]
-			x: 7.0d
-			y: -6.0d
+			x: 0.0d
+			y: -2.5d
 		}
 		{
 			dependencies: ["66A0DA3679405B23"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.tauFruitUsage.1}"
+				"{atm9e.quest.bloodmagic.desc.tauFruitUsage.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.tauFruitUsage.2}"
+				"{atm9e.quest.bloodmagic.desc.tauFruitUsage.2}"
 				""
-				"{atm9.quest.bloodMagic.desc.tauFruitUsage.3}"
+				"{atm9e.quest.bloodmagic.desc.tauFruitUsage.3}"
 			]
 			id: "040F16A4ED8E513C"
+			rewards: [{
+				id: "40B5F80A725E9690"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "217CDD3C7F22F17D"
 				item: "bloodmagic:weak_tau"
 				type: "item"
 			}]
-			x: 7.0d
-			y: 4.0d
+			x: 0.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["040F16A4ED8E513C"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.fruitThirsts.1}"
+				"{atm9e.quest.bloodmagic.desc.fruitThirsts.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.fruitThirsts.2}"
+				"{atm9e.quest.bloodmagic.desc.fruitThirsts.2}"
 			]
 			id: "762C469CADFCF812"
+			rewards: [{
+				id: "2986E0E0368B833C"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "4E6B2CED602C16A0"
 				item: "bloodmagic:strong_tau"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 4.0d
+			x: 2.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["6A452531C34060C4"]
-			description: ["The 4 pillars require this block on top for the tier 4 blood altar"]
+			description: ["{atm9e.quest.bloodmagic.largebloodbricks.desc1}"]
 			id: "33C4444729487807"
+			rewards: [{
+				id: "036A350A1E35C950"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				count: 4L
 				id: "443DA90C31ECFB1F"
 				item: { Count: 4, id: "bloodmagic:largebloodstonebrick" }
 				type: "item"
 			}]
-			x: 11.0d
-			y: 1.5d
+			x: 6.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["6B9BE71CAA6FCFBB"]
-			description: ["These are the casings needed for blood magic multis"]
+			description: ["{atm9e.quest.bloodmagic.gregmultis.desc1}"]
 			id: "1D7DA6A910B0D3C3"
+			rewards: [{
+				id: "04229BD46A005F5E"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "6DF75744B38BF477"
@@ -1051,22 +1331,27 @@
 					type: "item"
 				}
 			]
-			x: 13.0d
-			y: -2.0d
+			x: 8.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["1D7DA6A910B0D3C3"]
 			description: [
-				"Useful for your blood transferring needs"
+				"{atm9e.quest.bloodmagic.sanguine_feeder.desc1}"
 				""
-				"What you want more info?"
+				"{atm9e.quest.bloodmagic.sanguine_feeder.desc2}"
 				""
-				"The Sanguine feeder can input any form of blood: solid or liquid, and can ouput one of three types of blood: life essence (Blood Magic), blood (Evilcraft), or sanguine concentrate (gtceu)."
+				"{atm9e.quest.bloodmagic.sanguine_feeder.desc3}"
 				""
-				"To link use a linking tool"
+				"{atm9e.quest.bloodmagic.sanguine_feeder.desc4}"
 			]
 			icon: "gtceu:sanguine_feeder"
 			id: "300B12DD25A4EC5E"
+			rewards: [{
+				id: "6CAEE5E523A19C9A"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "05F740F05ABB9C04"
@@ -1086,20 +1371,25 @@
 					type: "item"
 				}
 			]
-			x: 14.5d
-			y: -4.0d
+			x: 10.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["1D7DA6A910B0D3C3"]
 			description: [
-				"An all in one Blood Magic Multi. Why use a forge or an alchemy table. Those are so last year..."
+				"{atm9e.quest.bloodmagic.sanguine_synth.desc1}"
 				""
-				"Simply input will or blood and whatever items for the recipe."
+				"{atm9e.quest.bloodmagic.sanguine_synth.desc2}"
 				""
-				"DON'T FORGET TO SELECT MACHINE TYPE: Sanguine Synthesis, Sanguine Alchemy, Sanguine Forge, Sanguine Array, and Sanguine Reaction Chamber."
+				"{atm9e.quest.bloodmagic.sanguine_synth.desc3}"
 			]
 			icon: "gtceu:sanguine_synthesizer"
 			id: "3F9C3F0CAD207200"
+			rewards: [{
+				id: "38CA689AF384BA61"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "693EB2E426076BA1"
@@ -1125,22 +1415,27 @@
 					type: "item"
 				}
 			]
-			x: 13.0d
-			y: -4.0d
+			x: 8.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["1D7DA6A910B0D3C3"]
 			description: [
-				"Useful for will transferring needs."
+				"{atm9e.quest.bloodmagic.will_feeder.desc1}"
 				""
-				"Same as the sanguine feeder, except with will."
+				"{atm9e.quest.bloodmagic.will_feeder.desc2}"
 				""
-				"Will input hatches can accept tartaric gems (will not consume the gem, just the will) and demonic crystals. The output hatch can ouptut any type of will, and the bus can output any type of solid will."
+				"{atm9e.quest.bloodmagic.will_feeder.desc3}"
 				""
-				"Types of will: raw, corrosive, destructive, vengeful, and steadfast"
+				"{atm9e.quest.bloodmagic.will_feeder.desc4}"
 			]
 			icon: "gtceu:will_feeder"
 			id: "3136DAF5BCF85668"
+			rewards: [{
+				id: "70F46386CE40AD55"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "03CF819AD4EA7042"
@@ -1160,17 +1455,22 @@
 					type: "item"
 				}
 			]
-			x: 16.0d
-			y: -4.0d
+			x: 11.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["6B9BE71CAA6FCFBB"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.duskRitualDiviner}"
+				"{atm9e.quest.bloodmagic.desc.duskRitualDiviner}"
 				""
-				"{atm9.quest.bloodMagic.desc.duskRitualDiviner.2}"
+				"{atm9e.quest.bloodmagic.desc.duskRitualDiviner.2}"
 			]
 			id: "5B8A7165B9539B1C"
+			rewards: [{
+				id: "1B8D431139FBF40A"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "324107669166B758"
@@ -1189,81 +1489,106 @@
 					type: "item"
 				}
 			]
-			title: "Tier 2 Rituals"
-			x: 13.0d
-			y: 1.5d
+			title: "{atm9e.quest.bloodmagic.tier_2_rituals.title}"
+			x: 8.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["5B8A7165B9539B1C"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.pathwayToEndlessRealm.1}"
+				"{atm9e.quest.bloodmagic.desc.pathwayToEndlessRealm.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.pathwayToEndlessRealm.2}"
+				"{atm9e.quest.bloodmagic.desc.pathwayToEndlessRealm.2}"
 				""
-				"{atm9.quest.bloodMagic.desc.pathwayToEndlessRealm.3}"
+				"{atm9e.quest.bloodmagic.desc.pathwayToEndlessRealm.3}"
 			]
 			id: "4B110C03324211AD"
+			rewards: [{
+				id: "46DF94FD9D7464C7"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "54E56771506A05CB"
 				item: "bloodmagic:rawdemonite"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 3.0d
+			x: 9.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["4B110C03324211AD"]
-			description: ["Tier 5 block, this time no pillars"]
+			description: ["{atm9e.quest.bloodmagic.hellforgedblocks.desc1}"]
 			id: "173E6943D532FDF2"
+			rewards: [{
+				id: "600B647DD0A657CB"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				count: 4L
 				id: "15C872F9B31DE667"
 				item: { Count: 4, id: "bloodmagic:dungeon_metal" }
 				type: "item"
 			}]
-			x: 15.0d
-			y: 1.5d
+			x: 10.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["66A0DA3679405B23"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.hiddenRealm.1}"
+				"{atm9e.quest.bloodmagic.desc.hiddenRealm.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.hiddenRealm.2}"
+				"{atm9e.quest.bloodmagic.desc.hiddenRealm.2}"
 			]
 			id: "4BEACECF06AC7B0A"
 			optional: true
+			rewards: [{
+				id: "24916D2595DBDDE4"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "17F32CA41A52FF18"
 				item: "bloodmagic:simplekey"
 				type: "item"
 			}]
-			title: "Dungeon Key"
-			x: 3.0d
-			y: 4.0d
+			title: "{atm9e.quest.bloodmagic.dungeon_key.title}"
+			x: -4.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["4B110C03324211AD"]
-			description: ["A lot of recipes require some form of hellforge ingots, so make a lot"]
+			description: ["{atm9e.quest.bloodmagic.hellforged_ingots.desc1}"]
 			id: "3BD1B04CCF02E628"
+			rewards: [{
+				id: "304FE1BA659758BA"
+				type: "xp"
+				xp: 50
+			}]
 			shape: "hexagon"
 			tasks: [{
 				id: "4A1D1ECF3C2A209E"
 				item: "bloodmagic:ingot_hellforged"
 				type: "item"
 			}]
-			x: 15.0d
-			y: 4.5d
+			x: 10.5d
+			y: 8.0d
 		}
 		{
 			dependencies: ["3BD1B04CCF02E628"]
 			description: [
-				"A lot of productive bees is gated behind blood magic. But hey if you are at this quest, then you can now make all that stuff."
+				"{atm9e.quest.bloodmagic.unlocking_bees.desc1}"
 				""
 				""
-				"Now Buzzzz off"
+				"{atm9e.quest.bloodmagic.unlocking_bees.desc2}"
 			]
 			id: "17E4CF2542DF96DB"
+			rewards: [{
+				id: "7DB8F74A85783380"
+				type: "xp"
+				xp: 50
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -1271,22 +1596,27 @@
 				item: "productivebees:upgrade_base"
 				type: "item"
 			}]
-			title: "Unlocking Bees"
-			x: 17.0d
-			y: 4.5d
+			title: "{atm9e.quest.bloodmagic.unlocking_bees.title}"
+			x: 12.5d
+			y: 8.0d
 		}
 		{
 			dependencies: ["6B156613C6E8DC31"]
 			description: [
-				"{atm9.quest.bloodMagic.desc.demonicWillStorage.1}"
+				"{atm9e.quest.bloodmagic.desc.demonicWillStorage.1}"
 				""
-				"{atm9.quest.bloodMagic.desc.demonicWillStorage.2}"
+				"{atm9e.quest.bloodmagic.desc.demonicWillStorage.2}"
 				""
-				"{atm9.quest.bloodMagic.desc.demonicWillStorage.3}"
+				"{atm9e.quest.bloodmagic.desc.demonicWillStorage.3}"
 				""
-				"{atm9.quest.bloodMagic.desc.demonicWillStorage.4}"
+				"{atm9e.quest.bloodmagic.desc.demonicWillStorage.4}"
 			]
 			id: "0C9DE47BE56D2663"
+			rewards: [{
+				id: "32AF32245F923326"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "7ADF7AEC83FF03DF"
 				item: {
@@ -1298,13 +1628,18 @@
 				}
 				type: "item"
 			}]
-			x: -0.5d
-			y: 3.5d
+			x: -10.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["0C9DE47BE56D2663"]
-			description: ["{atm9.quest.bloodMagic.desc.willStorageUpgrade.1}"]
+			description: ["{atm9e.quest.bloodmagic.desc.willStorageUpgrade.1}"]
 			id: "0506B7FD236B3CAC"
+			rewards: [{
+				id: "19B5C85A75766824"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "1AF0B78B2951095B"
 				item: {
@@ -1316,13 +1651,18 @@
 				}
 				type: "item"
 			}]
-			x: -0.5d
-			y: 4.5d
+			x: -10.5d
+			y: 8.0d
 		}
 		{
 			dependencies: ["0506B7FD236B3CAC"]
-			description: ["{atm9.quest.bloodMagic.desc.willStorageUpgrade.2}"]
+			description: ["{atm9e.quest.bloodmagic.desc.willStorageUpgrade.2}"]
 			id: "76C80CBBE0078896"
+			rewards: [{
+				id: "174BAD3730057EBC"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "48B15FCB0A2A81D7"
 				item: {
@@ -1334,13 +1674,18 @@
 				}
 				type: "item"
 			}]
-			x: -0.5d
-			y: 5.5d
+			x: -10.5d
+			y: 9.0d
 		}
 		{
 			dependencies: ["76C80CBBE0078896"]
-			description: ["{atm9.quest.bloodMagic.desc.willStorageUpgrade.3}"]
+			description: ["{atm9e.quest.bloodmagic.desc.willStorageUpgrade.3}"]
 			id: "56035DD169DE0FC2"
+			rewards: [{
+				id: "1EAEE1785E873C35"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "0DA207CB2A6E3128"
 				item: {
@@ -1352,14 +1697,19 @@
 				}
 				type: "item"
 			}]
-			x: -0.5d
-			y: 6.5d
+			x: -10.5d
+			y: 10.0d
 		}
 		{
 			dependencies: ["7AA45B4EF9D49EF0"]
-			description: ["Automated Blood Altar, for all your automation needs. Using the Sanguine Feeder you can input all the blood needed."]
+			description: ["{atm9e.quest.bloodmagic.sanguine_ritual.desc1}"]
 			icon: "gtceu:sanguine_ritual"
 			id: "10DBC531CC6F4B87"
+			rewards: [{
+				id: "0B6F1FF8A15F7056"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "36E232B91DB083EE"
@@ -1403,17 +1753,22 @@
 					type: "item"
 				}
 			]
-			x: 10.0d
-			y: -1.0d
+			x: 3.0d
+			y: 2.5d
 		}
 		{
 			description: [
-				"Gregtech now has blood magic multis, and with that blood hatches. Blood input hatches accept all types of blood, solid or liquid, and can ouput one of three types of blood: life essence (Blood Magic), blood (Evilcraft), or sanguine concentrate (gtceu)."
+				"{atm9e.quest.bloodmagic.blood_magic_hatches.desc1}"
 				""
-				"Will input hatches can accept tartaric gems (will not consume the gem, just the will) and demonic crystals. The output hatch can ouptut any type of will, and the bus can output any type of solid will. "
-				"Types of will: raw, corrosive, destructive, vengeful, and steadfast"
+				"{atm9e.quest.bloodmagic.blood_magic_hatches.desc2}"
+				"{atm9e.quest.bloodmagic.blood_magic_hatches.desc3}"
 			]
 			id: "3EB087C9F8A0C7E6"
+			rewards: [{
+				id: "2B0D1F0A10A909AD"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "63FC5320DD3C8606"
@@ -1445,27 +1800,32 @@
 					type: "item"
 				}
 			]
-			title: "Blood Magic Hatches"
-			x: -6.0d
-			y: -1.5d
+			title: "{atm9e.quest.bloodmagic.blood_magic_hatches.title}"
+			x: -16.0d
+			y: 2.0d
 		}
 		{
 			description: [
-				"Sanguine Forge is a single block machine Hellfire forge"
+				"{atm9e.quest.bloodmagic.gtmachines.desc1}"
 				""
-				"Sanguine Alchemy is a single block machine alchemy table"
+				"{atm9e.quest.bloodmagic.gtmachines.desc2}"
 				""
-				"Sanguine Arc Furnace, as you may have picked up by now is the single block machine for the arc furnace"
+				"{atm9e.quest.bloodmagic.gtmachines.desc3}"
 				""
-				"Sanguine Array is the machine for recipes you normally have to make with arcane ashes"
+				"{atm9e.quest.bloodmagic.gtmachines.desc4}"
 				""
-				"All of these machines will later be replaced with the Sanguine Synthesizer Multi"
+				"{atm9e.quest.bloodmagic.gtmachines.desc5}"
 				""
-				"TIP: to get blood into machines simple import liquid blood. HINT: Evilcraft has very simple ways of getting liquid blood"
+				"{atm9e.quest.bloodmagic.gtmachines.desc6}"
 				""
-				"TIP 2: Simple Fluid extract will for liquid will"
+				"{atm9e.quest.bloodmagic.gtmachines.desc7}"
 			]
 			id: "24949EA2FDB45D10"
+			rewards: [{
+				id: "13174B28F1E380F9"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [
 				{
 					id: "0D27E8283C7B7C8C"
@@ -1497,36 +1857,46 @@
 					type: "item"
 				}
 			]
-			x: -6.0d
-			y: -3.0d
+			x: -16.0d
+			y: 0.5d
 		}
 		{
 			description: [
-				"The Sanguine Refinery has one purpose, turn blood from either evilcraft or blood magic, and turn it into sanguine concrete."
+				"{atm9e.quest.bloodmagic.sanguine_refinery.desc1}"
 				""
-				"Which is used in many recipes"
+				"{atm9e.quest.bloodmagic.sanguine_refinery.desc2}"
 			]
 			id: "47539B8245DC9F58"
+			rewards: [{
+				id: "4320DEDBC8FF6A91"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "4E6BA7801C764ABC"
 				item: "gtceu:mv_sanguine_refinery"
 				type: "item"
 			}]
-			x: -6.0d
-			y: -4.5d
+			x: -16.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["6B156613C6E8DC31"]
 			description: [
-				"You will need a lot of will in this pack. Crystals are a good source for all that will. "
+				"{atm9e.quest.bloodmagic.obtaining_will_crystals.desc1}"
 				""
-				"Demon Crucible: Simply put in a charged tartaric gem or any aspect of demon will or demon crystal. As needed the will will slowly be consumed to make demon aura. Some rituals may need the will aura, the main benefit is the ability to create demon will crystals."
-				"NOTE: aura is chunk based, if you wish to move it around craft a demon pylon or multiple:"
+				"{atm9e.quest.bloodmagic.obtaining_will_crystals.desc2}"
+				"{atm9e.quest.bloodmagic.obtaining_will_crystals.desc3}"
 				""
-				"Demon Crystallizer: Will slowly consume the aura to produce will crystals. First cost is 100 will and the subsequent spires cost 45 will each. Largest crystal cluster can be up to 7 spires. If you have more than 512 total will in your inventory you can harvest the crystal (right click), will remove all but the central spire."
-				"NOTE: there is an easier way to get the demon crystals via ritual of the Resonance of the Faceted Crystal"
+				"{atm9e.quest.bloodmagic.obtaining_will_crystals.desc4}"
+				"{atm9e.quest.bloodmagic.obtaining_will_crystals.desc5}"
 			]
 			id: "34290CAB2CA94D00"
+			rewards: [{
+				id: "5F3DF36804600C7B"
+				type: "xp"
+				xp: 50
+			}]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [
@@ -1541,17 +1911,17 @@
 					type: "item"
 				}
 			]
-			title: "Obtaining Will Crystals"
-			x: -2.0d
-			y: 4.0d
+			title: "{atm9e.quest.bloodmagic.obtaining_will_crystals.title}"
+			x: -12.0d
+			y: 7.5d
 		}
 		{
 			dependencies: ["5B8A7165B9539B1C"]
 			description: [
-				"Breaks apart a well grown Raw crystal cluster into separately aspected crystal clusters. "
-				"Activation cost: 20,000 LP, usage 1000 LP"
+				"{atm9e.quest.bloodmagic.demon_will.desc1}"
+				"{atm9e.quest.bloodmagic.demon_will.desc2}"
 				""
-				"Spire must be at least 5, and will turn it into each aspected will crystal cluster on the four element ritual stones. Please consult the book for setup."
+				"{atm9e.quest.bloodmagic.demon_will.desc3}"
 			]
 			icon: "bloodmagic:defaultcrystal"
 			id: "581C31383476CAA8"
@@ -1577,10 +1947,15 @@
 					item: "bloodmagic:steadfastcrystal"
 					type: "item"
 				}
+				{
+					id: "192E9F4CA420CFAD"
+					type: "xp"
+					xp: 50
+				}
 			]
 			shape: "hexagon"
 			size: 1.5d
-			subtitle: "Resonance of the Faceted Crystal"
+			subtitle: "{atm9e.quest.bloodmagic.demon_will.subtitle}"
 			tasks: [
 				{
 					id: "2CACAD27E36B0424"
@@ -1599,20 +1974,278 @@
 					type: "item"
 				}
 			]
-			x: 12.5d
-			y: 4.5d
+			x: 8.25d
+			y: 6.75d
 		}
 		{
-			description: ["Used for linking the feeder's too where they need to go"]
+			description: ["{atm9e.quest.bloodmagic.hatchlink.desc1}"]
 			id: "3D775054E7885DC4"
+			rewards: [{
+				id: "6681690BD2806D58"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "25D7F6EE34885DAC"
 				item: "gtextras:link_tool"
 				type: "item"
 			}]
+			x: 10.0d
+			y: -2.0d
+		}
+		{
+			can_repeat: false
+			description: [
+				"{atm9e.quest.bloodmagic.copyright.desc1}"
+				"{atm9e.quest.bloodmagic.copyright.desc2}"
+				""
+				""
+				""
+				"{atm9e.quest.bloodmagic.copyright.desc3}"
+			]
+			disable_toast: true
+			hide_details_until_startable: true
+			hide_until_deps_visible: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "5C803A591EED842D"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [
+				{
+					disable_toast: true
+					id: "331BFDCAE9510150"
+					title: "Quests By AllTheMods"
+					type: "checkmark"
+				}
+				{
+					id: "38DA61C11DB1A020"
+					title: "Quests By AllTheMods"
+					type: "checkmark"
+				}
+			]
+			x: -19.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["708C21851AE26A86"]
+			description: ["{atm9e.quest.bmaddon.blood_assembler.desc}"]
+			id: "28CBBF54FB110586"
+			rewards: [{
+				id: "6ECC4FFA3D2B854D"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{atm9e.quest.bmaddon.blood_assembler.sub}"
+			tasks: [{
+				id: "63DD5CF1944EFE5F"
+				item: "bmaddon:blood_altar_assembler"
+				type: "item"
+			}]
+			title: "{atm9e.quest.bmaddon.blood_assembler.title}"
 			x: 14.5d
-			y: -5.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["28CBBF54FB110586"]
+			description: ["{atm9e.quest.bmaddon.blood_patterns.desc}"]
+			id: "002E0731163473C8"
+			rewards: [
+				{
+					count: 8
+					id: "2A722D6512B25916"
+					item: "bmaddon:blood_altar_pattern"
+					type: "item"
+				}
+				{
+					id: "28B13FFB47568D7F"
+					type: "xp"
+					xp: 50
+				}
+			]
+			tasks: [{
+				id: "443F55B0AE3EBC70"
+				item: "bmaddon:blood_altar_pattern"
+				type: "item"
+			}]
+			title: "{atm9e.quest.bmaddon.blood_patterns.title}"
+			x: 14.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["1438D54DBE727405"]
+			description: ["{atm9e.quest.bmaddon.tier4.desc}"]
+			id: "2167E55F26390D6E"
+			rewards: [{
+				id: "5E9BA2A7BA01248E"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{atm9e.quest.bmaddon.tier4.sub}"
+			tasks: [{
+				id: "239CC3DACB14A470"
+				item: "bmaddon:blood_altar_tier_card_4"
+				type: "item"
+			}]
+			title: "{atm9e.quest.bmaddon.tier4.title}"
+			x: 21.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["28CBBF54FB110586"]
+			description: ["{atm9e.quest.bmaddon.tier2.desc}"]
+			id: "1F9270430FB14A48"
+			rewards: [{
+				id: "779E3F0F219E1E12"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{atm9e.quest.bmaddon.tier2.sub}"
+			tasks: [{
+				id: "58E00F3239823EDC"
+				item: "bmaddon:blood_altar_tier_card_2"
+				type: "item"
+			}]
+			title: "{atm9e.quest.bmaddon.tier2.title}"
+			x: 19.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1F9270430FB14A48"]
+			description: ["{atm9e.quest.bmaddon.tier3.desc}"]
+			id: "1438D54DBE727405"
+			rewards: [{
+				id: "6F241FA0A9792D7F"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{atm9e.quest.bmaddon.tier3.sub}"
+			tasks: [{
+				id: "0A74530114AF7B9F"
+				item: "bmaddon:blood_altar_tier_card_3"
+				type: "item"
+			}]
+			title: "{atm9e.quest.bmaddon.tier3.title}"
+			x: 18.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["2167E55F26390D6E"]
+			description: ["{atm9e.quest.bmaddon.tier5.desc}"]
+			id: "6AB984A3BE06B682"
+			rewards: [{
+				id: "0164741E81A04ED9"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{atm9e.quest.bmaddon.tier5.sub}"
+			tasks: [{
+				id: "4BED91F4CE030ACD"
+				item: "bmaddon:blood_altar_tier_card_5"
+				type: "item"
+			}]
+			title: "{atm9e.quest.bmaddon.tier5.title}"
+			x: 19.5d
+			y: 3.0d
+		}
+		{
+			description: ["{atm9e.quest.bmaddon.parallel_card.desc}"]
+			id: "6B5A835B49F5A809"
+			rewards: [{
+				id: "1B3AA4FE0ECBDA84"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "42E6CE144A67DB00"
+				item: "bmaddon:blood_altar_parallel_card"
+				type: "item"
+			}]
+			title: "{atm9e.quest.bmaddon.parallel_card.title}"
+			x: 17.5d
+			y: 2.5d
+		}
+		{
+			description: ["{atm9e.quest.bmaddon.blood_speed_card.desc}"]
+			id: "58F81A296C6CF8B2"
+			rewards: [{
+				id: "7EEA2F1385558C61"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{atm9e.quest.bmaddon.blood_speed_card.sub}"
+			tasks: [{
+				id: "31971E9967B8AD12"
+				item: "bmaddon:blood_magic_speed_card"
+				type: "item"
+			}]
+			title: "{atm9e.quest.bmaddon.blood_speed_card.title}"
+			x: 21.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["16536DBB3472FF99"]
+			description: ["{atm9e.quest.bmaddon.blood_generator.desc}"]
+			id: "708C21851AE26A86"
+			rewards: [{
+				id: "50CCD828DD737E11"
+				type: "xp"
+				xp: 50
+			}]
+			shape: "gear"
+			size: 2.0d
+			subtitle: "{atm9e.quest.bmaddon.blood_generator.sub}"
+			tasks: [{
+				id: "45EEE5C781AF6182"
+				item: "bmaddon:blood_generator"
+				type: "item"
+			}]
+			title: "{atm9e.quest.bmaddon.blood_generator.title}"
+			x: 14.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["28CBBF54FB110586"]
+			description: ["{atm9e.quest.bmaddon.upgrades.desc}"]
+			id: "2A06935303E071EB"
+			rewards: [{
+				id: "2B50FE98718FBD1C"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{atm9e.quest.bmaddon.upgrades.sub}"
+			tasks: [{
+				id: "6CC3512BB3419028"
+				title: "{atm9e.quest.bmaddon.upgrades.title}"
+				type: "checkmark"
+			}]
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["28CBBF54FB110586"]
+			description: ["{atm9e.quest.bmaddon.ae2_speed_card.desc}"]
+			id: "3FF4A1FD9B64AF6B"
+			rewards: [{
+				id: "0FA205B2EFE9D4DF"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{atm9e.quest.bmaddon.ae2_speed_card.sub}"
+			tasks: [{
+				id: "3FA09BA612D6D512"
+				title: "{atm9e.quest.bmaddon.ae2_speed_card.title}"
+				type: "checkmark"
+			}]
+			x: 16.0d
+			y: 2.0d
 		}
 	]
-	title: "Blood Magic Greg"
+	title: "{atm9e.quest.bloodmagic.chapter.title}"
 }
