@@ -496,7 +496,7 @@ ServerEvents.recipes(allthemods => {
         { color: 'gray', ingredients: [base, 'occultism:gray_paste'] },
         { color: 'light_gray', ingredients: [base, '#forge:dusts/silver', '#forge:dusts/iron', '#forge:dusts/calcite'] },
         { color: 'cyan', ingredients: [base, '#forge:dusts/iesnium', '#forge:dusts/echo_shard', 'minecraft:glow_ink_sac'] },
-        { color: 'purple', ingredients: [base, '#forge:dusts/end_stone', '2x #forge:dusts/obsidian'] },
+        { color: 'purple', ingredients: [base, '#forge:dusts/endstone', '2x #forge:dusts/obsidian'] },
         { color: 'blue', ingredients: [base, 'occultism:marid_essence', '#forge:dusts/lapis', 'minecraft:tube_coral'] },
         { color: 'brown', ingredients: [base, 'occultism:cruelty_essence', 'minecraft:cocoa_beans', 'minecraft:brown_mushroom'] },
         { color: 'green', ingredients: [base, 'occultism:nature_paste'] },

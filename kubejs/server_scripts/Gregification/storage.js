@@ -16,7 +16,7 @@ ServerEvents.recipes(allthemods => {
         const mat = (() => {
         switch(wood) {
             case 'framed':            
-                return '#forge:plates/aluminium';
+                return '#forge:plates/aluminum';
             default:
                 return `minecraft:${wood}_planks`;
         }

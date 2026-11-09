@@ -529,6 +529,16 @@ const materials = [
         .unify({ ingot: 'ad_astra:calorite_ingot', nugget: 'ad_astra:calorite_nugget', plate: 'ad_astra:calorite_plate', block: 'ad_astra:calorite_block', rawOre: 'ad_astra:raw_calorite', oreDeepslate: 'ad_astra:deepslate_calorite_ore' })
         .byproducts(['sulfur', 'lead', 'basalt']),
 
+        
+    new MaterialDef('low_covalence').color(0x38D13F).iconSet('DULL').dust().components('3x stone, 1x flint, 1x steel, 1x olivine, 1x ender_pearl, 1x uvarovite').noDecomp()
+        .unify({ dust: 'projecte:low_covalence_dust' }),
+
+    new MaterialDef('medium_covalence').color(0x33C9DD).iconSet('DULL').dust().components('4x low_covalence, 1x diamond, 1x hellforged, 1x opal, 1x redstone').noDecomp()
+        .unify({ dust: 'projecte:medium_covalence_dust' }),
+
+    new MaterialDef('high_covalence').color(0x2A5BE0).iconSet('DULL').dust().components('4x medium_covalence, 1x indium, 1x gelid_cryotheum, 1x palis, 1x nether_star').noDecomp()
+        .unify({ dust: 'projecte:high_covalence_dust' }),
+
     new MaterialDef('naquadria_stage_2').color(0x5A189A).iconSet('RADIOACTIVE').polymer().plasma(),
 
     new MaterialDef('naquadria_stage_3').color(0x00FFD5).iconSet('RADIOACTIVE').polymer().plasma(),

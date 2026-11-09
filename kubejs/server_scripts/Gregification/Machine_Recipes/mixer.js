@@ -351,6 +351,49 @@ ServerEvents.recipes(allthemods => {
         HV,
         100
     );
+        
+
+    addMixer(
+        [
+            '3x #forge:dusts/stone',
+            '#forge:dusts/flint',
+            '#forge:dusts/steel',
+            '#forge:dusts/olivine',
+            '#forge:dusts/ender_pearl',
+            '#forge:dusts/uvarovite'
+        ],
+        '8x projecte:low_covalence_dust',
+        HV,
+        100
+    );
+
+    addMixer(
+        [
+            '4x #forge:dusts/low_covalence',
+            '#forge:dusts/diamond',
+            '#forge:dusts/hellforged',
+            '#forge:dusts/opal',
+            '#forge:dusts/redstone'
+        ],
+        '8x projecte:medium_covalence_dust',
+        EV,
+        100
+    );
+
+    addMixer(
+        [
+            '4x #forge:dusts/medium_covalence',
+            '#forge:dusts/indium',
+            '#forge:dusts/gelid_cryotheum',
+            '#forge:dusts/palis',
+            '#forge:dusts/nether_star'
+        ],
+        '8x projecte:high_covalence_dust',
+        IV,
+        100
+    );
+
+
 
     //end steel
     addMixer(

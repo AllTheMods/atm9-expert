@@ -51,6 +51,14 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('projecte:red_matter')
         .duration(2600)
         .EUt(UV);
+    
+    ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue', 'brown', 'green', 'red', 'black'].forEach(function(color) {
+        allthemods.recipes.gtceu.assembler('gregification:' + color + '_alchemical_bag')
+            .itemInputs('projecte:alchemical_chest', `5x #forge:wool/${color}`, '4x #forge:dusts/high_covalence')
+            .itemOutputs(`projecte:${color}_alchemical_bag`)
+            .duration(300)
+            .EUt(HV);
+    });
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

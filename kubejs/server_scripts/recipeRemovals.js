@@ -73,6 +73,14 @@ ServerEvents.recipes(allthemods => {
         beeRemoves.push('productivebees:centrifuge/honeycomb_' + mat + '_block');
     });
 
+    /*
+    const minecraftColors = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue', 'brown', 'green', 'red', 'black']
+    let colorRemoval = [];
+    minecraftColors.forEach(function(color) {        
+    });    
+    
+    allthemods.remove(colorRemoval);
+    */
 
 
 
@@ -121,10 +129,15 @@ ServerEvents.recipes(allthemods => {
 
     
     
+    allthemods.remove({ mod: 'terralith' });
 
 
+    allthemods.remove({id: /^sophisticatedstorage:(oak|spruce|birch|jungle|acacia|dark_oak|mangrove|cherry|bamboo|crimson|warped|generic)_(chest|barrel|limited_barrel_[1-4])(_from_.*)?$/});
+    
 
     const moreRemovals = [
+        'tconstruct:smeltery/casting/ender/eye',
+        'projecte:red_alchemical_bag', 'projecte:low_covalence_dust', 'projecte:medium_covalence_dust', 'projecte:high_covalence_dust',
         'alltheores:mek_processing/aluminum/ingot/from_dust_blasting', 'tconstruct:smeltery/melting/metal/aluminum/dust',
         'alltheores:smelting_dust/aluminum_ingot', 'enderio:smelting/alltheores/smelting_dust/aluminum_ingot',
         'thermal:energy_duct_4', 'thermal:fluid_duct_4', 'thermal:fluid_duct_windowed_4',

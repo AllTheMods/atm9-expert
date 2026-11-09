@@ -4,6 +4,33 @@
 //@ts-check
 ServerEvents.recipes(allthemods => {
 
+    const sophisticatedWoods = [
+        'oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak',
+        'mangrove', 'cherry', 'bamboo', 'crimson', 'warped'
+    ];
+
+    //Item.of('sophisticatedstorage:chest', '{woodType:"gtceu:rubber"}')
+    sophisticatedWoods.forEach(wood => {
+        allthemods.shapeless(
+            Item.of('sophisticatedstorage:chest', '{woodType:"' + wood + '"}'),
+            ['#forge:chests', '#forge:plates/redstone', '#forge:plates/redstone', '#forge:plates/steel', '#forge:plates/steel', 'minecraft:' + wood + '_planks']
+        ).id('gregification:sophisticated_chest_' + wood);
+
+        allthemods.shapeless(
+            Item.of('sophisticatedstorage:barrel', '{woodType:"' + wood + '"}'),
+            ['#forge:barrels', '#forge:plates/redstone', '#forge:plates/redstone', '#forge:plates/steel', '#forge:plates/steel', 'minecraft:' + wood + '_planks']
+        ).id('gregification:sophisticated_barrel_' + wood);
+    });
+    allthemods.shapeless(
+        Item.of('sophisticatedstorage:chest', '{woodType:"gtceu:rubber"}'),
+        ['minecraft:chest', '#forge:plates/redstone', '#forge:plates/redstone', '#forge:plates/steel', '#forge:plates/steel', 'gtceu:rubber_planks']
+    ).id('gregification:sophisticated_chest_rubber');
+
+    allthemods.shapeless(
+        Item.of('sophisticatedstorage:barrel', '{woodType:"gtceu:rubber"}'),
+        ['minecraft:barrel', '#forge:plates/redstone', '#forge:plates/redstone', '#forge:plates/steel', '#forge:plates/steel', 'gtceu:rubber_planks']
+    ).id('gregification:sophisticated_barrel_rubber');
+
     const replaceShaped = (recipeID, itemID, schema, ingredients) => {
         allthemods.shaped(itemID || recipeID, schema, ingredients).id(recipeID);
     }
@@ -19,7 +46,7 @@ ServerEvents.recipes(allthemods => {
         'ECE'
     ], {
         R: "#forge:rods/magnetic_steel",
-        E: "#forge:plates/aluminium",
+        E: "#forge:plates/aluminum",
         T: "#forge:dusts/redstone",
         L: "#forge:gems/lapis",
         C: "#gtceu:circuits/lv"

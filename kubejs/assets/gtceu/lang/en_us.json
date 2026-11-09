@@ -1111,5 +1111,8 @@
     "block.gtceu.star_assembler": "Star Assembler",
     "gtceu.star_assembler": "ATM Star Assembly Complex",
     "tagprefix.singularity": "%s Singularity",
-    "material.gtceu.magma_cream": "Magma Cream"
+    "material.gtceu.magma_cream": "Magma Cream",
+    "material.gtceu.low_covalence": "Low Covalence",
+    "material.gtceu.medium_covalence": "Medium Covalence",
+    "material.gtceu.high_covalence": "High Covalence"
 }
