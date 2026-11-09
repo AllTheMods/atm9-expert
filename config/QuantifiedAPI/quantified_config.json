@@ -1,0 +1,142 @@
+/*
+==============================================
+|      Quantified API - Configuration        |
+|      Author: Admany                        |
+|      All Rights Reserved                   |
+==============================================
+|  This config file auto-updates itself if   |
+|  there are config changes. You do NOT need |
+|  to delete it for new features or updates! |
+==============================================
+*/
+
+{
+  "_comment": "Edit this file to configure Quantified API. For documentation, visit: https://github.com/Admany/Quantified-API",
+
+
+  // === General Settings ===
+  // Write Quantified API activity into the Minecraft log / console so you can follow along.
+  "logToConsole": false,
+  // Choose how chatty the logger should be (TRACE, DEBUG, INFO, WARN, ERROR).
+  "logLevel": "INFO",
+
+  // === Networking Configuration ===
+  // Allow the API to talk to remote services or other mods.
+  "enableNetworking": true,
+  // How long to wait (in ms) before a network request is considered dead.
+  "networkTimeoutMs": 30000,
+
+  // === GPU / Compute ===
+  // Let Quantified push compatible workloads onto the GPU whenever possible.
+  "enableGpuAcceleration": true,
+  // Choose how Quantified routes generic GPU work: Vulkan-first, OpenCL-first, strict backend requirements, or CPU-only.
+  "preferredGpuBackend": "VULKAN_PREFERRED",
+  // Select which Vulkan device to use. Use auto to let Quantified pick the best Vulkan compute GPU.
+  "vulkanDeviceId": "auto",
+  // Select which OpenCL device to use. Use auto to let Quantified pick the fastest GPU.
+  "openclDeviceId": "auto",
+  // Always route compute through OpenCL even when the CPU would normally be chosen.
+  "openclForced": false,
+  // Emit detailed OpenCL/GPU traces to help troubleshoot rendering or compute issues.
+  "gpuDebugLogging": false,
+
+  // === Parallel Execution ===
+  // Upper bound for threads dedicated to the parallel compute pool.
+  "parallelMaxThreads": 32,
+  // Maximum number of queued parallel slices across all mods.
+  "parallelQueueLimit": 4096,
+  // Per-mod ceiling for simultaneously running slices.
+  "parallelMaxSlicesPerMod": 4096,
+  // Default failure policy for parallel batches (FAIL_FAST or BEST_EFFORT).
+  "parallelFailurePolicy": "FAIL_FAST",
+
+  // === Task Processing ===
+  // Maximum number of queued tasks before new ones are rejected.
+  "taskQueueSize": 1000,
+  // Upper limit (in ms) for how long a single task may run.
+  "taskTimeoutMs": 60000,
+
+  // === Developer Features ===
+  // Unlock developer-only UI elements and tooling.
+  "developerMode": true,
+  // Record execution timeline samples so you can scrub through performance history.
+  "developerTimeline": true,
+  // Keep telemetry frames so you can replay them later for diagnostics.
+  "developerReplay": true,
+  // Expose the stress test harness that hammers the scheduler.
+  "developerStressTest": false,
+  // Highlight verbose or busy mods directly in diagnostics.
+  "developerModSpotlight": true,
+
+  // === Developer Dashboard ===
+  // Serve the browser-based dashboard for realtime control.
+  "developerDashboard": false,
+  // TCP port that the dashboard server binds to.
+  "developerDashboardPort": 8765,
+  // Interface/IP address the dashboard listens on (127.0.0.1 keeps it local).
+  "developerDashboardHost": "127.0.0.1",
+  // Serve the dashboard over HTTPS using your supplied keystore.
+  "developerDashboardHttps": false,
+  // Require credentials before anyone can access the dashboard.
+  "developerDashboardAuth": false,
+  // Username used to authenticate when dashboard login is enabled.
+  "developerDashboardUsername": "",
+  // Password paired with the username above.
+  "developerDashboardPassword": "",
+  // Path to the JKS/PKCS12 keystore used to enable HTTPS.
+  "developerDashboardKeystorePath": "",
+  // Password required to unlock the HTTPS keystore.
+  "developerDashboardKeystorePassword": "",
+  // Idle minutes before an authenticated dashboard session expires.
+  "dashboardSessionTimeoutMinutes": 30,
+
+  // === Stress Testing ===
+  // Preset used whenever the stress tester spins up.
+  "developerStressProfile": "cpu_heavy",
+  // How long each CPU stress pass should run (milliseconds).
+  "stressTestCpuChunkMs": 50,
+
+  // === Monitoring & Metrics ===
+  // Track runtime metrics so you can review history later.
+  "enableMetrics": true,
+  // Seconds between automatic metric samples.
+  "metricsIntervalSeconds": 30,
+  // Write collected metrics to JSON files on disk.
+  "exportMetricsToFile": false,
+  // Where exported metric files should be saved.
+  "metricsExportPath": "config/QuantifiedAPI/metrics/",
+  // How many hours of metrics the game should remember.
+  "maxMetricsHistoryHours": 24,
+
+  // === Security & Safety ===
+  // Run extra validation to avoid unsafe or malicious workloads.
+  "enableSecurityChecks": true,
+  // Double-check each task payload before it runs.
+  "validateTaskInputs": true,
+  // Wrap risky system or process calls in a safer sandbox.
+  "sandboxExternalCalls": true,
+
+  // === Fixes ===
+  // Log JVM garbage-collection hints to help with tuning.
+  "enableGcHints": true,
+
+  // === Debug Settings ===
+  // Enable verbose debug logging globally.
+  "debug": false,
+  // Dump timing breakdowns for core operations.
+  "debugShowTimings": false,
+  // Log thread creation/destruction details.
+  "debugShowThreading": false,
+  // Mirror debug output to disk.
+  "debugSaveToFile": false,
+  // Path to the debug log file.
+  "debugLogFile": "config/QuantifiedAPI/debug.log",
+  // Max size (in MB) before the debug log rolls.
+  "debugMaxLogSizeMb": 10,
+
+  // === Experimental Features ===
+  // Unlock bleeding-edge features that may change or break.
+  "enableExperimentalFeatures": false,
+
+  "_experimental": "Some features are experimental. Use with caution!"
+}
