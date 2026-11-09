@@ -19,7 +19,7 @@
 		x: 1.0d
 		y: 1.0d
 	}]
-	order_index: 3
+	order_index: 2
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
@@ -501,25 +501,6 @@
 			y: 6.0d
 		}
 		{
-			description: ["{atm9.quest.tips.desc.powah}"]
-			icon: "mekanismgenerators:gas_burning_generator"
-			id: "437AF6A8A63413A8"
-			rewards: [{
-				id: "4CDC7F753855B46A"
-				type: "xp"
-				xp: 10
-			}]
-			subtitle: "{atm9.quest.tips.subt.powah}"
-			tasks: [{
-				id: "2C621D97D1ED56DE"
-				title: "RF Generation"
-				type: "checkmark"
-			}]
-			title: "{atm9.quest.tips.powah}"
-			x: 5.5d
-			y: 6.0d
-		}
-		{
 			description: ["{atm9.quest.tips.desc.spawner}"]
 			icon: "minecraft:spawner"
 			id: "600CFCF3612AEE9A"
@@ -536,8 +517,8 @@
 				type: "checkmark"
 			}]
 			title: "{atm9.quest.tips.spawner}"
-			x: 5.5d
-			y: 5.0d
+			x: -0.5d
+			y: 5.5d
 		}
 		{
 			can_repeat: false
@@ -578,24 +559,6 @@
 			]
 			x: 1.0d
 			y: 4.5d
-		}
-		{
-			description: ["Your first priority should be getting to the mining dimension to gain access to GregTech ores. The recipe for the teleporter has been changed and no longer requires allthemodium."]
-			id: "38027FA5052017E2"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "0F7E93B5AE4A328E"
-				table_id: 4804065436311136435L
-				type: "random"
-			}]
-			tasks: [{
-				id: "547F078771DBD7FB"
-				item: "allthemodium:teleport_pad"
-				type: "item"
-			}]
-			title: "Mining Dimension"
-			x: -0.5d
-			y: 5.5d
 		}
 	]
 	title: "{atm9.chapters.4.title}"

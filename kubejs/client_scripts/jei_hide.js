@@ -33,6 +33,8 @@ JEIEvents.hideItems(allthemods => {
   ])
   allthemods.hide('croptopia:guide')
   allthemods.hide('ad_astra:etrionic_blast_furnace')
+  allthemods.hide('ad_astra:compressor')
+  allthemods.hide('#alltheores:ore_hammers')
 
   Color.DYE.forEach(color => {
     ['controller', 'creative_controller', 'grid', 'crafting_grid', 'pattern_grid', 'fluid_grid', 'network_receiver', 'network_transmitter', 'relay', 'detector', 'security_manager', 'wireless_transmitter', 'disk_manipulator', 'crafter', 'crafter_manager', 'crafting_monitor'].forEach(machine => {

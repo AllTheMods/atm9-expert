@@ -8,242 +8,90 @@
 	images: [
 		{
 			height: 1.0d
-			image: "generatorgalore:block/copper_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 11.0d
-			y: -4.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/iron_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 11.0d
-			y: -3.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/diamond_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 11.0d
-			y: -1.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/gold_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 11.0d
-			y: -2.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/emerald_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 11.0d
-			y: 0.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/netherstar_generator_top_on"
-			rotation: 0.0d
-			width: 1.0d
-			x: 5.5d
-			y: -2.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/culinary_generator_top_on"
-			rotation: 0.0d
-			width: 1.0d
-			x: 5.5d
-			y: -4.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/enchantment_generator_top_on"
-			rotation: 0.0d
-			width: 1.0d
-			x: 5.5d
-			y: -3.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/obsidian_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 4.0d
-			y: 3.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/netherstar_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 5.0d
-			y: 3.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/netherite_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 6.0d
-			y: 3.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/enchantment_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 7.0d
-			y: 3.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/magmatic_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 8.0d
-			y: 3.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/honey_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 11.0d
-			y: 1.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/halitosis_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 11.0d
-			y: 3.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/potion_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 11.0d
-			y: 2.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/culinary_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 9.0d
-			y: 3.0d
-		}
-		{
-			height: 1.0d
-			image: "generatorgalore:block/ender_generator_front"
-			rotation: 0.0d
-			width: 1.0d
-			x: 10.0d
-			y: 3.0d
-		}
-		{
-			height: 1.0d
 			image: "ironfurnaces:block/copper_furnace_front_on"
 			rotation: 0.0d
 			width: 1.0d
-			x: -7.0d
-			y: 3.0d
+			x: 0.5d
+			y: -5.5d
 		}
 		{
 			height: 1.0d
 			image: "ironfurnaces:block/iron_furnace_front_on"
 			rotation: 0.0d
 			width: 1.0d
-			x: -6.0d
-			y: 3.0d
+			x: -2.5d
+			y: -4.5d
 		}
 		{
 			height: 1.0d
 			image: "ironfurnaces:block/gold_furnace_front_on"
 			rotation: 0.0d
 			width: 1.0d
-			x: -4.0d
-			y: 3.0d
+			x: 2.5d
+			y: -4.5d
 		}
 		{
 			height: 1.0d
 			image: "ironfurnaces:block/silver_furnace_front_on"
 			rotation: 0.0d
 			width: 1.0d
-			x: -5.0d
-			y: 3.0d
+			x: 0.0d
+			y: -4.5d
 		}
 		{
 			height: 1.0d
 			image: "ironfurnaces:block/diamond_furnace_front_on"
 			rotation: 0.0d
 			width: 1.0d
-			x: -3.0d
-			y: 3.0d
+			x: 4.0d
+			y: -3.0d
 		}
 		{
 			height: 1.0d
 			image: "atm:textures/questpics/furnaces/iron_furnaces.png"
 			rotation: 0.0d
 			width: 8.60759493670886d
-			x: -2.0d
-			y: -6.0d
-		}
-		{
-			height: 1.0d
-			image: "atm:textures/questpics/generator/generator_galore.png"
-			rotation: 0.0d
-			width: 11.10126582278481d
-			x: 9.0d
-			y: -6.0d
+			x: 0.0d
+			y: -8.5d
 		}
 		{
 			height: 1.0d
 			image: "ironfurnaces:block/iron_furnace_front_on_blast"
 			rotation: 0.0d
 			width: 1.0d
-			x: -8.0d
-			y: -3.0d
+			x: -9.5d
+			y: -2.0d
 		}
 		{
 			height: 1.0d
 			image: "ironfurnaces:block/iron_furnace_front_on_smoke"
 			rotation: 0.0d
 			width: 1.0d
-			x: -5.0d
-			y: -3.0d
+			x: -6.5d
+			y: -2.0d
 		}
 		{
 			height: 1.0d
 			image: "ironfurnaces:block/emerald_furnace_front_on"
 			rotation: 0.0d
 			width: 1.0d
-			x: -2.0d
-			y: 3.0d
+			x: 5.0d
+			y: -1.0d
 		}
 		{
 			height: 1.0d
 			image: "ironfurnaces:block/crystal_furnace_front_on"
 			rotation: 0.0d
 			width: 1.0d
-			x: -1.0d
-			y: 3.0d
+			x: 4.0d
+			y: 1.0d
 		}
 		{
 			height: 1.0d
 			image: "ironfurnaces:block/netherite_furnace_front_on"
 			rotation: 0.0d
 			width: 1.0d
-			x: 1.0d
+			x: -1.5d
 			y: 3.0d
 		}
 		{
@@ -251,39 +99,64 @@
 			image: "ironfurnaces:block/obsidian_furnace_front_on"
 			rotation: 0.0d
 			width: 1.0d
-			x: 0.0d
+			x: 1.5d
 			y: 3.0d
 		}
 		{
-			height: 1.0d
+			alpha: 160
+			height: 4.0d
 			image: "ironfurnaces:block/million_furnace_front_on"
 			rotation: 0.0d
-			width: 1.0d
-			x: 2.0d
-			y: 3.0d
+			width: 4.0d
+			x: 0.0d
+			y: -1.0d
 		}
 		{
-			height: 1.0d
+			height: 2.0d
 			image: "ironfurnaces:block/xmas_furnace_front_on"
 			rotation: 0.0d
-			width: 1.0d
-			x: 1.0d
-			y: 2.0d
+			width: 2.0d
+			x: 6.5d
+			y: 1.5d
+		}
+		{
+			height: 2.0d
+			image: "ironfurnaces:block/spooky_furnace_front_on"
+			rotation: 0.0d
+			width: 2.0d
+			x: 6.5d
+			y: -3.5d
 		}
 		{
 			height: 1.0d
-			image: "ironfurnaces:block/spooky_furnace_front_on"
+			image: "ironfurnaces:block/allthemodium_furnace_front_on"
 			rotation: 0.0d
 			width: 1.0d
-			x: -1.0d
-			y: 2.0d
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			height: 1.0d
+			image: "ironfurnaces:block/vibranium_furnace_front_on"
+			rotation: 0.0d
+			width: 1.0d
+			x: -5.0d
+			y: -1.0d
+		}
+		{
+			height: 1.0d
+			image: "ironfurnaces:block/unobtainium_furnace_front_on"
+			rotation: 0.0d
+			width: 1.0d
+			x: -4.0d
+			y: -3.0d
 		}
 	]
-	order_index: 4
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["47750F3CB020104C"]
+			dependencies: ["661C072E48F8D41F"]
 			description: ["{atm9.quest.generators.desc.ironfurnaces.1}"]
 			id: "2748ACEAB96A5F60"
 			rewards: [
@@ -306,14 +179,11 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.ironfurnaces}"
-			x: 0.0d
-			y: -4.0d
+			x: -1.5d
+			y: -3.5d
 		}
 		{
-			dependencies: [
-				"2748ACEAB96A5F60"
-				"61847F47CCA225D9"
-			]
+			dependencies: ["61847F47CCA225D9"]
 			dependency_requirement: "one_completed"
 			description: ["{atm9.quest.generators.desc.goldenfurnace}"]
 			id: "420FE84DEE12CCE0"
@@ -342,8 +212,8 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.goldenfurnace}"
-			x: 2.0d
-			y: -2.0d
+			x: 1.5d
+			y: -3.5d
 		}
 		{
 			dependencies: ["420FE84DEE12CCE0"]
@@ -369,8 +239,8 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.diamondfurnace}"
-			x: 2.0d
-			y: 0.0d
+			x: 3.0d
+			y: -2.5d
 		}
 		{
 			dependencies: ["21EA29A8C7F950CE"]
@@ -396,14 +266,11 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.emeraldfurnace}"
-			x: 0.0d
-			y: 0.0d
+			x: 4.0d
+			y: -1.0d
 		}
 		{
-			dependencies: [
-				"2354BC5330350DF6"
-				"711DDD55CEC439E5"
-			]
+			dependencies: ["2354BC5330350DF6"]
 			dependency_requirement: "one_completed"
 			description: ["{atm9.quest.generators.desc.obsidianfurnace.1}"]
 			id: "32C7D8AE859BF89E"
@@ -432,11 +299,11 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.obsidianfurnace}"
-			x: -2.0d
-			y: -2.0d
+			x: 1.5d
+			y: 2.0d
 		}
 		{
-			dependencies: ["21EA29A8C7F950CE"]
+			dependencies: ["711DDD55CEC439E5"]
 			description: ["{atm9.quest.generators.desc.crystalfurnace.1}"]
 			id: "2354BC5330350DF6"
 			rewards: [
@@ -459,12 +326,13 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.crystalfurnace}"
-			x: -2.0d
-			y: 0.0d
+			x: 3.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["47750F3CB020104C"]
 			description: ["{atm9.quest.generators.desc.copperfurnace.1}"]
+			hide_dependency_lines: false
 			id: "661C072E48F8D41F"
 			rewards: [
 				{
@@ -485,14 +353,11 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.copperfurnace}"
-			x: -2.0d
-			y: -4.0d
+			x: -0.5d
+			y: -5.5d
 		}
 		{
-			dependencies: [
-				"661C072E48F8D41F"
-				"2748ACEAB96A5F60"
-			]
+			dependencies: ["2748ACEAB96A5F60"]
 			dependency_requirement: "one_completed"
 			description: ["{atm9.quest.generators.desc.silverfurnace.1}"]
 			id: "61847F47CCA225D9"
@@ -521,8 +386,8 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.silverfurnace}"
-			x: 2.0d
-			y: -4.0d
+			x: 0.0d
+			y: -3.5d
 		}
 		{
 			dependencies: [
@@ -581,406 +446,8 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.generatorintro}"
-			x: 3.0d
-			y: -6.0d
-		}
-		{
-			dependencies: ["47750F3CB020104C"]
-			description: ["{atm9.quest.generators.desc.coppergenerator.1}"]
-			id: "618F1434757C8E69"
-			rewards: [
-				{
-					id: "281190DEF2243DD7"
-					item: "minecraft:coal_block"
-					type: "item"
-				}
-				{
-					id: "07B91786EF4FE76F"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "34B322D0103A702D"
-				item: "generatorgalore:copper_generator"
-				type: "item"
-			}]
-			title: "{atm9.quest.generators.title.coppergenerator}"
-			x: 7.0d
-			y: -4.0d
-		}
-		{
-			dependencies: ["618F1434757C8E69"]
-			description: ["{atm9.quest.generators.desc.irongenerator.1}"]
-			id: "61F265D9A5713A4D"
-			rewards: [
-				{
-					count: 2
-					id: "5C57EA9A84FBE46D"
-					item: "minecraft:coal_block"
-					type: "item"
-				}
-				{
-					id: "2C217936B60081EC"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "0EB013018E702B1B"
-				item: "generatorgalore:iron_generator"
-				type: "item"
-			}]
-			x: 7.0d
-			y: -3.0d
-		}
-		{
-			dependencies: ["61F265D9A5713A4D"]
-			description: ["{atm9.quest.generators.desc.goldgenerator.1}"]
-			id: "25A3E30F722B38B6"
-			rewards: [
-				{
-					count: 3
-					id: "24B89F74A9E49299"
-					item: "minecraft:coal_block"
-					type: "item"
-				}
-				{
-					id: "4FD87DDB6636856A"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "050D165BFB764088"
-				item: "generatorgalore:gold_generator"
-				type: "item"
-			}]
-			title: "{atm9.quest.generators.title.goldgenerator}"
-			x: 7.0d
-			y: -2.0d
-		}
-		{
-			dependencies: ["25A3E30F722B38B6"]
-			description: ["{atm9.quest.generators.desc.culinarygenerator.1}"]
-			id: "1C73E60FC70408D4"
-			rewards: [
-				{
-					count: 3
-					id: "355848A001554BDC"
-					item: "minecraft:golden_apple"
-					type: "item"
-				}
-				{
-					id: "41B93C598FD2BBB5"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "3760CF6628449FEA"
-				item: "generatorgalore:culinary_generator"
-				type: "item"
-			}]
-			x: 8.0d
-			y: -2.0d
-		}
-		{
-			dependencies: ["25A3E30F722B38B6"]
-			description: ["{atm9.quest.generators.desc.diamondgenerator.1}"]
-			id: "28FEB4C11AD1AE7C"
-			rewards: [
-				{
-					count: 4
-					id: "651D74881934907F"
-					item: "minecraft:coal_block"
-					type: "item"
-				}
-				{
-					id: "152B2A4DCCBF4FC3"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "2BF8EAF6DC5D319B"
-				item: "generatorgalore:diamond_generator"
-				type: "item"
-			}]
-			title: "{atm9.quest.generators.title.diamondgenerator}"
-			x: 7.0d
-			y: -1.0d
-		}
-		{
-			dependencies: ["28FEB4C11AD1AE7C"]
-			description: ["{atm9.quest.generators.desc.netheritegenerator.1}"]
-			id: "07BEB974DF1E5AD3"
-			rewards: [
-				{
-					count: 5
-					id: "5694BE118F5B1489"
-					item: "minecraft:coal_block"
-					type: "item"
-				}
-				{
-					id: "411AC5DA2D1438C7"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "4F7772A5628CD409"
-				item: "generatorgalore:netherite_generator"
-				type: "item"
-			}]
-			title: "{atm9.quest.generators.title.netheritegenerator}"
-			x: 6.0d
-			y: -1.0d
-		}
-		{
-			dependencies: ["28FEB4C11AD1AE7C"]
-			description: ["{atm9.quest.generators.desc.emeraldgenerator.1}"]
-			id: "076A648E3E3245C9"
-			rewards: [
-				{
-					count: 5
-					id: "35B5EC77C478110B"
-					item: "minecraft:coal_block"
-					type: "item"
-				}
-				{
-					id: "4678306E627CAD60"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "498EED55AD10AC0B"
-				item: "generatorgalore:emerald_generator"
-				type: "item"
-			}]
-			title: "{atm9.quest.generators.title.emeraldgenerator}"
-			x: 8.0d
-			y: -1.0d
-		}
-		{
-			dependencies: ["28FEB4C11AD1AE7C"]
-			description: ["{atm9.quest.generators.desc.obsidiangenerator.1}"]
-			id: "311F43D48B9C26FF"
-			rewards: [
-				{
-					count: 5
-					id: "7B85BD1152763EE7"
-					item: "minecraft:coal_block"
-					type: "item"
-				}
-				{
-					id: "5A0BADEEBE47C7DE"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "2C5E1B693F30A58B"
-				item: "generatorgalore:obsidian_generator"
-				type: "item"
-			}]
-			title: "{atm9.quest.generators.title.obsidiangenerator}"
-			x: 7.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1C73E60FC70408D4"]
-			description: ["{atm9.quest.generators.desc.honeygenerator.1}"]
-			id: "68972BA647FDCF8F"
-			rewards: [
-				{
-					count: 3
-					id: "47A5B263CA06D9FF"
-					item: "minecraft:honey_block"
-					type: "item"
-				}
-				{
-					id: "48C9FE7021DE61BE"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "39307952E4735E09"
-				item: "generatorgalore:honey_generator"
-				type: "item"
-			}]
-			title: "{atm9.quest.generators.title.honeygenerator}"
-			x: 9.0d
-			y: -2.5d
-		}
-		{
-			dependencies: ["1C73E60FC70408D4"]
-			description: ["{atm9.quest.generators.desc.potiongenerator.1}"]
-			id: "7297391D026EE9A6"
-			rewards: [
-				{
-					count: 9
-					id: "32B38128B961D10B"
-					item: "minecraft:glass_bottle"
-					type: "item"
-				}
-				{
-					count: 9
-					id: "7B0DEB7CEDC9CD13"
-					item: "minecraft:blaze_powder"
-					type: "item"
-				}
-				{
-					id: "6A63B5740D7E02C5"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "749FA5DA6A42E764"
-				item: "generatorgalore:potion_generator"
-				type: "item"
-			}]
-			title: "{atm9.quest.generators.title.potiongenerator}"
-			x: 9.0d
-			y: -1.5d
-		}
-		{
-			dependencies: ["311F43D48B9C26FF"]
-			description: ["{atm9.quest.generators.desc.enchantmentgenerator.1}"]
-			id: "6A1145678E80FB8E"
-			rewards: [
-				{
-					count: 9
-					id: "371F290F134C81B7"
-					item: "minecraft:lapis_lazuli"
-					type: "item"
-				}
-				{
-					count: 3
-					id: "55684C973FE98D57"
-					item: "minecraft:book"
-					type: "item"
-				}
-				{
-					id: "1B88E282A6E09335"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "24481F34C15FB282"
-				item: "generatorgalore:enchantment_generator"
-				type: "item"
-			}]
-			title: "{atm9.quest.generators.title.enchantmentgenerator}"
-			x: 8.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["311F43D48B9C26FF"]
-			description: ["{atm9.quest.generators.desc.magmaticgenerator.1}"]
-			id: "552CA2ABE659A507"
-			rewards: [
-				{
-					count: 3
-					id: "7EDD1682F7E8AF7E"
-					item: "minecraft:lava_bucket"
-					type: "item"
-				}
-				{
-					id: "19BB1B3645E0AEF3"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "47F0D4C2445694CF"
-				item: "generatorgalore:magmatic_generator"
-				type: "item"
-			}]
-			title: "{atm9.quest.generators.title.magmaticgenerator}"
-			x: 7.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["311F43D48B9C26FF"]
-			description: ["{atm9.quest.generators.desc.endergenerator.1}"]
-			id: "69201157ECFBB426"
-			rewards: [
-				{
-					count: 16
-					id: "5BE5511978950717"
-					item: "minecraft:ender_pearl"
-					type: "item"
-				}
-				{
-					id: "7C61CDF56A10DC76"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "0E0857E2248D657E"
-				item: "generatorgalore:ender_generator"
-				type: "item"
-			}]
-			title: "{atm9.quest.generators.title.endergenerator}"
-			x: 6.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["07BEB974DF1E5AD3"]
-			description: ["{atm9.quest.generators.desc.netherstargenerator.1}"]
-			id: "1843C79133DFB024"
-			rewards: [
-				{
-					count: 2
-					id: "73709A450E84888B"
-					item: "minecraft:nether_star"
-					type: "item"
-				}
-				{
-					id: "6B30CEFE52A2A153"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "2A5900E766CEB417"
-				item: "generatorgalore:netherstar_generator"
-				type: "item"
-			}]
-			x: 5.0d
-			y: -1.0d
-		}
-		{
-			dependencies: ["69201157ECFBB426"]
-			description: ["{atm9.quest.generators.desc.halitosisgenerator.1}"]
-			id: "40DB6E3DE87F16EF"
-			rewards: [
-				{
-					count: 20
-					id: "218046278739D11D"
-					item: "minecraft:dragon_breath"
-					type: "item"
-				}
-				{
-					id: "63A5FEE430E3A993"
-					type: "xp_levels"
-					xp_levels: 2
-				}
-			]
-			tasks: [{
-				id: "73CB2D4EE3ACEE1A"
-				item: "generatorgalore:halitosis_generator"
-				type: "item"
-			}]
-			title: "{atm9.quest.generators.title.halitosisgenerator}"
-			x: 5.0d
-			y: 0.0d
+			x: 0.0d
+			y: -7.0d
 		}
 		{
 			dependencies: ["32C7D8AE859BF89E"]
@@ -1006,21 +473,10 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.netheritefurnace}"
-			x: -3.0d
-			y: -2.0d
+			x: -1.5d
+			y: 2.0d
 		}
 		{
-			id: "78D1C97A542133D8"
-			tasks: [{
-				id: "1311C09169CA7055"
-				item: "minecraft:paper"
-				type: "item"
-			}]
-			x: -6.5d
-			y: -4.0d
-		}
-		{
-			dependencies: ["78D1C97A542133D8"]
 			description: ["{atm9.quest.generators.desc.augmentblasting.1}"]
 			icon_scale: 1.5d
 			id: "73FF01D830A669AA"
@@ -1038,11 +494,10 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.augmentblasting}"
-			x: -7.0d
-			y: -3.0d
+			x: -8.5d
+			y: -2.0d
 		}
 		{
-			dependencies: ["78D1C97A542133D8"]
 			description: ["{atm9.quest.generators.desc.augmentsmoking.1}"]
 			icon_scale: 1.5d
 			id: "33436ED0D9F128BD"
@@ -1059,11 +514,10 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.augmentsmoking}"
-			x: -6.0d
-			y: -3.0d
+			x: -7.5d
+			y: -2.0d
 		}
 		{
-			dependencies: ["78D1C97A542133D8"]
 			description: ["{atm9.quest.generators.desc.augmentfactory.1}"]
 			icon_scale: 1.5d
 			id: "49F08DE190AAD0D8"
@@ -1080,11 +534,10 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.augmentfactory}"
-			x: -7.0d
-			y: -2.0d
+			x: -9.0d
+			y: -1.0d
 		}
 		{
-			dependencies: ["78D1C97A542133D8"]
 			description: ["{atm9.quest.generators.desc.augmentgenerator.1}"]
 			icon_scale: 1.5d
 			id: "07753C5D94312A50"
@@ -1100,11 +553,10 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.augmentgenerator}"
-			x: -6.0d
-			y: -2.0d
+			x: -7.0d
+			y: -1.0d
 		}
 		{
-			dependencies: ["78D1C97A542133D8"]
 			description: ["{atm9.quest.generators.desc.augmentspeed.1}"]
 			icon_scale: 1.5d
 			id: "7F67849DE9F700D8"
@@ -1121,11 +573,10 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.augmentspeed}"
-			x: -7.0d
-			y: -1.0d
+			x: -8.5d
+			y: 0.0d
 		}
 		{
-			dependencies: ["78D1C97A542133D8"]
 			description: ["{atm9.quest.generators.desc.augmentfuel.1}"]
 			icon_scale: 1.5d
 			id: "538821E23E39BE97"
@@ -1142,8 +593,8 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.augmentfuel}"
-			x: -6.0d
-			y: -1.0d
+			x: -7.5d
+			y: 0.0d
 		}
 		{
 			description: ["{atm9.quest.generators.desc.halloween.1}"]
@@ -1159,14 +610,15 @@
 				}
 				type: "item"
 			}]
+			shape: "heart"
 			tasks: [{
 				id: "1C9D63BCE843C437"
 				item: "ironfurnaces:item_spooky"
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.halloween}"
-			x: -1.0d
-			y: 1.0d
+			x: 6.5d
+			y: -3.5d
 		}
 		{
 			description: ["{atm9.quest.generators.desc.christmas.1}"]
@@ -1182,14 +634,15 @@
 				}
 				type: "item"
 			}]
+			shape: "heart"
 			tasks: [{
 				id: "5EE98EB3DC0E291F"
 				item: "ironfurnaces:item_xmas"
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.christmas}"
-			x: 1.0d
-			y: 1.0d
+			x: 6.5d
+			y: 1.5d
 		}
 		{
 			description: ["{atm9.quest.generators.desc.wirelessheat.1}"]
@@ -1219,8 +672,8 @@
 					type: "item"
 				}
 			]
-			x: -6.5d
-			y: 0.0d
+			x: -8.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["79C4CF8D7312FC28"]
@@ -1247,8 +700,8 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.rainbowcore}"
-			x: -3.0d
-			y: -1.0d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1286,8 +739,8 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.rainbowplating}"
-			x: -3.0d
-			y: -3.0d
+			x: 0.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["2EE8FCB63A338BC4"]
@@ -1305,8 +758,8 @@
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.rainbowcoal}"
-			x: 0.0d
-			y: -3.0d
+			x: 1.0d
+			y: -1.0d
 		}
 		{
 			description: ["{atm9.quest.generators.desc.configuration.1}"]
@@ -1317,14 +770,16 @@
 				item: "minecraft:coal_block"
 				type: "item"
 			}]
+			shape: "gear"
+			size: 1.0d
 			tasks: [{
 				id: "087F1F4ABAEABEE3"
 				item: "ironfurnaces:item_copy"
 				type: "item"
 			}]
 			title: "{atm9.quest.generators.title.configuration}"
-			x: -5.0d
-			y: -2.0d
+			x: -8.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -1402,48 +857,41 @@
 				}
 			]
 			title: "{atm9.quest.generators.title.rainbowgenerator}"
-			x: 0.0d
-			y: -2.0d
+			x: -1.0d
+			y: -1.0d
 		}
 		{
-			can_repeat: false
-			description: [
-				"This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks."
-				"As all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission."
-				""
-				""
-				""
-				"This quest is intentionally hidden, if you're seeing this, you're in editing mode."
-			]
-			disable_toast: true
-			hide_details_until_startable: true
-			hide_until_deps_visible: true
-			icon: {
-				Count: 1
-				id: "ftbquests:custom_icon"
-				tag: {
-					Icon: "minecraft:item/barrier"
-				}
-			}
-			id: "3C056BB1EA08B85A"
-			invisible: true
-			optional: true
-			shape: "octagon"
-			tasks: [
-				{
-					disable_toast: true
-					id: "1250A409C17F7F7C"
-					title: "Quests By AllTheMods"
-					type: "checkmark"
-				}
-				{
-					id: "24D94D6FD4DEDF41"
-					title: "Quests By AllTheMods"
-					type: "checkmark"
-				}
-			]
-			x: 3.0d
-			y: -7.5d
+			dependencies: ["79C4CF8D7312FC28"]
+			id: "124CB20DD156591A"
+			tasks: [{
+				id: "573F35607E6645A3"
+				item: "ironfurnaces:allthemodium_furnace"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["124CB20DD156591A"]
+			id: "3E5C66690FE6F912"
+			tasks: [{
+				id: "1AE7A5FFE1264278"
+				item: "ironfurnaces:vibranium_furnace"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["3E5C66690FE6F912"]
+			id: "3FE62AB64E59C56C"
+			tasks: [{
+				id: "7E62E1748681788E"
+				item: "ironfurnaces:unobtainium_furnace"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -2.5d
 		}
 	]
 	title: "{atm9.chapters.61.title}"

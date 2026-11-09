@@ -325,6 +325,8 @@ ItemEvents.tooltip(allthemods => {
     )
   }
   )
+  //PHASING OUT FOR REMOVAL
+  allthemods.add(/^generatorgalore:.*/, [Text.of('Generator Galore will be removed in the next major update, replace existing generators until then.').red()])
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9.
