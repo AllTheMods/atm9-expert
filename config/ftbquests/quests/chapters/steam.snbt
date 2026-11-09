@@ -170,6 +170,7 @@
 				"667B2C1D7C948AA4"
 				"47B12ECF314C34E1"
 			]
+			dependency_requirement: "one_completed"
 			id: "685229AACEAFF434"
 			subtitle: "{atm9e.quest.steam.flint_tool.sub}"
 			tasks: [
@@ -316,6 +317,7 @@
 				"1FBEFEEF1A6AA7FA"
 				"5A3D5ADE71AAC435"
 			]
+			description: ["{atm9e.quest.steam.wrought_iron.desc}"]
 			id: "02BBA7377F7FD937"
 			subtitle: "{atm9e.quest.steam.wrought_iron.sub}"
 			tasks: [{
@@ -580,8 +582,8 @@
 				item: "gtceu:lp_steam_forge_hammer"
 				type: "item"
 			}]
-			x: 12.5d
-			y: 0.0d
+			x: 13.5d
+			y: 0.5d
 		}
 		{
 			dependencies: ["0F77D4C0292A406F"]
@@ -636,7 +638,7 @@
 				type: "item"
 			}]
 			x: 17.0d
-			y: 0.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["0F77D4C0292A406F"]
@@ -646,8 +648,8 @@
 				item: "gtceu:lp_steam_extractor"
 				type: "item"
 			}]
-			x: 17.0d
-			y: -0.5d
+			x: 12.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["0F77D4C0292A406F"]
@@ -717,15 +719,15 @@
 				type: "checkmark"
 			}]
 			title: "{atm9e.quest.steam.create.title}"
-			x: 22.999999999999986d
-			y: -5.169047619047618d
+			x: 23.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
 				"0E07CD5D9841864B"
 				"2E79E262DC11812E"
 				"4345AAF07264B817"
-				"3FD2C6A30E7522AA"
+				"5017A455DFF31840"
 			]
 			dependency_requirement: "one_completed"
 			id: "2642C9521C65F18D"
@@ -1197,8 +1199,8 @@
 				}
 			]
 			title: "{atm9e.quest.steam.coke.title}"
-			x: 13.5d
-			y: 1.0d
+			x: 17.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["13C7FD83F4D6E006"]
@@ -1288,17 +1290,6 @@
 			title: "{atm9e.quest.steam.water.title}"
 			x: 20.0d
 			y: 1.0d
-		}
-		{
-			dependencies: ["455DA322ED2BBDD1"]
-			id: "1A4F86AC26E39877"
-			tasks: [{
-				id: "46181E32BAF2CBAD"
-				item: "allthemodium:teleport_pad"
-				type: "item"
-			}]
-			x: 26.0d
-			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -1404,8 +1395,8 @@
 				type: "item"
 			}]
 			title: "{atm9e.quest.steam.tin_pipe.title}"
-			x: 4.5d
-			y: 1.5d
+			x: 4.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["041CF53A2F76A0B1"]
@@ -1423,8 +1414,8 @@
 				}
 			]
 			title: "{atm9e.quest.steam.bronze_pipe.title}"
-			x: 10.5d
-			y: -2.5d
+			x: 9.5d
+			y: -3.0d
 		}
 		{
 			dependencies: ["5A3D5ADE71AAC435"]
@@ -1440,6 +1431,78 @@
 			title: "{atm9e.quest.steam.blood_altar.title}"
 			x: -1.0d
 			y: -3.0d
+		}
+		{
+			dependencies: ["455DA322ED2BBDD1"]
+			description: ["{atm9e.quest.steam.mining.desc}"]
+			id: "38027FA5052017E2"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0F7E93B5AE4A328E"
+					table_id: 4804065436311136435L
+					type: "random"
+				}
+				{
+					id: "02A1F1206DDE4C0D"
+					item: {
+						Count: 1
+						id: "gtceu:prospector.lv"
+						tag: {
+							Charge: 100000L
+						}
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "547F078771DBD7FB"
+				item: "allthemodium:teleport_pad"
+				type: "item"
+			}]
+			title: "{atm9e.quest.steam.create.title}"
+			x: 26.0d
+			y: -5.0d
+		}
+		{
+			can_repeat: false
+			description: [
+				"This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks."
+				"As all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission."
+				""
+				""
+				""
+				"This quest is intentionally hidden, if you're seeing this, you're in editing mode."
+			]
+			disable_toast: true
+			hide_details_until_startable: true
+			hide_until_deps_visible: true
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/barrier"
+				}
+			}
+			id: "3C056BB1EA08B85A"
+			invisible: true
+			optional: true
+			shape: "octagon"
+			tasks: [
+				{
+					disable_toast: true
+					id: "1250A409C17F7F7C"
+					title: "Quests By AllTheMods"
+					type: "checkmark"
+				}
+				{
+					id: "24D94D6FD4DEDF41"
+					title: "Quests By AllTheMods"
+					type: "checkmark"
+				}
+			]
+			x: -8.0d
+			y: 0.5d
 		}
 	]
 	title: "{atm9e.quest.steam.chapter}"
