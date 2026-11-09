@@ -7247,7 +7247,7 @@
     "atm9.quest.naturesaura.desc.ritualofforest": "O &aRitual da Floresta&r pode ser feito criando uma estrutura multibloco usando 8 Suportes de Madeira, 16 &ePós de Ouro&r e uma Muda de Carvalho ou de Selva, dependendo da receita.\\n\\nPara começar um ritual, coloque os itens necessários para a receita nos Suportes de Madeira e faça a Muda necessária crescer no meio. O &ePó de Ouro&r é consumido na receita, então você vai precisar de bastante.",
     "atm9.quest.naturesaura.desc.eye": "O &bOlho Ambiental&r pode ser feito usando o &aRitual da Floresta&r e pode ser usado no seu espaço de Amuleto para monitorar os níveis de aura no canto superior esquerdo da tela.",
     "atm9.quest.naturesaura.desc.trees": "As &dMudas Ancestrais&r são criadas usando o &aRitual da Floresta&r. Quando crescem, as árvores tentam manter níveis normais de aura (nem muito alta nem muito baixa).\\n\\nSe a aura cair, as folhas vão começar a decair e reverter o processo.",
-    "atm9.quest.naturesaura.desc.tokenofjoy": "A &bSímbolo da Alegria&r é a primeira Símbolo que você deve fabricar — as símbolos são materiais de fabricação importantes para itens do &aNature's Aura&r.",
+    "atm9.quest.naturesaura.desc.tokenofjoy": "O &bSímbolo de Alegria&r é o primeiro Símbolo que você deve fabricar — os símbolos são materiais de fabricação importantes para itens do &aNature's Aura&r.",
     "atm9.quest.naturesaura.desc.bottlesofaura": "A Aura pode ser engarrafada clicando com o botão direito no ar com uma Garrafa e Rolha. A Aura assume formas diferentes dependendo de onde é coletada.\\n\\nNo Mundo Normal, é engarrafada como &aLuz Solar&r; no Nether, como &4Fantasmas&r; e no End, como &0Escuridão&r.\\n\\nSe a área onde você usou a Garrafa e Rolha tiver uma falta severa de aura, você vai conseguir &0Vácuo Engarrafado&r.",
     "atm9.quest.naturesaura.desc.auracreation": "O &2Diminuidor de Dossel&r e o &2Absorvedor Herbívoro&r são ambos jeitos simples e fáceis de gerar aura.",
     "atm9.quest.naturesaura.desc.auracache": "A &9Cache de Aura&r pode ser usado para armazenar &aAura&r!",
@@ -7445,7 +7445,17 @@
     "atm9.quest.proje.desc.echo": "Invoque as Profundezas sombrias — isto é descrito em Começando: 2.",
     "atm9.quest.proje.desc.RM": "Um catalisador para a &6&lEstrela ATM.&r&r \\n \\nTambém pode ser usado para fazer vários itens OP de fim de jogo do ProjectE!",
     "atm9.quest.proje.desc.dmpedestal": "Isto é usado em combinação com vários anéis e pedras para conseguir efeitos como regeneração, saturação e até crescimento de plantações! Coloque o anel/pedra em cima, depois shift+clique direito no pedestal.",
-    "atm9.quest.proje.desc.RMuse": "A Matéria Vermelha pode ser usado para os mesmos propósitos que a Matéria Escura, só que melhor em tudo! Você pode fazer um &bCondensador de Energia MK2&r que faz conversão instantânea de itens — ou até fazer um Condensador de Energia MK2, ou pode fazer um &bAnel de Arcana&r, que é efetivamente um anel tudo-em-um! Muito OP!",
+    "atm9.quest.proje.desc.RMuse": "A Matéria Vermelha pode ser usada para os mesmos propósitos que a Matéria Escura, só que melhor em tudo! Você pode fazer um &bCondensador de Energia MK2&r que faz conversão instantânea de itens — ou até fazer um Condensador de Energia MK2, ou pode fazer um &bAnel de Arcana&r, que é efetivamente um anel tudo-em-um! Muito OP!",
+    "atm9.quest.proje.RM": "Usando Matéria Vermelha!",
+    "atm9.quest.proje.covdust": "Pós de Covalência",
+    "atm9.quest.proje.darkm": "Usando Matéria Escura!",
+    "atm9.quest.proje.desc.rmuse": "A Matéria Vermelha pode ser usada para os mesmos propósitos que a Matéria Escura, só que melhor em tudo! Você pode fazer um &bCondensador de Energia MK2&r que faz conversão instantânea de itens — ou até fazer um Condensador de Energia MK2, ou pode fazer um &bAnel de Arcana&r, que é efetivamente um anel tudo-em-um! Muito OP!",
+    "atm9.quest.proje.dmarmor": "Armadura de Matéria Escura",
+    "atm9.quest.proje.dmtools": "Ferramentas de Matéria Escura",
+    "atm9.quest.proje.subt.gen": "Geração Passiva de EMC",
+    "atm9.quest.proje.subt.trans": "Melhor que um Condensador de Energia",
+    "atm9.quest.proje.tip": "Dica",
+    "atm9.quest.proje.welcome": "Bem-vindo(a) ao &aProjectE",
 
 
 

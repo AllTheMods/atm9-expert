@@ -1109,5 +1109,10 @@
     "block.gtceu.star_internal_casing": "Revestimento Interno de Estrela",
     "block.gtceu.star_pipe_casing": "Revestimento de Tubo de Estrela",
     "block.gtceu.star_assembler": "Montador de Estrelas",
-    "gtceu.star_assembler": "Complexo de Montagem da Estrela ATM"
+    "gtceu.star_assembler": "Complexo de Montagem da Estrela ATM",
+    "tagprefix.singularity": "Singularidade de %s",
+    "material.gtceu.magma_cream": "Creme de Magma",
+    "material.gtceu.low_covalence": "Covalência Baixa",
+    "material.gtceu.medium_covalence": "Covalência Média",
+    "material.gtceu.high_covalence": "Covalência Alta"
 }
