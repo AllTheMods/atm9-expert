@@ -142,30 +142,9 @@ ServerEvents.recipes(allthemods => {
         L: '#forge:lenses/diamond'
     }).id('gregification:mininggadget_simple');
 
-    allthemods.shaped('mininggadgets:mininggadget_fancy', [
-        'LFP',
-        'CBP',
-        'CBP'
-    ], {
-        P: '#forge:plates/titanium',
-        F: 'gtceu:ev_field_generator',
-        B: '#gtceu:batteries/ev',
-        C: '#gtceu:circuits/ev',        
-        L: '#forge:lenses/diamond'
-    }).id('gregification:mininggadget_fancy');
-
-    allthemods.shaped('mininggadgets:mininggadget', [
-        'LFP',
-        'CBP',
-        'CBP'
-    ], {
-        P: plate,
-        F: field,
-        B: battery,
-        C: circuit,        
-        L: '#forge:lenses/nether_star'
-    }).id('gregification:mininggadget');
- 
+    allthemods.shapeless('mininggadgets:mininggadget_fancy', ['mininggadgets:mininggadget_simple'])
+    allthemods.shapeless('mininggadgets:mininggadget', ['mininggadgets:mininggadget_fancy'])
+    allthemods.shapeless('mininggadgets:mininggadget_simple', ['mininggadgets:mininggadget'])
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
