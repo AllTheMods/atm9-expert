@@ -13,6 +13,7 @@ ServerEvents.recipes(allthemods => {
         {stone: 'create:ochrum', eu: EV},
         {stone: 'create:veridium', eu: EV},
         {stone: 'create:crimsite', eu: EV},
+        {stone: 'minecraft:calcite', eu: HV},
         {stone: 'ad_astra:moon_stone', eu: IV, macerate: true, fluidA: 'allthemodium:soul_lava', fluidB: 'gtceu:water_stage_3'},
         {stone: 'minecraft:prismarine', eu: IV, macerate: true, fluidA: 'allthemodium:soul_lava', fluidB: 'gtceu:water_stage_3'}
     ];
