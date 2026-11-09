@@ -25,6 +25,14 @@
 			x: 0.0d
 			y: 1.5d
 		}
+		{
+			height: 2.0d
+			image: "allthetweaks:item/greg_star"
+			rotation: 45.0d
+			width: 2.0d
+			x: 0.5d
+			y: -0.5d
+		}
 	]
 	order_index: 0
 	progression_mode: "flexible"
@@ -43,7 +51,7 @@
 				type: "xp"
 				xp: 10
 			}]
-			shape: "diamond"
+			shape: "none"
 			size: 3.0d
 			tasks: [{
 				id: "5A1784C5676CDC62"
@@ -51,7 +59,7 @@
 				type: "checkmark"
 			}]
 			x: 0.0d
-			y: -0.5d
+			y: 0.0d
 		}
 		{
 			description: [
@@ -74,8 +82,8 @@
 				title: "{atm9.quest.welcome.quests}"
 				type: "checkmark"
 			}]
-			x: 2.5d
-			y: -0.5d
+			x: 2.25d
+			y: 0.0d
 		}
 		{
 			description: ["{atm9.quest.welcome.desc.commands}"]
@@ -100,8 +108,8 @@
 				title: "{atm9.quest.welcome.commands}"
 				type: "checkmark"
 			}]
-			x: -2.5d
-			y: -0.5d
+			x: -2.25d
+			y: 0.0d
 		}
 		{
 			description: [
@@ -131,7 +139,7 @@
 				type: "checkmark"
 			}]
 			x: 4.5d
-			y: -0.5d
+			y: 0.0d
 		}
 		{
 			description: ["{atm9.quest.welcome.desc.team}"]
@@ -155,7 +163,7 @@
 				type: "checkmark"
 			}]
 			x: -4.5d
-			y: -0.5d
+			y: 0.0d
 		}
 		{
 			description: [

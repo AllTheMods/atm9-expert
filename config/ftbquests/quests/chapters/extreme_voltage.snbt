@@ -5,7 +5,7 @@
 	group: "1DA67E79B40AB130"
 	icon: "gtceu:micro_processor_computer"
 	id: "489F28A71282B3E7"
-	order_index: 5
+	order_index: 4
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
