@@ -19,7 +19,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create('air_compressor')
         .category('air_compressor')
         .setEUIO('in')
-        .setMaxIOSize(0, 0, 1, 1)
+        .setMaxIOSize(1, 0, 1, 1)
         .setSound(GTSoundEntries.COOLING)
         .setSlotOverlay(false, true, GuiTextures.FLUID_TANK_OVERLAY)        
         .setSlotOverlay(true, true, GuiTextures.FLUID_TANK_OVERLAY)        

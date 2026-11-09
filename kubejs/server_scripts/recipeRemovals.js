@@ -74,9 +74,13 @@ ServerEvents.recipes(allthemods => {
     });
 
 
+
+
+
+
     const metalRods = ['aluminum', 'iridium', 'lead', 'nickel', 'osmium', 'platinum', 'silver', 'tin', 'uranium', 'zinc', 'steel', 'invar', 'electrum', 'bronze', 'iron', 'gold', 'diamond', 'copper', 'enderium', 'lumium', 'signalum', 'constantan', 'brass', 'allthemodium', 'vibranium', 'unobtainium']
     let rodRemoval = [];
-    metalRods.forEach(function(mat) {
+    metalRods.forEach(function(mat) {        
         rodRemoval.push(`thermal_extra:crafting/${mat}_rod`);
         rodRemoval.push(`immersiveengineering:crafting/stick_${mat}`);
         rodRemoval.push(`ad_astra:${mat}_rod`);
@@ -121,6 +125,8 @@ ServerEvents.recipes(allthemods => {
 
 
     const moreRemovals = [
+        'alltheores:mek_processing/aluminum/ingot/from_dust_blasting', 'tconstruct:smeltery/melting/metal/aluminum/dust',
+        'alltheores:smelting_dust/aluminum_ingot', 'enderio:smelting/alltheores/smelting_dust/aluminum_ingot',
         'thermal:energy_duct_4', 'thermal:fluid_duct_4', 'thermal:fluid_duct_windowed_4',
         'thermal:energy_limiter_attachment_2', 'thermal:filter_attachment_2', 'thermal:servo_attachment_2', 'thermal:turbo_servo_attachment_2',
         'minecraft:white_carpet', 'minecraft:orange_carpet', 'minecraft:magenta_carpet', 'minecraft:light_blue_carpet',

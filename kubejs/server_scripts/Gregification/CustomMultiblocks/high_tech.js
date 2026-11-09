@@ -139,7 +139,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('gtceu:sunnarium_dust')
         .daytime()
         .circuit(1)
-        .duration(3600)
+        .duration(14400)
         .EUt(ZPM);
 
     allthemods.recipes.gtceu.environmental_accumulator('gregification:environmental_accumulator/sunnarium_tachyon')
@@ -148,7 +148,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('gtceu:sunnarium_dust')
         .daytime()
         .circuit(2)
-        .duration(360)
+        .duration(1440)
         .EUt(ZPM);
 
     allthemods.recipes.gtceu.environmental_accumulator('gregification:environmental_accumulator/lunarium')
@@ -157,7 +157,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('gtceu:lunarium_dust')
         .daytime(true)
         .circuit(1)
-        .duration(3600)
+        .duration(14400)
         .EUt(ZPM);
 
     allthemods.recipes.gtceu.environmental_accumulator('gregification:environmental_accumulator/lunarium_tachyon')
@@ -166,7 +166,7 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('gtceu:lunarium_dust')
         .daytime(true)
         .circuit(2)
-        .duration(360)
+        .duration(1440)
         .EUt(ZPM);
 
 
