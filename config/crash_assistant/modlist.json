@@ -93,13 +93,13 @@
     "curseForgeHash": 2887006328,
     "modrinthHash": "6d0b06ee8df4b0ed927a3ddcc46e398eea2fa23d"
   },
-  "aeinfinitybooster-forge-2.1.0+mc1.20.1.jar": {
-    "jarName": "aeinfinitybooster-forge-2.1.0+mc1.20.1.jar",
+  "aeinfinitybooster-forge-2.1.2-mc1.20.1.jar": {
+    "jarName": "aeinfinitybooster-forge-2.1.2-mc1.20.1.jar",
     "modId": "aeinfinitybooster",
     "name": "AEInfinityBooster",
-    "version": "2.1.0",
-    "curseForgeHash": 3641120879,
-    "modrinthHash": "8d073b0c045aa359ca6fa6c2a0f4cc8213e81bd0"
+    "version": "2.1.2",
+    "curseForgeHash": 3613088936,
+    "modrinthHash": "450f27d4892f9e0b82df135be728acfa437812ba"
   },
   "AI-Improvements-1.20-0.5.2.jar": {
     "jarName": "AI-Improvements-1.20-0.5.2.jar",
@@ -133,13 +133,13 @@
     "curseForgeHash": 2658997959,
     "modrinthHash": "f7800ebdf666f763f78e49d60d2e83f18fec7666"
   },
-  "alltheleaks-1.1.4+1.20.1-forge.jar": {
-    "jarName": "alltheleaks-1.1.4+1.20.1-forge.jar",
+  "alltheleaks-1.1.5-1.20.1-forge.jar": {
+    "jarName": "alltheleaks-1.1.5-1.20.1-forge.jar",
     "modId": "alltheleaks",
     "name": "All The Leaks",
-    "version": "1.1.4+1.20.1-forge",
-    "curseForgeHash": 1989930310,
-    "modrinthHash": "b4935ae90526992b0c39cf2303cf36ec94a07c41"
+    "version": "1.1.5+1.20.1-forge",
+    "curseForgeHash": 3160170455,
+    "modrinthHash": "97cbda479edec6cb12a256f53635a73d182e1433"
   },
   "allthemodium-1.20.1-47.1.25-2.5.8.jar": {
     "jarName": "allthemodium-1.20.1-47.1.25-2.5.8.jar",
@@ -517,14 +517,6 @@
     "curseForgeHash": 1243520454,
     "modrinthHash": "97cc669f68dbe812cb77cc3631339334fc28b877"
   },
-  "cmmeadditions-4.2.jar": {
-    "jarName": "cmmeadditions-4.2.jar",
-    "modId": "cmmeadditions",
-    "name": "CMME Additions",
-    "version": "4.2",
-    "curseForgeHash": 707775414,
-    "modrinthHash": "83546f43940d4a776c4ee60dc742a46a0bb1a154"
-  },
   "CodeChickenLib-1.20.1-4.4.0.528-universal.jar": {
     "jarName": "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
     "modId": "codechickenlib",
@@ -716,13 +708,13 @@
     "curseForgeHash": 1288931317,
     "modrinthHash": "452175b95ad3db6ff58bb8968f6bf7a9d1e0f480"
   },
-  "CyclopsCore-1.20.1-1.22.3.jar": {
-    "jarName": "CyclopsCore-1.20.1-1.22.3.jar",
+  "CyclopsCore-1.20.1-1.22.4.jar": {
+    "jarName": "CyclopsCore-1.20.1-1.22.4.jar",
     "modId": "cyclopscore",
     "name": "Cyclops Core",
-    "version": "1.22.3",
-    "curseForgeHash": 827213245,
-    "modrinthHash": "4f93a906ed249b25a787bb2e98987314f8426b41"
+    "version": "1.22.4",
+    "curseForgeHash": 2572336716,
+    "modrinthHash": "50d1c3c139519014e4b93dcef7b9a8f5940c1216"
   },
   "DarkModeEverywhere-1.20.1-1.2.5.jar": {
     "jarName": "DarkModeEverywhere-1.20.1-1.2.5.jar",
@@ -868,13 +860,13 @@
     "curseForgeHash": 643940021,
     "modrinthHash": "33587f98f2d96507de0e9d2f57f5ab35328ace7d"
   },
-  "enderio_conduit_opt-1.0.6-1.20.1.jar": {
-    "jarName": "enderio_conduit_opt-1.0.6-1.20.1.jar",
+  "enderio_conduit_opt-1.0.7-1.20.1.jar": {
+    "jarName": "enderio_conduit_opt-1.0.7-1.20.1.jar",
     "modId": "enderio_conduit_opt",
     "name": "Ender IO: Conduit Optimizer",
-    "version": "1.0.6-1.20.1",
-    "curseForgeHash": 3735305958,
-    "modrinthHash": "92d22ee5c81485cbf7588d140674dfa716d52376"
+    "version": "1.0.7-1.20.1",
+    "curseForgeHash": 2621544579,
+    "modrinthHash": "401f2b1456af9635ac4a83a70729e8dba10de196"
   },
   "enderio_evolution-1.2.2-Forge-1.20.1.jar": {
     "jarName": "enderio_evolution-1.2.2-Forge-1.20.1.jar",
@@ -908,13 +900,13 @@
     "curseForgeHash": 2740249353,
     "modrinthHash": "e0a018f61c2302c377b26ef3f7c5bd6e8a7303b8"
   },
-  "entangled-1.3.21-forge-mc1.20.4.jar": {
-    "jarName": "entangled-1.3.21-forge-mc1.20.4.jar",
+  "entangled-1.3.21a-forge-mc1.20.4.jar": {
+    "jarName": "entangled-1.3.21a-forge-mc1.20.4.jar",
     "modId": "entangled",
     "name": "Entangled",
-    "version": "1.3.21",
-    "curseForgeHash": 1104815069,
-    "modrinthHash": "bdebde180017d3736d1cc71b2a89c290e144d392"
+    "version": "1.3.21+a",
+    "curseForgeHash": 2048846017,
+    "modrinthHash": "56c96a8fbe70c601cba19acaea58f4cb325887c9"
   },
   "entityculling-forge-1.11.3-mc1.20.1.jar": {
     "jarName": "entityculling-forge-1.11.3-mc1.20.1.jar",
@@ -1092,13 +1084,13 @@
     "curseForgeHash": 820985474,
     "modrinthHash": "eefcb28a80c6a8e42d452b2caf232a49a40f7b3c"
   },
-  "forestry-1.20.1-2.11.1.jar": {
-    "jarName": "forestry-1.20.1-2.11.1.jar",
+  "forestry-1.20.1-2.11.2.jar": {
+    "jarName": "forestry-1.20.1-2.11.2.jar",
     "modId": "forestry",
     "name": "Forestry",
-    "version": "2.11.1",
-    "curseForgeHash": 678805390,
-    "modrinthHash": "cfda7553b244916c0087cc70c31fc5303a8c2629"
+    "version": "2.11.2",
+    "curseForgeHash": 3249909183,
+    "modrinthHash": "7fcd32221a5a000e28a4522fa219211d7ca69c58"
   },
   "FramedBlocks-9.4.3.jar": {
     "jarName": "FramedBlocks-9.4.3.jar",
@@ -1497,13 +1489,13 @@
     "curseForgeHash": 2298786945,
     "modrinthHash": "3bbb49d85ee2f6a236f279816a62f0501d032db3"
   },
-  "jei_plus_plus-1.0.8a-1.20.1.jar": {
-    "jarName": "jei_plus_plus-1.0.8a-1.20.1.jar",
+  "jei_plus_plus-1.0.9a-1.20.1.jar": {
+    "jarName": "jei_plus_plus-1.0.9a-1.20.1.jar",
     "modId": "jei_plus_plus",
     "name": "JEI++",
-    "version": "1.0.8a-1.20.1",
-    "curseForgeHash": 3202527770,
-    "modrinthHash": "0d850c4540b1b3cb7c586695b746e33e62bdecc3"
+    "version": "1.0.9a-1.20.1",
+    "curseForgeHash": 3363913851,
+    "modrinthHash": "37ee20f71ee160e0e09b754ba57c0cfa39545a29"
   },
   "jmi-forge-1.20.1-0.14-48.jar": {
     "jarName": "jmi-forge-1.20.1-0.14-48.jar",
@@ -1822,13 +1814,13 @@
     "curseForgeHash": 3942063405,
     "modrinthHash": "037b801a55ca30952b98c427a77ac206cb1248c3"
   },
-  "moonlight-1.20-2.16.38B-forge.jar": {
-    "jarName": "moonlight-1.20-2.16.38B-forge.jar",
+  "moonlight-1.20-2.16.39-forge.jar": {
+    "jarName": "moonlight-1.20-2.16.39-forge.jar",
     "modId": "moonlight",
     "name": "Moonlight Library",
-    "version": "1.20-2.16.38B",
-    "curseForgeHash": 3298579717,
-    "modrinthHash": "7394cf9cbc30015b50f794ae9a85aa0b18ab152b"
+    "version": "1.20-2.16.39",
+    "curseForgeHash": 3936094033,
+    "modrinthHash": "12405de298c0d6c8ba53effdc5c8f28edee3aadc"
   },
   "moreoverlays-1.24.1-mc1.20.1-forge.jar": {
     "jarName": "moreoverlays-1.24.1-mc1.20.1-forge.jar",
@@ -2222,13 +2214,13 @@
     "curseForgeHash": 3839877584,
     "modrinthHash": "8d008954747ad6633b85f3ccfa0523807a400e8b"
   },
-  "reliquary-1.20.1-2.0.67.1583.jar": {
-    "jarName": "reliquary-1.20.1-2.0.67.1583.jar",
+  "reliquary-1.20.1-2.0.68.1594.jar": {
+    "jarName": "reliquary-1.20.1-2.0.68.1594.jar",
     "modId": "reliquary",
     "name": "Reliquary",
-    "version": "2.0.67.1583",
-    "curseForgeHash": 3442080972,
-    "modrinthHash": "b69c367578d14d3b99f73ce7b48d0769b9c1685c"
+    "version": "2.0.68.1594",
+    "curseForgeHash": 284413439,
+    "modrinthHash": "5e662a4151bfaefe191938ca0d92235dfebb8259"
   },
   "resourcefulconfig-forge-1.20.1-2.1.3.jar": {
     "jarName": "resourcefulconfig-forge-1.20.1-2.1.3.jar",
@@ -2427,13 +2419,13 @@
     "curseForgeHash": 3477473770,
     "modrinthHash": "f7fa1fd0c633b10f98d7f0f97766b95aac1a2dc0"
   },
-  "sophisticatedbackpacks-1.20.1-3.26.19.2239.jar": {
-    "jarName": "sophisticatedbackpacks-1.20.1-3.26.19.2239.jar",
+  "sophisticatedbackpacks-1.20.1-3.26.20.2248.jar": {
+    "jarName": "sophisticatedbackpacks-1.20.1-3.26.20.2248.jar",
     "modId": "sophisticatedbackpacks",
     "name": "Sophisticated Backpacks",
-    "version": "3.26.19.2239",
-    "curseForgeHash": 1413615907,
-    "modrinthHash": "2975679d144573be7e7d4c20444ea41b2016539b"
+    "version": "3.26.20.2248",
+    "curseForgeHash": 2314152486,
+    "modrinthHash": "09f0e3093ab5fcc0f2f7b0e962c2b80c01003f59"
   },
   "sophisticatedbackpackscreateintegration-1.20.1-0.1.13.193.jar": {
     "jarName": "sophisticatedbackpackscreateintegration-1.20.1-0.1.13.193.jar",
@@ -2443,13 +2435,13 @@
     "curseForgeHash": 4107514048,
     "modrinthHash": "e3ea1cefc51fe66d8225a3d2e3d3a97986b3359d"
   },
-  "sophisticatedcore-1.20.1-1.5.26.2457.jar": {
-    "jarName": "sophisticatedcore-1.20.1-1.5.26.2457.jar",
+  "sophisticatedcore-1.20.1-1.5.30.2465.jar": {
+    "jarName": "sophisticatedcore-1.20.1-1.5.30.2465.jar",
     "modId": "sophisticatedcore",
     "name": "Sophisticated Core",
-    "version": "1.5.26.2457",
-    "curseForgeHash": 2824403513,
-    "modrinthHash": "e4c32b7f1d42c8692ae1c2001d743a9eea52c771"
+    "version": "1.5.30.2465",
+    "curseForgeHash": 2123891675,
+    "modrinthHash": "a0fcc390565dd31c7cca958f73e81e79d22a3c5a"
   },
   "sophisticatedstorage-1.20.1-1.5.15.2220.jar": {
     "jarName": "sophisticatedstorage-1.20.1-1.5.15.2220.jar",
