@@ -1,4 +1,3 @@
-
 [TurbineFuel]
 	#Required modules for the machine to function
 	Required = ["Turbine:1"]
@@ -15,13 +14,13 @@
 	[TurbineFuel.FuelEfficiency]
 		#Base value
 		#Range: 0.0 ~ 100.0
-		Base = 1.350000023841858
+		Base = 1.6
 		#With tier 1 upgrade
 		#Range: 0.0 ~ 100.0
-		Tier1 = 1.850000023841858
+		Tier1 = 2.3
 		#With tier 2 upgrade
 		#Range: 0.0 ~ 100.0
-		Tier2 = 2
+		Tier2 = 2.5
 
 [TurbineSteam]
 	#Required modules for the machine to function
@@ -76,10 +75,10 @@
 	MaxHeat = 200.0
 	#Carbon consumed to produce 1mB of syngas
 	#Range: 0.01 ~ 1.7976931348623157E308
-	CarbonPerMBSyngas = 50.0
+	CarbonPerMBSyngas = 125.0
 	#Steam consumed to produce 1mB of syngas
 	#Range: 0.01 ~ 1.7976931348623157E308
-	SteamPerMBSyngas = 10.0
+	SteamPerMBSyngas = 25.0
 	#Water to steam conversion ratio
 	#Range: 0.01 ~ 1.7976931348623157E308
 	WaterSteamRatio = 3.0
@@ -196,4 +195,3 @@
 			#Capacity (FE)
 			#Range: > 1
 			Capacity = 25000000
-
