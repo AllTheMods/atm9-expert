@@ -1,4 +1,4 @@
-﻿{
+{
   "fmlloader-1.20.1-47.4.10.jar (modloader)": {
     "jarName": "fmlloader-1.20.1-47.4.10.jar (modloader)",
     "modId": "forge",
@@ -859,22 +859,6 @@
     "version": "6.2.18-beta",
     "curseForgeHash": 643940021,
     "modrinthHash": "33587f98f2d96507de0e9d2f57f5ab35328ace7d"
-  },
-  "enderio_conduit_opt-1.0.7-1.20.1.jar": {
-    "jarName": "enderio_conduit_opt-1.0.7-1.20.1.jar",
-    "modId": "enderio_conduit_opt",
-    "name": "Ender IO: Conduit Optimizer",
-    "version": "1.0.7-1.20.1",
-    "curseForgeHash": 2621544579,
-    "modrinthHash": "401f2b1456af9635ac4a83a70729e8dba10de196"
-  },
-  "enderio_evolution-1.2.2-Forge-1.20.1.jar": {
-    "jarName": "enderio_evolution-1.2.2-Forge-1.20.1.jar",
-    "modId": "enderio_evolution",
-    "name": "Ender IO:Evolution",
-    "version": "1.2.2-Forge-1.20.1",
-    "curseForgeHash": 422518794,
-    "modrinthHash": "b1583d0dde3604987caa3c15f3e89ec27f5f66f0"
   },
   "endertanks-forge-1.20.1-1.5.jar": {
     "jarName": "endertanks-forge-1.20.1-1.5.jar",
