@@ -363,7 +363,8 @@ ServerEvents.recipes(allthemods => {
             '4x #forge:rods/hop_graphite',
             '2x #gtceu:circuits/iv',
             '2x bloodmagic:etherealslate',
-            '8x #forge:screws/draconium'
+            '8x #forge:screws/draconium',
+            '4x gtceu:selenium_rectifier'
         ],
         'gtceu:soldering_alloy 288',
         'gtceu:industrial_pylon_casing',
