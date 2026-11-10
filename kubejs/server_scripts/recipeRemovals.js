@@ -140,7 +140,7 @@ ServerEvents.recipes(allthemods => {
     
 
     const moreRemovals = [
-        'tconstruct:smeltery/casting/ender/eye',
+        'tconstruct:smeltery/casting/ender/eye', 'productivebees:nests/beehive', 'sophisticatedstorage:basic_tier_upgrade',
         'projecte:red_alchemical_bag', 'projecte:low_covalence_dust', 'projecte:medium_covalence_dust', 'projecte:high_covalence_dust',
         'alltheores:mek_processing/aluminum/ingot/from_dust_blasting', 'tconstruct:smeltery/melting/metal/aluminum/dust',
         'alltheores:smelting_dust/aluminum_ingot', 'enderio:smelting/alltheores/smelting_dust/aluminum_ingot',

@@ -31,6 +31,17 @@ ServerEvents.recipes(allthemods => {
         ['minecraft:barrel', '#forge:plates/redstone', '#forge:plates/redstone', '#forge:plates/steel', '#forge:plates/steel', 'gtceu:rubber_planks']
     ).id('gregification:sophisticated_barrel_rubber');
 
+
+    allthemods.shaped('sophisticatedstorage:basic_tier_upgrade',[
+        ' P ',
+        'RCR',
+        ' P '
+    ], {
+        R: '#forge:plates/redstone',
+        P: '#forge:plates/steel',
+        C: '#minecraft:planks'
+    }).id('gregification:basic_tier_upgrade');
+
     const replaceShaped = (recipeID, itemID, schema, ingredients) => {
         allthemods.shaped(itemID || recipeID, schema, ingredients).id(recipeID);
     }
