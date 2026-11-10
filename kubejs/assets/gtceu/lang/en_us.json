@@ -1114,5 +1114,20 @@
     "material.gtceu.magma_cream": "Magma Cream",
     "material.gtceu.low_covalence": "Low Covalence",
     "material.gtceu.medium_covalence": "Medium Covalence",
-    "material.gtceu.high_covalence": "High Covalence"
+    "material.gtceu.high_covalence": "High Covalence",
+    "material.gtceu.dimensionally_transcendent_portal_fluid": "Dimensionally Transcendent Portal Fluid",
+        
+    
+    "block.gtceu.dimensionally_transcendent_trader": "Dimensionally Transcendent Trader",
+    "gtceu.dimensionally_transcendent_trader": "Dimensionally Transcendent Trader",
+    
+    "block.gtceu.hyper_neuron_cultivator": "Hyper Neuron Cultivator",
+    "gtceu.hyper_neuron_cultivator": "Hyper Neuron Cultivator",    
+    
+
+    "block.gtceu.hyperneural_casing": "Hyperneural Casing",
+    "block.gtceu.neural_pillar_core": "Neural Pillar Core"
+    
+    
+
 }

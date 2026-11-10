@@ -6,7 +6,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create('water_filtration_plant')
         .category('water_filtration_plant')
         .setEUIO('in')
-        .setMaxIOSize(1, 0, 1, 1)
+        .setMaxIOSize(2, 1, 1, 1)
         .setSound(GTSoundEntries.CHEMICAL)
         .setProgressBar(GuiTextures.PROGRESS_BAR_DISTILLATION_TOWER, FillDirection.LEFT_TO_RIGHT)
 

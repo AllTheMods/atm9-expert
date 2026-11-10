@@ -2333,6 +2333,8 @@ const materials = [
 
     new MaterialDef('rhodium_plated_palladium').modify().flags(GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_FRAME),
     new MaterialDef('palladium').modify().flags(GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_ROTOR),
+
+    new MaterialDef('dimensionally_transcendent_portal_fluid').fluid().color(0x00E5FF).iconSet('FLUID').noDecomp(),
 ];
 
 

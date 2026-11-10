@@ -4,44 +4,7 @@
 //@ts-check
 ServerEvents.recipes(allthemods => {
 
-    const sophisticatedWoods = [
-        'oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak',
-        'mangrove', 'cherry', 'bamboo', 'crimson', 'warped'
-    ];
-
-    //Item.of('sophisticatedstorage:chest', '{woodType:"gtceu:rubber"}')
-    sophisticatedWoods.forEach(wood => {
-        allthemods.shapeless(
-            Item.of('sophisticatedstorage:chest', '{woodType:"' + wood + '"}'),
-            ['minecraft:chest', '#forge:plates/redstone', '#forge:plates/redstone', '#forge:plates/steel', '#forge:plates/steel', 'minecraft:' + wood + '_planks']
-        ).id('gregification:sophisticated_chest_' + wood);
-
-        allthemods.shapeless(
-            Item.of('sophisticatedstorage:barrel', '{woodType:"' + wood + '"}'),
-            ['minecraft:barrel', '#forge:plates/redstone', '#forge:plates/redstone', '#forge:plates/steel', '#forge:plates/steel', 'minecraft:' + wood + '_planks']
-        ).id('gregification:sophisticated_barrel_' + wood);
-    });
-    allthemods.shapeless(
-        Item.of('sophisticatedstorage:chest', '{woodType:"gtceu:rubber"}'),
-        ['minecraft:chest', '#forge:plates/redstone', '#forge:plates/redstone', '#forge:plates/steel', '#forge:plates/steel', 'gtceu:rubber_planks']
-    ).id('gregification:sophisticated_chest_rubber');
-
-    allthemods.shapeless(
-        Item.of('sophisticatedstorage:barrel', '{woodType:"gtceu:rubber"}'),
-        ['minecraft:barrel', '#forge:plates/redstone', '#forge:plates/redstone', '#forge:plates/steel', '#forge:plates/steel', 'gtceu:rubber_planks']
-    ).id('gregification:sophisticated_barrel_rubber');
-
-
-    allthemods.shaped('sophisticatedstorage:basic_tier_upgrade',[
-        ' P ',
-        'RCR',
-        ' P '
-    ], {
-        R: '#forge:plates/redstone',
-        P: '#forge:plates/steel',
-        C: '#minecraft:planks'
-    }).id('gregification:basic_tier_upgrade');
-
+    
     const replaceShaped = (recipeID, itemID, schema, ingredients) => {
         allthemods.shaped(itemID || recipeID, schema, ingredients).id(recipeID);
     }
@@ -527,6 +490,11 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('ironfurnaces:augment_fuel')
         .duration(400)
         .EUt(LV);
+
+    
+
+
+    
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
