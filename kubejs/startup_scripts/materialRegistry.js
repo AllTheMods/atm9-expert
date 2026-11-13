@@ -2142,10 +2142,10 @@ const materials = [
 
     //legacy atm9 registries converted
     new MaterialDef('molten_piglich_heart').fluid().color(0xe6af15).iconSet('FLUID'),
-    new MaterialDef('nitinol').ingot().fluid().iconSet('METALLIC').color(0xD4B0F4).flags(GTMaterialFlags.GENERATE_PLATE).components('4x nickel, 6x titanium')
-        .blast({ temp: 1583, eut: IV, duration: 1200 }),
+    new MaterialDef('nitinol').ingot().fluid().iconSet('METALLIC').color(0xD4B0F4).flags(GTMaterialFlags.GENERATE_PLATE).components('4x nickel, 6x titanium').formula('Ni4Ti6')
+        .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
     new MaterialDef('trinaquadalloy').ingot().fluid().color(0x281832).iconSet('BRIGHT').flags(GTMaterialFlags.GENERATE_PLATE).components('6x trinium, 2x naquadah, 1x carbon')
-        .blast({ temp: 8747, eut: ZPM, duration: 1200 }),
+        .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
     new MaterialDef('trinium').modify().ore().byproducts(['naquadah', 'titanium', 'trinium']),
 
     new MaterialDef('fluorite').gem().ore().color(0x0c9949).iconSet('DIAMOND').components('1x calcium, 2x fluorine'),
