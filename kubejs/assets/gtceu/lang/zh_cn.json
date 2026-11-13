@@ -1114,5 +1114,15 @@
     "material.gtceu.magma_cream": "岩浆膏",
     "material.gtceu.low_covalence": "低等共价",
     "material.gtceu.medium_covalence": "中等共价",
-    "material.gtceu.high_covalence": "高等共价"
+    "material.gtceu.high_covalence": "高等共价",
+    "material.gtceu.dimensionally_transcendent_portal_fluid": "（DTPF）维度超越型传送门流体",        
+    "block.gtceu.dimensionally_transcendent_trader": "（DTT）维度超越交易者",
+    "gtceu.dimensionally_transcendent_trader": "（DTT）维度超越交易者",    
+    "block.gtceu.hyper_neuron_cultivator": "超神经元培育器",
+    "gtceu.hyper_neuron_cultivator": "超神经元培育器",    
+    "block.gtceu.hyperneural_casing": "超神经外壳",
+    "block.gtceu.neural_pillar_core": "神经柱核心"
+    
+    
+
 }
