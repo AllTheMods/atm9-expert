@@ -55,14 +55,15 @@ ServerEvents.recipes(allthemods => {
     addEBF(['1x #forge:dusts/ytterbium_oxide', '2x #forge:dusts/lanthanum'], '#forge:argon 1000', ['2x gtceu:ytterbium_ingot', '1x gtceu:lanthanum_oxide_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);    
     addEBF(['1x #forge:dusts/lanthanum_oxide', '3x #forge:dusts/calcium'], '#forge:argon 1000', ['2x gtceu:lanthanum_dust', '3x gtceu:quicklime_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);
     addEBF(['2x #forge:dusts/curium_fluoride', '3x #forge:dusts/calcium'], '#forge:argon 1000', ['2x gtceu:curium_ingot', '3x gtceu:calcium_fluoride_dust'], null, COIL_TEMPS.TRITANIUM, 800, UV);    
-    
-    //fixed umbral steel coil temperature
-    addEBF(['#forge:dusts/steel', '#forge:dusts/dark_gem'], null, 'gtceu:hot_umbral_steel_ingot', null, COIL_TEMPS.CUPRONICKEL, 400, LV);
- 
+    addEBF(['#forge:dusts/steel', '#forge:dusts/dark_gem'], null, 'gtceu:hot_umbral_steel_ingot', null, COIL_TEMPS.RTM, 400, LV);
 
     addEBF(['#forge:dusts/atm_star', '#forge:dusts/atm_trio'], '#forge:antimatter 16', 'allthetweaks:atm_star', null, COIL_TEMPS.NAQUADAH, 2400, ZPM);
     addEBF(['artifacts:everlasting_beef','bloodmagic:demonslate'], '#forge:meat 16000', 'artifacts:eternal_steak', null, COIL_TEMPS.NAQUADAH, 2400, ZPM);
     addEBF('#forge:dusts/draconium', '#forge:liquid_dragon_breath 2000', 'gtceu:hot_draconium_ingot', null, COIL_TEMPS.TRINIUM, 2400, ZPM);
+
+
+    addEBF('create:crushed_raw_aluminum', null, 'alltheores:aluminum_ingot', null, COIL_TEMPS.CUPRONICKEL, 884, LV, 1, 'crushed_raw_aluminum');
+    addEBF('create:crushed_raw_aluminum', '#forge:nitrogen 1000', 'alltheores:aluminum_ingot', null, COIL_TEMPS.CUPRONICKEL, 592, LV, 2, 'crushed_raw_aluminum_2');
 
     ['erbium', 'holmium', 'thulium'].forEach(el => {
         addEBF([`2x #forge:dusts/${el}_fluoride`, '3x #forge:dusts/calcium'], '#forge:argon 1000', [`2x gtceu:${el}_ingot`, '3x gtceu:calcium_fluoride_dust'], null, COIL_TEMPS.TRINIUM, 800, ZPM);
@@ -81,7 +82,7 @@ ServerEvents.recipes(allthemods => {
         { name: 'rutherfordium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
         { name: 'dubnium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
         { name: 'hassium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
-        { name: 'meitnerium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
+        { name: 'meitnerium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },        
 
     ];
     

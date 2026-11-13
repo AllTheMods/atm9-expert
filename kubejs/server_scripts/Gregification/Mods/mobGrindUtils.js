@@ -64,7 +64,7 @@ ServerEvents.recipes(allthemods => {
         "LRL",
         "GLG"
       ], {
-      G: '#forge:plates/vibranium',
+      G: '#forge:plates/dark_steel',
       L: '#forge:plates/polybenzimidazole',
       R: 'gtceu:tungsten_grinding_head'
     }).id('gregification:mob_grinding_utils/saw_upgrade_beheading')
@@ -77,8 +77,8 @@ ServerEvents.recipes(allthemods => {
     ],
     {
         R: '#forge:rotors/tungsten_steel',        
-        P: '#forge:plates/allthemodium',
-        W: '#forge:wires/quadruple/mercury_barium_calcium_cuprate'
+        P: '#forge:plates/enderium',
+        W: '#gtceu:wires/quadruple/mercury_barium_calcium_cuprate'
     }).id('gregification:mob_grinding_utils/fan_upgrade_height')
 
     allthemods.shaped('mob_grinding_utils:fan_upgrade_width', [
@@ -88,8 +88,8 @@ ServerEvents.recipes(allthemods => {
     ],
     {
         R: '#forge:rotors/tungsten_steel',        
-        P: '#forge:plates/allthemodium',
-        W: '#forge:wires/quadruple/mercury_barium_calcium_cuprate'
+        P: '#forge:plates/enderium',
+        W: '#gtceu:wires/quadruple/mercury_barium_calcium_cuprate'
     }).id('gregification:mob_grinding_utils/fan_upgrade_width')
 
     allthemods.shaped('mob_grinding_utils:fan_upgrade_speed', [
@@ -99,8 +99,8 @@ ServerEvents.recipes(allthemods => {
     ],
     {
         R: '#forge:rotors/tungsten_steel',        
-        P: '#forge:plates/allthemodium',
-        W: '#forge:wires/quadruple/mercury_barium_calcium_cuprate'
+        P: '#forge:plates/enderium',
+        W: '#gtceu:wires/quadruple/mercury_barium_calcium_cuprate'
     }).id('gregification:mob_grinding_utils/fan_upgrade_speed')
 
 
@@ -113,7 +113,7 @@ ServerEvents.recipes(allthemods => {
     ],
     {
         R: '#forge:rotors/tungsten_steel',
-        C: '#forge:circuits/iv',
+        C: '#gtceu:circuits/iv',
         H: 'gtceu:hv_machine_hull',
         P: '#forge:plates/unobtainium',
         W: '#gtceu:wires/hex/cadmium_copper'
@@ -134,7 +134,7 @@ ServerEvents.recipes(allthemods => {
         "LRL",
         "GLG"
       ], {
-      G: '#forge:plates/vibranium',
+      G: '#forge:plates/tungsten_carbide',
       L: '#forge:plates/polybenzimidazole',
       R: [Item.of('minecraft:enchanted_book').enchant('minecraft:sharpness', 1).strongNBT(),Item.of('minecraft:enchanted_book').enchant('minecraft:sharpness', 2).strongNBT(),Item.of('minecraft:enchanted_book').enchant('minecraft:sharpness', 3).strongNBT(),Item.of('minecraft:enchanted_book').enchant('minecraft:sharpness', 4).strongNBT(),Item.of('minecraft:enchanted_book').enchant('minecraft:sharpness', 5).strongNBT(),Item.of('minecraft:enchanted_book').enchant('minecraft:sharpness', 6).strongNBT(),Item.of('minecraft:enchanted_book').enchant('minecraft:sharpness', 7).strongNBT(),Item.of('minecraft:enchanted_book').enchant('minecraft:sharpness', 8).strongNBT()]
     }).id('gregification:mob_grinding_utils/saw_upgrade_sharpness')

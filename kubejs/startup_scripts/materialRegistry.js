@@ -1967,14 +1967,15 @@ const materials = [
     new MaterialDef('lapotron').modify().singularity(),
 
     new MaterialDef('nether_star').modify().ore().color(0xD8D8C0).iconSet('SHINY').fluid()
-        .byproducts(['nether_quartz', 'glowstone', 'sulfur']),
+        .byproducts(['nether_quartz', 'glowstone', 'sulfur'])
+        .unify({ gemFlawless: true, gemExquisite: true }),
 
     new MaterialDef('kevlar_carbon_fiber_mesh').gem().color(0x8A7A46).iconSet('kevlar').flags(GTMaterialFlags.GENERATE_PLATE)
         .unify({ block: true, gemFlawless: true, gemExquisite: true }),
 
     new MaterialDef('kevlar').ingot().dust().color(0x76683C).iconSet('kevlar').flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_FOIL),
 
-    new MaterialDef('andesite_alloy').dust().ingot().color(0x7d9284).components('2x andesite, 2x zinc').iconSet('SHINY').flags(GTMaterialFlags.GENERATE_PLATE)
+    new MaterialDef('andesite_alloy').dust().ingot().color(0x7d9284).components('2x andesite, 2x zinc').iconSet('SHINY').flags(GTMaterialFlags.GENERATE_PLATE).noDecomp()
         .unify({ plate: 'create:andesite_alloy' }),
 
     //new chemlines
@@ -2335,6 +2336,34 @@ const materials = [
     new MaterialDef('palladium').modify().flags(GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_ROTOR),
 
     new MaterialDef('dimensionally_transcendent_portal_fluid').fluid().color(0x00E5FF).iconSet('FLUID').noDecomp(),
+    
+    new MaterialDef('litherite').fluid().dust().gem().color(0x00A858).iconSet('EMERALD').flags(GTMaterialFlags.GENERATE_PLATE)
+        .unify({ gemFlawless: true, gemExquisite: true, dustSmall: true, dustTiny: true, gem: 'envirocore:litherite_crystal', block: 'envirocore:litherite', dust: 'envirocore:litherite_powder' }),
+    new MaterialDef('erodium').fluid().dust().gem().color(0x5A4C9A).iconSet('AMETHYST').flags(GTMaterialFlags.GENERATE_PLATE)
+        .unify({ gemFlawless: true, gemExquisite: true, dustSmall: true, dustTiny: true, gem: 'envirocore:erodium_crystal', block: 'envirocore:erodium', dust: 'envirocore:erodium_powder' }),
+    new MaterialDef('lonsdaleite').fluid().dust().gem().color(0x1F5C85).iconSet('DIAMOND').flags(GTMaterialFlags.GENERATE_PLATE)
+        .unify({ gemFlawless: true, gemExquisite: true, dustSmall: true, dustTiny: true, gem: 'envirocore:lonsdaleite_crystal' }),
+    new MaterialDef('kyronite').fluid().dust().gem().color(0x7A2E70).iconSet('RUBY').flags(GTMaterialFlags.GENERATE_PLATE)
+        .unify({ gemFlawless: true, gemExquisite: true, dustSmall: true, dustTiny: true, gem: 'envirocore:kyronite_crystal', block: 'envirocore:kyronite', dust: 'envirocore:kyronite_powder' }),
+    new MaterialDef('pladium').fluid().dust().gem().color(0x2E3F8A).iconSet('LAPIS').flags(GTMaterialFlags.GENERATE_PLATE)
+        .unify({ gemFlawless: true, gemExquisite: true, dustSmall: true, dustTiny: true, gem: 'envirocore:pladium_crystal', block: 'envirocore:pladium', dust: 'envirocore:pladium_powder' }),
+    new MaterialDef('ionite').fluid().dust().gem().color(0x5DB4E6).iconSet('DIAMOND').flags(GTMaterialFlags.GENERATE_PLATE)
+        .unify({ gemFlawless: true, gemExquisite: true, dustSmall: true, dustTiny: true, gem: 'envirocore:ionite_crystal', block: 'envirocore:ionite', dust: 'envirocore:ionite_powder' }),
+    new MaterialDef('aethium').fluid().dust().gem().color(0x3C3C50).iconSet('OPAL').flags(GTMaterialFlags.GENERATE_PLATE)
+        .unify({ gemFlawless: true, gemExquisite: true, dustSmall: true, dustTiny: true, gem: 'envirocore:aethium_crystal', block: 'envirocore:aethium', dust: 'envirocore:aethium_powder' }),
+    new MaterialDef('nanorite').fluid().dust().gem().color(0x7A4E92).iconSet('AMETHYST').flags(GTMaterialFlags.GENERATE_PLATE)
+        .unify({ gemFlawless: true, gemExquisite: true, dustSmall: true, dustTiny: true, gem: 'envirocore:nanorite_crystal', block: 'envirocore:nanorite', dust: 'envirocore:nanorite_powder' }),
+    new MaterialDef('xerothium').fluid().dust().gem().color(0xA6EAE4).iconSet('DIAMOND').flags(GTMaterialFlags.GENERATE_PLATE)
+        .unify({ gemFlawless: true, gemExquisite: true, dustSmall: true, dustTiny: true, gem: 'envirocore:xerothium_crystal', block: 'envirocore:xerothium', dust: 'envirocore:xerothium_powder' }),
+
+
+    new MaterialDef('mica_pulp').dust().color(0xC2BED2).iconSet('DULL'),
+    new MaterialDef('mica_base').ingot().color(0xCFC8B4).iconSet('DULL').noSmelting().noBlocks()
+        .flags(GTMaterialFlags.GENERATE_PLATE)
+        .unify({ ingot: true, nugget: true, block: true, dustSmall: true, dustTiny: true }),
+    new MaterialDef('mica_insulator').ingot().color(0xC4D4EA).iconSet('SHINY').noSmelting().noBlocks()
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_FOIL)
+        .unify({ ingot: true, nugget: true, block: true, dustSmall: true, dustTiny: true }),
 ];
 
 
@@ -2353,6 +2382,10 @@ GTCEuStartupEvents.materialModification(event => {
     overwriteToolStats('allthemodium', 16.0, 6.0, 0, 5);
     overwriteToolStats('vibranium', 20.0, 8.0, 0, 6);
     overwriteToolStats('unobtainium', 24.0, 10.0, 0, 7);
+    overwriteToolStats('manasteel', 12, 5, 1700, 5);
+    overwriteToolStats('umbral_steel', 13, 5, 2000, 5);
+    overwriteToolStats('terrasteel', 14, 5, 2500, 7);
+
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

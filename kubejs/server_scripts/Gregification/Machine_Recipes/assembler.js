@@ -1030,34 +1030,6 @@ ServerEvents.recipes(allthemods => {
         200
     );
 
-    allthemods.recipes.gtceu.assembler('gregification:coil/draconium')
-        .itemInputs('8x #gtceu:wires/double/draconium', '8x #forge:foils/gaia', '8x #forge:plates/holmium')
-        .inputFluids('#forge:nobelium 288')
-        .itemOutputs('gtceu:draconium_coil_block')
-        .duration(600)
-        .EUt(UHV);
-
-    allthemods.recipes.gtceu.assembler('gregification:coil/draconium_awakened')
-        .itemInputs('8x #gtceu:wires/double/draconium_awakened', '8x #forge:foils/insanite', '8x #forge:plates/thulium')
-        .inputFluids('#forge:lawrencium 288')
-        .itemOutputs('gtceu:draconium_awakened_coil_block')
-        .duration(600)
-        .EUt(UEV);
-
-    allthemods.recipes.gtceu.assembler('gregification:coil/etrium')
-        .itemInputs('8x #gtceu:wires/double/etrium', '8x #forge:foils/organic_polymer', '8x #forge:plates/ytterbium')
-        .inputFluids('#forge:mendelevium 288')
-        .itemOutputs('gtceu:etrium_coil_block')
-        .duration(600)
-        .EUt(UIV);
-
-    allthemods.recipes.gtceu.assembler('gregification:coil/infinity')
-        .itemInputs('8x #gtceu:wires/double/infinity', '8x #forge:foils/chaos_plastic', '8x #forge:plates/erbium')
-        .inputFluids('#forge:roentgenium 288')
-        .itemOutputs('gtceu:infinity_coil_block')
-        .duration(600)
-        .EUt(UXV);
-
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

@@ -1115,13 +1115,25 @@
     "material.gtceu.low_covalence": "Low Covalence",
     "material.gtceu.medium_covalence": "Medium Covalence",
     "material.gtceu.high_covalence": "High Covalence",
-    "material.gtceu.dimensionally_transcendent_portal_fluid": "(DTPF) Dimensionally Transcendent Portal Fluid",        
+    "material.gtceu.dimensionally_transcendent_portal_fluid": "(DTPF) Dimensionally Transcendent Portal Fluid",
     "block.gtceu.dimensionally_transcendent_trader": "(DTT) Dimensionally Transcendent Trader",
     "gtceu.dimensionally_transcendent_trader": "(DTT) Dimensionally Transcendent Trader",    
     "block.gtceu.hyper_neuron_cultivator": "Hyper Neuron Cultivator",
     "gtceu.hyper_neuron_cultivator": "Hyper Neuron Cultivator",    
     "block.gtceu.hyperneural_casing": "Hyperneural Casing",
-    "block.gtceu.neural_pillar_core": "Neural Pillar Core"
+    "block.gtceu.neural_pillar_core": "Neural Pillar Core",
+    "material.gtceu.litherite": "Litherite",
+    "material.gtceu.erodium": "Erodium",
+    "material.gtceu.lonsdaleite": "Lonsdaleite",
+    "material.gtceu.kyronite": "Kyronite",
+    "material.gtceu.pladium": "Pladium",
+    "material.gtceu.ionite": "Ionite",
+    "material.gtceu.aethium": "Aethium",
+    "material.gtceu.nanorite": "Nanorite",
+    "material.gtceu.xerothium": "Xerothium",
+    "material.gtceu.mica_pulp": "Mica Pulp",
+    "material.gtceu.mica_base": "Mica Base",
+    "material.gtceu.mica_insulator": "Mica Insulator"
     
     
 

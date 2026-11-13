@@ -1,6 +1,6 @@
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
 // As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
-
+// priority: -1000
 //@ts-check
 ServerEvents.tags('block', event => {
     event.get('mekanism:cardboard_blacklist')
@@ -27,19 +27,19 @@ ServerEvents.recipes(allthemods => {
     });*/
 
     allthemods.remove({ output: /^ironjetpacks:.*/ })
- 
-    
+
+
     let removeSmelting = [];
     let smeltMaterials = ['soul_infused', 'shellite', 'twinite', 'dragonsteel', 'abyssal']
-    smeltMaterials.forEach(function(mat) {
+    smeltMaterials.forEach(function (mat) {
         removeSmelting.push(`thermal_extra:smelting/${mat}_ingot_from_dust_smelting`);
         removeSmelting.push(`thermal_extra:smelting/${mat}_ingot_from_dust_blasting`);
         removeSmelting.push(`enderio:smelting/thermal_extra/smelting/${mat}_ingot_from_dust_smelting`);
         removeSmelting.push(`thermal_extra:machine/smelter/${mat}_ingot_from_dust`);
     });
-    const smeltingRemovals = removeSmelting.map(recipeId => ({ id: recipeId }));    
+    const smeltingRemovals = removeSmelting.map(recipeId => ({ id: recipeId }));
     allthemods.remove(smeltingRemovals);
-    
+
     let beeRemoves = [];
     let removeColored = [];
 
@@ -49,29 +49,29 @@ ServerEvents.recipes(allthemods => {
         'nitrogen', 'scandium', 'tantalum', 'tellurium', 'thallium', 'titanium',
         'redstone', 'francium', 'astatine', 'gadolinium'
     ];*/
-   
+
 
     let gemMaterials = [
-        'diamond','emerald', 'lapis', 'coal', 'crystalline', 
-        'amethyst', 'apatite', 'fluorine', 'green_sapphire', 'malachite', 
+        'diamond', 'emerald', 'lapis', 'coal', 'crystalline',
+        'amethyst', 'apatite', 'fluorine', 'green_sapphire', 'malachite',
         'opal', 'ruby', 'sapphire', 'cinnabar'
     ];
 
     let otherMaterials = [
         'fossilised'
     ];
-    
-    beeMaterials.forEach(function(mat) {        
+
+    beeMaterials.forEach(function (mat) {
         beeRemoves.push('productivebees:centrifuge/chemlib/honeycomb_' + mat);
         beeRemoves.push('productivebees:centrifuge/chemlib/honeycomb_' + mat + '_block');
     });
 
-    gemMaterials.forEach(function(mat) {
+    gemMaterials.forEach(function (mat) {
         beeRemoves.push('productivebees:centrifuge/gem/honeycomb_' + mat);
         beeRemoves.push('productivebees:centrifuge/gem/honeycomb_' + mat + '_block');
     });
 
-    otherMaterials.forEach(function(mat) {
+    otherMaterials.forEach(function (mat) {
         beeRemoves.push('productivebees:centrifuge/honeycomb_' + mat);
         beeRemoves.push('productivebees:centrifuge/honeycomb_' + mat + '_block');
     });
@@ -91,7 +91,7 @@ ServerEvents.recipes(allthemods => {
 
     const metalRods = ['aluminum', 'iridium', 'lead', 'nickel', 'osmium', 'platinum', 'silver', 'tin', 'uranium', 'zinc', 'steel', 'invar', 'electrum', 'bronze', 'iron', 'gold', 'diamond', 'copper', 'enderium', 'lumium', 'signalum', 'constantan', 'brass', 'allthemodium', 'vibranium', 'unobtainium']
     let rodRemoval = [];
-    metalRods.forEach(function(mat) {        
+    metalRods.forEach(function (mat) {
         rodRemoval.push(`thermal_extra:crafting/${mat}_rod`);
         rodRemoval.push(`immersiveengineering:crafting/stick_${mat}`);
         rodRemoval.push(`ad_astra:${mat}_rod`);
@@ -100,7 +100,7 @@ ServerEvents.recipes(allthemods => {
 
 
     const colors = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue', 'brown', 'green', 'red', 'black'];
-    colors.forEach(function(color) {
+    colors.forEach(function (color) {
         removeColored.push(`botanypots:botanypots/crafting/${color}_terracotta_botany_pot`);
         removeColored.push(`botanypots:botanypots/crafting/${color}_terracotta_compact_hopper_botany_pot`);
         removeColored.push(`botanypots:botanypots/crafting/${color}_terracotta_hopper_botany_pot`);
@@ -114,32 +114,41 @@ ServerEvents.recipes(allthemods => {
     removeColored.push('botanypots:botanypots/crafting/terracotta_botany_pot');
     removeColored.push('botanypots:botanypots/crafting/terracotta_compact_hopper_botany_pot');
     removeColored.push('botanypots:botanypots/crafting/terracotta_hopper_botany_pot');
-    
+
     const solidified = ['ingot', 'block', 'nugget', 'plate', 'gear'];
     const solidifierRemovals = [];
-    
+
     ['bohrium', 'rutherfordium', 'dubnium', 'seaborgium', 'hassium', 'meitnerium', 'lawrencium', 'flerovium',
-     'curium', 'technetium', 'californium', 'berkelium'].forEach(el => {
-        solidified.forEach(form => {
-            solidifierRemovals.push({ type: 'gtceu:fluid_solidifier', output: `gtceu:${el}_${form}` });
+        'curium', 'technetium', 'californium', 'berkelium'].forEach(el => {
+            solidified.forEach(form => {
+                solidifierRemovals.push({ type: 'gtceu:fluid_solidifier', output: `gtceu:${el}_${form}` });
+            });
+            solidifierRemovals.push({ type: 'gtceu:fluid_solidifier', output: `gtceu:small_${el}_gear` });
         });
-        solidifierRemovals.push({ type: 'gtceu:fluid_solidifier', output: `gtceu:small_${el}_gear` });
-    });
     allthemods.remove(solidifierRemovals);
-    
-    const beeRemovals = beeRemoves.map(recipeId => ({ id: recipeId }));    
+
+    const beeRemovals = beeRemoves.map(recipeId => ({ id: recipeId }));
     allthemods.remove(beeRemovals);
 
-    
-    
+
+
     allthemods.remove({ mod: 'terralith' });
+    allthemods.remove({ id: /^sophisticatedstorage:(oak|spruce|birch|jungle|acacia|dark_oak|mangrove|cherry|bamboo|crimson|warped|generic)_(chest|barrel|limited_barrel_[1-4])(_from_.*)?$/ });
 
 
-    allthemods.remove({id: /^sophisticatedstorage:(oak|spruce|birch|jungle|acacia|dark_oak|mangrove|cherry|bamboo|crimson|warped|generic)_(chest|barrel|limited_barrel_[1-4])(_from_.*)?$/});
-    
 
     const moreRemovals = [
-        'tconstruct:smeltery/casting/ender/eye', 'productivebees:nests/beehive', 'sophisticatedstorage:basic_tier_upgrade',
+        'alltheores:aluminum_ingot_from_ore_blasting', 'immersiveengineering:blueprint/component_iron', 'immersiveengineering:blueprint/component_steel',
+        'immersiveengineering:smelting/ingot_aluminum_from_blasting3',  'immersiveengineering:smelting/ingot_aluminum3',  'immersiveengineering:smelting/ingot_aluminum',
+        'create:blasting/aluminum_ingot_from_crushed', 'create:smelting/aluminum_ingot_from_crushed',        
+        'create:smelting/ingot_aluminum_compat_immersiveengineering', 'create:blasting/ingot_aluminum_compat_immersiveengineering', 'create:splashing/immersiveengineering/crushed_raw_aluminum',
+        'enderio:smelting/create/smelting/ingot_aluminum_compat_immersiveengineering', 'enderio:smelting/immersiveengineering/smelting/ingot_aluminum', 'enderio:smelting/immersiveengineering/smelting/ingot_aluminum3',        
+        'tconstruct:smeltery/casting/metal/aluminum/ingot_gold_cast', 'tconstruct:smeltery/melting/metal/aluminum/ore_singular',              
+        'tconstruct:smeltery/melting/metal/aluminum/raw', 'tconstruct:smeltery/melting/metal/aluminum/raw_block',
+        
+
+
+        'tconstruct:smeltery/casting/ender/eye', 'productivebees:nests/beehive', 'sophisticatedstorage:basic_tier_upgrade', 'bloodmagic:blood_altar',
         'projecte:red_alchemical_bag', 'projecte:low_covalence_dust', 'projecte:medium_covalence_dust', 'projecte:high_covalence_dust',
         'alltheores:mek_processing/aluminum/ingot/from_dust_blasting', 'tconstruct:smeltery/melting/metal/aluminum/dust',
         'alltheores:smelting_dust/aluminum_ingot', 'enderio:smelting/alltheores/smelting_dust/aluminum_ingot',
@@ -162,12 +171,12 @@ ServerEvents.recipes(allthemods => {
         'ironfurnaces:upgrades/upgrade_unobtainium', 'ironfurnaces:augments/augment_factory', 'ironfurnaces:augments/augment_generator',
         'ironfurnaces:augments/augment_speed', 'ironfurnaces:augments/augment_fuel', 'ars_nouveau:novice_spell_book', 'ars_nouveau:apprentice_spell_book_upgrade',
         'ars_nouveau:archmage_spell_book_upgrade',
-        
-        'gtceu:extractor/extract_atm_star_shard', 
+
+        'gtceu:extractor/extract_atm_star_shard', 'gtceu:bender/bend_mica_insulator_ingot_to_foil',
         'tconstruct:smeltery/casting/scorched/foundry_controller', 'terralith:piston_alt',
-        'artifacts:eternal_steak_furnace','artifacts:eternal_steak_smoker', 'artifacts:eternal_steak_campfire','enderio:smelting/artifacts/eternal_steak_furnace',
+        'artifacts:eternal_steak_furnace', 'artifacts:eternal_steak_smoker', 'artifacts:eternal_steak_campfire', 'enderio:smelting/artifacts/eternal_steak_furnace',
         'cookingforblockheads:sink', 'evilcraft:crafting/eternal_water', 'tconstruct:common/basalt_blast_furnace',
-        'tconstruct:smeltery/melting/metal/iron/chain_boots', 
+        'tconstruct:smeltery/melting/metal/iron/chain_boots',
         'tconstruct:smeltery/melting/metal/iron/chain_chestplate',
         'tconstruct:smeltery/melting/metal/iron/chain_leggings',
         'tconstruct:smeltery/melting/metal/iron/chain_helmet',
@@ -175,14 +184,14 @@ ServerEvents.recipes(allthemods => {
         'projecte:alchemical_coal', 'projecte:conversions/mobius_fuel_to_alchemical_coal',
         'projecte:mobius_fuel', 'projecte:conversions/aeternalis_fuel_to_mobius_fuel',
         'projecte:aeternalis_fuel', 'projecte:conversions/mobius_fuel_to_alchemical_coal',
-        
+
         'silentgear:blueprint_paper', 'mekanism:atmstarshard/atm_star_shard', 'imersiveengineering:atmstarshard/atm_star_shard',
         'silentgear:template_board', 'forbidden_arcanus:dark_nether_star',
         'alltheores:aluminum_gear', 'alltheores:iridium_gear', 'thermal:parts/lead_gear', 'railcraft:lead_gear',
-        'thermal:parts/nickel_gear', 'railcraft:nickel_gear', 'alltheores:osmium_gear', 'alltheores:platinum_gear', 'thermal:parts/silver_gear', 
-        'railcraft:silver_gear', 'railcraft:tin_gear', 'forestry:gear_tin', 'alltheores:uranium_gear', 'railcraft:zinc_gear', 'alltheores:zinc_gear', 
+        'thermal:parts/nickel_gear', 'railcraft:nickel_gear', 'alltheores:osmium_gear', 'alltheores:platinum_gear', 'thermal:parts/silver_gear',
+        'railcraft:silver_gear', 'railcraft:tin_gear', 'forestry:gear_tin', 'alltheores:uranium_gear', 'railcraft:zinc_gear', 'alltheores:zinc_gear',
         'railcraft:steel_gear', 'thermal:parts/steel_gear',
-        'thermal:parts/invar_gear', 'railcraft:invar_gear', 'thermal:parts/electrum_gear', 'railcraft:bronze_gear', 'forestry:gear_bronze', 
+        'thermal:parts/invar_gear', 'railcraft:invar_gear', 'thermal:parts/electrum_gear', 'railcraft:bronze_gear', 'forestry:gear_bronze',
         'railcraft:iron_gear', 'forestry:gear_iron', 'industrialforegoing:iron_gear', 'enderio:iron_gear', 'industrialforegoing:gold_gear',
         'thermal:parts/gold_gear', 'railcraft:gold_gear', 'thermal:parts/diamond_gear', 'industrialforegoing:diamond_gear',
         'railcraft:copper_gear', 'forestry:gear_copper', 'thermal:parts/enderium_gear', 'thermal:parts/lumium_gear', 'thermal:parts/signalum_gear', 'thermal:parts/constantan_gear',
@@ -193,14 +202,14 @@ ServerEvents.recipes(allthemods => {
         'tconstruct:compat/create/andesite_alloy_iron', 'tconstruct:compat/create/andesite_alloy_zinc',
         'itemcollectors:basic_collector', 'itemcollectors:advanced_collector',
         'mekanism:cardboard_box', 'buildinggadgets2:gadget_building', 'buildinggadgets2:gadget_exchanging',
-        
+
         'buildinggadgets2:gadget_copy_paste', 'buildinggadgets2:gadget_cut_paste', 'buildinggadgets2:gadget_destruction',
         'mininggadgets:mininggadget_simple', 'mininggadgets:mininggadget_fancy', 'mininggadgets:mininggadget',
         'spatialtoolscmp:portable_spatial_storage', 'spatialtoolscmp:portable_spatial_cloner', 'spatialtoolscmp:portable_spatial_replacer', 'spatialtoolscmp:portable_spatial_piper', 'spatialtoolscmp:spatial_io_port'
 
     ];
-    
-    
+
+
 
     const powahRemoves = [
         'allthemodium:allthemodium_rod', 'allthemodium:vibranium_rod', 'allthemodium:unobtainium_rod',
@@ -216,61 +225,61 @@ ServerEvents.recipes(allthemods => {
         'thermal_extra:machine/crystallizer/ancient_dust',
         'thermal_extra:soul_infused_dust', 'thermal_extra:shellite_dust', 'thermal_extra:twinite_dust', 'thermal_extra:dragonsteel_dust', 'thermal_extra:abyssal_dust',
         'powah:crafting/energy_cell_starter', 'powah:crafting/energy_cell_basic', 'powah:crafting/energy_cell_hardened',
-        'powah:crafting/energy_cell_blazing', 'powah:crafting/energy_cell_niotic', 'powah:crafting/energy_cell_spirited', 
+        'powah:crafting/energy_cell_blazing', 'powah:crafting/energy_cell_niotic', 'powah:crafting/energy_cell_spirited',
         'powah:crafting/energy_cell_nitro', 'powah:crafting/energy_cell_basic_2',
 
         'powah:crafting/ender_cell_starter', 'powah:crafting/ender_cell_basic', 'powah:crafting/ender_cell_hardened',
-        'powah:crafting/ender_cell_blazing', 'powah:crafting/ender_cell_niotic', 'powah:crafting/ender_cell_spirited', 
+        'powah:crafting/ender_cell_blazing', 'powah:crafting/ender_cell_niotic', 'powah:crafting/ender_cell_spirited',
         'powah:crafting/ender_cell_nitro',
 
         'powah:crafting/ender_gate_starter', 'powah:crafting/ender_gate_basic', 'powah:crafting/ender_gate_hardened',
-        'powah:crafting/ender_gate_blazing', 'powah:crafting/ender_gate_niotic', 'powah:crafting/ender_gate_spirited', 
+        'powah:crafting/ender_gate_blazing', 'powah:crafting/ender_gate_niotic', 'powah:crafting/ender_gate_spirited',
         'powah:crafting/ender_gate_nitro',
 
         'powah:crafting/cable_starter', 'powah:crafting/cable_basic', 'powah:crafting/cable_hardened',
-        'powah:crafting/cable_blazing', 'powah:crafting/cable_niotic', 'powah:crafting/cable_spirited', 
+        'powah:crafting/cable_blazing', 'powah:crafting/cable_niotic', 'powah:crafting/cable_spirited',
         'powah:crafting/cable_nitro', 'powah:crafting/cable_basic_2', 'powah:crafting/cable_hardened_2',
-        'powah:crafting/cable_blazing_2', 'powah:crafting/cable_niotic_2', 'powah:crafting/cable_spirited_2', 
+        'powah:crafting/cable_blazing_2', 'powah:crafting/cable_niotic_2', 'powah:crafting/cable_spirited_2',
         'powah:crafting/cable_nitro_2',
 
         'powah:crafting/energizing_rod_starter', 'powah:crafting/energizing_rod_basic', 'powah:crafting/energizing_rod_hardened',
-        'powah:crafting/energizing_rod_blazing', 'powah:crafting/energizing_rod_niotic', 'powah:crafting/energizing_rod_spirited', 
+        'powah:crafting/energizing_rod_blazing', 'powah:crafting/energizing_rod_niotic', 'powah:crafting/energizing_rod_spirited',
         'powah:crafting/energizing_rod_nitro',
 
         'powah:crafting/furnator_starter', 'powah:crafting/furnator_basic', 'powah:crafting/furnator_hardened',
-        'powah:crafting/furnator_blazing', 'powah:crafting/furnator_niotic', 'powah:crafting/furnator_spirited', 
+        'powah:crafting/furnator_blazing', 'powah:crafting/furnator_niotic', 'powah:crafting/furnator_spirited',
         'powah:crafting/furnator_nitro',
-        
+
         'powah:crafting/magmator_starter', 'powah:crafting/magmator_basic', 'powah:crafting/magmator_hardened',
-        'powah:crafting/magmator_blazing', 'powah:crafting/magmator_niotic', 'powah:crafting/magmator_spirited', 
+        'powah:crafting/magmator_blazing', 'powah:crafting/magmator_niotic', 'powah:crafting/magmator_spirited',
         'powah:crafting/magmator_nitro',
 
         'powah:crafting/thermo_generator_starter', 'powah:crafting/thermo_generator_basic', 'powah:crafting/thermo_generator_hardened',
-        'powah:crafting/thermo_generator_blazing', 'powah:crafting/thermo_generator_niotic', 'powah:crafting/thermo_generator_spirited', 
+        'powah:crafting/thermo_generator_blazing', 'powah:crafting/thermo_generator_niotic', 'powah:crafting/thermo_generator_spirited',
         'powah:crafting/thermo_generator_nitro',
 
 
         'powah:crafting/solar_panel_starter', 'powah:crafting/solar_panel_basic', 'powah:crafting/solar_panel_hardened',
-        'powah:crafting/solar_panel_blazing', 'powah:crafting/solar_panel_niotic', 'powah:crafting/solar_panel_spirited', 
+        'powah:crafting/solar_panel_blazing', 'powah:crafting/solar_panel_niotic', 'powah:crafting/solar_panel_spirited',
         'powah:crafting/solar_panel_nitro',
 
         'powah:crafting/reactor_starter', 'powah:crafting/reactor_basic', 'powah:crafting/reactor_hardened',
-        'powah:crafting/reactor_blazing', 'powah:crafting/reactor_niotic', 'powah:crafting/reactor_spirited', 
+        'powah:crafting/reactor_blazing', 'powah:crafting/reactor_niotic', 'powah:crafting/reactor_spirited',
         'powah:crafting/reactor_nitro',
 
         'powah:crafting/player_tranmitter_starter', 'powah:crafting/player_tranmitter_basic', 'powah:crafting/player_tranmitter_hardened',
-        'powah:crafting/player_tranmitter_blazing', 'powah:crafting/player_tranmitter_niotic', 'powah:crafting/player_tranmitter_spirited', 
+        'powah:crafting/player_tranmitter_blazing', 'powah:crafting/player_tranmitter_niotic', 'powah:crafting/player_tranmitter_spirited',
         'powah:crafting/player_tranmitter_nitro',
 
         'powah:crafting/energy_hopper_starter', 'powah:crafting/energy_hopper_basic', 'powah:crafting/energy_hopper_hardened',
-        'powah:crafting/energy_hopper_blazing', 'powah:crafting/energy_hopper_niotic', 'powah:crafting/energy_hopper_spirited', 
+        'powah:crafting/energy_hopper_blazing', 'powah:crafting/energy_hopper_niotic', 'powah:crafting/energy_hopper_spirited',
         'powah:crafting/energy_hopper_nitro',
 
         'powah:crafting/energy_discharger_starter', 'powah:crafting/energy_discharger_basic', 'powah:crafting/energy_discharger_hardened',
-        'powah:crafting/energy_discharger_blazing', 'powah:crafting/energy_discharger_niotic', 'powah:crafting/energy_discharger_spirited', 
+        'powah:crafting/energy_discharger_blazing', 'powah:crafting/energy_discharger_niotic', 'powah:crafting/energy_discharger_spirited',
         'powah:crafting/energy_discharger_nitro',
 
-        'alltheores:smelting_dust/osmium_ingot', 
+        'alltheores:smelting_dust/osmium_ingot',
         'enderio:smelting/alltheores/smelting_dust/osmium_ingot',
         'tconstruct:smeltery/melting/metal/osmium/dust',
 
@@ -278,21 +287,21 @@ ServerEvents.recipes(allthemods => {
 
 
     ]
-    const globalRemoves3 = [      
+    const globalRemoves3 = [
         'pneumaticcraft:flux_compressor',
         'projecte:relay_mk1', 'mob_grinding_utils:recipe_entity_conveyor', 'mekanism:geiger_counter', 'mekanism:module_geiger_unit',
         'projecte:collector_mk1', 'projecte:collector_mk2', 'projecte:collector_mk3',
         'integrateddynamics:special/part_connector_omni_directional_copy', 'integrateddynamics:special/part_connector_omni_directional', 'integrateddynamics:crafting/part_connector_mono_directional',
-        'draconicevolution:dislocator_pedestal','draconicevolution:tools/dislocator',
+        'draconicevolution:dislocator_pedestal', 'draconicevolution:tools/dislocator',
         'ae2:decorative/quartz_glass', 'ars_nouveau:mob_jar',
         'projecte:condenser_mk1', 'projecte:condenser_mk2', 'ars_nouveau:magebloom_fiber',
         'ars_nouveau:arcane_pedestal', 'ars_nouveau:sourcestone', 'ars_nouveau:enchanting_apparatus', 'ars_nouveau:imbuement_chamber', 'ars_nouveau:source_jar',
-        'tconstruct:smeltery/seared/grout_multiple', 'tconstruct:smeltery/seared/grout', 
+        'tconstruct:smeltery/seared/grout_multiple', 'tconstruct:smeltery/seared/grout',
         'integrateddynamics:crafting/squeezer', 'integrateddynamics:crafting/mechanical_squeezer', 'integrateddynamics:crafting/energy_battery',
         'integrateddynamics:crafting/cable', 'integrateddynamics:crafting/cable_rotated',
-        'integrateddynamics:crafting/variablestore', 'integrateddynamics:crafting/logic_programmer', 
+        'integrateddynamics:crafting/variablestore', 'integrateddynamics:crafting/logic_programmer',
 
-        'simplemagnets:basic_demagnetization_coil', 'simplemagnets:advanced_demagnetization_coil','simplemagnets:basicmagnet','simplemagnets:advancedmagnet',
+        'simplemagnets:basic_demagnetization_coil', 'simplemagnets:advanced_demagnetization_coil', 'simplemagnets:basicmagnet', 'simplemagnets:advancedmagnet',
         // --- Mob Grinding Utils ---
         'mob_grinding_utils:recipe_fan', 'mob_grinding_utils:recipe_saw_upgrade_looting', 'mob_grinding_utils:recipe_saw_upgrade_sharpness',
         'mob_grinding_utils:recipe_fan_upgrade_height', 'mob_grinding_utils:recipe_fan_upgrade_width', 'mob_grinding_utils:recipe_fan_upgrade_speed',
@@ -304,12 +313,12 @@ ServerEvents.recipes(allthemods => {
         'easy_villagers:trader', 'easy_villagers:auto_trader', 'easy_villagers:farmer', 'easy_villagers:breeder',
         'easy_villagers:converter', 'easy_villagers:iron_farm', 'easy_villagers:incubator',
         'allthemodium:teleport_pad', 'farmingforblockheads:market', 'blue_skies:enchanting_table_compat',
-        
+
         //'minecraft:flint_and_steel', 'gtceu:assembler/enchanting_table', 'gtceu:assembler/cauldron','gtceu:assembler/brewing_stand', 'minecraft:cauldron', 'minecraft:brewing_stand', 'minecraft:enchanting_table',
 
         'thermal:augments/upgrade_augment_1', 'thermal:augments/upgrade_augment_2', 'thermal:augments/upgrade_augment_3',
         'thermal_extra:crafting/abyssal_integral_component', 'thermal_extra:crafting/dragonsteel_integral_component',
-        'thermal:rf_coil', 'thermal:redstone_servo', 
+        'thermal:rf_coil', 'thermal:redstone_servo',
         'productivebees:centrifuge/gems/honeycomb_ruby', 'productivebees:centrifuge/gems/honeycomb_ruby_block',
         'sanguine_networks:virtual_sacrificer', 'industrialforegoingsouls:soul_laser_base', 'industrialforegoingsouls:soul_surge',
         'industrialforegoingsouls:soul_network_pipe', 'ad_astra:launch_pad', 'ad_astra:oxygen_loader', 'ad_astra:fuel_refinery',
@@ -321,16 +330,16 @@ ServerEvents.recipes(allthemods => {
         'gtceu:smelting/smelt_dust_germanium_to_ingot', 'farmingforblockheads:red_fertilizer', 'farmingforblockheads:green_fertilizer', 'mekanism:structural_glass', 'mekanismgenerators:reactor/glass',
         'productivebees:upgrades/time',
         'powah:crafting/capacitor_basic', 'powah:crafting/capacitor_hardened', 'powah:crafting/capacitor_blazing',
-        'powah:crafting/capacitor_niotic', 'powah:crafting/capacitor_spirited', 'powah:crafting/capacitor_nitro',        
+        'powah:crafting/capacitor_niotic', 'powah:crafting/capacitor_spirited', 'powah:crafting/capacitor_nitro',
 
         // --- Ad Astra ---        
         'ad_astra:rocket_fin', 'ad_astra:rocket_nose_cone', 'ad_astra:engine_frame',
         'ad_astra:steel_engine', 'ad_astra:desh_engine', 'ad_astra:ostrum_engine', 'ad_astra:calorite_engine',
         'ad_astra:steel_tank', 'ad_astra:desh_tank', 'ad_astra:ostrum_tank', 'ad_astra:calorite_tank',
-                
+
         'enderio:smelting/gtceu/smelting/smelt_dust_germanium_to_ingot',
-        'bloodmagic:blood_rune_blank', 'rftoolsutility:screen_controller', 'integrateddynamics:crafting/part_display_panel', 
-        
+        'bloodmagic:blood_rune_blank', 'rftoolsutility:screen_controller', 'integrateddynamics:crafting/part_display_panel',
+
         'industrialforegoing:fluid_extractor', 'industrialforegoing:hydroponic_simulation_processor',
         'industrialforegoing:latex_processing_unit', 'industrialforegoing:dissolution_chamber', 'industrialforegoing:plant_gatherer',
         'industrialforegoing:sewer', 'industrialforegoing:sewage_composter', 'industrialforegoing:plant_sower',
@@ -348,32 +357,32 @@ ServerEvents.recipes(allthemods => {
         'industrialforegoing:washing_factory', 'industrialforegoing:fluid_sieving_machine', 'industrialforegoing:stasis_chamber', 'industrialforegoing:enchantment_sorter',
         'industrialforegoing:enchantment_applicator', 'industrialforegoing:enchantment_extractor', 'industrialforegoing:enchantment_factory', 'industrialforegoing:infinity_charger',
 
-        'industrialforegoing:wither_builder', 'industrialforegoing:black_hole_controller', 
+        'industrialforegoing:wither_builder', 'industrialforegoing:black_hole_controller',
         'fluxnetworks:flux_dust', 'mob_grinding_utils:recipe_mob_swab',
         'waystones:warp_stone', 'waystones:sharestone', 'advanced_ae:quantumcore', 'waystones:warp_dust'
 
     ];
-    
+
     const globalRemoves2 = [
 
         // --- Mekanism ---
-        'mekanism:factory/basic/smelting',      'mekanism:factory/advanced/smelting',       'mekanism:factory/elite/smelting',      'mekanism:factory/ultimate/smelting',
-        'mekanism:factory/basic/enriching',     'mekanism:factory/advanced/enriching',      'mekanism:factory/elite/enriching',     'mekanism:factory/ultimate/enriching',
-        'mekanism:factory/basic/crushing',      'mekanism:factory/advanced/crushing',       'mekanism:factory/elite/crushing',      'mekanism:factory/ultimate/crushing',
-        'mekanism:factory/basic/compressing',   'mekanism:factory/advanced/compressing',    'mekanism:factory/elite/compressing',   'mekanism:factory/ultimate/compressing',
-        'mekanism:factory/basic/combining',     'mekanism:factory/advanced/combining',      'mekanism:factory/elite/combining',     'mekanism:factory/ultimate/combining',
-        'mekanism:factory/basic/purifying',     'mekanism:factory/advanced/purifying',      'mekanism:factory/elite/purifying',     'mekanism:factory/ultimate/purifying',
-        'mekanism:factory/basic/injecting',     'mekanism:factory/advanced/injecting',      'mekanism:factory/elite/injecting',     'mekanism:factory/ultimate/injecting',
-        'mekanism:factory/basic/infusing',      'mekanism:factory/advanced/infusing',       'mekanism:factory/elite/infusing',      'mekanism:factory/ultimate/infusing',
-        'mekanism:factory/basic/sawing',        'mekanism:factory/advanced/sawing',         'mekanism:factory/elite/sawing',        'mekanism:factory/ultimate/sawing',
-        
+        'mekanism:factory/basic/smelting', 'mekanism:factory/advanced/smelting', 'mekanism:factory/elite/smelting', 'mekanism:factory/ultimate/smelting',
+        'mekanism:factory/basic/enriching', 'mekanism:factory/advanced/enriching', 'mekanism:factory/elite/enriching', 'mekanism:factory/ultimate/enriching',
+        'mekanism:factory/basic/crushing', 'mekanism:factory/advanced/crushing', 'mekanism:factory/elite/crushing', 'mekanism:factory/ultimate/crushing',
+        'mekanism:factory/basic/compressing', 'mekanism:factory/advanced/compressing', 'mekanism:factory/elite/compressing', 'mekanism:factory/ultimate/compressing',
+        'mekanism:factory/basic/combining', 'mekanism:factory/advanced/combining', 'mekanism:factory/elite/combining', 'mekanism:factory/ultimate/combining',
+        'mekanism:factory/basic/purifying', 'mekanism:factory/advanced/purifying', 'mekanism:factory/elite/purifying', 'mekanism:factory/ultimate/purifying',
+        'mekanism:factory/basic/injecting', 'mekanism:factory/advanced/injecting', 'mekanism:factory/elite/injecting', 'mekanism:factory/ultimate/injecting',
+        'mekanism:factory/basic/infusing', 'mekanism:factory/advanced/infusing', 'mekanism:factory/elite/infusing', 'mekanism:factory/ultimate/infusing',
+        'mekanism:factory/basic/sawing', 'mekanism:factory/advanced/sawing', 'mekanism:factory/elite/sawing', 'mekanism:factory/ultimate/sawing',
+
         'mekanism:electric_pump', 'mekanism:logistical_sorter', 'mekanism:teleporter', 'mekanism:teleportation_core', 'mekanism:digital_miner',
-        'mekanism:energy_cube/basic', 'mekanism:energy_cube/advanced', 'mekanism:energy_cube/elite', 'mekanism:energy_cube/ultimate', 
-        'mekanism:pigment_mixer', 'mekanism:rotary_condensentrator', 'mekanism:chemical_oxidizer', 'mekanism:chemical_infuser', 
-        'mekanism:electrolytic_separator', 'mekanism:chemical_dissolution_chamber', 'mekanism:chemical_washer', 
+        'mekanism:energy_cube/basic', 'mekanism:energy_cube/advanced', 'mekanism:energy_cube/elite', 'mekanism:energy_cube/ultimate',
+        'mekanism:pigment_mixer', 'mekanism:rotary_condensentrator', 'mekanism:chemical_oxidizer', 'mekanism:chemical_infuser',
+        'mekanism:electrolytic_separator', 'mekanism:chemical_dissolution_chamber', 'mekanism:chemical_washer',
         'mekanism:chemical_crystallizer', 'mekanism:pressurized_reaction_chamber', 'mekanism:isotopic_centrifuge', 'mekanism:teleporter_frame',
 
-       
+
 
         // --- Occultism ---
         'occultism:ritual/craft_dimensional_mineshaft', 'occultism:ritual/craft_miner_foliot_unspecialized',
@@ -455,7 +464,7 @@ ServerEvents.recipes(allthemods => {
         // --- Pipez & LaserIO ---
         'pipez:item_pipe', 'pipez:fluid_pipe', 'pipez:gas_pipe', 'pipez:energy_pipe', 'pipez:universal_pipe',
         'pipez:basic_upgrade', 'pipez:improved_upgrade', 'pipez:advanced_upgrade', 'pipez:ultimate_upgrade',
-        'laserio:laser_connector', 'laserio:laser_node', 'laserio:logic_chip_raw', 'laserio:laser_connector_advanced',        
+        'laserio:laser_connector', 'laserio:laser_node', 'laserio:logic_chip_raw', 'laserio:laser_connector_advanced',
 
         // --- Project E ---
         'projecte:philosophers_stone', 'projecte:philosophers_stone_alt',
@@ -582,7 +591,7 @@ ServerEvents.recipes(allthemods => {
         'advanced_ae:reactionchamber', 'advanced_ae:quantumcrafter', 'expatternprovider:wireless_connector',
         'expatternprovider:circuit_cutter', 'expatternprovider:assembler_matrix_frame', 'expatternprovider:assembler_matrix_wall',
 
-        
+
         'xnet:controller',
 
 
@@ -701,7 +710,7 @@ ServerEvents.recipes(allthemods => {
 
     // Type Removals
     allthemods.remove({ type: 'industrialforegoing:dissolution_chamber' });
-    allthemods.remove({ type: 'occultism:spirit_fire' });    
+    allthemods.remove({ type: 'occultism:spirit_fire' });
     allthemods.remove({ type: 'ad_astra:nasa_workbench' });
     allthemods.remove({ type: 'ad_astra:compressing' });
     allthemods.remove({ type: 'draconicevolution:fusion_crafting' });
@@ -712,7 +721,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.remove({ type: 'evilcraft:blood_infuser' });
     allthemods.remove({ type: 'pneumaticcraft:pressure_chamber' });
     allthemods.remove({ id: /^utilitarian:utility\// });
-    
+
 
     // Input Removals
     allthemods.remove({ input: '#alltheores:ore_hammers' });
@@ -724,6 +733,137 @@ ServerEvents.recipes(allthemods => {
             { id: 'immersiveengineering:crafting/survey_tools' }
         ]
     });
+    // add inside ServerEvents.recipes(allthemods => { ... }) in recipeRemovals.js
+    const envirotechRemovals = [
+        'envirocore:items/boules/_1litherite',
+        'envirocore:items/wafers/_1litherite',
+        'envirocore:blocks/frames/ct_litherite',
+        'envirocore:envirocore/assembler/io/fe_in/_1litherite',
+        'envirocore:envirocore/assembler/io/fe_out/_1litherite',
+        'envirocore:envirocore/assembler/parts/ic/_1litherite',
+        'envirocore:items/boules/_2erodium',
+        'envirocore:items/wafers/_2erodium',
+        'envirocore:blocks/frames/ct_erodium',
+        'envirocore:envirocore/assembler/io/fe_in/_2erodium',
+        'envirocore:envirocore/assembler/io/fe_out/_2erodium',
+        'envirocore:envirocore/assembler/parts/ic/_2erodium',
+        'envirocore:items/boules/_3kyronite',
+        'envirocore:items/wafers/_3kyronite',
+        'envirocore:blocks/frames/ct_kyronite',
+        'envirocore:envirocore/assembler/io/fe_in/_3kyronite',
+        'envirocore:envirocore/assembler/io/fe_out/_3kyronite',
+        'envirocore:envirocore/assembler/parts/ic/_3kyronite',
+        'envirocore:items/boules/_4pladium',
+        'envirocore:items/wafers/_4pladium',
+        'envirocore:blocks/frames/ct_pladium',
+        'envirocore:envirocore/assembler/io/fe_in/_4pladium',
+        'envirocore:envirocore/assembler/io/fe_out/_4pladium',
+        'envirocore:envirocore/assembler/parts/ic/_4pladium',
+        'envirocore:items/boules/_5ionite',
+        'envirocore:items/wafers/_5ionite',
+        'envirocore:blocks/frames/ct_ionite',
+        'envirocore:envirocore/assembler/io/fe_in/_5ionite',
+        'envirocore:envirocore/assembler/io/fe_out/_5ionite',
+        'envirocore:envirocore/assembler/parts/ic/_5ionite',
+        'envirocore:items/boules/_6aethium',
+        'envirocore:items/wafers/_6aethium',
+        'envirocore:blocks/frames/ct_aethium',
+        'envirocore:envirocore/assembler/io/fe_in/_6aethium',
+        'envirocore:envirocore/assembler/io/fe_out/_6aethium',
+        'envirocore:envirocore/assembler/parts/ic/_6aethium',
+        'envirocore:items/boules/_7nanorite',
+        'envirocore:items/wafers/_7nanorite',
+        'envirocore:blocks/frames/ct_nanorite',
+        'envirocore:envirocore/assembler/io/fe_in/_7nanorite',
+        'envirocore:envirocore/assembler/io/fe_out/_7nanorite',
+        'envirocore:envirocore/assembler/parts/ic/_7nanorite',
+        'envirocore:items/boules/_8xerothium',
+        'envirocore:items/wafers/_8xerothium',
+        'envirocore:blocks/frames/ct_xerothium',
+        'envirocore:envirocore/assembler/io/fe_in/_8xerothium',
+        'envirocore:envirocore/assembler/io/fe_out/_8xerothium',
+        'envirocore:envirocore/assembler/parts/ic/_8xerothium',
+        'envirocore:items/ct_cpu',
+        'envirocore:items/ct_diode',
+        'envirocore:items/ct_flash_memory',
+        'envirocore:items/ct_rgb_controller',
+        'envirocore:items/ct_volatile_memory',
+        'envirocore:items/obsidian_plate',
+        'envirocore:envirocore/assembler/parts/redstone_obsidian_plate',
+        'envirocore:items/ct_litherite2',
+        'envirocore:items/ct_litherite4',
+        'envirocore:items/ct_litherite6',
+        'envirocore:items/ct_litherite8',
+        'envirocore:blocks/components/laser_core',
+        'envirocore:blocks/components/laser_lens_holder',
+        'envirocore:blocks/components/structure_panel',
+        'envirocore:blocks/components/clear_structure_panel',
+        'envirocore:blocks/machines/assembler',
+        'envirocore:blocks/machines/memory_programmer',
+        'envirocore:blocks/modifier/null_modifier',
+        'envirocore:blocks/io/null_io',
+        'envirocore:blocks/io/item_output',
+        'envirocore:envirocore/assembler/amplification/_1litherite',
+        'envirocore:envirocore/assembler/amplification/_1litherite_downgrade',
+        'envirocore:envirocore/assembler/amplification/_2erodium',
+        'envirocore:envirocore/assembler/amplification/_3kyronite',
+        'envirocore:envirocore/assembler/amplification/_4pladium',
+        'envirocore:envirocore/assembler/amplification/_5ionite',
+        'envirocore:envirocore/assembler/amplification/_6aethium',
+        'envirocore:envirocore/assembler/amplification/_7nanorite',
+        'envirocore:envirocore/assembler/amplification/_8xerothium',
+        'envirocore:envirocore/assembler/frequency/_1litherite',
+        'envirocore:envirocore/assembler/frequency/_1litherite_downgrade',
+        'envirocore:envirocore/assembler/frequency/_2erodium',
+        'envirocore:envirocore/assembler/frequency/_3kyronite',
+        'envirocore:envirocore/assembler/frequency/_4pladium',
+        'envirocore:envirocore/assembler/frequency/_5ionite',
+        'envirocore:envirocore/assembler/frequency/_6aethium',
+        'envirocore:envirocore/assembler/frequency/_7nanorite',
+        'envirocore:envirocore/assembler/frequency/_8xerothium',
+        'envirocore:envirocore/assembler/piezo/_1litherite',
+        'envirocore:envirocore/assembler/piezo/_1litherite_downgrade',
+        'envirocore:envirocore/assembler/piezo/_2erodium',
+        'envirocore:envirocore/assembler/piezo/_3kyronite',
+        'envirocore:envirocore/assembler/piezo/_4pladium',
+        'envirocore:envirocore/assembler/piezo/_5ionite',
+        'envirocore:envirocore/assembler/piezo/_6aethium',
+        'envirocore:envirocore/assembler/piezo/_7nanorite',
+        'envirocore:envirocore/assembler/piezo/_8xerothium',
+        'envirocore:envirocore/assembler/radiant/_1litherite',
+        'envirocore:envirocore/assembler/radiant/_1litherite_downgrade',
+        'envirocore:envirocore/assembler/radiant/_2erodium',
+        'envirocore:envirocore/assembler/radiant/_3kyronite',
+        'envirocore:envirocore/assembler/radiant/_4pladium',
+        'envirocore:envirocore/assembler/radiant/_5ionite',
+        'envirocore:envirocore/assembler/radiant/_6aethium',
+        'envirocore:envirocore/assembler/radiant/_7nanorite',
+        'envirocore:envirocore/assembler/radiant/_8xerothium',
+        'envirocore:envirocore/assembler/bandwidth/_5ionite',
+        'envirocore:envirocore/assembler/bandwidth/_5ionite_downgrade',
+        'envirocore:envirocore/assembler/bandwidth/_6aethium',
+        'envirocore:envirocore/assembler/bandwidth/_7nanorite',
+        'envirocore:envirocore/assembler/bandwidth/_8xerothium',
+        'envirocore:envirocore/assembler/electrostatic/_5ionite',
+        'envirocore:envirocore/assembler/electrostatic/_5ionite_downgrade',
+        'envirocore:envirocore/assembler/electrostatic/_6aethium',
+        'envirocore:envirocore/assembler/electrostatic/_7nanorite',
+        'envirocore:envirocore/assembler/electrostatic/_8xerothium',
+        'envirocore:envirocore/assembler/dimensional/dimensional',
+        'envirocore:envirocore/assembler/dimensional/interdimensional',
+        'envirotech:block/ct_lens',
+        'envirotech:block/ct_lens_grinder',
+        'envirotech:block/void_miner/ct_litherite',
+        'envirotech:block/void_miner/ct_erodium',
+        'envirotech:block/void_miner/ct_kyronite',
+        'envirotech:block/void_miner/ct_pladium',
+        'envirotech:block/void_miner/ct_ionite',
+        'envirotech:block/void_miner/ct_aethium',
+        'envirotech:block/void_miner/ct_nanorite',
+        'envirotech:block/void_miner/ct_xerothium'
+    ]
+    envirotechRemovals.forEach(id => allthemods.remove({ id: id }))
+
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

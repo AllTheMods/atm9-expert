@@ -6,6 +6,19 @@
 
 StartupEvents.registry('block', allthemods => {
     
+    allthemods.create('gtceu:mica_casing')
+        .displayName('Mica Casing')
+        .hardness(5.0)
+        .resistance(10.0)
+        .soundType('metal')
+        .tagBlock('gtceu:casings');
+        
+    allthemods.create('gtceu:structural_casing')
+        .displayName('Structural Casing')
+        .hardness(5.0)
+        .resistance(10.0)
+        .soundType('metal')
+        .tagBlock('gtceu:casings');
 
 
     const casings = [

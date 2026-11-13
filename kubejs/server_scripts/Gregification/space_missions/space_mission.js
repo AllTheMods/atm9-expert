@@ -212,11 +212,10 @@ ServerEvents.recipes(allthemods => {
         .duration(100)
         .EUt(HV);
 
-    // Molten metal per tier (assembler: HV steel, EV titanium; assembly line: tungsten steel + lubricant + solder)
     const SHIP_METAL = { 1: 'stainless_steel', 2: 'titanium', 3: 'tungsten_steel', 4: 'rhodium_plated_palladium', 5: 'naquadah_alloy', 6: 'etrium' };
     const shipFluids = tier => {
-        var f = ['gtceu:' + SHIP_METAL[tier] + ' 15984'];
-        if (tier >= 3) f.push('gtceu:lubricant 16000', '#forge:soldering_alloy 16000');
+        var f = ['#forge:' + SHIP_METAL[tier] + ' 15984'];
+        if (tier >= 3) f.push('#forge:lubricant 16000', '#forge:soldering_alloy 16000');
         return f;
     };
 
@@ -227,7 +226,13 @@ ServerEvents.recipes(allthemods => {
             .itemOutputs(outputs)
             .duration(tier <= 2 ? S.PART_DURATION : S.PART_DURATION * 2)
             .EUt(VOLT[S.SHIP_TIER_VOLTAGE[tier]]);
-        if (research) r.notConsumable(research);
+        if (research) {
+            if (tier <= 2) {
+                r.notConsumable(research);
+            } else {
+                r.scannerResearch(research);
+            }
+        }
         return r;
     };
 
@@ -252,7 +257,7 @@ ServerEvents.recipes(allthemods => {
 
         var hullInputs = [frame];
         hullInputs.push('8x #forge:plates/' + p.hull);
-        addPart('hull_mk' + t, t, hullInputs, 'gtceu:ship_hull_mk' + t, rTherm);
+        addPart('hull_mk' + t, t, hullInputs, 'gtceu:ship_hull_mk' + t, rTherm).circuit(11);
 
         var engineInputs = [frame];
         if (t <= 2) {
