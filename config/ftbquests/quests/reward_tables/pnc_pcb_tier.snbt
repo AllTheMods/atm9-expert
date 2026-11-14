@@ -24,6 +24,6 @@
 		{ item: "pneumaticcraft:smart_chest_kit" }
 		{ count: 4, item: "pneumaticcraft:programming_puzzle", random_bonus: 4 }
 	]
-	title: "PNC: PCB Tier"
+	title: "{atm9.quest.extra.pnc_pcb_tier.title.de8e677be3}"
 	use_title: true
 }

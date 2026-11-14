@@ -20,5 +20,5 @@
 		{ count: 5, item: "botania:gray_mystical_flower" }
 		{ count: 5, item: "botania:black_mystical_flower" }
 	]
-	title: "Botania Flowers"
+	title: "{atm9.quest.extra.botania_flowers.title.6e580446bf}"
 }

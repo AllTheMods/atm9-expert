@@ -31,6 +31,6 @@
 		{ count: 2, item: "gtceu:blue_alloy_bolt", random_bonus: 5, weight: 6.0f }
 		{ count: 4, item: "gtceu:polyethylene_plate", random_bonus: 4, weight: 7.0f }
 	]
-	title: "GT HV Basic Rewards"
+	title: "{atm9.quest.extra.gt_hv_basic_rewards.title.0b15100b30}"
 	use_title: true
 }

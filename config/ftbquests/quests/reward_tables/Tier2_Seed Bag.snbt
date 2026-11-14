@@ -38,6 +38,6 @@
 		{ item: "mysticalagriculture:slime_seeds" }
 		{ item: "mysticalagriculture:turtle_seeds" }
 	]
-	title: "&2Tier 2 Seed Bag"
+	title: "{atm9.quest.extra.Tier2_Seed Bag.title.d9f35da1dd}"
 	use_title: true
 }
