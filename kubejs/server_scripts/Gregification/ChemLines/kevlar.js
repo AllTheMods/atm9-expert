@@ -94,11 +94,12 @@ ServerEvents.recipes(allthemods => {
     // ================= NMP SOLVENT BRANCH =================
 
     // Ammonia -> Methylamine + Dimethylamine + Water (byproduct spread)
-    allthemods.recipes.gtceu.large_chemical_reactor('gregification:kevlar/methylamine')
-        .inputFluids('#forge:ammonia 1350')
-        .outputFluids('gtceu:methylamine 450', 'gtceu:dimethylamine 450', 'minecraft:water 2700')
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:kevlar/methylamine')        
+        .inputFluids('#forge:ammonia 2000', '#forge:methanol 3000')
+        .outputFluids('gtceu:methylamine 1000', 'gtceu:dimethylamine 1000', 'minecraft:water 3000')
         .duration(3000)
-        .EUt(EV); // EV
+        .circuit(4)
+        .EUt(EV);
 
     // Methylamine + Gamma-Butyrolactone -> NMP + Water
     allthemods.recipes.gtceu.chemical_reactor('gregification:kevlar/nmp')
@@ -193,7 +194,7 @@ ServerEvents.recipes(allthemods => {
 
 
     allthemods.recipes.gtceu.chemical_reactor('gregification:kevlar/butyraldehyde')
-        .inputFluids('#forge:propene 1000', '#forge:carbon_monoxide 1000', '#forge:hydrogen 1000')
+        .inputFluids('#forge:propene 1000', '#forge:carbon_monoxide 1000', '#forge:hydrogen 2000')
         .outputFluids('gtceu:butyraldehyde 1000')
         .duration(200)
         .circuit(3)
@@ -201,7 +202,7 @@ ServerEvents.recipes(allthemods => {
 
 
     allthemods.recipes.gtceu.chemical_reactor('gregification:kevlar/butanol')
-        .inputFluids('#forge:butyraldehyde 1000', '#forge:hydrogen 1000')
+        .inputFluids('#forge:butyraldehyde 1000', '#forge:hydrogen 2000')
         .outputFluids('gtceu:butanol 1000')
         .duration(200)
         .EUt(HV); // HV

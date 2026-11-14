@@ -336,24 +336,28 @@ ServerEvents.recipes(allthemods => {
         { crystal: 'litherite', tier: 'lv', eut: LV, metal: 'steel', polymer: 'polyethylene' },
         { crystal: 'erodium', tier: 'mv', eut: MV, metal: 'aluminium', polymer: 'polyethylene' },
         { crystal: 'kyronite', tier: 'hv', eut: HV, metal: 'stainless_steel', polymer: 'polyethylene' },
-        { crystal: 'pladium', tier: 'ev', eut: EV, metal: 'titanium', polymer: 'polyethylene' },
-        { crystal: 'ionite', tier: 'iv', eut: IV, metal: 'tungsten_steel', polymer: 'polytetrafluoroethylene' },
-        { crystal: 'aethium', tier: 'luv', eut: LuV, metal: 'rhodium_plated_palladium', polymer: 'polytetrafluoroethylene' },
-        { crystal: 'nanorite', tier: 'zpm', eut: ZPM, metal: 'naquadah_alloy', polymer: 'polybenzimidazole' },
-        { crystal: 'xerothium', tier: 'uv', eut: UV, metal: 'darmstadtium', polymer: 'polybenzimidazole' }
+        { crystal: 'pladium', tier: 'ev', eut: EV, metal: 'titanium', polymer: 'polyethylene', additional: 'hafnium' },
+        { crystal: 'ionite', tier: 'iv', eut: IV, metal: 'tungsten_steel', polymer: 'polytetrafluoroethylene', additional: 'desh' },
+        { crystal: 'aethium', tier: 'luv', eut: LuV, metal: 'rhodium_plated_palladium', polymer: 'polytetrafluoroethylene', additional: 'ostrum' },
+        { crystal: 'nanorite', tier: 'zpm', eut: ZPM, metal: 'naquadah_alloy', polymer: 'polybenzimidazole', additional: 'calorite' },
+        { crystal: 'xerothium', tier: 'uv', eut: UV, metal: 'darmstadtium', polymer: 'polybenzimidazole', additional: 'etrium' }
     ]
 
     controllers.forEach(c => {
+        let inputs = [
+            `gtceu:${c.tier}_machine_hull`,
+            `4x #gtceu:circuits/${c.tier}`,
+            `8x #forge:screws/${c.metal}`,
+            `4x #forge:plates/${c.crystal}`,
+            'envirocore:laser_core',
+            'envirocore:laser_diode',
+            `2x envirocore:${c.crystal}_wafer`
+        ]
+        if (c.additional) {
+            inputs.push(`2x #forge:gears/${c.additional}`)
+        }
         allthemods.recipes.gtceu.assembler(`gregification:envirotech/${c.crystal}_void_miner_ccu`)
-            .itemInputs([
-                `gtceu:${c.tier}_machine_hull`,
-                `4x #gtceu:circuits/${c.tier}`,
-                `8x #forge:screws/${c.metal}`,
-                `4x #forge:plates/${c.crystal}`,
-                'envirocore:laser_core',
-                'envirocore:laser_diode',
-                `2x envirocore:${c.crystal}_wafer`
-            ])
+            .itemInputs(inputs)
             .inputFluids(`#forge:${c.polymer} 576`)
             .itemOutputs(`envirotech:${c.crystal}_void_miner_ccu`)
             .duration(600)

@@ -477,7 +477,7 @@ MaterialDef.prototype.applyDecomposition = function () {
 };
 
 const materials = [
-    new MaterialDef('antimony_telluride').dust().color(0xB8A8C8).components('2x antimony, 3x tellurium'),
+    new MaterialDef('antimony_telluride').dust().color(0xB8A8C8).formula('Sb2Te3').components('2x antimony, 3x tellurium'),
 
     new MaterialDef('blutonium')
         .color(0x14147b).iconSet('RADIOACTIVE').ingot().dust().materialsBasic()
@@ -530,13 +530,13 @@ const materials = [
         .byproducts(['sulfur', 'lead', 'basalt']),
 
         
-    new MaterialDef('low_covalence').color(0x38D13F).iconSet('DULL').dust().components('3x stone, 1x flint, 1x steel, 1x olivine, 1x ender_pearl, 1x uvarovite').noDecomp()
+    new MaterialDef('low_covalence').color(0x38D13F).iconSet('DULL').formula('Stn3Si6O18Fe2MgBeK4N5Ca3Cr2').dust().components('3x stone, 1x flint, 1x steel, 1x olivine, 1x ender_pearl, 1x uvarovite').noDecomp()
         .unify({ dust: 'projecte:low_covalence_dust' }),
 
-    new MaterialDef('medium_covalence').color(0x33C9DD).iconSet('DULL').dust().components('4x low_covalence, 1x diamond, 1x hellforged, 1x opal, 1x redstone').noDecomp()
+    new MaterialDef('medium_covalence').color(0x33C9DD).iconSet('DULL').formula('Stn12Si26O77Fe13Mg4Be4K16N20Ca12Cr9C⚝HS10Al2Hg3').dust().components('4x low_covalence, 1x diamond, 1x hellforged, 1x opal, 1x redstone').noDecomp()
         .unify({ dust: 'projecte:medium_covalence_dust' }),
 
-    new MaterialDef('high_covalence').color(0x2A5BE0).iconSet('DULL').dust().components('4x medium_covalence, 1x indium, 1x gelid_cryotheum, 1x palis, 1x nether_star').noDecomp()
+    new MaterialDef('high_covalence').color(0x2A5BE0).iconSet('DULL').formula('Stn48Si104O308Fe52Mg16Be16K64N80Ca48Cr36C4⚝H4S40Al8Hg12InGcA🜂Ns').dust().components('4x medium_covalence, 1x indium, 1x gelid_cryotheum, 1x palis, 1x nether_star').noDecomp()
         .unify({ dust: 'projecte:high_covalence_dust' }),
 
     new MaterialDef('naquadria_stage_2').color(0x5A189A).iconSet('RADIOACTIVE').polymer().plasma(),
@@ -572,7 +572,7 @@ const materials = [
         .unify({ gem: 'occultism:soul_gem' }),
 
     new MaterialDef('fluix').noDecomp()
-        .dust().fluid().ingot().color(0x8F5CCB).iconSet('SHINY')
+        .dust().fluid().ingot().color(0x8F5CCB).iconSet('SHINY').formula('Si3Fe5S10CrAl2O7Hg3')
         .cable({ voltage: 32, loss: 2, superconductor: false })
         .components('1x redstone, 1x certus_quartz, 1x nether_quartz')
         .unify({ dust: 'ae2:fluix_dust', gem: 'ae2:fluix_crystal' }),
@@ -591,7 +591,7 @@ const materials = [
         .unify({ ingot: 'allthetweaks:atm_star', block: 'allthetweaks:atm_star_block', nugget: 'allthetweaks:atm_star_shard' }),
     
     new MaterialDef('atm_trio')
-        .dust().ingot().color(0x9A9F7C).iconSet('SHINY').components('1x allthemodium, 1x vibranium, 1x unobtainium').formula('AtmTrio'),
+        .dust().ingot().color(0x9A9F7C).iconSet('SHINY').components('1x allthemodium, 1x vibranium, 1x unobtainium').formula('⟡≋⬙'),
 
     new MaterialDef('unobtainium_allthemodium_alloy')
         .dust().ingot().color(0xBD5D5E).iconSet('SHINY').components('1x unobtainium, 1x allthemodium').formula('⬙⟡')
@@ -622,7 +622,7 @@ const materials = [
         .color(0x2f0a0b).iconSet('NETHERSTAR').gem()
         .unify({ gemFlawless: true, gemExquisite: true, gem: 'evilcraft:dark_power_gem', block: 'evilcraft:dark_power_gem_block' }),
 
-    new MaterialDef('umbral_steel').components('1x steel, 1x dark_gem').color(0x3A2457).iconSet('METALLIC').ingot().fluid().flags(GTMaterialFlags.GENERATE_PLATE).noSmelting().materialsBasic()
+    new MaterialDef('umbral_steel').components('1x steel, 1x dark_gem').color(0x3A2457).iconSet('METALLIC').formula('FeDg').ingot().fluid().flags(GTMaterialFlags.GENERATE_PLATE).noSmelting().materialsBasic()
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: LV, duration: 400 }),
 
     new MaterialDef('spawner_scrap').dust().color(0x5B6E8F).iconSet('METALLIC').singularity(),
@@ -633,7 +633,7 @@ const materials = [
 
     new MaterialDef('fluorozirconic_composite').noDecomp().color(0x4DD0E1).iconSet('SHINY').polymer().components('1x zirconium, 6x fluorine, 2x carbon').formula('ZrF6C2'),
 
-    new MaterialDef('fifth_element').noDecomp().color(0xFF6600).iconSet('SHINY').polymer().components('1x elemental_water, 1x elemental_fire, 1x elemental_air, 1x elemental_earth'),
+    new MaterialDef('fifth_element').noDecomp().color(0xFF6600).iconSet('SHINY').formula('EwEfEaEe').polymer().components('1x elemental_water, 1x elemental_fire, 1x elemental_air, 1x elemental_earth'),
 
     new MaterialDef('polyimide').color(0xB8631E).iconSet('DULL').polymer().noDecomp().components('1x pyromellitic_dianhydride, 1x oxydianiline').formula('C22H16N2O7'),
 
@@ -803,7 +803,7 @@ const materials = [
 
     new MaterialDef('paralytic_agent').fluid().color(0x2D0C35).iconSet('FLUID').noDecomp(),
 
-    new MaterialDef('mind_control_serum').noDecomp().fluid().color(0x00FFFF).iconSet('FLUID').components('1x terrazine, 1x mind_numbing_agent'),
+    new MaterialDef('mind_control_serum').noDecomp().fluid().color(0x00FFFF).iconSet('FLUID').formula('TzMna').components('1x terrazine, 1x mind_numbing_agent'),
 
     new MaterialDef('concentrated_dark_matter').fluid().color(0x1A0033).iconSet('FLUID').noDecomp().formula('CsH2O').components('1x caesium, 1x water'),
 
@@ -883,7 +883,7 @@ const materials = [
 
     new MaterialDef('isobornyl_acetate').fluid().color(0xEDE8D0).iconSet('FLUID').noDecomp().formula('C12H20O2').components('12x carbon, 20x hydrogen, 2x oxygen'),
 
-    new MaterialDef('necrotic_acid').fluid().color(0x6B7A3A).iconSet('FLUID').components('4x witherite, 1x nether_star, 4x aqua_regia, 1x necrotic'),
+    new MaterialDef('necrotic_acid').fluid().color(0x6B7A3A).iconSet('FLUID').formula('Ba4C4O24Ntr12NsH12N4Cl8Ca5P3S3').components('4x witherite, 1x nether_star, 4x aqua_regia, 1x necrotic'),
 
     new MaterialDef('chloroprene').fluid().color(0xE0E8C8).iconSet('FLUID').noDecomp().formula('C4H6Cl').components('1x butadiene, 1x chlorine'),
 
@@ -893,7 +893,7 @@ const materials = [
 
     new MaterialDef('cyclohexanone').fluid().color(0xE0D8C0).iconSet('FLUID').noDecomp().formula('C6H12O').components('1x cyclohexane, 1x oxygen'),
 
-    new MaterialDef('thermal_coolant').noDecomp().fluid().color(0x8EE3F0).iconSet('FLUID').components('1x water_stage_4, 1x gelid_cryotheum'),
+    new MaterialDef('thermal_coolant').noDecomp().fluid().color(0x8EE3F0).iconSet('FLUID').formula('H2OGc').components('1x water_stage_4, 1x gelid_cryotheum'),
 
     new MaterialDef('aniline').noDecomp().fluid().color(0xC9A876).iconSet('FLUID').formula('C6H5NH2').components('1x nitrobenzene, 3x hydrogen'),
 
@@ -911,11 +911,11 @@ const materials = [
 
     new MaterialDef('sulfur_dichloride').fluid().color(0xC8A840).iconSet('FLUID').formula('SCl2').components('1x sulfur, 2x chlorine'),
 
-    new MaterialDef('thionyl_chloride').fluid().color(0xE8D8A0).iconSet('FLUID').noDecomp().formula('SOCl2').components('1x sulfur_trioxide, 1x sulfur_dichloride'),
+    new MaterialDef('thionyl_chloride').fluid().color(0xE8D8A0).iconSet('FLUID').noDecomp().formula('SOCl2').components('1x sulfur_dichloride, 1x oxygen'),
 
     new MaterialDef('terephthaloyl_chloride').dust().fluid().color(0xD8D0C0).iconSet('FLUID').noDecomp().formula('C8H4Cl2O2').components('1x dimethyl_terephthalate, 1x thionyl_chloride'),
 
-    new MaterialDef('methylamine').noDecomp().fluid().color(0xE0E0D0).iconSet('FLUID').formula('CH5N').components('1x ammonia'),
+    new MaterialDef('methylamine').noDecomp().fluid().color(0xE0E0D0).iconSet('FLUID').formula('CH5N').components('1x carbon, 5x hydrogen, 1x nitrogen'),
 
     new MaterialDef('gamma_butyrolactone').fluid().color(0xEEE8D0).iconSet('FLUID').formula('C4H6O2'),
 
@@ -927,7 +927,7 @@ const materials = [
 
     new MaterialDef('diaminodiphenylmethane').fluid().color(0xC8B090).iconSet('FLUID').noDecomp().formula('C7H9NO').components('1x aniline, 1x formaldehyde'),
 
-    new MaterialDef('phosgene').fluid().color(0xC0C8C0).iconSet('FLUID').noDecomp().formula('COCl2').components('1x carbon_monoxide, 1x chlorine'),
+    new MaterialDef('phosgene').fluid().color(0xC0C8C0).iconSet('FLUID').noDecomp().formula('COCl2').components('1x carbon_monoxide, 2x chlorine'),
 
     new MaterialDef('diphenylmethane_diisocyanate').dust().fluid().color(0xD0C8B8).iconSet('FLUID').noDecomp().formula('C8H9NO2Cl2').components('1x diaminodiphenylmethane, 1x phosgene'),
 
@@ -1041,7 +1041,7 @@ const materials = [
 
     new MaterialDef('silver_sulfate').dust().color(0xDCDCDC).iconSet('METALLIC').formula('Ag2SO4').components('2x silver, 1x sulfur, 4x oxygen'),
 
-    new MaterialDef('sanguine_terraria').dust().color(0xFF8888).iconSet('METALLIC').noDecomp().components('2x terrasteel, 1x elementium, 1x manasteel, 1x gaia'),
+    new MaterialDef('sanguine_terraria').dust().color(0xFF8888).iconSet('METALLIC').formula('Bφ2BτB🜛Bδ').noDecomp().components('2x terrasteel, 1x elementium, 1x manasteel, 1x gaia'),
 
     new MaterialDef('soul_essence').dust().color(0x1A75FF).iconSet('SHINY'),
 
@@ -1191,7 +1191,7 @@ const materials = [
 
     new MaterialDef('titanium_bio_ash').dust().color(0x7E7A86).iconSet('DULL').noDecomp(),
 
-    new MaterialDef('witherite').noDecomp().dust().color(0xD8D4B8).iconSet('ROUGH').components('1x barium, 1x carbon, 3x oxygen, 3x netherite'),
+    new MaterialDef('witherite').noDecomp().dust().color(0xD8D4B8).iconSet('ROUGH').formula('BaCO3Ntr3').components('1x barium, 1x carbon, 3x oxygen, 3x netherite'),
 
     new MaterialDef('bismuth_oxide').dust().color(0xE8D27A).iconSet('DULL').formula('Bi2O3').components('2x bismuth, 3x oxygen'),
 
@@ -1241,51 +1241,51 @@ const materials = [
         .cable({ voltage: 32768, superconductor: true })
         .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 }),
 
-    new MaterialDef('copper_alloy').components('1x copper, 1x silicon').color(0x935B3B).iconSet('METALLIC').ingot().fluid().materialsAll()
+    new MaterialDef('copper_alloy').components('1x copper, 1x silicon').color(0x935B3B).iconSet('METALLIC').formula('CuSi').ingot().fluid().materialsAll()
         .cable({ voltage: 32, loss: 2 })
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: MV, duration: 400 })
         .unify({ ingot: 'enderio:copper_alloy_ingot', block: 'enderio:copper_alloy_block', nugget: 'enderio:copper_alloy_nugget' }),
 
-    new MaterialDef('conductive_alloy').components('1x iron, 1x redstone').color(0xF7B066).iconSet('METALLIC').ingot().fluid().materialsAll()
+    new MaterialDef('conductive_alloy').components('1x iron, 1x redstone').color(0xF7B066).iconSet('METALLIC').formula('Fe6SiS10CrAl2O3Hg3').ingot().fluid().materialsAll()
         .cable({ voltage: 128, loss: 2 })
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: MV, duration: 400 })
         .unify({ ingot: 'enderio:conductive_alloy_ingot', block: 'enderio:conductive_alloy_block', nugget: 'enderio:conductive_alloy_nugget' }),    
 
-    new MaterialDef('vibrant_alloy').components('1x energetic_alloy, 1x ender_pearl').color(0xB6F132).iconSet('METALLIC').ingot().fluid().materialsAll()
+    new MaterialDef('vibrant_alloy').components('1x energetic_alloy, 1x ender_pearl').color(0xB6F132).iconSet('METALLIC').formula('AuSiFe5S10CrAl2O3Hg3GlwBeK4N5').ingot().fluid().materialsAll()
         .cable({ voltage: 2048, loss: 1 })
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
         .unify({ ingot: 'enderio:vibrant_alloy_ingot', block: 'enderio:vibrant_alloy_block', nugget: 'enderio:vibrant_alloy_nugget' }),
 
-    new MaterialDef('pulsating_alloy').components('1x iron, 1x ender_pearl').color(0x66FF82).iconSet('METALLIC').ingot().fluid().materialsAll()
+    new MaterialDef('pulsating_alloy').components('1x iron, 1x ender_pearl').color(0x66FF82).iconSet('METALLIC').formula('FeBeK4N5').ingot().fluid().materialsAll()
         .cable({ voltage: 2048, loss: 2 })
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: HV, duration: 400 })
         .unify({ ingot: 'enderio:pulsating_alloy_ingot', block: 'enderio:pulsating_alloy_block', nugget: 'enderio:pulsating_alloy_nugget' }),
 
-    new MaterialDef('soularium').components('1x gold, 1x soul_sand').color(0x56402C).iconSet('METALLIC').ingot().fluid().materialsAll()
+    new MaterialDef('soularium').components('1x gold, 1x soul_sand').color(0x56402C).iconSet('METALLIC').formula('AuSs').ingot().fluid().materialsAll()
         .cable({ voltage: 512, loss: 2 })
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
         .unify({ ingot: 'enderio:soularium_ingot', block: 'enderio:soularium_block', nugget: 'enderio:soularium_nugget' }),
 
-    new MaterialDef('blazing_soularium').components('1x soularium').color(0x56402C).iconSet('METALLIC').ingot().noDecomp()
+    new MaterialDef('blazing_soularium').components('1x soularium').color(0x56402C).iconSet('METALLIC').formula('AuSs').ingot().noDecomp()
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
         .unify({ ingot: true, dust: true, block: true, nugget: true, dustSmall: true, dustTiny: true }),
 
-    new MaterialDef('energetic_alloy').components('1x gold, 1x redstone, 1x glowstone').color(0xFFB933).iconSet('METALLIC').ingot().fluid().materialsAll()
+    new MaterialDef('energetic_alloy').components('1x gold, 1x redstone, 1x glowstone').color(0xFFB933).iconSet('METALLIC').formula('AuSiFe5S10CrAl2O3Hg3Glw').ingot().fluid().materialsAll()
         .cable({ voltage: 512, loss: 2 })
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: MV, duration: 400 })
         .unify({ ingot: 'enderio:energetic_alloy_ingot', block: 'enderio:energetic_alloy_block', nugget: 'enderio:energetic_alloy_nugget' }),
 
-    new MaterialDef('blazing_energetic_alloy').components('1x energetic_alloy').color(0xFFB933).iconSet('METALLIC').ingot().noDecomp()
+    new MaterialDef('blazing_energetic_alloy').components('1x energetic_alloy').color(0xFFB933).iconSet('METALLIC').formula('AuSiFe5S10CrAl2O3Hg3Glw').ingot().noDecomp()
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: MV, duration: 400 })        
         .unify({ ingot: true, dust: true, block: true, nugget: true, dustSmall: true, dustTiny: true }),
 
 
-    new MaterialDef('dark_steel').components('1x steel, 1x carbon, 1x obsidian').color(0x3D3D3D).iconSet('METALLIC').ingot().fluid().materialsAll()
+    new MaterialDef('dark_steel').components('1x steel, 1x carbon, 1x obsidian').color(0x3D3D3D).iconSet('METALLIC').formula('Fe2CMgSi2O4').ingot().fluid().materialsAll()
         .cable({ voltage: 512, loss: 2 })
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 400 })
         .unify({ ingot: 'enderio:dark_steel_ingot', block: 'enderio:dark_steel_block', nugget: 'enderio:dark_steel_nugget' }),
 
-    new MaterialDef('end_steel').components('1x dark_steel, 1x endstone, 1x obsidian').color(0xE6F1A8).iconSet('METALLIC').ingot().fluid().materialsAll()
+    new MaterialDef('end_steel').components('1x dark_steel, 1x endstone, 1x obsidian').color(0xE6F1A8).iconSet('METALLIC').formula('Fe3CMg2Si4O8End').ingot().fluid().materialsAll()
         .cable({ voltage: 2048, loss: 2 })
         .blast({ temp: COIL_TEMPS.NICHROME, eut: EV, duration: 400 })
         .unify({ ingot: 'enderio:end_steel_ingot', block: 'enderio:end_steel_block', nugget: 'enderio:end_steel_nugget' }),
@@ -1320,55 +1320,55 @@ const materials = [
         .unify({ ingot: 'forbidden_arcanus:deorum_ingot', block: 'forbidden_arcanus:deorum_block', nugget: 'forbidden_arcanus:deorum_nugget' }),
 
     new MaterialDef('ferrognetic').components('1x garmonbozia, 1x dark_steel, 1x pink_slime, 1x alfsteel, 1x hellforged, 1x iesnium').pipe().dust().noDecomp()
-        .color(0xD1D1D1).iconSet('METALLIC').ingot().fluid().materialsAll().cable({ voltage: 131072, loss: 1 })
+        .color(0xD1D1D1).iconSet('METALLIC').formula('GzFe4CMgSi2O4Au2B☄⚝H⧍').ingot().fluid().materialsAll().cable({ voltage: 131072, loss: 1 })
         .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 })
         .unify({ dust: 'forbidden_arcanus:ferrognetic_mixture' }),
 
-    new MaterialDef('refined_obsidian').components('1x obsidian, 1x diamond').color(0x5C3854).iconSet('SHINY').ingot().fluid().materialsAll()
+    new MaterialDef('refined_obsidian').components('1x obsidian, 1x diamond').color(0x5C3854).iconSet('SHINY').formula('MgFeSi2O4C').ingot().fluid().materialsAll()
         .unify({ dust: 'mekanism:dust_refined_obsidian', ingot: 'mekanism:ingot_refined_obsidian', block: 'mekanism:block_refined_obsidian', nugget: 'mekanism:nugget_refined_obsidian' }),
 
-    new MaterialDef('refined_glowstone').components('1x glowstone, 1x osmium').color(0xFFE30B).iconSet('SHINY').ingot().fluid().materialsAll()
+    new MaterialDef('refined_glowstone').components('1x glowstone, 1x osmium').color(0xFFE30B).iconSet('SHINY').formula('GlwOs').ingot().fluid().materialsAll()
         .unify({ ingot: 'mekanism:ingot_refined_glowstone', block: 'mekanism:block_refined_glowstone', nugget: 'mekanism:nugget_refined_glowstone' }),
 
-    new MaterialDef('alloy_infused').pipe().components('1x iron').color(0xE61940).iconSet('METALLIC').ingot().fluid().materialsAll()
+    new MaterialDef('alloy_infused').pipe().components('1x iron').color(0xE61940).iconSet('METALLIC').formula('Fe').ingot().fluid().materialsAll()
         .cable({ voltage: 32768, loss: 2 })
         .unify({ ingot: 'mekanism:alloy_infused' }),
 
-    new MaterialDef('alloy_reinforced').pipe().components('1x alloy_infused').color(0x00F5FF).iconSet('METALLIC').ingot().fluid().materialsAll()
+    new MaterialDef('alloy_reinforced').pipe().components('1x alloy_infused').color(0x00F5FF).iconSet('METALLIC').formula('Fe').ingot().fluid().materialsAll()
         .cable({ voltage: 131072, loss: 2 })
         .unify({ ingot: 'mekanism:alloy_reinforced' }),
 
-    new MaterialDef('alloy_atomic').pipe().components('1x alloy_reinforced').color(0xBF40FF).iconSet('METALLIC').ingot().fluid().materialsAll()
+    new MaterialDef('alloy_atomic').pipe().components('1x alloy_reinforced').color(0xBF40FF).iconSet('METALLIC').formula('Fe').ingot().fluid().materialsAll()
         .cable({ voltage: 524288, loss: 2 })
         .unify({ ingot: 'mekanism:alloy_atomic' }),
 
-    new MaterialDef('rhenium_nickel_alloy').color(0xEAEAEA).iconSet('METALLIC').components('3x rhenium, 2x nickel').ingot().fluid().materialsAll()
+    new MaterialDef('rhenium_nickel_alloy').color(0xEAEAEA).iconSet('METALLIC').formula('Re3Ni2').components('3x rhenium, 2x nickel').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.HSS_G, eut: UV, duration: 1200 })
         .rotor({ speed: 800, power: 500, efficiency: 10.0, durability: 163840 }),
 
-    new MaterialDef('rheni_zirconium_alloy').color(0x7B1FA2).iconSet('METALLIC').components('1x rhenium_nickel_alloy, 1x zirconium').ingot().fluid().materialsAll()
+    new MaterialDef('rheni_zirconium_alloy').color(0x7B1FA2).iconSet('METALLIC').formula('Re3Ni2Zr').components('1x rhenium_nickel_alloy, 1x zirconium').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.HSS_G, eut: UV, duration: 1200 })
         .rotor({ speed: 1000, power: 750, efficiency: 15.0, durability: 327680 }),
 
-    new MaterialDef('thorium_berkelium_alloy').color(0x7B1FA2).iconSet('METALLIC').components('2x thorium, 1x berkelium').ingot().fluid().materialsAll()
+    new MaterialDef('thorium_berkelium_alloy').color(0x7B1FA2).iconSet('METALLIC').formula('Th2Bk').components('2x thorium, 1x berkelium').ingot().fluid().materialsAll()
         .cable({ voltage: 131072, superconductor: true })
         .blast({ temp: COIL_TEMPS.NAQUADAH, eut: ZPM, duration: 1200 }),
 
-    new MaterialDef('potassium_calcium_orthosilicate').color(0xDAA520).iconSet('METALLIC').components('2x potassium, 1x calcium, 1x silicon, 4x oxygen').ingot().fluid().materialsAll()
+    new MaterialDef('potassium_calcium_orthosilicate').color(0xDAA520).iconSet('METALLIC').formula('K2CaSiO4').components('2x potassium, 1x calcium, 1x silicon, 4x oxygen').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.NAQUADAH, eut: ZPM, duration: 1200 })
         .rotor({ speed: 1200, power: 850, efficiency: 17.0, durability: 400000 }),
 
-    new MaterialDef('signalum').pipe().color(0xFF5500).iconSet('METALLIC').components('1x silver, 3x copper, 4x redstone').ingot().fluid().materialsAll()
+    new MaterialDef('signalum').pipe().color(0xFF5500).iconSet('METALLIC').formula('AgCu3Si4Fe20S40Cr4Al8O12Hg12').components('1x silver, 3x copper, 4x redstone').ingot().fluid().materialsAll()
         .cable({ voltage: 128, loss: 2 })
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: HV, duration: 400 })
         .unify({ rod: 'alltheores:signalum_rod', gear: 'alltheores:signalum_gear', plate: 'alltheores:signalum_plate', nugget: 'alltheores:signalum_nugget', block: 'alltheores:signalum_block', dust: 'alltheores:signalum_dust', ingot: 'alltheores:signalum_ingot' }),
 
-    new MaterialDef('lumium').pipe().color(0xFFFFAA).iconSet('METALLIC').components('1x silver, 3x tin, 2x glowstone').ingot().fluid().materialsAll()
+    new MaterialDef('lumium').pipe().color(0xFFFFAA).iconSet('METALLIC').formula('AgSn3Glw2').components('1x silver, 3x tin, 2x glowstone').ingot().fluid().materialsAll()
         .cable({ voltage: 512, loss: 2 })
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: EV, duration: 600 })
         .unify({ rod: 'alltheores:lumium_rod', gear: 'alltheores:lumium_gear', plate: 'alltheores:lumium_plate', nugget: 'alltheores:lumium_nugget', block: 'alltheores:lumium_block', dust: 'alltheores:lumium_dust', ingot: 'alltheores:lumium_ingot' }),
 
-    new MaterialDef('enderium').pipe().color(0x0B6156).iconSet('METALLIC').components('1x diamond, 3x lead, 2x ender_pearl').ingot().fluid().materialsAll()
+    new MaterialDef('enderium').pipe().color(0x0B6156).iconSet('METALLIC').formula('CPb3Be2K8N10').components('1x diamond, 3x lead, 2x ender_pearl').ingot().fluid().materialsAll()
         .cable({ voltage: 2048, loss: 2 })
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: IV, duration: 800 })
         .unify({ rod: 'alltheores:enderium_rod', gear: 'alltheores:enderium_gear', plate: 'alltheores:enderium_plate', nugget: 'alltheores:enderium_nugget', block: 'alltheores:enderium_block', dust: 'alltheores:enderium_dust', ingot: 'alltheores:enderium_ingot' }),
@@ -1383,169 +1383,169 @@ const materials = [
         .cable({ voltage: 131072, loss: 2 })
         .unify({ block: 'draconicevolution:awakened_draconium_block', dust: 'draconicevolution:awakened_draconium_dust', ingot: 'draconicevolution:awakened_draconium_ingot', nugget: 'draconicevolution:awakened_draconium_nugget' }),
 
-    new MaterialDef('compressed_iron').noDecomp().components('1x iron').color(0x474747).dust().iconSet('METALLIC').ingot().fluid().materialsAll().singularity()
+    new MaterialDef('compressed_iron').noDecomp().components('1x iron').color(0x474747).dust().iconSet('METALLIC').formula('Fe').ingot().fluid().materialsAll().singularity()
         .unify({ block: 'pneumaticcraft:compressed_iron_block', gear: 'pneumaticcraft:compressed_iron_gear', ingot: 'pneumaticcraft:ingot_iron_compressed' }),
 
-    new MaterialDef('hop_graphite').noDecomp().components('8x carbon').color(0x1C1C1C).iconSet('DULL').ingot().fluid().materialsAll()
+    new MaterialDef('hop_graphite').noDecomp().components('8x carbon').color(0x1C1C1C).iconSet('DULL').formula('C8').ingot().fluid().materialsAll()
         .unify({ dust: 'immersiveengineering:dust_hop_graphite', ingot: 'immersiveengineering:ingot_hop_graphite' }),
 
-    new MaterialDef('eternium').pipe().magnetic().color(0x2d7d69).iconSet('METALLIC').components('2x eternal, 4x sculk, 2x ferrognetic, 3x netherite, 5x neutronium').ingot().fluid().materialsAll()
+    new MaterialDef('eternium').pipe().magnetic().color(0x2d7d69).iconSet('METALLIC').formula('Et2Sk4Gz2Fe8C2Mg2Si4O8Au4B☄2⚝H2⧍2Ntr3Nt5').components('2x eternal, 4x sculk, 2x ferrognetic, 3x netherite, 5x neutronium').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.TRINIUM, eut: UHV, duration: 1200 }),
 
     new MaterialDef('caliche').dust().ore().color(0xE0D8B8).iconSet('DULL').formula('NaIO3').components('1x sodium, 1x iodine, 3x oxygen')
         .byproducts(['caliche', 'iodine', 'sodium']),
 
-    new MaterialDef('calaverite').dust().ore().color(0xDAC084).iconSet('METALLIC').components('2x tellurium, 1x gold').noDecomp()
+    new MaterialDef('calaverite').dust().ore().color(0xDAC084).iconSet('METALLIC').formula('Te2Au').components('2x tellurium, 1x gold').noDecomp()
         .byproducts(['calaverite', 'gold']),
 
-    new MaterialDef('celestite').dust().ore().color(0xADD8E6).iconSet('METALLIC').components('1x strontium, 1x sulfur, 4x oxygen').noDecomp()
+    new MaterialDef('celestite').dust().ore().color(0xADD8E6).iconSet('METALLIC').formula('SrSO4').components('1x strontium, 1x sulfur, 4x oxygen').noDecomp()
         .byproducts(['celestite', 'sulfur']),
 
     new MaterialDef('radio_thoric_phosphate').dust().ore().color(0x7FFF00).iconSet('RADIOACTIVE').formula('(ThURaFrAt)(PO4)4').components('1x thorium, 1x uranium, 1x radium, 1x francium, 1x astatine, 4x phosphorus, 16x oxygen').noDecomp()
         .byproducts(['thorium', 'uranium', 'plutonium']),
 
-    new MaterialDef('argyrodite').dust().ore().color(0x8C7B70).iconSet('METALLIC').components('1x germanium, 6x sulfur, 8x silver').noDecomp()
+    new MaterialDef('argyrodite').dust().ore().color(0x8C7B70).iconSet('METALLIC').formula('GeS6Ag8').components('1x germanium, 6x sulfur, 8x silver').noDecomp()
         .byproducts(['argyrodite', 'sulfur', 'silver']),
 
-    new MaterialDef('kurilite').dust().ore().color(0x4A5D23).iconSet('METALLIC').components('8x silver, 3x tellurium, 1x selenium').noDecomp()
+    new MaterialDef('kurilite').dust().ore().color(0x4A5D23).iconSet('METALLIC').formula('Ag8Te3Se').components('8x silver, 3x tellurium, 1x selenium').noDecomp()
         .byproducts(['kurilite', 'silver']),
 
-    new MaterialDef('telluride').dust().ore().color(0xC0C0D0).iconSet('METALLIC').components('1x tellurium, 1x silver').noDecomp()
+    new MaterialDef('telluride').dust().ore().color(0xC0C0D0).iconSet('METALLIC').formula('TeAg').components('1x tellurium, 1x silver').noDecomp()
         .byproducts(['telluride', 'silver']),
 
-    new MaterialDef('zircon').dust().ore().color(0xFFB3B3).iconSet('METALLIC').components('1x zirconium, 1x silicon, 4x oxygen').noDecomp()
+    new MaterialDef('zircon').dust().ore().color(0xFFB3B3).iconSet('METALLIC').formula('ZrSiO4').components('1x zirconium, 1x silicon, 4x oxygen').noDecomp()
         .byproducts(['zircon', 'silicon']),
 
-    new MaterialDef('baddeleyite').dust().ore().color(0x9999FF).iconSet('DULL').components('1x zirconium, 2x oxygen').noDecomp()
+    new MaterialDef('baddeleyite').dust().ore().color(0x9999FF).iconSet('DULL').formula('ZrO2').components('1x zirconium, 2x oxygen').noDecomp()
         .byproducts(['baddeleyite', 'zirconium']),
 
-    new MaterialDef('rhenite').dust().ore().color(0x8A8A8A).iconSet('METALLIC').components('1x rhenium, 2x sulfur').noDecomp()
+    new MaterialDef('rhenite').dust().ore().color(0x8A8A8A).iconSet('METALLIC').formula('ReS2').components('1x rhenium, 2x sulfur').noDecomp()
         .byproducts(['rhenite', 'sulfur']),
 
-    new MaterialDef('hellish').dust().ore().color(0x880808).iconSet('METALLIC').components('1x hellforged, 1x iesnium')
+    new MaterialDef('hellish').dust().ore().color(0x880808).iconSet('METALLIC').formula('⚝H⧍').components('1x hellforged, 1x iesnium')
         .byproducts(['hellforged', 'iesnium', 'coagulite']),
 
-    new MaterialDef('tenebrius').dust().ore().color(0x101010).iconSet('METALLIC').components('3x tenebrium, 1x hellforged, 1x iesnium').noDecomp()
+    new MaterialDef('tenebrius').dust().ore().color(0x101010).iconSet('METALLIC').formula('T-/+3⚝H⧍').components('3x tenebrium, 1x hellforged, 1x iesnium').noDecomp()
         .byproducts(['hellforged', 'iesnium']),
 
-    new MaterialDef('terraria').dust().ore().color(0xF7A8D8).iconSet('METALLIC').components('2x terrasteel, 1x elementium, 1x manasteel, 1x gaia').noDecomp()
+    new MaterialDef('terraria').dust().ore().color(0xF7A8D8).iconSet('METALLIC').formula('Bφ2BτB🜛Bδ').components('2x terrasteel, 1x elementium, 1x manasteel, 1x gaia').noDecomp()
         .byproducts(['elementium', 'manasteel', 'coagulite']),
 
-    new MaterialDef('clausthalite').dust().ore().color(0xC8C8D2).iconSet('METALLIC').components('1x lead, 1x selenium')
+    new MaterialDef('clausthalite').dust().ore().color(0xC8C8D2).iconSet('METALLIC').formula('PbSe').components('1x lead, 1x selenium')
         .byproducts(['clausthalite', 'lead']),
 
-    new MaterialDef('crookesite').dust().ore().color(0x8A7048).iconSet('METALLIC').components('2x copper, 1x thallium, 1x silver, 1x selenium').noDecomp()
+    new MaterialDef('crookesite').dust().ore().color(0x8A7048).iconSet('METALLIC').formula('Cu2TlAgSe').components('2x copper, 1x thallium, 1x silver, 1x selenium').noDecomp()
         .byproducts(['crookesite', 'thallium', 'selenium']),
 
-    new MaterialDef('naumannite').dust().ore().color(0x4A4A52).iconSet('METALLIC').components('2x silver, 1x selenium')
+    new MaterialDef('naumannite').dust().ore().color(0x4A4A52).iconSet('METALLIC').formula('Ag2Se').components('2x silver, 1x selenium')
         .byproducts(['naumannite', 'selenium']),
 
-    new MaterialDef('roquesite').dust().ore().color(0x8C8C96).iconSet('METALLIC').components('1x copper, 1x indium, 2x sulfur').noDecomp()
+    new MaterialDef('roquesite').dust().ore().color(0x8C8C96).iconSet('METALLIC').formula('CuInS2').components('1x copper, 1x indium, 2x sulfur').noDecomp()
         .byproducts(['roquesite', 'indium']),
 
-    new MaterialDef('indite').dust().ore().color(0x5C5C64).iconSet('METALLIC').components('1x iron, 2x indium, 4x sulfur').noDecomp()
+    new MaterialDef('indite').dust().ore().color(0x5C5C64).iconSet('METALLIC').formula('FeIn2S4').components('1x iron, 2x indium, 4x sulfur').noDecomp()
         .byproducts(['indite', 'indium']),
 
-    new MaterialDef('sakuraiite').dust().ore().color(0x707888).iconSet('METALLIC').components('1x copper, 1x zinc, 1x indium, 1x tin, 4x sulfur').noDecomp()
+    new MaterialDef('sakuraiite').dust().ore().color(0x707888).iconSet('METALLIC').formula('CuZnInSnS4').components('1x copper, 1x zinc, 1x indium, 1x tin, 4x sulfur').noDecomp()
         .byproducts(['sakuraiite', 'indium']),
 
-    new MaterialDef('hafnian_zircon').dust().ore().color(0xB8C8D0).iconSet('METALLIC')
+    new MaterialDef('hafnian_zircon').dust().ore().color(0xB8C8D0).iconSet('METALLIC').formula('ZrHfSiO4')
         .components('1x zirconium, 1x hafnium, 1x silicon, 4x oxygen').noDecomp().byproducts(['hafnian_zircon', 'hafnium', 'zirconium']),
 
-    new MaterialDef('hafnon').dust().ore().color(0xC0CCD8).iconSet('METALLIC').components('1x hafnium, 1x silicon, 4x oxygen').noDecomp()
+    new MaterialDef('hafnon').dust().ore().color(0xC0CCD8).iconSet('METALLIC').formula('HfSiO4').components('1x hafnium, 1x silicon, 4x oxygen').noDecomp()
         .byproducts(['hafnon', 'hafnium']),
 
-    new MaterialDef('rubicline').dust().ore().color(0xF0C8DC).iconSet('DULL').components('1x rubidium, 1x potassium, 1x aluminium, 3x silicon, 8x oxygen').noDecomp()
+    new MaterialDef('rubicline').dust().ore().color(0xF0C8DC).iconSet('DULL').formula('RbKAlSi3O8').components('1x rubidium, 1x potassium, 1x aluminium, 3x silicon, 8x oxygen').noDecomp()
         .byproducts(['rubicline', 'rubidium']),
 
-    new MaterialDef('lorandite').dust().ore().color(0xB22222).iconSet('METALLIC').components('1x thallium, 1x arsenic, 2x sulfur').noDecomp()
+    new MaterialDef('lorandite').dust().ore().color(0xB22222).iconSet('METALLIC').formula('TlAsS2').components('1x thallium, 1x arsenic, 2x sulfur').noDecomp()
         .byproducts(['lorandite', 'thallium']),
 
-    new MaterialDef('hutchinsonite').dust().ore().color(0x782828).iconSet('METALLIC').components('1x thallium, 1x lead, 5x arsenic, 9x sulfur').noDecomp()
+    new MaterialDef('hutchinsonite').dust().ore().color(0x782828).iconSet('METALLIC').formula('TlPbAs5S9').components('1x thallium, 1x lead, 5x arsenic, 9x sulfur').noDecomp()
         .byproducts(['hutchinsonite', 'thallium', 'lead']),
 
-    new MaterialDef('thortveitite').dust().ore().color(0x4A5C3C).iconSet('METALLIC').components('2x scandium, 2x silicon, 7x oxygen').noDecomp()
+    new MaterialDef('thortveitite').dust().ore().color(0x4A5C3C).iconSet('METALLIC').formula('Sc2Si2O7').components('2x scandium, 2x silicon, 7x oxygen').noDecomp()
         .byproducts(['thortveitite', 'scandium']),
 
-    new MaterialDef('kolbeckite').dust().ore().color(0x5C7050).iconSet('DULL').components('1x scandium, 1x phosphorus, 4x oxygen').noDecomp()
+    new MaterialDef('kolbeckite').dust().ore().color(0x5C7050).iconSet('DULL').formula('ScPO4').components('1x scandium, 1x phosphorus, 4x oxygen').noDecomp()
         .byproducts(['kolbeckite', 'scandium']),
 
-    new MaterialDef('bazzite').dust().ore().color(0x6EC8C0).iconSet('METALLIC').components('3x beryllium, 2x scandium, 6x silicon, 18x oxygen').noDecomp()
+    new MaterialDef('bazzite').dust().ore().color(0x6EC8C0).iconSet('METALLIC').formula('Be3Sc2Si6O18').components('3x beryllium, 2x scandium, 6x silicon, 18x oxygen').noDecomp()
         .byproducts(['bazzite', 'scandium', 'beryllium']),
 
-    new MaterialDef('gallite').dust().ore().color(0xDCC8E6).iconSet('METALLIC').components('1x copper, 1x gallium, 2x sulfur').noDecomp()
+    new MaterialDef('gallite').dust().ore().color(0xDCC8E6).iconSet('METALLIC').formula('CuGaS2').components('1x copper, 1x gallium, 2x sulfur').noDecomp()
         .byproducts(['gallite', 'gallium']),
 
-    new MaterialDef('columbite_tantalite').dust().ore().color(0x3C3C46).iconSet('METALLIC').components('1x iron, 1x manganese, 2x niobium, 2x tantalum, 6x oxygen').noDecomp()
+    new MaterialDef('columbite_tantalite').dust().ore().color(0x3C3C46).iconSet('METALLIC').formula('FeMnNb2Ta2O6').components('1x iron, 1x manganese, 2x niobium, 2x tantalum, 6x oxygen').noDecomp()
         .byproducts(['columbite_tantalite', 'niobium', 'tantalum']),
 
-    new MaterialDef('microlite').dust().ore().color(0x8C7850).iconSet('METALLIC').components('2x calcium, 2x tantalum, 7x oxygen').noDecomp()
+    new MaterialDef('microlite').dust().ore().color(0x8C7850).iconSet('METALLIC').formula('Ca2Ta2O7').components('2x calcium, 2x tantalum, 7x oxygen').noDecomp()
         .byproducts(['microlite', 'tantalum']),
 
-    new MaterialDef('wodginite').dust().ore().color(0x463C34).iconSet('METALLIC').components('1x manganese, 1x iron, 1x tin, 1x tantalum, 1x titanium, 1x niobium, 8x oxygen').noDecomp()
+    new MaterialDef('wodginite').dust().ore().color(0x463C34).iconSet('METALLIC').formula('MnFeSnTaTiNbO8').components('1x manganese, 1x iron, 1x tin, 1x tantalum, 1x titanium, 1x niobium, 8x oxygen').noDecomp()
         .byproducts(['wodginite', 'tantalum', 'niobium']),
 
-    new MaterialDef('fergusonite').dust().ore().color(0x3C3428).iconSet('METALLIC').components('1x yttrium, 1x niobium, 4x oxygen').noDecomp()
+    new MaterialDef('fergusonite').dust().ore().color(0x3C3428).iconSet('METALLIC').formula('YNbO4').components('1x yttrium, 1x niobium, 4x oxygen').noDecomp()
         .byproducts(['fergusonite', 'yttrium', 'niobium']),
 
-    new MaterialDef('tarkianite').dust().ore().color(0x686868).iconSet('METALLIC').components('1x copper, 4x rhenium, 4x molybdenum, 8x sulfur').noDecomp()
+    new MaterialDef('tarkianite').dust().ore().color(0x686868).iconSet('METALLIC').formula('CuRe4Mo4S8').components('1x copper, 4x rhenium, 4x molybdenum, 8x sulfur').noDecomp()
         .byproducts(['tarkianite', 'rhenium', 'molybdenum']),
 
-    new MaterialDef('strontianite').dust().ore().color(0xF0F0DC).iconSet('DULL').components('1x strontium, 1x carbon, 3x oxygen').noDecomp()
+    new MaterialDef('strontianite').dust().ore().color(0xF0F0DC).iconSet('DULL').formula('SrCO3').components('1x strontium, 1x carbon, 3x oxygen').noDecomp()
         .byproducts(['strontianite', 'strontium']),
 
-    new MaterialDef('samarskite').dust().ore().color(0x2C2418).iconSet('METALLIC').components('1x yttrium, 1x cerium, 1x uranium, 1x iron, 2x niobium, 2x tantalum, 1x titanium, 8x oxygen').noDecomp()
+    new MaterialDef('samarskite').dust().ore().color(0x2C2418).iconSet('METALLIC').formula('YCeUFeNb2Ta2TiO8').components('1x yttrium, 1x cerium, 1x uranium, 1x iron, 2x niobium, 2x tantalum, 1x titanium, 8x oxygen').noDecomp()
         .byproducts(['samarskite', 'samarium', 'yttrium']),
 
-    new MaterialDef('cerite').dust().ore().color(0x8C7858).iconSet('DULL').components('3x cerium, 1x lanthanum, 1x calcium, 1x iron, 1x magnesium, 3x silicon, 12x oxygen, 1x fluorine').noDecomp()
+    new MaterialDef('cerite').dust().ore().color(0x8C7858).iconSet('DULL').formula('Ce3LaCaFeMgSi3O12F').components('3x cerium, 1x lanthanum, 1x calcium, 1x iron, 1x magnesium, 3x silicon, 12x oxygen, 1x fluorine').noDecomp()
         .byproducts(['cerite', 'samarium', 'lanthanum']),
 
-    new MaterialDef('xenotime').dust().ore().color(0xC8A050).iconSet('METALLIC').components('1x yttrium, 1x phosphorus, 4x oxygen').noDecomp()
+    new MaterialDef('xenotime').dust().ore().color(0xC8A050).iconSet('METALLIC').formula('YPO4').components('1x yttrium, 1x phosphorus, 4x oxygen').noDecomp()
         .byproducts(['xenotime', 'yttrium', 'lutetium']),
 
-    new MaterialDef('gadolinite').dust().ore().color(0x3C3428).iconSet('DULL').components('2x yttrium, 1x cerium, 1x iron, 2x beryllium, 2x silicon, 10x oxygen').noDecomp()
+    new MaterialDef('gadolinite').dust().ore().color(0x3C3428).iconSet('DULL').formula('Y2CeFeBe2Si2O10').components('2x yttrium, 1x cerium, 1x iron, 2x beryllium, 2x silicon, 10x oxygen').noDecomp()
         .byproducts(['gadolinite', 'yttrium']),
 
-    new MaterialDef('laurite').dust().ore().color(0x505860).iconSet('METALLIC').components('1x ruthenium, 2x sulfur').noDecomp()
+    new MaterialDef('laurite').dust().ore().color(0x505860).iconSet('METALLIC').formula('RuS2').components('1x ruthenium, 2x sulfur').noDecomp()
         .byproducts(['laurite', 'ruthenium', 'osmium']),
 
-    new MaterialDef('germanite').dust().ore().color(0x6E5A4A).iconSet('METALLIC').components('13x copper, 2x iron, 2x germanium, 16x sulfur').noDecomp()
+    new MaterialDef('germanite').dust().ore().color(0x6E5A4A).iconSet('METALLIC').formula('Cu13Fe2Ge2S16').components('13x copper, 2x iron, 2x germanium, 16x sulfur').noDecomp()
         .byproducts(['germanite', 'germanium', 'gallium']),
 
-    new MaterialDef('renierite').dust().ore().color(0x5A4A3C).iconSet('METALLIC').components('11x copper, 4x zinc, 2x iron, 2x germanium, 2x arsenic, 16x sulfur').noDecomp()
+    new MaterialDef('renierite').dust().ore().color(0x5A4A3C).iconSet('METALLIC').formula('Cu11Zn4Fe2Ge2As2S16').components('11x copper, 4x zinc, 2x iron, 2x germanium, 2x arsenic, 16x sulfur').noDecomp()
         .byproducts(['renierite', 'germanium']),
 
-    new MaterialDef('bismuthinite').dust().ore().color(0xC8B8C0).iconSet('METALLIC').components('2x bismuth, 3x sulfur')
+    new MaterialDef('bismuthinite').dust().ore().color(0xC8B8C0).iconSet('METALLIC').formula('Bi2S3').components('2x bismuth, 3x sulfur')
         .byproducts(['bismuthinite', 'bismuth']),
 
-    new MaterialDef('bismite').dust().ore().color(0xD8C8A8).iconSet('DULL').components('2x bismuth, 3x oxygen')
+    new MaterialDef('bismite').dust().ore().color(0xD8C8A8).iconSet('DULL').formula('Bi2O3').components('2x bismuth, 3x oxygen')
         .byproducts(['bismite', 'bismuth']),
 
-    new MaterialDef('bismutite').dust().ore().color(0xB8A898).iconSet('DULL').components('2x bismuth, 1x carbon, 5x oxygen')
+    new MaterialDef('bismutite').dust().ore().color(0xB8A898).iconSet('DULL').formula('Bi2CO5').components('2x bismuth, 1x carbon, 5x oxygen')
         .byproducts(['bismutite', 'bismuth']),
 
-    new MaterialDef('thorianite').dust().ore().color(0x1C1C1C).iconSet('METALLIC').components('1x thorium, 2x oxygen')
+    new MaterialDef('thorianite').dust().ore().color(0x1C1C1C).iconSet('METALLIC').formula('ThO2').components('1x thorium, 2x oxygen')
         .byproducts(['thorianite', 'thorium']),
 
-    new MaterialDef('thorite').dust().ore().color(0x3C3428).iconSet('DULL').components('1x thorium, 1x silicon, 4x oxygen')
+    new MaterialDef('thorite').dust().ore().color(0x3C3428).iconSet('DULL').formula('ThSiO4').components('1x thorium, 1x silicon, 4x oxygen')
         .byproducts(['thorite', 'thorium']),
 
-    new MaterialDef('rhodizite').dust().ore().color(0xF0F0E0).iconSet('METALLIC').components('1x caesium, 1x potassium, 4x aluminium, 4x beryllium, 11x boron, 28x oxygen').noDecomp()
+    new MaterialDef('rhodizite').dust().ore().color(0xF0F0E0).iconSet('METALLIC').formula('CsKAl4Be4B11O28').components('1x caesium, 1x potassium, 4x aluminium, 4x beryllium, 11x boron, 28x oxygen').noDecomp()
         .byproducts(['rhodizite', 'caesium']),
 
-    new MaterialDef('lanthanite').dust().ore().color(0xD8D8C0).iconSet('DULL').components('2x lanthanum, 3x carbon, 9x oxygen').noDecomp()
+    new MaterialDef('lanthanite').dust().ore().color(0xD8D8C0).iconSet('DULL').formula('La2C3O9').components('2x lanthanum, 3x carbon, 9x oxygen').noDecomp()
         .byproducts(['lanthanite', 'lanthanum']),
 
-    new MaterialDef('yttrialite').dust().ore().color(0x8C8058).iconSet('DULL').components('2x yttrium, 1x thorium, 2x silicon, 7x oxygen').noDecomp()
+    new MaterialDef('yttrialite').dust().ore().color(0x8C8058).iconSet('DULL').formula('Y2ThSi2O7').components('2x yttrium, 1x thorium, 2x silicon, 7x oxygen').noDecomp()
         .byproducts(['yttrialite', 'lutetium', 'yttrium']),
 
-    new MaterialDef('cryolite').dust().ore().color(0xE8E8E8).iconSet('DULL').components('3x sodium, 1x aluminium, 6x fluorine')
+    new MaterialDef('cryolite').dust().ore().color(0xE8E8E8).iconSet('DULL').formula('Na3AlF6').components('3x sodium, 1x aluminium, 6x fluorine')
         .byproducts(['cryolite', 'fluorine']),
 
-    new MaterialDef('ullmannite').dust().ore().color(0x9A9A9A).iconSet('METALLIC').components('1x nickel, 1x antimony, 1x sulfur')
+    new MaterialDef('ullmannite').dust().ore().color(0x9A9A9A).iconSet('METALLIC').formula('NiSbS').components('1x nickel, 1x antimony, 1x sulfur')
         .byproducts(['ullmannite', 'antimony']),
 
-    new MaterialDef('jamesonite').dust().ore().color(0x605868).iconSet('METALLIC').components('4x lead, 2x iron, 6x antimony, 14x sulfur')
+    new MaterialDef('jamesonite').dust().ore().color(0x605868).iconSet('METALLIC').formula('Pb4Fe2Sb6S14').components('4x lead, 2x iron, 6x antimony, 14x sulfur')
         .byproducts(['jamesonite', 'antimony', 'lead']),
 
     new MaterialDef('chaotic').dust().ore().color(0x090909).iconSet('SHINY')
@@ -1605,7 +1605,7 @@ const materials = [
     new MaterialDef('adamantite').dust().color(0x4E5B3C).iconSet('METALLIC').noSmelting().ore()
         .byproducts(['mithril', 'bedrockium']),
 
-    new MaterialDef('adamantium').dust().ingot().color(0x4E5B3C).iconSet('METALLIC').noSmelting().materialsBasic().components('1x adamantite, 64x tungsten_carbide, 64x netherite, 16x bedrockium, 16x mithril')
+    new MaterialDef('adamantium').dust().ingot().color(0x4E5B3C).iconSet('METALLIC').formula('AdW64C64Ntr64Bdk16Mi16').noSmelting().materialsBasic().components('1x adamantite, 64x tungsten_carbide, 64x netherite, 16x bedrockium, 16x mithril')
         .blast({ temp: COIL_TEMPS.NAQUADAH, eut: IV, duration: 1200 }),
 
     new MaterialDef('soul_sand').dust().color(0x5A4232).iconSet('DULL')
@@ -1683,13 +1683,13 @@ const materials = [
     new MaterialDef('bio_organic_nanocomposite').ingot().dust().fluid().color(0x3D5C42).iconSet('DULL')
         .flags(GTMaterialFlags.GENERATE_PLATE),
 
-    new MaterialDef('hepatizon').dust().ingot().fluid().color(0x715A7C).iconSet('METALLIC').components('2x copper, 1x cobalt, 1x nether_quartz').noDecomp()
+    new MaterialDef('hepatizon').dust().ingot().fluid().color(0x715A7C).iconSet('METALLIC').formula('Cu2CoSiO2').components('2x copper, 1x cobalt, 1x nether_quartz').noDecomp()
         .unify({ ingot: 'tconstruct:hepatizon_ingot', block: 'tconstruct:hepatizon_block', nugget: 'tconstruct:hepatizon_nugget' }),
 
-    new MaterialDef('amethyst_bronze').dust().ingot().fluid().color(0xEBC4DB).iconSet('METALLIC').components('1x copper, 1x amethyst')
+    new MaterialDef('amethyst_bronze').dust().ingot().fluid().color(0xEBC4DB).iconSet('METALLIC').formula('CuSi4O8Fe').components('1x copper, 1x amethyst')
         .unify({ ingot: 'tconstruct:amethyst_bronze_ingot', block: 'tconstruct:amethyst_bronze_block', nugget: 'tconstruct:amethyst_bronze_nugget' }),
 
-    new MaterialDef('manyullyn').dust().ingot().fluid().color(0xC097F0).iconSet('METALLIC').components('1x debris, 3x cobalt')
+    new MaterialDef('manyullyn').dust().ingot().fluid().color(0xC097F0).iconSet('METALLIC').formula('DbrCo3').components('1x debris, 3x cobalt')
         .unify({ ingot: 'tconstruct:manyullyn_ingot', block: 'tconstruct:manyullyn_block', nugget: 'tconstruct:manyullyn_nugget' }),
 
     new MaterialDef('core').color(0x989CAB).iconSet('METALLIC').singularity(),
@@ -1728,7 +1728,7 @@ const materials = [
 
     new MaterialDef('thorn_rose').dust().color(0xAB3236).iconSet('WOOD'),
 
-    new MaterialDef('platinum_rhenium_catalyst').dust().polymer().color(0x8B8C8E).iconSet('DULL').components('1x platinum, 1x aluminium, 1x rhenium').noDecomp(),
+    new MaterialDef('platinum_rhenium_catalyst').dust().polymer().color(0x8B8C8E).iconSet('DULL').formula('PtAlRe').components('1x platinum, 1x aluminium, 1x rhenium').noDecomp(),
 
     new MaterialDef('blue_ice').dust().fluid().color(0x739BD0).iconSet('GLASS')
         .unify({ block: 'minecraft:blue_ice' }),
@@ -1742,7 +1742,7 @@ const materials = [
     new MaterialDef('recycled_organic_matter').fluid().color(0x6E6259).iconSet('FLUID'),
 
     new MaterialDef('niter').dust().gem().color(0xF7F5F0).iconSet('DIAMOND').formula('KNO3').components('1x potassium, 1x nitrogen, 3x oxygen')
-        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, dust: 'thermal:niter_dust', gem: 'thermal:niter', block: 'thermal:niter_block' }),
+        .unify({ plate: true, gemFlawless: true, gemExquisite: true, dust: 'thermal:niter_dust', gem: 'thermal:niter', block: 'thermal:niter_block' }),
 
     new MaterialDef('cadmium_copper').ingot().dust().fluid().color(0xC97A4A).iconSet('METALLIC').formula('Cu9Cd').components('9x copper, 1x cadmium')
         .flags(GTMaterialFlags.GENERATE_FINE_WIRE)
@@ -1799,27 +1799,27 @@ const materials = [
     new MaterialDef('shulker').dust().gem().color(0x906291).iconSet('SHINY').flags(GTMaterialFlags.GENERATE_PLATE)
         .unify({ plate: true, block: true, gem: 'minecraft:shulker_shell', gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('soul_infused').dust().fluid().color(0xAB6F53).iconSet('METALLIC').noSmelting().materialsBasic().components('2x soul_sand, 1x iron, 1x copper')
+    new MaterialDef('soul_infused').dust().fluid().color(0xAB6F53).iconSet('METALLIC').formula('Ss2FeCu').noSmelting().materialsBasic().components('2x soul_sand, 1x iron, 1x copper')
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 1200 })
         .unify({ dust: 'thermal_extra:soul_infused_dust', nugget: 'thermal_extra:soul_infused_nugget', ingot: 'thermal_extra:soul_infused_ingot', block: 'thermal_extra:soul_infused_block', rod: 'thermal_extra:soul_infused_rod', plate: 'thermal_extra:soul_infused_plate', gear: 'thermal_extra:soul_infused_gear' }),
 
-    new MaterialDef('shellite').dust().fluid().color(0x8643A2).iconSet('METALLIC').noSmelting().materialsBasic().components('2x shulker, 1x lead, 1x nickel')
+    new MaterialDef('shellite').dust().fluid().color(0x8643A2).iconSet('METALLIC').formula('Sh2PbNi').noSmelting().materialsBasic().components('2x shulker, 1x lead, 1x nickel')
         .blast({ temp: COIL_TEMPS.NICHROME, eut: EV, duration: 1200 })
         .unify({ dust: 'thermal_extra:shellite_dust', nugget: 'thermal_extra:shellite_nugget', ingot: 'thermal_extra:shellite_ingot', block: 'thermal_extra:shellite_block', rod: 'thermal_extra:shellite_rod', plate: 'thermal_extra:shellite_plate', gear: 'thermal_extra:shellite_gear' }),
 
-    new MaterialDef('twinite').dust().fluid().color(0xAB6F53).iconSet('METALLIC').noSmelting().materialsBasic().components('2x tin, 1x blaze, 1x obsidian')
+    new MaterialDef('twinite').dust().fluid().color(0xAB6F53).iconSet('METALLIC').formula('Sn2CSMgFeSi2O4').noSmelting().materialsBasic().components('2x tin, 1x blaze, 1x obsidian')
         .blast({ temp: COIL_TEMPS.RTM, eut: IV, duration: 1200 })
         .unify({ dust: 'thermal_extra:twinite_dust', nugget: 'thermal_extra:twinite_nugget', ingot: 'thermal_extra:twinite_ingot', block: 'thermal_extra:twinite_block', rod: 'thermal_extra:twinite_rod', plate: 'thermal_extra:twinite_plate', gear: 'thermal_extra:twinite_gear' }),
 
-    new MaterialDef('dragonsteel').dust().fluid().color(0xAB6F53).iconSet('METALLIC').noSmelting().materialsBasic().components('2x ancient, 1x cinnabar, 1x enderium')
+    new MaterialDef('dragonsteel').dust().fluid().color(0xAB6F53).iconSet('METALLIC').formula('An2HgSCPb3Be2K8N10').noSmelting().materialsBasic().components('2x ancient, 1x cinnabar, 1x enderium')
         .blast({ temp: COIL_TEMPS.HSS_G, eut: LuV, duration: 1200 })
         .unify({ dust: 'thermal_extra:dragonsteel_dust', nugget: 'thermal_extra:dragonsteel_nugget', ingot: 'thermal_extra:dragonsteel_ingot', block: 'thermal_extra:dragonsteel_block', rod: 'thermal_extra:dragonsteel_rod', plate: 'thermal_extra:dragonsteel_plate', gear: 'thermal_extra:dragonsteel_gear' }),
 
-    new MaterialDef('abyssal').dust().fluid().color(0x62825D).iconSet('METALLIC').noSmelting().materialsBasic().singularity().components('2x ancient, 1x netherite, 1x echo_shard')
+    new MaterialDef('abyssal').dust().fluid().color(0x62825D).iconSet('METALLIC').formula('An2NtrSi3O6Sk2').noSmelting().materialsBasic().singularity().components('2x ancient, 1x netherite, 1x echo_shard')
         .blast({ temp: COIL_TEMPS.NAQUADAH, eut: ZPM, duration: 1200 })
         .unify({ dust: 'thermal_extra:abyssal_dust', nugget: 'thermal_extra:abyssal_nugget', ingot: 'thermal_extra:abyssal_ingot', block: 'thermal_extra:abyssal_block', rod: 'thermal_extra:abyssal_rod', plate: 'thermal_extra:abyssal_plate', gear: 'thermal_extra:abyssal_gear' }),
 
-    new MaterialDef('necrotic').noDecomp().dust().color(0x1A1C1E).iconSet('DULL').components('5x calcium, 3x phosphorus, 3x sulfur'),
+    new MaterialDef('necrotic').noDecomp().dust().color(0x1A1C1E).iconSet('DULL').formula('Ca5P3S3').components('5x calcium, 3x phosphorus, 3x sulfur'),
 
     new MaterialDef('tattered').color(0x9A9290).singularity().iconSet('DULL'),
 
@@ -1858,7 +1858,7 @@ const materials = [
         .unify({ gear: 'alltheores:osmium_gear',rawOre: 'alltheores:raw_osmium' })
         .ignoreAllOrePrefixes(),
     
-    new MaterialDef('constantan').color(0xD39A6A).components('1x copper, 1x nickel').iconSet('METALLIC').components('1x copper, 1x nickel').ingot().fluid().materialsAll()
+    new MaterialDef('constantan').color(0xD39A6A).components('1x copper, 1x nickel').iconSet('METALLIC').formula('CuNi').components('1x copper, 1x nickel').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: HV, duration: 400 })
         .unify({ dust: 'alltheores:constantan_dust', nugget: 'alltheores:constantan_nugget', ingot: 'alltheores:constantan_ingot', block: 'alltheores:constantan_block', plate: 'alltheores:constantan_plate', gear: 'alltheores:constantan_gear', rod: 'alltheores:constantan_rod' }),
     
@@ -1918,14 +1918,14 @@ const materials = [
     new MaterialDef('dysprosium').modify().removeFlags(GTMaterialFlags.NO_SMELTING, GTMaterialFlags.FLAMMABLE).fluid().ingot().blastCoil(COIL_TEMPS.NAQUADAH),
 
     new MaterialDef('neodymium_praseodymium').dust().color(0x8F8C7A).iconSet('METALLIC').components('3x neodymium, 1x praseodymium').formula('Nd3Pr').noDecomp(),
-
-    new MaterialDef('neodymium_dysprosium').dust().ingot().magnetic().color(0x5A5A66).iconSet('METALLIC').noDecomp().components('1x dysprosium', '1x neodymium_praseodymium_iron_boron').formula('NdPrDyFe14B').materialsBasic()
+    
+    new MaterialDef('neodymium_dysprosium').dust().ingot().magnetic().color(0x5A5A66).iconSet('METALLIC').noDecomp().components('1x dysprosium, 1x neodymium_praseodymium_iron_boron').formula('Nd3PrDyFe14B').materialsBasic()
         .blast({ temp: COIL_TEMPS.NAQUADAH, eut: LuV, duration: 1200 }),
 
-    new MaterialDef('neodymium_terbium').dust().ingot().magnetic().color(0x66605A).iconSet('METALLIC').noDecomp().components('1x terbium', '1x neodymium_praseodymium_iron_boron').formula('NdPrTbFe14B').materialsBasic()
+    new MaterialDef('neodymium_terbium').dust().ingot().magnetic().color(0x66605A).iconSet('METALLIC').noDecomp().components('1x terbium, 1x neodymium_praseodymium_iron_boron').formula('Nd3PrTbFe14B').materialsBasic()
         .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
 
-    new MaterialDef('neodymium_praseodymium_iron_boron').noSmelting().dust().ingot().color(0x4A4A52).iconSet('METALLIC').noDecomp().components('1x neodymium_praseodymium, 14x iron, 1x boron').formula('NdPrFe14B')
+    new MaterialDef('neodymium_praseodymium_iron_boron').noSmelting().dust().ingot().color(0x4A4A52).iconSet('METALLIC').noDecomp().components('1x neodymium_praseodymium, 14x iron, 1x boron').formula('Nd3PrFe14B')
         .blast({ temp: COIL_TEMPS.NAQUADAH, eut: LuV, duration: 1200 }),
 
     new MaterialDef('promethium').modify().dust().fluid(),
@@ -1975,7 +1975,7 @@ const materials = [
 
     new MaterialDef('kevlar').ingot().dust().color(0x76683C).iconSet('kevlar').flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_FOIL),
 
-    new MaterialDef('andesite_alloy').dust().ingot().color(0x7d9284).components('2x andesite, 2x zinc').iconSet('SHINY').flags(GTMaterialFlags.GENERATE_PLATE).noDecomp()
+    new MaterialDef('andesite_alloy').dust().ingot().color(0x7d9284).components('2x andesite, 2x zinc').iconSet('SHINY').formula('Mg24Si16H32O78K2N2Zn2').flags(GTMaterialFlags.GENERATE_PLATE).noDecomp()
         .unify({ plate: 'create:andesite_alloy' }),
 
     //new chemlines
@@ -2039,18 +2039,18 @@ const materials = [
     new MaterialDef('heavy_rare_earth_metal_mix').dust().color(0x908C98).iconSet('METALLIC').noDecomp(),
 
     //pgm line
-    new MaterialDef('pgm_calcine').dust().color(0x8C7B6A).iconSet('DULL').noDecomp().components('1x platinum, 1x palladium, 2x oxygen'),
+    new MaterialDef('pgm_calcine').dust().color(0x8C7B6A).iconSet('DULL').formula('PtPdO2').noDecomp().components('1x platinum, 1x palladium, 2x oxygen'),
     new MaterialDef('pgm_chloride_liquor').fluid().color(0xC9822B).noDecomp(),
     new MaterialDef('palladous_ammine_liquor').fluid().color(0xB5A46B).noDecomp(),
     new MaterialDef('palladium_tetraammine_liquor').fluid().color(0xD8C18A).noDecomp(),
-    new MaterialDef('platinum_salt').dust().color(0xE0A24A).iconSet('DULL').noDecomp().components('2x ammonium_chloride, 1x platinum, 4x chlorine'),
+    new MaterialDef('platinum_salt').dust().color(0xE0A24A).iconSet('DULL').formula('N2H8Cl6Pt').noDecomp().components('2x ammonium_chloride, 1x platinum, 4x chlorine'),
     new MaterialDef('pgm_residue_cake').dust().color(0x5E5448).iconSet('DULL').noDecomp(),
     new MaterialDef('pgm_leach_residue').dust().color(0x6F6A5E).iconSet('DULL').noDecomp(),
     new MaterialDef('ruthenium_tetroxide_solution').fluid().color(0x7A8F5A).noDecomp(),
-    new MaterialDef('rhodium_sponge').dust().color(0xA9AFB8).iconSet('METALLIC').noDecomp().components('1x rhodium'),
-    new MaterialDef('rhodium_salt').dust().color(0xC25A5A).iconSet('DULL').noDecomp().components('1x rhodium, 3x chlorine'),
-    new MaterialDef('zinc_sulfate').dust().color(0xBFC9C2).iconSet('DULL').components('1x zinc, 1x sulfur, 4x oxygen'),
-    new MaterialDef('iridium_dioxide').dust().color(0x2F3A4A).iconSet('DULL').noDecomp().components('1x iridium, 2x oxygen').ingot().materialsBasic()
+    new MaterialDef('rhodium_sponge').dust().color(0xA9AFB8).iconSet('METALLIC').formula('Rh').noDecomp().components('1x rhodium'),
+    new MaterialDef('rhodium_salt').dust().color(0xC25A5A).iconSet('DULL').formula('RhCl3').noDecomp().components('1x rhodium, 3x chlorine'),
+    new MaterialDef('zinc_sulfate').dust().color(0xBFC9C2).iconSet('DULL').formula('ZnSO4').components('1x zinc, 1x sulfur, 4x oxygen'),
+    new MaterialDef('iridium_dioxide').dust().color(0x2F3A4A).iconSet('DULL').formula('IrO2').noDecomp().components('1x iridium, 2x oxygen').ingot().materialsBasic()
         .blast({ temp: COIL_TEMPS.DRACONIUM, eut: UV, duration: 1200 }),
     new MaterialDef('fused_pgm_melt').dust().color(0x8A4F2E).iconSet('DULL').noDecomp(),
     new MaterialDef('sodium_ruthenate_liquor').fluid().color(0x3F7A55).noDecomp(),
@@ -2059,7 +2059,7 @@ const materials = [
     //indium line
     new MaterialDef('sulfated_zinc_slurry').fluid().color(0xB59A5E).noDecomp(),
     new MaterialDef('zinc_indium_liquor').fluid().color(0x9DB8A8).noDecomp(),
-    new MaterialDef('lead_sulfate_cake').dust().color(0x8F8A94).iconSet('DULL').noDecomp().components('1x lead, 1x sulfur, 4x oxygen'),
+    new MaterialDef('lead_sulfate_cake').dust().color(0x8F8A94).iconSet('DULL').formula('PbSO4').noDecomp().components('1x lead, 1x sulfur, 4x oxygen'),
     new MaterialDef('purified_indium_liquor').fluid().color(0xA9C7C0).noDecomp(),
     new MaterialDef('indium_loaded_extractant').fluid().color(0xC2A66A).noDecomp(),
     new MaterialDef('zinc_raffinate').fluid().color(0xB9C2B0).noDecomp(),
@@ -2115,28 +2115,28 @@ const materials = [
     new MaterialDef('molybdenum_99').dust().color(0x5E7FA8).iconSet('RADIOACTIVE').components('1x molybdenum').formula('Mo⁹⁹'),
     new MaterialDef('radium_227').dust().color(0x7FC9A0).iconSet('RADIOACTIVE').components('1x radium').formula('Ra²²⁷'),
 
-    new MaterialDef('ion_adsorption_clay').dust().color(0xC9A27A).iconSet('DULL').components('4x clay, 1x granite_red, 1x water'),
+    new MaterialDef('ion_adsorption_clay').dust().color(0xC9A27A).iconSet('DULL').formula('Na8Li4Al11Si11H50O36K').components('4x clay, 1x granite_red, 1x water'),
     new MaterialDef('rare_earth_clay_mud').dust().color(0x9C7F63).iconSet('DULL'),
     new MaterialDef('diluted_rare_earth_clay_mud').dust().color(0xB59A7E).iconSet('DULL'),
-    new MaterialDef('erbium_oxide').dust().color(0xE8A0B8).iconSet('DULL').components('2x erbium, 3x oxygen').noDecomp(),
-    new MaterialDef('holmium_oxide').dust().color(0xE6C48A).iconSet('DULL').components('2x holmium, 3x oxygen').noDecomp(),
-    new MaterialDef('thulium_oxide').dust().color(0xA9D8C4).iconSet('DULL').components('2x thulium, 3x oxygen').noDecomp(),
-    new MaterialDef('ytterbium_oxide').dust().color(0xD9D2A6).iconSet('DULL').components('2x ytterbium, 3x oxygen').noDecomp(),
-    new MaterialDef('erbium_fluoride').dust().color(0xD6A8C4).iconSet('DULL').components('1x erbium, 3x fluorine').noDecomp(),
-    new MaterialDef('holmium_fluoride').dust().color(0xD9B77A).iconSet('DULL').components('1x holmium, 3x fluorine').noDecomp(),
-    new MaterialDef('thulium_fluoride').dust().color(0x93C9B3).iconSet('DULL').components('1x thulium, 3x fluorine').noDecomp(),
-    new MaterialDef('lanthanum_oxide').dust().color(0xC9CFA8).iconSet('DULL').components('2x lanthanum, 3x oxygen'),
+    new MaterialDef('erbium_oxide').dust().color(0xE8A0B8).iconSet('DULL').formula('Er2O3').components('2x erbium, 3x oxygen').noDecomp(),
+    new MaterialDef('holmium_oxide').dust().color(0xE6C48A).iconSet('DULL').formula('Ho2O3').components('2x holmium, 3x oxygen').noDecomp(),
+    new MaterialDef('thulium_oxide').dust().color(0xA9D8C4).iconSet('DULL').formula('Tm2O3').components('2x thulium, 3x oxygen').noDecomp(),
+    new MaterialDef('ytterbium_oxide').dust().color(0xD9D2A6).iconSet('DULL').formula('Yb2O3').components('2x ytterbium, 3x oxygen').noDecomp(),
+    new MaterialDef('erbium_fluoride').dust().color(0xD6A8C4).iconSet('DULL').formula('ErF3').components('1x erbium, 3x fluorine').noDecomp(),
+    new MaterialDef('holmium_fluoride').dust().color(0xD9B77A).iconSet('DULL').formula('HoF3').components('1x holmium, 3x fluorine').noDecomp(),
+    new MaterialDef('thulium_fluoride').dust().color(0x93C9B3).iconSet('DULL').formula('TmF3').components('1x thulium, 3x fluorine').noDecomp(),
+    new MaterialDef('lanthanum_oxide').dust().color(0xC9CFA8).iconSet('DULL').formula('La2O3').components('2x lanthanum, 3x oxygen'),
     new MaterialDef('americium_244').dust().color(0xC47A5E).iconSet('RADIOACTIVE').components('1x americium').formula('Am²⁴⁴'),
     new MaterialDef('curium_249').dust().color(0x7E6FB0).iconSet('RADIOACTIVE').components('1x curium').formula('Cm²⁴⁹'),
     new MaterialDef('berkelium_250').dust().color(0xB07FA8).iconSet('RADIOACTIVE').components('1x berkelium').formula('Bk²⁵⁰'),
     new MaterialDef('californium_253').dust().color(0xD2A05A).iconSet('RADIOACTIVE').components('1x californium').formula('Cf²⁵³'),
     new MaterialDef('einsteinium_255').dust().color(0x5EB0A0).iconSet('RADIOACTIVE').components('1x einsteinium').formula('Es²⁵⁵'),
-    new MaterialDef('curium_fluoride').dust().color(0xD9C7E6).iconSet('DULL').components('1x curium, 3x fluorine').noDecomp(),
+    new MaterialDef('curium_fluoride').dust().color(0xD9C7E6).iconSet('DULL').formula('CmF3').components('1x curium, 3x fluorine').noDecomp(),
 
     //perovskite photovoltaic cell
     new MaterialDef('caesium_bromide').dust().color(0xE6DDF0).iconSet('DULL').formula('CsBr').components('1x caesium, 1x bromine'),
     new MaterialDef('caesium_chloride').dust().color(0xD9E3EE).iconSet('DULL').formula('CsCl').components('1x caesium, 1x chlorine'),
-    new MaterialDef('indium_tin_oxide').dust().color(0xB8C77A).iconSet('DULL').noDecomp().formula('In2O3·SnO2').components('9x indium_iii_oxide, 1x cassiterite'),
+    new MaterialDef('indium_tin_oxide').dust().color(0xB8C77A).iconSet('DULL').noDecomp().formula('(In2O3)9SnO2').components('9x indium_iii_oxide, 1x cassiterite'),
     new MaterialDef('perovskite_ink').fluid().color(0xE08A2E).iconSet('FLUID').noDecomp().formula('CsPbBr3·C2H6O').components('1x caesium, 1x lead, 3x bromine, 2x carbon, 6x hydrogen, 1x oxygen'),
     new MaterialDef('caesium_lead_bromide').dust().color(0xD9731A).iconSet('DULL').formula('CsPbBr3').components('1x caesium, 1x lead, 3x bromine'),
 
@@ -2144,12 +2144,12 @@ const materials = [
     new MaterialDef('molten_piglich_heart').fluid().color(0xe6af15).iconSet('FLUID'),
     new MaterialDef('nitinol').ingot().fluid().iconSet('METALLIC').color(0xD4B0F4).flags(GTMaterialFlags.GENERATE_PLATE).components('4x nickel, 6x titanium').formula('Ni4Ti6')
         .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
-    new MaterialDef('trinaquadalloy').ingot().fluid().color(0x281832).iconSet('BRIGHT').flags(GTMaterialFlags.GENERATE_PLATE).components('6x trinium, 2x naquadah, 1x carbon')
+    new MaterialDef('trinaquadalloy').ingot().fluid().color(0x281832).iconSet('BRIGHT').formula('Ke6Nq2C').flags(GTMaterialFlags.GENERATE_PLATE).components('6x trinium, 2x naquadah, 1x carbon')
         .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
     new MaterialDef('trinium').modify().ore().byproducts(['naquadah', 'titanium', 'trinium']),
 
-    new MaterialDef('fluorite').gem().ore().color(0x0c9949).iconSet('DIAMOND').components('1x calcium, 2x fluorine'),
-    new MaterialDef('dolomite').dust().ore().color(0xf2e4bd).iconSet('ROUGH').components('1x calcium, 1x magnesium, 1x carbon, 3x oxygen').formula('CaMg(CO3)2'),
+    new MaterialDef('fluorite').gem().ore().color(0x0c9949).iconSet('DIAMOND').formula('CaF2').components('1x calcium, 2x fluorine'),
+    new MaterialDef('dolomite').dust().ore().color(0xf2e4bd).iconSet('ROUGH').components('1x calcium, 1x magnesium, 2x carbon, 6x oxygen').formula('CaMg(CO3)2'),
     new MaterialDef('star_matter').plasma('customStill').color(0xb219d1),
     new MaterialDef('infinity').ingot().fluid('customStill').element('infinity').color(0xffffff).iconSet('infinity').materialsAll().ore().ignoreAllOrePrefixes('ore').singularity()
         //.flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FOIL)
@@ -2160,64 +2160,64 @@ const materials = [
 
 
     new MaterialDef('corrosive_etrium_alloy').pipe().components('4x etrium, 3x eternal, 2x corrosive, 1x bohrium')
-        .color(0x0B5CFE).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .color(0x0B5CFE).iconSet('METALLIC').formula('Et7⚝C2Bh').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.TRITANIUM, eut: UHV, duration: 1200 })
         .rotor({ speed: 1200, power: 300, efficiency: 13.0, durability: 655360 }),
 
     new MaterialDef('destructive_scandozirconium').pipe().components('4x zirconium, 3x scandium, 2x destructive, 1x hassium')
-        .color(0x914E91).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .color(0x914E91).iconSet('METALLIC').formula('Zr4Sc3⚝E2Hs').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.DRACONIUM, eut: UEV, duration: 1500 })
         .rotor({ speed: 1400, power: 400, efficiency: 14.0, durability: 2621440 }),
 
     new MaterialDef('vengeful_gadomeitnerium_alloy').pipe().components('4x gadolinium, 3x vengeful, 2x meitnerium, 1x rutherfordium')
-        .color(0x488748).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .color(0x488748).iconSet('METALLIC').formula('Gd4⚝V3Mt2Rf').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.DRACONIUM_AWAKENED, eut: UIV, duration: 2000 })
         .rotor({ speed: 1600, power: 500, efficiency: 16.0, durability: 10485760 }),
 
     new MaterialDef('steadfast_rhenobedrock_alloy').pipe().components('4x bedrockium, 3x rhenium, 2x steadfast, 1x seaborgium')
-        .color(0x8C0000).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .color(0x8C0000).iconSet('METALLIC').formula('Bdk4Re3⚝S2Sg').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.ETRIUM, eut: UXV, duration: 2500 })
         .rotor({ speed: 1800, power: 600, efficiency: 18.0, durability: 41943040 }),
 
     new MaterialDef('demonic_antimatter_alloy').pipe().components('4x antimatter, 3x dubnium, 2x demon, 1x fermium').noDecomp()
-        .color(0x2828F5).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .color(0x2828F5).iconSet('METALLIC').formula('-4Db3⚝D2Fm').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.INFINITY, eut: OpV, duration: 3000 })
         .rotor({ speed: 2000, power: 800, efficiency: 20.0, durability: 167772160 }),
 
     new MaterialDef('infused_star').pipe().components('4x alloy_infused, 1x atm_star')
-        .color(0xE61940).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .color(0xE61940).iconSet('METALLIC').formula('Fe4ATM*').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.TRITANIUM, eut: UHV, duration: 1200 }),
 
     new MaterialDef('reinforced_star').pipe().components('3x alloy_reinforced, 2x atm_star')
-        .color(0x00F5FF).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .color(0x00F5FF).iconSet('METALLIC').formula('Fe3ATM*2').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.DRACONIUM, eut: UEV, duration: 1500 }),
 
     new MaterialDef('atomic_star').pipe().components('2x alloy_atomic, 3x atm_star')
-        .color(0xBF40FF).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .color(0xBF40FF).iconSet('METALLIC').formula('Fe2ATM*3').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.DRACONIUM_AWAKENED, eut: UIV, duration: 2000 }),
 
     new MaterialDef('copernicium_dysprosium_alloy').pipe().components('3x dysprosium, 3x cadmium, 2x technetium, 2x copernicium')
-        .color(0x2EC4B6).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .color(0x2EC4B6).iconSet('METALLIC').formula('Dy3Cd3Tc2Cn2').ingot().fluid().materialsAll()
         .cable({ voltage: UEV, loss: 0, superconductor: true })
         .blast({ temp: COIL_TEMPS.TRITANIUM, eut: UHV, duration: 1200 }),
 
     new MaterialDef('nihonium_bismuth_alloy').pipe().components('3x bismuth, 3x rubidium, 2x terbium, 2x nihonium')
-        .color(0xF2C14E).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .color(0xF2C14E).iconSet('METALLIC').formula('Bi3Rb3Tb2Nh2').ingot().fluid().materialsAll()
         .cable({ voltage: UIV, loss: 0, superconductor: true })
         .blast({ temp: COIL_TEMPS.DRACONIUM, eut: UEV, duration: 1500 }),
 
     new MaterialDef('flerovium_terbium_alloy').pipe().components('3x bismuth, 3x dysprosium, 2x terbium, 2x flerovium')
-        .color(0xE8618C).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .color(0xE8618C).iconSet('METALLIC').formula('Bi3Dy3Tb2Fl2').ingot().fluid().materialsAll()
         .cable({ voltage: UXV, loss: 0, superconductor: true })
         .blast({ temp: COIL_TEMPS.DRACONIUM_AWAKENED, eut: UIV, duration: 2000 }),
 
     new MaterialDef('moscovium_roentgenium_alloy').pipe().components('3x astatine, 3x roentgenium, 2x moscovium, 2x tennessine')
-        .color(0xA8E04A).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .color(0xA8E04A).iconSet('METALLIC').formula('At3Rg3Mc2Ts2').ingot().fluid().materialsAll()
         .cable({ voltage: OpV, loss: 0, superconductor: true })
         .blast({ temp: COIL_TEMPS.ETRIUM, eut: UXV, duration: 2500 }),
 
     new MaterialDef('livermorium_astatine_alloy').pipe().components('3x bismuth, 3x astatine, 2x roentgenium, 2x livermorium')
-        .color(0xC9CCE8).iconSet('METALLIC').ingot().fluid().materialsAll()
+        .color(0xC9CCE8).iconSet('METALLIC').formula('Bi3At3Rg2Lv2').ingot().fluid().materialsAll()
         .cable({ voltage: MAX, loss: 0, superconductor: true })
         .blast({ temp: COIL_TEMPS.INFINITY, eut: OpV, duration: 3000 }),
 
@@ -2226,7 +2226,7 @@ const materials = [
     new MaterialDef('neodymium_dysprosium_dopant').dust().color(0x9C8A62).iconSet('METALLIC').components('3x neodymium, 1x dysprosium').formula('Nd3Dy').noDecomp(),
     new MaterialDef('neodymium_terbium_dysprosium_dopant').dust().color(0x7E8F7A).iconSet('METALLIC').components('2x neodymium, 1x terbium, 1x dysprosium').formula('Nd2TbDy').noDecomp(),
     new MaterialDef('neodymium_rare_earth_dopant').dust().color(0xA48C7E).iconSet('METALLIC').components('2x neodymium, 1x praseodymium, 1x promethium, 1x terbium, 1x dysprosium').formula('Nd2PrPmTbDy').noDecomp(),
-    new MaterialDef('artificial_cerebrospinal_fluid').fluid().color(0xA8D8E8).iconSet(GTMaterialIconSet.FLUID).components('2x sodium', '1x potassium', '1x calcium', '1x magnesium', '2x glycerol', '6x distilled_water'),
+    new MaterialDef('artificial_cerebrospinal_fluid').fluid().color(0xA8D8E8).iconSet(GTMaterialIconSet.FLUID).formula('Na2KCaMgC6H28O12').components('2x sodium, 1x potassium, 1x calcium, 1x magnesium, 2x glycerol, 6x distilled_water'),
 
     new MaterialDef('bacteria_seed').dust().color(0xFFFFFF).iconSet('bacteria_seed')
         .unify({ dustTiny: true, dustSmall: true }),
@@ -2276,7 +2276,7 @@ const materials = [
         .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
     new MaterialDef('nickel_germanide').dust().ingot().color(0x93A39B).iconSet('METALLIC').formula('NiGe').components('1x nickel, 1x germanium').materialsBasic()
         .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
-    new MaterialDef('sendust').dust().ingot().color(0x7D7F86).iconSet('METALLIC').formula('Fe85Si10Al5').components('17x iron, 2x silicon, 1x aluminium').noDecomp().materialsBasic()
+    new MaterialDef('sendust').dust().ingot().color(0x7D7F86).iconSet('METALLIC').formula('Fe17Si2Al').components('17x iron, 2x silicon, 1x aluminium').noDecomp().materialsBasic()
         .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
     new MaterialDef('ruthenium_dioxide').dust().ingot().color(0x1F2A35).iconSet('METALLIC').formula('RuO2').components('1x ruthenium, 2x oxygen').materialsBasic()
         .blast({ temp: COIL_TEMPS.DRACONIUM, eut: UV, duration: 1200 }),
