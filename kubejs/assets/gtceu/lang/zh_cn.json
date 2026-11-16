@@ -1121,7 +1121,19 @@
     "block.gtceu.hyper_neuron_cultivator": "超神经元培育器",
     "gtceu.hyper_neuron_cultivator": "超神经元培育器",    
     "block.gtceu.hyperneural_casing": "超神经外壳",
-    "block.gtceu.neural_pillar_core": "神经柱核心"
+    "block.gtceu.neural_pillar_core": "神经柱核心",
+    "material.gtceu.litherite": "莱泽尔",
+    "material.gtceu.erodium": "艾洛蒂",
+    "material.gtceu.lonsdaleite": "蓝丝黛尔",
+    "material.gtceu.kyronite": "凯罗尼",
+    "material.gtceu.pladium": "普雷蒂",
+    "material.gtceu.ionite": "艾恩尼",
+    "material.gtceu.aethium": "以太",
+    "material.gtceu.nanorite": "纳诺莱",
+    "material.gtceu.xerothium": "泽洛斯",
+    "material.gtceu.mica_pulp": "云母浆",
+    "material.gtceu.mica_base": "云母基材",
+    "material.gtceu.mica_insulator": "云母绝缘体"
     
     
 
