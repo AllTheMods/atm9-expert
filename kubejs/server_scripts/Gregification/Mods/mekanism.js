@@ -347,9 +347,9 @@ ServerEvents.recipes(allthemods => {
         tiers.forEach((tier, i) => {
             const output = `mekanism:${tier}_${type.name}`;
 
-            allthemods.remove({ output: output });
+            //allthemods.remove({ output: output });
 
-            allthemods.shaped(output, [
+            allthemods.shaped(`8x ${output}`, [
                 'RMR',
                 'LCL',
                 'RMR'

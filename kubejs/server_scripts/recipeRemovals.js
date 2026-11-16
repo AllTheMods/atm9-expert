@@ -76,18 +76,16 @@ ServerEvents.recipes(allthemods => {
         beeRemoves.push('productivebees:centrifuge/honeycomb_' + mat + '_block');
     });
 
-    /*
-    const minecraftColors = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue', 'brown', 'green', 'red', 'black']
-    let colorRemoval = [];
-    minecraftColors.forEach(function(color) {        
-    });    
-    
-    allthemods.remove(colorRemoval);
-    */
-
-
-
-
+    const mekTiers = ['basic', 'advanced', 'elite', 'ultimate'];
+    mekTiers.forEach(function (tier) {
+        beeRemoves.push(`mekanism:transmitter/universal_cable/${tier}`);
+        beeRemoves.push(`mekanism:transmitter/mechanical_pipe/${tier}`);
+        beeRemoves.push(`mekanism:transmitter/logistical_transporter/${tier}`);
+        beeRemoves.push(`mekanism:transmitter/pressurized_tube/${tier}`);
+        beeRemoves.push(`mekanism:transmitter/thermodynamic_conductor/${tier}`);
+    });
+    const beeRemovals = beeRemoves.map(recipeId => ({ id: recipeId }));
+    allthemods.remove(beeRemovals);
 
     const metalRods = ['aluminum', 'iridium', 'lead', 'nickel', 'osmium', 'platinum', 'silver', 'tin', 'uranium', 'zinc', 'steel', 'invar', 'electrum', 'bronze', 'iron', 'gold', 'diamond', 'copper', 'enderium', 'lumium', 'signalum', 'constantan', 'brass', 'allthemodium', 'vibranium', 'unobtainium']
     let rodRemoval = [];
@@ -126,11 +124,6 @@ ServerEvents.recipes(allthemods => {
             solidifierRemovals.push({ type: 'gtceu:fluid_solidifier', output: `gtceu:small_${el}_gear` });
         });
     allthemods.remove(solidifierRemovals);
-
-    const beeRemovals = beeRemoves.map(recipeId => ({ id: recipeId }));
-    allthemods.remove(beeRemovals);
-
-
 
     allthemods.remove({ mod: 'terralith' });
     allthemods.remove({ id: /^sophisticatedstorage:(oak|spruce|birch|jungle|acacia|dark_oak|mangrove|cherry|bamboo|crimson|warped|generic)_(chest|barrel|limited_barrel_[1-4])(_from_.*)?$/ });

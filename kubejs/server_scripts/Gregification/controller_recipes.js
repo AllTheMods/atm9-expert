@@ -217,7 +217,7 @@ ServerEvents.recipes(allthemods => {
             '4x #forge:gears/rhodium_plated_palladium',
             '4x gtceu:cleanroom_glass'
         )
-        .inputFluids('#forge:selenium 2000', '#forge:ionized_oxygen 2000')
+        .inputFluids('#forge:enderium 2880', '#forge:ionized_oxygen 2000')
         .itemOutputs('gtceu:microbial_filtration_array')
         .duration(600)
         .EUt(LuV);
