@@ -83,7 +83,7 @@ ServerEvents.recipes(allthemods => {
             [
                 '8x mekanism:alloy_atomic',
                 '2x gtceu:iv_field_generator',
-                '4x #forge:plates/draconium_awakened',
+                '4x #forge:plates/hafnium',
                 '2x #gtceu:circuits/iv',
                 '2x pneumaticcraft:printed_circuit_board',
                 '2x bloodmagic:etherealslate'

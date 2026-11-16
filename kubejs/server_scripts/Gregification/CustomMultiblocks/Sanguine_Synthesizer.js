@@ -32,7 +32,7 @@ ServerEvents.recipes(allthemods => {
     const arrayVoltage = HV;
 
     allthemods.recipes.gtceu.sanguine_alchemy('gregification:thermal_spark')
-        .itemInputs('botania:corporea_spark', '#forge:exquisite_gems/nitro_crystal', '4x #forge:rounds/pink_slime', '#forge:rings/draconium_awakened')
+        .itemInputs('botania:corporea_spark', '#forge:exquisite_gems/nitro_crystal', '4x #forge:rounds/pink_slime', '#forge:rings/draconium')
         .notConsumable('gtceu:technomancy_orb')
         .itemOutputs('gtceu:thermal_spark')
         .duration(1000)

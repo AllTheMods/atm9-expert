@@ -363,7 +363,7 @@ ServerEvents.recipes(allthemods => {
             '4x #forge:rods/hop_graphite',
             '2x #gtceu:circuits/iv',
             '2x bloodmagic:etherealslate',
-            '8x #forge:screws/draconium',
+            '8x #forge:screws/hafnium',
             '4x gtceu:selenium_rectifier'
         ],
         'gtceu:soldering_alloy 288',
@@ -887,7 +887,7 @@ ServerEvents.recipes(allthemods => {
         [
             "gtceu:hexagonal_bio_composite",
             "4x #forge:plates/stabilized_clathrate",
-            "#forge:frames/draconium",
+            "#forge:frames/end_steel",
             "2x #gtceu:circuits/iv",
             "2x gtceu:iv_electric_pump",
             "2x gtceu:iv_electric_piston",
@@ -906,7 +906,7 @@ ServerEvents.recipes(allthemods => {
         [
             "gtceu:hexagonal_bio_composite",
             "4x #forge:plates/stabilized_clathrate",
-            "#forge:frames/draconium",
+            "#forge:frames/end_steel",
             "2x #gtceu:circuits/iv",
             "2x gtceu:iv_electric_pump",
             "2x gtceu:iv_electric_piston",

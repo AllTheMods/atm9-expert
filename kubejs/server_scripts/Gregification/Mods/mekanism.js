@@ -2,9 +2,9 @@
 // As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
 
 ServerEvents.recipes(allthemods => {
-    const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+    const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
     const addAssembler = (itemsIn, fluidIn, itemsOut, eu, duration, program) => {
-        
+
         const outputID = itemsOut.replace(/[^a-z0-9]/gi, '_');
 
         let recipe = allthemods.recipes.gtceu.assembler(`gregification:assembler/${outputID}`)
@@ -29,7 +29,7 @@ ServerEvents.recipes(allthemods => {
         .duration(200)
         .EUt(HV);
 
-    
+
     addAssembler(
         [
             'mekanism:steel_casing',
@@ -48,7 +48,7 @@ ServerEvents.recipes(allthemods => {
             'mekanism:steel_casing',
             '#forge:frames/strontium',
             '4x #gtceu:wires/bismuth_strontium_calcium_copper_oxide',
-            '3x #forge:plates/alloy_atomic',            
+            '3x #forge:plates/alloy_atomic',
             'mekanism:laser'
         ],
         '#forge:polyimide 288',
@@ -122,7 +122,7 @@ ServerEvents.recipes(allthemods => {
             '#gtceu:circuits/luv',
             'mekanism:energy_tablet',
             '4x #forge:plates/alloy_infused',
-            '4x #forge:plates/scandium'            
+            '4x #forge:plates/scandium'
         ],
         [
             '#forge:neon 1000'
@@ -230,7 +230,7 @@ ServerEvents.recipes(allthemods => {
         600
     );
 
-     //upgrade muffler
+    //upgrade muffler
     addAssembler(
         [
             '4x #forge:plates/stainless_steel',
@@ -261,7 +261,7 @@ ServerEvents.recipes(allthemods => {
 
     let upgradeTiers = ['advanced', 'elite', 'ultimate'];
 
-    mekMachines.forEach(function(entry) {
+    mekMachines.forEach(function (entry) {
         let machine = entry.machine;
         let factory = entry.factory;
 
@@ -272,7 +272,7 @@ ServerEvents.recipes(allthemods => {
         );
 
         // each subsequent tier upgrades the previous factory
-        upgradeTiers.forEach(function(tier, i) {
+        upgradeTiers.forEach(function (tier, i) {
             let prevTier = i === 0 ? 'basic' : upgradeTiers[i - 1];
             allthemods.shapeless(
                 'mekanism:' + tier + '_' + factory + '_factory',
@@ -284,23 +284,83 @@ ServerEvents.recipes(allthemods => {
 
     //structural glass
     allthemods.recipes.gtceu.forming_press('gregification:mekanism/structural_glass')
-    .itemInputs([
-        '2x gtceu:laminated_glass',
-        '4x #forge:dusts/thallium_carbonate'
-    ])
-    .itemOutputs('mekanism:structural_glass')
-    .duration(200)
-    .EUt(IV);
+        .itemInputs([
+            '2x gtceu:laminated_glass',
+            '4x #forge:dusts/thallium_carbonate'
+        ])
+        .itemOutputs('mekanism:structural_glass')
+        .duration(200)
+        .EUt(IV);
 
     allthemods.recipes.gtceu.forming_press('gregification:mekanism/reactor_glass')
-    .itemInputs([
-        'mekanism:structural_glass',
-        '2x #forge:dusts/thallium_carbonate'
-    ])
-    .itemOutputs('mekanismgenerators:reactor_glass')
-    .duration(400)
-    .EUt(IV);
+        .itemInputs([
+            'mekanism:structural_glass',
+            '2x #forge:dusts/thallium_carbonate'
+        ])
+        .itemOutputs('mekanismgenerators:reactor_glass')
+        .duration(400)
+        .EUt(IV);
 
+    const tiers = ['basic', 'advanced', 'elite', 'ultimate'];
+
+    const plates = [
+        '#forge:plates/rubber',
+        '#forge:plates/polyethylene',
+        '#forge:plates/polytetrafluoroethylene',
+        '#forge:plates/polybenzimidazole'
+    ];
+
+    const alloys = [
+        '#forge:foils/mica_insulator',
+        'mekanism:alloy_infused',
+        'mekanism:alloy_reinforced',
+        'mekanism:alloy_atomic'
+    ];
+
+    const volts = ['mv', 'hv', 'ev', 'iv'];
+
+    const gt = (part) => volts.map(v => `gtceu:${v}_${part}`);
+
+    const transmitters = [
+        {
+            name: 'universal_cable',
+            center: [
+                'gtceu:lv_voltage_coil',
+                'mekanism:basic_universal_cable',
+                'mekanism:advanced_universal_cable',
+                'mekanism:elite_universal_cable'
+            ],
+            side: [
+                '#forge:rods/magnetic_steel',
+                '#forge:rods/magnetic_neodymium',
+                '#forge:rods/magnetic_samarium',
+                '#forge:rods/magnetic_samarium_cobalt'
+            ]
+        },
+        { name: 'mechanical_pipe', center: gt('electric_pump'), side: gt('fluid_regulator') },
+        { name: 'logistical_transporter', center: gt('conveyor_module'), side: gt('electric_piston') },
+        { name: 'pressurized_tube', center: gt('electric_pump'), side: gt('electric_piston') },
+        { name: 'thermodynamic_conductor', center: gt('sensor'), side: gt('electric_motor') }
+    ];
+
+    transmitters.forEach(type => {
+        tiers.forEach((tier, i) => {
+            const output = `mekanism:${tier}_${type.name}`;
+
+            allthemods.remove({ output: output });
+
+            allthemods.shaped(output, [
+                'RMR',
+                'LCL',
+                'RMR'
+            ], {
+                R: plates[i],
+                M: alloys[i],
+                C: type.center[i],
+                L: type.side[i]
+            }).id(`gregification:mekanism_${tier}_${type.name}`);
+        });
+    });
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

@@ -107,7 +107,7 @@ ServerEvents.recipes(allthemods => {
     advancedCasings.forEach((controller, index) => {
         addAssembler(
             [
-                '#forge:frames/draconium',
+                '#forge:frames/enderium',
                 '4x #forge:double_plates/graphite',
                 '2x #forge:screws/enderium',
                 '8x #forge:plates/hafnium',
@@ -136,7 +136,7 @@ ServerEvents.recipes(allthemods => {
     );
     addAssembler(
         [
-            '#forge:frames/draconium',
+            '#forge:frames/enderium',
             '8x #forge:rods/graphite',
             '4x #forge:plates/tungsten_steel',
             '16x #forge:screws/hafnium',
@@ -162,7 +162,7 @@ ServerEvents.recipes(allthemods => {
     );
     addAssembler(
         [
-            '#forge:frames/draconium',
+            '#forge:frames/enderium',
             '6x #forge:rods/graphite',
             '3x #forge:ingots/uranium',
             '2x #forge:rings/enderium',
@@ -199,7 +199,7 @@ ServerEvents.recipes(allthemods => {
     injectors.forEach((controller, index) => {
         addAssembler(
             [
-                '#forge:frames/draconium',
+                '#forge:frames/enderium',
                 '2x gtceu:iv_conveyor_module',
                 'gtceu:iv_robot_arm',
                 '4x #forge:gears/plastic',
@@ -250,7 +250,7 @@ ServerEvents.recipes(allthemods => {
     fluidPortsAdvanced.forEach((controller, index) => {
         addAssembler(
             [
-                '#forge:frames/draconium',
+                '#forge:frames/enderium',
                 '6x #forge:double_plates/graphite',
                 '6x #forge:plates/tungsten_steel',
                 'pneumaticcraft:reinforced_stone',
@@ -284,7 +284,7 @@ ServerEvents.recipes(allthemods => {
     );
     addAssembler(
         [
-            '#forge:frames/draconium',
+            '#forge:frames/enderium',
             'pneumaticcraft:reinforced_stone',
             '2x #forge:gears/graphite',
             '4x #forge:plates/tungsten_steel',
@@ -299,7 +299,7 @@ ServerEvents.recipes(allthemods => {
     // --- COLLECTOR ---
     addAssembler(
         [
-            '#forge:frames/draconium',
+            '#forge:frames/enderium',
             'pneumaticcraft:reinforced_stone',
             '4x #forge:gears/graphite',
             '4x #forge:plates/hafnium',
@@ -328,7 +328,7 @@ ServerEvents.recipes(allthemods => {
     );
     addAssembler(
         [
-            '#forge:frames/draconium',
+            '#forge:frames/enderium',
             '4x #forge:screws/tungsten_steel',
             '2x #forge:rotors/graphite',
             '2x #forge:plates/tungsten_steel',
@@ -354,8 +354,8 @@ ServerEvents.recipes(allthemods => {
     );
     addAssembler(
         [
-            '#forge:rods/draconium',
-            '2x #forge:plates/draconium',
+            '#forge:rods/enderium',
+            '2x #forge:plates/enderium',
             '2x #forge:plates/tungsten_steel',
             '4x #forge:screws/tungsten_steel',
             '2x #forge:plates/hafnium'
@@ -405,7 +405,7 @@ ServerEvents.recipes(allthemods => {
     advancedPowerCasings.forEach((controller, index) => {
         addAssembler(
             [
-                '#forge:frames/draconium',
+                '#forge:frames/enderium',
                 '2x gtceu:hpic_chip',
                 '2x gtceu:iv_voltage_coil',
                 '2x #forge:screws/enderium',
@@ -452,7 +452,7 @@ ServerEvents.recipes(allthemods => {
     advancedCharging.forEach((controller, index) => {
         addAssembler(
             [
-                '#forge:frames/draconium',
+                '#forge:frames/enderium',
                 'gtceu:hpic_chip',
                 'gtceu:iv_voltage_coil',
                 '2x #forge:screws/enderium',
@@ -504,7 +504,7 @@ ServerEvents.recipes(allthemods => {
     redstonePorts.forEach((controller, index) => {
         addAssembler(
             [
-                '#forge:frames/draconium',
+                '#forge:frames/enderium',
                 '2x #forge:screws/enderium',
                 '4x #forge:plates/plastic',
                 'pneumaticcraft:reinforced_stone',
@@ -528,7 +528,7 @@ ServerEvents.recipes(allthemods => {
     computerPorts.forEach((controller, index) => {
         addAssembler(
             [
-                '#forge:frames/draconium',
+                '#forge:frames/enderium',
                 '2x #forge:screws/enderium',
                 '4x #forge:plates/plastic',
                 'pneumaticcraft:reinforced_stone',
