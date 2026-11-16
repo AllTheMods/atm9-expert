@@ -73,14 +73,15 @@ const COIL_TEMPS = {
 };
 
 
-function overwriteToolStats(materialName, speed, damage, durability, harvestLevel) {
+
+function overwriteToolStats(materialName, speed, damage, durability, harvestLevel, unbreakable) {
     let mat = GTMaterials.get(materialName);
 
     if (mat != null) {
         if (mat.hasProperty(PropertyKey.TOOL)) {
             mat.removeProperty(PropertyKey.TOOL);
         }
-        let newProps = ToolProperty.Builder.of(speed, damage, durability, harvestLevel,
+        let builder = ToolProperty.Builder.of(speed, damage, durability, harvestLevel,
             [
                 GTToolType.PICKAXE,
                 GTToolType.AXE,
@@ -97,10 +98,11 @@ function overwriteToolStats(materialName, speed, damage, durability, harvestLeve
                 GTToolType.MINING_HAMMER,
                 GTToolType.SAW
             ]
-        )
-            .unbreakable()
-            .build();
-        mat.setProperty(PropertyKey.TOOL, newProps);
+        );
+        if (unbreakable) {
+            builder = builder.unbreakable();
+        }
+        mat.setProperty(PropertyKey.TOOL, builder.build());
     }
 }
 
@@ -2379,9 +2381,9 @@ GTCEuStartupEvents.materialModification(event => {
     materials.forEach(m => m.applyUnification());
     materials.forEach(m => m.applyModification());
     materials.forEach(m => m.applyDecomposition());
-    overwriteToolStats('allthemodium', 16.0, 6.0, 0, 5);
-    overwriteToolStats('vibranium', 20.0, 8.0, 0, 6);
-    overwriteToolStats('unobtainium', 24.0, 10.0, 0, 7);
+    overwriteToolStats('allthemodium', 16.0, 6.0, 0, 5, true);
+    overwriteToolStats('vibranium', 20.0, 8.0, 0, 6, true);
+    overwriteToolStats('unobtainium', 24.0, 10.0, 0, 7, true);
     overwriteToolStats('manasteel', 12, 5, 1700, 5);
     overwriteToolStats('umbral_steel', 13, 5, 2000, 5);
     overwriteToolStats('terrasteel', 14, 5, 2500, 7);
