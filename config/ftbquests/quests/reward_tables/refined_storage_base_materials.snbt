@@ -7,6 +7,6 @@
 		{ count: 5, item: "refinedstorage:quartz_enriched_iron", weight: 2.0f }
 		{ item: "refinedstorage:machine_casing" }
 	]
-	title: "Refined Storage Base Materials"
+	title: "{atm9.quest.extra.refined_storage_base_materials.title.69f110cbc2}"
 	use_title: true
 }

@@ -14,6 +14,6 @@
 		{ item: "powah:energized_steel_block", weight: 2.0f }
 		{ item: "powah:blazing_crystal_block" }
 	]
-	title: "Powah: Blazing Loot Reward"
+	title: "{atm9.quest.extra.powah_blazing.title.2561ad6f3a}"
 	use_title: true
 }

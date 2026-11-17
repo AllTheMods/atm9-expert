@@ -21,7 +21,7 @@
 							value: "forge:raw_materials/copper"
 						}
 					}
-					title: "Any #forge:raw_materials/copper"
+					title: "{atm9.quest.extra.steam.title.2181939d95}"
 					type: "item"
 				}
 				{
@@ -33,7 +33,7 @@
 							value: "forge:raw_materials/tin"
 						}
 					}
-					title: "Any #forge:raw_materials/tin"
+					title: "{atm9.quest.extra.steam.title.322756024c}"
 					type: "item"
 				}
 				{
@@ -45,7 +45,7 @@
 							value: "forge:raw_materials/iron"
 						}
 					}
-					title: "Any #forge:raw_materials/iron"
+					title: "{atm9.quest.extra.steam.title.03881d4fbc}"
 					type: "item"
 				}
 				{
@@ -71,7 +71,7 @@
 						value: "minecraft:logs"
 					}
 				}
-				title: "Any #minecraft:logs"
+				title: "{atm9.quest.extra.steam.title.6a9742403c}"
 				type: "item"
 			}]
 			title: "{atm9e.quest.steam.logs.title}"
@@ -107,7 +107,7 @@
 							value: "minecraft:logs"
 						}
 					}
-					title: "Any #minecraft:logs"
+					title: "{atm9.quest.extra.steam.title.6a9742403c}"
 					type: "item"
 				}
 				{
@@ -125,7 +125,7 @@
 							value: "forge:workbench"
 						}
 					}
-					title: "Any #forge:workbench"
+					title: "{atm9.quest.extra.steam.title.3f0dc8974d}"
 					type: "item"
 				}
 			]
@@ -347,7 +347,7 @@
 							value: "gtceu:tools/crafting_hammers"
 						}
 					}
-					title: "Any #gtceu:tools/crafting_hammers"
+					title: "{atm9.quest.extra.steam.title.91db5eeb60}"
 					type: "item"
 				}
 				{
@@ -360,7 +360,7 @@
 						}
 					}
 					optional_task: true
-					title: "Any #gtceu:tools/crafting_files"
+					title: "{atm9.quest.extra.steam.title.1b11b99bbb}"
 					type: "item"
 				}
 				{
@@ -373,7 +373,7 @@
 						}
 					}
 					optional_task: true
-					title: "Any #gtceu:tools/crafting_saws"
+					title: "{atm9.quest.extra.steam.title.d345e17988}"
 					type: "item"
 				}
 				{
@@ -386,7 +386,7 @@
 						}
 					}
 					optional_task: true
-					title: "Any #gtceu:tools/crafting_screwdrivers"
+					title: "{atm9.quest.extra.steam.title.6ae8535fe7}"
 					type: "item"
 				}
 				{
@@ -399,7 +399,7 @@
 						}
 					}
 					optional_task: true
-					title: "Any #gtceu:tools/crafting_mortars"
+					title: "{atm9.quest.extra.steam.title.6b2f610628}"
 					type: "item"
 				}
 				{
@@ -412,7 +412,7 @@
 						}
 					}
 					optional_task: true
-					title: "Any #gtceu:tools/crafting_wrenches"
+					title: "{atm9.quest.extra.steam.title.6bd705acb7}"
 					type: "item"
 				}
 				{
@@ -425,7 +425,7 @@
 						}
 					}
 					optional_task: true
-					title: "Any #gtceu:tools/crafting_wire_cutters"
+					title: "{atm9.quest.extra.steam.title.8dd6714dcd}"
 					type: "item"
 				}
 			]
@@ -447,7 +447,7 @@
 							value: "forge:dusts/copper"
 						}
 					}
-					title: "Any #forge:dusts/copper"
+					title: "{atm9.quest.extra.steam.title.d092054293}"
 					type: "item"
 				}
 				{
@@ -459,7 +459,7 @@
 							value: "forge:dusts/tin"
 						}
 					}
-					title: "Any #forge:dusts/tin"
+					title: "{atm9.quest.extra.steam.title.59b493fd5b}"
 					type: "item"
 				}
 				{
@@ -471,7 +471,7 @@
 							value: "forge:dusts/bronze"
 						}
 					}
-					title: "Any #forge:dusts/bronze"
+					title: "{atm9.quest.extra.steam.title.86d6e051e4}"
 					type: "item"
 				}
 			]
@@ -517,7 +517,7 @@
 						value: "forge:plates/bronze"
 					}
 				}
-				title: "Any #forge:plates/bronze"
+				title: "{atm9.quest.extra.steam.title.4b16eb20e5}"
 				type: "item"
 			}]
 			title: "{atm9e.quest.steam.bronze_plate.title}"
@@ -567,7 +567,7 @@
 			id: "0F77D4C0292A406F"
 			tasks: [{
 				id: "48C02AB036D90B07"
-				title: "Steam"
+				title: "{atm9.quest.extra.steam.title.f71a850301}"
 				type: "checkmark"
 			}]
 			title: "{atm9e.quest.steam.steam.title}"
@@ -682,7 +682,7 @@
 							value: "forge:dusts/zinc"
 						}
 					}
-					title: "Any #forge:dusts/zinc"
+					title: "{atm9.quest.extra.steam.title.3f355ddf3d}"
 					type: "item"
 				}
 				{
@@ -715,7 +715,7 @@
 			subtitle: "{atm9e.quest.steam.create.sub}"
 			tasks: [{
 				id: "143A152562398294"
-				title: "Create"
+				title: "{atm9.quest.extra.steam.title.4759498ac2}"
 				type: "checkmark"
 			}]
 			title: "{atm9e.quest.steam.create.title}"
@@ -795,7 +795,7 @@
 						value: "forge:ingots/steel"
 					}
 				}
-				title: "Any #forge:ingots/steel"
+				title: "{atm9.quest.extra.steam.title.34fbb2cca0}"
 				type: "item"
 			}]
 			title: "{atm9e.quest.steam.steel.title}"
@@ -955,7 +955,7 @@
 							value: "forge:dusts/sulfur"
 						}
 					}
-					title: "Any #forge:dusts/sulfur"
+					title: "{atm9.quest.extra.steam.title.3380b01975}"
 					type: "item"
 				}
 			]
@@ -1046,7 +1046,7 @@
 							value: "forge:dusts/coal"
 						}
 					}
-					title: "Any #forge:dusts/coal"
+					title: "{atm9.quest.extra.steam.title.02796c6c64}"
 					type: "item"
 				}
 				{

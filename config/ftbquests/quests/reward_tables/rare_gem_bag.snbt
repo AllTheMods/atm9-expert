@@ -252,6 +252,6 @@
 			}
 		}
 	]
-	title: "Rare Gem Bag"
+	title: "{atm9.quest.extra.rare_gem_bag.title.75c2ba64e3}"
 	use_title: true
 }

@@ -13,6 +13,6 @@
 		{ item: "powah:solar_panel_hardened" }
 		{ item: "powah:energized_steel_block" }
 	]
-	title: "Powah: Hardened Loot Reward"
+	title: "{atm9.quest.extra.powah_hardened.title.bc02bf8c52}"
 	use_title: true
 }

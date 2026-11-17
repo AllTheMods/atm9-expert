@@ -8,6 +8,6 @@
 		{ item: "refinedstorage:16k_storage_part", weight: 10.0f }
 		{ item: "refinedstorage:64k_storage_part" }
 	]
-	title: "RS Random Storage Parts"
+	title: "{atm9.quest.extra.rs_random_storage_parts.title.6d501ba20b}"
 	use_title: true
 }

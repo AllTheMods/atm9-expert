@@ -16,7 +16,7 @@
 		}
 		{
 			height: 3.0d
-			hover: ["Pyromancer"]
+			hover: ["{atm9.quest.extra.iron_spells_and_spellbooks.hover.2617deef08}"]
 			image: "atm:textures/questpics/iron_spells/spells_pyromancer.png"
 			rotation: 0.0d
 			width: 1.5506216696269983d
@@ -25,7 +25,7 @@
 		}
 		{
 			height: 3.0d
-			hover: ["Cryomancer"]
+			hover: ["{atm9.quest.extra.iron_spells_and_spellbooks.hover.6f60d69d84}"]
 			image: "atm:textures/questpics/iron_spells/spells_cryomancer.png"
 			rotation: 0.0d
 			width: 1.738703339882122d
@@ -34,7 +34,7 @@
 		}
 		{
 			height: 3.0d
-			hover: ["Inscription Table"]
+			hover: ["{atm9.quest.extra.iron_spells_and_spellbooks.hover.7601c891ad}"]
 			image: "atm:textures/questpics/iron_spells/spells_table.png"
 			rotation: 0.0d
 			width: 5.4288407163053725d
@@ -43,7 +43,7 @@
 		}
 		{
 			height: 2.0d
-			hover: ["Alchemist Cauldron"]
+			hover: ["{atm9.quest.extra.iron_spells_and_spellbooks.hover.0bc80132ee}"]
 			image: "atm:textures/questpics/iron_spells/spells_cauldron.png"
 			rotation: 0.0d
 			width: 2.106776180698152d
@@ -52,7 +52,7 @@
 		}
 		{
 			height: 2.0d
-			hover: ["Arcane Anvil"]
+			hover: ["{atm9.quest.extra.iron_spells_and_spellbooks.hover.5eff31e792}"]
 			image: "atm:textures/questpics/iron_spells/spells_anvil.png"
 			rotation: 0.0d
 			width: 1.9232409381663114d
@@ -61,7 +61,7 @@
 		}
 		{
 			height: 2.0d
-			hover: ["Scroll Forge"]
+			hover: ["{atm9.quest.extra.iron_spells_and_spellbooks.hover.4c5399f06d}"]
 			image: "atm:textures/questpics/iron_spells/spells_scroll.png"
 			rotation: 0.0d
 			width: 2.3376623376623376d
@@ -70,7 +70,7 @@
 		}
 		{
 			height: 4.0d
-			hover: ["The Dead King"]
+			hover: ["{atm9.quest.extra.iron_spells_and_spellbooks.hover.f3fa64cd27}"]
 			image: "atm:textures/questpics/iron_spells/spells_king.png"
 			rotation: 0.0d
 			width: 2.3363914373088686d
@@ -79,7 +79,7 @@
 		}
 		{
 			height: 3.0d
-			hover: ["Necromancer"]
+			hover: ["{atm9.quest.extra.iron_spells_and_spellbooks.hover.896ae426e8}"]
 			image: "atm:textures/questpics/iron_spells/spells_necromancer.png"
 			rotation: 0.0d
 			width: 1.7410714285714288d
@@ -88,7 +88,7 @@
 		}
 		{
 			height: 3.0d
-			hover: ["Ancient Knight"]
+			hover: ["{atm9.quest.extra.iron_spells_and_spellbooks.hover.e9be2923df}"]
 			image: "atm:textures/questpics/iron_spells/spells_knight.png"
 			rotation: 0.0d
 			width: 2.070567986230637d
@@ -97,7 +97,7 @@
 		}
 		{
 			height: 2.5d
-			hover: ["Mountain Tower"]
+			hover: ["{atm9.quest.extra.iron_spells_and_spellbooks.hover.9f99c40e43}"]
 			image: "atm:textures/questpics/iron_spells/spells_mountaintower.png"
 			rotation: 0.0d
 			width: 4.444444444444445d
@@ -106,7 +106,7 @@
 		}
 		{
 			height: 2.5d
-			hover: ["Pyromancer Tower"]
+			hover: ["{atm9.quest.extra.iron_spells_and_spellbooks.hover.30ccf051a5}"]
 			image: "atm:textures/questpics/iron_spells/spells_pyromancertower.png"
 			rotation: 0.0d
 			width: 4.444444444444445d
@@ -115,7 +115,7 @@
 		}
 		{
 			height: 2.5d
-			hover: ["Mangrove Hut"]
+			hover: ["{atm9.quest.extra.iron_spells_and_spellbooks.hover.fe001cd316}"]
 			image: "atm:textures/questpics/iron_spells/spells_magrovehut.png"
 			rotation: 0.0d
 			width: 4.444444444444445d
@@ -124,7 +124,7 @@
 		}
 		{
 			height: 2.5d
-			hover: ["Evoker Fort"]
+			hover: ["{atm9.quest.extra.iron_spells_and_spellbooks.hover.13519e81e7}"]
 			image: "atm:textures/questpics/iron_spells/spells_evokerfort.png"
 			rotation: 0.0d
 			width: 4.444444444444445d
@@ -2277,12 +2277,12 @@
 		{
 			can_repeat: false
 			description: [
-				"This Quest has been authored by &6AllTheMods Staff&r, or a &2Community contributor&r for use in AllTheMods Modpacks."
-				"As all &6AllTheMods&r packs are licensed under &eAll Rights Reserved&r, this Quest is not allowed to be used in any public packs not released by the &6AllTheMods Team&r, without explicit permission."
+				"{atm9.quest.extra.an_introduction.description.b1e1034170}"
+				"{atm9.quest.extra.an_introduction.description.0f5ef769f8}"
 				""
 				""
 				""
-				"This quest is intentionally hidden, if you're seeing this, you're in editing mode."
+				"{atm9.quest.extra.an_introduction.description.9ac7917306}"
 			]
 			disable_toast: true
 			hide_details_until_startable: true
@@ -2302,12 +2302,12 @@
 				{
 					disable_toast: true
 					id: "748281267C747571"
-					title: "Quests By AllTheMods"
+					title: "{atm9.quest.extra.an_introduction.title.8b3aca5269}"
 					type: "checkmark"
 				}
 				{
 					id: "086FD18B34727A13"
-					title: "Quests By AllTheMods"
+					title: "{atm9.quest.extra.an_introduction.title.8b3aca5269}"
 					type: "checkmark"
 				}
 			]

@@ -17,5 +17,5 @@
 		{ count: 2, item: "gtceu:neutronium_block", random_bonus: 2, weight: 6.0f }
 		{ item: "gtceu:uv_energy_input_hatch_16a", weight: 8.0f }
 	]
-	title: "Mythic GT Rewards"
+	title: "{atm9.quest.extra.mythic_gt_rewards.title.ffad4b8b5f}"
 }

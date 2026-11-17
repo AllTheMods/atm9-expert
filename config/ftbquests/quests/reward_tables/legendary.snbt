@@ -110,6 +110,6 @@
 		}
 		{ item: "apotheosis:draconic_endshelf" }
 	]
-	title: "&6Legendary Reward"
+	title: "{atm9.quest.extra.legendary.title.4445943f88}"
 	use_title: true
 }

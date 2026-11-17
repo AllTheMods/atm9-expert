@@ -11,6 +11,6 @@
 		{ count: 8, item: "powah:dielectric_rod", random_bonus: 8 }
 		{ count: 16, item: "powah:dielectric_paste", random_bonus: 16 }
 	]
-	title: "Basic Powah Mats"
+	title: "{atm9.quest.extra.powah_mats.title.63d8d21071}"
 	use_title: true
 }

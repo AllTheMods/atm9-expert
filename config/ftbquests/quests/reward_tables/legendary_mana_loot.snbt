@@ -14,6 +14,6 @@
 		{ item: "botania:gaia_ingot" }
 		{ item: "botania:terrasteel_ingot", weight: 3.0f }
 	]
-	title: "&6Legendary Mana Loot Bag&r"
+	title: "{atm9.quest.extra.legendary_mana_loot.title.f67b48e210}"
 	use_title: true
 }

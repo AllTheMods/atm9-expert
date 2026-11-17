@@ -54,6 +54,6 @@
 		}
 		{ count: 4, item: "twilightforest:cooked_meef", random_bonus: 4, weight: 100.0f }
 	]
-	title: "Twilight Forest Loot Bag"
+	title: "{atm9.quest.extra.twilight_forest_loot_bag.title.0488479444}"
 	use_title: true
 }

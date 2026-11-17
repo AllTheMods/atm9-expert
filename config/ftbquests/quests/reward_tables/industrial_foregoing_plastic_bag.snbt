@@ -46,5 +46,5 @@
 		{ item: "industrialforegoing:pink_slime_bucket", weight: 0.3f }
 		{ count: 5, item: "industrialforegoing:pink_slime", weight: 0.5f }
 	]
-	title: "&aIndustrial Foregoing&r &9Basic Bag"
+	title: "{atm9.quest.extra.industrial_foregoing_plastic_bag.title.4401f3848b}"
 }

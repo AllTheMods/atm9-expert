@@ -9,5 +9,5 @@
 		{ count: 3, item: "draconicevolution:draconium_core" }
 		{ count: 3, item: "minecraft:diamond", weight: 0.5f }
 	]
-	title: "DE Basic"
+	title: "{atm9.quest.extra.de_basic.title.6ca91b30b7}"
 }

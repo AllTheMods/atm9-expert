@@ -15,6 +15,6 @@
 		{ count: 2, item: "ars_nouveau:wilden_horn", random_bonus: 2, weight: 25.0f }
 		{ count: 2, item: "ars_nouveau:starbuncle_shards", random_bonus: 2, weight: 10.0f }
 	]
-	title: "Ars Nouveau Rewards"
+	title: "{atm9.quest.extra.ars_nouveau_rewards.title.98b1bca8c0}"
 	use_title: true
 }

@@ -59,6 +59,6 @@
 		{ item: "bloodmagic:ritualstone", random_bonus: 3, weight: 25.0f }
 		{ item: "bloodmagic:soulsnare", random_bonus: 3, weight: 100.0f }
 	]
-	title: "&cBlood Magic Loot Box"
+	title: "{atm9.quest.extra.blood_magic_loot_bag.title.dbfc5e678b}"
 	use_title: true
 }

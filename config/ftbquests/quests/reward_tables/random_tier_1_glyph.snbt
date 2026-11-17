@@ -31,6 +31,6 @@
 		{ item: "ars_nouveau:glyph_pull" }
 		{ item: "ars_nouveau:glyph_gust" }
 	]
-	title: "Random Tier 1 Glyph"
+	title: "{atm9.quest.extra.random_tier_1_glyph.title.14f1838743}"
 	use_title: true
 }

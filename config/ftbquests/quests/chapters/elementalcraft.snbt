@@ -14,7 +14,7 @@
 	images: [
 		{
 			height: 0.3d
-			hover: ["&dNeeded for the ATM Star&r"]
+			hover: ["{atm9.quest.extra.elementalcraft.hover.7e7d7d7609}"]
 			image: "allthetweaks:item/atm_star"
 			rotation: 0.0d
 			width: 0.3d
@@ -23,7 +23,7 @@
 		}
 		{
 			height: 0.3d
-			hover: ["&dNeeded for the ATM Star&r"]
+			hover: ["{atm9.quest.extra.elementalcraft.hover.7e7d7d7609}"]
 			image: "allthetweaks:item/atm_star"
 			rotation: 0.0d
 			width: 0.3d
@@ -36,13 +36,13 @@
 	quests: [
 		{
 			description: [
-				"Welcome to &aElementalCraft&f!"
+				"{atm9.quest.extra.elementalcraft.description.da4af70021}"
 				""
-				"The &eElementopedia&f is your go-to guide for learning all about this mod!"
+				"{atm9.quest.extra.elementalcraft.description.46658e9358}"
 				""
-				"Killing mobs will grant you one of 4 &9Element Shards&r. These are used to create all of the items within the mod."
+				"{atm9.quest.extra.elementalcraft.description.55131866c8}"
 				""
-				"Note: You can search up which mobs drop shards in JEI."
+				"{atm9.quest.extra.elementalcraft.description.2d11225bf3}"
 			]
 			icon: {
 				Count: 1
@@ -81,10 +81,10 @@
 						value: "elementalcraft:shards"
 					}
 				}
-				title: "Any #elementalcraft:shards"
+				title: "{atm9.quest.extra.elementalcraft.title.99322da82b}"
 				type: "item"
 			}]
-			title: "ElementalCraft"
+			title: "{atm9.quest.extra.elementalcraft.title.e7ffc19a2e}"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -108,9 +108,9 @@
 		{
 			dependencies: ["5E029A2BA469F42D"]
 			description: [
-				"The &eelement extractor&f will extract element out of the element sources that are generated throughout the world. The extractor must be placed directly below the source while also on top of an &eelement container&f."
+				"{atm9.quest.extra.elementalcraft.description.68b034e7aa}"
 				""
-				"The &eelement evaporator&f turns elemental shards into element. Must be placed ontop of a container"
+				"{atm9.quest.extra.elementalcraft.description.7dfafd0f63}"
 			]
 			id: "023C2C0632BC0934"
 			rewards: [{
@@ -130,7 +130,7 @@
 					type: "item"
 				}
 			]
-			title: "Getting Elements"
+			title: "{atm9.quest.extra.elementalcraft.title.147ac9855a}"
 			x: 4.5d
 			y: -1.0d
 		}
@@ -153,7 +153,7 @@
 		}
 		{
 			dependencies: ["5E029A2BA469F42D"]
-			description: ["Must be placed on top of an element container."]
+			description: ["{atm9.quest.extra.elementalcraft.description.8d405f2bdb}"]
 			id: "06AAC66822DE0F2C"
 			rewards: [{
 				id: "252A2D00EB5429FC"
@@ -181,7 +181,7 @@
 				item: "elementalcraft:small_container"
 				type: "item"
 			}]
-			title: "Small Elemental Storage"
+			title: "{atm9.quest.extra.elementalcraft.title.7a89c54673}"
 			x: 5.5d
 			y: 0.0d
 		}
@@ -215,7 +215,7 @@
 					type: "item"
 				}
 			]
-			title: "Crystals"
+			title: "{atm9.quest.extra.elementalcraft.title.b502b40771}"
 			x: 6.0d
 			y: -1.0d
 		}
@@ -497,7 +497,7 @@
 		}
 		{
 			dependencies: ["5E25F6AE2AFF8E7D"]
-			description: ["Cooks like a normal furnace, but uses fire element for fuel."]
+			description: ["{atm9.quest.extra.elementalcraft.description.eb10c4e7bc}"]
 			id: "3A7EFD9387B8F82E"
 			tasks: [{
 				id: "676756585356242C"
@@ -990,7 +990,7 @@
 					type: "item"
 				}
 			]
-			title: "Huge Elemental Storage"
+			title: "{atm9.quest.extra.elementalcraft.title.474f7818db}"
 			x: 14.0d
 			y: 1.5d
 		}
@@ -1019,7 +1019,7 @@
 					type: "item"
 				}
 			]
-			title: "Crude Gems"
+			title: "{atm9.quest.extra.elementalcraft.title.d970338f96}"
 			x: 11.0d
 			y: 2.5d
 		}
@@ -1048,7 +1048,7 @@
 					type: "item"
 				}
 			]
-			title: "Fine Gems"
+			title: "{atm9.quest.extra.elementalcraft.title.7983704f8a}"
 			x: 12.0d
 			y: 3.0d
 		}
@@ -1077,7 +1077,7 @@
 					type: "item"
 				}
 			]
-			title: "Pristine Gems"
+			title: "{atm9.quest.extra.elementalcraft.title.ca716fc8e5}"
 			x: 13.0d
 			y: 2.5d
 		}
@@ -1122,7 +1122,7 @@
 				item: "elementalcraft:purifier"
 				type: "item"
 			}]
-			title: "Elemental Ore Doubling"
+			title: "{atm9.quest.extra.elementalcraft.title.1bf63e99ab}"
 			x: 13.0d
 			y: 1.0d
 		}
@@ -1501,7 +1501,7 @@
 					type: "item"
 				}
 			]
-			title: "Speed Runes"
+			title: "{atm9.quest.extra.elementalcraft.title.de568f4bad}"
 			x: 8.0d
 			y: -3.0d
 		}
@@ -1557,7 +1557,7 @@
 					type: "item"
 				}
 			]
-			title: "Luck Runes"
+			title: "{atm9.quest.extra.elementalcraft.title.87baa70375}"
 			x: 9.0d
 			y: -3.5d
 		}
@@ -1613,13 +1613,13 @@
 					type: "item"
 				}
 			]
-			title: "Preservation Runes"
+			title: "{atm9.quest.extra.elementalcraft.title.f6ab6873eb}"
 			x: 10.0d
 			y: -3.0d
 		}
 		{
 			dependencies: ["72F4183F5ECEB474"]
-			description: ["Can withstand explosions and the Wither."]
+			description: ["{atm9.quest.extra.elementalcraft.description.f6cfcb2c96}"]
 			id: "5619EF8C3300D184"
 			tasks: [{
 				id: "6EA510E798086178"
@@ -1664,5 +1664,5 @@
 			y: 1.5d
 		}
 	]
-	title: "ElementalCraft"
+	title: "{atm9.quest.extra.elementalcraft.title.e7ffc19a2e}"
 }

@@ -34,5 +34,5 @@
 		{ count: 6, item: "gtceu:rhodium_dust", random_bonus: 12, weight: 10.0f }
 		{ count: 4, item: "gtceu:neuro_processing_unit", random_bonus: 8, weight: 10.0f }
 	]
-	title: "GT UV Basic Rewards"
+	title: "{atm9.quest.extra.gt_uv_basic_rewards.title.3c050b0ea0}"
 }

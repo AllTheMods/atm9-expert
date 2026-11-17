@@ -13,6 +13,6 @@
 		{ item: "botania:black_lotus", weight: 0.2f }
 		{ item: "botania:blacker_lotus", weight: 0.1f }
 	]
-	title: "&2Elven Loot Bag&r"
+	title: "{atm9.quest.extra.elven_loot.title.cbf04f1181}"
 	use_title: true
 }

@@ -343,6 +343,6 @@
 		{ item: "reliquary:fertile_lily_pad", random_bonus: 2, weight: 5.0f }
 		{ item: "minecraft:wither_skeleton_skull", weight: 10.0f }
 	]
-	title: "&aUncommon Reward"
+	title: "{atm9.quest.extra.uncommon.title.b2111bb221}"
 	use_title: true
 }

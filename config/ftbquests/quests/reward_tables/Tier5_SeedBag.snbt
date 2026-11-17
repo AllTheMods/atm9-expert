@@ -25,5 +25,5 @@
 		{ item: "mysticalagriculture:supremium_ingot", random_bonus: 2, weight: 5.0f }
 		{ item: "mysticalagriculture:supremium_gemstone", random_bonus: 1, weight: 5.0f }
 	]
-	title: "&4Tier 5 Seed Bag"
+	title: "{atm9.quest.extra.Tier5_SeedBag.title.5ebabfb24b}"
 }

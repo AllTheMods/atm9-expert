@@ -6,6 +6,6 @@
 		{ item: "extradisks:withering_processor", random_bonus: 2, weight: 10.0f }
 		{ item: "extrastorage:neural_processor", random_bonus: 2, weight: 50.0f }
 	]
-	title: "RS Advanced Parts"
+	title: "{atm9.quest.extra.rs_advanced_parts.title.380b253726}"
 	use_title: true
 }

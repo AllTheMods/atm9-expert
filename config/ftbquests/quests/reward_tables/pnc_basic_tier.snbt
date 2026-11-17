@@ -98,6 +98,6 @@
 		{ count: 2, item: "pneumaticcraft:air_canister", random_bonus: 1 }
 		{ item: "pneumaticcraft:manual_compressor", weight: 1.5f }
 	]
-	title: "PNC: Basic Tier"
+	title: "{atm9.quest.extra.pnc_basic_tier.title.979781359f}"
 	use_title: true
 }

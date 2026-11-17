@@ -15,6 +15,6 @@
 		{ count: 3, item: "gtceu:wood_plate", random_bonus: 6, weight: 4.0f }
 		{ count: 8, item: "gtceu:raw_rubber_dust", random_bonus: 8, weight: 8.0f }
 	]
-	title: "GT Steam Basic Rewards"
+	title: "{atm9.quest.extra.gt_steam_basic_rewards.title.40c6fddde1}"
 	use_title: true
 }

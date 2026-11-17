@@ -14,6 +14,6 @@
 		{ item: "powah:solar_panel_starter" }
 		{ item: "powah:solar_panel_basic" }
 	]
-	title: "Powah: Basic Loot Reward"
+	title: "{atm9.quest.extra.powah_basic_loot.title.4b3cbc4edf}"
 	use_title: true
 }

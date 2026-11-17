@@ -17,6 +17,6 @@
 		{ item: "pneumaticcraft:jet_boots_upgrade_1" }
 		{ item: "pneumaticcraft:jet_boots_upgrade_2", weight: 0.5f }
 	]
-	title: "PNC: Advanced Tier"
+	title: "{atm9.quest.extra.pnc_advanced_tier.title.9e0c4db49f}"
 	use_title: true
 }

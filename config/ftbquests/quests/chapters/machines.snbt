@@ -9,7 +9,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["Craft a carpenter for more efficient woodworking."]
+			description: ["{atm9.quest.extra.machines.description.1f7ed8bcf3}"]
 			id: "7A02789C9D294784"
 			rewards: [{
 				count: 16
@@ -18,18 +18,18 @@
 				type: "item"
 			}]
 			shape: "square"
-			subtitle: "Efficient lumber production."
+			subtitle: "{atm9.quest.extra.machines.subtitle.30d5e41501}"
 			tasks: [{
 				id: "03BD901999A4C51A"
 				item: "forestry:carpenter"
 				type: "item"
 			}]
-			title: "The Carpenter"
+			title: "{atm9.quest.extra.machines.title.fccf661116}"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			description: ["Craft a Fermenter and a Still to convert crops into Ethanol, a renewable power source."]
+			description: ["{atm9.quest.extra.machines.description.9ce7e78530}"]
 			id: "611006B5A2A4AC2B"
 			rewards: [{
 				id: "3F66C529EA761437"
@@ -37,7 +37,7 @@
 				type: "item"
 			}]
 			shape: "square"
-			subtitle: "Fermenter and Still setup."
+			subtitle: "{atm9.quest.extra.machines.subtitle.9c5926372b}"
 			tasks: [
 				{
 					id: "38A15CFD568CA8B2"
@@ -50,12 +50,12 @@
 					type: "item"
 				}
 			]
-			title: "Biofuel Production Line"
+			title: "{atm9.quest.extra.machines.title.7802ec94d2}"
 			x: 2.0d
 			y: 0.0d
 		}
 		{
-			description: ["Craft the **Biogas Engine**. This uses Ethanol to generate reliable RF/FE power."]
+			description: ["{atm9.quest.extra.machines.description.adbc5096aa}"]
 			id: "73C7BE9EC63AB282"
 			rewards: [{
 				count: 8
@@ -64,18 +64,18 @@
 				type: "item"
 			}]
 			shape: "square"
-			subtitle: "Powering your industrial machines."
+			subtitle: "{atm9.quest.extra.machines.subtitle.6d7529107d}"
 			tasks: [{
 				id: "0FB88C28FD304D3C"
 				item: "forestry:engine_biogas"
 				type: "item"
 			}]
-			title: "Biogas Engine"
+			title: "{atm9.quest.extra.machines.title.cecadc1e69}"
 			x: 4.0d
 			y: 0.0d
 		}
 		{
-			description: ["Craft the **Farm Control** block for assembling the large-scale **MultiFarm** structure."]
+			description: ["{atm9.quest.extra.machines.description.15613d91e5}"]
 			id: "4B5514328B099167"
 			rewards: [{
 				exclude_from_claim_all: true
@@ -84,7 +84,7 @@
 				type: "all_table"
 			}]
 			shape: "square"
-			subtitle: "Automated agriculture controller."
+			subtitle: "{atm9.quest.extra.machines.subtitle.9f0ff220be}"
 			tasks: [
 				{
 					id: "450276397194ED12"
@@ -107,12 +107,12 @@
 					type: "item"
 				}
 			]
-			title: "Multiblock Farm"
+			title: "{atm9.quest.extra.machines.title.e46809b6bd}"
 			x: 6.0d
 			y: 0.0d
 		}
 		{
-			description: ["The moistener produces mulch and as a biproduct can turn regular blocks to their mossy variants."]
+			description: ["{atm9.quest.extra.machines.description.ee4ef83aa7}"]
 			id: "0E99C46FF552F74E"
 			rewards: [{
 				count: 16
@@ -120,18 +120,18 @@
 				item: "forestry:mulch"
 				type: "item"
 			}]
-			subtitle: "Used to create mulch."
+			subtitle: "{atm9.quest.extra.machines.subtitle.3190c50b4b}"
 			tasks: [{
 				id: "1298697111D434A1"
 				item: "forestry:moistener"
 				type: "item"
 			}]
-			title: "Moistener"
+			title: "{atm9.quest.extra.machines.title.2015aec8fe}"
 			x: 8.0d
 			y: 0.0d
 		}
 		{
-			description: ["Craft the **Squeezer**. It extracts **Seed Oil** from crops, a fluid needed for impregnated components."]
+			description: ["{atm9.quest.extra.machines.description.30cf2294c4}"]
 			id: "617F73D2BFF3CA99"
 			rewards: [{
 				count: 4
@@ -140,18 +140,18 @@
 				type: "item"
 			}]
 			shape: "square"
-			subtitle: "Producing Seed Oil for crafting."
+			subtitle: "{atm9.quest.extra.machines.subtitle.1ce091251d}"
 			tasks: [{
 				id: "7A74F0BEC7A7799D"
 				item: "forestry:squeezer"
 				type: "item"
 			}]
-			title: "Squeezer"
+			title: "{atm9.quest.extra.machines.title.659935e759}"
 			x: 10.0d
 			y: 0.0d
 		}
 		{
-			description: ["Craft the **Carpenter**. It uses fluid inputs (like Seed Oil) to create items like **Impregnated Casings**."]
+			description: ["{atm9.quest.extra.machines.description.4688d40f30}"]
 			id: "2D862F8D20E18A1B"
 			rewards: [{
 				count: 2
@@ -160,16 +160,16 @@
 				type: "item"
 			}]
 			shape: "square"
-			subtitle: "The fluid-based crafting station."
+			subtitle: "{atm9.quest.extra.machines.subtitle.2f77b919ae}"
 			tasks: [{
 				id: "56E016B27D5DD6E1"
 				item: "forestry:carpenter"
 				type: "item"
 			}]
-			title: "Carpenter"
+			title: "{atm9.quest.extra.machines.title.ecd094c866}"
 			x: 12.0d
 			y: 0.0d
 		}
 	]
-	title: "Forestry Machines"
+	title: "{atm9.quest.extra.machines.title.c714e16f3d}"
 }

@@ -16,6 +16,6 @@
 		{ item: "ae2:formation_core" }
 		{ item: "ae2:annihilation_core" }
 	]
-	title: "AE2 Medium Reward Bag"
+	title: "{atm9.quest.extra.ae2_basic_reward_table.title.fd26d28493}"
 	use_title: true
 }

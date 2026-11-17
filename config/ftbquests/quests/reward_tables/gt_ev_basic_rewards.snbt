@@ -30,5 +30,5 @@
 		{ count: 2, item: "gtceu:cpu_wafer", random_bonus: 2, weight: 10.0f }
 		{ count: 12, item: "gtceu:titanium_plate", random_bonus: 12, weight: 10.0f }
 	]
-	title: "GT EV Basic Rewards"
+	title: "{atm9.quest.extra.gt_ev_basic_rewards.title.5deafbf7f4}"
 }
