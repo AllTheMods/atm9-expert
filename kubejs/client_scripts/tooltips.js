@@ -325,6 +325,32 @@ ItemEvents.tooltip(allthemods => {
     )
   }
   )
+
+  //SophisticatedStorage
+
+  let sophMats = [
+    'copper',
+    'iron',
+    'gold',
+    'diamond',
+    'netherite'
+  ]
+
+  for (let mat of sophMats) {
+    allthemods.add(`sophisticatedstorage:${mat}_chest`, [Text.of('Combine with Vanilla planks to change wood type.')])
+    allthemods.add(`sophisticatedstorage:${mat}_barrel`, [Text.of('Combine with Vanilla planks to change wood type.')])
+    allthemods.add(`sophisticatedstorage:limited_${mat}_barrel_1`, [Text.of('Combine with Vanilla planks to change wood type.')])
+    allthemods.add(`sophisticatedstorage:limited_${mat}_barrel_2`, [Text.of('Combine with Vanilla planks to change wood type.')])
+    allthemods.add(`sophisticatedstorage:limited_${mat}_barrel_3`, [Text.of('Combine with Vanilla planks to change wood type.')])
+    allthemods.add(`sophisticatedstorage:limited_${mat}_barrel_4`, [Text.of('Combine with Vanilla planks to change wood type.')])
+  }
+  allthemods.add('sophisticatedstorage:chest', [Text.of('Combine with Vanilla planks to change wood type.')])
+  allthemods.add('sophisticatedstorage:barrel', [Text.of('Combine with Vanilla planks to change wood type.')])
+  allthemods.add('sophisticatedstorage:limited_barrel_1', [Text.of('Combine with Vanilla planks to change wood type.')])
+  allthemods.add('sophisticatedstorage:limited_barrel_2', [Text.of('Combine with Vanilla planks to change wood type.')])
+  allthemods.add('sophisticatedstorage:limited_barrel_3', [Text.of('Combine with Vanilla planks to change wood type.')])
+  allthemods.add('sophisticatedstorage:limited_barrel_4', [Text.of('Combine with Vanilla planks to change wood type.')])
+  
   //PHASING OUT FOR REMOVAL
   allthemods.add(/^generatorgalore:.*/, [Text.of('Generator Galore will be removed in the next major update, replace existing generators until then.').red()])
 })
