@@ -97,9 +97,9 @@ ServerEvents.recipes(allthemods => {
         .itemInputs(
             [
                 'gtceu:tungsten_carbide_buzz_saw_blade',
-                '4x #forge:plates/unobtainium',
-                '4x #forge:plates/vibranium',
-                '4x #forge:plates/nitro_crystal',
+                '4x #forge:plates/enderium',
+                '4x #forge:plates/end_steel',
+                '4x #forge:plates/niotic_crystal',
                 '#forge:exquisite_gems/soul',
                 '16x gtceu:carbon_fiber_plate'
             ])

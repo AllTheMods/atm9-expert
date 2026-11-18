@@ -284,6 +284,8 @@ ServerEvents.recipes(allthemods => {
     { n: 'bedrockium', t: 8, dim: 'glacio', lens: 5, y: [20, 74], miner: 'eldritch', mw: 1 },
     { n: 'tenebrius', t: 8, dim: 'glacio', lens: 5, y: [47, 101], miner: 'eldritch', mw: 1 },
     ];
+    
+    global.oreDatabase = { ores: ORES, oreItem: oreItem };
 
     ORES.forEach(e => {
         // ---- laser drill ----

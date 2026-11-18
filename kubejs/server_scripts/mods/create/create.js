@@ -4,7 +4,7 @@
 // Add missing ore crushing recipes for Create
 
 let missingCreateOres = [
-    'aluminum',
+    //'aluminum',
     'lead',
     'nickel',
     'osmium',

@@ -47,6 +47,7 @@ ServerEvents.tags('item', allthemods => {
 
 	allthemods.add('forge:dusts/coke', 'immersiveengineering:dust_coke')
 	allthemods.add('forge:plates/aluminium', 'alltheores:aluminum_plate')
+	allthemods.add('forge:ingots/aluminium', 'alltheores:aluminum_ingot')
 	allthemods.add('forge:gems/coke', 'immersiveengineering:coal_coke', 'railcraft:coal_coke')	
 
 	allthemods.add('occultism:miner/foliot', 'occultism:miner_foliot_unspecialized')

@@ -28,6 +28,20 @@ ServerEvents.recipes(allthemods => {
 
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
 
+
+
+    allthemods.shaped('bloodmagic:altar', [
+        'RBR',
+        'PGP',
+        'PBP'
+    ], {
+        P: '#forge:plates/umbral_steel',
+        B: 'pneumaticcraft:compressed_bricks',
+        G: '#forge:plates/gold',
+        R: 'create:polished_rose_quartz'
+
+    }).id('gregification:blood_altar');
+
     allthemods.shaped('gtceu:rune_casing', [
         'NCN',
         'CTC',

@@ -1122,8 +1122,17 @@
     "gtceu.hyper_neuron_cultivator": "Hyper Neuron Cultivator",
     "block.gtceu.hyperneural_casing": "Hyperneural Casing",
     "block.gtceu.neural_pillar_core": "Neural Pillar Core",
-    "block.gtceu.mob_synthesizer": "Mob Synthesizer"
-
-
-
+    "block.gtceu.mob_synthesizer": "Mob Synthesizer",
+    "material.gtceu.litherite": "Litherite",
+    "material.gtceu.erodium": "Erodium",
+    "material.gtceu.lonsdaleite": "Lonsdaleite",
+    "material.gtceu.kyronite": "Kyronite",
+    "material.gtceu.pladium": "Pladium",
+    "material.gtceu.ionite": "Ionite",
+    "material.gtceu.aethium": "Aethium",
+    "material.gtceu.nanorite": "Nanorite",
+    "material.gtceu.xerothium": "Xerothium",
+    "material.gtceu.mica_pulp": "Mica Pulp",
+    "material.gtceu.mica_base": "Mica Base",
+    "material.gtceu.mica_insulator": "Mica Insulator"
 }

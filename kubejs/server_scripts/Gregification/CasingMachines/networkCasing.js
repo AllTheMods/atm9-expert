@@ -58,7 +58,7 @@ ServerEvents.recipes(allthemods => {
 			'4x ae2:engineering_processor',
             '4x #gtceu:circuits/mv'
 		],
-		'gtceu:soldering_alloy 244',
+		'gtceu:soldering_alloy 288',
 		'ae2:controller',
 		MV, 600
 	);

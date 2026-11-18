@@ -56,7 +56,7 @@ ServerEvents.recipes(allthemods => {
         {P: '#forge:plates/tungsten_steel',
          S: 'gtceu:iv_electric_piston',
          G: '#forge:frames/hellforged',
-         R: '#forge:gears/draconium'
+         R: '#forge:gears/enderium'
         }
     );
 

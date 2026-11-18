@@ -24,7 +24,7 @@ ServerEvents.recipes(allthemods => {
         [
             'gtceu:advanced_soc_wafer',
             '4x #forge:dusts/promethium',
-            '8x #forge:foils/draconium_awakened',
+            '8x #forge:foils/draconium',
             '8x #gtceu:wires/single/bismuth_strontium_calcium_copper_oxide'
         ],
         '#forge:polyimide 288',
@@ -68,9 +68,10 @@ ServerEvents.recipes(allthemods => {
         120
     )
 
+    //1k cell
     addCircuitAssembler(
         [
-            '2x #forge:plates/red_alloy',
+            '#gtceu:wires/double/manganese_phosphide',
             '2x #forge:plates/certus_quartz',
             'ae2:logic_processor',
             '#gtceu:circuits/lv'
@@ -84,8 +85,8 @@ ServerEvents.recipes(allthemods => {
 
     //4k cell
     addCircuitAssembler(
-        [
-            '2x #forge:plates/signalum',
+        [            
+            '#gtceu:wires/double/magnesium_diboride',
             '3x ae2:cell_component_1k',
             'ae2:calculation_processor',
             'ae2:quartz_glass'
@@ -93,14 +94,14 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:soldering_alloy 72',
         'ae2:cell_component_4k',
-        LV,
+        MV,
         120
     )
 
     //16k cell
     addCircuitAssembler(
         [
-            '2x #forge:plates/energetic_alloy',
+            '#gtceu:wires/double/mercury_barium_calcium_cuprate',
             '3x ae2:cell_component_4k',
             'ae2:calculation_processor',
             'ae2:quartz_glass'
@@ -108,39 +109,38 @@ ServerEvents.recipes(allthemods => {
         ],
         '#forge:soldering_alloy 72',
         'ae2:cell_component_16k',
-        MV,
+        HV,
         120
     )
 
     //64k cell
     addCircuitAssembler(
         [
-            '2x #forge:plates/lumium',
+            '#gtceu:wires/double/uranium_triplatinum',
             '3x ae2:cell_component_16k',
             'ae2:calculation_processor',
-            'ae2:quartz_glass',
-            '8x #forge:fine_wires/draconium'
+            'ae2:quartz_glass'            
 
         ],
         '#forge:soldering_alloy 72',
         'ae2:cell_component_64k',
-        MV,
+        EV,
         120
     )
 
     //256k cell
     addCircuitAssembler(
         [
+            '#gtceu:wires/double/indium_tin_barium_titanium_cuprate',
             '2x #forge:plates/vibrant_alloy',
             '3x ae2:cell_component_64k',
             'ae2:calculation_processor',
-            'ae2:quartz_glass',
-            '8x #forge:fine_wires/draconium_awakened'
+            'ae2:quartz_glass',            
 
         ],
         '#forge:soldering_alloy 72',
         'ae2:cell_component_256k',
-        HV,
+        IV,
         120
     )
 

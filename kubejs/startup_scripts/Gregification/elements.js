@@ -132,7 +132,7 @@ GTCEuStartupEvents.registry('gtceu:element', event => {
         .neutrons(152)
     
     event.create('destructive')
-        .symbol('⚝D')
+        .symbol('⚝E')
         .protons(106)
         .neutrons(151)
 

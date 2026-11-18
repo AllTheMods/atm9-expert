@@ -559,6 +559,12 @@ ServerEvents.recipes(allthemods => {
         .duration(600)
         .EUt(IV);   
 
+    allthemods.recipes.gtceu.mixer('gregification:nitinol_dust')
+        .itemInputs('4x #forge:dusts/nickel', '6x #forge:dusts/titanium')
+        .itemOutputs('10x gtceu:nitinol_dust')
+        .duration(400)
+        .EUt(LuV);
+
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

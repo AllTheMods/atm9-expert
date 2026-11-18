@@ -126,7 +126,7 @@ ServerEvents.recipes(allthemods => {
             '2x gtceu:hexagonal_bio_composite',
             '2x #forge:plates/hellforged',       
             '2x gtceu:iv_electric_pump',         
-            '8x #forge:screws/draconium',
+            '8x #forge:screws/hafnium',
             'gtceu:iv_electric_motor'
         ],
         [
