@@ -917,7 +917,7 @@ ServerEvents.recipes(allthemods => {
         "gtceu:hephaestus_forge",
         EV,
         6000,
-        1
+        7
     );
 
     //rf coil

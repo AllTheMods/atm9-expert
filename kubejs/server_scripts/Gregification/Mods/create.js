@@ -48,7 +48,7 @@ ServerEvents.recipes(allthemods => {
             { tag: 'forge:dusts/iron' }
         ],
         results: [
-            { item: 'gtceu:andesite_alloy_dust' }
+            { item: 'gtceu:andesite_alloy_dust', count: 4 }
         ]
     }).id('gregification:mixing/andesite_alloy_dust_iron')
 
@@ -65,7 +65,7 @@ ServerEvents.recipes(allthemods => {
             { tag: 'forge:dusts/zinc' }
         ],
         results: [
-            { item: 'gtceu:andesite_alloy_dust' }
+            { item: 'gtceu:andesite_alloy_dust', count: 4 }
         ]
     }).id('gregification:mixing/andesite_alloy_dust_zinc')
 
@@ -126,7 +126,7 @@ ServerEvents.recipes(allthemods => {
         }
     ).id('gregification:create/empty_blaze_burner')
 
-    allthemods.shapeless('gtceu:andesite_alloy_dust', ['4x #forge:dusts/andesite', '4x #forge:dusts/zinc']).id('gregification:andesite_alloy_dust');
+    allthemods.shapeless('2x gtceu:andesite_alloy_dust', ['4x #forge:dusts/andesite', '4x #forge:dusts/zinc']).id('gregification:andesite_alloy_dust');
 
     allthemods.shaped('create:mechanical_drill',
         [

@@ -7,12 +7,13 @@ ServerEvents.recipes(allthemods => {
     const dusts = obj => Object.keys(obj).map(k => obj[k] > 1 ? `${obj[k]}x #forge:dusts/${k}` : `#forge:dusts/${k}`);
 
     
-    const mix = (name, inputs, count, eut, duration) => {
-        allthemods.recipes.gtceu.mixer(`gregification:mixing/${name}`)
+    const mix = (name, inputs, count, eut, duration, program) => {
+        let r = allthemods.recipes.gtceu.mixer(`gregification:mixing/${name}`)
             .itemInputs(dusts(inputs))
             .itemOutputs(`${count}x gtceu:${name}_dust`)
             .duration(duration)
             .EUt(eut);
+        if (program) r.circuit(program);
     };
 
     
@@ -40,7 +41,7 @@ ServerEvents.recipes(allthemods => {
     mix('erbium_disilicide', { erbium: 1, silicon: 2 }, 3, LuV, 200);
     mix('gold_germanium', { gold: 1, germanium: 1 }, 2, EV, 200);
     mix('silicon_germanium', { silicon: 4, germanium: 1 }, 5, EV, 200);
-    mix('indium_phosphide', { indium: 1, phosphorus: 1 }, 2, EV, 200);
+    mix('indium_phosphide', { indium: 1, phosphorus: 1 }, 2, EV, 200, 2);
     mix('sendust', { iron: 17, silicon: 2, aluminium: 1 }, 20, IV, 300);
 
     
