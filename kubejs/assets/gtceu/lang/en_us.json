@@ -1008,7 +1008,7 @@
     "material.gtceu.blazing_energetic_alloy": "Blazing Energetic Alloy",
     "material.gtceu.tiny_atm_star_dust": "Tiny ATM Star Dust",
     "material.gtceu.atm_trio": "ATM Trio",
-    "material.gtceu.ink": "Ink",    
+    "material.gtceu.ink": "Ink",
     "material.gtceu.oblivion": "Oblivion",
     "material.gtceu.oblivion_essence": "Oblivion Essence",
     "material.gtceu.sodium_vapor": "Sodium Vapor",
@@ -1117,11 +1117,12 @@
     "material.gtceu.high_covalence": "High Covalence",
     "material.gtceu.dimensionally_transcendent_portal_fluid": "(DTPF) Dimensionally Transcendent Portal Fluid",
     "block.gtceu.dimensionally_transcendent_trader": "(DTT) Dimensionally Transcendent Trader",
-    "gtceu.dimensionally_transcendent_trader": "(DTT) Dimensionally Transcendent Trader",    
+    "gtceu.dimensionally_transcendent_trader": "(DTT) Dimensionally Transcendent Trader",
     "block.gtceu.hyper_neuron_cultivator": "Hyper Neuron Cultivator",
-    "gtceu.hyper_neuron_cultivator": "Hyper Neuron Cultivator",    
+    "gtceu.hyper_neuron_cultivator": "Hyper Neuron Cultivator",
     "block.gtceu.hyperneural_casing": "Hyperneural Casing",
     "block.gtceu.neural_pillar_core": "Neural Pillar Core",
+    "block.gtceu.mob_synthesizer": "Mob Synthesizer",
     "material.gtceu.litherite": "Litherite",
     "material.gtceu.erodium": "Erodium",
     "material.gtceu.lonsdaleite": "Lonsdaleite",
@@ -1134,7 +1135,4 @@
     "material.gtceu.mica_pulp": "Mica Pulp",
     "material.gtceu.mica_base": "Mica Base",
     "material.gtceu.mica_insulator": "Mica Insulator"
-    
-    
-
 }
