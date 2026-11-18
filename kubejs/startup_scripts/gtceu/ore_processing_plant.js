@@ -57,7 +57,7 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
                 .or(Predicates.abilities(PartAbility.IMPORT_ITEMS, PartAbility.IMPORT_FLUIDS))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
             )
-            .where(' ', Predicates.air())
+            .where(' ', Predicates.any())
             .build()
         )
         .workableCasingModel('gtceu:block/casings/gcym/secure_maceration_casing', 'gtceu:block/multiblock/gcym/large_maceration_tower')

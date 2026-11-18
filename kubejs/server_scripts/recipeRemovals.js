@@ -131,6 +131,7 @@ ServerEvents.recipes(allthemods => {
 
 
     const moreRemovals = [
+        'tconstruct:common/glass/vanilla/beacon', 'mekanism:storage_blocks/salt', 'thermal:compat/mekanism/press_mek_salt_packing',
         'alltheores:aluminum_ingot_from_ore_blasting', 'immersiveengineering:blueprint/component_iron', 'immersiveengineering:blueprint/component_steel',
         'immersiveengineering:smelting/ingot_aluminum_from_blasting3',  'immersiveengineering:smelting/ingot_aluminum3',  'immersiveengineering:smelting/ingot_aluminum',
         'create:blasting/aluminum_ingot_from_crushed', 'create:smelting/aluminum_ingot_from_crushed',        

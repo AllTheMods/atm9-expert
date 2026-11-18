@@ -28,7 +28,8 @@ ServerEvents.recipes(allthemods => {
         const thrusterIngredient = Item.of('ironjetpacks:thruster', { Id: `ironjetpacks:${tier.tier}` }).strongNBT();
         const capacitorIngredient = Item.of('ironjetpacks:capacitor', { Id: `ironjetpacks:${tier.tier}` }).strongNBT();
         
-        let prevTier = index > 0 ? Item.of('ironjetpacks:jetpack', { Id: `ironjetpacks:${tiers[index - 1].tier}`, Throttle:1.0 }).strongNBT() : 'ironjetpacks:strap';
+        //let prevTier = index > 0 ? Item.of('ironjetpacks:jetpack', { Id: `ironjetpacks:${tiers[index - 1].tier}`, Throttle:1.0 }).strongNBT() : 'ironjetpacks:strap';
+        let prevTier = index > 0 ? Item.of('ironjetpacks:jetpack', { Id: `ironjetpacks:${tiers[index - 1].tier}` }).weakNBT() : 'ironjetpacks:strap';
 
         allthemods.recipes.gtceu.assembler(`gregification:creative_jetpacks/${tier.tier}_capacitor`)
             .itemInputs(
