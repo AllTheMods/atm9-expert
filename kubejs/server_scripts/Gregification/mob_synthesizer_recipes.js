@@ -53,10 +53,9 @@ ServerEvents.recipes(allthemods => {
         4: {
             eut: IV, fluid: 64000, duration: 4800, orb: 'bloodmagic:archmagebloodorb', items: ['gtceu:cortex_matrix'],
             mobs: {
-                'elder_guardian': [], 'twilightforest/alpha_yeti': [],
+                'twilightforest/alpha_yeti': [],
                 'twilightforest/hydra': [], 'twilightforest/lich': [], 'twilightforest/minoshroom': [],
-                'twilightforest/naga': [], 'twilightforest/snow_queen': [], 'twilightforest/ur_ghast': [],
-                'warden': []
+                'twilightforest/naga': [], 'twilightforest/snow_queen': [], 'twilightforest/ur_ghast': [],                
             }
         },
         5: {
@@ -64,7 +63,9 @@ ServerEvents.recipes(allthemods => {
             mobs: {
                 'ender_dragon': ['8x #forge:plates/ostrum', 'minecraft:dragon_head'],
                 'wither': ['8x #forge:plates/desh', '#forge:storage_blocks/nether_star'],
-                'allthemodium/piglich': ['8x #forge:plates/mithril']
+                'allthemodium/piglich': ['8x #forge:plates/mithril'],
+                'elder_guardian': ['8x #forge:plates/spirited_crystal'],
+                'warden': ['8x #forge:plates/niotic_crystal']
             }
         }
     }
@@ -105,7 +106,7 @@ ServerEvents.recipes(allthemods => {
                 .itemInputs(tier.items.concat(tier.mobs[mob]))
                 .notConsumable(tier.orb)
                 .inputFluids(`#forge:blood ${tier.fluid}`)
-                .itemOutputs(dataModel(mobID))
+                .itemOutputs(dataModel(mob))
                 .duration(tier.duration)
                 .EUt(tier.eut)
                 .circuit(index+1)
