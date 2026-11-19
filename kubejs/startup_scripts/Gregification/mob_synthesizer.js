@@ -14,10 +14,10 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
         .recipeType('mob_synthesis')        
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .tooltips(
-            Component.literal('§cFor peaceful-mode players: synthesizes HNN data models.'),            
-            Component.literal('§7A Blood Orb in the bus (not consumed) gates the tier.'),            
+            Component.literal('§cFor peaceful-mode players: synthesizes HNN data models.'),
+            Component.literal('§7A Requires blood and blood orbs.')
         )
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT])
+        .recipeModifiers([GTRecipeModifiers.OC_PERFECT])
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('PCCCP', 'PCCCP', 'PTTTP', 'PCCCP', 'PCCCP')
             .aisle('CDDDC', 'C###C', 'T###T', 'C###C', 'CDDDC')
