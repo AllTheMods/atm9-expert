@@ -201,7 +201,7 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT, (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
         .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST)
         .pattern(definition => FactoryBlockPattern.start()
-            .aisle('CCCKCCC', '       ', '       ', '       ', '       ', 'CCCCCCC')
+            .aisle('CCCCCCC', '       ', '       ', '       ', '       ', 'CCCCCCC')
             .aisle('CCCCCCC', ' TTTTT ', ' DDDDD ', ' DDDDD ', ' TTTTT ', 'CCCCCCC')
             .aisle('CCCCCCC', ' T   T ', ' D   D ', ' D   D ', ' T   T ', 'CCCCCCC')
             .aisle('CCCCCCC', ' T   T ', ' D   D ', ' D   D ', ' T   T ', 'CCCCCCC')
