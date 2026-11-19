@@ -35,6 +35,48 @@ const bacteriaDusts = [
     'gtceu:bacteria_mutated_dust',
     'gtceu:bacteria_colony_dust'
 ];
+const bacteriaInfo = {
+    Rhizobacterium: { name: "Nitrogen-Fixing Rhizobacteria", uses: ["Bio-organic nanocomposite"], breeds: [] },
+    Cyanobacterium: { name: "Cyanobacterium Aeronos", uses: ["Living Gaia Plate (MekaSuit armor)"], breeds: [] },
+    Mycorrhizal: { name: "Mycorrhizal Symbiont Strain", uses: ["Breeding only"], breeds: ["Lunar Caseous", "Arcane Mycelial", "Cupro-Symbiont", "Areo-Mycorrhizal Ostrum", "Apis Symbiont"] },
+    EColi: { name: "Escherichia coli", uses: ["Breeding only"], breeds: ["Caulobacter crescentus", "Pichia pastoris"] },
+    Saccharomyces: { name: "Saccharomyces cerevisiae", uses: ["Stage 1 rocket fuel"], breeds: ["Methanogenesis Dominus"] },
+    Clostridium: { name: "Clostridium Cellulose-Alpha", uses: ["Red Fertilizer"], breeds: ["PHA Bioplastic Strain"] },
+    Desulfovibrio: { name: "Desulfovibrio", uses: ["Spent nuclear waste processing"], breeds: ["Acidithiobacillus ferrooxidans"] },
+    Dehalococcoides: { name: "Dehalococcoides", uses: ["Recycles slime waste water into stage 5 water"], breeds: [] },
+    Rhodoferax: { name: "Rhodoferax ferrireducens", uses: ["Bacterial mana production from cake and sugar water"], breeds: [] },
+    LunarCaseous: { name: "Lunar Caseous", uses: [], breeds: [] },
+    ArcaneMycelial: { name: "Arcane Mycelial", uses: ["Eldritch Spirit (Otherworld Miner)"], breeds: [] },
+    CuproSymbiont: { name: "Cupro-Symbiont", uses: ["Dimensional seed"], breeds: [] },
+    AreoMycorrhizalOstrum: { name: "Areo-Mycorrhizal Ostrum", uses: ["Crude oil from biomass and bone dust"], breeds: [] },
+    ApisSymbiont: { name: "Apis Symbiont", uses: ["Bio-organic pulp dust"], breeds: [] },
+    CaulobacterCrescentus: { name: "Caulobacter crescentus", uses: ["Liquid organic polymer"], breeds: [] },
+    PichiaPastoris: { name: "Pichia pastoris", uses: ["Bus and advanced bus circuits", "Neuron model certification"], breeds: [] },
+    Methanogenesis: { name: "Methanogenesis Dominus", uses: ["Stage 2 rocket fuel"], breeds: ["Deinococcus radiodurans"] },
+    PHABioplastic: { name: "PHA Bioplastic Strain", uses: ["Substrate Board"], breeds: [] },
+    AcidithiobacillusFerrooxidans: { name: "Acidithiobacillus ferrooxidans", uses: [], breeds: [] },
+    DeinococcusRadiodurans: { name: "Deinococcus radiodurans", uses: ["Stage 3 rocket fuel"], breeds: ["Sphingomonas"] },
+    Sphingomonas: { name: "Sphingomonas", uses: ["Stage 4 rocket fuel"], breeds: [] },    
+};
+
+function addBacteriaTooltip(text, species) {
+    let info = bacteriaInfo[species];
+    let readableName = info ? info.name : species.replace(/([A-Z])/g, ' $1').trim();
+    text.add(Text.of('Bacterial Culture Data').aqua());
+    text.add(Text.of(`Strain: ${readableName}`).white());
+    if (!info) return;
+    text.add(Text.of('Uses:').gold());
+    if (info.uses.length === 0) {
+        text.add(Text.of(' - None yet').gray());
+    } else {
+        info.uses.forEach(u => text.add(Text.of(` - ${u}`).gray()));
+    }
+    if (info.breeds.length > 0) {
+        text.add(Text.of('Breeds into:').gold());
+        info.breeds.forEach(b => text.add(Text.of(` - ${b}`).gray()));
+    }
+}
+
 ItemEvents.tooltip(event => {
 
 
@@ -57,21 +99,15 @@ ItemEvents.tooltip(event => {
 
     event.addAdvanced(bacteriaDusts, (item, advanced, text) => {
         let nbt = item.nbt;
-        if (nbt && nbt.bacteriaSpecies) {            
-            let readableName = nbt.bacteriaSpecies.replace(/([A-Z])/g, ' $1').trim();
-            text.add(Text.of('Bacterial Culture Data').aqua());
-            text.add(Text.of(`Strain: ${readableName}`).white());
+        if (nbt && nbt.bacteriaSpecies) {
+            addBacteriaTooltip(text, String(nbt.bacteriaSpecies));
         }
     });
 
     event.addAdvanced('gtceu:bacteria_gene_sample', (item, advanced, text) => {
         let nbt = item.nbt;
         if (nbt != null && nbt.contains('bacteriaSpecies')) {
-            let species = nbt.getString('bacteriaSpecies');
-            let readableName = species.replace(/([A-Z])/g, ' $1').trim();
-            text.add(Text.of('Bacterial Culture Data').aqua());
-            text.add(Text.of(`Strain: ${readableName}`).white());
-
+            addBacteriaTooltip(text, String(nbt.getString('bacteriaSpecies')));
         }
     });
 
@@ -123,6 +159,8 @@ ItemEvents.tooltip(event => {
             text.add(Text.of(' - ' + dataName[dest.data] + ' Research Fragment (chance)').lightPurple());
         }
     });
+
+    
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

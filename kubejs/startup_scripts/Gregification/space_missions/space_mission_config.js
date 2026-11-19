@@ -172,7 +172,7 @@ global.SPACE_DESTINATIONS = [
     {"id":"galactic_center","name":"Galactic center","mk":6,"d":70,"data":"C","gate":"","haul":[["antimatter",32,"item"],["red_matter",128,"item"]]},
     {"id":"quasar_jet","name":"Quasar jet","mk":6,"d":400,"data":"C","gate":"","haul":[["chaos_shard",128,"item"]]},
     {"id":"infinity_fracture","name":"Infinity fracture","mk":6,"d":200,"data":"C","gate":"","haul":[["infinity",128,"ore"]]},
-    {"id":"hell","name":"Hell","mk":3,"d":7,"data":"T","gate":"","haul":[["exquisite_demon_gem",64,"item"],["exquisite_corrosive_gem",32,"item"],["exquisite_destructive_gem",32,"item"],["exquisite_vengeful_gem",32,"item"],["exquisite_steadfast_gem",32,"item"]]},
+    {"id":"hell","name":"Hell","mk":3,"d":5,"data":"T","gate":"","haul":[["exquisite_demon_gem",8,"item"],["exquisite_corrosive_gem",4,"item"],["exquisite_destructive_gem",4,"item"],["exquisite_vengeful_gem",4,"item"],["exquisite_steadfast_gem",4,"item"],["hell_essence",1,"item"]]},
     {"id":"martian_iron_oxide_plains","name":"Martian iron oxide plains","mk":4,"d":8,"data":"T","gate":"Rhenium component (Mars)","haul":[["crimson_iron",288,"ore"]]},
 ];
 

@@ -565,6 +565,11 @@ ServerEvents.recipes(allthemods => {
         .duration(400)
         .EUt(LuV);
 
+    allthemods.recipes.gtceu.mixer('gregification:bone_char')
+        .itemInputs('#forge:dusts/bone', '#forge:dusts/enchanted_ash', '#forge:dusts/soda_ash', '#forge:dusts/ash', '#forge:dusts/gypsum', '#forge:dusts/potash')
+        .itemOutputs('6x gtceu:bone_char_dust')
+        .duration(200).EUt(HV);
+
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

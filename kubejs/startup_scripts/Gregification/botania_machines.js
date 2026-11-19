@@ -4,19 +4,19 @@
 StartupEvents.registry('block', allthemods => {
     allthemods.create('gtceu:overgrown_plating_casing')
         .displayName('Overgrown Plating Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
     allthemods.create('gtceu:reactor_core_casing')
         .displayName('Reactor Core Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
     allthemods.create('gtceu:overgrown_conduit_casing')
         .displayName('Overgrown Conduit Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');

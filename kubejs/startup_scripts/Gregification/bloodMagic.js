@@ -7,19 +7,19 @@ const GTX = Java.loadClass('com.gtextras.api.GTX');
 StartupEvents.registry('block', allthemods => {
     allthemods.create('gtceu:sanguine_vessel_casing')
         .displayName('Sanguine Vessel Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
     allthemods.create('gtceu:blood_splash_casing')
         .displayName('Splash Basin Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
     allthemods.create('gtceu:will_orb_casing')
         .displayName('Will Orb Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');

@@ -31,7 +31,12 @@ ServerEvents.recipes(allthemods => {
         { nbt: 'Clostridium', name: 'Clostridium Cellulose-Alpha' },
         { nbt: 'CaulobacterCrescentus', name: 'Caulobacter crescentus' },
         { nbt: 'PHABioplastic', name: 'PHA Bioplastic Strain' },
-        { nbt: 'CuproSymbiont', name: 'Cupro Symbiont' }
+        { nbt: 'CuproSymbiont', name: 'Cupro Symbiont' },        
+        { nbt: 'Cyanobacterium', name: 'Cyanobacterium Aeronos' },        
+        { nbt: 'Dehalococcoides', name: 'Dehalococcoides' },
+        { nbt: 'Rhodoferax', name: 'Rhodoferax ferrireducens' },
+        { nbt: 'ArcaneMycelial', name: 'Arcane Mycelial' },
+        { nbt: 'AreoMycorrhizalOstrum', name: 'Areo-Mycorrhizal Ostrum' }
 
     ];
 
@@ -232,6 +237,13 @@ ServerEvents.recipes(allthemods => {
         .duration(200)
         .EUt(IV);
 
+    allthemods.recipes.gtceu.large_chemical_reactor(`gregification:chemical_reactor/bio_organic_nanocomposite`)
+        .itemInputs('#forge:dusts/phenylalanine', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"CaulobacterCrescentus"}').strongNBT())
+        .inputFluids('#forge:phenolic_resin 1440')
+        .outputFluids('gtceu:organic_polymer 1440')
+        .duration(300)
+        .EUt(LuV);
+
     const rocketTiers = [
         { nbt: 'Saccharomyces', catalyst: '#forge:dusts/coke', eu: IV },
         { nbt: 'Methanogenesis', catalyst: '#forge:dusts/naquadah', eu: LuV },
@@ -267,14 +279,32 @@ ServerEvents.recipes(allthemods => {
                     'gtceu:digested_transuranics 300')
         .duration(600)
         .EUt(LuV);
-
-    allthemods.recipes.gtceu.large_chemical_reactor(`gregification:chemical_reactor/bio_organic_nanocomposite`)
-        .itemInputs('#forge:dusts/phenylalanine', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"CaulobacterCrescentus"}').strongNBT())
-        .inputFluids('#forge:phenolic_resin 1440')
-        .outputFluids('gtceu:organic_polymer 1440')
+    
+    allthemods.recipes.gtceu.large_chemical_reactor(`gregification:bacteria/living_gaia_plate`)
+        .itemInputs('#forge:double_plates/gaia', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Cyanobacterium"}').strongNBT())
+        .itemOutputs('gtceu:living_gaia_plate')
         .duration(300)
         .EUt(LuV);
     
+    allthemods.recipes.gtceu.chemical_reactor(`gregification:bacteria/slime_waste_water_treatment`)
+        .itemInputs(Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Dehalococcoides"}').strongNBT())
+        .inputFluids('#forge:water_stage_4 50', '#forge:slime_waste_water 15950')
+        .outputFluids('gtceu:water_stage_5 400')
+        .duration(200)
+        .EUt(IV);
+
+    allthemods.recipes.gtceu.chemical_reactor(`gregification:bacteria/bacterial_cake_mana`)
+        .itemInputs('minecraft:cake', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Rhodoferax"}').strongNBT())
+        .inputFluids('#forge:sugar_water 4000', '#forge:glycerol 1000', '#forge:honey 4000')
+        .outputFluids('gtceu:mana_essence 432000')
+        .duration(600)
+        .EUt(LuV);
+
+    allthemods.recipes.gtceu.large_chemical_reactor(`gregification:bacteria/bacterial_crude_oil`)
+        .itemInputs('12x #forge:dusts/bone_char', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"AreoMycorrhizalOstrum"}').strongNBT())
+        .inputFluids('#forge:biomass 64000', '#forge:hydrogen 64000')
+        .outputFluids('gtceu:oil 64000')
+        .duration(1200).EUt(IV);
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

@@ -455,9 +455,9 @@ ServerEvents.recipes(allthemods => {
             '5x mekanism:hdpe_sheet',
             '5x mekanism:pellet_polonium',
             'mekanism:ultimate_induction_cell',
-            '4x #forge:plates/scandium',
-            '5x #forge:dense_plates/gaia',
-            '5x #forge:plates/kevlar'
+            '4x #forge:plates/scandium',            
+            '5x #forge:plates/kevlar',
+            '5x #forge:plates/living_gaia'
         ],
         '#forge:europium 720',
         6000,
@@ -473,9 +473,9 @@ ServerEvents.recipes(allthemods => {
             '8x mekanism:hdpe_sheet',
             '8x mekanism:pellet_polonium',
             'mekanism:ultimate_induction_cell',
-            '4x #forge:plates/scandium',
-            '8x #forge:dense_plates/gaia',
-            '8x #forge:plates/kevlar'
+            '4x #forge:plates/scandium',            
+            '8x #forge:plates/kevlar',
+            '8x #forge:plates/living_gaia'
         ],
         '#forge:europium 1152',
         6000,
@@ -491,9 +491,9 @@ ServerEvents.recipes(allthemods => {
             '7x mekanism:hdpe_sheet',
             '7x mekanism:pellet_polonium',
             'mekanism:ultimate_induction_cell',
-            '4x #forge:plates/scandium',
-            '7x #forge:dense_plates/gaia',
-            '7x #forge:plates/kevlar'
+            '4x #forge:plates/scandium',            
+            '7x #forge:plates/kevlar',
+            '7x #forge:plates/living_gaia'
         ],
         '#forge:europium 1008',
         6000,
@@ -509,9 +509,9 @@ ServerEvents.recipes(allthemods => {
             '4x mekanism:hdpe_sheet',
             '4x mekanism:pellet_polonium',
             'mekanism:ultimate_induction_cell',
-            '4x #forge:plates/scandium',
-            '4x #forge:dense_plates/gaia',
-            '4x #forge:plates/kevlar'
+            '4x #forge:plates/scandium',            
+            '4x #forge:plates/kevlar',
+            '4x #forge:plates/living_gaia'
         ],
         '#forge:europium 576',
         6000,

@@ -34,6 +34,12 @@ allthemods.recipes.gtceu.macerator('gregification:macerate_apatite')
         .duration(80)
         .EUt(LV);
 
+allthemods.recipes.gtceu.macerator('gregification:macerate_certus_quartz')
+        .itemInputs('#forge:gems/certus_quartz')
+        .itemOutputs('ae2:certus_quartz_dust')
+        .duration(80)
+        .EUt(LV);
+
 allthemods.recipes.gtceu.macerator('gregification:macerate_niter')
         .itemInputs('thermal:niter')
         .itemOutputs('2x thermal:niter_dust')

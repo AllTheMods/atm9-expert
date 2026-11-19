@@ -295,7 +295,7 @@ ServerEvents.recipes(allthemods => {
 	
 	
 	//						 Item/Tag                       	Fluid Output                        Amount  Energy      Tier    GT?
-    crucibleMelt('#forge:plastic',              	'pneumaticcraft:plastic',           1000,   20000,      'mv',   true);
+    crucibleMelt('#forge:plastic',              	'pneumaticcraft:plastic',           144,   20000,      'mv',   true);
     crucibleMelt('evilcraft:vengeance_essence',		'gtceu:liquid_vengeance',          1000,   25000,      'mv',   true);
     crucibleMelt('bloodmagic:strong_tau',    		'gtceu:saturated_tau',             100,    20000,      'mv',   true);	
 	//crucibleMelt('ars_nouveau:source_gem',         	'gtceu:liquid_source',      		250,  	20000,      'hv',   true);

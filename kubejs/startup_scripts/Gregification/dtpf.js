@@ -18,14 +18,14 @@ StartupEvents.registry('item', allthemods => {
 StartupEvents.registry('block', allthemods => {
     allthemods.create('gtceu:hyperneural_casing')
         .displayName('Hyperneural Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
 
     allthemods.create('gtceu:neural_pillar_core')
         .displayName('Neural Pillar Core')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');

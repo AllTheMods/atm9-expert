@@ -8,14 +8,14 @@ StartupEvents.registry('block', allthemods => {
     
     allthemods.create('gtceu:mica_casing')
         .displayName('Mica Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
         
     allthemods.create('gtceu:structural_casing')
         .displayName('Structural Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
@@ -58,7 +58,7 @@ StartupEvents.registry('block', allthemods => {
         .energyDiscount(6)
         .tier(9)
         .coilMaterial(() => GTMaterials.get('draconium'))
-        .hardness(5)
+        .hardness(1)
         .soundType("metal");
 
     allthemods.create(`gtceu:draconium_awakened_coil_block`, "gtceu:coil")
@@ -68,7 +68,7 @@ StartupEvents.registry('block', allthemods => {
         .energyDiscount(8)
         .tier(10)
         .coilMaterial(() => GTMaterials.get('draconium_awakened'))
-        .hardness(5)
+        .hardness(1)
         .soundType("metal");
 
     allthemods.create(`gtceu:etrium_coil_block`, "gtceu:coil")
@@ -78,7 +78,7 @@ StartupEvents.registry('block', allthemods => {
         .energyDiscount(10)
         .tier(11)
         .coilMaterial(() => GTMaterials.get('etrium'))
-        .hardness(5)
+        .hardness(1)
         .soundType("metal");
 
     allthemods.create(`gtceu:infinity_coil_block`, "gtceu:coil")
@@ -88,7 +88,7 @@ StartupEvents.registry('block', allthemods => {
         .energyDiscount(12)
         .tier(12)
         .coilMaterial(() => GTMaterials.get('infinity'))
-        .hardness(5)
+        .hardness(1)
         .soundType("metal");
 
     allthemods.create(`gtceu:slate_casing`)
@@ -104,7 +104,7 @@ StartupEvents.registry('block', allthemods => {
         // @ts-ignore
         .displayName('Gadolinium Casing')
         //.textureAll(`gtceu:block/casings/gadolinium_casing/gadolinium_casing`)
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
@@ -113,7 +113,7 @@ StartupEvents.registry('block', allthemods => {
         // @ts-ignore
         .displayName('Heat Exchange Casing')
         //.textureAll(`gtceu:block/casings/heat_exchange_casing/heat_exchange_casing`)
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
@@ -122,7 +122,7 @@ StartupEvents.registry('block', allthemods => {
         // @ts-ignore
         .displayName('Adamantium Casing')
         //.textureAll(`gtceu:block/casings/adamantium_casing/adamantium_casing`)
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
@@ -131,7 +131,7 @@ StartupEvents.registry('block', allthemods => {
         // @ts-ignore
         .displayName('Zirconium Casing')
         //.textureAll(`gtceu:block/casings/zirconium_casing/zirconium_casing`)
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
@@ -150,7 +150,7 @@ StartupEvents.registry('block', allthemods => {
             // @ts-ignore
             .displayName(coil.displayName)
             //.textureAll(`gtceu:block/casings/${coil.name}_casing/${coil.name}_casing`)
-            .hardness(5.0)
+            .hardness(1.0)
             .resistance(10.0)
             .soundType('metal')
             .tagBlock('gtceu:casings');
@@ -161,7 +161,7 @@ StartupEvents.registry('block', allthemods => {
             // @ts-ignore
             .displayName(casing.name)
             // @ts-ignore
-            .hardness(5.0)
+            .hardness(1.0)
             .resistance(10.0)
             .soundType('metal')
             //.textureAll(casing.tex)
@@ -250,6 +250,7 @@ GTCEuStartupEvents.registry("gtceu:material_icon_set", allthemods => {
     allthemods.create("bacteria_vegetative").parent(GTMaterialIconSet.DULL)
     allthemods.create("kevlar").parent(GTMaterialIconSet.DULL)
     allthemods.create("bedrockium").parent(GTMaterialIconSet.DULL)
+    allthemods.create("hell_essence").parent(GTMaterialIconSet.DULL)
 
 })
 

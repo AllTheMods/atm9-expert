@@ -470,6 +470,7 @@ ServerEvents.recipes(allthemods => {
     addRitual(['#occultism:miner/marid', 'occultism:iesnium_pickaxe', 'occultism:mining_dim_core', 'allthemodium:piglich_heart', 'allthemodium:unobtainium_pickaxe', '#forge:frames/infinity', '4x #forge:plates/adamantium'], 'occultism:miner_ancient_eldritch', 'ronazas_contract');
     addRitual(['mekanism:digital_miner', '4x #gtceu:circuits/zpm', 'occultism:mining_dim_core', 'allthemodium:piglich_heart', 'allthemodium:unobtainium_pickaxe', '#forge:frames/infinity', '4x #forge:plates/adamantium'], 'occultism:miner_ancient_eldritch', 'ronazas_contract', null, 'eldritch_miner_digital');
     
+    addRitual(['#occultism:miner/eldritch', '8x gtceu:eldritch_spirit', '8x #forge:dusts/hell_essence',Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"ArcaneMycelial"}').strongNBT()], 'occultism:miner_otherworld', 'osorins_unbound_calling');
     
 
     addRitual(['#forge:dusts/netherite', 'minecraft:wither_skeleton_skull', '#forge:dusts/blackstone', 'minecraft:wither_rose'], 'occultism:witherite_dust', 'seviras_permanent_confinment');

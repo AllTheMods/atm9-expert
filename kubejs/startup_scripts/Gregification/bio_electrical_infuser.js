@@ -4,13 +4,13 @@
 StartupEvents.registry('block', allthemods => {
     allthemods.create('gtceu:dark_gem_casing')
         .displayName('Dark Gem Plating Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
     allthemods.create('gtceu:blood_vein_casing')
         .displayName('Blood Vein Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');

@@ -20,7 +20,40 @@ ServerEvents.recipes(allthemods => {
         }
 	};
 	
- 
+
+    
+
+    const addReaction = (inputs, outItem, outCount, energy, fluid, rID) => {
+        const inputItems = inputs.map(entry => {
+            const m = /^(?:(\d+)x\s+)?(#?)(\S+)$/.exec(entry);
+            if (!m) throw new Error('addReaction: bad input ' + entry);
+            return {
+                amount: m[1] ? parseInt(m[1]) : 1,
+                ingredient: m[2] ? { tag: m[3] } : { item: m[3] }
+            };
+        });
+        const f = /^(\S+)\s+(\d+)$/.exec(fluid);
+        if (!f) throw new Error('addReaction: bad fluid ' + fluid);
+        allthemods.custom({
+            type: 'advanced_ae:reaction',
+            energy: energy,
+            fluid: {
+                fluidStack: {
+                    Amount: parseInt(f[2]),
+                    FluidName: f[1]
+                }
+            },
+            input_items: inputItems,
+            output: {
+                '#': outCount,
+                '#c': 'ae2:i',
+                id: outItem
+            }
+        }).id('gregification:reaction_chamber/' + rID);
+    };
+
+    addReaction(['32x #forge:dusts/certus_quartz', '#forge:gems/certus_quartz'], 'ae2:certus_quartz_crystal', 32, 50000, 'minecraft:water 500', 'certus_quartz_from_dust');
+    addReaction(['48x #forge:dusts/quartzite', '#forge:gems/certus_quartz'], 'ae2:certus_quartz_crystal', 32, 50000, 'minecraft:water 500', 'certus_quartz_from_quartize');
 
     allthemods.shaped('4x ae2:blank_pattern', [
         'GFG',

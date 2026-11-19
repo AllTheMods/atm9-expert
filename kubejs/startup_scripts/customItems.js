@@ -183,6 +183,10 @@ StartupEvents.registry('item', allthemods => {
         .displayName('Eldritch Cloth')
         //.rarity('ie_masterwork')
         .glow(true);
+    
+    allthemods.create('gtceu:eldritch_spirit')
+        .displayName('Eldritch Spirit')
+        .tooltip('A spirit captured by the eldritch miner.')
 
     allthemods.create('gtceu:tachyon')
         .displayName('Tachyon')

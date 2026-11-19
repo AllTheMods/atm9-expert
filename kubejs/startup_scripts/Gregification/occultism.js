@@ -22,13 +22,17 @@ StartupEvents.registry('item', event => {
         //.texture('layer0', 'occultism:item/mining_dim_core')
         .displayName('Mining Dimension Core');
 
-    event.create('occultism:miner_ancient_eldritch')
-        //.texture('layer0', 'occultism:item/magic_lamp')
-        .displayName('Eldritch Miner')
-        //.rarity('EPIC')
+    event.create('occultism:miner_ancient_eldritch')    
+        .displayName('Eldritch Miner')        
         .glow(true)
-        .maxDamage(2500) // Gives it physical durability so hurtAndBreak() doesn't error out
-        .unstackable();   // Ensures automation filters treat it like a single tool        
+        .maxDamage(2500)
+        .unstackable();
+
+    event.create('occultism:miner_otherworld')
+        .displayName('Otherworld Miner')
+        .glow(true)
+        .maxDamage(2500)
+        .unstackable();
 
 
     event.create('occultism:chalk_void')

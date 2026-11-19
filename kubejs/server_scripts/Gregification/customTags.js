@@ -56,6 +56,8 @@ ServerEvents.tags('item', allthemods => {
 	allthemods.add('occultism:miner/marid', 'occultism:miner_marid_master')
 	allthemods.add('occultism:miner/eldritch', 'occultism:miner_ancient_eldritch')
 	allthemods.add('occultism:miners/eldritch', 'occultism:miner_ancient_eldritch')
+	allthemods.add('occultism:miner/otherworld', 'occultism:miner_otherworld')
+	allthemods.add('occultism:miners/otherworld', 'occultism:miner_otherworld')
 
 	allthemods.add('forge:wax', 'forbidden_arcanus:wax')
 

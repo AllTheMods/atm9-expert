@@ -2366,6 +2366,14 @@ const materials = [
     new MaterialDef('mica_insulator').ingot().color(0xC4D4EA).iconSet('SHINY').noSmelting().noBlocks()
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_FOIL)
         .unify({ ingot: true, nugget: true, block: true, dustSmall: true, dustTiny: true }),
+
+    //new bacteria line
+    new MaterialDef('living_gaia').ingot().color(0x9FE0B8).iconSet('METALLIC').flags(GTMaterialFlags.GENERATE_PLATE).noSmelting(),
+    new MaterialDef('enchanted_ash').color(0xE3D5B8).iconSet('DULL').dust()
+        .unify({ dustTiny: true, dustSmall: true,dust: 'eidolon:enchanted_ash' }),
+    new MaterialDef('bone_char').color(0xC9BBA0).iconSet('DULL').formula('Ca4K2Na2C2SH4O10Ea').dust().components('1x bone, 1x enchanted_ash, 1x soda_ash, 1x ash, 1x gypsum, 1x potash').noDecomp(),
+    new MaterialDef('hell_essence').dust().color(0xFFFFFF).iconSet('hell_essence')
+        .unify({ dustTiny: true, dustSmall: true }),
 ];
 
 

@@ -4,19 +4,19 @@
 StartupEvents.registry('block', allthemods => {
     allthemods.create('gtceu:sourcestone_plating_casing')
         .displayName('Sourcestone Plating Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
     allthemods.create('gtceu:source_conduit_casing')
         .displayName('Source Conduit Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
     allthemods.create('gtceu:glyph_core_casing')
         .displayName('Glyph Core Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');

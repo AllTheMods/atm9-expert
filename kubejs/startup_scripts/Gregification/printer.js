@@ -4,25 +4,25 @@
 StartupEvents.registry('block', allthemods => {
     allthemods.create('gtceu:lattice_casing')
         .displayName('Lattice Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
     allthemods.create('gtceu:emitter_coil_casing')
         .displayName('Emitter Coil Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
     allthemods.create('gtceu:print_bed_casing')
         .displayName('Print Bed Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
     allthemods.create('gtceu:emitter_head_casing')
         .displayName('Emitter Head Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');

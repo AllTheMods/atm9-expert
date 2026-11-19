@@ -4,19 +4,19 @@
 StartupEvents.registry('block', allthemods => {
     allthemods.create('gtceu:otherstone_casing')
         .displayName('Otherstone Plating Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
     allthemods.create('gtceu:spirit_flame_casing')
         .displayName('Spirit Flame Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
     allthemods.create('gtceu:ritual_brass_casing')
         .displayName('Ritual Brass Casing')
-        .hardness(5.0)
+        .hardness(1.0)
         .resistance(10.0)
         .soundType('metal')
         .tagBlock('gtceu:casings');
