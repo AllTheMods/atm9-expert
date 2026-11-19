@@ -29,22 +29,18 @@ ServerEvents.recipes(allthemods => {
         }
     )
 
-    allthemods.shaped(
-        'rftoolsstorage:storage_scanner',
-        [
-            'abc',
-            'ded',
-            'fbf'
-        ],
-        {
-            a: 'gtceu:lv_sensor',
-            b: '#gtceu:circuits/mv',
-            c: 'gtceu:lv_emitter',
-            d: 'gtceu:lv_field_generator',
-            e: 'rftoolsstorage:modular_storage',
-            f: '#forge:double_plates/steel'
-        }
-    )
+    allthemods.recipes.gtceu.assembler('storage_scanner_greg')
+        .itemInputs(
+            'gtceu:lv_sensor',
+            'gtceu:lv_machine_hull',
+            '2x create:electron_tube',
+            '2x gtceu:electrum_octal_wire'
+        )
+        .inputFluids('#forge:tin 576')
+        .EUt(30)
+        .duration(200)
+        .itemOutputs('rftoolsstorage:storage_scanner');
+
 
     allthemods.shaped(
         'rftoolsstorage:storage_module0',
