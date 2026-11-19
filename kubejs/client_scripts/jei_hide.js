@@ -12,7 +12,42 @@ JEIEvents.hideItems(allthemods => {
         }});
     });
 
-	
+	allthemods.hide([
+        "sophisticatedstorage:feeding_upgrade",
+        "sophisticatedstorage:advanced_feeding_upgrade",
+        "sophisticatedstorage:smelting_upgrade",
+        "sophisticatedstorage:auto_smelting_upgrade",
+        "sophisticatedstorage:smoking_upgrade",
+        "sophisticatedstorage:auto_smoking_upgrade",
+        "sophisticatedstorage:blasting_upgrade",
+        "sophisticatedstorage:auto_blasting_upgrade",
+        "sophisticatedstorage:crafting_upgrade",
+        "sophisticatedstorage:stonecutter_upgrade",
+        "sophisticatedstorage:jukebox_upgrade",
+        "sophisticatedstorage:advanced_jukebox_upgrade",
+        "sophisticatedstorage:pump_upgrade",
+        "sophisticatedstorage:advanced_pump_upgrade",
+        "sophisticatedstorage:xp_pump_upgrade",
+        "sophisticatedstorage:stack_downgrade_tier_1",
+        "sophisticatedstorage:stack_downgrade_tier_2",
+        "sophisticatedstorage:stack_downgrade_tier_3",
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_1_plus_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_2_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_3_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_4_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_5_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_2_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_3_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_4_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_5_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_2_to_tier_3_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_2_to_tier_4_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_2_to_tier_5_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_3_to_tier_4_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_3_to_tier_5_conversion",
+        "sophisticatedstorage:stack_upgrade_tier_4_to_tier_5_conversion",
+        "sophisticatedstorage:compression_upgrade",
+    ]);
 	
   allthemods.hide(/extrastorage:(block|disk|storagepart)_.+/)
   allthemods.hide(/rebornstorage:(small|medium|large|larger)_(item|fluid)_disk.*/)
