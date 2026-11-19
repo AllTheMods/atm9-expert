@@ -210,7 +210,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.chemical_bath('gregification:kevlar/spin_fiber')
         .itemInputs('gtceu:carbon_fiber_plate')
         .inputFluids('#forge:liquid_crystal_kevlar 1000')
-        .itemOutputs('gtceu:kevlar_carbon_fiber_mesh_gem')
+        .itemOutputs('gtceu:kevlar_carbon_fiber_mesh_plate')
         .duration(400)
         .EUt(EV);
 

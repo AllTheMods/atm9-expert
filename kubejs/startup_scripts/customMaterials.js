@@ -225,7 +225,8 @@ const dimensions = [
     { name: 'soera', displayName: 'Soera', icon: 'supplementaries:globe_sepia', tier: 4 },
     { name: 'titan', displayName: 'Titan', icon: 'supplementaries:globe_sepia', tier: 4 },
     { name: 'vonic', displayName: 'Vonic', icon: 'supplementaries:globe_sepia', tier: 4 },
-    { name: 'vulcan', displayName: 'Vulcan', icon: 'supplementaries:globe_sepia', tier: 4 }
+    { name: 'vulcan', displayName: 'Vulcan', icon: 'supplementaries:globe_sepia', tier: 4 },
+    { name: 'twilightforest:twilight_forest', displayName: 'Twilight Forest', icon: 'twilightforest:lamp_of_cinders', tier: 1 },
 ];
 
 GTCEuStartupEvents.registry("gtceu:dimension_marker", allthemods => {

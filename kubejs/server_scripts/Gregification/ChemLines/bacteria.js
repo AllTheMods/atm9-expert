@@ -20,23 +20,23 @@ ServerEvents.recipes(allthemods => {
         },*/
 
     const bacteriaChainStrains = [
-        { nbt: 'PichiaPastoris', name: 'Pichia Pastoris' },
-        { nbt: 'ApisSymbiont', name: 'Apis Symbiont' },
-        { nbt: 'Saccharomyces', name: 'Saccharomyces cerevisiae' },
-        { nbt: 'Methanogenesis', name: 'Methanogenesis Dominus' },
-        { nbt: 'DeinococcusRadiodurans', name: 'Deinococcus radiodurans' },
-        { nbt: 'Sphingomonas', name: 'Sphingomonas' },
-        { nbt: 'Rhizobacterium', name: 'Nitrogen-Fixing Rhizobacteria' },
-        { nbt: 'Desulfovibrio', name: 'Desulfovibrio' },
-        { nbt: 'Clostridium', name: 'Clostridium Cellulose-Alpha' },
-        { nbt: 'CaulobacterCrescentus', name: 'Caulobacter crescentus' },
-        { nbt: 'PHABioplastic', name: 'PHA Bioplastic Strain' },
-        { nbt: 'CuproSymbiont', name: 'Cupro Symbiont' },        
-        { nbt: 'Cyanobacterium', name: 'Cyanobacterium Aeronos' },        
-        { nbt: 'Dehalococcoides', name: 'Dehalococcoides' },
-        { nbt: 'Rhodoferax', name: 'Rhodoferax ferrireducens' },
-        { nbt: 'ArcaneMycelial', name: 'Arcane Mycelial' },
-        { nbt: 'AreoMycorrhizalOstrum', name: 'Areo-Mycorrhizal Ostrum' }
+        { nbt: 'PichiaPastoris', name: 'Pichia Pastoris', parent: 'Escherichia coli' },
+        { nbt: 'ApisSymbiont', name: 'Apis Symbiont', parent: 'Mycorrhizal Symbiont Strain' },
+        { nbt: 'Saccharomyces', name: 'Saccharomyces cerevisiae', parent: '' },
+        { nbt: 'Methanogenesis', name: 'Methanogenesis Dominus', parent: 'Saccharomyces cerevisiae' },
+        { nbt: 'DeinococcusRadiodurans', name: 'Deinococcus radiodurans', parent: 'Methanogenesis Dominus' },
+        { nbt: 'Sphingomonas', name: 'Sphingomonas', parent: 'Deinococcus radiodurans' },
+        { nbt: 'Rhizobacterium', name: 'Nitrogen-Fixing Rhizobacteria', parent: '' },
+        { nbt: 'Desulfovibrio', name: 'Desulfovibrio', parent: '' },
+        { nbt: 'Clostridium', name: 'Clostridium Cellulose-Alpha', parent: '' },
+        { nbt: 'CaulobacterCrescentus', name: 'Caulobacter crescentus', parent: 'Escherichia coli' },
+        { nbt: 'PHABioplastic', name: 'PHA Bioplastic Strain', parent: 'Clostridium Cellulose-Alpha' },
+        { nbt: 'CuproSymbiont', name: 'Cupro-Symbiont', parent: 'Mycorrhizal Symbiont Strain' },
+        { nbt: 'Cyanobacterium', name: 'Cyanobacterium Aeronos', parent: '' },        
+        { nbt: 'Dehalococcoides', name: 'Dehalococcoides', parent: '' },
+        { nbt: 'Rhodoferax', name: 'Rhodoferax ferrireducens', parent: '' },
+        { nbt: 'ArcaneMycelial', name: 'Arcane Mycelial', parent: 'Mycorrhizal Symbiont Strain' },
+        { nbt: 'AreoMycorrhizalOstrum', name: 'Areo-Mycorrhizal Ostrum', parent: 'Mycorrhizal Symbiont Strain' }
 
     ];
 
@@ -44,7 +44,7 @@ ServerEvents.recipes(allthemods => {
         const nbtTag = `{bacteriaSpecies:"${strain.nbt}"}`;
 
         return {
-            base: Item.of('gtceu:bacteria_gene_sample', `{bacteriaSpecies:"${strain.nbt}",speciesName:"${strain.name}",parentName:"Escherichia coli",parent2Name:""}`).strongNBT(),
+            base: Item.of('gtceu:bacteria_gene_sample', `{bacteriaSpecies:"${strain.nbt}",speciesName:"${strain.name}",parentName:"${strain.parent}",parent2Name:""}`).strongNBT(),
 
             seedCulture: Item.of('gtceu:bacteria_seed_dust', nbtTag)
                 .withName(Text.of(`${strain.name} Seed Culture`).green()).strongNBT(),
@@ -293,7 +293,7 @@ ServerEvents.recipes(allthemods => {
         .duration(200)
         .EUt(IV);
 
-    allthemods.recipes.gtceu.chemical_reactor(`gregification:bacteria/bacterial_cake_mana`)
+    allthemods.recipes.gtceu.large_chemical_reactor(`gregification:bacteria/bacterial_cake_mana`)
         .itemInputs('minecraft:cake', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Rhodoferax"}').strongNBT())
         .inputFluids('#forge:sugar_water 4000', '#forge:glycerol 1000', '#forge:honey 4000')
         .outputFluids('gtceu:mana_essence 432000')

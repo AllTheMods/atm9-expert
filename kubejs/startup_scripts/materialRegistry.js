@@ -1670,16 +1670,16 @@ const materials = [
         .flags(GTMaterialFlags.GENERATE_PLATE)
         .unify({ block: 'powah:nitro_crystal_block', gem: 'powah:crystal_nitro' }),
 
-    new MaterialDef('knightmetal').ingot().color(0xe4f9cb).iconSet('METALLIC').singularity()
+    new MaterialDef('knightmetal').ingot().color(0xe4f9cb).iconSet('METALLIC').singularity().materialsBasic()
         .unify({ ingot: 'twilightforest:knightmetal_ingot', block: 'twilightforest:knightmetal_block' }),
 
-    new MaterialDef('steeleaf').ingot().color(0x518539).iconSet('METALLIC').singularity()
+    new MaterialDef('steeleaf').ingot().color(0x518539).iconSet('METALLIC').singularity().materialsBasic()
         .unify({ ingot: 'twilightforest:steeleaf_ingot', block: 'twilightforest:steeleaf_block' }),
 
-    new MaterialDef('fiery').ingot().color(0x5b2b19).iconSet('METALLIC').singularity()
+    new MaterialDef('fiery').ingot().color(0x5b2b19).iconSet('METALLIC').singularity().materialsBasic()
         .unify({ ingot: 'twilightforest:fiery_ingot', block: 'twilightforest:fiery_block' }),
 
-    new MaterialDef('carminite').gem().color(0xD74C4C).iconSet('RUBY').singularity()
+    new MaterialDef('carminite').gem().color(0xD74C4C).iconSet('RUBY').singularity().materialsBasic()
         .unify({ gem: 'twilightforest:carminite', block: 'twilightforest:carminite_block' }),
 
     new MaterialDef('bio_organic_nanocomposite').ingot().dust().fluid().color(0x3D5C42).iconSet('DULL')
@@ -1972,8 +1972,7 @@ const materials = [
         .byproducts(['nether_quartz', 'glowstone', 'sulfur'])
         .unify({ gemFlawless: true, gemExquisite: true }),
 
-    new MaterialDef('kevlar_carbon_fiber_mesh').gem().color(0x8A7A46).iconSet('kevlar').flags(GTMaterialFlags.GENERATE_PLATE)
-        .unify({ block: true, gemFlawless: true, gemExquisite: true }),
+    new MaterialDef('kevlar_carbon_fiber_mesh').ingot().color(0x8A7A46).iconSet('kevlar').noSmelting().noBlocks().flags(GTMaterialFlags.GENERATE_PLATE),
 
     new MaterialDef('kevlar').ingot().dust().color(0x76683C).iconSet('kevlar').flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_FOIL),
 

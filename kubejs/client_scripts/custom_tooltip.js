@@ -48,7 +48,7 @@ const bacteriaInfo = {
     LunarCaseous: { name: "Lunar Caseous", uses: [], breeds: [] },
     ArcaneMycelial: { name: "Arcane Mycelial", uses: ["Eldritch Spirit (Otherworld Miner)"], breeds: [] },
     CuproSymbiont: { name: "Cupro-Symbiont", uses: ["Dimensional seed"], breeds: [] },
-    AreoMycorrhizalOstrum: { name: "Areo-Mycorrhizal Ostrum", uses: ["Crude oil from biomass and bone dust"], breeds: [] },
+    AreoMycorrhizalOstrum: { name: "Areo-Mycorrhizal Ostrum", uses: ["Crude oil from biomass, hydrogen and bone char"], breeds: [] },
     ApisSymbiont: { name: "Apis Symbiont", uses: ["Bio-organic pulp dust"], breeds: [] },
     CaulobacterCrescentus: { name: "Caulobacter crescentus", uses: ["Liquid organic polymer"], breeds: [] },
     PichiaPastoris: { name: "Pichia pastoris", uses: ["Bus and advanced bus circuits", "Neuron model certification"], breeds: [] },

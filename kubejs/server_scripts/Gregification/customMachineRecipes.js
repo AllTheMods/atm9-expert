@@ -146,6 +146,7 @@ ServerEvents.recipes(allthemods => {
         { machine: '_gem_crusher', startTier: 3, endTier: 8 },
         { machine: '_botanical_brewery', startTier: 3, endTier: 8 },
         { machine: '_pure_daisy', startTier: 1, endTier: 8 },
+        { machine: '_twilight_layline', startTier: 5, endTier: 8 },
     ]
 
     machineTiers.forEach(tData => {
@@ -160,6 +161,25 @@ ServerEvents.recipes(allthemods => {
         let motor = `gtceu:${tData.tier}_electric_motor`;
 
         customMachines.forEach(mData => {
+            if (mData.machine == '_twilight_layline' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                let laylinePlate = {
+                    5: '#forge:dense_plates/knightmetal',
+                    6: '#forge:dense_plates/steeleaf',
+                    7: '#forge:dense_plates/fiery',
+                    8: '#forge:dense_plates/carminite'
+                };
+                allthemods.shaped(`gtceu:${tData.tier}_twilight_layline`, [
+                    'PLP',
+                    'CHC',
+                    'PKP'
+                ], {
+                    H: hull,
+                    C: circuit,
+                    L: 'twilightforest:lamp_of_cinders',
+                    K: '#forge:gems/carminite',
+                    P: laylinePlate[tData.t]
+                }).id(`gregification:${tData.tier}_twilight_layline`);
+            }
             if (mData.machine == '_pure_daisy' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
                 allthemods.shaped(`gtceu:${tData.tier}_pure_daisy`, [
                     'TAT',

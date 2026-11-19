@@ -1138,5 +1138,7 @@
     "material.gtceu.living_gaia": "Living Gaia",
     "material.gtceu.enchanted_ash": "Enchanted Ash",
     "material.gtceu.bone_char": "Bone Char",
-    "material.gtceu.hell_essence": "Hell Essence"
+    "material.gtceu.hell_essence": "Hell Essence",
+    "gtceu.twilight_layline": "Twilight Layline",
+    "block.gtceu.twilight_layline": "Twilight Layline"
 }

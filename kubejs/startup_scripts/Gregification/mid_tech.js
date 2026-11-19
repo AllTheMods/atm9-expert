@@ -44,9 +44,25 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.SCIENCE)
 
+    allthemods.create('twilight_layline')
+        .category('twilight_layline')
+        .setEUIO('in')
+        .setMaxIOSize(3, 9, 3, 3)
+        .setSound(GTSoundEntries.CHEMICAL)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT)
+
 })
 
 GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
+    allthemods.create("twilight_layline", "simple")
+    .tiers(GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
+    .definition((tier, builder) =>
+        builder
+            .rotationState(RotationState.NON_Y_AXIS)
+            .recipeType("twilight_layline")
+            .workableTieredHullModel("gtceu:block/machines/twilight_layline")
+    );
+
     var chanceBoost = Java.loadClass('com.gregtechceu.gtceu.api.recipe.chance.boost.ChanceBoostFunction').OVERCLOCK;
     GTRecipeTypes.get('subatomic_projectile_launcher').setChanceFunction(chanceBoost);
     allthemods.create('subatomic_projectile_launcher', 'multiblock')
