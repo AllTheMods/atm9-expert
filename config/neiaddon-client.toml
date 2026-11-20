@@ -1,0 +1,204 @@
+#Show the name of the block under the crosshair (NEI 'highlight tips'). Toggle in game with Numpad 0.
+hudEnabled = false
+
+#Horizontal position of the highlight tip, 0 (left) to 10000 (right). NEI default 5000.
+#Range: 0 ~ 10000
+hudX = 5000
+
+#Vertical position of the highlight tip, 0 (top) to 10000 (bottom). NEI default 100.
+#Range: 0 ~ 10000
+hudY = 100
+
+#Extra (not in NEI): show the mod name in the highlight tip.
+hudShowMod = false
+
+#Extra (not in NEI): show the registry id (namespace:path) in the highlight tip.
+hudShowId = false
+
+#Quantity of the item quantity field (items 'with count' and the Ctrl+Alt+scroll step). 0 = one stack.
+#Range: 0 ~ 2147483647
+itemQuantity = 1
+
+#Zoom the crafting tree with the plain mouse wheel (otherwise Ctrl + wheel zooms and the wheel scrolls).
+treeZoomWithoutCtrl = true
+
+#Show the craftables panel: everything the open container can craft right now, above the quantity field.
+craftablesEnabled = false
+
+#Rows of the craftables panel (NEI useRows).
+#Range: 1 ~ 5
+craftablesRows = 2
+
+#Only list items whose favorite recipe can be crafted (NEI favoritesOnly).
+craftablesFavoritesOnly = false
+
+#Keep JEI's lookup history list as wide as the panel on its side: the item list on the right, the bookmark panel on the left (not while the panel is hidden). Overwrites JEI's own history column setting while on.
+historyMatchesListWidth = true
+
+#Show the item quantity field above the JEI item list (NEI showItemQuantityWidget).
+showItemQuantityWidget = true
+
+#Show 'Hold ALT for hotkeys' in item tooltips (NEI hotkeysHelpText). Alt still shows the keys.
+hotkeysHelpText = true
+
+#Allow autocrafting of bookmarked recipes and craftables (NEI autocrafting).
+autocrafting = true
+
+#Faster Autocrafting: when a full crafting grid would make more than is wanted, click the result once per wanted craft instead of crafting one set at a time. Every click waits for the server and is checked; anything unexpected stops autocrafting and puts the cursor and grid back into the inventory. Extra (not in NEI).
+autocraftingFast = false
+
+#After autocrafting, move the items that were in the inventory back to the slots they were in before (one checked click at a time). Crafted items stay in the slots they landed in.
+autocraftingRestoreLayout = false
+
+#NEI's collapsible item groups: families of items (wool colours, spawn eggs, ...) show as one entry in JEI's list; Alt + click opens or closes a group. Groups are in config/neiaddon/collapsibleitems.cfg. Takes the members out of JEI's list while closed.
+collapsibleItems = false
+
+#Mouse wheel over a recipe's heart picks which result to favorite (as NEI does). Off: the heart uses the first result, and Shift+F over a result slot favorites that result.
+heartScrollResult = true
+
+#Short fluid amounts in slots: 500mB, then buckets from 1000 mB (2.5B). Off: millibuckets up to 9999 (2500mB), which can run into the next slot.
+compactFluidAmounts = true
+
+#Use the only recipe of an item as its favorite when the item has exactly one recipe and no favorite of its own (NEI generateSingleRecipeFavorites).
+generateSingleRecipeFavorites = false
+
+#How many levels a recipe tree goes down when it is saved (NEI inventory.favorites.depth, default 9).
+#Range: 0 ~ 100
+favoritesDepth = 9
+
+#Show the favorite recipe of an item of JEI's item list, lookup history or craftables panel in a box beside its tooltip (NEI showRecipeTooltipInPanel). The craftables panel shows the recipe it crafts the item with.
+recipeTooltipInList = false
+
+#Show the favorite recipe of an item of JEI's recipe screen in a box beside its tooltip (NEI showRecipeTooltipInGui).
+recipeTooltipInRecipeScreen = false
+
+#Tint the ingredients of a recipe in JEI's recipe screen that are in your inventory (NEI slotHighlightPresent).
+highlightPresentItems = false
+
+#Tint the items the crafting trees still need in any storage you open, for groups with the crafting chain and crafting mode on (the crafting tree's toolbar button; the maths of Shift + V, without V's limits; not on the creative inventory). Needs the bookmark panel shown.
+highlightChainItems = true
+
+#Most rows of icons in a bookmark group's crafting chain tooltip, 0 for no limit (NEI maxVerticalTooltipRows).
+#Range: 0 ~ 50
+bookmarkTooltipRows = 5
+
+#Internal: set once the addon has put its unbound keys back on their defaults (done once per version of that fix).
+#Range: 0 ~ 100
+keyDefaultsDone = 1
+
+#On joining a world, a chat message asks to report issues with this release on GitHub.
+releaseNote = false
+
+#With EMI installed, on joining a world a chat message asks to report anything missing or off with EMI on GitHub.
+emiNote = true
+
+#On joining a world, say in chat that JEI++ (when installed) clashes with this addon.
+warnJeiPlusPlus = true
+
+#What JEI's own bookmark button (on each recipe) and its bookmark key add goes into this addon's bookmark panel instead of JEI's own list.
+jeiBookmarksToPanel = true
+
+#Extra space above the bookmark panel, in pixels, for a mod that draws on the screen without telling anyone (the panel already moves out of the way of buttons it can find).
+#Range: 0 ~ 400
+bookmarkMarginTop = 0
+
+#Size of the bookmark panel's slots in percent (50 to 100): smaller fits more bookmarks, and big crafting chains, on one page.
+#Range: 50 ~ 100
+bookmarkScale = 100
+
+#Extra space left of the bookmark panel, in pixels.
+#Range: 0 ~ 400
+bookmarkMarginLeft = 0
+
+#Slide bookmarks to their new place when the panel rearranges (NEI's REI style animation).
+bookmarkAnimation = false
+
+#List the keys that work on an item in its tooltip while Alt is held (NEI showHotkeys).
+showHotkeys = true
+
+#Utility buttons above the bookmark panel (NEI cheat mode): 0 recipe mode (none), 1 utility mode (the ones picked below), 2 cheat mode (all, and a click on an item gives it).
+#Range: 0 ~ 2
+cheatMode = 0
+
+#Utility mode: the four time of day buttons.
+utilityTime = true
+
+#Utility mode: the rain button.
+utilityRain = true
+
+#Utility mode: the heal button.
+utilityHeal = true
+
+#Utility mode: the game mode button.
+utilityGamemode = true
+
+#The game mode button cycles to creative.
+gamemodeCreative = true
+
+#The game mode button cycles to adventure.
+gamemodeAdventure = true
+
+#Also find items by their English name when the game is not in English (NEI itemUntranslator). Applies after the next JEI reload.
+itemUntranslator = false
+
+#Show a search field under JEI's recipe screen that filters the recipes shown (NEI recipe search syntax).
+recipeSearch = true
+
+#Draw the hovered item large beside the inventory (NEI itemzoom.enabled). Shift+Z toggles it in game.
+itemZoomEnabled = false
+
+#Only zoom items of the JEI item list and the bookmark panel (NEI neiOnly).
+itemZoomOverlaysOnly = false
+
+#Only zoom blocks that are solid (NEI onlySolid).
+itemZoomOnlySolid = false
+
+#Side of the zoom (NEI preferredSide): 0 auto (the side whose panel holds fewer items, the other one when the mouse is over it), 1 left, 2 right.
+#Range: 0 ~ 2
+itemZoomSide = 0
+
+#Show the name 'Item Zoom' and its toggle key below the zoomed item (NEI helpText).
+itemZoomHelpText = true
+
+#How much of the free side space the zoomed item fills, 0 to 1000 (NEI zoom).
+#Range: 0 ~ 1000
+itemZoomAmount = 500
+
+#Show the item name below the zoomed item (NEI showName).
+itemZoomShowName = true
+
+#Color of the zoomed item's name (RGB). Change it in the NEI Features options (Inventory, Item Zoom).
+#Range: 0 ~ 16777215
+itemZoomNameColor = 16777215
+
+#Recipe picture in the bookmark tooltip (NEI recipeTooltipsMode): 0 never, 1 default view, 2 todo-list view, 3 always.
+#Range: 0 ~ 3
+bookmarkRecipeTooltips = 1
+
+#Recipe marker on bookmarked recipes (NEI showRecipeMarkerMode): 0 first result only, 1 every result with an R, 2 tinted background.
+#Range: 0 ~ 2
+bookmarkRecipeMarker = 0
+
+#Color of the recipe markers (RGB). Change it in the NEI Features options (Inventory, Bookmarks Panel).
+#Range: 0 ~ 16777215
+bookmarkMarkerColor = 11382189
+
+#Show the recipe type's icon instead of the R marker (NEI showRecipeHandlerIcon).
+bookmarkHandlerIcon = false
+
+#Size of the recipe type's icon in the corner of a bookmark, in percent (50 to 200).
+#Range: 50 ~ 200
+bookmarkHandlerIconScale = 100
+
+#Keep a separate bookmark list for every world and server (NEI worldSpecific).
+bookmarksWorldSpecific = false
+
+#Show the bookmark panel (NEI bookmarks.enabled). The bookmarks key and the bookmarks button in JEI's button row switch it too.
+bookmarksVisible = true
+
+#A bookmarks key press (A) over an item inside a recipe of JEI's recipe screen saves the recipe with the item, and its tooltip then shows that recipe (NEI bookmarkItemsWithRecipe).
+bookmarkItemsWithRecipe = true
+
+#A recipe saved with Shift+A starts with a count of one run (NEI bookmarkRecipeWithCount). Off: it starts without a count and Ctrl+Shift+A saves it with one.
+bookmarkRecipeWithCount = true
+
