@@ -23,32 +23,33 @@ StartupEvents.registry('block', allthemods => {
 
     const casings = [
         // Logistics & Networking
-        { id: 'flux_casing', name: 'Flux Casing', tex: 'fluxnetworks:block/flux_block' },
-        { id: 'network_casing', name: 'Network Casing', tex: 'ae2:block/controller_column' },
-        { id: 'router_casing', name: 'Router Casing', tex: 'modularrouters:block/modular_router_side' },
+        { id: 'flux_casing', name: 'Flux Casing' },
+        { id: 'network_casing', name: 'Network Casing'},
+        { id: 'router_casing', name: 'Router Casing' },
 
         // Power & Processing        
-        { id: 'dimensional_casing', name: 'Dimensional Casing', tex: 'gtceu:block/casings/solid/machine_casing_stable_titanium' },
-        { id: 'xenomorphic_data_frame', name: 'Xenomorphic Data-Frame', tex: 'fluxnetworks:block/flux_block' },
-        { id: 'industrial_pylon_casing', name: 'Industrial Pylon Casing', tex: 'gtceu:block/casings/solid/machine_casing_clean_stainless_steel' },
+        { id: 'dimensional_casing', name: 'Dimensional Casing' },
+        { id: 'xenomorphic_data_frame', name: 'Xenomorphic Data-Frame' },
+        { id: 'industrial_pylon_casing', name: 'Industrial Pylon Casing' },
 
         // Magic & Biological        
-        { id: 'rune_casing', name: 'Rune Casing', tex: 'bloodmagic:block/blankrune' },
-        { id: 'reinforced_rune_casing', name: 'Reinforced Rune Casing', tex: 'bloodmagic:block/masterritualstone' },
-        { id: 'ritual_casing', name: 'Ritual Casing', tex: 'bloodmagic:block/ritualstone' },
-        { id: 'hexagonal_bio_composite', name: 'Hexagonal Bio-Composite', tex: 'gtceu:block/casings/solid/machine_casing_clean_stainless_steel' },
-        { id: 'magical_bio_composite', name: 'Magical Bio-Composite', tex: 'gtceu:block/casings/solid/machine_casing_clean_stainless_steel' },
+        { id: 'rune_casing', name: 'Rune Casing' },
+        { id: 'reinforced_rune_casing', name: 'Reinforced Rune Casing' },
+        { id: 'ritual_casing', name: 'Ritual Casing'},
+        { id: 'hexagonal_bio_composite', name: 'Hexagonal Bio-Composite'},
+        { id: 'magical_bio_composite', name: 'Magical Bio-Composite'},
 
-        { id: 'alchemical_casing', name: 'Alchemical Casing', tex: 'gtceu:block/casings/solid/machine_casing_clean_stainless_steel' },
-        { id: 'fission_casing', name: 'Fission Casing', tex: 'gtceu:block/casings/solid/machine_casing_inert_ptfe' }
+        { id: 'alchemical_casing', name: 'Alchemical Casing'},
+        { id: 'fission_casing', name: 'Fission Casing'},
+        { id: 'galalith_panel_casing', name: 'Galalith Panel Casing'},
+        { id: 'gantry_control_casing', name: 'Gantry Control Casing'},
     ];
     const coils = [
         //'draconium', 'wyvern', 'draconic', 'chaotic'
         { name: 'draconium', displayName: 'Draconium Casing' },
         { name: 'wyvern', displayName: 'Wyvern Casing' },
         { name: 'draconic', displayName: 'Draconic Casing' },
-        { name: 'chaotic', displayName: 'Chaotic Casing' },
-
+        { name: 'chaotic', displayName: 'Chaotic Casing' },        
     ]
 
     allthemods.create(`gtceu:draconium_coil_block`, "gtceu:coil")
@@ -226,7 +227,7 @@ const dimensions = [
     { name: 'titan', displayName: 'Titan', icon: 'supplementaries:globe_sepia', tier: 4 },
     { name: 'vonic', displayName: 'Vonic', icon: 'supplementaries:globe_sepia', tier: 4 },
     { name: 'vulcan', displayName: 'Vulcan', icon: 'supplementaries:globe_sepia', tier: 4 },
-    { name: 'twilightforest:twilight_forest', displayName: 'Twilight Forest', icon: 'twilightforest:lamp_of_cinders', tier: 1 },
+    { name: 'twilightforest:twilight_forest', displayName: 'Twilight Forest', icon: 'twilightforest:lamp_of_cinders', tier: 1 },    
 ];
 
 GTCEuStartupEvents.registry("gtceu:dimension_marker", allthemods => {

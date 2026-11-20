@@ -29,7 +29,7 @@ ServerEvents.recipes(allthemods => {
             parent: null,
             children: [],
             origin: 'minecraft:crimson_fungus',
-            catalyst: 'mekanism:hdpe_rod'
+            catalyst: 'gtceu:polytetrafluoroethylene_rod'
             //uses: used to enhance potassium calcium orthosilicate plates to make a new type of composite plating for spate missions however it gets implemented
         },
 

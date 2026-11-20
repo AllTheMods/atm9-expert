@@ -1140,5 +1140,7 @@
     "material.gtceu.bone_char": "Bone Char",
     "material.gtceu.hell_essence": "Hell Essence",
     "gtceu.twilight_layline": "Twilight Layline",
-    "block.gtceu.twilight_layline": "Twilight Layline"
+    "block.gtceu.twilight_layline": "Twilight Layline",
+    "gtceu.pcb_factory": "PCB Factory",
+    "block.gtceu.pcb_factory": "PCB Factory"
 }

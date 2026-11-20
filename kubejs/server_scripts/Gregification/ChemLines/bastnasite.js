@@ -134,7 +134,8 @@ ServerEvents.recipes(allthemods => {
         .inputFluids('#forge:naphtha 3000', '#forge:phosphoric_acid 1000')
         .outputFluids('gtceu:rare_earth_extractant 4000')
         .duration(durationSimple)
-        .EUt(EUSimple);
+        .EUt(EUComplex)
+        .addData('ebf_temp', COIL_TEMPS.HSS_G);
 
 });
 

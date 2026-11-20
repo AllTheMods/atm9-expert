@@ -36,7 +36,8 @@ ServerEvents.recipes(allthemods => {
         { nbt: 'Dehalococcoides', name: 'Dehalococcoides', parent: '' },
         { nbt: 'Rhodoferax', name: 'Rhodoferax ferrireducens', parent: '' },
         { nbt: 'ArcaneMycelial', name: 'Arcane Mycelial', parent: 'Mycorrhizal Symbiont Strain' },
-        { nbt: 'AreoMycorrhizalOstrum', name: 'Areo-Mycorrhizal Ostrum', parent: 'Mycorrhizal Symbiont Strain' }
+        { nbt: 'AreoMycorrhizalOstrum', name: 'Areo-Mycorrhizal Ostrum', parent: 'Mycorrhizal Symbiont Strain' },
+        { nbt: 'LunarCaseous', name: 'Lunar Caseous', parent: 'Mycorrhizal Symbiont Strain' },
 
     ];
 
