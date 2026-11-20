@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "nether_ores",
+  "name": {
+    "translate": "collapsible_groups.group.nether_ores",
+    "fallback": "Nether Ores"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "alltheores:nether_zinc_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nether_uranium_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nether_tin_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nether_silver_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nether_platinum_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nether_osmium_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nether_nickel_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nether_lead_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nether_iridium_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nether_aluminum_ore"
+      }
+    ]
+  }
+}

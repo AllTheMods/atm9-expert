@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "arrow_fletching",
+  "name": {
+    "translate": "collapsible_groups.group.arrow_fletching",
+    "fallback": "Arrow Fletching"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:fletching"
+  }
+}

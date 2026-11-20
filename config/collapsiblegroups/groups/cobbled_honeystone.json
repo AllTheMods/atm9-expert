@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "cobbled_honeystone",
+  "name": {
+    "translate": "collapsible_groups.group.cobbled_honeystone",
+    "fallback": "Cobbled Honeystone"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:cobbled_honeystone_wall"
+      },
+      {
+        "type": "item",
+        "id": "forestry:cobbled_honeystone_slab"
+      },
+      {
+        "type": "item",
+        "id": "forestry:cobbled_honeystone_stairs"
+      },
+      {
+        "type": "item",
+        "id": "forestry:cobbled_honeystone"
+      }
+    ]
+  }
+}

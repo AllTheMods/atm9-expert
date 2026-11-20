@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "clean_slurry_2",
+  "name": {
+    "translate": "collapsible_groups.group.clean_slurry_2",
+    "fallback": "Clean Slurry"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:clean_uranium"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:clean_tin"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:clean_osmium"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:clean_lead"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:clean_iron"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:clean_gold"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:clean_copper"
+      }
+    ]
+  }
+}

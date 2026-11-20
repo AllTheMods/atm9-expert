@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "cobbled_waxstone",
+  "name": {
+    "translate": "collapsible_groups.group.cobbled_waxstone",
+    "fallback": "Cobbled Waxstone"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:cobbled_waxstone_wall"
+      },
+      {
+        "type": "item",
+        "id": "forestry:cobbled_waxstone_slab"
+      },
+      {
+        "type": "item",
+        "id": "forestry:cobbled_waxstone_stairs"
+      },
+      {
+        "type": "item",
+        "id": "forestry:cobbled_waxstone"
+      }
+    ]
+  }
+}

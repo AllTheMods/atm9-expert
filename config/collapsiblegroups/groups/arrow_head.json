@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "arrow_head",
+  "name": {
+    "translate": "collapsible_groups.group.arrow_head",
+    "fallback": "Arrow Head"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:arrow_head"
+  }
+}

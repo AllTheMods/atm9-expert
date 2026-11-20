@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "ovens",
+  "name": {
+    "translate": "collapsible_groups.group.ovens",
+    "fallback": "Ovens"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "cookingforblockheads:black_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:red_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:green_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:brown_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:blue_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:purple_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:cyan_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:light_gray_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:gray_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:pink_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:lime_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:yellow_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:light_blue_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:magenta_oven"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:orange_oven"
+      }
+    ]
+  }
+}

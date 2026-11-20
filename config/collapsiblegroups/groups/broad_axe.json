@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "broad_axe",
+  "name": {
+    "translate": "collapsible_groups.group.broad_axe",
+    "fallback": "Broad Axe"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:broad_axe"
+  }
+}

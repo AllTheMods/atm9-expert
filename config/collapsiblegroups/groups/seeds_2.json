@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "seeds_2",
+  "name": {
+    "translate": "collapsible_groups.group.seeds_2",
+    "fallback": "Seeds"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "tag": "mysticalagriculture:seeds"
+  }
+}

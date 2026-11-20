@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "lingering_condensed_potion",
+  "name": {
+    "translate": "collapsible_groups.group.lingering_condensed_potion",
+    "fallback": "Lingering Condensed Potion"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "reliquary:lingering_potion"
+  }
+}

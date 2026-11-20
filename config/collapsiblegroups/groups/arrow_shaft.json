@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "arrow_shaft",
+  "name": {
+    "translate": "collapsible_groups.group.arrow_shaft",
+    "fallback": "Arrow Shaft"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:arrow_shaft"
+  }
+}

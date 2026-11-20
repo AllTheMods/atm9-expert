@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "pick_heads",
+  "name": {
+    "translate": "collapsible_groups.group.pick_heads",
+    "fallback": "Pick Heads"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:pick_head"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "helmet_plating",
+  "name": {
+    "translate": "collapsible_groups.group.helmet_plating",
+    "fallback": "Helmet Plating"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:helmet_plating"
+  }
+}

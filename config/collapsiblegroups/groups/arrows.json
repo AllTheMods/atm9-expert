@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "arrows",
+  "name": {
+    "translate": "collapsible_groups.group.arrows",
+    "fallback": "Arrows"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:arrow"
+  }
+}

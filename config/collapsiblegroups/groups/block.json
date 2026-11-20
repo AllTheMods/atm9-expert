@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "id": "block",
+  "name": {
+    "translate": "collapsible_groups.group.block",
+    "fallback": "Block"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "alltheores:aluminum_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:lead_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nickel_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:osmium_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:platinum_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:silver_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:tin_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:uranium_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:zinc_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:iridium_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:steel_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:invar_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:electrum_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:bronze_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:sapphire_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:peridot_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:ruby_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:brass_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:constantan_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:signalum_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:lumium_block"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:enderium_block"
+      }
+    ]
+  }
+}

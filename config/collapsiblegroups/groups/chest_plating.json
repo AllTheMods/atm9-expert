@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "chest_plating",
+  "name": {
+    "translate": "collapsible_groups.group.chest_plating",
+    "fallback": "Chest Plating"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:chestplate_plating"
+  }
+}

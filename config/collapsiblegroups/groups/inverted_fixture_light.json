@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "inverted_fixture_light",
+  "name": {
+    "translate": "collapsible_groups.group.inverted_fixture_light",
+    "fallback": "Inverted Fixture Light"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "projectred_illumination:black_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:red_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:green_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:brown_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:blue_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:purple_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:cyan_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_gray_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:gray_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:pink_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:lime_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:yellow_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_blue_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:magenta_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:orange_inverted_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:white_inverted_fixture_light"
+      }
+    ]
+  }
+}

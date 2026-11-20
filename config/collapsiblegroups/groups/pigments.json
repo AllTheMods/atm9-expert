@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "pigments",
+  "name": {
+    "translate": "collapsible_groups.group.pigments",
+    "fallback": "Pigments"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:aqua"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:black"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:blue"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:brown"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:cyan"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:dark_red"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:gray"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:green"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:light_blue"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:light_gray"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:lime"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:magenta"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:orange"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:pink"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:purple"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:red"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:white"
+      },
+      {
+        "type": "mekanism.api.chemical.pigment.PigmentStack",
+        "id": "mekanism:yellow"
+      }
+    ]
+  }
+}

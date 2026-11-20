@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "saplings_2",
+  "name": {
+    "translate": "collapsible_groups.group.saplings_2",
+    "fallback": "Saplings"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "forestry:sapling"
+  }
+}

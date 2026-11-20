@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "mana_pool",
+  "name": {
+    "translate": "collapsible_groups.group.mana_pool",
+    "fallback": "Mana Pool"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "gtceu:uv_mana_pool"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:zpm_mana_pool"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:luv_mana_pool"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:iv_mana_pool"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:ev_mana_pool"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:hv_mana_pool"
+      }
+    ]
+  }
+}

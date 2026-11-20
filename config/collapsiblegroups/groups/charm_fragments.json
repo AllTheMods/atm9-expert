@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "charm_fragments",
+  "name": {
+    "translate": "collapsible_groups.group.charm_fragments",
+    "fallback": "Charm Fragments"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "reliquary:mob_charm_fragment"
+  }
+}

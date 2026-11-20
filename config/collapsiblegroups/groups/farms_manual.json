@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "farms_manual",
+  "name": {
+    "translate": "collapsible_groups.group.farms_manual",
+    "fallback": "Farms (Manual)"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:arboretum_manual"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_crops_manual"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_mushroom_manual"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_gourd_manual"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_nether_manual"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_ender_manual"
+      },
+      {
+        "type": "item",
+        "id": "forestry:peat_bog_manual"
+      }
+    ]
+  }
+}

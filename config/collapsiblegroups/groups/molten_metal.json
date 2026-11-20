@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "molten_metal",
+  "name": {
+    "translate": "collapsible_groups.group.molten_metal",
+    "fallback": "Molten Metal"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "fluid",
+        "id": "thermal_extra:raw_zinc"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:raw_uranium"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:raw_tin"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:raw_silver"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:raw_osmium"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:raw_nickel"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:raw_lead"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:raw_iron"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:raw_gold"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:raw_copper"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:raw_arcane_gold"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:raw_aluminum"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:abyssal"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:dragonsteel"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:shellite"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:twinite"
+      },
+      {
+        "type": "fluid",
+        "id": "thermal_extra:soul_infused"
+      }
+    ]
+  }
+}

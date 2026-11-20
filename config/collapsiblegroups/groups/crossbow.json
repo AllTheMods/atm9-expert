@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "crossbow",
+  "name": {
+    "translate": "collapsible_groups.group.crossbow",
+    "fallback": "Crossbow"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:crossbow"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "id": "colored_backpacks",
+  "name": {
+    "translate": "collapsible_groups.group.colored_backpacks",
+    "fallback": "Colored Backpacks"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:2895973,clothColor:12439408,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:1908001,clothColor:1908001,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:11546150,clothColor:11546150,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:6192150,clothColor:6192150,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:8606770,clothColor:8606770,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:3949738,clothColor:3949738,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:8991416,clothColor:8991416,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:1481884,clothColor:1481884,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:10329495,clothColor:10329495,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:4673362,clothColor:4673362,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:15961002,clothColor:15961002,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:8439583,clothColor:8439583,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:16701501,clothColor:16701501,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:3847130,clothColor:3847130,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:13061821,clothColor:13061821,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:16351261,clothColor:16351261,inventorySlots:27,upgradeSlots:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedbackpacks:backpack\",tag:{borderColor:16383998,clothColor:16383998,inventorySlots:27,upgradeSlots:1}}"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "show_builtin": true,
+  "show_kubejs": true,
+  "hide_used": true,
+  "manager_source_filter": "all",
+  "manager_sort_mode": "priority",
+  "manager_show_empty": true,
+  "manager_category_filter": "local:008d9b18-4502-43ef-98a9-d34008331caa",
+  "manager_sidebar_open": true
+}

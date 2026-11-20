@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "id": "ores",
+  "name": {
+    "translate": "collapsible_groups.group.ores",
+    "fallback": "Ores"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "alltheores:deepslate_aluminum_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:aluminum_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:deepslate_lead_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:lead_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:deepslate_nickel_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nickel_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:osmium_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:deepslate_osmium_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:deepslate_platinum_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:platinum_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:deepslate_silver_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:silver_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:deepslate_iridium_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:iridium_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:other_quartz_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:other_redstone_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:deepslate_ruby_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:ruby_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:deepslate_zinc_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:zinc_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:deepslate_uranium_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:uranium_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:deepslate_tin_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:tin_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:deepslate_peridot_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:peridot_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:sapphire_ore"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:deepslate_sapphire_ore"
+      }
+    ]
+  }
+}

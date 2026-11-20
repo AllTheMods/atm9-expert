@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "green_illumar",
+  "name": {
+    "translate": "collapsible_groups.group.green_illumar",
+    "fallback": "Green Illumar"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "projectred_core:black_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:red_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:green_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:brown_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:blue_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:purple_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:cyan_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:light_gray_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:gray_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:pink_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:lime_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:yellow_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:light_blue_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:magenta_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:orange_illumar"
+      },
+      {
+        "type": "item",
+        "id": "projectred_core:white_illumar"
+      }
+    ]
+  }
+}

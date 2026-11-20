@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "alfheim_trader",
+  "name": {
+    "translate": "collapsible_groups.group.alfheim_trader",
+    "fallback": "Alfheim Trader"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "gtceu:hv_alfheim_trader"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:ev_alfheim_trader"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:iv_alfheim_trader"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:luv_alfheim_trader"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:zpm_alfheim_trader"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:uv_alfheim_trader"
+      }
+    ]
+  }
+}

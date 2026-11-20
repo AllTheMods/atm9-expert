@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "chestplates_tc",
+  "name": {
+    "translate": "collapsible_groups.group.chestplates_tc",
+    "fallback": "Chestplates tc"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:plate_chestplate"
+  }
+}

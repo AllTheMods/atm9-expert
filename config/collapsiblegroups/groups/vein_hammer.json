@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "vein_hammer",
+  "name": {
+    "translate": "collapsible_groups.group.vein_hammer",
+    "fallback": "Vein Hammer"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:vein_hammer"
+  }
+}

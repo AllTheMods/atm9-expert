@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "scrolls_2",
+  "name": {
+    "translate": "collapsible_groups.group.scrolls_2",
+    "fallback": "Scrolls"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "elementalcraft:scroll"
+  }
+}

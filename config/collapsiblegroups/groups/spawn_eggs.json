@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "id": "spawn_eggs",
+  "name": {
+    "translate": "collapsible_groups.group.spawn_eggs",
+    "fallback": "Spawn Eggs"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/foliot"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/djinni"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/afrit"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/afrit_wild"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/possessed_elder_guardian"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_beholder"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_shub_niggurath"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_goat"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_chimera"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_headless"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_guardian"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_blacksmith"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_dragon"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_devil"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_cthulhu"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_deer"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_bat"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_greedy"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/otherworld_bird"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/wild_hunt_wither_skeleton"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/wild_hunt_skeleton"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/possessed_hoglin"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/possessed_warden"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/possessed_shulker"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/possessed_weak_shulker"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/possessed_phantom"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/possessed_ghast"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/possessed_enderman"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/possessed_skeleton"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/possessed_endermite"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/marid"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_fairy"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_mummy"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_beaver"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/familiar_parrot"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/demonic_husband"
+      },
+      {
+        "type": "item",
+        "id": "occultism:spawn_egg/demonic_wife"
+      }
+    ]
+  }
+}

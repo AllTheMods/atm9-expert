@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "pedestal_automation",
+  "name": {
+    "translate": "collapsible_groups.group.pedestal_automation",
+    "fallback": "Pedestal (Automation)"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/white_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/orange_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/magenta_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/light_blue_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/yellow_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/lime_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/pink_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/gray_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/light_gray_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/cyan_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/purple_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/blue_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/brown_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/green_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/red_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/black_pedestal"
+      }
+    ]
+  }
+}

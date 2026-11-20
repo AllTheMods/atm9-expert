@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "dye_buckets",
+  "name": {
+    "translate": "collapsible_groups.group.dye_buckets",
+    "fallback": "Dye Buckets"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "create_dragons_plus:pink_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:magenta_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:purple_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:blue_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:light_blue_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:cyan_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:green_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:lime_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:yellow_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:orange_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:red_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:brown_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:black_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:gray_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:light_gray_dye_bucket"
+      },
+      {
+        "type": "item",
+        "id": "create_dragons_plus:white_dye_bucket"
+      }
+    ]
+  }
+}

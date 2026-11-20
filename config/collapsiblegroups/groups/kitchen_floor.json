@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "kitchen_floor",
+  "name": {
+    "translate": "collapsible_groups.group.kitchen_floor",
+    "fallback": "Kitchen Floor"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "cookingforblockheads:orange_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:magenta_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:light_blue_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:yellow_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:lime_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:pink_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:gray_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:light_gray_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:cyan_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:purple_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:blue_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:brown_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:green_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:black_kitchen_floor"
+      },
+      {
+        "type": "item",
+        "id": "cookingforblockheads:red_kitchen_floor"
+      }
+    ]
+  }
+}

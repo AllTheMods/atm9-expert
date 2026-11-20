@@ -1,0 +1,473 @@
+{
+  "schema_version": 1,
+  "id": "crated",
+  "name": {
+    "translate": "collapsible_groups.group.crated",
+    "fallback": "Crated"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:crated_birch_sapling"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_sculken"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_sponge"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_vintage"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_oak_sapling"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_oak_log"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_tin"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_copper"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bronze"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_humus"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bog_earth"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_wheat"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_cookie"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_redstone"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_lapis"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_sugar_cane"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_red_sand"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_obsidian"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_netherrack"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_soul_sand"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_sandstone"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_nether_bricks"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_mycelium"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_gravel"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_mellow"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_mossy"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_stringy"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_simmering"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_cocoa"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_honey"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_royal_jelly"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_honeydew"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_propolis"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_pollen_cluster_crystalline"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_pollen_cluster_normal"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_refractory_wax"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_beeswax"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_dark_oak_sapling"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_frozen"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_dripping"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_silky"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_acacia_sapling"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_spruce_sapling"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_granite"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_diorite"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_stone"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_grass_block"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_dark_oak_log"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_acacia_log"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_jungle_sapling"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_cobblestone"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_dirt"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_spruce_log"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_jungle_log"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_birch_log"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_peat"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_apatite"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_fertilizer_compound"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_mulch"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_phosphor"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_ash"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crate"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_clay_ball"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_glowstone"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_apple"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_coal"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_charcoal"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_seeds"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_potato"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_carrot"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_beetroot"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_nether_wart"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_cactus"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_sand"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_andesite"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_prismarine"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_prismarine_bricks"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_dark_prismarine"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_wheaten"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_kaolin"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_mysterious"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_parched"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bee_comb_powdery"
+      },
+      {
+        "type": "item",
+        "id": "forestry:crated_bricks"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_rocky"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_mineral"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_coal"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_copper"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_tin"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_zinc"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_lead"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_nickel"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_silver"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_osmium"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_paper"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_decayed"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_arcane"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_soulful"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_fungal"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_scrapped"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_glowing"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_chromatic"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_harmonic"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_emerald"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_diamond"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_amethyst"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_redstone"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_apatite"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_lapis"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_cobalt"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_gold"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_iron"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_yellorium"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_certus"
+      },
+      {
+        "type": "item",
+        "id": "mobees:crated_bee_comb_aluminum"
+      }
+    ]
+  }
+}

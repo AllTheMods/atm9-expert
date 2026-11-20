@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "skulls",
+  "name": {
+    "translate": "collapsible_groups.group.skulls",
+    "fallback": "Skulls"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:slime_helmet"
+  }
+}

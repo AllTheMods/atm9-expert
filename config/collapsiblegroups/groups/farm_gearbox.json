@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "farm_gearbox",
+  "name": {
+    "translate": "collapsible_groups.group.farm_gearbox",
+    "fallback": "Farm Gearbox"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:farm_gearbox_quartz_lines"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_gearbox_quartz_chiseled"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_gearbox_quartz"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_gearbox_brick_chiseled"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_gearbox_brick_nether"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_gearbox_sandstone_chiseled"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_gearbox_cut_sandstone"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_gearbox_brick"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_gearbox_cracked_stone_brick"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_gearbox_mossy_stone_brick"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_gearbox_stone_brick"
+      }
+    ]
+  }
+}

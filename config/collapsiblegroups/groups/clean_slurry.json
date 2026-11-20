@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "clean_slurry",
+  "name": {
+    "translate": "collapsible_groups.group.clean_slurry",
+    "fallback": "Clean Slurry"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "alltheores:clean_zinc"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "alltheores:clean_silver"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "alltheores:clean_platinum"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "alltheores:clean_nickel"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "alltheores:clean_iridium"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "alltheores:clean_aluminum"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "swords",
+  "name": {
+    "translate": "collapsible_groups.group.swords",
+    "fallback": "Swords"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:sword"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "1a_converters",
+  "name": {
+    "translate": "collapsible_groups.group.1a_converters",
+    "fallback": "1A Converters"
+  },
+  "enabled": true,
+  "filter": {
+    "all": [
+      {
+        "type": "item",
+        "namespace": "gtceu"
+      },
+      {
+        "item_path_ends_with": "1a_energy_converter"
+      }
+    ]
+  }
+}

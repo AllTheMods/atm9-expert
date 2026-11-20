@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "throwing_axes",
+  "name": {
+    "translate": "collapsible_groups.group.throwing_axes",
+    "fallback": "Throwing Axes"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:throwing_axe"
+  }
+}

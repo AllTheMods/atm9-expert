@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "tipped_arrows",
+  "name": {
+    "translate": "collapsible_groups.group.tipped_arrows",
+    "fallback": "Tipped Arrows"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "reliquary:tipped_arrow"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "gems",
+  "name": {
+    "translate": "collapsible_groups.group.gems",
+    "fallback": "Gems"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "alltheores:sapphire"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:peridot"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:ruby"
+      }
+    ]
+  }
+}

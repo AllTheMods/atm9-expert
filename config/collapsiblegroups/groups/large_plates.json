@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "large_plates",
+  "name": {
+    "translate": "collapsible_groups.group.large_plates",
+    "fallback": "Large Plates"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:large_plate"
+  }
+}

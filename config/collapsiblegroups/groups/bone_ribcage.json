@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "bone_ribcage",
+  "name": {
+    "translate": "collapsible_groups.group.bone_ribcage",
+    "fallback": "Bone Ribcage"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:ribcage"
+  }
+}

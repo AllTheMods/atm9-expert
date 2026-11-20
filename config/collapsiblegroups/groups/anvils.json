@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "anvils",
+  "name": {
+    "translate": "collapsible_groups.group.anvils",
+    "fallback": "Anvils"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "tconstruct:tinkers_anvil"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:scorched_anvil"
+      }
+    ]
+  }
+}

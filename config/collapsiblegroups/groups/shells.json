@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "shells",
+  "name": {
+    "translate": "collapsible_groups.group.shells",
+    "fallback": "Shells"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:shell"
+  }
+}

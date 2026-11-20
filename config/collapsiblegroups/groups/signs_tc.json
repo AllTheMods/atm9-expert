@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "signs_tc",
+  "name": {
+    "translate": "collapsible_groups.group.signs_tc",
+    "fallback": "Signs tc"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:battlesign"
+  }
+}

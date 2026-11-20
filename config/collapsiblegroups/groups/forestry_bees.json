@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "forestry_bees",
+  "name": {
+    "translate": "collapsible_groups.group.forestry_bees",
+    "fallback": "Forestry Bees"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "tag": "forestry:bees"
+  }
+}

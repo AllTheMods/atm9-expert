@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "repair_kit",
+  "name": {
+    "translate": "collapsible_groups.group.repair_kit",
+    "fallback": "Repair Kit"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:repair_kit"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "flag",
+  "name": {
+    "translate": "collapsible_groups.group.flag",
+    "fallback": "Flag"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "supplementaries:flag_white"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_light_gray"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_gray"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_black"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_brown"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_red"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_orange"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_yellow"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_lime"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_green"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_cyan"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_light_blue"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_blue"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_purple"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_magenta"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:flag_pink"
+      }
+    ]
+  }
+}

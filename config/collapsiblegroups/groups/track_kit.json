@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "track_kit",
+  "name": {
+    "translate": "collapsible_groups.group.track_kit",
+    "fallback": "Track Kit"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "railcraft:transition_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:locking_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:buffer_stop_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:activator_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:booster_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:control_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:gated_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:detector_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:coupler_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:embarking_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:disembarking_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:dumping_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:launcher_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:one_way_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:whistle_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:routing_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:throttle_track_kit"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:locomotive_track_kit"
+      }
+    ]
+  }
+}

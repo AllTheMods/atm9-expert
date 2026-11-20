@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "caterpillar",
+  "name": {
+    "translate": "collapsible_groups.group.caterpillar",
+    "fallback": "Caterpillar"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "forestry:caterpillar_ge"
+  }
+}

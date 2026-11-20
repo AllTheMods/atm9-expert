@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "gt_potions",
+  "name": {
+    "translate": "collapsible_groups.group.gt_potions",
+    "fallback": "GT Potions"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "fluid",
+    "id": "gtceu:potion"
+  }
+}

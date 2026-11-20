@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "16a_converter",
+  "name": {
+    "translate": "collapsible_groups.group.16a_converter",
+    "fallback": "16A Converter"
+  },
+  "enabled": true,
+  "filter": {
+    "all": [
+      {
+        "type": "item",
+        "namespace": "gtceu"
+      },
+      {
+        "item_path_ends_with": "16a_energy_converter"
+      }
+    ]
+  }
+}

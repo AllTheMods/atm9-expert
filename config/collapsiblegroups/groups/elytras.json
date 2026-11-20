@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "elytras",
+  "name": {
+    "translate": "collapsible_groups.group.elytras",
+    "fallback": "Elytras"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:slime_wings"
+  }
+}

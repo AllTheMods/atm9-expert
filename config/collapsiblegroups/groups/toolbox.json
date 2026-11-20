@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "toolbox",
+  "name": {
+    "translate": "collapsible_groups.group.toolbox",
+    "fallback": "ToolBox"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "create:black_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:red_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:green_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:blue_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:purple_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:cyan_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:light_gray_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:gray_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:pink_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:lime_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:yellow_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:light_blue_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:magenta_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:orange_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:white_toolbox"
+      },
+      {
+        "type": "item",
+        "id": "create:brown_toolbox"
+      }
+    ]
+  }
+}

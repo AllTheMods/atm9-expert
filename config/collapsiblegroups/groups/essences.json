@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "essences",
+  "name": {
+    "translate": "collapsible_groups.group.essences",
+    "fallback": "Essences"
+  },
+  "enabled": true,
+  "filter": {
+    "all": [
+      {
+        "type": "item",
+        "tag": "mysticalagriculture:essences"
+      },
+      {
+        "not": {
+          "type": "item",
+          "id": "mysticalagriculture:inferium_essence"
+        }
+      }
+    ]
+  }
+}

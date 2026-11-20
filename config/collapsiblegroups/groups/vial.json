@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "vial",
+  "name": {
+    "translate": "collapsible_groups.group.vial",
+    "fallback": "Vial"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "botania:brew_vial"
+  }
+}

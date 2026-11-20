@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "traveler_googles",
+  "name": {
+    "translate": "collapsible_groups.group.traveler_googles",
+    "fallback": "Traveler Googles"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:travelers_helmet"
+  }
+}

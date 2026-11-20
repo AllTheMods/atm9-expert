@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "forestry_refractory",
+  "name": {
+    "translate": "collapsible_groups.group.forestry_refractory",
+    "fallback": "Forestry Refractory"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "forestry:refractory"
+  }
+}

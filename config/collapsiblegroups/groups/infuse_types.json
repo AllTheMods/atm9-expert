@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "infuse_types",
+  "name": {
+    "translate": "collapsible_groups.group.infuse_types",
+    "fallback": "Infuse Types"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "mekanism.api.chemical.infuse.InfusionStack",
+        "id": "mekanism:bio"
+      },
+      {
+        "type": "mekanism.api.chemical.infuse.InfusionStack",
+        "id": "mekanism:carbon"
+      },
+      {
+        "type": "mekanism.api.chemical.infuse.InfusionStack",
+        "id": "mekanism:diamond"
+      },
+      {
+        "type": "mekanism.api.chemical.infuse.InfusionStack",
+        "id": "mekanism:fungi"
+      },
+      {
+        "type": "mekanism.api.chemical.infuse.InfusionStack",
+        "id": "mekanism:gold"
+      },
+      {
+        "type": "mekanism.api.chemical.infuse.InfusionStack",
+        "id": "mekanism:redstone"
+      },
+      {
+        "type": "mekanism.api.chemical.infuse.InfusionStack",
+        "id": "mekanism:tin"
+      },
+      {
+        "type": "mekanism.api.chemical.infuse.InfusionStack",
+        "id": "mekanism:refined_obsidian"
+      }
+    ]
+  }
+}

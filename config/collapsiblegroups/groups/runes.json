@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "runes",
+  "name": {
+    "translate": "collapsible_groups.group.runes",
+    "fallback": "Runes"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "elementalcraft:rune"
+  }
+}

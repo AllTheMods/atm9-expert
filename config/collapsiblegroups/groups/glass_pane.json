@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "glass_pane",
+  "name": {
+    "translate": "collapsible_groups.group.glass_pane",
+    "fallback": "Glass Pane"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "tconstruct:clear_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:orange_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:white_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:magenta_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:light_blue_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:yellow_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:lime_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:pink_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:gray_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:light_gray_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:cyan_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:purple_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:blue_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:brown_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:green_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:red_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:black_clear_stained_glass_pane"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:soul_glass_pane"
+      }
+    ]
+  }
+}

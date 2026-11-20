@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "small_blades",
+  "name": {
+    "translate": "collapsible_groups.group.small_blades",
+    "fallback": "Small Blades"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:small_blade"
+  }
+}

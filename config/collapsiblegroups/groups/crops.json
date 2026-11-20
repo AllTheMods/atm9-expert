@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "crops",
+  "name": {
+    "translate": "collapsible_groups.group.crops",
+    "fallback": "Crops"
+  },
+  "enabled": true,
+  "filter": {
+    "all": [
+      {
+        "type": "item",
+        "namespace": "croptopia"
+      },
+      {
+        "type": "item",
+        "tag": "forge:crops"
+      }
+    ]
+  }
+}

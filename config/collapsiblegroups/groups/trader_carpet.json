@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "trader_carpet",
+  "name": {
+    "translate": "collapsible_groups.group.trader_carpet",
+    "fallback": "Trader Carpet"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "utilitarian:white_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:orange_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:magenta_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:light_blue_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:yellow_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:lime_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:pink_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:gray_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:light_gray_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:cyan_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:purple_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:blue_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:brown_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:green_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:red_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:black_soliciting_carpet"
+      }
+    ]
+  }
+}
