@@ -36,7 +36,7 @@ craftablesFavoritesOnly = false
 historyMatchesListWidth = true
 
 #Show the item quantity field above the JEI item list (NEI showItemQuantityWidget).
-showItemQuantityWidget = true
+showItemQuantityWidget = false
 
 #Show 'Hold ALT for hotkeys' in item tooltips (NEI hotkeysHelpText). Alt still shows the keys.
 hotkeysHelpText = true
