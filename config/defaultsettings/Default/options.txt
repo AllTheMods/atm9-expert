@@ -1,2 +1,0 @@
-renderDistance:8
-simulationDistance:6
