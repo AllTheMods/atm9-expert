@@ -54,7 +54,7 @@ const bacteriaInfo = {
     PichiaPastoris: { name: "Pichia pastoris", uses: ["Bus and advanced bus circuits", "Neuron model certification"], breeds: [] },
     Methanogenesis: { name: "Methanogenesis Dominus", uses: ["Stage 2 rocket fuel"], breeds: ["Deinococcus radiodurans"] },
     PHABioplastic: { name: "PHA Bioplastic Strain", uses: ["Substrate Board"], breeds: [] },
-    AcidithiobacillusFerrooxidans: { name: "Acidithiobacillus ferrooxidans", uses: [], breeds: [] },
+    AcidithiobacillusFerrooxidans: { name: "Acidithiobacillus ferrooxidans", uses: ["Twilight Layline ore generation"], breeds: [] },
     DeinococcusRadiodurans: { name: "Deinococcus radiodurans", uses: ["Stage 3 rocket fuel"], breeds: ["Sphingomonas"] },
     Sphingomonas: { name: "Sphingomonas", uses: ["Stage 4 rocket fuel"], breeds: [] },    
 };

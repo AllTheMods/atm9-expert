@@ -38,7 +38,7 @@ ServerEvents.recipes(allthemods => {
         { nbt: 'ArcaneMycelial', name: 'Arcane Mycelial', parent: 'Mycorrhizal Symbiont Strain' },
         { nbt: 'AreoMycorrhizalOstrum', name: 'Areo-Mycorrhizal Ostrum', parent: 'Mycorrhizal Symbiont Strain' },
         { nbt: 'LunarCaseous', name: 'Lunar Caseous', parent: 'Mycorrhizal Symbiont Strain' },
-
+        { nbt: 'AcidithiobacillusFerrooxidans', name: 'Acidithiobacillus ferrooxidans', parent: 'Desulfovibrio' },
     ];
 
     const bacteriaStageItems = (strain) => {
