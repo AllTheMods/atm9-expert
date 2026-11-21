@@ -183,14 +183,25 @@ ServerEvents.recipes(allthemods => {
         'forestry:farm_control_quartz_chiseled', 'forestry:farm_control_quartz_lines',
         'forestry:apiary', 'forestry:bee_house', 'forestry:carpenter/portable_analyzer', 'forestry:carpenter/soldering_iron',
 
+        
         'gendustry:mutatron', 'gendustry:advanced_mutatron', 'gendustry:industrial_apiary',
         'gendustry:imprinter', 'gendustry:replicator', 'gendustry:sampler',
         'gendustry:protein_liquefier', 'gendustry:mutagen_producer', 'gendustry:genetic_transposer',
         'gendustry:dna_extractor',
+        'gendustry:power_module', 'gendustry:genetics_processor', 'gendustry:environmental_processor', 'gendustry:climate_control_module', 
+        'gendustry:receptacle', 'gendustry:labware', 'gendustry:upgrade_frame', 'gendustry:elite_upgrade_frame', 'gendustry:blank_gene_sample', 
+        'gendustry:blank_genetic_template', 'gendustry:pollen_kit', 'gendustry:automation_upgrade', 'gendustry:cooler_upgrade', 
+        'gendustry:dryer_upgrade', 'gendustry:heater_upgrade', 'gendustry:humidifier_upgrade', 'gendustry:immutable_upgrade', 
+        'gendustry:lifespan_upgrade', 'gendustry:lighting_upgrade', 'gendustry:nether_upgrade', 'gendustry:pollination_upgrade', 
+        'gendustry:productivity_upgrade', 'gendustry:scrubber_upgrade', 'gendustry:sieve_upgrade', 'gendustry:sky_upgrade', 
+        'gendustry:stabilizer_upgrade', 'gendustry:territory_upgrade', 'gendustry:weatherproof_upgrade',
+        'gendustry:activity_simulator_elite_upgrade', 'gendustry:fertility_elite_upgrade', 'gendustry:mutation_elite_upgrade', 
+        'gendustry:productivity_elite_upgrade', 'gendustry:territory_elite_upgrade', 'gendustry:youth_elite_upgrade'
         
     ]
 
-    const moreRemovals = [        
+    const moreRemovals = [     
+        'allthemodium:smeltery/melting/allthemodium_from_ore', 'allthemodium:smeltery/melting/vibranium_from_ore', 'allthemodium:smeltery/melting/unobtainium_from_ore',
         'tconstruct:common/glass/vanilla/beacon', 'mekanism:storage_blocks/salt', 'thermal:compat/mekanism/press_mek_salt_packing',
         'advanced_ae:quartzcrystal', 'immersiveengineering:crafting/treated_wood_horizontal',
         'alltheores:aluminum_ingot_from_ore_blasting', 'immersiveengineering:blueprint/component_iron', 'immersiveengineering:blueprint/component_steel',

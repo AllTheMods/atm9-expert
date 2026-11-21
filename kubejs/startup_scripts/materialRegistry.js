@@ -2403,8 +2403,29 @@ const materials = [
     new MaterialDef('amber_oil').fluid().color(0xB8731A).iconSet('FLUID').noDecomp().formula('C10H16O').components('10x carbon, 16x hydrogen, 1x oxygen'),
     new MaterialDef('succinic_anhydride').dust().color(0xEFE6CF).iconSet('DULL').noDecomp().formula('C4H4O3').components('4x carbon, 4x hydrogen, 3x oxygen'),
 
-    new MaterialDef('titanium_gold').ingot().fluid().color(0xE3B23C).iconSet('METALLIC').formula('Au3Ti').components('3x gold, 1x titanium').noSmelting().materialsBasic()
+    new MaterialDef('titanium_palladium_gold').ingot().fluid().color(0xE3B23C).iconSet('METALLIC').formula('Au3TiPd').components('3x gold, 1x titanium, 1x palladium').noSmelting().materialsBasic()
         .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 }),
+
+    new MaterialDef('vitallium').ingot().fluid().color(0x8F9CB0).iconSet('SHINY').formula('Co5Cr2Mo').components('5x cobalt, 2x chromium, 1x molybdenum').noSmelting().materialsBasic()
+        .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1600 }),
+
+    new MaterialDef('beryllium_copper').ingot().fluid().color(0xC27A4E).iconSet('METALLIC').formula('Cu6Be').components('6x copper, 1x beryllium').noSmelting().materialsBasic()
+        .blast({ temp: COIL_TEMPS.NICHROME, eut: EV, duration: 800 }),
+
+    new MaterialDef('bismuth_gold').ingot().fluid().color(0xE6BC86).iconSet('SHINY').formula('Au3Bi').components('3x gold, 1x bismuth').noSmelting()
+        .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 600 }),
+
+    new MaterialDef('dry_ice').dust().color(0xD3E6EF).iconSet('DULL').formula('CO2').components('1x carbon, 2x oxygen').noDecomp()
+        .unify({ block: 'powah:dry_ice' }),
+
+    new MaterialDef('acid_hydrolysate').fluid().color(0xC9A66B).iconSet('FLUID'),
+    new MaterialDef('peptone_solution').fluid().color(0xD8B878).iconSet('FLUID'),
+    new MaterialDef('meat_peptone_broth').fluid().color(0x9C6B3F).iconSet('FLUID'),
+    new MaterialDef('concentrated_peptone_broth').fluid().color(0x7A4A28).iconSet('FLUID'),
+    new MaterialDef('calcium_glycerophosphate_solution').fluid().color(0xE6DFC4).iconSet('FLUID').noDecomp().formula('CaC3H7O6P(H2O)').components('1x calcium, 3x carbon, 7x hydrogen, 6x oxygen, 1x phosphorus, 1x water'),
+    new MaterialDef('trace_metal_solution').fluid().color(0x6FA58A).iconSet('FLUID').noDecomp().formula('MgFeZn(SO4)3').components('1x magnesium, 1x iron, 1x zinc, 3x sulfur, 12x oxygen'),
+    new MaterialDef('mineral_supplement').fluid().color(0xB5C48A).iconSet('FLUID'),
+    new MaterialDef('protein_growth_medium').fluid().color(0xC48F4A).iconSet('FLUID'),
 ];
 
 

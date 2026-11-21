@@ -60,8 +60,8 @@ ServerEvents.recipes(allthemods => {
 
     addEBF(['#forge:dusts/atm_star', '#forge:dusts/atm_trio'], '#forge:antimatter 16', 'allthetweaks:atm_star', null, COIL_TEMPS.NAQUADAH, 2400, ZPM);
     addEBF(['artifacts:everlasting_beef','bloodmagic:demonslate'], '#forge:meat 16000', 'artifacts:eternal_steak', null, COIL_TEMPS.NAQUADAH, 2400, ZPM);
-    addEBF('#forge:dusts/draconium', '#forge:liquid_dragon_breath 2000', 'gtceu:hot_draconium_ingot', null, COIL_TEMPS.NAQUADAH, 2400, ZPM);
-    addEBF('#forge:dusts/titanium_gold', '#forge:succinic_acid 1000', 'gtceu:hot_titanium_gold_ingot', null, COIL_TEMPS.HSS_G, 1200, ZPM);
+    addEBF('#forge:dusts/draconium', '#forge:liquid_dragon_breath 2000', 'gtceu:hot_draconium_ingot', null, COIL_TEMPS.NAQUADAH, 2400, ZPM);              
+    addEBF('#forge:dusts/titanium_palladium_gold', '#forge:succinic_acid 1000', 'gtceu:hot_titanium_palladium_gold_ingot', null, COIL_TEMPS.HSS_G, 1200, IV);
 
     
     addEBF('create:crushed_raw_aluminum', null, 'alltheores:aluminum_ingot', null, COIL_TEMPS.CUPRONICKEL, 884, LV, 1, 'crushed_raw_aluminum');
@@ -85,7 +85,7 @@ ServerEvents.recipes(allthemods => {
         { name: 'dubnium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
         { name: 'hassium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
         { name: 'meitnerium', duration: 500, eut: ZPM, coolant: '#forge:super_coolant 1000' },
-        { name: 'titanium_gold', duration: 500, eut: ZPM}
+        { name: 'titanium_palladium_gold', duration: 500, eut: IV}
 
     ];
     

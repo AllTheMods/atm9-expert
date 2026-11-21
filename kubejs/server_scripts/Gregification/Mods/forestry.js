@@ -590,6 +590,65 @@ ServerEvents.recipes(allthemods => {
         key: { H: 'gtceu:iv_machine_casing', R: '#forge:plates/refractory_composite', A: '#forge:plates/arcane_wax_blend' }
     }, 'gtceu:soldering_alloy 576', ['forestry:hardened_machine'], null, 200);
 
+    const duration = 600;
+    const eut = IV;
+
+    allthemods.recipes.gtceu.chemical_reactor('gregification:growth_medium/acid_hydrolysis')
+        .inputFluids('gendustry:protein 6000', '#forge:hydrochloric_acid 6000')
+        .outputFluids('gtceu:acid_hydrolysate 12000')
+        .duration(duration)
+        .EUt(eut);
+
+    allthemods.recipes.gtceu.chemical_reactor('gregification:growth_medium/peptone_neutralisation')
+        .itemInputs('6x #forge:dusts/sodium_hydroxide')
+        .inputFluids('#forge:acid_hydrolysate 12000')
+        .itemOutputs('6x gtceu:salt_dust')
+        .outputFluids('gtceu:peptone_solution 12000')
+        .duration(duration)
+        .EUt(eut);
+
+    allthemods.recipes.gtceu.centrifuge('gregification:growth_medium/meat_peptone_broth')
+        .itemInputs('6x #forge:dusts/meat')
+        .inputFluids('#forge:peptone_solution 12000')
+        .itemOutputs('6x gtceu:bio_chaff')
+        .outputFluids('gtceu:meat_peptone_broth 12000')
+        .duration(duration)
+        .EUt(eut);
+
+    allthemods.recipes.gtceu.distillation_tower('gregification:growth_medium/broth_concentration')
+        .inputFluids('#forge:meat_peptone_broth 12000')
+        .outputFluids('gtceu:concentrated_peptone_broth 6000', 'gtceu:distilled_water 6000')
+        .duration(duration)
+        .EUt(eut);
+
+    allthemods.recipes.gtceu.chemical_reactor('gregification:growth_medium/calcium_glycerophosphate')
+        .itemInputs('3x #forge:dusts/calcium')
+        .inputFluids('#forge:glycerol 3000', '#forge:phosphoric_acid 3000')
+        .outputFluids('gtceu:calcium_glycerophosphate_solution 3000', 'gtceu:hydrogen 6000')
+        .duration(duration)
+        .EUt(eut);
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:growth_medium/trace_metal_solution')
+        .itemInputs('#forge:dusts/magnesium', '#forge:dusts/iron', '#forge:dusts/zinc')
+        .inputFluids('#forge:sulfuric_acid 3000')
+        .outputFluids('gtceu:trace_metal_solution 3000', 'gtceu:hydrogen 6000')
+        .duration(duration)
+        .EUt(eut);
+
+    allthemods.recipes.gtceu.mixer('gregification:growth_medium/mineral_supplement')
+        .inputFluids('#forge:calcium_glycerophosphate_solution 3000', '#forge:trace_metal_solution 3000')
+        .outputFluids('gtceu:mineral_supplement 6000')
+        .duration(duration)
+        .EUt(eut);
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:growth_medium/protein_growth_medium')
+        .itemInputs('4x #forge:dusts/salt')
+        .inputFluids('#forge:concentrated_peptone_broth 6000', '#forge:mineral_supplement 6000')
+        .outputFluids('gtceu:protein_growth_medium 12000')
+        .cleanroom(CleanroomType.CLEANROOM)
+        .duration(duration)
+        .EUt(eut);
+
 })
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
 // As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

@@ -232,13 +232,11 @@ ServerEvents.recipes(allthemods => {
 
     //esences
     essences.forEach(essence => {
-        allthemods.recipes.gtceu.gem_polisher(`${essence}_to_shard`)
-            .itemInputs(`#forge:gems/${essence}_essence`)
-            .chancedInput('gtceu:polishing_wheel', 1000, 0)
-            .inputFluids('gtceu:distilled_water 288')
-            .itemOutputs(`elementalcraft:${essence}_shard`)
-            .duration(150)
-            .EUt(HV);
+        allthemods.recipes.gtceu.macerator(`gregification:${essence}_shard_to_shard`)
+            .itemInputs(`#elementalcraft:shards/${essence}`)                        
+            .itemOutputs(`mysticalagriculture:${essence}_essence`)
+            .duration(120)
+            .EUt(LV);
     });
     
 });

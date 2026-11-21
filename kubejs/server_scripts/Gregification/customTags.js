@@ -27,7 +27,7 @@ ServerEvents.tags('fluid', allthemods => {
 	});		
 
 	allthemods.add('forge:mutation_fluid', ['gendustry:mutagen', 'gtceu:mutagen'])
-	allthemods.add('forge:growth_medium', ['gtceu:raw_growth_medium'])
+	allthemods.add('forge:growth_medium', ['gtceu:raw_growth_medium', 'gtceu:protein_growth_medium'])
 })
 
 ServerEvents.tags('item', allthemods => {	
