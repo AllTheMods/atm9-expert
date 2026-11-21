@@ -21,7 +21,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
     allthemods.create('drone_station')
         .category('drone_station')
         .setEUIO('in') // Machine takes power IN
-        .setMaxIOSize(6, 9, 3, 3) // Item In, Item Out, Fluid In, Fluid Out
+        .setMaxIOSize(6, 15, 3, 3) // Item In, Item Out, Fluid In, Fluid Out
         .setProgressBar(GuiTextures.COMPRESSOR_OVERLAY, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.SCIENCE)
 

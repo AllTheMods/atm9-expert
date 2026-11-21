@@ -131,6 +131,8 @@ ServerEvents.tags('block', allthemods => {
 	allthemods.add('forge:saplings', 'gtceu:rubber_sapling')
 	allthemods.add('bloodmagic:crystal_clusters', 'allthemodium:allthemodium_block')
 	allthemods.add('bloodmagic:crystal_clusters', 'kubejs:allthemodium_crystal_cluster')
+	
+	allthemods.add('forge:mineable/wrench', '#gtceu:casings')
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

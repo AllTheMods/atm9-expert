@@ -275,39 +275,7 @@ ServerEvents.recipes(allthemods => {
         .EUt(UV);
 
 
-    const drone = Item.of('pneumaticcraft:collector_drone').weakNBT();
-
-    allthemods.recipes.gtceu.drone_station('gregification:tier_1_rocket_schematic_from_drone')
-        .chancedInput(drone, 2500, -500)
-        .chancedOutput('gtceu:tier_1_rocket_schematic', 2500, 1000)
-        .inputFluids('#forge:kerosene 4000')
-        .duration(10000)
-        .EUt(EV)
-        .circuit(1);
-
-    allthemods.recipes.gtceu.drone_station('gregification:tier_2_rocket_schematic_from_drone')
-        .chancedInput(drone, 2500, -500)
-        .chancedOutput('gtceu:tier_2_rocket_schematic', 2500, 1000)
-        .inputFluids(['#forge:kerosene 4000', '#forge:hafnium 1440'])
-        .duration(10000)
-        .EUt(IV)
-        .circuit(2);
-
-    allthemods.recipes.gtceu.drone_station('gregification:tier_3_rocket_schematic_from_drone')
-        .chancedInput(drone, 2500, -500)
-        .chancedOutput('gtceu:tier_3_rocket_schematic', 2500, 1000)
-        .inputFluids(['#forge:kerosene 4000', '#forge:scandium 1440'])
-        .duration(10000)
-        .EUt(LuV)
-        .circuit(3);
-
-    allthemods.recipes.gtceu.drone_station('gregification:tier_4_rocket_schematic_from_drone')
-        .chancedInput(drone, 2500, -500)
-        .chancedOutput('gtceu:tier_4_rocket_schematic', 2500, 1000)
-        .inputFluids(['#forge:kerosene 4000', '#forge:thallium 1440'])
-        .duration(10000)
-        .EUt(ZPM)
-        .circuit(4);
+       
 
     allthemods.recipes.gtceu.hydro_electromagnetic_separator('gregificatoion:hydro_electromagnetic_separator/chaos_shards')
         .itemInputs('#forge:dusts/chaotic')
@@ -317,50 +285,8 @@ ServerEvents.recipes(allthemods => {
         .EUt(ZPM);
 
 
-    allthemods.recipes.gtceu.drone_station('gregification:allthemodium_upgrade')
-        .chancedInput(drone, 2500, -500)
-        .itemInputs('2x #forge:storage_blocks/allthemodium')
-        .chancedOutput('allthemodium:allthemodium_upgrade_smithing_template', 1500, 1000)
-        .inputFluids(['#forge:kerosene 4000', '#forge:hafnium 1440'])
-        .duration(10000)
-        .EUt(EV)
-        .circuit(11);
-
-    allthemods.recipes.gtceu.drone_station('gregification:vibranium_upgrade')
-        .chancedInput(drone, 2500, -500)
-        .itemInputs('4x #forge:storage_blocks/vibranium')
-        .chancedOutput('allthemodium:vibranium_upgrade_smithing_template', 1500, 1000)
-        .inputFluids(['#forge:kerosene 4000', '#forge:scandium 1440'])
-        .duration(10000)
-        .EUt(EV)
-        .circuit(12);
-
-    allthemods.recipes.gtceu.drone_station('gregification:unobtainium_upgrade')
-        .chancedInput(drone, 2500, -500)
-        .itemInputs('8x #forge:storage_blocks/unobtainium')
-        .chancedOutput('allthemodium:unobtainium_upgrade_smithing_template', 1500, 1000)
-        .inputFluids(['#forge:kerosene 4000', '#forge:thallium 1440'])
-        .duration(10000)
-        .EUt(EV)
-        .circuit(13);
-
-
-    allthemods.recipes.gtceu.drone_station('gregification:forbidden_search')
-        .chancedInput(drone, 2500, -500)
-        .itemInputs('forbidden_arcanus:dark_nether_star')
-        .chancedOutput('forbidden_arcanus:artisan_relic', 100, 100)
-        .chancedOutput('forbidden_arcanus:crescent_moon', 100, 100)
-        .chancedOutput('gtceu:solar_relic', 100, 100)
-        .chancedOutput('forbidden_arcanus:crimson_stone', 1000, 1000)
-        .chancedOutput('forbidden_arcanus:elementarium', 2000, 1000)
-        .chancedOutput('forbidden_arcanus:divine_pact', 1000, 1000)
-        .chancedOutput('forbidden_arcanus:maledictus_pact', 2000, 1000)
-        .inputFluids('#forge:kerosene 10000')
-        .duration(8000)
-        .EUt(EV)
-        .circuit(5);
-
     
+
 
 
     const createModelBlueprints = (machineID, creature, BPitemID, outputs, inputs, fluids, duration, EUt, CWU, customID, skipBlueprints) => {
