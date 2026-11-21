@@ -2,6 +2,7 @@
 // As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
 // priority: -1000
 //@ts-check
+//search:removal
 ServerEvents.tags('block', event => {
     event.get('mekanism:cardboard_blacklist')
         .add('#forge:mod_id/waystones');
@@ -129,10 +130,69 @@ ServerEvents.recipes(allthemods => {
     allthemods.remove({ id: /^sophisticatedstorage:(oak|spruce|birch|jungle|acacia|dark_oak|mangrove|cherry|bamboo|crimson|warped|generic)_(chest|barrel|limited_barrel_[1-4])(_from_.*)?$/ });
 
 
+    allthemods.remove({ type: 'forestry:fabricator' })
+    allthemods.remove({ type: 'forestry:fabricator_smelting' })
+    const forestryRemovals=[
+        'forestry:squeezer/mulch', 'forestry:squeezer/fruit/papaya', 'forestry:squeezer/fruit/lemon',
+        'forestry:squeezer/fruit/dates', 'forestry:squeezer/fruit/cherry', 'forestry:squeezer/fruit/feijoa',
+        'forestry:squeezer/fruit/plum', 'forestry:squeezer/fruit/pear', 'forestry:squeezer/fruit/orange',
+        'forestry:fermenter/potato', 'forestry:fermenter/potato_honey', 'forestry:fermenter/potato_juice',
+        'forestry:fermenter/wheat', 'forestry:fermenter/wheat_honey',  'forestry:fermenter/wheat_juice',
+        'forestry:fermenter/cactus', 'forestry:fermenter/cactus_honey', 'forestry:fermenter/cactus_juice',
+        'forestry:fermenter/mushroom', 'forestry:fermenter/mushroom_honey',  'forestry:fermenter/mushroom_juice',
+        'forestry:fermenter/sapling', 'forestry:fermenter/sapling_honey',  'forestry:fermenter/sapling_juice',
+        'forestry:fermenter/sugar_cane', 'forestry:fermenter/sugar_cane_honey', 'forestry:fermenter/sugar_cane_juice',
+        'forestry:still/ethanol', 'forestry:fabricator', 'forestry:carpenter', 'forestry:fermenter', 'forestry:still',
+        'gendustry:mutagen/glowstone_dust','gendustry:mutagen/redstone_block','gendustry:mutagen/redstone','gendustry:mutagen/glowstone',
+        'forestry:bog_earth_bucket', 'forestry:bog_earth_refractory', 'forestry:bog_earth_wax_capsule',
+        'forestry:bog_earth_can', 'forestry:carpenter/bog_earth', 'forestry:bituminous_peat', 'forestry:carpenter/impregnated_casing',
+        'forestry:sturdy_machine', 'forestry:centrifuge', 'forestry:carpenter/circuits/basic',
+        'forestry:alveary_swarmer', 'forestry:alveary_fan', 'forestry:alveary_heater',
+        'forestry:alveary_hygro', 'forestry:alveary_stabiliser', 'forestry:alveary_sieve',
+        'forestry:carpenter/circuits/enhanced', 'forestry:carpenter/circuits/refined', 'forestry:carpenter/circuits/intricate',
 
-    const moreRemovals = [
+        'mobees:osmium_from_bits_mekanism', 'mobees:zinc_from_bits_create', 'mobees:certus_from_bits_ae2',
+        'mobees:cobalt_from_bits_tconstruct', 'mobees:apatite_from_bits', 'mobees:tin_from_bits',
+        'mobees:netherite_scrap_from_bits', 'mobees:gold_ingot_from_bits', 'mobees:aluminum_from_bits_immersiveengineering',
+        'mobees:lead_from_bits_gtceu', 'mobees:silver_from_bits_immersiveengineering', 'mobees:coal_from_bits',
+        'mobees:nickel_from_bits_gtceu', 'mobees:yellorium_from_bits_bigreactors', 'mobees:copper_ingot_from_bits',
+        'mobees:iron_ingot_from_bits', 'mobees:alveary_mutator',
+        'forestry:farm_plain_stone_brick', 'forestry:farm_plain_mossy_stone_brick', 'forestry:farm_plain_cracked_stone_brick',
+        'forestry:farm_plain_brick', 'forestry:farm_plain_cut_sandstone', 'forestry:farm_plain_sandstone_chiseled',
+        'forestry:farm_plain_brick_nether', 'forestry:farm_plain_brick_chiseled', 'forestry:farm_plain_quartz',
+        'forestry:farm_plain_quartz_chiseled', 'forestry:farm_plain_quartz_lines',
+
+        'forestry:farm_gearbox_stone_brick', 'forestry:farm_gearbox_mossy_stone_brick', 'forestry:farm_gearbox_cracked_stone_brick',
+        'forestry:farm_gearbox_brick', 'forestry:farm_gearbox_cut_sandstone', 'forestry:farm_gearbox_sandstone_chiseled',
+        'forestry:farm_gearbox_brick_nether', 'forestry:farm_gearbox_brick_chiseled', 'forestry:farm_gearbox_quartz',
+        'forestry:farm_gearbox_quartz_chiseled', 'forestry:farm_gearbox_quartz_lines',
+
+        'forestry:farm_hatch_stone_brick', 'forestry:farm_hatch_mossy_stone_brick', 'forestry:farm_hatch_cracked_stone_brick',
+        'forestry:farm_hatch_brick', 'forestry:farm_hatch_cut_sandstone', 'forestry:farm_hatch_sandstone_chiseled',
+        'forestry:farm_hatch_brick_nether', 'forestry:farm_hatch_brick_chiseled', 'forestry:farm_hatch_quartz',
+        'forestry:farm_hatch_quartz_chiseled', 'forestry:farm_hatch_quartz_lines',
+
+        'forestry:farm_valve_stone_brick', 'forestry:farm_valve_mossy_stone_brick', 'forestry:farm_valve_cracked_stone_brick',
+        'forestry:farm_valve_brick', 'forestry:farm_valve_cut_sandstone', 'forestry:farm_valve_sandstone_chiseled',
+        'forestry:farm_valve_brick_nether', 'forestry:farm_valve_brick_chiseled', 'forestry:farm_valve_quartz',
+        'forestry:farm_valve_quartz_chiseled', 'forestry:farm_valve_quartz_lines',
+
+        'forestry:farm_control_stone_brick', 'forestry:farm_control_mossy_stone_brick', 'forestry:farm_control_cracked_stone_brick',
+        'forestry:farm_control_brick', 'forestry:farm_control_cut_sandstone', 'forestry:farm_control_sandstone_chiseled',
+        'forestry:farm_control_brick_nether', 'forestry:farm_control_brick_chiseled', 'forestry:farm_control_quartz',
+        'forestry:farm_control_quartz_chiseled', 'forestry:farm_control_quartz_lines',
+        'forestry:apiary', 'forestry:bee_house', 'forestry:carpenter/portable_analyzer', 'forestry:carpenter/soldering_iron',
+
+        'gendustry:mutatron', 'gendustry:advanced_mutatron', 'gendustry:industrial_apiary',
+        'gendustry:imprinter', 'gendustry:replicator', 'gendustry:sampler',
+        'gendustry:protein_liquefier', 'gendustry:mutagen_producer', 'gendustry:genetic_transposer',
+        'gendustry:dna_extractor',
+        
+    ]
+
+    const moreRemovals = [        
         'tconstruct:common/glass/vanilla/beacon', 'mekanism:storage_blocks/salt', 'thermal:compat/mekanism/press_mek_salt_packing',
-        'advanced_ae:quartzcrystal',
+        'advanced_ae:quartzcrystal', 'immersiveengineering:crafting/treated_wood_horizontal',
         'alltheores:aluminum_ingot_from_ore_blasting', 'immersiveengineering:blueprint/component_iron', 'immersiveengineering:blueprint/component_steel',
         'immersiveengineering:smelting/ingot_aluminum_from_blasting3',  'immersiveengineering:smelting/ingot_aluminum3',  'immersiveengineering:smelting/ingot_aluminum',
         'create:blasting/aluminum_ingot_from_crushed', 'create:smelting/aluminum_ingot_from_crushed',        
@@ -666,6 +726,9 @@ ServerEvents.recipes(allthemods => {
     allthemods.remove(removalObjects);
 
     removalObjects = moreRemovals.map(recipeId => ({ id: recipeId }));
+    allthemods.remove(removalObjects);
+
+    removalObjects = forestryRemovals.map(recipeId => ({ id: recipeId }));
     allthemods.remove(removalObjects);
 
     // Blast Materials (Dusts and Raw)

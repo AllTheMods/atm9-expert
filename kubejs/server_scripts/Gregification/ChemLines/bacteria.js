@@ -113,7 +113,7 @@ ServerEvents.recipes(allthemods => {
         // Step 5: Chemical Reactor
         allthemods.recipes.gtceu.chemical_reactor(`gregification:bacteria/${strainName}_mutated`)
             .itemInputs(pichia.bacterialMatrix, '#forge:dusts/protactinium')
-            .inputFluids('#forge:mutagen 100', '#forge:water_stage_5 250')
+            .inputFluids('#forge:mutation_fluid 100', '#forge:water_stage_5 250')
             .itemOutputs(pichia.mutatedBacterium)
             .duration(DUR)
             .EUt(LUV);
@@ -121,7 +121,7 @@ ServerEvents.recipes(allthemods => {
         //alternate
         allthemods.recipes.gtceu.chemical_reactor(`gregification:bacteria/${strainName}_mutated_slime`)
             .itemInputs(pichia.bacterialMatrix, '#forge:dusts/protactinium')
-            .inputFluids('#forge:mutagen 100', 'gtceu:slime_slurry 250')
+            .inputFluids('#forge:mutation_fluid 100', 'gtceu:slime_slurry 250')
             .itemOutputs(pichia.mutatedBacterium)
             .duration(DUR)
             .EUt(LUV);
@@ -129,7 +129,7 @@ ServerEvents.recipes(allthemods => {
         // Step 6: Large Chemical Reactor
         allthemods.recipes.gtceu.large_chemical_reactor(`gregification:bacteria/${strainName}_colony`)
             .itemInputs(pichia.mutatedBacterium)
-            .inputFluids('gtceu:raw_growth_medium 250')
+            .inputFluids('#forge:growth_medium 250')
             .itemOutputs(pichia.colony)
             .duration(DUR)
             .EUt(LUV);
@@ -165,7 +165,7 @@ ServerEvents.recipes(allthemods => {
         .EUt(LUV);
 
     allthemods.recipes.gtceu.chemical_reactor(`gregification:bacteria/concentrated_liquid_dna`)
-        .inputFluids('#forge:nucleic_acid_mixture 1000', '#forge:enzyme_solution 1000')
+        .inputFluids('#forge:nucleic_acid_mixture 1000', '#forge:enzyme_solution 1000', 'gendustry:liquid_dna 1000')
         .outputFluids('gtceu:concentrated_liquid_dna 1000')
         .duration(DUR)
         .EUt(LUV);

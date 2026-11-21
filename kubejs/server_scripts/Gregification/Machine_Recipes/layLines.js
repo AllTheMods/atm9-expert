@@ -32,4 +32,11 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('gtceu:carminite_plate')
         .duration(100)
         .EUt(MV);
+
+    allthemods.recipes.gtceu.bender('gregification:dense_carminite_plate')
+        .itemInputs('#forge:gems/carminite')
+        .circuit(9)
+        .itemOutputs('gtceu:dense_carminite_plate')
+        .duration(100)
+        .EUt(MV);
 });

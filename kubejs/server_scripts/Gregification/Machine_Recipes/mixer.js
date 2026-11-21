@@ -1,6 +1,7 @@
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
 // As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
 
+//search:mixer
 ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
     // Resolves a voltage from a number, a numeric string ('2048'), or a tier name in any case ('LuV', 'luv', 'LUV')
@@ -33,6 +34,12 @@ ServerEvents.recipes(allthemods => {
     addMixer(['3x #forge:dusts/neodymium', '#forge:dusts/dysprosium'], '4x gtceu:neodymium_dysprosium_dopant_dust', ZPM, 400);
     addMixer(['2x #forge:dusts/neodymium', '#forge:dusts/terbium', '#forge:dusts/dysprosium'], '4x gtceu:neodymium_terbium_dysprosium_dopant_dust', ZPM, 400);
     addMixer(['2x #forge:dusts/neodymium', '#forge:dusts/praseodymium', '#forge:dusts/promethium', '#forge:dusts/terbium', '#forge:dusts/dysprosium'], '6x gtceu:neodymium_rare_earth_dopant_dust', ZPM, 400);
+
+    allthemods.recipes.gtceu.mixer('gregification:arcane_wax_blend')
+        .itemInputs('#forge:dusts/soul_wax', '#forge:dusts/arcane_wax', '#forge:dusts/netherite', '#forge:dusts/source')
+        .itemOutputs('4x gtceu:arcane_wax_blend_dust')
+        .duration(200)
+        .EUt(EV)
 
     // ---- structural ----
     //corrosive_etrium_alloy (blast UHV)
@@ -569,6 +576,12 @@ ServerEvents.recipes(allthemods => {
         .itemInputs('#forge:dusts/bone', '#forge:dusts/enchanted_ash', '#forge:dusts/soda_ash', '#forge:dusts/ash', '#forge:dusts/gypsum', '#forge:dusts/potash')
         .itemOutputs('6x gtceu:bone_char_dust')
         .duration(200).EUt(HV);
+
+    allthemods.recipes.gtceu.mixer('gregification:forestry/refractory_composite_plate')
+        .itemInputs('2x #forge:dusts/refractory_wax', '2x #forge:dusts/brick', '2x #forge:dusts/blazing_pyrotheum')
+        .itemOutputs('6x gtceu:refractory_composite_dust')
+        .duration(400)
+        .EUt(IV)
 
 });
 

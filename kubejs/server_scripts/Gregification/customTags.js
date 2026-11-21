@@ -8,7 +8,7 @@ ServerEvents.tags('fluid', allthemods => {
 	allthemods.add('forge:diesel', 'gtceu:bio_diesel');
 	allthemods.add('forge:bio_diesel', 'pneumaticcraft:biodiesel');
 	allthemods.add('forge:bio_diesel', 'immersiveengineering:biodiesel');
-	allthemods.add('forge:ammonia', 'immersivegeology:fluid_ammonia_solution')
+	
 	allthemods.add('forge:liquid_soul', ['tconstruct:liquid_soul', 'gtceu:liquid_soul']);
 	allthemods.add('forge:blood', ['evilcraft:blood', 'bloodmagic:life_essence_fluid', 'gtceu:sanguine_concentrate']);
 	allthemods.add('forge:meat', 'gtceu:liquid_rotten_flesh');
@@ -25,6 +25,9 @@ ServerEvents.tags('fluid', allthemods => {
 	['corrosive','vengeful','destructive','demon','steadfast'].forEach(tag => {
 		allthemods.add('forge:will', `gtceu:${tag}`);
 	});		
+
+	allthemods.add('forge:mutation_fluid', ['gendustry:mutagen', 'gtceu:mutagen'])
+	allthemods.add('forge:growth_medium', ['gtceu:raw_growth_medium'])
 })
 
 ServerEvents.tags('item', allthemods => {	

@@ -26,6 +26,14 @@ ServerEvents.recipes(allthemods => {
         C: "#gtceu:circuits/lv"
     }).id('gregification:basicmagnet');
 
+    allthemods.shaped('8x immersiveengineering:treated_wood_horizontal', [
+        'PBP',
+        'PPP',
+        'PPP'
+    ], {
+        B: { type: 'gtceu:fluid_container', fluid: { amount: 1000, value: { tag: 'forge:creosote' } } },
+        P: '#minecraft:planks'
+    }).id('gregification:treated_wood_horizontal');
 
 
     allthemods.shaped('simplemagnets:advancedmagnet', [

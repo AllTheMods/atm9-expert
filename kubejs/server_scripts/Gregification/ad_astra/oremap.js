@@ -76,6 +76,20 @@ GTCEuServerEvents.oreVeins(event => {
             .withBlock(GTMaterials.get('trona'), 2, 129, 248)            
         )
     })
+
+    event.add("mining_magical_vein", vein => {
+        vein.weight(15)
+        vein.density(0.4)
+        vein.clusterSize(40)
+        vein.layer(GTWorldGenLayers.ENDSTONE)
+        vein.dimensions(["allthemodium:mining"])
+        vein.biomes("#allthemodium:mining_features/mining_biomes")
+        vein.heightRangeUniform(-63, 0)
+        vein.dikeVeinGenerator(generator => generator
+            .withBlock(GTMaterials.get('mithril'), 2, -63, 0)
+            .withBlock(GTMaterials.get('dark_gem'), 1, -63, 0)
+        )
+    })
    
     const moonOreGroups = [
         ['clausthalite', 'naumannite'],                          // selenides (Pb-Se, Ag-Se)

@@ -3,7 +3,8 @@
 
 JEIEvents.hideItems(allthemods => {
 	
-	const modsToHide = ['mekanism', 'evilcraft', 'gtceu'];
+	
+  const modsToHide = ['mekanism', 'evilcraft', 'gtceu'];
     
     modsToHide.forEach(mod => {
         allthemods.hide({ mod: mod, custom: (stack) => {

@@ -24,7 +24,7 @@ ServerEvents.recipes(allthemods => {
         }
         let list = [];
         if (kind === 'fluid') {
-            var fluidId = 'gtceu:' + name;
+            var fluidId = name.indexOf(':') > -1 ? name : 'gtceu:' + name;
             if (fluidOk(fluidId)) return { type: 'fluid', id: fluidId, amount: amount * S.FLUID_BUCKET };
             return null;
         }

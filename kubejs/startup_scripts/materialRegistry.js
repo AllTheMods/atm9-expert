@@ -616,9 +616,16 @@ const materials = [
         .unify({ block: 'projecte:red_matter_block', ingot: 'projecte:red_matter' }),
                     
     new MaterialDef('dark_gem').ore().gem()
-        .byproducts(['coagulite', 'iron'])
+        .byproducts(['coagulite', 'dark_gem','iron'])
         .color(0x262626).iconSet('NETHERSTAR').gem()
         .unify({ gemFlawless: true, gemExquisite: true, gem: 'evilcraft:dark_gem', dust: 'evilcraft:dark_gem_crushed', block: 'evilcraft:dark_block', ore: 'evilcraft:dark_ore' }),
+
+    new MaterialDef('bitumen').dust().color(0x1F1A16).iconSet('DULL')
+        .unify({ dust: 'thermal:bitumen', block: 'thermal:bitumen_block', dustSmall: true, dustTiny: true }),
+
+    new MaterialDef('oil_sand').dust().ore().color(0x4A3B2A).iconSet('DULL')
+        .unify({ oreSand: 'thermal:oil_sand', oreRedSand: 'thermal:oil_red_sand' })
+        .byproducts(['bitumen', 'sulfur', 'carbon']),
 
     new MaterialDef('dark_power_gem')
         .color(0x2f0a0b).iconSet('NETHERSTAR').gem()
@@ -1618,7 +1625,7 @@ const materials = [
     new MaterialDef('undeath').dust().color(0xd9b6b2).iconSet('DULL').singularity(),
 
     new MaterialDef('tachyon').gem().dust().color(0x394d55).iconSet('SHINY')
-        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'gtceu:tachyon' }),
+        .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'gtceu:tachyon', dustSmall: true, dustTiny: true }),
 
     new MaterialDef('pulsating_crystal').gem().dust().color(0x79ffff).iconSet('SHINY')
         .unify({ plate: true, block: true, gemFlawless: true, gemExquisite: true, gem: 'enderio:pulsating_crystal' }),
@@ -1679,7 +1686,7 @@ const materials = [
     new MaterialDef('fiery').ingot().color(0x5b2b19).iconSet('METALLIC').singularity().materialsBasic()
         .unify({ ingot: 'twilightforest:fiery_ingot', block: 'twilightforest:fiery_block' }),
 
-    new MaterialDef('carminite').gem().color(0xD74C4C).iconSet('RUBY').singularity().materialsBasic()
+    new MaterialDef('carminite').gem().color(0xD74C4C).iconSet('RUBY').singularity().flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE)//.materialsBasic()
         .unify({ gem: 'twilightforest:carminite', block: 'twilightforest:carminite_block' }),
 
     new MaterialDef('bio_organic_nanocomposite').ingot().dust().fluid().color(0x3D5C42).iconSet('DULL')
@@ -2373,6 +2380,31 @@ const materials = [
     new MaterialDef('bone_char').color(0xC9BBA0).iconSet('DULL').formula('Ca4K2Na2C2SH4O10Ea').dust().components('1x bone, 1x enchanted_ash, 1x soda_ash, 1x ash, 1x gypsum, 1x potash').noDecomp(),
     new MaterialDef('hell_essence').dust().color(0xFFFFFF).iconSet('hell_essence')
         .unify({ dustTiny: true, dustSmall: true }),
+
+    new MaterialDef('contaminated_bacteria_fluid').fluid().color(0x6E7A2C).iconSet('FLUID').noDecomp(),
+    new MaterialDef('refractory_wax').dust().color(0xD8CBA0).iconSet('DULL')
+        .unify({ dust: 'forestry:refractory_wax', dustSmall: true, dustTiny: true }),
+            
+    new MaterialDef('refractory_composite').ingot().color(0x8C4A2B).iconSet('DULL').components('2x refractory_wax, 2x brick, 2x blazing_pyrotheum').flags(GTMaterialFlags.GENERATE_PLATE),
+    new MaterialDef('amber').color(0xFFB300).iconSet('RUBY').dust().gem().formula('C10H16O').components('10x carbon, 16x hydrogen, 1x oxygen')
+        .unify({ gem: 'forestry:amber', dustTiny: true, dustSmall: true }),
+
+    new MaterialDef('soul_wax').dust().color(0x5B8DA7).iconSet('DULL')
+        .unify({ dust: 'mobees:soul_wax', dustSmall: true, dustTiny: true }),
+
+    new MaterialDef('arcane_wax').dust().color(0x915973).iconSet('DULL')
+        .unify({ dust: 'mobees:arcane_wax', dustSmall: true, dustTiny: true }),
+
+    new MaterialDef('arcane_wax_blend').dust().ingot().color(0x84609A).iconSet('DULL').flags(GTMaterialFlags.GENERATE_PLATE)
+        .components('1x soul_wax, 1x arcane_wax, 1x netherite, 1x source')
+        .unify({ dustSmall: true, dustTiny: true }),
+
+    new MaterialDef('succinic_acid').fluid().color(0xE6D9B0).iconSet('FLUID').noDecomp().formula('C4H6O4').components('4x carbon, 6x hydrogen, 4x oxygen'),        
+    new MaterialDef('amber_oil').fluid().color(0xB8731A).iconSet('FLUID').noDecomp().formula('C10H16O').components('10x carbon, 16x hydrogen, 1x oxygen'),
+    new MaterialDef('succinic_anhydride').dust().color(0xEFE6CF).iconSet('DULL').noDecomp().formula('C4H4O3').components('4x carbon, 4x hydrogen, 3x oxygen'),
+
+    new MaterialDef('titanium_gold').ingot().fluid().color(0xE3B23C).iconSet('METALLIC').formula('Au3Ti').components('3x gold, 1x titanium').noSmelting().materialsBasic()
+        .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 }),
 ];
 
 

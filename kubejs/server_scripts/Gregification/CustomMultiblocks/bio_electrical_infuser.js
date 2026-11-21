@@ -251,7 +251,6 @@ ServerEvents.recipes(allthemods => {
     );
 	
 	//speed upgrade
-	
 	allthemods.shaped('productivebees:upgrade_time', [
 		'IGI',
 		'PSP',
@@ -263,112 +262,80 @@ ServerEvents.recipes(allthemods => {
 		P: '#forge:screws/manasteel'
 	}).id('allthemods:shaped/bee_speed_upgrade');
 	
-	//upgrade base
+	const upgradeDuration = 800
+    const upgradeEut = IV
+	const upgradeFluid = '#forge:succinic_acid 1000'
 
-	allthemods.shaped('productivebees:upgrade_base', [
-		'TMT',
-		'PSP',
-		'RMR'
-	], {
-		S: 'bloodmagic:reinforcedslate',
-		P: '#forge:plates/dark_steel',
-		M: 'gtceu:hv_electric_motor',
-		R: '#forge:plates/manasteel',
-		T: '#forge:screws/hellforged'
-	}).id('allthemods:shaped/bee_upgrade_base_hv');
-	
-	//alpha
+	allthemods.recipes.gtceu.assembler('gregification:assembler/bee_speed_upgrade')
+        .itemInputs('4x #forge:plates/energized_steel', '2x pneumaticcraft:glycerol', '2x #forge:screws/ferrognetic', 'bloodmagic:accelerationrune')
+        .itemOutputs('productivebees:upgrade_time')
+        .inputFluids(upgradeFluid)
+        .duration(upgradeDuration)
+        .EUt(upgradeEut)
 
-	allthemods.shaped('productivebees:upgrade_productivity', [
-    'MSM',
-    'DUD',
-    'MSM'
-	], {
-		U: 'productivebees:upgrade_base',
-		D: 'productivebees:draconic_chunk',
-		M: '#forge:plates/manasteel',
-		S: '#forge:screws/soularium'
-	}).id('allthemods:shaped/bee_productivity_alpha');
-	
-	//beta
+    allthemods.recipes.gtceu.assembler('gregification:assembler/bee_upgrade_base')
+        .itemInputs('2x #forge:screws/hellforged', 'gtceu:iv_field_generator', '2x #forge:plates/dark_steel', 'bloodmagic:reinforcedslate', '2x #forge:plates/manasteel')
+        .itemOutputs('productivebees:upgrade_base')
+		.inputFluids(upgradeFluid)
+        .duration(upgradeDuration)
+        .EUt(upgradeEut);
+		
 
-	allthemods.shaped('productivebees:upgrade_productivity_2', [
-		'ASA',
-		'NUN',
-		'ASA'
-	], {
-		U: 'productivebees:upgrade_base',
-		A: 'productivebees:upgrade_productivity',
-		N: '#forge:plates/nether_star',
-		S: '#forge:screws/dark_steel'
-	}).id('allthemods:shaped/bee_productivity_beta');
-	
-	//anti teleportation
+    allthemods.recipes.gtceu.assembler('gregification:assembler/bee_upgrade_anti_teleport')
+        .itemInputs('productivebees:upgrade_base', '4x #forge:plates/umbral_steel', '4x #forge:plates/enderium', 'botania:rune_envy')
+        .itemOutputs('productivebees:upgrade_anti_teleport')
+		.inputFluids(upgradeFluid)
+        .duration(upgradeDuration)
+        .EUt(upgradeEut);
 
-	allthemods.shaped('productivebees:upgrade_anti_teleport', [
-		'MPM',
-		'PUP',
-		'MPM'
-	], {
-		U: 'productivebees:upgrade_base',
-		M: '#forge:plates/manasteel',
-		P: 'minecraft:ender_pearl'
-	}).id('allthemods:shaped/bee_upgrade_anti_teleport');
-	
+    allthemods.recipes.gtceu.assembler('gregification:assembler/bee_upgrade_simulator')
+        .itemInputs('productivebees:upgrade_anti_teleport', 'gtceu:iv_field_generator', '4x #forge:plates/pulsating_alloy', '3x #forge:screws/terrasteel')
+        .itemOutputs('productivebees:upgrade_simulator')
+        .inputFluids(upgradeFluid)
+        .duration(upgradeDuration)
+        .EUt(upgradeEut);
 
-	allthemods.shaped('productivebees:upgrade_simulator', [
-		'PFP',
-		'SUS',
-		'PSP'
-	], {
-		U: 'productivebees:upgrade_anti_teleport',
-		P: '#forge:plates/pulsating_alloy',
-		F: 'gtceu:ev_field_generator',
-		S: '#forge:screws/terrasteel'
-	}).id('allthemods:shaped/bee_simulator_upgrade_ev');
-	
-	//gamma
+    allthemods.recipes.gtceu.assembler('gregification:assembler/bee_upgrade_comb_block')
+        .itemInputs('productivebees:upgrade_base', '2x productivebees:draconic_chunk', '2x #forge:foils/selenium', '2x #forge:screws/alfsteel', '2x #forge:dusts/promethium')
+        .itemOutputs('productivebees:upgrade_comb_block')
+        .inputFluids(upgradeFluid)
+        .duration(upgradeDuration)
+        .EUt(upgradeEut);
 
-	allthemods.shaped('productivebees:upgrade_productivity_3', [
-		'BSB',
-		'EUE',
-		'BSB'
-	], {
-		U: 'productivebees:upgrade_simulator',     // Simulator in middle
-		B: 'productivebees:upgrade_productivity_2', // Beta on corners
-		E: '#forge:plates/echo_shard',              // Echo Shard plates on sides
-		S: '#forge:screws/terrasteel'               // Terrasteel screws top/bottom
-	}).id('allthemods:shaped/bee_productivity_gamma');
-	
-	//block upgrade
+    allthemods.recipes.gtceu.assembler('gregification:assembler/bee_productivity_alpha')
+        .itemInputs('productivebees:upgrade_base', 'productivebees:upgrade_time', '8x productivebees:draconic_chunk', '4x #forge:plates/arcane_wax_blend', '4x #forge:screws/soularium')
+        .itemOutputs('productivebees:upgrade_productivity')
+        .inputFluids(upgradeFluid)
+        .duration(upgradeDuration)
+        .EUt(upgradeEut);
 
-	allthemods.shaped('productivebees:upgrade_comb_block', [
-		'CSC',
-		'IUI',
-		'CSC'
-	], {
-		U: 'productivebees:upgrade_base',
-		C: 'productivebees:draconic_chunk',
-		I: '#forge:plates/iesnium',
-		S: '#forge:screws/hellforged'
-	}).id('allthemods:shaped/bee_block_upgrade_hv');
-	
-	//omega
+    allthemods.recipes.gtceu.assembler('gregification:assembler/bee_productivity_beta')
+        .itemInputs('productivebees:upgrade_productivity', '4x #forge:plates/nether_star', '4x #forge:screws/end_steel', '4x #forge:plates/scandium' )
+        .itemOutputs('productivebees:upgrade_productivity_2')
+        .inputFluids(upgradeFluid)
+        .duration(upgradeDuration)
+        .EUt(upgradeEut);
 
+    allthemods.recipes.gtceu.assembler('gregification:assembler/bee_productivity_gamma')
+        .itemInputs('productivebees:upgrade_productivity_2', '4x #forge:plates/echo_shard', '4x #forge:screws/alfsteel', '4x #forge:plates/thulium')
+        .itemOutputs('productivebees:upgrade_productivity_3')
+        .inputFluids(upgradeFluid)
+        .duration(upgradeDuration)
+        .EUt(upgradeEut);
+		
 	addBioInfuser(
 		[
-			'4x productivebees:upgrade_productivity_3',
-			'minecraft:heart_of_the_sea',			
-			'productivebees:upgrade_comb_block',			
-			'evilcraft:garmonbozia',
-			'bloodmagic:demonslate',
+			'productivebees:upgrade_productivity_3',
+			'4x #forge:dusts/lutetium',
+			'4x #forge:plates/radium',
+			'16x #forge:foils/strontium_aluminate',
+			'productivebees:upgrade_comb_block',
 			'4x #forge:plates/kevlar',
-			'8x #forge:screws/terrasteel',
 			'gtceu:tachyon'
 		],
 		[
-			'#forge:blood 16000',
-			'#forge:lubricant 16000',
+			'#forge:saturated_tau 16000',
+			'#forge:succinic_acid 2000',
 			'#forge:honey 16000',
 			'#forge:dna_omega 1'
 		],
