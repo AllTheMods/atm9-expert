@@ -1245,5 +1245,17 @@
     "material.gtceu.calcium_glycerophosphate_solution": "Calcium Glycerophosphate Solution",
     "material.gtceu.trace_metal_solution": "Trace Metal Solution",
     "material.gtceu.mineral_supplement": "Mineral Supplement",
-    "material.gtceu.protein_growth_medium": "Protein Growth Medium"
+    "material.gtceu.protein_growth_medium": "Protein Growth Medium",
+    "allele.forestry.bee_species.bee_manganese": "Manganese",
+    "allele.forestry.bee_species.bee_manganese.desc": "A bee that produces manganese combs.",
+    "item.forestry.bee_comb_manganese": "Manganese Comb",
+    "item.forestry.manganese_bit": "Manganese Bit",
+    "allele.forestry.bee_species.bee_cadmium": "Cadmium",
+    "allele.forestry.bee_species.bee_cadmium.desc": "A bee that produces cadmium combs.",
+    "item.forestry.bee_comb_cadmium": "Cadmium Comb",
+    "item.forestry.cadmium_bit": "Cadmium Bit",
+    "allele.forestry.bee_species.bee_energized": "Energized",
+    "allele.forestry.bee_species.bee_energized.desc": "A bee that produces energized combs.",
+    "item.forestry.bee_comb_energized": "Energized Comb",
+    "item.forestry.energized_bit": "Energized Bit"
 }

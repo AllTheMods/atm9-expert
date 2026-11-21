@@ -19,7 +19,10 @@ const gtBees = [
     { id: 'ruby', name: 'Ruby', genus: 'gemmapis', species: 'rubinum', body: 0xC62415, stripes: 0x064F2C, outline: 0x7B000B, complexity: 6, parents: ['mobees:bee_redstone', 'mobees:bee_diamond'], mutation: 0.08, shape: 'certus', chance: combChance },
     { id: 'peridot', name: 'Peridot', genus: 'gemmapis', species: 'peridotum', body: 0x8ADB18, stripes: 0x064F2C, outline: 0x5D7B00, complexity: 6, parents: ['mobees:bee_emerald', 'mobees:bee_redstone'], mutation: 0.08, shape: 'certus', chance: combChance },
     { id: 'sapphire', name: 'Sapphire', genus: 'gemmapis', species: 'sapphirum', body: 0x5241F3, stripes: 0x064F2C, outline: 0x000B7B, complexity: 6, parents: ['mobees:bee_lapis', 'mobees:bee_diamond'], mutation: 0.08, shape: 'certus', chance: combChance },
-    { id: 'dark_gem', name: 'Dark Gem', genus: 'gemmapis', species: 'tenebrum', body: 0x636363, stripes: 0x2E0B17, outline: 0x141414, complexity: 7, parents: ['mobees:bee_amethyst', 'mobees:bee_withered'], mutation: 0.06, glint: true, shape: 'certus', chance: combChance }
+    { id: 'dark_gem', name: 'Dark Gem', genus: 'gemmapis', species: 'tenebrum', body: 0x636363, stripes: 0x2E0B17, outline: 0x141414, complexity: 7, parents: ['mobees:bee_amethyst', 'mobees:bee_withered'], mutation: 0.06, glint: true, shape: 'certus', chance: combChance },
+    { id: 'manganese', name: 'Manganese', genus: 'metallapis', species: 'manganicum', body: 0xB39BC4, complexity: 4, parents: ['mobees:bee_iron', 'mobees:bee_nickel'], mutation: 0.10, shape: 'iron', chance: combChance },
+    { id: 'cadmium', name: 'Cadmium', genus: 'metallapis', species: 'cadmicum', body: 0xD8C25A, complexity: 5, parents: ['mobees:bee_zinc', 'mobees:bee_lead'], mutation: 0.10, shape: 'iron', chance: combChance },
+    { id: 'energized', name: 'Energized', genus: 'mineralapis', species: 'energicum', body: 0xD9482B, stripes: 0xF4CF4A, complexity: 6, parents: ['mobees:bee_redstone', 'mobees:bee_glowstone'], mutation: 0.06, glint: true, shape: 'certus', chance: combChance }
 ]
 
 function beeShade(c, f) {

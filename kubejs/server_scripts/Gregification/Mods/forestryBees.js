@@ -4,7 +4,7 @@
 ServerEvents.recipes(allthemods => {
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
 
-    const metalBeeIds = ['andesite_alloy', 'gallium', 'arsenic', 'chromium', 'antimony', 'magnesium', 'rock_salt', 'ruby', 'peridot', 'sapphire', 'dark_gem']
+    const metalBeeIds = ['andesite_alloy', 'gallium', 'arsenic', 'chromium', 'antimony', 'magnesium', 'rock_salt', 'ruby', 'peridot', 'sapphire', 'dark_gem', 'manganese', 'cadmium']
     const gasBeeIds = ['bitumen', 'oxygen', 'nitrogen', 'hydrogen', 'fluorine', 'sulfur']
 
     metalBeeIds.forEach(b => {
@@ -38,8 +38,25 @@ ServerEvents.recipes(allthemods => {
         }).id('gregification:forestry/centrifuge/bee_comb_' + b + '_to_bits')
     })
 
+    allthemods.custom({
+        type: 'forestry:centrifuge',
+        time: 20,
+        input: { item: 'forestry:bee_comb_energized' },
+        products: [
+            { item: 'forestry:beeswax', chance: 0.8 },
+            { item: 'forestry:honey_drop', chance: 0.5 },
+            { item: 'minecraft:redstone', chance: 1.0 },
+            { item: 'minecraft:redstone', chance: 0.3, count: 2 },
+            { item: 'minecraft:glowstone_dust', chance: 1.0 },
+            { item: 'minecraft:glowstone_dust', chance: 0.3, count: 2 },
+            { item: 'forestry:energized_bit', chance: 1.0 },
+            { item: 'forestry:energized_bit', chance: 0.3, count: 2 },
+            { item: 'forestry:energized_bit', chance: 0.1, count: 3 }
+        ]
+    }).id('gregification:forestry/centrifuge/bee_comb_energized_to_bits')
+
     const bitDuration = 400
-    
+
     const bitRecipes = [
         { id: 'iron', bit: 'mobees:iron_bit', item: 'gtceu:iron_dust', eut: LV, chances: [1500, 500, 100] },
         { id: 'copper', bit: 'mobees:copper_bit', item: 'gtceu:copper_dust', eut: LV, chances: [1500, 500, 100] },
@@ -82,7 +99,9 @@ ServerEvents.recipes(allthemods => {
         { id: 'peridot', bit: 'forestry:peridot_bit', item: 'alltheores:peridot_dust', eut: LV, chances: [1000, 500, 100] },
         { id: 'netherite_scrap', bit: 'mobees:netherite_bit', item: 'gtceu:debris_dust', eut: LV, chances: [500, 100] },
 
-        { id: 'dark_gem', bit: 'forestry:dark_gem_bit', item: 'evilcraft:dark_gem', eut: LV, chances: [1000, 500, 100] }
+        { id: 'dark_gem', bit: 'forestry:dark_gem_bit', item: 'evilcraft:dark_gem', eut: LV, chances: [1000, 500, 100] },
+        { id: 'manganese', bit: 'forestry:manganese_bit', item: 'gtceu:manganese_dust', eut: MV, chances: [1500, 500, 100] },
+        { id: 'cadmium', bit: 'forestry:cadmium_bit', item: 'gtceu:cadmium_dust', eut: MV, chances: [1500, 500, 100] }
     ]
 
     bitRecipes.forEach(r => {
@@ -105,6 +124,16 @@ ServerEvents.recipes(allthemods => {
             }
         })
     })
+
+    allthemods.recipes.gtceu.bit_processor('gregification:bit_processor/energized')
+        .itemInputs('forestry:energized_bit')
+        .itemOutputs('minecraft:redstone')
+        .chancedOutput('minecraft:redstone', 2500, 0)
+        .chancedOutput('minecraft:redstone', 1500, 0)
+        .chancedOutput('minecraft:glowstone_dust', 2500, 0)
+        .chancedOutput('minecraft:glowstone_dust', 1500, 0)
+        .duration(bitDuration)
+        .EUt(HV)
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
