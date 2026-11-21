@@ -544,8 +544,7 @@ ServerEvents.recipes(allthemods => {
     ], {
         H: 'forestry:sturdy_machine',
         T: '#forge:plates/tin',
-        X: '#forge:chests/wooden',
-        C: '#gtceu:circuits/lv'
+        X: '#forge:chests/wooden',    
     }).id('gregification:craft_mailbox');
 
     allthemods.shaped('forestry:trade_station', [

@@ -183,7 +183,6 @@ ServerEvents.recipes(allthemods => {
         'forestry:farm_control_quartz_chiseled', 'forestry:farm_control_quartz_lines',
         'forestry:apiary', 'forestry:bee_house', 'forestry:carpenter/portable_analyzer', 'forestry:carpenter/soldering_iron',
 
-        
         'gendustry:mutatron', 'gendustry:advanced_mutatron', 'gendustry:industrial_apiary',
         'gendustry:imprinter', 'gendustry:replicator', 'gendustry:sampler',
         'gendustry:protein_liquefier', 'gendustry:mutagen_producer', 'gendustry:genetic_transposer',
@@ -197,7 +196,6 @@ ServerEvents.recipes(allthemods => {
         'gendustry:stabilizer_upgrade', 'gendustry:territory_upgrade', 'gendustry:weatherproof_upgrade',
         'gendustry:activity_simulator_elite_upgrade', 'gendustry:fertility_elite_upgrade', 'gendustry:mutation_elite_upgrade', 
         'gendustry:productivity_elite_upgrade', 'gendustry:territory_elite_upgrade', 'gendustry:youth_elite_upgrade'
-        
     ]
 
     const moreRemovals = [     

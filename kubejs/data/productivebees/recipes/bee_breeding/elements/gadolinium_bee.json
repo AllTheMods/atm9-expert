@@ -1,0 +1,26 @@
+{
+  "type": "productivebees:bee_breeding",
+  "parent1": "productivebees:iron",
+  "parent2": "productivebees:cobalt",
+  "offspring": [
+    "productivebees:gadolinium"
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:iron"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:cobalt"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:gadolinium"
+    }
+  ]
+}

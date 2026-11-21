@@ -30,7 +30,8 @@ ServerEvents.recipes(allthemods => {
         null,
         HV,
         600,
-        'copper_oxide'
+        'copper_oxide',
+        8
     );
 
     //bismuth oxide

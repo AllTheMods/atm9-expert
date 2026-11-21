@@ -59,7 +59,7 @@ ServerEvents.recipes(allthemods => {
     
     allthemods.recipes.gtceu.crystal_growth_chamber('chaos_frag_polishing')
         .itemInputs('draconicevolution:small_chaos_frag')
-        .inputFluids('gtceu:sterilized_growth_medium 100')
+        .inputFluids('#forge:sterilized_growth_medium 100')
         .itemOutputs('draconicevolution:medium_chaos_frag')
         .duration(750)
         .EUt(LuV);

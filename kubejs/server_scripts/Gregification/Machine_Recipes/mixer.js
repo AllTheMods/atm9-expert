@@ -34,6 +34,9 @@ ServerEvents.recipes(allthemods => {
     addMixer(['3x #forge:dusts/neodymium', '#forge:dusts/dysprosium'], '4x gtceu:neodymium_dysprosium_dopant_dust', ZPM, 400);
     addMixer(['2x #forge:dusts/neodymium', '#forge:dusts/terbium', '#forge:dusts/dysprosium'], '4x gtceu:neodymium_terbium_dysprosium_dopant_dust', ZPM, 400);
     addMixer(['2x #forge:dusts/neodymium', '#forge:dusts/praseodymium', '#forge:dusts/promethium', '#forge:dusts/terbium', '#forge:dusts/dysprosium'], '6x gtceu:neodymium_rare_earth_dopant_dust', ZPM, 400);
+    addMixer(['5x #forge:dusts/cobalt', '2x #forge:dusts/chromium', '#forge:dusts/molybdenum'], '8x gtceu:vitallium_dust', HV, 800);
+    addMixer(['6x #forge:dusts/copper', '#forge:dusts/beryllium'], '7x gtceu:beryllium_copper_dust', HV, 400);
+    addMixer(['3x #forge:dusts/gold', '#forge:dusts/bismuth'], '4x gtceu:bismuth_gold_dust', HV, 300);
 
     allthemods.recipes.gtceu.mixer('gregification:arcane_wax_blend')
         .itemInputs('#forge:dusts/soul_wax', '#forge:dusts/arcane_wax', '#forge:dusts/netherite', '#forge:dusts/source')

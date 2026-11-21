@@ -1,0 +1,26 @@
+{
+  "type": "productivebees:bee_breeding",
+  "parent1": "productivebees:bromine",
+  "parent2": "productivebees:chlorine",
+  "offspring": [
+    "productivebees:iodine"
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:bromine"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:chlorine"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:iodine"
+    }
+  ]
+}
