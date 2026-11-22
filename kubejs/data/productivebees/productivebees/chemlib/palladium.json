@@ -1,0 +1,10 @@
+{
+  "primaryColor": "#b78187",
+  "particleColor": "#c3989a",
+  "flowerTag": "forge:storage_blocks/palladium",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/palladium/bee",
+  "size": 0.8,
+  "selfbreed": false,
+  "conditions": [ { "type": "forge:mod_loaded", "modid": "gtceu" } ]
+}

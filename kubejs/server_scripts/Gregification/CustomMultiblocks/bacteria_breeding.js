@@ -326,6 +326,7 @@ ServerEvents.recipes(allthemods => {
             .inputFluids(fluids)
             .chancedOutput(bacteriaItems[strain.nbt], tierData.chance * 100, 0)
             .duration(200 * strain.bTier)
+            .addData('ebf_temp', 5400)
             .EUt(tierData.volts);
     });
 
@@ -350,6 +351,7 @@ ServerEvents.recipes(allthemods => {
             .inputFluids(fluids)
             .chancedOutput(bacteriaItems[strain.nbt], tierData.chance * 100, 0)
             .duration(250 * strain.bTier)
+            .addData('ebf_temp', 5400)
             .EUt(tierData.volts);
     });
 

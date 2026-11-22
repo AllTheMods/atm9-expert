@@ -4,10 +4,21 @@
 ServerEvents.recipes(allthemods => {
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA;
 
-    const pirateDrone = Item.of('forestry:bee_drone_ge', '{ForgeCaps:{Parent:{analyzed:0b,genome:{"forestry:activity":{active:"forestry:activity_diurnal",inactive:"forestry:activity_diurnal"},"forestry:bee_effect":{active:"forestry:bee_effect_none",inactive:"forestry:bee_effect_none"},"forestry:bee_species":{active:"forestry:bee_pirate",inactive:"forestry:bee_pirate"},"forestry:cave_dwelling":{active:"forestry:trued",inactive:"forestry:trued"},"forestry:fertility":{active:"forestry:1id",inactive:"forestry:1id"},"forestry:flower_type":{active:"forestry:flower_type_wheat",inactive:"forestry:flower_type_wheat"},"forestry:humidity_tolerance":{active:"forestry:tolerance_both_1d",inactive:"forestry:tolerance_both_1d"},"forestry:lifespan":{active:"forestry:50i",inactive:"forestry:50i"},"forestry:pollination":{active:"forestry:30i",inactive:"forestry:30i"},"forestry:speed":{active:"forestry:0.6fd",inactive:"forestry:0.6fd"},"forestry:temperature_tolerance":{active:"forestry:tolerance_both_1d",inactive:"forestry:tolerance_both_1d"},"forestry:territory":{active:"forestry:9_6_9",inactive:"forestry:9_6_9"},"forestry:tolerates_rain":{active:"forestry:falsed",inactive:"forestry:falsed"}},health:50,max_heath:50,pristine:1b}}}');
-    const steadfastDrone = Item.of('forestry:bee_drone_ge', '{ForgeCaps:{Parent:{analyzed:0b,genome:{"forestry:activity":{active:"forestry:activity_diurnal",inactive:"forestry:activity_diurnal"},"forestry:bee_effect":{active:"forestry:bee_effect_none",inactive:"forestry:bee_effect_none"},"forestry:bee_species":{active:"forestry:bee_steadfast",inactive:"forestry:bee_steadfast"},"forestry:cave_dwelling":{active:"forestry:trued",inactive:"forestry:trued"},"forestry:fertility":{active:"forestry:1id",inactive:"forestry:1id"},"forestry:flower_type":{active:"forestry:flower_type_wheat",inactive:"forestry:flower_type_wheat"},"forestry:humidity_tolerance":{active:"forestry:tolerance_both_1d",inactive:"forestry:tolerance_both_1d"},"forestry:lifespan":{active:"forestry:50i",inactive:"forestry:50i"},"forestry:pollination":{active:"forestry:30i",inactive:"forestry:30i"},"forestry:speed":{active:"forestry:0.6fd",inactive:"forestry:0.6fd"},"forestry:temperature_tolerance":{active:"forestry:tolerance_both_1d",inactive:"forestry:tolerance_both_1d"},"forestry:territory":{active:"forestry:9_6_9",inactive:"forestry:9_6_9"},"forestry:tolerates_rain":{active:"forestry:falsed",inactive:"forestry:falsed"}},health:50,max_heath:50,pristine:1b}}}');
-    const monasticDrone = Item.of('forestry:bee_drone_ge', '{ForgeCaps:{Parent:{analyzed:0b,genome:{"forestry:activity":{active:"forestry:activity_diurnal",inactive:"forestry:activity_diurnal"},"forestry:bee_effect":{active:"forestry:bee_effect_none",inactive:"forestry:bee_effect_none"},"forestry:bee_species":{active:"forestry:bee_monastic",inactive:"forestry:bee_monastic"},"forestry:cave_dwelling":{active:"forestry:trued",inactive:"forestry:trued"},"forestry:fertility":{active:"forestry:1id",inactive:"forestry:1id"},"forestry:flower_type":{active:"forestry:flower_type_wheat",inactive:"forestry:flower_type_wheat"},"forestry:humidity_tolerance":{active:"forestry:tolerance_both_1d",inactive:"forestry:tolerance_both_1d"},"forestry:lifespan":{active:"forestry:50i",inactive:"forestry:50i"},"forestry:pollination":{active:"forestry:30i",inactive:"forestry:30i"},"forestry:speed":{active:"forestry:0.6fd",inactive:"forestry:0.6fd"},"forestry:temperature_tolerance":{active:"forestry:tolerance_both_1d",inactive:"forestry:tolerance_both_1d"},"forestry:territory":{active:"forestry:9_6_9",inactive:"forestry:9_6_9"},"forestry:tolerates_rain":{active:"forestry:falsed",inactive:"forestry:falsed"}},health:50,max_heath:50,pristine:1b}}}');
-    const shulkingDrone = Item.of('forestry:bee_drone_ge', '{ForgeCaps:{Parent:{analyzed:0b,genome:{"forestry:activity":{active:"forestry:activity_diurnal",inactive:"forestry:activity_diurnal"},"forestry:bee_effect":{active:"forestry:bee_effect_none",inactive:"forestry:bee_effect_none"},"forestry:bee_species":{active:"forestry:bee_shulking",inactive:"forestry:bee_shulking"},"forestry:cave_dwelling":{active:"forestry:trued",inactive:"forestry:trued"},"forestry:fertility":{active:"forestry:1id",inactive:"forestry:1id"},"forestry:flower_type":{active:"forestry:flower_type_wheat",inactive:"forestry:flower_type_wheat"},"forestry:humidity_tolerance":{active:"forestry:tolerance_both_1d",inactive:"forestry:tolerance_both_1d"},"forestry:lifespan":{active:"forestry:50i",inactive:"forestry:50i"},"forestry:pollination":{active:"forestry:30i",inactive:"forestry:30i"},"forestry:speed":{active:"forestry:0.6fd",inactive:"forestry:0.6fd"},"forestry:temperature_tolerance":{active:"forestry:tolerance_both_1d",inactive:"forestry:tolerance_both_1d"},"forestry:territory":{active:"forestry:9_6_9",inactive:"forestry:9_6_9"},"forestry:tolerates_rain":{active:"forestry:falsed",inactive:"forestry:falsed"}},health:50,max_heath:50,pristine:1b}}}');
+    const IForestryApi = Java.loadClass('forestry.api.IForestryApi');
+    const ForestrySpeciesTypes = Java.loadClass('forestry.api.genetics.ForestrySpeciesTypes');
+    const BeeLifeStage = Java.loadClass('forestry.api.apiculture.genetics.BeeLifeStage');
+    const ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation');
+
+    function createForestryDrone(speciesId) {
+        const beeType = IForestryApi.INSTANCE.getGeneticManager().getSpeciesType(ForestrySpeciesTypes.BEE);
+        const species = beeType.getSpecies(new ResourceLocation(speciesId));
+        return species.createStack(BeeLifeStage.DRONE);
+    }
+
+    const pirateDrone = createForestryDrone('forestry:bee_pirate');
+    const steadfastDrone = createForestryDrone('forestry:bee_steadfast');
+    const monasticDrone = createForestryDrone('forestry:bee_monastic');
+    const shulkingDrone = createForestryDrone('forestry:bee_shulking');
     const amberBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:amber"}}');
     const sussyBee = Item.of('productivebees:spawn_egg_configurable_bee', '{EntityTag:{type:"productivebees:sussy"}}');
 
@@ -25,7 +36,9 @@ ServerEvents.recipes(allthemods => {
             ['minecraft:sniffer_egg', 4],
             ['64x croptopia:mountain_salt', 30],
             ['16x croptopia:tuna_sandwich', 25],
-            ['forbidden_arcanus:elementarium', 20]
+            ['forbidden_arcanus:elementarium', 20],
+            ['forestry:amber_sapling', 6],
+            ['forestry:amber_drone', 8],
         ], 'minecraft:overworld'],
         ['nether', [
             ['gtceu:tier_3_rocket_schematic', 3],
@@ -67,7 +80,7 @@ ServerEvents.recipes(allthemods => {
 
     destinations.forEach((destination, index) => {
         const recipe = allthemods.recipes.gtceu.drone_station('gregification:drone_destination_' + destination[0])
-            .itemInputs(drone, 'gtceu:titanium_crate')            
+            .itemInputs(drone, 'gtceu:titanium_crate')
             .notConsumable('gtceu:' + destination[0] + '_destination_card')
             .inputFluids(droneFuel)
             .duration(droneDuration)
@@ -78,79 +91,10 @@ ServerEvents.recipes(allthemods => {
         destination[1].forEach(entry => {
             recipe.chancedOutput(entry[0], entry[1] * 100, 500);
         });
+
+        const json = recipe.json.toString();
+        const at = json.indexOf('bee_drone_ge');
+        console.log('DRONE-PROBE json ' + destination[0] + ' ' + (at === -1 ? 'no drone in recipe' : json.substring(Math.max(0, at - 150), at + 600)));
     });
-    /*
-    allthemods.recipes.gtceu.drone_station('gregification:forbidden_search')
-        .chancedInput(drone, 2500, -500)
-        .itemInputs('forbidden_arcanus:dark_nether_star')
-        .chancedOutput('forbidden_arcanus:artisan_relic', 100, 100)
-        .chancedOutput('forbidden_arcanus:crescent_moon', 100, 100)
-        .chancedOutput('gtceu:solar_relic', 100, 100)
-        .chancedOutput('forbidden_arcanus:crimson_stone', 1000, 1000)
-        .chancedOutput('forbidden_arcanus:elementarium', 2000, 1000)
-        .chancedOutput('forbidden_arcanus:divine_pact', 1000, 1000)
-        .chancedOutput('forbidden_arcanus:maledictus_pact', 2000, 1000)
-        .inputFluids('#forge:kerosene 10000')
-        .duration(8000)
-        .EUt(EV)
-        .circuit(5);
-
-    allthemods.recipes.gtceu.drone_station('gregification:tier_1_rocket_schematic_from_drone')
-        .chancedInput(drone, 2500, -500)
-        .chancedOutput('gtceu:tier_1_rocket_schematic', 2500, 1000)
-        .inputFluids('#forge:kerosene 4000')
-        .duration(10000)
-        .EUt(EV)
-        .circuit(1);
-
-    allthemods.recipes.gtceu.drone_station('gregification:tier_2_rocket_schematic_from_drone')
-        .chancedInput(drone, 2500, -500)
-        .chancedOutput('gtceu:tier_2_rocket_schematic', 2500, 1000)
-        .inputFluids(['#forge:kerosene 4000', '#forge:hafnium 1440'])
-        .duration(10000)
-        .EUt(IV)
-        .circuit(2);
-
-    allthemods.recipes.gtceu.drone_station('gregification:tier_3_rocket_schematic_from_drone')
-        .chancedInput(drone, 2500, -500)
-        .chancedOutput('gtceu:tier_3_rocket_schematic', 2500, 1000)
-        .inputFluids(['#forge:kerosene 4000', '#forge:scandium 1440'])
-        .duration(10000)
-        .EUt(LuV)
-        .circuit(3);
-
-    allthemods.recipes.gtceu.drone_station('gregification:tier_4_rocket_schematic_from_drone')
-        .chancedInput(drone, 2500, -500)
-        .chancedOutput('gtceu:tier_4_rocket_schematic', 2500, 1000)
-        .inputFluids(['#forge:kerosene 4000', '#forge:thallium 1440'])
-        .duration(10000)
-        .EUt(ZPM)
-        .circuit(4);
-
-    allthemods.recipes.gtceu.drone_station('gregification:allthemodium_upgrade')
-        .chancedInput(drone, 2500, -500)
-        .itemInputs('2x #forge:storage_blocks/allthemodium')
-        .chancedOutput('allthemodium:allthemodium_upgrade_smithing_template', 1500, 1000)
-        .inputFluids(['#forge:kerosene 4000', '#forge:hafnium 1440'])
-        .duration(10000)
-        .EUt(EV)
-        .circuit(11);
-
-    allthemods.recipes.gtceu.drone_station('gregification:vibranium_upgrade')
-        .chancedInput(drone, 2500, -500)
-        .itemInputs('4x #forge:storage_blocks/vibranium')
-        .chancedOutput('allthemodium:vibranium_upgrade_smithing_template', 1500, 1000)
-        .inputFluids(['#forge:kerosene 4000', '#forge:scandium 1440'])
-        .duration(10000)
-        .EUt(EV)
-        .circuit(12);
-
-    allthemods.recipes.gtceu.drone_station('gregification:unobtainium_upgrade')
-        .chancedInput(drone, 2500, -500)
-        .itemInputs('8x #forge:storage_blocks/unobtainium')
-        .chancedOutput('allthemodium:unobtainium_upgrade_smithing_template', 1500, 1000)
-        .inputFluids(['#forge:kerosene 4000', '#forge:thallium 1440'])
-        .duration(10000)
-        .EUt(EV)
-        .circuit(13);*/
+  
 });

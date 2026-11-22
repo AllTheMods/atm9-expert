@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#d5db8c",
+  "particleColor": "#e3f696",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/samarium/bee",
+  "flowerTag": "forge:storage_blocks/samarium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

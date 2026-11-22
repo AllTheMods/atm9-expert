@@ -1,0 +1,15 @@
+{
+  "primaryColor": "#cac12c",
+  "particleColor": "#f3ee80",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/fluorine/bee",
+  "size": 0.4,
+  "translucent": true,
+  "flowerFluid": "gtceu:fluorine",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

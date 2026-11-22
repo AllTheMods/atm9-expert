@@ -84,6 +84,7 @@ ServerEvents.recipes(allthemods => {
             .inputFluids('#forge:rotten_flesh 1000', '#forge:water_stage_1 250')
             .itemOutputs(pichia.seedCulture)
             .duration(DUR)
+            .addData('ebf_temp', 5400)
             .EUt(LUV);
 
         // Step 2: Bacterial Growth Chamber
@@ -92,6 +93,7 @@ ServerEvents.recipes(allthemods => {
             .inputFluids('#forge:biomass 1000', '#forge:water_stage_2 250') // TODO: confirm real biomass fluid/item id
             .itemOutputs(pichia.cultivatedBacteria)
             .duration(DUR)
+            .addData('ebf_temp', 5400)
             .EUt(LUV);
 
         // Step 3: Chemical Reactor

@@ -41,6 +41,7 @@ ServerEvents.recipes(allthemods => {
             .inputFluids('minecraft:lava 1000')
             .inputFluids(`${s.water} 320`)
             .outputFluids(`gtceu:mana_essence ${320 * s.n}`)
+            .addData('ebf_temp', 3600)
             .circuit(1)
             .duration(400);
 
@@ -48,6 +49,7 @@ ServerEvents.recipes(allthemods => {
             .inputFluids('minecraft:lava 1000')
             .inputFluids(`${s.water} 50`)
             .outputFluids(`gtceu:source ${50 * s.n}`)
+            .addData('ebf_temp', 3600)
             .circuit(2)
             .duration(400);
 
@@ -71,6 +73,7 @@ ServerEvents.recipes(allthemods => {
             .itemInputs('minecraft:cake')
             .inputFluids(`${s.water} 10800`)
             .outputFluids(`gtceu:mana_essence ${10800 * s.n}`)
+            .addData('ebf_temp', 3600)
             .circuit(1)
             .duration(14400);
 
@@ -78,6 +81,7 @@ ServerEvents.recipes(allthemods => {
             .itemInputs('minecraft:cake')
             .inputFluids(`${s.water} 1800`)
             .outputFluids(`gtceu:source ${1800 * s.n}`)
+            .addData('ebf_temp', 3600)
             .circuit(2)
             .duration(14400);
     });

@@ -23,6 +23,7 @@ ServerEvents.recipes(allthemods => {
         .outputFluids('gtceu:fluorine 2000')
         .itemOutputs('gtceu:thorium_doped_calcium_fluoride_gem', 'gtceu:calcium_dust')
         .duration(400)
+        .addData('ebf_temp', 7200)
         .EUt(eut);
 
     // Mixer recipe for Potassium Fluoride

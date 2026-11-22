@@ -62,6 +62,7 @@ ServerEvents.recipes(allthemods => {
         .inputFluids('#forge:sterilized_growth_medium 100')
         .itemOutputs('draconicevolution:medium_chaos_frag')
         .duration(750)
+        .addData('ebf_temp', 7200)
         .EUt(LuV);
     
     allthemods.recipes.gtceu.crystal_growth_chamber('gaia_growth')
@@ -69,6 +70,7 @@ ServerEvents.recipes(allthemods => {
         .inputFluids(['#forge:mana 16000', '#forge:soul 16000', '#forge:blood 16000'])
         .itemOutputs('16x botania:life_essence')
         .duration(750)
+        .addData('ebf_temp', 7200)
         .EUt(LuV);
 
     //budding

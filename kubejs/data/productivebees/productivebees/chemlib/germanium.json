@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#dfdfe0",
+  "particleColor": "#e9e9eb",
+  "beeTexture": "productivebees:textures/entity/bee/germanium/bee",
+  "size": 0.7,
+  "flowerTag": "forge:storage_blocks/germanium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

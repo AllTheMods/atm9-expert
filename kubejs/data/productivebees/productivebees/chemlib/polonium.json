@@ -1,0 +1,12 @@
+{
+  "primaryColor": "#b3c9c8",
+  "particleColor": "#bccfcc",
+  "beeTexture": "productivebees:textures/entity/bee/polonium/bee",
+  "flowerFluid": "gtceu:polonium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

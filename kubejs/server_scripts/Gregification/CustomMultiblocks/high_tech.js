@@ -179,8 +179,9 @@ ServerEvents.recipes(allthemods => {
         let recipe = allthemods.recipes.gtceu[recipeType](generatedId)
             .itemOutputs(outputs)
             .itemInputs(inputs)
-            .duration(duration)
+            .duration(duration)            
             .EUt(eu);
+            if (recipeType === 'crystal_growth_chamber'){recipe.addData('ebf_temp', 1800)}
 
         if (fluids) {
             recipe.inputFluids(fluids);

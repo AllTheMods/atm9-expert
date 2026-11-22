@@ -1,0 +1,15 @@
+{
+  "primaryColor": "#e1a4aa",
+  "particleColor": "#ebafa0",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/neon/bee",
+  "size": 0.7,
+  "translucent": true,
+  "flowerFluid": "gtceu:neon",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}
