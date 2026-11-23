@@ -396,7 +396,7 @@ ServerEvents.recipes(allthemods => {
         .EUt(HV);
 
     allthemods.recipes.gtceu.chemical_reactor('gregification:ink/epic_ink')
-        .itemInputs('#forge:dusts/amethyst', '#forge:dusts/terrasteel')
+        .itemInputs('#forge:dusts/stabilized_clathrate', '#forge:dusts/terrasteel')
         .inputFluids('#forge:rare_ink 1000')
         .outputFluids('irons_spellbooks:epic_ink 1000')
         .duration(800)

@@ -23,13 +23,13 @@ ServerEvents.recipes(allthemods => {
         });
 
         const unifyItems = [
-                { 'input': 'sulfur', output: 'gtceu:sulfur' },
+                { 'input': '#forge:dusts/sulfur', output: 'gtceu:sulfur' },
                 
         ]
         
         unifyItems.forEach((item, index) => {
                 allthemods.recipes.gtceu.unifier(`gregification:${item.input}_unification`)
-                        .itemInputs(`#forge:${item.input}`)
+                        .itemInputs(`${item.input}`)
                         .itemOutputs(`${item.output}`)
                         .circuit(index + 1)
                         .duration(unifierDuration)
