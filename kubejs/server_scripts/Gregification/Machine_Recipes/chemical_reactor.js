@@ -382,7 +382,7 @@ ServerEvents.recipes(allthemods => {
         .EUt(LV);
 
     allthemods.recipes.gtceu.chemical_reactor('gregification:ink/uncommon_ink')
-        .itemInputs('#forge:dusts/iron_iii_chloride', '#forge:dusts/manasteel')
+        .itemInputs('#forge:dusts/drenched_iron', '#forge:dusts/manasteel')
         .inputFluids('#forge:common_ink 1000')
         .outputFluids('irons_spellbooks:uncommon_ink 1000')
         .duration(400)
