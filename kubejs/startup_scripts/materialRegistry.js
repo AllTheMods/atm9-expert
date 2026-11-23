@@ -21,6 +21,7 @@ const MaterialStack = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.ma
 const ArrayList = Java.loadClass('java.util.ArrayList');
 const ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty');
 const FluidPipeProperties = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties');
+const AlloyBlastPropertyAddition = Java.loadClass('com.gregtechceu.gtceu.forge.AlloyBlastPropertyAddition');
 
 const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
 
@@ -161,6 +162,7 @@ MaterialDef.prototype.dust = function () { this.traits.dust = true; return this;
 MaterialDef.prototype.ingot = function () { this.traits.ingot = true; return this; };
 MaterialDef.prototype.gem = function () { this.traits.gem = true; return this; };
 MaterialDef.prototype.gas = function () { this.traits.gas = true; return this; };
+MaterialDef.prototype.molten = function () { this.traits.molten = true; return this; };
 MaterialDef.prototype.fluid = function (customStill) { this.traits.fluid = true; if (customStill) this.traits.fluidStill = true; return this; };
 MaterialDef.prototype.plasma = function (customStill) { this.traits.plasma = true; if (customStill) this.traits.plasmaStill = true; return this; };
 //MaterialDef.prototype.fluid = function () { this.traits.fluid = true; return this; };
@@ -274,6 +276,10 @@ MaterialDef.prototype.byproducts = function (list) { this.byproductList = list; 
 MaterialDef.prototype.unify = function (map) {
     if (!this.unifyMap) this.unifyMap = {};
     Object.keys(map).forEach(key => { this.unifyMap[key] = map[key]; });
+    if (map.fluid) {
+        global.unifiedFluidTags = global.unifiedFluidTags || {};
+        global.unifiedFluidTags[this.name] = map.fluid;
+    }
     return this;
 };
 
@@ -363,6 +369,7 @@ MaterialDef.prototype.applyUnification = function () {
 
     if (!this.unifyMap) return;
     Object.keys(this.unifyMap).forEach(prefixName => {
+        if (prefixName === 'fluid') return;
         if (!TagPrefix[prefixName]) return;
         let val = this.unifyMap[prefixName];
         if (val === true) {
@@ -377,6 +384,14 @@ MaterialDef.prototype.applyUnification = function () {
 MaterialDef.prototype.applyModification = function () {
     let mat = GTMaterials.get(this.name);
     if (!mat) return;
+
+    if (this.unifyMap && this.unifyMap.fluid) {
+        let unifiedFluidId = this.unifyMap.fluid;
+        mat.removeProperty(PropertyKey.FLUID);
+        let unifiedFluidProperty = new FluidProperty();
+        unifiedFluidProperty.store(FluidStorageKeys.LIQUID, () => Fluid.of(unifiedFluidId).fluid, null);
+        mat.setProperty(PropertyKey.FLUID, unifiedFluidProperty);
+    }
 
     if (this.traits.isModification) {
         if (this.traits.dust && !mat.hasProperty(PropertyKey.DUST)) mat.setProperty(PropertyKey.DUST, new DustProperty());
@@ -437,6 +452,9 @@ MaterialDef.prototype.applyModification = function () {
             return GTMaterials.get(pieces[1]).multiply(parseInt(pieces[0]));
         });
         mat.setComponents.apply(mat, parts);
+        if (this.traits.molten && !mat.hasFlag(GTMaterialFlags.DISABLE_ALLOY_PROPERTY) && !mat.hasProperty(PropertyKey.ALLOY_BLAST)) {
+            AlloyBlastPropertyAddition.addAlloyBlastProperty(mat);
+        }
     }
 
     if (this.byproductList && this.byproductList.length > 0) {
@@ -734,7 +752,8 @@ const materials = [
 
     new MaterialDef('cyanopyridine').noDecomp().fluid().color(0x4A6B82).iconSet('FLUID').formula('C6H4N2').components('6x carbon, 4x hydrogen, 2x nitrogen'),
 
-    new MaterialDef('acetaldehyde').noDecomp().fluid().color(0xC2B280).iconSet('FLUID').formula('C2H4O').components('1x ethylene, 1x oxygen'),
+    new MaterialDef('acetaldehyde').noDecomp().fluid().color(0xC2B280).iconSet('FLUID').formula('C2H4O').components('1x ethylene, 1x oxygen')
+        .unify({ fluid: 'immersiveengineering:acetaldehyde' }),
 
     new MaterialDef('primordial_sanguine_plasma').fluid().color(0x2E2E2E).iconSet('FLUID'),
 
@@ -872,7 +891,8 @@ const materials = [
 
     new MaterialDef('phenylalanine_nitrile').fluid().color(0xD4A373).iconSet('FLUID').noDecomp().formula('C9H10N2').components('9x carbon, 10x hydrogen, 2x nitrogen'),
 
-    new MaterialDef('phenolic_resin').fluid().color(0x5C2E16).iconSet('FLUID').noDecomp().formula('C7H6O2').components('7x carbon, 6x hydrogen, 2x oxygen'),
+    new MaterialDef('phenolic_resin').fluid().color(0x5C2E16).iconSet('FLUID').noDecomp().formula('C7H6O2').components('7x carbon, 6x hydrogen, 2x oxygen')
+        .unify({ fluid: 'immersiveengineering:phenolic_resin' }),
 
     new MaterialDef('eucalyptus_oil').fluid().color(0xD4E8A8).iconSet('FLUID').noDecomp(),
 
@@ -1234,17 +1254,17 @@ const materials = [
     new MaterialDef('allthemodium').noSmelting().ore().element('allthemodium').color(0xFAD64A).iconSet('METALLIC').ingot().fluid().materialsAll().singularity()
         .byproducts(['gold', 'diamond', 'allthemodium'])
         .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 })
-        .unify({ ore: 'allthemodium:allthemodium_ore', oreDeepslate: 'allthemodium:allthemodium_slate_ore', dust: 'allthemodium:allthemodium_dust', nugget: 'allthemodium:allthemodium_nugget', rod: 'allthemodium:allthemodium_rod', gear: 'allthemodium:allthemodium_gear', plate: 'allthemodium:allthemodium_plate', ingot: 'allthemodium:allthemodium_ingot', block: 'allthemodium:allthemodium_block' }),
+        .unify({ ore: 'allthemodium:allthemodium_ore', oreDeepslate: 'allthemodium:allthemodium_slate_ore', dust: 'allthemodium:allthemodium_dust', nugget: 'allthemodium:allthemodium_nugget', rod: 'allthemodium:allthemodium_rod', gear: 'allthemodium:allthemodium_gear', plate: 'allthemodium:allthemodium_plate', ingot: 'allthemodium:allthemodium_ingot', block: 'allthemodium:allthemodium_block', fluid: 'allthemodium:molten_allthemodium' }),
 
     new MaterialDef('vibranium').noSmelting().ore().element('vibranium').color(0x6DFF6D).iconSet('METALLIC').ingot().fluid().materialsAll().singularity()
         .byproducts(['allthemodium', 'emerald', 'vibranium'])
         .blast({ temp: COIL_TEMPS.HSS_G, eut: LuV, duration: 1200 })
-        .unify({ oreNetherrack: 'allthemodium:vibranium_ore', dust: 'allthemodium:vibranium_dust', nugget: 'allthemodium:vibranium_nugget', rod: 'allthemodium:vibranium_rod', gear: 'allthemodium:vibranium_gear', plate: 'allthemodium:vibranium_plate', ingot: 'allthemodium:vibranium_ingot', block: 'allthemodium:vibranium_block' }),
+        .unify({ oreNetherrack: 'allthemodium:vibranium_ore', dust: 'allthemodium:vibranium_dust', nugget: 'allthemodium:vibranium_nugget', rod: 'allthemodium:vibranium_rod', gear: 'allthemodium:vibranium_gear', plate: 'allthemodium:vibranium_plate', ingot: 'allthemodium:vibranium_ingot', block: 'allthemodium:vibranium_block', fluid: 'allthemodium:molten_vibranium' }),
 
     new MaterialDef('unobtainium').noSmelting().ore().element('unobtainium').color(0xA336FF).iconSet('METALLIC').ingot().fluid().materialsAll().singularity()
         .byproducts(['vibranium', 'amethyst', 'unobtainium'])
         .blast({ temp: COIL_TEMPS.HSS_G, eut: ZPM, duration: 1200 })
-        .unify({ oreEndstone: 'allthemodium:unobtainium_ore', dust: 'allthemodium:unobtainium_dust', nugget: 'allthemodium:unobtainium_nugget', ingot: 'allthemodium:unobtainium_ingot', block: 'allthemodium:unobtainium_block' }),
+        .unify({ oreEndstone: 'allthemodium:unobtainium_ore', dust: 'allthemodium:unobtainium_dust', nugget: 'allthemodium:unobtainium_nugget', ingot: 'allthemodium:unobtainium_ingot', block: 'allthemodium:unobtainium_block', fluid: 'allthemodium:molten_unobtainium' }),
 
     new MaterialDef('bismuth_strontium_calcium_copper_oxide').color(0x3A3A42).iconSet('METALLIC').formula('Bi2Sr2CaCu2(CO3)2O6').components('1x bismuth_oxide, 2x strontium_carbonate, 1x quicklime, 2x copper_oxide').noSmelting().ingot().fluid().materialsAll()
         .cable({ voltage: 32768, superconductor: true })
@@ -1320,7 +1340,7 @@ const materials = [
         .cable({ voltage: 33554432, loss: 2 }),
 
     new MaterialDef('pink_slime').element('pink_slime').components('2x iron, 2x gold').color(0xE66EA9).iconSet('SHINY').ingot().fluid().materialsAll()
-        .unify({ ingot: 'industrialforegoing:pink_slime_ingot' }),
+        .unify({ ingot: 'industrialforegoing:pink_slime_ingot', fluid: 'industrialforegoing:pink_slime' }),
 
     new MaterialDef('plastic').color(0xA9A9A9).iconSet('DULL').ingot().fluid().materialsAll()
         .unify({ ingot: 'industrialforegoing:plastic' }),
@@ -1334,10 +1354,10 @@ const materials = [
         .unify({ dust: 'forbidden_arcanus:ferrognetic_mixture' }),
 
     new MaterialDef('refined_obsidian').components('1x obsidian, 1x diamond').color(0x5C3854).iconSet('SHINY').formula('MgFeSi2O4C').ingot().fluid().materialsAll()
-        .unify({ dust: 'mekanism:dust_refined_obsidian', ingot: 'mekanism:ingot_refined_obsidian', block: 'mekanism:block_refined_obsidian', nugget: 'mekanism:nugget_refined_obsidian' }),
+        .unify({ dust: 'mekanism:dust_refined_obsidian', ingot: 'mekanism:ingot_refined_obsidian', block: 'mekanism:block_refined_obsidian', nugget: 'mekanism:nugget_refined_obsidian', fluid: 'tconstruct:molten_refined_obsidian' }),
 
     new MaterialDef('refined_glowstone').components('1x glowstone, 1x osmium').color(0xFFE30B).iconSet('SHINY').formula('GlwOs').ingot().fluid().materialsAll()
-        .unify({ ingot: 'mekanism:ingot_refined_glowstone', block: 'mekanism:block_refined_glowstone', nugget: 'mekanism:nugget_refined_glowstone' }),
+        .unify({ ingot: 'mekanism:ingot_refined_glowstone', block: 'mekanism:block_refined_glowstone', nugget: 'mekanism:nugget_refined_glowstone', fluid: 'tconstruct:molten_refined_glowstone' }),
 
     new MaterialDef('alloy_infused').pipe().components('1x iron').color(0xE61940).iconSet('METALLIC').formula('Fe').ingot().fluid().materialsAll()
         .cable({ voltage: 32768, loss: 2 })
@@ -1370,17 +1390,17 @@ const materials = [
     new MaterialDef('signalum').pipe().color(0xFF5500).iconSet('METALLIC').formula('AgCu3Si4Fe20S40Cr4Al8O12Hg12').components('1x silver, 3x copper, 4x redstone').ingot().fluid().materialsAll()
         .cable({ voltage: 128, loss: 2 })
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: HV, duration: 400 })
-        .unify({ rod: 'alltheores:signalum_rod', gear: 'alltheores:signalum_gear', plate: 'alltheores:signalum_plate', nugget: 'alltheores:signalum_nugget', block: 'alltheores:signalum_block', dust: 'alltheores:signalum_dust', ingot: 'alltheores:signalum_ingot' }),
+        .unify({ rod: 'alltheores:signalum_rod', gear: 'alltheores:signalum_gear', plate: 'alltheores:signalum_plate', nugget: 'alltheores:signalum_nugget', block: 'alltheores:signalum_block', dust: 'alltheores:signalum_dust', ingot: 'alltheores:signalum_ingot', fluid: 'tconstruct:molten_signalum' }),
 
     new MaterialDef('lumium').pipe().color(0xFFFFAA).iconSet('METALLIC').formula('AgSn3Glw2').components('1x silver, 3x tin, 2x glowstone').ingot().fluid().materialsAll()
         .cable({ voltage: 512, loss: 2 })
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: EV, duration: 600 })
-        .unify({ rod: 'alltheores:lumium_rod', gear: 'alltheores:lumium_gear', plate: 'alltheores:lumium_plate', nugget: 'alltheores:lumium_nugget', block: 'alltheores:lumium_block', dust: 'alltheores:lumium_dust', ingot: 'alltheores:lumium_ingot' }),
+        .unify({ rod: 'alltheores:lumium_rod', gear: 'alltheores:lumium_gear', plate: 'alltheores:lumium_plate', nugget: 'alltheores:lumium_nugget', block: 'alltheores:lumium_block', dust: 'alltheores:lumium_dust', ingot: 'alltheores:lumium_ingot', fluid: 'tconstruct:molten_lumium' }),
 
     new MaterialDef('enderium').pipe().color(0x0B6156).iconSet('METALLIC').formula('CPb3Be2K8N10').components('1x diamond, 3x lead, 2x ender_pearl').ingot().fluid().materialsAll()
         .cable({ voltage: 2048, loss: 2 })
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: IV, duration: 800 })
-        .unify({ rod: 'alltheores:enderium_rod', gear: 'alltheores:enderium_gear', plate: 'alltheores:enderium_plate', nugget: 'alltheores:enderium_nugget', block: 'alltheores:enderium_block', dust: 'alltheores:enderium_dust', ingot: 'alltheores:enderium_ingot' }),
+        .unify({ rod: 'alltheores:enderium_rod', gear: 'alltheores:enderium_gear', plate: 'alltheores:enderium_plate', nugget: 'alltheores:enderium_nugget', block: 'alltheores:enderium_block', dust: 'alltheores:enderium_dust', ingot: 'alltheores:enderium_ingot', fluid: 'tconstruct:molten_enderium' }),
 
     new MaterialDef('draconium').noSmelting().ore().element('draconium').color(0x502C6C).iconSet('SHINY').ingot().fluid().materialsAll()
         .cable({ voltage: 8192, loss: 2 })
@@ -1677,11 +1697,11 @@ const materials = [
         .flags(GTMaterialFlags.GENERATE_PLATE)
         .unify({ block: 'powah:nitro_crystal_block', gem: 'powah:crystal_nitro' }),
 
-    new MaterialDef('knightmetal').ingot().color(0xe4f9cb).iconSet('METALLIC').singularity().materialsBasic()
-        .unify({ ingot: 'twilightforest:knightmetal_ingot', block: 'twilightforest:knightmetal_block' }),
+    new MaterialDef('knightmetal').ingot().fluid().color(0xe4f9cb).iconSet('METALLIC').singularity().materialsBasic()
+        .unify({ ingot: 'twilightforest:knightmetal_ingot', block: 'twilightforest:knightmetal_block', fluid: 'tconstruct:molten_knightmetal' }),
 
-    new MaterialDef('steeleaf').ingot().color(0x518539).iconSet('METALLIC').singularity().materialsBasic()
-        .unify({ ingot: 'twilightforest:steeleaf_ingot', block: 'twilightforest:steeleaf_block' }),
+    new MaterialDef('steeleaf').ingot().fluid().color(0x518539).iconSet('METALLIC').singularity().materialsBasic()
+        .unify({ ingot: 'twilightforest:steeleaf_ingot', block: 'twilightforest:steeleaf_block', fluid: 'tconstruct:molten_steeleaf' }),
 
     new MaterialDef('fiery').ingot().color(0x5b2b19).iconSet('METALLIC').singularity().materialsBasic()
         .unify({ ingot: 'twilightforest:fiery_ingot', block: 'twilightforest:fiery_block' }),
@@ -1693,13 +1713,13 @@ const materials = [
         .flags(GTMaterialFlags.GENERATE_PLATE),
 
     new MaterialDef('hepatizon').dust().ingot().fluid().color(0x715A7C).iconSet('METALLIC').formula('Cu2CoSiO2').components('2x copper, 1x cobalt, 1x nether_quartz').noDecomp()
-        .unify({ ingot: 'tconstruct:hepatizon_ingot', block: 'tconstruct:hepatizon_block', nugget: 'tconstruct:hepatizon_nugget' }),
+        .unify({ ingot: 'tconstruct:hepatizon_ingot', block: 'tconstruct:hepatizon_block', nugget: 'tconstruct:hepatizon_nugget', fluid: 'tconstruct:molten_hepatizon' }),
 
     new MaterialDef('amethyst_bronze').dust().ingot().fluid().color(0xEBC4DB).iconSet('METALLIC').formula('CuSi4O8Fe').components('1x copper, 1x amethyst')
-        .unify({ ingot: 'tconstruct:amethyst_bronze_ingot', block: 'tconstruct:amethyst_bronze_block', nugget: 'tconstruct:amethyst_bronze_nugget' }),
+        .unify({ ingot: 'tconstruct:amethyst_bronze_ingot', block: 'tconstruct:amethyst_bronze_block', nugget: 'tconstruct:amethyst_bronze_nugget', fluid: 'tconstruct:molten_amethyst_bronze' }),
 
     new MaterialDef('manyullyn').dust().ingot().fluid().color(0xC097F0).iconSet('METALLIC').formula('DbrCo3').components('1x debris, 3x cobalt')
-        .unify({ ingot: 'tconstruct:manyullyn_ingot', block: 'tconstruct:manyullyn_block', nugget: 'tconstruct:manyullyn_nugget' }),
+        .unify({ ingot: 'tconstruct:manyullyn_ingot', block: 'tconstruct:manyullyn_block', nugget: 'tconstruct:manyullyn_nugget', fluid: 'tconstruct:molten_manyullyn' }),
 
     new MaterialDef('core').color(0x989CAB).iconSet('METALLIC').singularity(),
 
@@ -1810,23 +1830,23 @@ const materials = [
 
     new MaterialDef('soul_infused').dust().fluid().color(0xAB6F53).iconSet('METALLIC').formula('Ss2FeCu').noSmelting().materialsBasic().components('2x soul_sand, 1x iron, 1x copper')
         .blast({ temp: COIL_TEMPS.KANTHAL, eut: HV, duration: 1200 })
-        .unify({ dust: 'thermal_extra:soul_infused_dust', nugget: 'thermal_extra:soul_infused_nugget', ingot: 'thermal_extra:soul_infused_ingot', block: 'thermal_extra:soul_infused_block', rod: 'thermal_extra:soul_infused_rod', plate: 'thermal_extra:soul_infused_plate', gear: 'thermal_extra:soul_infused_gear' }),
+        .unify({ dust: 'thermal_extra:soul_infused_dust', nugget: 'thermal_extra:soul_infused_nugget', ingot: 'thermal_extra:soul_infused_ingot', block: 'thermal_extra:soul_infused_block', rod: 'thermal_extra:soul_infused_rod', plate: 'thermal_extra:soul_infused_plate', gear: 'thermal_extra:soul_infused_gear', fluid: 'thermal_extra:soul_infused' }),
 
     new MaterialDef('shellite').dust().fluid().color(0x8643A2).iconSet('METALLIC').formula('Sh2PbNi').noSmelting().materialsBasic().components('2x shulker, 1x lead, 1x nickel')
         .blast({ temp: COIL_TEMPS.NICHROME, eut: EV, duration: 1200 })
-        .unify({ dust: 'thermal_extra:shellite_dust', nugget: 'thermal_extra:shellite_nugget', ingot: 'thermal_extra:shellite_ingot', block: 'thermal_extra:shellite_block', rod: 'thermal_extra:shellite_rod', plate: 'thermal_extra:shellite_plate', gear: 'thermal_extra:shellite_gear' }),
+        .unify({ dust: 'thermal_extra:shellite_dust', nugget: 'thermal_extra:shellite_nugget', ingot: 'thermal_extra:shellite_ingot', block: 'thermal_extra:shellite_block', rod: 'thermal_extra:shellite_rod', plate: 'thermal_extra:shellite_plate', gear: 'thermal_extra:shellite_gear', fluid: 'thermal_extra:shellite' }),
 
     new MaterialDef('twinite').dust().fluid().color(0xAB6F53).iconSet('METALLIC').formula('Sn2CSMgFeSi2O4').noSmelting().materialsBasic().components('2x tin, 1x blaze, 1x obsidian')
         .blast({ temp: COIL_TEMPS.RTM, eut: IV, duration: 1200 })
-        .unify({ dust: 'thermal_extra:twinite_dust', nugget: 'thermal_extra:twinite_nugget', ingot: 'thermal_extra:twinite_ingot', block: 'thermal_extra:twinite_block', rod: 'thermal_extra:twinite_rod', plate: 'thermal_extra:twinite_plate', gear: 'thermal_extra:twinite_gear' }),
+        .unify({ dust: 'thermal_extra:twinite_dust', nugget: 'thermal_extra:twinite_nugget', ingot: 'thermal_extra:twinite_ingot', block: 'thermal_extra:twinite_block', rod: 'thermal_extra:twinite_rod', plate: 'thermal_extra:twinite_plate', gear: 'thermal_extra:twinite_gear', fluid: 'thermal_extra:twinite' }),
 
     new MaterialDef('dragonsteel').dust().fluid().color(0xAB6F53).iconSet('METALLIC').formula('An2HgSCPb3Be2K8N10').noSmelting().materialsBasic().components('2x ancient, 1x cinnabar, 1x enderium')
         .blast({ temp: COIL_TEMPS.HSS_G, eut: LuV, duration: 1200 })
-        .unify({ dust: 'thermal_extra:dragonsteel_dust', nugget: 'thermal_extra:dragonsteel_nugget', ingot: 'thermal_extra:dragonsteel_ingot', block: 'thermal_extra:dragonsteel_block', rod: 'thermal_extra:dragonsteel_rod', plate: 'thermal_extra:dragonsteel_plate', gear: 'thermal_extra:dragonsteel_gear' }),
+        .unify({ dust: 'thermal_extra:dragonsteel_dust', nugget: 'thermal_extra:dragonsteel_nugget', ingot: 'thermal_extra:dragonsteel_ingot', block: 'thermal_extra:dragonsteel_block', rod: 'thermal_extra:dragonsteel_rod', plate: 'thermal_extra:dragonsteel_plate', gear: 'thermal_extra:dragonsteel_gear', fluid: 'thermal_extra:dragonsteel' }),
 
     new MaterialDef('abyssal').dust().fluid().color(0x62825D).iconSet('METALLIC').formula('An2NtrSi3O6Sk2').noSmelting().materialsBasic().singularity().components('2x ancient, 1x netherite, 1x echo_shard')
         .blast({ temp: COIL_TEMPS.NAQUADAH, eut: ZPM, duration: 1200 })
-        .unify({ dust: 'thermal_extra:abyssal_dust', nugget: 'thermal_extra:abyssal_nugget', ingot: 'thermal_extra:abyssal_ingot', block: 'thermal_extra:abyssal_block', rod: 'thermal_extra:abyssal_rod', plate: 'thermal_extra:abyssal_plate', gear: 'thermal_extra:abyssal_gear' }),
+        .unify({ dust: 'thermal_extra:abyssal_dust', nugget: 'thermal_extra:abyssal_nugget', ingot: 'thermal_extra:abyssal_ingot', block: 'thermal_extra:abyssal_block', rod: 'thermal_extra:abyssal_rod', plate: 'thermal_extra:abyssal_plate', gear: 'thermal_extra:abyssal_gear', fluid: 'thermal_extra:abyssal' }),
 
     new MaterialDef('necrotic').noDecomp().dust().color(0x1A1C1E).iconSet('DULL').formula('Ca5P3S3').components('5x calcium, 3x phosphorus, 3x sulfur'),
 
@@ -1869,7 +1889,7 @@ const materials = [
     
     new MaterialDef('constantan').color(0xD39A6A).components('1x copper, 1x nickel').iconSet('METALLIC').formula('CuNi').components('1x copper, 1x nickel').ingot().fluid().materialsAll()
         .blast({ temp: COIL_TEMPS.CUPRONICKEL, eut: HV, duration: 400 })
-        .unify({ dust: 'alltheores:constantan_dust', nugget: 'alltheores:constantan_nugget', ingot: 'alltheores:constantan_ingot', block: 'alltheores:constantan_block', plate: 'alltheores:constantan_plate', gear: 'alltheores:constantan_gear', rod: 'alltheores:constantan_rod' }),
+        .unify({ dust: 'alltheores:constantan_dust', nugget: 'alltheores:constantan_nugget', ingot: 'alltheores:constantan_ingot', block: 'alltheores:constantan_block', plate: 'alltheores:constantan_plate', gear: 'alltheores:constantan_gear', rod: 'alltheores:constantan_rod', fluid: 'tconstruct:molten_constantan' }),
     
     new MaterialDef('aluminium').modify().flags(GTMaterialFlags.GENERATE_GEAR).unify({ gear: 'alltheores:aluminum_gear' }),
     new MaterialDef('brass').modify().flags(GTMaterialFlags.GENERATE_GEAR).unify({ gear: 'alltheores:brass_gear' }),
@@ -2150,9 +2170,9 @@ const materials = [
 
     //legacy atm9 registries converted
     new MaterialDef('molten_piglich_heart').fluid().color(0xe6af15).iconSet('FLUID'),
-    new MaterialDef('nitinol').ingot().fluid().iconSet('METALLIC').color(0xD4B0F4).flags(GTMaterialFlags.GENERATE_PLATE).components('4x nickel, 6x titanium').formula('Ni4Ti6')
+    new MaterialDef('nitinol').molten().ingot().fluid().iconSet('METALLIC').color(0xD4B0F4).flags(GTMaterialFlags.GENERATE_PLATE).components('4x nickel, 6x titanium').formula('Ni4Ti6')
         .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
-    new MaterialDef('trinaquadalloy').ingot().fluid().color(0x281832).iconSet('BRIGHT').formula('Ke6Nq2C').flags(GTMaterialFlags.GENERATE_PLATE).components('6x trinium, 2x naquadah, 1x carbon')
+    new MaterialDef('trinaquadalloy').ingot().fluid().molten().color(0x281832).iconSet('BRIGHT').formula('Ke6Nq2C').flags(GTMaterialFlags.GENERATE_PLATE).components('6x trinium, 2x naquadah, 1x carbon')
         .blast({ temp: COIL_TEMPS.TRINIUM, eut: ZPM, duration: 1200 }),
     new MaterialDef('trinium').modify().ore().byproducts(['naquadah', 'titanium', 'trinium']),
 
@@ -2406,6 +2426,8 @@ const materials = [
     new MaterialDef('titanium_palladium_gold').ingot().fluid().color(0xE3B23C).iconSet('METALLIC').formula('Au3TiPd').components('3x gold, 1x titanium, 1x palladium').noSmelting().materialsBasic()
         .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1200 }),
 
+    new MaterialDef('titanium_gold').dust().color(0xCDB36B).iconSet('SHINY').formula('Ti3Au').components('3x titanium, 1x gold'),
+
     new MaterialDef('vitallium').ingot().fluid().color(0x8F9CB0).iconSet('SHINY').formula('Co5Cr2Mo').components('5x cobalt, 2x chromium, 1x molybdenum').noSmelting().materialsBasic()
         .blast({ temp: COIL_TEMPS.HSS_G, eut: IV, duration: 1600 }),
 
@@ -2426,6 +2448,37 @@ const materials = [
     new MaterialDef('trace_metal_solution').fluid().color(0x6FA58A).iconSet('FLUID').noDecomp().formula('MgFeZn(SO4)3').components('1x magnesium, 1x iron, 1x zinc, 3x sulfur, 12x oxygen'),
     new MaterialDef('mineral_supplement').fluid().color(0xB5C48A).iconSet('FLUID'),
     new MaterialDef('protein_growth_medium').fluid().color(0xC48F4A).iconSet('FLUID'),
+
+    //liveroot
+    new MaterialDef('extracted_liveroot').dust().color(0x7A9A52).iconSet('ROUGH').noDecomp(),
+    new MaterialDef('liveroot_extract').fluid().color(0x5FA85A).noDecomp(),
+    new MaterialDef('cellulose_pulp').dust().color(0xD9C9A0).iconSet('DULL').noDecomp().formula('C6H10O5').components('6x carbon, 10x hydrogen, 5x oxygen'),
+    new MaterialDef('black_liquor').fluid().color(0x2B2118).noDecomp(),
+    new MaterialDef('crude_tall_oil').fluid().color(0xB8742A).noDecomp(),
+    new MaterialDef('desoaped_black_liquor').fluid().color(0x4A3526).noDecomp(),
+    new MaterialDef('tall_oil_fatty_acid').fluid().color(0xD6A84E).noDecomp().formula('C18H34O2').components('18x carbon, 34x hydrogen, 2x oxygen'),
+    new MaterialDef('tall_oil_rosin').dust().color(0xC98A2B).iconSet('DULL').noDecomp().formula('C20H30O2').components('20x carbon, 30x hydrogen, 2x oxygen'),
+    new MaterialDef('stearic_acid').dust().color(0xE8D9B0).iconSet('DULL').noDecomp().formula('C18H36O2').components('18x carbon, 36x hydrogen, 2x oxygen'),
+    new MaterialDef('lignin').dust().color(0x6B4A32).iconSet('DULL').noDecomp(),
+    new MaterialDef('spent_liquor').fluid().color(0x7A6A4A).noDecomp(),
+    new MaterialDef('cellulose_hydrolysate').fluid().color(0xC9B27A).noDecomp().formula('C6H12O6').components('6x carbon, 12x hydrogen, 6x oxygen'),
+    new MaterialDef('hydrolysis_residue').dust().color(0x5A4A3A).iconSet('DULL').noDecomp(),
+    new MaterialDef('bio_oil').fluid().color(0x3A2A1C).noDecomp(),
+    new MaterialDef('biochar').dust().color(0x2A2A2E).iconSet('DULL').noDecomp(),
+    new MaterialDef('common_ink').fluid().color(0x242B4A).iconSet('FLUID').noDecomp().formula('C·H2O·CuSO4·Magebloom').components('1x ink, 1x copper_ii_sulfate, 1x magebloom')
+        .unify({ fluid: 'irons_spellbooks:common_ink' }),
+    new MaterialDef('uncommon_ink').fluid().color(0x1F4A3A).iconSet('FLUID').noDecomp().formula('C·H2O·CuSO4·Magebloom·FeCl3·B🜛').components('1x common_ink, 1x iron_iii_chloride, 1x manasteel')
+        .unify({ fluid: 'irons_spellbooks:uncommon_ink' }),
+    new MaterialDef('rare_ink').fluid().color(0x1F3F7A).iconSet('FLUID').noDecomp().formula('C·H2O·CuSO4·Magebloom·FeCl3·B🜛·Ti3Au·Bτ').components('1x uncommon_ink, 1x titanium_gold, 1x elementium')
+        .unify({ fluid: 'irons_spellbooks:rare_ink' }),
+    new MaterialDef('epic_ink').fluid().color(0x4A2278).iconSet('FLUID').noDecomp().formula('C·H2O·CuSO4·Magebloom·FeCl3·B🜛·Ti3Au·Bτ·Si4O8Fe·Bφ').components('1x rare_ink, 1x amethyst, 1x terrasteel')
+        .unify({ fluid: 'irons_spellbooks:epic_ink' }),
+    new MaterialDef('legendary_ink').fluid().color(0x8A5A12).iconSet('FLUID').noDecomp().formula('C·H2O·CuSO4·Magebloom·FeCl3·B🜛·Ti3Au·Bτ·Si4O8Fe·Bφ·Et·B☄').components('1x epic_ink, 1x eternal, 1x alfsteel')
+        .unify({ fluid: 'irons_spellbooks:legendary_ink' }),
+
+    new MaterialDef('nectar').fluid().color(0xF2B646).iconSet('FLUID').noDecomp(),
+    
+
 ];
 
 

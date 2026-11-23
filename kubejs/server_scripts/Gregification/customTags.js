@@ -28,6 +28,10 @@ ServerEvents.tags('fluid', allthemods => {
 
 	allthemods.add('forge:mutation_fluid', ['gendustry:mutagen', 'gtceu:mutagen'])
 	allthemods.add('forge:growth_medium', ['gtceu:raw_growth_medium', 'gtceu:protein_growth_medium'])
+
+	Object.keys(global.unifiedFluidTags || {}).forEach(name => {
+		allthemods.add(`forge:${name}`, global.unifiedFluidTags[name]);
+	});
 })
 
 ServerEvents.tags('item', allthemods => {	
@@ -122,7 +126,7 @@ ServerEvents.tags('item', allthemods => {
 	allthemods.add('forge:ingots/alloy_atomic', 'mekanism:alloy_atomic');
 
 	allthemods.remove('forge:ingots/compressed_iron', 'minecraft:iron_ingot')
-
+	
 })
 
 

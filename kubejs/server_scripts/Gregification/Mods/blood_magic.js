@@ -137,6 +137,9 @@ ServerEvents.recipes(allthemods => {
     bloodAltar('forestry:bog_earth', 'minecraft:soul_sand', 0, 1000, 25, 25)
     bloodAltar('gtceu:hot_blazing_soularium_ingot', 'enderio:soularium_ingot', 1, 2000, 25, 25)
     bloodAltar('gtceu:hot_blazing_energetic_alloy_ingot', 'enderio:energetic_alloy_ingot', 1, 2000, 25, 25)
+    
+    bloodAltar('forestry:bee_comb_gregbee', 'alltheores:steel_ingot', 0, 250, 25, 25)
+
 
     let recipe;
     recipe = allthemods.recipes.gtceu.sanguine_alchemy('gregification:alchemical_workbench/gilded_blackstone')

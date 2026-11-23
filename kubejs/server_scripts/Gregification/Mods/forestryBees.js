@@ -56,6 +56,7 @@ ServerEvents.recipes(allthemods => {
         { id: 'chromium', bit: 'forestry:chromium_bit', comb: 'metal', item: 'gtceu:chromium_dust', eut: MV, chances: [1500, 500, 100], guaranteed: false },
         { id: 'fluorine', bit: 'forestry:fluorine_bit', comb: 'gas', fluid: 'gtceu:fluorine 1000', eut: LV, chances: [1000, 500], guaranteed: false },
         { id: 'cadmium', bit: 'forestry:cadmium_bit', comb: 'metal', item: 'gtceu:cadmium_dust', eut: MV, chances: [1500, 500, 100], guaranteed: false },
+        { id: 'quartzite', bit: 'forestry:quartzite_bit', comb: 'metal', item: 'gtceu:quartzite_dust', eut: LV, chances: [1500, 500, 100] },
     ]
 
     const bonus = 500
@@ -135,9 +136,9 @@ ServerEvents.recipes(allthemods => {
     })
 
     const intelligentComb = [
-        { eu: LV, tier: 'lv', duration: 200, circuit: 1, chance: 1500, bonus: 0 },
-        { eu: MV, tier: 'mv', duration: 200, circuit: 2, chance: 1000, bonus: 0 },
-        { eu: HV, tier: 'hv', duration: 200, circuit: 3, chance: 500, bonus: 0 }
+        { eu: LV, tier: 'lv', duration: 200, circuit: 1, chance: 1500, bonus: 1000 },
+        { eu: MV, tier: 'mv', duration: 200, circuit: 2, chance: 1000, bonus: 1000 },
+        { eu: HV, tier: 'hv', duration: 200, circuit: 3, chance: 500, bonus: 1000 }
     ];
     intelligentComb.forEach((r) => {
         allthemods.recipes.gtceu.centrifuge('gregification:centrifuge/' + r.tier + '_universal_circuit')
@@ -149,9 +150,9 @@ ServerEvents.recipes(allthemods => {
     });
 
     const hyperIntelligentComb = [
-        { eu: EV, tier: 'ev', duration: 200, circuit: 1, chance: 400, bonus: 0 },
-        { eu: IV, tier: 'iv', duration: 200, circuit: 2, chance: 300, bonus: 0 },
-        { eu: LuV, tier: 'luv', duration: 200, circuit: 3, chance: 200, bonus: 0 }
+        { eu: EV, tier: 'ev', duration: 200, circuit: 1, chance: 400, bonus: 1000 },
+        { eu: IV, tier: 'iv', duration: 200, circuit: 2, chance: 300, bonus: 1000 },
+        { eu: LuV, tier: 'luv', duration: 200, circuit: 3, chance: 200, bonus: 1000 }
     ];
     hyperIntelligentComb.forEach((r) => {
         allthemods.recipes.gtceu.centrifuge('gregification:centrifuge/' + r.tier + '_universal_circuit')
@@ -164,7 +165,7 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.centrifuge('gregification:centrifuge/zpm_universal_circuit')
         .itemInputs('forestry:bee_comb_sentient')
-        .chancedOutput('gtceu:zpm_universal_circuit', 100, 0)
+        .chancedOutput('gtceu:zpm_universal_circuit', 1000, 1000)
         .circuit(1)
         .duration(200)
         .EUt(ZPM)
@@ -175,12 +176,16 @@ ServerEvents.highPriorityData(event => {
     const sentientEut = GTValues.VA[GTValues.UV]
     const sentientDuration = 1200
     event.addJson('gregification:recipes/sentient_bee', {
-        type: 'gtceu:assembler',
+        type: 'gtceu:chemical_reactor',
         duration: sentientDuration,
         inputs: {
             item: [
                 { content: { type: 'gtceu:sized', count: 1, ingredient: { type: 'gtextras:forestry_individual', species: 'forestry:bee_hyper_intelligent', stage: 'drone' } }, chance: 10000, maxChance: 10000, tierChanceBoost: 0 },
                 { content: { type: 'gtceu:sized', count: 1, ingredient: { item: 'gtceu:hyper_intelligent_neuron' } }, chance: 10000, maxChance: 10000, tierChanceBoost: 0 }
+            ],
+            fluid: [
+                { content: { amount: 10000, value: [{ tag: 'forge:concentrated_liquid_dna' }] }, chance: 10000, maxChance: 10000, tierChanceBoost: 0 },
+                { content: { amount: 10000, value: [{ tag: 'forge:artificial_cerebrospinal_fluid' }] }, chance: 10000, maxChance: 10000, tierChanceBoost: 0 }
             ]
         },
         tickInputs: { eu: [{ content: sentientEut, chance: 10000, maxChance: 10000, tierChanceBoost: 0 }] },

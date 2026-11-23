@@ -2,7 +2,7 @@
 // As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
 
 //@ts-check
-
+//search:chemical
 ServerEvents.recipes(allthemods => {
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
 
@@ -372,6 +372,49 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('gtceu:infinity_dust')
         .duration(1200)
         .EUt(UV);
+
+
+    allthemods.recipes.gtceu.chemical_reactor('gregification:ink/common_ink')
+        .itemInputs('#forge:dusts/copper_ii_sulfate', '#forge:dusts/magebloom')
+        .inputFluids('#forge:ink 1000')
+        .outputFluids('irons_spellbooks:common_ink 1000')
+        .duration(200)
+        .EUt(LV);
+
+    allthemods.recipes.gtceu.chemical_reactor('gregification:ink/uncommon_ink')
+        .itemInputs('#forge:dusts/iron_iii_chloride', '#forge:dusts/manasteel')
+        .inputFluids('#forge:common_ink 1000')
+        .outputFluids('irons_spellbooks:uncommon_ink 1000')
+        .duration(400)
+        .EUt(MV);
+
+    allthemods.recipes.gtceu.chemical_reactor('gregification:ink/rare_ink')
+        .itemInputs('#forge:dusts/titanium_gold', '#forge:dusts/elementium')
+        .inputFluids('#forge:uncommon_ink 1000')
+        .outputFluids('irons_spellbooks:rare_ink 1000')
+        .duration(600)
+        .EUt(HV);
+
+    allthemods.recipes.gtceu.chemical_reactor('gregification:ink/epic_ink')
+        .itemInputs('#forge:dusts/amethyst', '#forge:dusts/terrasteel')
+        .inputFluids('#forge:rare_ink 1000')
+        .outputFluids('irons_spellbooks:epic_ink 1000')
+        .duration(800)
+        .EUt(EV);
+
+    allthemods.recipes.gtceu.chemical_reactor('gregification:ink/legendary_ink')
+        .itemInputs('#forge:dusts/eternal', '#forge:dusts/alfsteel')
+        .inputFluids('#forge:epic_ink 1000')
+        .outputFluids('irons_spellbooks:legendary_ink 1000')
+        .duration(1000)
+        .EUt(IV);
+
+    allthemods.recipes.gtceu.chemical_reactor('gregification:honey_treat')
+        .itemInputs('#forge:dusts/picolinic_acid', '#forge:dusts/thorn_rose', '4x #forge:gems/glycerol')
+        .inputFluids('#forge:honey 1000', '#forge:sugar_water 1000', '#forge:nectar 1000')
+        .itemOutputs('16x productivebees:honey_treat')
+        .duration(400)
+        .EUt(IV);
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

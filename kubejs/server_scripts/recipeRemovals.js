@@ -198,7 +198,12 @@ ServerEvents.recipes(allthemods => {
         'gendustry:productivity_elite_upgrade', 'gendustry:territory_elite_upgrade', 'gendustry:youth_elite_upgrade'
     ]
 
-    const moreRemovals = [     
+    const moreRemovals = [
+        'irons_spellbooks:alchemist_cauldron/brew_uncommon_ink',
+        'irons_spellbooks:alchemist_cauldron/brew_rare_ink',
+        'irons_spellbooks:alchemist_cauldron/brew_epic_ink',
+        'irons_spellbooks:alchemist_cauldron/brew_legendary_ink',
+        'gtceu:fluid_solidifier/solidify_pink_slime_to_ingot',
         'allthemodium:smeltery/melting/allthemodium_from_ore', 'allthemodium:smeltery/melting/vibranium_from_ore', 'allthemodium:smeltery/melting/unobtainium_from_ore',
         'tconstruct:common/glass/vanilla/beacon', 'mekanism:storage_blocks/salt', 'thermal:compat/mekanism/press_mek_salt_packing',
         'advanced_ae:quartzcrystal', 'immersiveengineering:crafting/treated_wood_horizontal',
