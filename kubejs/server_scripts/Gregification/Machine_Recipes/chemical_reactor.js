@@ -375,7 +375,7 @@ ServerEvents.recipes(allthemods => {
 
 
     allthemods.recipes.gtceu.chemical_reactor('gregification:ink/common_ink')
-        .itemInputs('#forge:dusts/copper_ii_sulfate', '#forge:dusts/magebloom')
+        .itemInputs('#forge:dusts/amethyst', '#forge:dusts/magebloom')
         .inputFluids('#forge:ink 1000')
         .outputFluids('irons_spellbooks:common_ink 1000')
         .duration(200)
@@ -409,8 +409,8 @@ ServerEvents.recipes(allthemods => {
         .duration(1000)
         .EUt(IV);
 
-    allthemods.recipes.gtceu.chemical_reactor('gregification:honey_treat')
-        .itemInputs('#forge:dusts/picolinic_acid', '#forge:dusts/thorn_rose', '4x #forge:gems/glycerol')
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:honey_treat')
+        .itemInputs('#forge:dusts/picolinic_acid', '#forge:dusts/thorn_rose', '#forge:gems/glycerol')
         .inputFluids('#forge:honey 1000', '#forge:sugar_water 1000', '#forge:nectar 1000')
         .itemOutputs('16x productivebees:honey_treat')
         .duration(400)

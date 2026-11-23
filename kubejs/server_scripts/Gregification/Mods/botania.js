@@ -740,14 +740,15 @@ ServerEvents.recipes(allthemods => {
         .duration(metalDuration)
         .EUt(metalEut);
 
-    allthemods.recipes.gtceu.orechid_grove('gregification:orechid_grove_metallurgical')
+    allthemods.recipes.gtceu.orechid_grove('gregification:orechid_grove_metallurgical_2')
         .itemInputs('64x minecraft:stone', '16x minecraft:netherrack', '16x minecraft:end_stone')
         .input(GTX.MANA, metalMana)
-        .chancedOutput('32x gtceu:thorn_rose_dust', 7500, 0)  
+        //.chancedOutput('32x gtceu:thorn_rose_dust', 7500, 0)  
         .chancedOutput('32x gtceu:raw_quartzite', 5000, 0)        
         .chancedOutput('32x gtceu:raw_talc', 2000, 0)  
         .chancedOutput('32x gtceu:raw_soapstone', 2000, 0)  
-        .chancedOutput('32x gtceu:raw_electrotine', 1000, 0)  
+        .chancedOutput('32x gtceu:raw_electrotine', 1000, 0)          
+        .chancedOutput('32x gtceu:raw_drenched_iron', 500, 0)  
         .chancedOutput('32x thermal:bitumen', 3500, 0)  
         .circuit(4)
         .duration(metalDuration)

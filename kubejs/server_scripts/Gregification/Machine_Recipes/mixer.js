@@ -238,6 +238,81 @@ ServerEvents.recipes(allthemods => {
         600
     );
 
+    addMixer(
+        [
+            '3x #forge:dusts/plutonium_241',
+            '#forge:dusts/gallium',
+            '#forge:dusts/iridium',
+            '#forge:dusts/hsse'
+        ],
+        '6x gtceu:delta_plutonium_alloy_dust',
+        IV,
+        500
+    );
+
+    addMixer(
+        [
+            '4x #forge:dusts/signalum',
+            '#forge:dusts/zirconium',
+            '2x #forge:dusts/desh',
+            '#forge:dusts/cinnabar',
+            '#forge:dusts/promethium'
+        ],
+        '9x gtceu:infused_redstone_dust',
+        IV,
+        600
+    );
+
+    addMixer(
+        [
+            '#forge:dusts/rhenium_nickel_alloy',
+            '#forge:dusts/hsss',
+            '#forge:dusts/hafnium',
+            '#forge:dusts/scandium'
+        ],
+        '4x gtceu:rheni_hafnium_alloy_dust',
+        LuV,
+        500
+    );
+
+    addMixer(
+        [
+            '#forge:dusts/thorium_berkelium_alloy',
+            '6x #forge:dusts/stabilized_clathrate',
+            '#forge:dusts/ostrum',
+            '#forge:dusts/cerium',
+            '#forge:dusts/beryllium'
+        ],
+        '5x gtceu:infused_diamond_dust',
+        LuV,
+        700
+    );
+
+    addMixer(
+        [
+            '#forge:dusts/praseodymium_yttrium_silicate',
+            '#forge:dusts/bismuth_strontium_calcium_copper_oxide',
+            '#forge:dusts/nitinol'
+        ],
+        '3x gtceu:praseodymium_nitinol_alloy_dust',
+        ZPM,
+        800
+    );
+
+    addMixer(
+        [
+            '#forge:dusts/calorite',
+            '#forge:dusts/samarium_cobalt',
+            '#forge:dusts/ytterbium',
+            '#forge:dusts/caesium',
+            '#forge:dusts/rubidium',
+            '5x #forge:dusts/obsidian'
+        ],
+        '10x gtceu:infused_obsidian_dust',
+        ZPM,
+        900
+    );
+
     //hepatizon
     addMixer(
         [
@@ -283,7 +358,15 @@ ServerEvents.recipes(allthemods => {
         500
     )
 
-    
+    addMixer(
+        [
+            '#forge:dusts/obsidian',
+            '#forge:dusts/diamond',
+        ],
+        '2x mekanism:dust_refined_obsidian',
+        LuV,
+        500
+    )
 
     //vibrant alloy
     addMixer(

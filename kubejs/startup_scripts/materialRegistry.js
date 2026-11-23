@@ -1359,15 +1359,33 @@ const materials = [
     new MaterialDef('refined_glowstone').components('1x glowstone, 1x osmium').color(0xFFE30B).iconSet('SHINY').formula('GlwOs').ingot().fluid().materialsAll()
         .unify({ ingot: 'mekanism:ingot_refined_glowstone', block: 'mekanism:block_refined_glowstone', nugget: 'mekanism:nugget_refined_glowstone', fluid: 'tconstruct:molten_refined_glowstone' }),
 
-    new MaterialDef('alloy_infused').pipe().components('1x iron').color(0xE61940).iconSet('METALLIC').formula('Fe').ingot().fluid().materialsAll()
+    new MaterialDef('delta_plutonium_alloy').color(0x6F8F7A).iconSet('METALLIC').formula('(Pu-241)3Ga·Ir·HSS-E').components('3x plutonium_241, 1x gallium, 1x iridium, 1x hsse').dust(),
+
+    new MaterialDef('infused_redstone').dust().color(0xC8283F).iconSet('SHINY').noDecomp()
+        .formula('Ag4Cu12Si16Fe80S160Cr16Al32O48Hg48·Zr·De2·HgS·Pm')
+        .components('4x signalum, 1x zirconium, 2x desh, 1x cinnabar, 1x promethium'),
+
+    new MaterialDef('alloy_infused').color(0xE61940).iconSet('METALLIC').ingot().fluid().materialsAll().pipe().noDecomp().components('1x infused_redstone, 1x delta_plutonium_alloy').formula('Ag4Cu12Si16Fe80S160Cr16Al32O48Hg48·Zr·De2·HgS·Pm·(Pu-241)3Ga·Ir·HSS-E')
         .cable({ voltage: 32768, loss: 2 })
         .unify({ ingot: 'mekanism:alloy_infused' }),
 
-    new MaterialDef('alloy_reinforced').pipe().components('1x alloy_infused').color(0x00F5FF).iconSet('METALLIC').formula('Fe').ingot().fluid().materialsAll()
+    new MaterialDef('rheni_hafnium_alloy').color(0x3E5F8A).iconSet('METALLIC').formula('Re3Ni2·HSS-S·Hf·Sc').components('1x rhenium_nickel_alloy, 1x hsss, 1x hafnium, 1x scandium').dust(),
+
+    new MaterialDef('infused_diamond').dust().color(0x2FC4D6).iconSet('SHINY').noDecomp()
+        .formula('Th2Bk·Stabilized Clathrate6·Ot·Ce·Be')
+        .components('1x thorium_berkelium_alloy, 6x stabilized_clathrate, 1x ostrum, 1x cerium, 1x beryllium'),
+
+    new MaterialDef('alloy_reinforced').pipe().components('1x rheni_hafnium_alloy, 1x infused_diamond').formula('Re3Ni2·HSS-S·Hf·Sc·Th2Bk·Stabilized Clathrate·Ot·Ce·Be').color(0x00F5FF).iconSet('METALLIC').ingot().fluid().materialsAll().noDecomp()
         .cable({ voltage: 131072, loss: 2 })
         .unify({ ingot: 'mekanism:alloy_reinforced' }),
 
-    new MaterialDef('alloy_atomic').pipe().components('1x alloy_reinforced').color(0xBF40FF).iconSet('METALLIC').formula('Fe').ingot().fluid().materialsAll()
+    new MaterialDef('praseodymium_nitinol_alloy').color(0x8C6FB0).iconSet('METALLIC').formula('PrY2SiO5·Bi2Sr2CaCu2(CO3)2O6·Ni4Ti6').components('1x praseodymium_yttrium_silicate, 1x bismuth_strontium_calcium_copper_oxide, 1x nitinol').dust(),
+
+    new MaterialDef('infused_obsidian').dust().color(0x5B3A8C).iconSet('SHINY').noDecomp()
+        .formula('Ct·SmCo5·Yb·Cs·Rb·(MgFeSi2O8)5')
+        .components('1x calorite, 1x samarium_cobalt, 1x ytterbium, 1x caesium, 1x rubidium, 5x obsidian'),
+
+    new MaterialDef('alloy_atomic').pipe().components('1x praseodymium_nitinol_alloy, 1x infused_obsidian').formula('PrY2SiO5·Bi2Sr2CaCu2(CO3)2O6·Ni4Ti6·Ct·SmCo5·Yb·Cs·Rb').color(0xBF40FF).iconSet('METALLIC').ingot().fluid().materialsAll().noDecomp()
         .cable({ voltage: 524288, loss: 2 })
         .unify({ ingot: 'mekanism:alloy_atomic' }),
 
@@ -2477,6 +2495,7 @@ const materials = [
         .unify({ fluid: 'irons_spellbooks:legendary_ink' }),
 
     new MaterialDef('nectar').fluid().color(0xF2B646).iconSet('FLUID').noDecomp(),
+
     
 
 ];

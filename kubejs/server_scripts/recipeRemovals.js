@@ -199,11 +199,16 @@ ServerEvents.recipes(allthemods => {
     ]
 
     const moreRemovals = [
-        'irons_spellbooks:alchemist_cauldron/brew_uncommon_ink',
-        'irons_spellbooks:alchemist_cauldron/brew_rare_ink',
-        'irons_spellbooks:alchemist_cauldron/brew_epic_ink',
-        'irons_spellbooks:alchemist_cauldron/brew_legendary_ink',
-        'gtceu:fluid_solidifier/solidify_pink_slime_to_ingot',
+        'mekanism:processing/refined_obsidian/dust/from_obsidian_dust', 'mekanism:control_circuit/advanced', 'mekanism:control_circuit/elite', 'mekanism:control_circuit/ultimate',
+        'mekanism:metallurgic_infusing/alloy/infused', 'mekanism:metallurgic_infusing/alloy/reinforced', 'mekanism:metallurgic_infusing/alloy/atomic',
+        'mekanism:infusion_conversion/redstone/from_block', 'mekanism:infusion_conversion/redstone/from_enriched', 'mekanism:infusion_conversion/redstone/from_dust', 'mekanism:enriching/enriched/redstone',
+        'mekanism:infusion_conversion/diamond/from_dust', 'mekanism:infusion_conversion/diamond/from_enriched', 'mekanism:enriching/enriched/diamond',
+        'mekanism:infusion_conversion/refined_obsidian/from_dust', 'mekanism:infusion_conversion/refined_obsidian/from_enriched', 'mekanism:enriching/enriched/refined_obsidian',
+        'irons_spellbooks:alchemist_cauldron/brew_uncommon_ink', 'productivebees:honey_treat_from_block',
+        'irons_spellbooks:alchemist_cauldron/brew_rare_ink', 'productivebees:honey_treat',
+        'irons_spellbooks:alchemist_cauldron/brew_epic_ink', 'productivebees:honey_treat_gene',
+        'irons_spellbooks:alchemist_cauldron/brew_legendary_ink', 'productivebees:honey_treat_from_block',
+        'gtceu:fluid_solidifier/solidify_pink_slime_to_ingot', 'productivebees:bottler/honey_treat',
         'allthemodium:smeltery/melting/allthemodium_from_ore', 'allthemodium:smeltery/melting/vibranium_from_ore', 'allthemodium:smeltery/melting/unobtainium_from_ore',
         'tconstruct:common/glass/vanilla/beacon', 'mekanism:storage_blocks/salt', 'thermal:compat/mekanism/press_mek_salt_packing',
         'advanced_ae:quartzcrystal', 'immersiveengineering:crafting/treated_wood_horizontal',

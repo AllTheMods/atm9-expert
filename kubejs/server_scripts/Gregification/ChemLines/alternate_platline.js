@@ -158,12 +158,14 @@ ServerEvents.recipes(allthemods => {
         .outputFluids('minecraft:water 3000', 'gtceu:chlorine 1000', 'gtceu:diluted_hydrochloric_acid 1000')
         .duration(durationComplex).EUt(EUComplex);
 
+    /*
     allthemods.recipes.gtceu.large_chemical_reactor('gregification:pgm/rarest_split')
         .itemInputs('4x #forge:dusts/rarest_metal_mixture')
         .inputFluids('#forge:hydrochloric_acid 3000')
         .itemOutputs('4x gtceu:iridium_metal_residue_dust')
         .outputFluids('gtceu:acidic_osmium_solution 2000', 'gtceu:hydrogen 2000')
         .duration(durationComplex).EUt(EUComplex);
+    */
 
     allthemods.recipes.gtceu.electric_blast_furnace('gregification:pgm/iridium_roast')
         .itemInputs('4x #forge:dusts/iridium_metal_residue')

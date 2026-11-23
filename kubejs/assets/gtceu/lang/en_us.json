@@ -1328,5 +1328,12 @@
     "material.gtceu.rare_ink": "Rare Ink",
     "material.gtceu.epic_ink": "Epic Ink",
     "material.gtceu.legendary_ink": "Legendary Ink",
-    "material.gtceu.nectar": "Nectar"
+    "material.gtceu.nectar": "Nectar",
+    "material.gtceu.titanium_gold": "Titanium Gold",
+    "material.gtceu.infused_redstone": "Infused Redstone",
+    "material.gtceu.rheni_hafnium_alloy": "Rhenium Hafnium Super Alloy",
+    "material.gtceu.delta_plutonium_alloy": "Delta Plutonium Alloy",
+    "material.gtceu.infused_diamond": "Infused Diamond",
+    "material.gtceu.praseodymium_nitinol_alloy": "Praseodymium Nitinol Alloy",
+    "material.gtceu.infused_obsidian": "Infused Obsidian"
 }
