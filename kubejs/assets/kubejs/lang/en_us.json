@@ -7461,5 +7461,8 @@
 
 	"item.kubejs.micro_universe_catalyst.tooltip": "Forged in the fire of a thousand suns.",
 	"kubejs.apiary_ii.tooltip.bee_requirements": "Requires Very High, Any, Metaturnal bees to run",
-	"kubejs.apiary_i.tooltip.bee_eater": "Occasionally eats the bees"
+	"kubejs.apiary_i.tooltip.bee_eater": "Occasionally eats the bees",
+	"item.kubejs.entropy_manifold.tooltip": "§7A volatile union of infinite energy and abyssal sorrow.",
+	"item.kubejs.inert_nether_star.tooltip": "Needs activating...",
+	"item.kubejs.quantum_sentient_circuit.tooltip": "The pinnacle of GregTech and Magical integration."
 }

@@ -4,7 +4,7 @@
 ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA;
 
-    const lunarCaseousColony = Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"LunarCaseous"}').strongNBT();
+    const lunarCaseousColony = Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"LunarCaseous"}').weakNBT();
 
     const galalithDuration = 200;
     const galalithEut = LuV;

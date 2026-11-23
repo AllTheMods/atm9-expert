@@ -8,9 +8,9 @@ ServerEvents.recipes(allthemods => {
     const laylineEut = IV;
 
     const laylineOres = [
-        { bacteria: Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"AcidithiobacillusFerrooxidans"}').strongNBT(), ore: 'alltheores:raw_uranium', amount: 128, consumeChance: 10, circuit: 1 },        
-        { bacteria: Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"AcidithiobacillusFerrooxidans"}').strongNBT(), ore: 'gtceu:raw_thorium', amount: 128, consumeChance: 20, circuit: 2 },
-        { bacteria: Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"AcidithiobacillusFerrooxidans"}').strongNBT(), ore: 'gtceu:raw_radio_thoric_phosphate', amount: 128, consumeChance: 30, circuit: 3 },
+        { bacteria: Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"AcidithiobacillusFerrooxidans"}').weakNBT(), ore: 'alltheores:raw_uranium', amount: 128, consumeChance: 10, circuit: 1 },        
+        { bacteria: Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"AcidithiobacillusFerrooxidans"}').weakNBT(), ore: 'gtceu:raw_thorium', amount: 128, consumeChance: 20, circuit: 2 },
+        { bacteria: Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"AcidithiobacillusFerrooxidans"}').weakNBT(), ore: 'gtceu:raw_radio_thoric_phosphate', amount: 128, consumeChance: 30, circuit: 3 },
     ];
 
     const addLaylineOre = (row) => {

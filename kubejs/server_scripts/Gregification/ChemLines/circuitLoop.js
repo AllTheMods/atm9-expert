@@ -53,7 +53,7 @@ ServerEvents.recipes(allthemods => {
     }
 
     const bacteriaStack = (species, n) =>
-        Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"' + species + '"}').withCount(n).strongNBT()
+        Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"' + species + '"}').withCount(n).weakNBT()
 
     // assembly line item buses are ULV: nothing over 64 per slot, so split into 64s plus the remainder
     const pushItem = (list, id, n, split) => {

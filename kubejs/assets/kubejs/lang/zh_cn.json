@@ -81,5 +81,8 @@
   "atm9.chapters.68.title": "等价交换",
   "item.kubejs.micro_universe_catalyst.tooltip": "在千阳烈焰中锻造而成。",
   "kubejs.apiary_ii.tooltip.bee_requirements": "需要极高生产力、任意天气适应、全天候活动的蜜蜂才能运行",
-  "kubejs.apiary_i.tooltip.bee_eater": "偶尔会吃掉蜜蜂"
+  "kubejs.apiary_i.tooltip.bee_eater": "偶尔会吃掉蜜蜂",
+  "item.kubejs.entropy_manifold.tooltip": "§7无限能量与深渊哀恸的狂暴结合体。",
+  "item.kubejs.inert_nether_star.tooltip": "需要激活……",
+  "item.kubejs.quantum_sentient_circuit.tooltip": "格雷科技与魔法融合的巅峰之作。"
 }

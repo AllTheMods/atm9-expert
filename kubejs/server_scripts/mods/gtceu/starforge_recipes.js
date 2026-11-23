@@ -183,8 +183,8 @@ ServerEvents.recipes(allthemods => {
 		.itemInputs(
 			[
 				'28x allthemodium:unobtainium_allthemodium_alloy_block',
-				Item.of('allthemodium:unobtainium_vibranium_alloy_block', "{HideFlags:1,display:{Name:'[{\"text\":\"Awakened Unobtainium-Vibranium Alloy Block\",\"italic\":false}]'}}").enchant('minecraft:unbreaking', 1).strongNBT(),
-				Item.of('allthemodium:unobtainium_vibranium_alloy_block', "{HideFlags:1,display:{Name:'[{\"text\":\"Awakened Unobtainium-Vibranium Alloy Block\",\"italic\":false}]'}}").enchant('minecraft:unbreaking', 1).strongNBT(),
+				Item.of('allthemodium:unobtainium_vibranium_alloy_block', "{HideFlags:1,display:{Name:'[{\"translate\":\"item.atm9e.awakened_unobtainium_vibranium_alloy_block\",\"italic\":false}]'}}").enchant('minecraft:unbreaking', 1).strongNBT(),
+				Item.of('allthemodium:unobtainium_vibranium_alloy_block', "{HideFlags:1,display:{Name:'[{\"translate\":\"item.atm9e.awakened_unobtainium_vibranium_alloy_block\",\"italic\":false}]'}}").enchant('minecraft:unbreaking', 1).strongNBT(),
 				'allthetweaks:oblivion_shard',
 				'allthetweaks:dragon_soul',
 				'allthetweaks:withers_compass',

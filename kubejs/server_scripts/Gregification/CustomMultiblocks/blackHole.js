@@ -95,7 +95,7 @@ ServerEvents.recipes(allthemods => {
         blackHole(['#forge:singularities/core', `4000x #forge:ingots/${singularity}`], null, `gtceu:${singularity}_singularity`, null, ZPM, compressionDuration, `${singularity}_singularity`);
     });
 
-    const cuproColony = Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"CuproSymbiont"}').strongNBT();
+    const cuproColony = Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"CuproSymbiont"}').weakNBT();
     blackHole(
         [
             'allthetweaks:mini_exit',

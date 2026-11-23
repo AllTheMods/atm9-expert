@@ -4,15 +4,15 @@
 StartupEvents.registry('item', allthemods => {
         allthemods.create('gtceu:megaseed')
         .displayName('Megaseed')
-        .tooltip('Large, brown, teardrop-shaped fruits found inside the Mega Trees in Dimension 35-C')
+        .tooltip(Text.translate('item.gtceu.megaseed.tooltip'))
  
     allthemods.create('gtceu:hyper_intelligent_neuron')
         .displayName('Hyper Intelligent Neuron')
-        .tooltip('A neuron grown far past the limits of any model.')
+        .tooltip(Text.translate('item.gtceu.hyper_intelligent_neuron.tooltip'))
  
     allthemods.create('gtceu:dimensional_anchor')
         .displayName('Dimensional Anchor')
-        .tooltip('Anchors the DTPF to Dimension 35-C')
+        .tooltip(Text.translate('item.gtceu.dimensional_anchor.tooltip'))
 });
 
 StartupEvents.registry('block', allthemods => {

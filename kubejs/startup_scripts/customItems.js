@@ -17,70 +17,70 @@ StartupEvents.registry('item', allthemods => {
 
     allthemods.create('gtceu:bose_einstein_condensate')
         .displayName('Bose-Einstein Condensate')
-        .tooltip('Matter at the edge of absolute zero')
+        .tooltip(Text.translate('item.gtceu.bose_einstein_condensate.tooltip'))
         
     allthemods.create('gtceu:tesseract')
         .displayName('Tesseract')
-        .tooltip('A cube folded through a fourth dimension')
+        .tooltip(Text.translate('item.gtceu.tesseract.tooltip'))
 
     allthemods.create('gtceu:raw_model_neuron').displayName('Raw Model Neuron')
 
     allthemods.create('gtceu:cosmic_knowledge_fragment')
         .displayName('Cosmic Knowledge Fragment')
-        .tooltip('Fragment of cosmic knowledge.');
+        .tooltip(Text.translate('item.gtceu.cosmic_knowledge_fragment.tooltip'));
 
     allthemods.create('gtceu:cosmic_knowledge_compendium')
         .displayName('Cosmic Knowledge Compendium')
-        .tooltip('A compendium of cosmic knowledge.');
+        .tooltip(Text.translate('item.gtceu.cosmic_knowledge_compendium.tooltip'));
 
     allthemods.create('gtceu:forty_two')
         .displayName('42')
-        .tooltip('Meaning of Life');
+        .tooltip(Text.translate('item.gtceu.forty_two.tooltip'));
 
     allthemods.create('gtceu:technomancy_orb')
         .displayName('Technomancy Orb')
-        .tooltip('Orb of Technomantic Ascendancy')
+        .tooltip(Text.translate('item.gtceu.technomancy_orb.tooltip'))
         //.rarity('ie_masterwork')
 
     allthemods.create('gtceu:beryllium_sphere')
         .displayName('Beryllium Sphere')
-        .tooltip('Never give up. Never surrender.')
+        .tooltip(Text.translate('item.gtceu.beryllium_sphere.tooltip'))
         //.rarity('ie_masterwork')
         
     
     allthemods.create('gtceu:agarwood')
         .displayName('Agarwood')
-        .tooltip('Aromatic wood used in incense and rituals.')
+        .tooltip(Text.translate('item.gtceu.agarwood.tooltip'))
         //.rarity('ie_masterwork')
 
     allthemods.create('gtceu:camphor_incense')
         .displayName('Camphor Incense')
-        .tooltip('Incense made from camphor.')
+        .tooltip(Text.translate('item.gtceu.camphor_incense.tooltip'))
         //.rarity('ie_masterwork')
         
     allthemods.create('gtceu:solar_relic')
         .displayName('Solar Relic')
-        .tooltip('A relic imbued with the power of the sun.')
+        .tooltip(Text.translate('item.gtceu.solar_relic.tooltip'))
         //.rarity('ie_masterwork')
 
     allthemods.create('gtceu:perovskite_photovoltaic_cell')
         .displayName('Perovskite Photovoltaic Cell')
-        .tooltip('A highly efficient solar cell made from perovskite.')
+        .tooltip(Text.translate('item.gtceu.perovskite_photovoltaic_cell.tooltip'))
         //.rarity('ie_masterwork')
 
     allthemods.create('gtceu:sunnarium_core')
         .displayName('Sunnarium Core')
-        .tooltip('A core imbued with the power of the sun.')
+        .tooltip(Text.translate('item.gtceu.sunnarium_core.tooltip'))
         //.rarity('ie_masterwork')
 
     allthemods.create('gtceu:lunarium_core')
         .displayName('Lunarium Core')
-        .tooltip('A core imbued with the power of the moon.')
+        .tooltip(Text.translate('item.gtceu.lunarium_core.tooltip'))
         .rarity('ie_masterwork')
 
     allthemods.create('gtceu:atomic_core')        
         .displayName('Atomic Core')
-        .tooltip('Atomic Core')
+        .tooltip(Text.translate('item.gtceu.atomic_core.tooltip'))
         //.rarity('ie_masterwork')
 
     allthemods.create('gtceu:stabilized_tesseract')
@@ -88,16 +88,16 @@ StartupEvents.registry('item', allthemods => {
 
     allthemods.create('gtceu:curse_breaker')
         .displayName('Curse Breaker')
-        .tooltip('For Jonh')
+        .tooltip(Text.translate('item.gtceu.curse_breaker.tooltip'))
 
     allthemods.create('gtceu:blood_coated_blade')        
         .displayName('Blood Coated Blade')
-        .tooltip('A blade coated with the essence of blood.')
+        .tooltip(Text.translate('item.gtceu.blood_coated_blade.tooltip'))
         //.rarity('ie_masterwork')
 
     allthemods.create('gtceu:thermal_spark')        
         .displayName('Thermal Spark')
-        .tooltip('Thermal Spark')
+        .tooltip(Text.translate('item.gtceu.thermal_spark.tooltip'))
         //.rarity('ie_masterwork')
 
     allthemods.create('quantum_sentient_circuit')
@@ -106,14 +106,14 @@ StartupEvents.registry('item', allthemods => {
         .color(1, 0x00FFFF)
         //.rarity('EPIC')
         .displayName('Quantum Sentient Circuit')
-        .tooltip('The pinnacle of GregTech and Magical integration.')
+        .tooltip(Text.translate('item.kubejs.quantum_sentient_circuit.tooltip'))
         .glow(true);
 
     allthemods.create('entropy_manifold')
         .displayName('The Entropy Manifold')
         .glow(true)
         //.rarity('EPIC')
-        .tooltip('§7A volatile union of infinite energy and abyssal sorrow.')
+        .tooltip(Text.translate('item.kubejs.entropy_manifold.tooltip'))
         .parentModel('minecraft:item/generated')
         .texture('layer0', 'ironjetpacks:item/capacitor') // Updated ID here
         .color(0, 0xD455FF)
@@ -128,7 +128,7 @@ StartupEvents.registry('item', allthemods => {
     */
     allthemods.create('gtceu:blank_slate_casing')
         .displayName('Blank Slate Casing')        
-        .tooltip('§7Blood soaked slate ready for imbuing.');
+        .tooltip(Text.translate('item.gtceu.blank_slate_casing.tooltip'));
 
     allthemods.create('gtceu:crystallized_seed')
         .texture('minecraft:item/pumpkin_seeds')
@@ -154,22 +154,22 @@ StartupEvents.registry('item', allthemods => {
     allthemods.create('gtceu:polonium_beryllium_neutron_source')
         .displayName('Polonium Beryllium Neutron Emitter')
         //.rarity('ie_masterwork')
-        .tooltip('§7A Polonium beryllium neutron emitter.');
+        .tooltip(Text.translate('item.gtceu.polonium_beryllium_neutron_source.tooltip'));
             
     allthemods.create('gtceu:americium_beryllium_neutron_source')
         .displayName('Americium Beryllium Neutron Emitter')
         //.rarity('ie_masterwork')
-        .tooltip('§7An Americium beryllium neutron emitter.');
+        .tooltip(Text.translate('item.gtceu.americium_beryllium_neutron_source.tooltip'));
 
     allthemods.create('gtceu:californium_neutron_source')
         .displayName('Californium Neutron Emitter')
         //.rarity('ie_masterwork')
-        .tooltip('§7A Californium neutron emitter.');
+        .tooltip(Text.translate('item.gtceu.californium_neutron_source.tooltip'));
 
     allthemods.create('gtceu:preon')
         .displayName('Preon')
         //.rarity('ie_masterwork')
-        .tooltip('§7A fundamental constituent of matter.');
+        .tooltip(Text.translate('item.gtceu.preon.tooltip'));
         
     allthemods.create('gtceu:betavoltaic_microcell')
         .displayName('Betavoltaic Microcell')
@@ -186,7 +186,7 @@ StartupEvents.registry('item', allthemods => {
     
     allthemods.create('gtceu:eldritch_spirit')
         .displayName('Eldritch Spirit')
-        .tooltip('A spirit captured by the eldritch miner.')
+        .tooltip(Text.translate('item.gtceu.eldritch_spirit.tooltip'))
 
     allthemods.create('gtceu:tachyon')
         .displayName('Tachyon')
@@ -222,7 +222,7 @@ StartupEvents.registry('item', allthemods => {
         allthemods.create(`gtceu:element_${element.name}`)
             .displayName(`${element.name.charAt(0).toUpperCase() + element.name.slice(1)} Element`)
             //.rarity(element.rarity)
-            .tooltip(element.description)
+            .tooltip(Text.translate(`item.gtceu.element_${element.name}.tooltip`))
         //.glow(true)
     });
 
@@ -231,7 +231,7 @@ StartupEvents.registry('item', allthemods => {
         .texture('minecraft:item/paper')
         .color(0, 0x3FA9A0)
         //.rarity('COMMON')
-        .tooltip('§7A schematic for a Tier 1 Rocket, capable of reaching the Moon.')
+        .tooltip(Text.translate('item.gtceu.tier_1_rocket_schematic.tooltip'))
 
 
 
@@ -240,85 +240,85 @@ StartupEvents.registry('item', allthemods => {
         .texture('minecraft:item/paper')
         .color(0, 0xC1502E)
         //.rarity('UNCOMMON')
-        .tooltip('§7A schematic for a Tier 2 Rocket, capable of reaching Mars.')
+        .tooltip(Text.translate('item.gtceu.tier_2_rocket_schematic.tooltip'))
 
     allthemods.create('gtceu:tier_3_rocket_schematic')
         .displayName('Tier 3 Rocket Schematic')
         .texture('minecraft:item/paper')
         .color(0, 0x8B2E2E)
         //.rarity('RARE')
-        .tooltip('§7A schematic for a Tier 3 Rocket, capable of reaching Venus and Mercury.')
+        .tooltip(Text.translate('item.gtceu.tier_3_rocket_schematic.tooltip'))
 
     allthemods.create('gtceu:tier_4_rocket_schematic')
         .displayName('Tier 4 Rocket Schematic')
         .texture('minecraft:item/paper')
         .color(0, 0xA8E6C8)
         //.rarity('SUPREME')
-        .tooltip('§7A schematic for a Tier 4 Rocket, capable of reaching Glacio.')
+        .tooltip(Text.translate('item.gtceu.tier_4_rocket_schematic.tooltip'))
 
     allthemods.create('gtceu:thorium_single')
         .displayName('Single Thorium Fuel Cell')
         //.rarity('RARE')
-        .tooltip('§7A Single thorium fuel cell.')
+        .tooltip(Text.translate('item.gtceu.thorium_single.tooltip'))
 
     allthemods.create('gtceu:thorium_double')
         .displayName('Double Thorium Fuel Cell')
         //.rarity('RARE')
-        .tooltip('§7A Double thorium fuel cell.')
+        .tooltip(Text.translate('item.gtceu.thorium_double.tooltip'))
 
     allthemods.create('gtceu:thorium_quad')
         .displayName('Quad Thorium Fuel Cell')
         //.rarity('RARE')
-        .tooltip('§7A Quad thorium fuel cell.')    
+        .tooltip(Text.translate('item.gtceu.thorium_quad.tooltip'))    
 
     allthemods.create('gtceu:thorium_berkelium_single')
         .displayName('Single Thorium Berkelium Fuel Cell')
         //.rarity('RARE')
-        .tooltip('§7A Single thorium berkelium fuel cell.')
+        .tooltip(Text.translate('item.gtceu.thorium_berkelium_single.tooltip'))
 
     allthemods.create('gtceu:thorium_berkelium_double')
         .displayName('Double Thorium Berkelium Fuel Cell')
         .rarity('RARE')
-        .tooltip('§7A Double thorium berkelium fuel cell.')
+        .tooltip(Text.translate('item.gtceu.thorium_berkelium_double.tooltip'))
 
     allthemods.create('gtceu:thorium_berkelium_quad')
         .displayName('Quad Thorium Berkelium Fuel Cell')
         //.rarity('RARE')
-        .tooltip('§7A Quad thorium berkelium fuel cell.')
+        .tooltip(Text.translate('item.gtceu.thorium_berkelium_quad.tooltip'))
 
     allthemods.create('gtceu:samarium_cobalt_magnetic_rotor')
         .displayName('Samarium Cobalt Magnetic Rotor')
-        .tooltip('§7A Samarium Cobalt Magnetic Rotor.')
+        .tooltip(Text.translate('item.gtceu.samarium_cobalt_magnetic_rotor.tooltip'))
 
     allthemods.create('gtceu:depleted_single_thorium')
         .displayName('Single Depleted Thorium Fuel Cell')
         //.rarity('RARE')
-        .tooltip('§7A Single depleted thorium fuel cell.')
+        .tooltip(Text.translate('item.gtceu.depleted_single_thorium.tooltip'))
 
     allthemods.create('gtceu:depleted_double_thorium')
         .displayName('Double Depleted Thorium Fuel Cell')
         //.rarity('RARE')
-        .tooltip('§7A Double depleted thorium fuel cell.')
+        .tooltip(Text.translate('item.gtceu.depleted_double_thorium.tooltip'))
 
     allthemods.create('gtceu:depleted_quad_thorium')
         .displayName('Quad Depleted Thorium Fuel Cell')
         //.rarity('RARE')
-        .tooltip('§7A Quad depleted thorium fuel cell.')
+        .tooltip(Text.translate('item.gtceu.depleted_quad_thorium.tooltip'))
 
      allthemods.create('gtceu:depleted_single_thorium_berkelium')
         .displayName('Single Depleted Thorium Berkelium Fuel Cell')
         //.rarity('RARE')
-        .tooltip('§7A Single depleted thorium berkelium fuel cell.')
+        .tooltip(Text.translate('item.gtceu.depleted_single_thorium_berkelium.tooltip'))
 
     allthemods.create('gtceu:depleted_double_thorium_berkelium')
         .displayName('Double Depleted Thorium Berkelium Fuel Cell')
         //.rarity('RARE')
-        .tooltip('§7A Double depleted thorium berkelium fuel cell.')
+        .tooltip(Text.translate('item.gtceu.depleted_double_thorium_berkelium.tooltip'))
 
     allthemods.create('gtceu:depleted_quad_thorium_berkelium')
         .displayName('Quad Depleted Thorium Berkelium Fuel Cell')
         //.rarity('RARE')
-        .tooltip('§7A Quad depleted thorium berkelium fuel cell.')
+        .tooltip(Text.translate('item.gtceu.depleted_quad_thorium_berkelium.tooltip'))
 
 })
 

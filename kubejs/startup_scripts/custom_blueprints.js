@@ -29,7 +29,7 @@ StartupEvents.registry('item', allthemods => {
             .color(0, 0x007EA7)
             //.rarity('ADVANCED')
             .displayName(`Blueprint (${bp.name})`)                                                
-            .tooltip(`§7A ${bp.name} blueprint.`);
+            .tooltip(Text.translate('tooltip.atm9e.blueprint.desc', Text.translate(`atm9e.blueprint.${bp.id}`)));
         });
 });
 

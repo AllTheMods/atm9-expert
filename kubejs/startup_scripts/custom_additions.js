@@ -3,7 +3,7 @@
 
 
 StartupEvents.registry('item', allthemods => {
-	allthemods.create('inert_nether_star').displayName('Inert Nether Star').texture(`minecraft:item/nether_star`).tooltip('Needs activating...')//.parentModel('minecraft:nether_star')
+	allthemods.create('inert_nether_star').displayName('Inert Nether Star').texture(`minecraft:item/nether_star`).tooltip(Text.translate('item.kubejs.inert_nether_star.tooltip'))//.parentModel('minecraft:nether_star')
 })
 
 StartupEvents.modifyCreativeTab('ironfurnaces:ironfurnaces_tab', allthemods => {

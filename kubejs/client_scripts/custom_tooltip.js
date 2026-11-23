@@ -2,30 +2,23 @@
 // As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
 
 const customBlueprints = [
-    { id: 'mekasuit', grants: ['MekaSuit Helmet', 'MekaSuit Bodyarmor', 'MekaSuit Pants', 'MekaSuit Boots', 'Meka Tool'] },
-    { id: 'waystone', grants: ['Waystone', 'Warp Stone'] },
-    { id: 'laser_drill', grants: ['Laser Drill', 'Ore Laser Base', 'Fluid Laser Base'] },
-    { id: 'font', grants: ['Creative Mana Pool', 'Creative Mana Tablet', 'Creative ME Mana Cell', 'Creative Activation Crystal', 'Creative Source Jar', 'Creative Spell Book', 'Creative ME Source Cell'] },
-    { id: 'crux', grants: ['Creative Compressed Iron Block', 'Creative Compressor'] },
-    { id: 'creative_container', grants: ['Creative Elemental Containers'] },
-    { id: 'mob_swab', grants: ['Mob Swab'] },
-    { id: 'quantum_computer', grants: ['Quantum Computer'] },
-    { id: 'cake', grants: ['Creative Blaze Cake'] },
-    { id: 'flight_module', grants: ['Creative Jetpack'] },
-    { id: 'energy_core', grants: ['Creative Energy Cell', 'Creative Energy Cube', 'Creative Generator', 'Creative Energy Battery', 'Energy Cell (Creative)'] },
-    { id: 'thermal', grants: ['Creative RF Coil', 'Creative Flux Efficiency', 'Creative Tank Construction', 'Creative Reclamation Chamber'] }, //death_tome
-    { id: 'blood', grants: ['Creative Blood Drop'] },
-    { id: 'outworld', grants: ['Chaotic Items'] } //ender dragon
+    { id: 'mekasuit', grants: ['mekasuit_helmet', 'mekasuit_bodyarmor', 'mekasuit_pants', 'mekasuit_boots', 'meka_tool'] },
+    { id: 'waystone', grants: ['waystone', 'warp_stone'] },
+    { id: 'laser_drill', grants: ['laser_drill', 'ore_laser_base', 'fluid_laser_base'] },
+    { id: 'font', grants: ['creative_mana_pool', 'creative_mana_tablet', 'creative_me_mana_cell', 'creative_activation_crystal', 'creative_source_jar', 'creative_spell_book', 'creative_me_source_cell'] },
+    { id: 'crux', grants: ['creative_compressed_iron_block', 'creative_compressor'] },
+    { id: 'creative_container', grants: ['creative_elemental_containers'] },
+    { id: 'mob_swab', grants: ['mob_swab'] },
+    { id: 'quantum_computer', grants: ['quantum_computer'] },
+    { id: 'cake', grants: ['creative_blaze_cake'] },
+    { id: 'flight_module', grants: ['creative_jetpack'] },
+    { id: 'energy_core', grants: ['creative_energy_cell', 'creative_energy_cube', 'creative_generator', 'creative_energy_battery', 'energy_cell_creative'] },
+    { id: 'thermal', grants: ['creative_rf_coil', 'creative_flux_efficiency', 'creative_tank_construction', 'creative_reclamation_chamber'] }, //death_tome
+    { id: 'blood', grants: ['creative_blood_drop'] },
+    { id: 'outworld', grants: ['chaotic_items'] } //ender dragon
 ];
 
-const quarks = [
-    { name: 'up', desc: '§cFundamental positive charge constituent.', desc2: '§7Standard constituent of light hadrons.' },
-    { name: 'down', desc: '§9Fundamental negative charge constituent.', desc2: '§7Forms stable baryonic matter pairs.' },
-    { name: 'top', desc: '§bMassive, extremely short-lived particle.', desc2: '§7Requires immense energy to isolate.' },
-    { name: 'bottom', desc: '§8Heavy, dense constituent.', desc2: '§7Exhibits profound gravitational interactions.' },
-    { name: 'strange', desc: '§dExotic particle with high stability decay.', desc2: '§7Anomalous quantum state detected.' },
-    { name: 'charm', desc: '§eLuminous second-generation quark.', desc2: '§7Highly energetic photonic emissions.' }
-]
+const quarks = ['up', 'down', 'top', 'bottom', 'strange', 'charm'];
 
 const bacteriaDusts = [
     'gtceu:bacteria_seed_dust',
@@ -35,72 +28,108 @@ const bacteriaDusts = [
     'gtceu:bacteria_mutated_dust',
     'gtceu:bacteria_colony_dust'
 ];
-const bacteriaInfo = {
-    Rhizobacterium: { name: "Nitrogen-Fixing Rhizobacteria", uses: ["Bio-organic nanocomposite"], breeds: [] },
-    Cyanobacterium: { name: "Cyanobacterium Aeronos", uses: ["Living Gaia Plate (MekaSuit armor)"], breeds: [] },
-    Mycorrhizal: { name: "Mycorrhizal Symbiont Strain", uses: ["Breeding only"], breeds: ["Lunar Caseous", "Arcane Mycelial", "Cupro-Symbiont", "Areo-Mycorrhizal Ostrum", "Apis Symbiont"] },
-    EColi: { name: "Escherichia coli", uses: ["Breeding only"], breeds: ["Caulobacter crescentus", "Pichia pastoris"] },
-    Saccharomyces: { name: "Saccharomyces cerevisiae", uses: ["Stage 1 rocket fuel"], breeds: ["Methanogenesis Dominus"] },
-    Clostridium: { name: "Clostridium Cellulose-Alpha", uses: ["Red Fertilizer"], breeds: ["PHA Bioplastic Strain"] },
-    Desulfovibrio: { name: "Desulfovibrio", uses: ["Spent nuclear waste processing"], breeds: ["Acidithiobacillus ferrooxidans"] },
-    Dehalococcoides: { name: "Dehalococcoides", uses: ["Recycles slime waste water into stage 5 water"], breeds: [] },
-    Rhodoferax: { name: "Rhodoferax ferrireducens", uses: ["Bacterial mana production from cake and sugar water"], breeds: [] },
-    LunarCaseous: { name: "Lunar Caseous", uses: ["Galalith Panel Casing (PCB Factory)"], breeds: [] },
-    ArcaneMycelial: { name: "Arcane Mycelial", uses: ["Eldritch Spirit (Otherworld Miner)"], breeds: [] },
-    CuproSymbiont: { name: "Cupro-Symbiont", uses: ["Dimensional seed"], breeds: [] },
-    AreoMycorrhizalOstrum: { name: "Areo-Mycorrhizal Ostrum", uses: ["Crude oil from biomass, hydrogen and bone char"], breeds: [] },
-    ApisSymbiont: { name: "Apis Symbiont", uses: ["Bio-organic pulp dust"], breeds: [] },
-    CaulobacterCrescentus: { name: "Caulobacter crescentus", uses: ["Liquid organic polymer"], breeds: [] },
-    PichiaPastoris: { name: "Pichia pastoris", uses: ["Bus and advanced bus circuits", "Neuron model certification"], breeds: [] },
-    Methanogenesis: { name: "Methanogenesis Dominus", uses: ["Stage 2 rocket fuel"], breeds: ["Deinococcus radiodurans"] },
-    PHABioplastic: { name: "PHA Bioplastic Strain", uses: ["Substrate Board"], breeds: [] },
-    AcidithiobacillusFerrooxidans: { name: "Acidithiobacillus ferrooxidans", uses: ["Twilight Layline ore generation"], breeds: [] },
-    DeinococcusRadiodurans: { name: "Deinococcus radiodurans", uses: ["Stage 3 rocket fuel"], breeds: ["Sphingomonas"] },
-    Sphingomonas: { name: "Sphingomonas", uses: ["Stage 4 rocket fuel"], breeds: [] },    
+
+const KNOWN_BACTERIA_STRAINS = {
+    rhizobacterium: true,
+    cyanobacterium: true,
+    mycorrhizal: true,
+    ecoli: true,
+    saccharomyces: true,
+    clostridium: true,
+    desulfovibrio: true,
+    dehalococcoides: true,
+    rhodoferax: true,
+    lunarcaseous: true,
+    arcanemycelial: true,
+    cuprosymbiont: true,
+    areomycorrhizalostrum: true,
+    apissymbiont: true,
+    caulobactercrescentus: true,
+    pichiapastoris: true,
+    methanogenesis: true,
+    phabioplastic: true,
+    acidithiobacillusferrooxidans: true,
+    deinococcusradiodurans: true,
+    sphingomonas: true
 };
 
+const bacteriaInfo = {
+    Rhizobacterium: { usesCount: 1, breeds: [] },
+    Cyanobacterium: { usesCount: 1, breeds: [] },
+    Mycorrhizal: { usesCount: 1, breeds: ['lunarcaseous', 'arcanemycelial', 'cuprosymbiont', 'areomycorrhizalostrum', 'apissymbiont'] },
+    EColi: { usesCount: 1, breeds: ['caulobactercrescentus', 'pichiapastoris'] },
+    Saccharomyces: { usesCount: 1, breeds: ['methanogenesis'] },
+    Clostridium: { usesCount: 1, breeds: ['phabioplastic'] },
+    Desulfovibrio: { usesCount: 1, breeds: ['acidithiobacillusferrooxidans'] },
+    Dehalococcoides: { usesCount: 1, breeds: [] },
+    Rhodoferax: { usesCount: 1, breeds: [] },
+    LunarCaseous: { usesCount: 1, breeds: [] },
+    ArcaneMycelial: { usesCount: 1, breeds: [] },
+    CuproSymbiont: { usesCount: 1, breeds: [] },
+    AreoMycorrhizalOstrum: { usesCount: 1, breeds: [] },
+    ApisSymbiont: { usesCount: 1, breeds: [] },
+    CaulobacterCrescentus: { usesCount: 1, breeds: [] },
+    PichiaPastoris: { usesCount: 2, breeds: [] },
+    Methanogenesis: { usesCount: 1, breeds: ['deinococcusradiodurans'] },
+    PHABioplastic: { usesCount: 1, breeds: [] },
+    AcidithiobacillusFerrooxidans: { usesCount: 1, breeds: [] },
+    DeinococcusRadiodurans: { usesCount: 1, breeds: ['sphingomonas'] },
+    Sphingomonas: { usesCount: 1, breeds: [] }
+};
+
+function bacteriaStrainComponent(species) {
+    let key = species.toLowerCase();
+    if (KNOWN_BACTERIA_STRAINS[key]) {
+        return Text.translate('atm9e.bacteria.strain.' + key);
+    }
+    return Text.of(species.replace(/([A-Z])/g, ' $1').trim());
+}
+
 function addBacteriaTooltip(text, species) {
+    let key = species.toLowerCase();
+    text.add(Text.translate('tooltip.atm9e.bacteria.culture_data').aqua());
+    text.add(Text.translate('tooltip.atm9e.bacteria.strain', bacteriaStrainComponent(species)).white());
     let info = bacteriaInfo[species];
-    let readableName = info ? info.name : species.replace(/([A-Z])/g, ' $1').trim();
-    text.add(Text.of('Bacterial Culture Data').aqua());
-    text.add(Text.of(`Strain: ${readableName}`).white());
     if (!info) return;
-    text.add(Text.of('Uses:').gold());
-    if (info.uses.length === 0) {
-        text.add(Text.of(' - None yet').gray());
+    text.add(Text.translate('tooltip.atm9e.bacteria.uses').gold());
+    if (info.usesCount === 0) {
+        text.add(Text.translate('tooltip.atm9e.bacteria.none_yet').gray());
     } else {
-        info.uses.forEach(u => text.add(Text.of(` - ${u}`).gray()));
+        for (let i = 1; i <= info.usesCount; i++) {
+            text.add(Text.translate('tooltip.atm9e.bacteria.list_entry', Text.translate('atm9e.bacteria.use.' + key + '.' + i)).gray());
+        }
     }
     if (info.breeds.length > 0) {
-        text.add(Text.of('Breeds into:').gold());
-        info.breeds.forEach(b => text.add(Text.of(` - ${b}`).gray()));
+        text.add(Text.translate('tooltip.atm9e.bacteria.breeds_into').gold());
+        info.breeds.forEach(b => {
+            text.add(Text.translate('tooltip.atm9e.bacteria.list_entry', Text.translate('atm9e.bacteria.strain.' + b)).gray());
+        });
     }
 }
 
 ItemEvents.tooltip(event => {
 
-
     customBlueprints.forEach(bp => {
-        let lines = [Text.of('Grants the following research:').lightPurple()];
-        bp.grants.forEach(g => lines.push(Text.of(` - ${g}`).white()));
+        let lines = [Text.translate('tooltip.atm9e.blueprint.grants').lightPurple()];
+        bp.grants.forEach(g => {
+            lines.push(Text.translate('tooltip.atm9e.blueprint.grant_entry', Text.translate('tooltip.atm9e.blueprint.grant.' + g)).white());
+        });
         event.add(`gtceu:blueprint_${bp.id}`, lines);
     });
 
-
-
     quarks.forEach(quark => {
-        event.add(`gtceu:${quark.name}_quark`, [
-            '§8Subatomic Fundamental Particle',
-            '§8[Tier: Baryonic Stabilization]',
-            quark.desc,
-            quark.desc2
-        ])
-    })
+        event.add(`gtceu:${quark}_quark`, [
+            Text.translate('tooltip.atm9e.quark.header'),
+            Text.translate('tooltip.atm9e.quark.tier'),
+            Text.translate(`tooltip.atm9e.quark.${quark}.desc1`),
+            Text.translate(`tooltip.atm9e.quark.${quark}.desc2`)
+        ]);
+    });
 
     event.addAdvanced(bacteriaDusts, (item, advanced, text) => {
         let nbt = item.nbt;
-        if (nbt && nbt.bacteriaSpecies) {
-            addBacteriaTooltip(text, String(nbt.bacteriaSpecies));
+        if (nbt != null && nbt.contains('bacteriaSpecies')) {
+            addBacteriaTooltip(text, String(nbt.getString('bacteriaSpecies')));
         }
     });
 
@@ -121,46 +150,54 @@ ItemEvents.tooltip(event => {
     var title = function (id) {
         return id.split('_').map(function (w) { return w.charAt(0).toUpperCase() + w.slice(1); }).join(' ');
     };
-    var dataName = { T: 'Thermal', P: 'Propulsion', N: 'Navigation' };
+    var dataName = { T: 'T', P: 'P', N: 'N' };
+    var resolveDestName = function (destId, dest, nbt) {
+        if (dest) return Text.translate('atm9e.space.destination.' + destId);
+        if (nbt.contains('name')) return Text.of(nbt.getString('name'));
+        return Text.of(title(destId));
+    };
 
     event.addAdvanced('gtceu:destination_card', function (item, advanced, text) {
         var nbt = item.nbt;
         if (nbt == null || !nbt.contains('destination')) {
-            text.add(Text.of('Blank destination').darkGray());
+            text.add(Text.translate('tooltip.atm9e.space.blank_destination').darkGray());
             return;
         }
-        var dest = findDest(nbt.getString('destination'));
-        var name = nbt.contains('name') ? nbt.getString('name') : (dest ? dest.name : title(nbt.getString('destination')));
-        text.add(Text.of('Destination: ').gray().append(Text.of(name).aqua()));
+        var destId = String(nbt.getString('destination'));
+        var dest = findDest(destId);
+        var nameText = resolveDestName(destId, dest, nbt);
+        text.add(Text.translate('tooltip.atm9e.space.destination', nameText.aqua()).gray());
         var tier = nbt.contains('tier') ? nbt.getInt('tier') : (dest ? dest.mk : 0);
         var dist = nbt.contains('distance') ? nbt.getDouble('distance') : (dest ? dest.d : 0);
-        if (tier > 0) text.add(Text.of('Requires a Mk' + tier + ' ship').darkGray());
-        if (dist > 0) text.add(Text.of('Distance: ' + dist).darkGray());
+        if (tier > 0) text.add(Text.translate('tooltip.atm9e.space.requires_ship', String(tier)).darkGray());
+        if (dist > 0) text.add(Text.translate('tooltip.atm9e.space.distance', String(dist)).darkGray());
     });
 
     event.addAdvanced('gtceu:cargo_pod', function (item, advanced, text) {
         var nbt = item.nbt;
         if (nbt == null || !nbt.contains('destination')) {
-            text.add(Text.of('Empty pod').darkGray());
+            text.add(Text.translate('tooltip.atm9e.space.empty_pod').darkGray());
             return;
         }
-        var dest = findDest(nbt.getString('destination'));
-        var name = nbt.contains('name') ? nbt.getString('name') : (dest ? dest.name : title(nbt.getString('destination')));
-        text.add(Text.of('Returned from: ').gray().append(Text.of(name).aqua()));
+        var destId = String(nbt.getString('destination'));
+        var dest = findDest(destId);
+        var nameText = resolveDestName(destId, dest, nbt);
+        text.add(Text.translate('tooltip.atm9e.space.returned_from', nameText.aqua()).gray());
         if (!dest) return;
-        text.add(Text.of('Contains:').gray());
+        text.add(Text.translate('tooltip.atm9e.space.contains').gray());
         dest.haul.forEach(function (h) {
-            var line = h[2] === 'fluid' ? h[1] + ' B ' + title(h[0]) : h[1] + 'x ' + title(h[0]);
-            text.add(Text.of(' - ' + line).white());
+            var haulComp = Text.translate('atm9e.space.haul.' + h[0].replace(':', '_'));
+            var lineComp = h[2] === 'fluid'
+                ? Text.translate('tooltip.atm9e.space.haul_fluid', String(h[1]), haulComp)
+                : Text.translate('tooltip.atm9e.space.haul_item', String(h[1]), haulComp);
+            text.add(lineComp.white());
         });
         if (dest.mk === 6) {
-            text.add(Text.of(' - Cosmic Research Fragment').lightPurple());
+            text.add(Text.translate('tooltip.atm9e.space.cosmic_research_fragment').lightPurple());
         } else if (dataName[dest.data]) {
-            text.add(Text.of(' - ' + dataName[dest.data] + ' Research Fragment (chance)').lightPurple());
+            text.add(Text.translate('tooltip.atm9e.space.research_fragment_chance', Text.translate('tooltip.atm9e.space.data.' + dest.data)).lightPurple());
         }
     });
-
-    
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

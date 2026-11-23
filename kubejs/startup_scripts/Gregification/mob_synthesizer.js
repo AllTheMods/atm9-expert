@@ -14,8 +14,8 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
         .recipeType('mob_synthesis')        
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .tooltips(
-            Component.literal('§cFor peaceful-mode players: synthesizes HNN data models.'),
-            Component.literal('§7A Requires blood and blood orbs.')
+            Component.translatable('block.gtceu.mob_synthesizer.tooltip.1'),
+            Component.translatable('block.gtceu.mob_synthesizer.tooltip.2')
         )
         .recipeModifiers([GTRecipeModifiers.OC_PERFECT])
         .pattern(definition => FactoryBlockPattern.start()
