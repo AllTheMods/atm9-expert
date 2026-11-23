@@ -7462,5 +7462,8 @@
 
 	"item.kubejs.micro_universe_catalyst.tooltip": "Bin güneşin ateşinde dövüldü.",
 	"kubejs.apiary_ii.tooltip.bee_requirements": "Çalışması için çok yüksek, herhangi bir ortamda ve gece-gündüz çalışabilen arılar gerekir",
-	"kubejs.apiary_i.tooltip.bee_eater": "Ara sıra arıları yer"
+	"kubejs.apiary_i.tooltip.bee_eater": "Ara sıra arıları yer",
+    "item.kubejs.entropy_manifold.tooltip": "§7Sonsuz enerji ile dipsiz kederin kararsız birleşimi.",
+    "item.kubejs.inert_nether_star.tooltip": "Etkinleştirilmesi gerekiyor...",
+    "item.kubejs.quantum_sentient_circuit.tooltip": "GregTech ile büyünün birleşiminde zirve."
 }

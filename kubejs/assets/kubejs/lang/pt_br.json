@@ -7462,5 +7462,8 @@
 
     "item.kubejs.micro_universe_catalyst.tooltip": "Forjado no fogo de mil sóis.",
     "kubejs.apiary_ii.tooltip.bee_requirements": "Requer abelhas com Produtividade Muito Alta, Tolerância ao Clima Qualquer e Comportamento Metaturno para funcionar",
-    "kubejs.apiary_i.tooltip.bee_eater": "Ocasionalmente come as abelhas"
+    "kubejs.apiary_i.tooltip.bee_eater": "Ocasionalmente come as abelhas",
+    "item.kubejs.entropy_manifold.tooltip": "§7Uma união volátil de energia infinita e tristeza abissal.",
+    "item.kubejs.inert_nether_star.tooltip": "Precisa ser ativada...",
+    "item.kubejs.quantum_sentient_circuit.tooltip": "O auge da integração entre GregTech e magia."
 }
