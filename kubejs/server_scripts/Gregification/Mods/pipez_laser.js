@@ -3,9 +3,9 @@
 
 //@ts-check
 ServerEvents.recipes(allthemods => {
+    const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
 
     const addAssembler = (itemsIn, fluidIn, itemsOut, eu, duration, program) => {
-    const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
         const outputID = itemsOut.replace(/[^a-z0-9]/gi, '_');
 
         let recipe = allthemods.recipes.gtceu.assembler(`gregification:assembler/${outputID}`)
