@@ -1934,7 +1934,7 @@
 				{
 					icon: "bloodmagic:vengefulcrystal"
 					id: "57FFBDC5B30F1827"
-					item: "bloodmagic:corrosivecrystal"
+					item: "bloodmagic:vengefulcrystal"
 					type: "item"
 				}
 				{
