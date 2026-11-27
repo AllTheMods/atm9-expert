@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "honeystone_bricks",
+  "name": {
+    "translate": "collapsible_groups.group.honeystone_bricks",
+    "fallback": "Honeystone Bricks"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:honeystone_brick_wall"
+      },
+      {
+        "type": "item",
+        "id": "forestry:honeystone_brick_slab"
+      },
+      {
+        "type": "item",
+        "id": "forestry:honeystone_brick_stairs"
+      },
+      {
+        "type": "item",
+        "id": "forestry:honeystone_bricks"
+      }
+    ]
+  }
+}

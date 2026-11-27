@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "id": "calcinated_powder",
+  "name": {
+    "translate": "collapsible_groups.group.calcinated_powder",
+    "fallback": "Calcinated Powder"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedunobtainium_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedvibranium_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedallthemodium_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedplatinum_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedcrimsoniron_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedbismuth_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedquartz_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedosmium_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedzinc_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedsilver_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedlead_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinateduranium_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatednickel_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedtin_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedcopper_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedaluminium_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatednetherite_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedredstone_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedlapis_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatediron_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedgold_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedemerald_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinateddiamond_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:calcinatedcoal_powder"
+      }
+    ]
+  }
+}

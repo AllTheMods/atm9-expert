@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "woven_backpacks",
+  "name": {
+    "translate": "collapsible_groups.group.woven_backpacks",
+    "fallback": "Woven Backpacks"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:miner_bag_woven"
+      },
+      {
+        "type": "item",
+        "id": "forestry:digger_bag_woven"
+      },
+      {
+        "type": "item",
+        "id": "forestry:forester_bag_woven"
+      },
+      {
+        "type": "item",
+        "id": "forestry:hunter_bag_woven"
+      },
+      {
+        "type": "item",
+        "id": "forestry:adventurer_bag_woven"
+      },
+      {
+        "type": "item",
+        "id": "forestry:builder_bag_woven"
+      },
+      {
+        "type": "item",
+        "id": "forestry:brewer_bag_woven"
+      }
+    ]
+  }
+}

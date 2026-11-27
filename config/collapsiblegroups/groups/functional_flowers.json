@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "id": "functional_flowers",
+  "name": {
+    "translate": "collapsible_groups.group.functional_flowers",
+    "fallback": "Functional Flowers"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "botania:floating_labellia"
+      },
+      {
+        "type": "item",
+        "id": "botania:labellia"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_orechid_ignem"
+      },
+      {
+        "type": "item",
+        "id": "botania:orechid_ignem"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_solegnolia_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_solegnolia"
+      },
+      {
+        "type": "item",
+        "id": "botania:solegnolia_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:solegnolia"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_bubbell_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_bubbell"
+      },
+      {
+        "type": "item",
+        "id": "botania:bubbell_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:bubbell"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_marimorphosis_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_marimorphosis"
+      },
+      {
+        "type": "item",
+        "id": "botania:marimorphosis_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:marimorphosis"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_medumone"
+      },
+      {
+        "type": "item",
+        "id": "botania:medumone"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_spectranthemum"
+      },
+      {
+        "type": "item",
+        "id": "botania:spectranthemum"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_vinculotus"
+      },
+      {
+        "type": "item",
+        "id": "botania:vinculotus"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_daffomill"
+      },
+      {
+        "type": "item",
+        "id": "botania:daffomill"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_loonium"
+      },
+      {
+        "type": "item",
+        "id": "botania:loonium"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_clayconia_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_clayconia"
+      },
+      {
+        "type": "item",
+        "id": "botania:clayconia_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:clayconia"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_pollidisiac"
+      },
+      {
+        "type": "item",
+        "id": "botania:pollidisiac"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_hyacidus"
+      },
+      {
+        "type": "item",
+        "id": "botania:hyacidus"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_rannuncarpus_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_rannuncarpus"
+      },
+      {
+        "type": "item",
+        "id": "botania:rannuncarpus_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:rannuncarpus"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_jiyuulia_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_jiyuulia"
+      },
+      {
+        "type": "item",
+        "id": "botania:jiyuulia_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:jiyuulia"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_tangleberrie_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_tangleberrie"
+      },
+      {
+        "type": "item",
+        "id": "botania:tangleberrie_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:tangleberrie"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_hopperhock_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_hopperhock"
+      },
+      {
+        "type": "item",
+        "id": "botania:hopperhock_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:hopperhock"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_agricarnation_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_agricarnation"
+      },
+      {
+        "type": "item",
+        "id": "botania:agricarnation_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:agricarnation"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_exoflame"
+      },
+      {
+        "type": "item",
+        "id": "botania:exoflame"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_fallen_kanade"
+      },
+      {
+        "type": "item",
+        "id": "botania:fallen_kanade"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_orechid"
+      },
+      {
+        "type": "item",
+        "id": "botania:orechid"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_jaded_amaranthus"
+      },
+      {
+        "type": "item",
+        "id": "botania:jaded_amaranthus"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_tigerseye"
+      },
+      {
+        "type": "item",
+        "id": "botania:tigerseye"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_heisei_dream"
+      },
+      {
+        "type": "item",
+        "id": "botania:heisei_dream"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_dreadthorn"
+      },
+      {
+        "type": "item",
+        "id": "botania:dreadthorn"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_bellethorn_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_bellethorn"
+      },
+      {
+        "type": "item",
+        "id": "botania:bellethorn_chibi"
+      },
+      {
+        "type": "item",
+        "id": "botania:bellethorn"
+      }
+    ]
+  }
+}

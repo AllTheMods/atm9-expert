@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "waystones",
+  "name": {
+    "translate": "collapsible_groups.group.waystones",
+    "fallback": "Waystones"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "waystones:end_stone_waystone"
+      },
+      {
+        "type": "item",
+        "id": "waystones:blackstone_waystone"
+      },
+      {
+        "type": "item",
+        "id": "waystones:deepslate_waystone"
+      },
+      {
+        "type": "item",
+        "id": "waystones:sandy_waystone"
+      },
+      {
+        "type": "item",
+        "id": "waystones:mossy_waystone"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "butterfly",
+  "name": {
+    "translate": "collapsible_groups.group.butterfly",
+    "fallback": "Butterfly"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "forestry:butterfly_ge"
+  }
+}

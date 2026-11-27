@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "tough_collar",
+  "name": {
+    "translate": "collapsible_groups.group.tough_collar",
+    "fallback": "Tough Collar"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:tough_binding"
+  }
+}

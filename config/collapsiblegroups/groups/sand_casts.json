@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "id": "sand_casts",
+  "name": {
+    "translate": "collapsible_groups.group.sand_casts",
+    "fallback": "Sand Casts"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "tconstruct:ingot_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:maille_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:nugget_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:gem_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:rod_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:repair_kit_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:plate_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:gear_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:coin_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:wire_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:pick_head_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:small_axe_head_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:small_blade_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:adze_head_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:hammer_head_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:broad_axe_head_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:broad_blade_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:large_plate_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:tool_handle_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:tool_binding_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:tough_handle_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:tough_binding_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:bow_limb_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:bow_grip_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:helmet_plating_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:boots_plating_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:leggings_plating_sand_cast"
+      },
+      {
+        "type": "item",
+        "id": "tconstruct:chestplate_plating_sand_cast"
+      }
+    ]
+  }
+}

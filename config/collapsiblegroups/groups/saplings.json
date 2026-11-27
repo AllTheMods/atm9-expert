@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "saplings",
+  "name": {
+    "translate": "collapsible_groups.group.saplings",
+    "fallback": "Saplings"
+  },
+  "enabled": true,
+  "filter": {
+    "all": [
+      {
+        "type": "item",
+        "namespace": "croptopia"
+      },
+      {
+        "type": "item",
+        "tag": "forge:saplings"
+      }
+    ]
+  }
+}

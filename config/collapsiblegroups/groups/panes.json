@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "panes",
+  "name": {
+    "translate": "collapsible_groups.group.panes",
+    "fallback": "Panes"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_yellow_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_white_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_red_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_purple_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_pink_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_orange_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_magenta_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_lime_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_light_blue_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_green_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_gray_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_cyan_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_brown_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_blue_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_black_pane"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:borderless_glass_light_gray_pane"
+      }
+    ]
+  }
+}

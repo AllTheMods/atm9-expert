@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "scribes_table",
+  "name": {
+    "translate": "collapsible_groups.group.scribes_table",
+    "fallback": "Scribes Table"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "gtceu:hv_scribes_table"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:ev_scribes_table"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:iv_scribes_table"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:luv_scribes_table"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:zpm_scribes_table"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:uv_scribes_table"
+      }
+    ]
+  }
+}

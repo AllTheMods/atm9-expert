@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "crop_leaves",
+  "name": {
+    "translate": "collapsible_groups.group.crop_leaves",
+    "fallback": "Crop Leaves"
+  },
+  "enabled": true,
+  "filter": {
+    "all": [
+      {
+        "type": "item",
+        "namespace": "croptopia"
+      },
+      {
+        "item_path_contains": "crop"
+      }
+    ]
+  }
+}

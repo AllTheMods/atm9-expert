@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "alchemical_bags",
+  "name": {
+    "translate": "collapsible_groups.group.alchemical_bags",
+    "fallback": "Alchemical Bags"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "projecte:lime_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:black_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:red_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:green_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:brown_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:blue_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:purple_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:cyan_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:light_gray_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:gray_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:pink_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:yellow_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:light_blue_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:magenta_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:orange_alchemical_bag"
+      },
+      {
+        "type": "item",
+        "id": "projecte:white_alchemical_bag"
+      }
+    ]
+  }
+}

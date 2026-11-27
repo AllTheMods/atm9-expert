@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "forestry_gene_sample",
+  "name": {
+    "translate": "collapsible_groups.group.forestry_gene_sample",
+    "fallback": "Forestry Gene Sample"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "gendustry:gene_sample"
+  }
+}

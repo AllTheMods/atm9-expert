@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "mattock",
+  "name": {
+    "translate": "collapsible_groups.group.mattock",
+    "fallback": "Mattock"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:mattock"
+  }
+}

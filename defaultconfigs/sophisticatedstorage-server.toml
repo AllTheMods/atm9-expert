@@ -4,6 +4,19 @@
 	#Threshold of number of item entities dropped from chest / barrel above which break is canceled (unless shift key is pressed) and message is displayed explaining to player many drops and packing tape use
 	#Range: 0 ~ 1000
 	tooManyItemEntityDrops = 200
+	#Limit of maximum number of upgrades of type per storage in format of "StorageType|UpgradeRegistryName[or UpgradeGroup]|MaxNumber"
+	maxUpgradesPerStorage = ["shulker_box|stack_upgrades|2", "shulker_box|jukebox_upgrades|1", "shulker_box|furnace_upgrades|1", "barrel|stack_upgrades|2", "barrel|jukebox_upgrades|1", "barrel|furnace_upgrades|1", "limited_barrel|furnace_upgrades|1", "limited_barrel|jukebox_upgrades|1", "chest|stack_upgrades|2", "chest|jukebox_upgrades|1", "chest|furnace_upgrades|1"]
+	#Determines if limited barrel counts can be dyed to change their color
+	limitedBarrelCountDyeingEnabled = true
+	#Defines the maximum range of the controller at which it connects storage blocks to multiblock
+	#Range: 4 ~ 64
+	controllerRange = 15
+	#Mod IDs matched against the registry namespace of the resolved planks used for generic wood storage variants. Only affects automatically discovered generic woods.
+	#Disabled woods still work as crafting ingredients, but produce the recipe's default storage variant. Existing storages keep their wood appearance.
+	genericWoodStorageModIds = ["gtceu", "gregification"]
+	#If true, only woods from listed mods get generic storage variants. If false, woods from listed mods are blocked and all other compatible woods are enabled.
+	#An empty allow list disables all generic wood variants; an empty block list enables all compatible generic woods.
+	genericWoodStorageModIdsIsAllowList = true
 
 	#Wood Barrel Settings
 	[server.WoodBarrel]
@@ -333,6 +346,10 @@
 		#Number of filter slots displayed in a row
 		#Range: 1 ~ 6
 		slotsInRow = 3
+		#List of additional crafting shapes compacting and compression upgrades will try when checking if items can be compacted. Shapes are expected as rows of 1s and 0s separated by / where 1 means the tested item is present and 0 means the slot is empty. Example: "111/101/111" checks a hollow 3x3 shape with 8 items.
+		additionalCompactingShapes = ["111/101/111"]
+		#List of item-specific additional crafting shapes compacting and compression upgrades will try when checking if items can be compacted. Entries are expected in format of "mod:item=shape", for example "some_mod:tiny_coal=111/101/111".
+		additionalCompactingShapeOverrides = []
 
 	#Advanced Compacting Upgrade Settings
 	[server.advancedCompactingUpgrade]
@@ -447,8 +464,8 @@
 		#Number of filter slots displayed in a row
 		#Range: 1 ~ 6
 		slotsInRow = 3
-		#Determines whether void upgrade allows voiding anything or it only has overflow option
-		voidAnythingEnabled = true
+		#Determines whether void upgrade allows voiding always or it only has overflow options
+		voidAlwaysEnabled = true
 
 	#Advanced Void Upgrade Settings
 	[server.advancedVoidUpgrade]
@@ -458,8 +475,8 @@
 		#Number of filter slots displayed in a row
 		#Range: 1 ~ 6
 		slotsInRow = 4
-		#Determines whether void upgrade allows voiding anything or it only has overflow option
-		voidAnythingEnabled = true
+		#Determines whether void upgrade allows voiding always or it only has overflow options
+		voidAlwaysEnabled = true
 
 	#Smelting Upgrade Settings
 	[server.smeltingUpgrade]
@@ -626,4 +643,142 @@
 		disallowedItems = []
 		#Determines if container items (those that override canFitInsideContainerItems to false) are able to fit in shulker boxes
 		containerItemsDisallowed = false
+
+	#Copper Barrel Settings
+	[server.CopperBarrel]
+		#Number of inventory slots in the storage
+		#Range: 1 ~ 180
+		inventorySlotCount = 45
+		#Number of upgrade slots in the storage
+		#Range: 0 ~ 10
+		upgradeSlotCount = 1
+
+	#Limited Copper Barrel I Settings
+	[server.LimitedCopperBarrelI]
+		#Multiplier that's used to calculate base slot limit
+		#Range: 1 ~ 8192
+		baseSlotLimitMultiplier = 53
+		#Number of upgrade slots in the storage
+		#Range: 0 ~ 10
+		upgradeSlotCount = 1
+
+	#Limited Copper Barrel II Settings
+	[server.LimitedCopperBarrelII]
+		#Multiplier that's used to calculate base slot limit
+		#Range: 1 ~ 8192
+		baseSlotLimitMultiplier = 27
+		#Number of upgrade slots in the storage
+		#Range: 0 ~ 10
+		upgradeSlotCount = 1
+
+	#Limited Copper Barrel III Settings
+	[server.LimitedCopperBarrelIII]
+		#Multiplier that's used to calculate base slot limit
+		#Range: 1 ~ 8192
+		baseSlotLimitMultiplier = 17
+		#Number of upgrade slots in the storage
+		#Range: 0 ~ 10
+		upgradeSlotCount = 1
+
+	#Limited Copper Barrel IV Settings
+	[server.LimitedCopperBarrelIV]
+		#Multiplier that's used to calculate base slot limit
+		#Range: 1 ~ 8192
+		baseSlotLimitMultiplier = 13
+		#Number of upgrade slots in the storage
+		#Range: 0 ~ 10
+		upgradeSlotCount = 1
+
+	#Copper Chest Settings
+	[server.CopperChest]
+		#Number of inventory slots in the storage
+		#Range: 1 ~ 180
+		inventorySlotCount = 45
+		#Number of upgrade slots in the storage
+		#Range: 0 ~ 10
+		upgradeSlotCount = 1
+
+	#Copper Shulker Box Settings
+	[server.CopperShulkerBox]
+		#Number of inventory slots in the storage
+		#Range: 1 ~ 180
+		inventorySlotCount = 45
+		#Number of upgrade slots in the storage
+		#Range: 0 ~ 10
+		upgradeSlotCount = 1
+
+	#Advanced Jukebox Upgrade Settings
+	[server.advancedJukeboxUpgrade]
+		#Number of slots for discs in jukebox upgrade
+		#Range: 1 ~ 16
+		numberOfSlots = 12
+		#Number of lots displayed in a row
+		#Range: 1 ~ 6
+		slotsInRow = 4
+
+	#Alchemy Upgrade Settings
+	[server.alchemyUpgrade]
+		#Number of Alchemy Upgrade's filter slots
+		#Range: 1 ~ 20
+		filterSlots = 4
+
+	#Advanced Alchemy Upgrade Settings
+	[server.advancedAlchemyUpgrade]
+		#Number of Advanced Alchemy Upgrade's filter slots
+		#Range: 1 ~ 20
+		filterSlots = 8
+
+	#Wood Tank Settings
+	[server.WoodTank]
+		#Fluid capacity in mB per tank block; tank height and stack upgrades multiply this capacity
+		#Range: > 1
+		capacity = 8000
+		#Number of upgrade slots in the tank
+		#Range: 0 ~ 10
+		upgradeSlotCount = 1
+
+	#Copper Tank Settings
+	[server.CopperTank]
+		#Fluid capacity in mB per tank block; tank height and stack upgrades multiply this capacity
+		#Range: > 1
+		capacity = 12000
+		#Number of upgrade slots in the tank
+		#Range: 0 ~ 10
+		upgradeSlotCount = 1
+
+	#Iron Tank Settings
+	[server.IronTank]
+		#Fluid capacity in mB per tank block; tank height and stack upgrades multiply this capacity
+		#Range: > 1
+		capacity = 16000
+		#Number of upgrade slots in the tank
+		#Range: 0 ~ 10
+		upgradeSlotCount = 2
+
+	#Gold Tank Settings
+	[server.GoldTank]
+		#Fluid capacity in mB per tank block; tank height and stack upgrades multiply this capacity
+		#Range: > 1
+		capacity = 32000
+		#Number of upgrade slots in the tank
+		#Range: 0 ~ 10
+		upgradeSlotCount = 3
+
+	#Diamond Tank Settings
+	[server.DiamondTank]
+		#Fluid capacity in mB per tank block; tank height and stack upgrades multiply this capacity
+		#Range: > 1
+		capacity = 64000
+		#Number of upgrade slots in the tank
+		#Range: 0 ~ 10
+		upgradeSlotCount = 4
+
+	#Netherite Tank Settings
+	[server.NetheriteTank]
+		#Fluid capacity in mB per tank block; tank height and stack upgrades multiply this capacity
+		#Range: > 1
+		capacity = 128000
+		#Number of upgrade slots in the tank
+		#Range: 0 ~ 10
+		upgradeSlotCount = 5
 

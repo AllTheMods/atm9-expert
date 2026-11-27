@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "sanguine_refinery",
+  "name": {
+    "translate": "collapsible_groups.group.sanguine_refinery",
+    "fallback": "Sanguine Refinery"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "gtceu:uv_sanguine_refinery"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:zpm_sanguine_refinery"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:luv_sanguine_refinery"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:iv_sanguine_refinery"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:ev_sanguine_refinery"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:hv_sanguine_refinery"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:mv_sanguine_refinery"
+      }
+    ]
+  }
+}

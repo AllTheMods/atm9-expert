@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "plate_shield",
+  "name": {
+    "translate": "collapsible_groups.group.plate_shield",
+    "fallback": "Plate Shield"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:plate_shield"
+  }
+}

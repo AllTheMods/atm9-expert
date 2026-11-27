@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "boots_2",
+  "name": {
+    "translate": "collapsible_groups.group.boots_2",
+    "fallback": "Boots"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:plate_boots"
+  }
+}

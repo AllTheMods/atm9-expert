@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "vest",
+  "name": {
+    "translate": "collapsible_groups.group.vest",
+    "fallback": "Vest"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:travelers_chestplate"
+  }
+}

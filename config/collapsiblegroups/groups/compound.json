@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "id": "compound",
+  "name": {
+    "translate": "collapsible_groups.group.compound",
+    "fallback": "Compound / Parts"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:sword_blade\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "id": "silentgear:cord"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:fletching"
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:katana_blade\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:machete_blade\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:spear_tip\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:trident_prongs\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:knife_blade\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:dagger_blade\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:pickaxe_head\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:shovel_head\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:axe_head\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:paxel_head\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:hammer_head\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:excavator_head\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:saw_blade\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:hoe_head\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "id": "silentgear:binding"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:grip"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:coating"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:tip"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:rod"
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:shield_plate\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:slingshot_limbs\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:crossbow_limbs\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:bow_limbs\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:shears_blades\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:sickle_blade\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:mattock_head\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "id": "silentgear:helmet_plates"
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:chestplate_plates\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:legging_plates\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:boot_plates\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:elytra_wings\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"silentgear:arrow_heads\",tag:{Damage:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "id": "silentgear:ring_shank"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:bracelet_band"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:adornment"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:lining"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:fishing_reel_and_hook"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:prospector_hammer_head"
+      }
+    ]
+  }
+}

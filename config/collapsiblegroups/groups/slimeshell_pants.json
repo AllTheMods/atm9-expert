@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "slimeshell_pants",
+  "name": {
+    "translate": "collapsible_groups.group.slimeshell_pants",
+    "fallback": "Slimeshell pants"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:slime_leggings"
+  }
+}

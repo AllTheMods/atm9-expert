@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "fixture_light",
+  "name": {
+    "translate": "collapsible_groups.group.fixture_light",
+    "fallback": "Fixture Light"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "projectred_illumination:white_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:orange_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:magenta_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_blue_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:yellow_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:lime_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:pink_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:gray_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_gray_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:cyan_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:purple_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:blue_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:brown_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:green_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:red_fixture_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:black_fixture_light"
+      }
+    ]
+  }
+}

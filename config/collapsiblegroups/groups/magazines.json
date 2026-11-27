@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "magazines",
+  "name": {
+    "translate": "collapsible_groups.group.magazines",
+    "fallback": "Magazines"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "reliquary:magazines/neutral_magazine"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:magazines/storm_magazine"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:magazines/sand_magazine"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:magazines/seeker_magazine"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:magazines/buster_magazine"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:magazines/concussive_magazine"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:magazines/ender_magazine"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:magazines/blaze_magazine"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:magazines/exorcism_magazine"
+      }
+    ]
+  }
+}

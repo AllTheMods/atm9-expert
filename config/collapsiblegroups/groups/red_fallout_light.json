@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "red_fallout_light",
+  "name": {
+    "translate": "collapsible_groups.group.red_fallout_light",
+    "fallback": "Red Fallout Light"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "projectred_illumination:black_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:red_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:green_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:brown_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:blue_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:purple_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:cyan_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_gray_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:gray_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:pink_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:lime_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:yellow_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_blue_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:magenta_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:orange_inverted_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:white_inverted_fallout_light"
+      }
+    ]
+  }
+}

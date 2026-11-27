@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "broken_spawners",
+  "name": {
+    "translate": "collapsible_groups.group.broken_spawners",
+    "fallback": "Broken Spawners"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "enderio:broken_spawner"
+  }
+}

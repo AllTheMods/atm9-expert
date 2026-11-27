@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "buntings",
+  "name": {
+    "translate": "collapsible_groups.group.buntings",
+    "fallback": "Buntings"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "supplementaries:bunting"
+  }
+}

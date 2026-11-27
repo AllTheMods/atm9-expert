@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "id": "nuggets",
+  "name": {
+    "translate": "collapsible_groups.group.nuggets",
+    "fallback": "Nuggets"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "alltheores:steel_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:invar_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:electrum_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:bronze_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:copper_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:enderium_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:lumium_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:signalum_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:constantan_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:brass_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:iridium_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:zinc_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:uranium_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:tin_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:silver_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:platinum_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:osmium_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nickel_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:lead_nugget"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:aluminum_nugget"
+      }
+    ]
+  }
+}

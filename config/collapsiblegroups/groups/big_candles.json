@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "id": "big_candles",
+  "name": {
+    "translate": "collapsible_groups.group.big_candles",
+    "fallback": "Big Candles"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:big_candle_rainbow"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_refractory"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_pink"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_magenta"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_purple"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_blue"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_light_blue"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_cyan"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_green"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_lime"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_yellow"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_orange"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_red"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_brown"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_black"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_gray"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_light_gray"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_white"
+      },
+      {
+        "type": "item",
+        "id": "forestry:big_candle_normal"
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "farm_hatch",
+  "name": {
+    "translate": "collapsible_groups.group.farm_hatch",
+    "fallback": "Farm Hatch"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:farm_hatch_stone_brick"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_hatch_mossy_stone_brick"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_hatch_cracked_stone_brick"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_hatch_brick"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_hatch_cut_sandstone"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_hatch_sandstone_chiseled"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_hatch_brick_nether"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_hatch_brick_chiseled"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_hatch_quartz"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_hatch_quartz_chiseled"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_hatch_quartz_lines"
+      }
+    ]
+  }
+}

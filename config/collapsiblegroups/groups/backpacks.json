@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "backpacks",
+  "name": {
+    "translate": "collapsible_groups.group.backpacks",
+    "fallback": "Backpacks"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "projectred_exploration:white_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:orange_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:magenta_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:light_blue_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:yellow_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:lime_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:pink_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:gray_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:light_gray_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:cyan_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:purple_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:black_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:red_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:green_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:brown_backpack"
+      },
+      {
+        "type": "item",
+        "id": "projectred_exploration:blue_backpack"
+      }
+    ]
+  }
+}

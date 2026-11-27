@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "excavator",
+  "name": {
+    "translate": "collapsible_groups.group.excavator",
+    "fallback": "Excavator"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:excavator"
+  }
+}

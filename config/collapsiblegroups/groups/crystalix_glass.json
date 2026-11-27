@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "crystalix_glass",
+  "name": {
+    "translate": "collapsible_groups.group.crystalix_glass",
+    "fallback": "Crystalix Glass"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "crystalix:white_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:orange_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:magenta_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:light_blue_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:yellow_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:lime_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:pink_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:gray_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:light_gray_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:cyan_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:purple_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:blue_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:brown_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:green_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:red_crystalix_glass"
+      },
+      {
+        "type": "item",
+        "id": "crystalix:black_crystalix_glass"
+      }
+    ]
+  }
+}

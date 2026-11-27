@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "fishing_rod",
+  "name": {
+    "translate": "collapsible_groups.group.fishing_rod",
+    "fallback": "Fishing Rod"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:fishing_rod"
+  }
+}

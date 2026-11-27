@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "cleaver",
+  "name": {
+    "translate": "collapsible_groups.group.cleaver",
+    "fallback": "Cleaver"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:cleaver"
+  }
+}

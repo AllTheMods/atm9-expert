@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "gem_polisher",
+  "name": {
+    "translate": "collapsible_groups.group.gem_polisher",
+    "fallback": "Gem Polisher"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "gtceu:luv_gem_polisher"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:zpm_gem_polisher"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:uv_gem_polisher"
+      }
+    ]
+  }
+}

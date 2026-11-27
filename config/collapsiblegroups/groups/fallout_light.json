@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "fallout_light",
+  "name": {
+    "translate": "collapsible_groups.group.fallout_light",
+    "fallback": "Fallout Light"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "projectred_illumination:black_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:red_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:green_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:brown_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:blue_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:purple_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:cyan_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_gray_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:gray_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:pink_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:lime_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:yellow_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_blue_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:magenta_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:orange_fallout_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:white_fallout_light"
+      }
+    ]
+  }
+}

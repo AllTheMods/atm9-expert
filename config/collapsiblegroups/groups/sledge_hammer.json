@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "sledge_hammer",
+  "name": {
+    "translate": "collapsible_groups.group.sledge_hammer",
+    "fallback": "Sledge Hammer"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:sledge_hammer"
+  }
+}

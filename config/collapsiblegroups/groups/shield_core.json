@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "shield_core",
+  "name": {
+    "translate": "collapsible_groups.group.shield_core",
+    "fallback": "Shield Core"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:shield_core"
+  }
+}

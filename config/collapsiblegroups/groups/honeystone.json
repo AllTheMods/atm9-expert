@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "honeystone",
+  "name": {
+    "translate": "collapsible_groups.group.honeystone",
+    "fallback": "Honeystone"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:chiseled_honeystone"
+      },
+      {
+        "type": "item",
+        "id": "forestry:honeystone_wall"
+      },
+      {
+        "type": "item",
+        "id": "forestry:honeystone_slab"
+      },
+      {
+        "type": "item",
+        "id": "forestry:honeystone_stairs"
+      },
+      {
+        "type": "item",
+        "id": "forestry:honeystone"
+      }
+    ]
+  }
+}

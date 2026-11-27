@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "venus_sandstone",
+  "name": {
+    "translate": "collapsible_groups.group.venus_sandstone",
+    "fallback": "Venus Sandstone"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "ad_astra:venus_sand"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:cracked_venus_sandstone_bricks"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:venus_sandstone_bricks"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:venus_sandstone"
+      }
+    ]
+  }
+}

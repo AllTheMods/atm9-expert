@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "pickaxes",
+  "name": {
+    "translate": "collapsible_groups.group.pickaxes",
+    "fallback": "Pickaxes"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:pickaxe"
+  }
+}

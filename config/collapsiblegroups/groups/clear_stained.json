@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "clear_stained",
+  "name": {
+    "translate": "collapsible_groups.group.clear_stained",
+    "fallback": "Clear Stained"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_black"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_blue"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_brown"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_cyan"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_gray"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_green"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_light_blue"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_light_gray"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_lime"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_magenta"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_orange"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_pink"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_purple"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_red"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_white"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:clear_glass_yellow"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "trapped_carpets",
+  "name": {
+    "translate": "collapsible_groups.group.trapped_carpets",
+    "fallback": "Trapped Carpets"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "utilitarian:black_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:red_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:green_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:brown_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:blue_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:purple_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:cyan_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:light_gray_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:gray_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:pink_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:lime_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:yellow_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:light_blue_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:magenta_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:orange_trapped_soliciting_carpet"
+      },
+      {
+        "type": "item",
+        "id": "utilitarian:white_trapped_soliciting_carpet"
+      }
+    ]
+  }
+}

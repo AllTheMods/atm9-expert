@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "refractory_waxstone",
+  "name": {
+    "translate": "collapsible_groups.group.refractory_waxstone",
+    "fallback": "Refractory Waxstone"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:refractory_waxstone_wall"
+      },
+      {
+        "type": "item",
+        "id": "forestry:refractory_waxstone_slab"
+      },
+      {
+        "type": "item",
+        "id": "forestry:refractory_waxstone_stairs"
+      },
+      {
+        "type": "item",
+        "id": "forestry:refractory_waxstone"
+      },
+      {
+        "type": "item",
+        "id": "forestry:chiseled_refractory_waxstone"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "boot_plating",
+  "name": {
+    "translate": "collapsible_groups.group.boot_plating",
+    "fallback": "Boot Plating"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:boots_plating"
+  }
+}

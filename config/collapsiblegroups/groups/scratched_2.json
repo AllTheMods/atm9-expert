@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "scratched_2",
+  "name": {
+    "translate": "collapsible_groups.group.scratched_2",
+    "fallback": "Scratched"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_yellow"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_white"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_red"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_purple"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_pink"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_orange"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_magenta"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_lime"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_light_gray"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_light_blue"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_green"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_gray"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_cyan"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_brown"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_blue"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:scratched_glass_black"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "minotaur_axe",
+  "name": {
+    "translate": "collapsible_groups.group.minotaur_axe",
+    "fallback": "Minotaur Axe"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:minotaur_axe"
+  }
+}

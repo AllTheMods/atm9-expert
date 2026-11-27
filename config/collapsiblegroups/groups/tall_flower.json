@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "tall_flower",
+  "name": {
+    "translate": "collapsible_groups.group.tall_flower",
+    "fallback": "Tall Flower"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "botania:white_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:light_gray_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:gray_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:black_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:brown_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:red_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:orange_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:yellow_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:lime_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:green_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:cyan_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:light_blue_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:blue_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:purple_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:magenta_double_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:pink_double_flower"
+      }
+    ]
+  }
+}

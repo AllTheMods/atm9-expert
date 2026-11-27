@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "handle",
+  "name": {
+    "translate": "collapsible_groups.group.handle",
+    "fallback": "Handle"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:tool_handle"
+  }
+}

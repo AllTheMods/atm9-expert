@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "jewels",
+  "name": {
+    "translate": "collapsible_groups.group.jewels",
+    "fallback": "Jewels"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "elementalcraft:jewel"
+  }
+}

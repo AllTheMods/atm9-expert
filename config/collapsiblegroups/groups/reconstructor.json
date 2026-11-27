@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "reconstructor",
+  "name": {
+    "translate": "collapsible_groups.group.reconstructor",
+    "fallback": "Reconstructor"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "gtceu:uv_reconstructor"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:zpm_reconstructor"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:luv_reconstructor"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:iv_reconstructor"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:ev_reconstructor"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:hv_reconstructor"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:mv_reconstructor"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "broad_blade",
+  "name": {
+    "translate": "collapsible_groups.group.broad_blade",
+    "fallback": "Broad Blade"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:broad_blade"
+  }
+}

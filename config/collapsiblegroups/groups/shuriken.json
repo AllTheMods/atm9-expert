@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "shuriken",
+  "name": {
+    "translate": "collapsible_groups.group.shuriken",
+    "fallback": "Shuriken"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:shuriken"
+  }
+}

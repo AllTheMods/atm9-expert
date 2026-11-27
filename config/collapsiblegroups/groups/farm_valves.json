@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "farm_valves",
+  "name": {
+    "translate": "collapsible_groups.group.farm_valves",
+    "fallback": "Farm Valves"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:farm_valve_quartz_lines"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_valve_quartz_chiseled"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_valve_quartz"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_valve_brick_chiseled"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_valve_brick_nether"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_valve_sandstone_chiseled"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_valve_cut_sandstone"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_valve_brick"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_valve_cracked_stone_brick"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_valve_mossy_stone_brick"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_valve_stone_brick"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "bits",
+  "name": {
+    "translate": "collapsible_groups.group.bits",
+    "fallback": "Bits"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "mobees:apatite_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:netherite_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:cobalt_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:gold_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:iron_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:certus_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:yellorium_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:coal_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:copper_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:tin_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:lead_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:nickel_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:zinc_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:osmium_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:aluminum_bit"
+      },
+      {
+        "type": "item",
+        "id": "mobees:silver_bit"
+      }
+    ]
+  }
+}

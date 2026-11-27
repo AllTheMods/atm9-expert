@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "laces",
+  "name": {
+    "translate": "collapsible_groups.group.laces",
+    "fallback": "Laces"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:laces"
+  }
+}

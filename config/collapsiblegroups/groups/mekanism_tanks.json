@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "mekanism_tanks",
+  "name": {
+    "translate": "collapsible_groups.group.mekanism_tanks",
+    "fallback": "Mekanism Tanks"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "mekanism:creative_fluid_tank"
+  }
+}

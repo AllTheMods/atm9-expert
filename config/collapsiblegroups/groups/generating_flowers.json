@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "id": "generating_flowers",
+  "name": {
+    "translate": "collapsible_groups.group.generating_flowers",
+    "fallback": "Generating Flowers"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "botania:floating_shulk_me_not"
+      },
+      {
+        "type": "item",
+        "id": "botania:shulk_me_not"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_rafflowsia"
+      },
+      {
+        "type": "item",
+        "id": "botania:rafflowsia"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_dandelifeon"
+      },
+      {
+        "type": "item",
+        "id": "botania:dandelifeon"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_spectrolus"
+      },
+      {
+        "type": "item",
+        "id": "botania:spectrolus"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_narslimmus"
+      },
+      {
+        "type": "item",
+        "id": "botania:narslimmus"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_gourmaryllis"
+      },
+      {
+        "type": "item",
+        "id": "botania:gourmaryllis"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_kekimurus"
+      },
+      {
+        "type": "item",
+        "id": "botania:kekimurus"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_entropinnyum"
+      },
+      {
+        "type": "item",
+        "id": "botania:entropinnyum"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_munchdew"
+      },
+      {
+        "type": "item",
+        "id": "botania:munchdew"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_rosa_arcana"
+      },
+      {
+        "type": "item",
+        "id": "botania:rosa_arcana"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_thermalily"
+      },
+      {
+        "type": "item",
+        "id": "botania:thermalily"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_endoflame"
+      },
+      {
+        "type": "item",
+        "id": "botania:hydroangeas"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_hydroangeas"
+      },
+      {
+        "type": "item",
+        "id": "botania:endoflame"
+      }
+    ]
+  }
+}

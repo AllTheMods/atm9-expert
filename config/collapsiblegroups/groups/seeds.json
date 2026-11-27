@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "seeds",
+  "name": {
+    "translate": "collapsible_groups.group.seeds",
+    "fallback": "Seeds"
+  },
+  "enabled": true,
+  "filter": {
+    "all": [
+      {
+        "type": "item",
+        "namespace": "croptopia"
+      },
+      {
+        "type": "item",
+        "tag": "forge:seeds"
+      }
+    ]
+  }
+}

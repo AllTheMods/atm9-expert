@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "inverted_illumar_lamps",
+  "name": {
+    "translate": "collapsible_groups.group.inverted_illumar_lamps",
+    "fallback": "Inverted Illumar Lamps"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "projectred_illumination:black_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:red_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:green_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:brown_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:blue_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:white_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:orange_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:magenta_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_blue_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:yellow_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:lime_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:pink_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:gray_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_gray_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:cyan_inverted_illumar_lamp"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:purple_inverted_illumar_lamp"
+      }
+    ]
+  }
+}

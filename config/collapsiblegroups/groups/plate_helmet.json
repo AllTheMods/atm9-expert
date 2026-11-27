@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "plate_helmet",
+  "name": {
+    "translate": "collapsible_groups.group.plate_helmet",
+    "fallback": "Plate Helmet"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:plate_helmet"
+  }
+}

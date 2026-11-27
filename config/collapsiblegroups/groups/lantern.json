@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "lantern",
+  "name": {
+    "translate": "collapsible_groups.group.lantern",
+    "fallback": "Lantern"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "projectred_illumination:black_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:red_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:green_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:brown_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:blue_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:purple_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:cyan_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_gray_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:gray_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:pink_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:lime_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:yellow_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_blue_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:magenta_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:orange_lantern"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:white_lantern"
+      }
+    ]
+  }
+}

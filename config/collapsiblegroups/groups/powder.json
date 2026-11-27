@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "id": "powder",
+  "name": {
+    "translate": "collapsible_groups.group.powder",
+    "fallback": "Powder"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "potionsmaster:netherite_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:unobtainium_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:vibranium_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:allthemodium_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:platinum_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:crimsoniron_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:bismuth_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:quartz_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:osmium_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:zinc_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:silver_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:lead_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:uranium_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:nickel_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:tin_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:copper_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:aluminium_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:redstone_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:lapis_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:iron_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:gold_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:emerald_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:diamond_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:coal_powder"
+      },
+      {
+        "type": "item",
+        "id": "potionsmaster:charcoal_powder"
+      }
+    ]
+  }
+}

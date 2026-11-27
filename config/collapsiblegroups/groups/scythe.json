@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "scythe",
+  "name": {
+    "translate": "collapsible_groups.group.scythe",
+    "fallback": "Scythe"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:scythe"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "mushrooms",
+  "name": {
+    "translate": "collapsible_groups.group.mushrooms",
+    "fallback": "Mushrooms"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "botania:white_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:light_gray_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:gray_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:black_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:brown_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:red_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:orange_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:yellow_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:lime_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:green_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:cyan_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:light_blue_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:blue_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:purple_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:magenta_mushroom"
+      },
+      {
+        "type": "item",
+        "id": "botania:pink_mushroom"
+      }
+    ]
+  }
+}

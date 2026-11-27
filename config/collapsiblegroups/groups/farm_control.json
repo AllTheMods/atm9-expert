@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "farm_control",
+  "name": {
+    "translate": "collapsible_groups.group.farm_control",
+    "fallback": "Farm Control"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:farm_control_quartz_lines"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_control_quartz_chiseled"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_control_quartz"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_control_brick_chiseled"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_control_brick_nether"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_control_sandstone_chiseled"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_control_cut_sandstone"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_control_brick"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_control_cracked_stone_brick"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_control_mossy_stone_brick"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_control_stone_brick"
+      }
+    ]
+  }
+}

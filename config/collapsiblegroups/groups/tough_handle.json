@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "tough_handle",
+  "name": {
+    "translate": "collapsible_groups.group.tough_handle",
+    "fallback": "Tough Handle"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:tough_handle"
+  }
+}

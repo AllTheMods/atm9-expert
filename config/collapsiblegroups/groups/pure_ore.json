@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "pure_ore",
+  "name": {
+    "translate": "collapsible_groups.group.pure_ore",
+    "fallback": "Pure Ore"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "elementalcraft:pure_ore"
+  }
+}

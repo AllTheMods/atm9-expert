@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "id": "templates",
+  "name": {
+    "translate": "collapsible_groups.group.templates",
+    "fallback": "Templates"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "silentgear:rod_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:tip_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:coating_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:grip_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:binding_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:lining_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:cord_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:fletching_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:sword_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:katana_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:machete_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:spear_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:trident_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:knife_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:dagger_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:pickaxe_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:shovel_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:axe_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:paxel_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:hammer_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:excavator_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:saw_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:hoe_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:mattock_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:prospector_hammer_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:sickle_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:bracelet_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:ring_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:arrow_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:elytra_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:boots_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:leggings_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:chestplate_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:helmet_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:shield_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:slingshot_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:crossbow_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:bow_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:fishing_rod_template"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:shears_template"
+      }
+    ]
+  }
+}

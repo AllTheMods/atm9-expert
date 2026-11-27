@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "polished_waxstone",
+  "name": {
+    "translate": "collapsible_groups.group.polished_waxstone",
+    "fallback": "Polished Waxstone"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:polished_waxstone_wall"
+      },
+      {
+        "type": "item",
+        "id": "forestry:polished_waxstone_slab"
+      },
+      {
+        "type": "item",
+        "id": "forestry:polished_waxstone_stairs"
+      },
+      {
+        "type": "item",
+        "id": "forestry:polished_waxstone"
+      }
+    ]
+  }
+}

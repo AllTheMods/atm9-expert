@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "id": "comb_blocks",
+  "name": {
+    "translate": "collapsible_groups.group.comb_blocks",
+    "fallback": "Comb Blocks"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_rocky"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_mineral"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_coal"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_copper"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_tin"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_zinc"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_lead"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_nickel"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_silver"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_osmium"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_aluminum"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_certus"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_yellorium"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_iron"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_paper"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_decayed"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_arcane"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_soulful"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_fungal"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_scrapped"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_glowing"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_chromatic"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_harmonic"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_emerald"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_diamond"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_amethyst"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_redstone"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_apatite"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_lapis"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_gold"
+      },
+      {
+        "type": "item",
+        "id": "mobees:block_bee_comb_cobalt"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_vintage"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_sculken"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_sponge"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_kaolin"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_mellow"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_mossy"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_wheaten"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_powdery"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_honey"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_cocoa"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_simmering"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_stringy"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_frozen"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_dripping"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_silky"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_parched"
+      },
+      {
+        "type": "item",
+        "id": "forestry:block_bee_comb_mysterious"
+      }
+    ]
+  }
+}

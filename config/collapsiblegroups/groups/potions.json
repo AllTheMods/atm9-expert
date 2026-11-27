@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "potions",
+  "name": {
+    "translate": "collapsible_groups.group.potions",
+    "fallback": "Potions"
+  },
+  "enabled": true,
+  "filter": {
+    "all": [
+      {
+        "type": "item",
+        "namespace": "tconstruct"
+      },
+      {
+        "item_path_contains": "potion"
+      }
+    ]
+  }
+}

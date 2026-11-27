@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "id": "rituals",
+  "name": {
+    "translate": "collapsible_groups.group.rituals",
+    "fallback": "Rituals"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_demonic_wife"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_demonic_husband"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/resurrect_familiar"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/custom_ritual"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_dimensional_matrix"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_dimensional_mineshaft"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_infused_lenses"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_infused_pickaxe"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_miner_afrit_deeps"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_miner_djinni_ores"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_miner_foliot_unspecialized"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_miner_marid_master"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_satchel"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_soul_gem"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_familiar_ring"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_stabilizer_tier1"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_stabilizer_tier2"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_stabilizer_tier3"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_stabilizer_tier4"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_stable_wormhole"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_storage_controller_base"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/craft_storage_remote"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_otherworld_bird"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_parrot"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_greedy"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_bat"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_deer"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_djinni_night_time"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_djinni_manage_machine"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_djinni_day_time"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_djinni_clear_weather"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_afrit_thunder_weather"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_afrit_rain_weather"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/possess_hoglin"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/possess_warden"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/possess_elder_guardian"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/possess_shulker"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/possess_weak_shulker"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/possess_phantom"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_beaver"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_mummy"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_fairy"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_beholder"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_chimera"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_headless"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_guardian"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_blacksmith"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_dragon"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_devil"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_foliot_otherstone_trader"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_foliot_sapling_trader"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_foliot_transport_items"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_foliot_cleaner"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_wild_afrit"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_wild_hunt"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_wild_otherworld_bird"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_wild_parrot"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_foliot_crusher"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_djinni_crusher"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_afrit_crusher"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_marid_crusher"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/possess_endermite"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/possess_enderman"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/summon_foliot_lumberjack"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/familiar_cthulhu"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/possess_ghast"
+      },
+      {
+        "type": "item",
+        "id": "occultism:ritual_dummy/possess_skeleton"
+      }
+    ]
+  }
+}

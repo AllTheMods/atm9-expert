@@ -1,0 +1,621 @@
+{
+  "schema_version": 1,
+  "id": "tinkers_effects",
+  "name": {
+    "translate": "collapsible_groups.group.tinkers_effects",
+    "fallback": "Tinkers Effects"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:ambidextrous"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:antiaquatic"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:aqua_affinity"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:autosmelt"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:ballista"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:bane_of_sssss"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:banner"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:barebow"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:blast_protection"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:blasting"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:blindshot"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:blockade"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:blocking"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:blunted"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:bonking"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:bounce"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:bouncy"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:boundless"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:brushing"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:bucketing"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:bulk_quiver"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:bursting"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:channeling"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:collecting"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:cooling"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:crafting_table"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:crystalshot"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:gilded"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:frost_walker"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:freezing"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:forecast"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:flinging"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:flamewake"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:firestarter"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:fireprimer"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:fire_protection"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:fins"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:fiery"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:feather_fall"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:farsighted"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:experienced"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:expanded"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:exchanging"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:emerald"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:embossed"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:embellishment"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:dyed"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:dual_wielding"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:drill_attack"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:dragonborn"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:draconic"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:double_jump"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:diamond"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:depth_strider"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:glowing"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:grapple"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:harmonious"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:haste"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:hydraulic"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:impaling"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:item_frame"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:killager"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:knockback"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:knockback_resistance"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:leaping"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:lightspeed"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:long_fall"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:luck"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:lure"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:magic_protection"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:magnetic"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:melee_protection"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:melting"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:minimap"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:multishot"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:nearsighted"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:necrotic"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:netherite"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:offhanded"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:overforced"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:overslime"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:silky"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:shulking"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:shiny"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:shield_strap"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:sharpness"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:severing"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:scope"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:ricochet"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:revitalizing"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:returning"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:respiration"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:reinforced"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:reflecting"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:redirected"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:recapitated"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:rebalanced"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:reach"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:quick_charge"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:punch"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:protection"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:projectile_protection"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:power"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:pockets"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:pierce"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:pathing"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:parrying"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:padded"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:sinistral"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:sleeves"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:slimeball"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:sliver"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:slurping"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:smelting"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:smite"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:snowdrift"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:soul_belt"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:soulbound"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:soulspeed"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:speedy"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:spilling"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:spitting"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:splashing"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:springing"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:springy"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:step_up"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:strength"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:stripping"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:sweeping_edge"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:swift_sneak"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:swiftstrike"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:tank"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:thorns"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:throwing"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:tilling"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.tools.SlotType$SlotCount",
+        "id": "tconstruct:souls"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.tools.SlotType$SlotCount",
+        "id": "tconstruct:abilities"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.tools.SlotType$SlotCount",
+        "id": "tconstruct:defense"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.tools.SlotType$SlotCount",
+        "id": "tconstruct:upgrades"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:zoom"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:writable"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:worldbound"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:workbench"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:wings"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:wetting"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:warping"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:unbreakable"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:turtle_shell"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:trueshot"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:trim"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:trick_quiver"
+      },
+      {
+        "type": "slimeknights.tconstruct.library.modifiers.ModifierEntry",
+        "id": "tconstruct:tool_belt"
+      }
+    ]
+  }
+}

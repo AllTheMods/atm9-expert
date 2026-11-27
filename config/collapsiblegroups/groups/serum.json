@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "serum",
+  "name": {
+    "translate": "collapsible_groups.group.serum",
+    "fallback": "Serum"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "forestry:serum_ge"
+  }
+}

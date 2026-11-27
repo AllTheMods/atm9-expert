@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "id": "gases",
+  "name": {
+    "translate": "collapsible_groups.group.gases",
+    "fallback": "Gases"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanismgenerators:tritium"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanismgenerators:fusion_fuel"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanismgenerators:deuterium"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:water_vapor"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:uranium_oxide"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:uranium_hexafluoride"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:superheated_sodium"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:sulfuric_acid"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:sulfur_trioxide"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:sulfur_dioxide"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:steam"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:spent_nuclear_waste"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:sodium"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:polonium"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:plutonium"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:oxygen"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:osmium"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:nuclear_waste"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:lithium"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:hydrogen_chloride"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:hydrogen"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:hydrofluoric_acid"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:fissile_fuel"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:ethene"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:chlorine"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:brine"
+      },
+      {
+        "type": "mekanism.api.chemical.gas.GasStack",
+        "id": "mekanism:antimatter"
+      }
+    ]
+  }
+}

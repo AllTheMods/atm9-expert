@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "incenses",
+  "name": {
+    "translate": "collapsible_groups.group.incenses",
+    "fallback": "Incenses"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "botania:incense_stick"
+  }
+}
