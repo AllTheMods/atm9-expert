@@ -29,6 +29,7 @@ ServerEvents.recipes(allthemods => {
         .itemInputs('#forge:dusts/camphene')
         .inputFluids('#forge:acetic_acid 1000', '#forge:sulfuric_acid 50')
         .outputFluids('gtceu:isobornyl_acetate 1000')
+        .circuit(5)
         .duration(duration).EUt(EUComplex);
 
     allthemods.recipes.gtceu.chemical_reactor('gregification:isoborneol_hydrolysis')
