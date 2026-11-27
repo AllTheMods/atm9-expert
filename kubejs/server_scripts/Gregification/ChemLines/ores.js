@@ -367,6 +367,7 @@ ServerEvents.recipes(allthemods => {
         .itemInputs(['#forge:dusts/yttrium_oxide', '3x #forge:dusts/calcium'])
         .inputFluids('#forge:water 3000')
         .itemOutputs(['2x gtceu:yttrium_dust', '3x gtceu:calcium_hydroxide_dust'])
+        .circuit(3)
         .duration(Duration)
         .EUt(EUMars);
 
@@ -374,6 +375,7 @@ ServerEvents.recipes(allthemods => {
         .itemInputs(['#forge:dusts/niobium_pentoxide', '#forge:dusts/yttrium_oxide', '8x #forge:dusts/calcium'])
         .inputFluids('#forge:water 8000')
         .itemOutputs(['2x gtceu:niobium_dust', '2x gtceu:yttrium_dust', '8x gtceu:calcium_hydroxide_dust'])
+        .circuit(8)
         .duration(Duration)
         .EUt(EUMercuryVenus);
 

@@ -291,7 +291,7 @@ ServerEvents.recipes(allthemods => {
         { name: 'industrialforegoing:mob_detector', components: ['sensor', '6x plastic', '2x small_gear'], other: ['2x minecraft:observer'], tier: 'ev' },
 
         // --- Advanced -> IV ---
-        { name: 'industrialforegoing:mob_crusher', components: ['4x gear', '2x pump', '2x conveyor', 'sensor', 'generator'], other:['2x gtceu:diamond_grinding_head', '2x #forge:gears/pink_slime'], tier: 'iv' },
+        { name: 'industrialforegoing:mob_crusher', components: ['4x gear', '2x pump', '2x conveyor', 'sensor'], other:['2x gtceu:diamond_grinding_head', '2x #forge:gears/pink_slime'], tier: 'iv' },
         { name: 'industrialforegoing:mob_duplicator', components: ['frame', '4x generator', '2x pump'], other: ['4x #forge:gears/terrasteel', '4x #forge:plates/iesnium'], tier: 'iv' },
         { name: 'industrialforegoing:material_stonework_factory', components: ['frame', '5x conveyor', 'robot', '4x piston'], other: ['4x #forge:gears/pink_slime', '4x #forge:rods/terrasteel'], tier: 'iv' },
         { name: 'industrialforegoing:potion_brewer', components: ['2x pump', '2x motor', '2x gear', '4x plastic'], other:['gtceu:stainless_steel_drum'], tier: 'iv' },

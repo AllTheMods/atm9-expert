@@ -258,7 +258,7 @@ ServerEvents.recipes(allthemods => {
         .itemInputs('60x #forge:dusts/ion_adsorption_clay', '15x #forge:dusts/ammonium_chloride')
         .inputFluids('#forge:sulfuric_acid 15000')
         .itemOutputs('60x gtceu:rare_earth_clay_mud_dust')
-        .addData('ebf_temp', COIL_TEMPS.DRACONIUM)
+        .addData('ebf_temp', COIL_TEMPS.TRITANIUM)
         .duration(400)
         .EUt(ZPM);
 
@@ -266,7 +266,7 @@ ServerEvents.recipes(allthemods => {
         .itemInputs('60x #forge:dusts/rare_earth_clay_mud', '15x #forge:dusts/saltpeter')
         .inputFluids('minecraft:water 30000')
         .itemOutputs('60x gtceu:diluted_rare_earth_clay_mud_dust', '15x gtceu:aluminium_dust')
-        .addData('ebf_temp', COIL_TEMPS.DRACONIUM)
+        .addData('ebf_temp', COIL_TEMPS.TRITANIUM)
         .duration(400)
         .EUt(ZPM);
 

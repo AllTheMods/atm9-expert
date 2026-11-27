@@ -122,7 +122,7 @@ ServerEvents.tags('item', allthemods => {
 	allthemods.add('forge:dusts/ferrognetic', 'forbidden_arcanus:ferrognetic_mixture');
 
 	allthemods.add('forge:ingots/alloy_infused', 'mekanism:alloy_infused');
-	allthemods.add('forge:ingots/alloy_reinforced', 'mekanism:alloy_renforced');
+	allthemods.add('forge:ingots/alloy_reinforced', 'mekanism:alloy_reinforced');
 	allthemods.add('forge:ingots/alloy_atomic', 'mekanism:alloy_atomic');
 
 	allthemods.remove('forge:ingots/compressed_iron', 'minecraft:iron_ingot')

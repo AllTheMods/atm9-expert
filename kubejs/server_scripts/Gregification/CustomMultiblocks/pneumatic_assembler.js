@@ -37,14 +37,14 @@ ServerEvents.recipes(allthemods => {
     addPA(
         '8x #forge:ingots/compressed_iron',
         '8x pneumaticcraft:advanced_pressure_tube',
-        3        
+        2        
     );
 
     //aphorism tile
     addPA(
         '#forge:storage_blocks/quartz',
         '4x pneumaticcraft:aphorism_tile',
-        3
+        2
     );
 
     //unassembled pcb
@@ -58,7 +58,7 @@ ServerEvents.recipes(allthemods => {
     addPA(
         'pneumaticcraft:solar_wafer',
         'pneumaticcraft:solar_cell',        
-        2
+        1
     );
 
     //netherite drill bit

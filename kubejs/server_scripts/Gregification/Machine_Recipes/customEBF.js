@@ -184,7 +184,7 @@ ServerEvents.recipes(allthemods => {
         ['gtceu:germanium_tetrachloride 1000'],
         ['gtceu:germanium_boule', '6x gtceu:cerium_chloride_dust'],
         null,
-        12600,
+        COIL_TEMPS.DRACONIUM,
         9000,
         ZPM
     )
@@ -205,7 +205,7 @@ ServerEvents.recipes(allthemods => {
         null,
         'gtceu:atomic_boule',
         null,
-        12600,
+        COIL_TEMPS.DRACONIUM,
         9000,
         ZPM
     );

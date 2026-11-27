@@ -231,11 +231,11 @@ ServerEvents.recipes(allthemods => {
 
     //turbine blade
     addPC(
-        ['#forge:ingots/gold', '2x #forge:dusts/redstone'],
+        ['#forge:plates/gold', '2x #forge:plates/redstone', '#forge:rods/steel'],
         'pneumaticcraft:turbine_blade',
         null,
         null,
-        2
+        1
     );
 
     //diamond
@@ -249,11 +249,11 @@ ServerEvents.recipes(allthemods => {
 
     //solar wafer
     addPC(
-        ['pneumaticcraft:upgrade_matrix', 'minecraft:amethyst_shard'],
+        ['pneumaticcraft:upgrade_matrix', '#gtceu:circuits/lv'],
         'pneumaticcraft:solar_wafer',
         null,
         null,
-        2,
+        1,
     );
 });
 

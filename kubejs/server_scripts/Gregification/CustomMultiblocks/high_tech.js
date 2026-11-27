@@ -110,6 +110,7 @@ ServerEvents.recipes(allthemods => {
         );
     });
 
+
     allthemods.recipes.gtceu.crystal_growth_chamber('gregification:chemical_reactor/yag_dope')
         .itemInputs('3x #forge:dusts/yttrium_oxide', '5x #forge:dusts/aluminium_oxide')        
         .itemOutputs('gtceu:yttrium_aluminium_garnet_boule')
@@ -376,9 +377,8 @@ ServerEvents.recipes(allthemods => {
 
     createModelBlueprints('prototype_assembler', 'warden', 'mekasuit', ['mekanism:mekasuit_helmet'],
         [
-            'allthemodium:unobtainium_helmet',
-            'mekanism:ultimate_control_circuit',
-            '#gtceu:circuits/luv',
+            'allthemodium:unobtainium_helmet',            
+            '2x #gtceu:circuits/zpm',
             '5x mekanism:hdpe_sheet',
             '5x mekanism:pellet_polonium',
             'mekanism:ultimate_induction_cell',
@@ -394,9 +394,8 @@ ServerEvents.recipes(allthemods => {
 
     createModelBlueprints('prototype_assembler', 'warden', 'mekasuit', ['mekanism:mekasuit_bodyarmor'],
         [
-            'allthemodium:unobtainium_chestplate',
-            'mekanism:ultimate_control_circuit',
-            '#gtceu:circuits/luv',
+            'allthemodium:unobtainium_chestplate',            
+            '2x #gtceu:circuits/zpm',
             '8x mekanism:hdpe_sheet',
             '8x mekanism:pellet_polonium',
             'mekanism:ultimate_induction_cell',
@@ -412,9 +411,8 @@ ServerEvents.recipes(allthemods => {
 
     createModelBlueprints('prototype_assembler', 'warden', 'mekasuit', ['mekanism:mekasuit_pants'],
         [
-            'allthemodium:unobtainium_leggings',
-            'mekanism:ultimate_control_circuit',
-            '#gtceu:circuits/luv',
+            'allthemodium:unobtainium_leggings',            
+            '2x #gtceu:circuits/zpm',
             '7x mekanism:hdpe_sheet',
             '7x mekanism:pellet_polonium',
             'mekanism:ultimate_induction_cell',
@@ -431,8 +429,7 @@ ServerEvents.recipes(allthemods => {
     createModelBlueprints('prototype_assembler', 'warden', 'mekasuit', ['mekanism:mekasuit_boots'],
         [
             'allthemodium:unobtainium_boots',
-            'mekanism:ultimate_control_circuit',
-            '#gtceu:circuits/luv',
+            '2x #gtceu:circuits/zpm',
             '4x mekanism:hdpe_sheet',
             '4x mekanism:pellet_polonium',
             'mekanism:ultimate_induction_cell',

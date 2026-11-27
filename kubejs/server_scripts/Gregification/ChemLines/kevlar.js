@@ -153,6 +153,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.chemical_reactor('gregification:kevlar/pentaerythritol')
         .inputFluids('#forge:formaldehyde 4000')
         .itemOutputs('gtceu:pentaerythritol_dust')
+        .circuit(4)
         .duration(300)
         .EUt(MV); // MV
 

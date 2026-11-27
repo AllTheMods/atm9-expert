@@ -246,8 +246,8 @@ ServerEvents.recipes(allthemods => {
             '#forge:dusts/hsse'
         ],
         '6x gtceu:delta_plutonium_alloy_dust',
-        IV,
-        500
+        HV,
+        1600
     );
 
     addMixer(
@@ -362,8 +362,9 @@ ServerEvents.recipes(allthemods => {
         [
             '#forge:dusts/obsidian',
             '#forge:dusts/diamond',
+            '2x #forge:dusts/hsse'
         ],
-        '2x mekanism:dust_refined_obsidian',
+        '4x mekanism:dust_refined_obsidian',
         LuV,
         500
     )

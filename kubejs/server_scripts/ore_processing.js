@@ -253,12 +253,8 @@ thermdust.forEach(thermal =>{
         result: {item: `thermal:${thermal}_dust`},
         secondaries: [{chance: 0.1, output: {item: `thermal:${thermal}_dust`}}]
     }).id(`allthemods:immersive/crushing/atm8_thermal_${thermal}_dust`)
-    allthemods.custom({
-        type: 'mekanism:crushing',
-        input: {ingredient:{item: `thermal:${thermal}`}},
-        output:{item: `thermal:${thermal}_dust`}
-    }).id(`allthemods:mekanism/crushing/atm8_thermal_${thermal}_dust`)
-    })
+    
+    });
     // Thermal Extra Soulsand dust
     allthemods.custom({
         type: 'create:crushing',
@@ -276,11 +272,7 @@ thermdust.forEach(thermal =>{
         result: {item: `thermal_extra:soul_sand_dust`},
         secondaries: [{chance: 0.1, output: {item: `thermal_extra:soul_sand_dust`}}]
     }).id(`allthemods:immersive/crushing/atm8_te_soul_sand_dust`)
-    allthemods.custom({
-        type: 'mekanism:crushing',
-        input: {ingredient:{item: 'minecraft:soul_sand'}},
-        output:{item: `thermal_extra:soul_sand_dust`}
-    }).id(`allthemods:mekanism/crushing/atm8_te_soul_sand_dust`)
+    
 
 
 })

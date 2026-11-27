@@ -38,22 +38,7 @@ ServerEvents.recipes(allthemods => {
 	}).id('allthemods:shaped/entropy_manifold');
 	
 
-	
-	const rotary = (gas, fluid, amount) => {
-        // Gas -> Liquid
-        allthemods.custom({
-            "type": "mekanism:rotary",
-            "fluidInput": { "amount": amount, "fluid": fluid },
-            "gasOutput": { "amount": amount, "gas": gas }
-        }).id(`gregification:rotary/decondensing/${gas.split(':')[1]}`);
 
-        // Liquid -> Gas
-        allthemods.custom({
-            "type": "mekanism:rotary",
-            "gasInput": { "amount": amount, "gas": gas },
-            "fluidOutput": { "amount": amount, "fluid": fluid }
-        }).id(`gregification:rotary/condensing/${gas.split(':')[1]}`);
-    };
 	
 	const oxidize = (item, gas, amount) => {        
         allthemods.custom({
@@ -160,13 +145,6 @@ ServerEvents.recipes(allthemods => {
 		let cleanInput = isTag ? input.substring(1) : input;
 		let count = itemOutA || 1;
 
-		// --- 1. Mekanism Recipe ---
-		let mekIngredient = isTag ? { "tag": cleanInput } : { "item": cleanInput };
-		allthemods.custom({
-			"type": "mekanism:crushing",
-			"input": { "ingredient": mekIngredient },
-			"output": { "item": itemOut, "count": count }
-		}).id(`gregification:crush/${id}`);
 
 		// --- 2. Thermal Pulverizer Recipe ---
 		let thermalIngredient = isTag ? { "tag": cleanInput } : { "item": cleanInput };
@@ -264,26 +242,7 @@ ServerEvents.recipes(allthemods => {
         "exoflame": false
     }).id('gregification:thermo/plastic');
 	
-	rotary('kubejs:saturated_tau_gas', 'gtceu:saturated_tau', 1);
-	rotary('kubejs:compressed_air_gas', 'gtceu:compressed_air', 1);
-	rotary('mekanism:polonium', 'gtceu:polonium', 1)
-	rotary('mekanism:plutonium', 'gtceu:plutonium', 1)
-	rotary('mekanism:nuclear_waste', 'gtceu:nuclear_waste', 10)
-	rotary('mekanism:hydrofluoric_acid', 'gtceu:hydrofluoric_acid', 10)
-	rotary('mekanism:spent_nuclear_waste', 'gtceu:spent_nuclear_waste', 10)
-	//enrich('kubejs:dirty_dust_demonite', 'bloodmagic:sand_hellforged', 'dirty_demonite_to_sand');
 	
-	//igniter('iesnium',					'occultism:raw_iesnium', 				'kubejs:iesnium_chunk',			2,	'kubejs:iesnium_chunk', 		1, 0.15, 	15000 );
-	//igniter('demonite', 				'bloodmagic:rawdemonite', 				'kubejs:demonite_chunk',		2,	'kubejs:demonite_chunk', 		1, 0.15, 	20000);
-	//igniter('allthemodium', 			'allthemodium:raw_allthemodium', 		'kubejs:allthemodium_chunk', 	2,	'kubejs:allthemodium_chunk',	1, 0.20, 	50000);
-	//igniter('vibranium',				'allthemodium:raw_vibranium', 			'kubejs:vibranium_chunk', 		2,	'kubejs:vibranium_chunk', 		1, 0.25, 	100000);
-	//igniter('unobtainium',				'allthemodium:raw_unobtainium', 		'kubejs:unobtainium_chunk', 	2,	'kubejs:unobtainium_chunk', 	1, 0.30, 	250000);
-	
-	//dehydrator('iesnium',				'gtceu:molten_iesnium',					90,		'occultism:iesnium_dust',			2,	'occultism:iesnium_dust',		1, 0.50,	100000 );
-	//dehydrator('demonite', 				'gtceu:molten_demonite', 				90, 	'bloodmagic:sand_hellforged', 		2, 	'bloodmagic:sand_hellforged', 	1, 0.50, 	150000);
-	//dehydrator('allthemodium', 			'allthemodium:molten_allthemodium', 	90, 	'allthemodium:allthemodium_dust', 	2, 	'allthemodium:allthemodium_dust', 1, 0.50, 	500000);
-	//dehydrator('vibranium', 			'allthemodium:molten_vibranium', 		90, 	'allthemodium:vibranium_dust', 		2, 	'allthemodium:vibranium_dust', 	1, 0.50, 	1000000);
-	//dehydrator('unobtainium', 			'allthemodium:molten_unobtainium', 		90, 	'allthemodium:unobtainium_dust', 	2, 	'allthemodium:unobtainium_dust', 	1, 0.60, 	2500000);
 	
 	brew('awakening', 					'gtceu:primordial_sanguine_plasma', 	1000, 'mysticalagriculture:cognizant_dust', 	'gtceu:cognizant_sanguine_ichor',		1000 );
     brew('stellar', 					'gtceu:cognizant_sanguine_ichor',		1000, 'gtceu:nether_star_dust', 				'gtceu:stellar_sanguine_plasma', 		1000 );
@@ -298,19 +257,12 @@ ServerEvents.recipes(allthemods => {
     crucibleMelt('#forge:plastic',              	'pneumaticcraft:plastic',           144,   20000,      'mv',   true);
     crucibleMelt('evilcraft:vengeance_essence',		'gtceu:liquid_vengeance',          1000,   25000,      'mv',   true);
     crucibleMelt('bloodmagic:strong_tau',    		'gtceu:saturated_tau',             100,    20000,      'mv',   true);	
-	//crucibleMelt('ars_nouveau:source_gem',         	'gtceu:liquid_source',      		250,  	20000,      'hv',   true);
-	//crucibleMelt('minecraft:rotten_flesh',         	'gtceu:liquid_rotten_flesh',  		50,  	20000,      'hv',   true);
+	
 	
 
 	crucibleMelt('minecraft:dragon_breath',         'gtceu:liquid_dragon_breath',      100,    20000,      'mv',   true);
     crucibleMelt('draconicevolution:dragon_heart',	'gtceu:liquid_draconic_essence', 	100,    10000,      'hv',   true);
-    //crucibleMelt('kubejs:demonite_chunk',      		'gtceu:molten_demonite',           90,     150000,     'hv',   true);
-    //crucibleMelt('kubejs:iesnium_chunk',     		'gtceu:molten_iesnium',            90,     150000,     'hv',   true);
-
-    // End Game Ores - Gated behind IV Tier
-    //crucibleMelt('kubejs:allthemodium_chunk', 		'allthemodium:molten_allthemodium', 90,     150000,     'iv',   true);
-    //crucibleMelt('kubejs:vibranium_chunk',      	'allthemodium:molten_vibranium',    90,     150000,     'iv',   true);
-    //crucibleMelt('kubejs:unobtainium_chunk',    	'allthemodium:molten_unobtainium',  90,     150000,     'iv',   true);
+    
 	
 
 	fluidmix('primordial_plasma', 			'gtceu:liquid_draconic_essence',		1000, '#forge:blue_ice', 					1000, 'gtceu:primordial_sanguine_plasma', 1000 );	

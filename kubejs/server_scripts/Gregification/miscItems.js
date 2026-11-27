@@ -26,6 +26,11 @@ ServerEvents.recipes(allthemods => {
         C: "#gtceu:circuits/lv"
     }).id('gregification:basicmagnet');
 
+    allthemods.shapeless('minecraft:stone_button', [
+        'minecraft:stone_pressure_plate',
+        '#gtceu:tools/crafting_saws'
+    ]).id('gregification:stone_button_from_pressure_plate')
+
     allthemods.shaped('8x immersiveengineering:treated_wood_horizontal', [
         'PBP',
         'PPP',

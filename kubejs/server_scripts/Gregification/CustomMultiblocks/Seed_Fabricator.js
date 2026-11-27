@@ -287,6 +287,7 @@ ServerEvents.recipes(allthemods => {
     gregifySeed('bedrockium', 'r', 7, '#forge:storage_blocks/bedrockium');
 
     // Tier 8
+    gregifySeed('gaia_spirit', 'r', 8, '#forge:storage_blocks/gaia');
     gregifySeed('neutronium', 'r', 8, '#forge:storage_blocks/neutronium');
 
     // Tier 9

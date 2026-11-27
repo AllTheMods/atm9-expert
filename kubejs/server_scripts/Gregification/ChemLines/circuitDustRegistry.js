@@ -17,13 +17,14 @@ ServerEvents.recipes(allthemods => {
     };
 
     
-    const react = (name, inputs, gas, gasAmount, count, eut, duration, id) => {
-        allthemods.recipes.gtceu.large_chemical_reactor(id || `gregification:reacting/${name}`)
+    const react = (name, inputs, gas, gasAmount, count, eut, duration, id, program) => {
+        let r = allthemods.recipes.gtceu.large_chemical_reactor(id || `gregification:reacting/${name}`)
             .itemInputs(dusts(inputs))
             .inputFluids(`#forge:${gas} ${gasAmount}`)
             .itemOutputs(`${count}x gtceu:${name}_dust`)
             .duration(duration)
             .EUt(eut);
+        if (program) r.circuit(program);
     };
 
     
@@ -60,8 +61,8 @@ ServerEvents.recipes(allthemods => {
     react('gadolinium_oxysulfide', { gadolinium: 2, sulfur: 1 }, 'oxygen', 2000, 5, LuV, 300);
     react('gadolinium_iron_garnet', { gadolinium: 3, iron: 5 }, 'oxygen', 12000, 20, LuV, 500);
     react('gadolinium_gallium_garnet', { gadolinium: 3, gallium: 5 }, 'oxygen', 12000, 20, LuV, 500);
-    react('europium_yttrium_silicate', { europium: 1, yttrium: 2, silicon: 1 }, 'oxygen', 5000, 9, ZPM, 400);
-    react('praseodymium_yttrium_silicate', { praseodymium: 1, yttrium: 2, silicon: 1 }, 'oxygen', 5000, 9, ZPM, 400);
+    react('europium_yttrium_silicate', { europium: 1, yttrium: 2, silicon: 1 }, 'oxygen', 5000, 9, ZPM, 400, null, 1);
+    react('praseodymium_yttrium_silicate', { praseodymium: 1, yttrium: 2, silicon: 1 }, 'oxygen', 5000, 9, ZPM, 400, null, 2);
     react('langasite', { lanthanum: 3, gallium: 5, silicon: 1 }, 'oxygen', 14000, 23, ZPM, 600);
 
     // 100 dust is more than one stack, so it comes out as two

@@ -3,23 +3,7 @@
 
 ServerEvents.recipes(allthemods => {
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
-    /*const tiers = {
-        ULV: 8,
-        LV: 32,
-        MV: 128,
-        HV: 512,
-        EV: 2048,
-        IV: 8192,
-        LuV: 32768,
-        ZPM: 131072,
-        UV: 524288,
-        UHV: 2097152,
-        UEV: 8388608,
-        UIV: 33554432,
-        UXV: 134217728,
-        OpV: 536870912,
-        MAX: 2147483647
-    };*/
+
     const addAssembler = (itemsIn, fluidIn, itemsOut, eu, duration, program) => {
 
         const outputID = itemsOut.replace(/[^a-z0-9]/gi, '_');
@@ -39,6 +23,17 @@ ServerEvents.recipes(allthemods => {
 
     addAssembler(
         [
+            '16x #forge:sawdust',
+            '2x gtceu:duct_tape'
+        ],
+        '#forge:glue 288',
+        'mekanism:cardboard_box',
+        EV,
+        100
+    )
+
+    addAssembler(
+        [
             '4x #forge:small_gears/desh',
             '4x #forge:gears/tungsten_steel',
             '2x #gtceu:circuits/iv',
@@ -53,17 +48,6 @@ ServerEvents.recipes(allthemods => {
         'gtceu:empowerer',
         IV,
         1200
-    )
-
-    addAssembler(
-        [
-            '16x #forge:sawdust',
-            '2x gtceu:duct_tape'
-        ],
-        '#forge:glue 288',
-        'mekanism:cardboard_box',
-        EV,
-        100
     )
 
     //zirconium casing
@@ -99,7 +83,7 @@ ServerEvents.recipes(allthemods => {
             '#forge:dusts/caesium',
             'gtceu:draconium_foil'
         ],
-        'gtceu:chaos_plastic 144',
+        '#forge:chaos_plastic 144',
         '16x gtceu:germanium_diode',
         ZPM,
         80
@@ -111,7 +95,7 @@ ServerEvents.recipes(allthemods => {
             '#forge:dusts/caesium',
             'gtceu:hop_graphite_foil'
         ],
-        'gtceu:chaos_plastic 144',
+        '#forge:chaos_plastic 144',
         '16x gtceu:atomic_clock',
         ZPM,
         80

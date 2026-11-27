@@ -27,6 +27,14 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('gtceu:strontium_chloride_dust')
         .outputFluids('minecraft:water 1000', 'gtceu:carbon_dioxide 1000')
         .duration(200).EUt(StrontiumEUComplex); 
+
+    allthemods.recipes.gtceu.large_chemical_reactor('gregification:chemical_reactor/strontium_carbonate_from_strontium')
+        .itemInputs('#forge:dusts/strontium')
+        .inputFluids('#forge:carbon_dioxide 2000')
+        .itemOutputs('gtceu:strontium_carbonate_dust')
+        .outputFluids('gtceu:carbon_monoxide 1000')
+        .duration(200)
+        .EUt(LuV);
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

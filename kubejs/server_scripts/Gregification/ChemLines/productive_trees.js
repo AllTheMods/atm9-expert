@@ -27,7 +27,7 @@ ServerEvents.recipes(allthemods => {
         // --- Space materials (gated above their space tier) ---
         { tree: 'pistachio', fruit: 'productivetrees:pistachio', ash: 'selenium_bio_ash', leach: 'gtceu:sulfuric_acid 1000', outItem: 'gtceu:clausthalite_dust', eu: ZPM }, // space IV
         { tree: 'pink_ivory', ash: 'hafnium_bio_ash', leach: 'gtceu:fluoroantimonic_acid 250', outItem: 'gtceu:hafnon_dust', outFluid: ['gtceu:hexafluorozirconic_acid 500'], eu: ZPM }, // space IV
-        { tree: 'nutmeg', fruit: 'productivetrees:nutmeg', ash: 'lutetium_bio_ash', leach: 'gtceu:nitric_acid 1000', outItem: 'gtceu:xenotime_dust', eu: UV }, // space LuV
+        { tree: 'nutmeg', fruit: 'productivetrees:nutmeg', ash: 'lutetium_bio_ash', leach: 'gtceu:nitric_acid 1000', outItem: 'gtceu:raw_yttrialite', eu: UV }, // space LuV
         { tree: 'satsuma', fruit: 'productivetrees:satsuma', ash: 'samarium_bio_ash', leach: 'gtceu:hydrochloric_acid 1000', outItem: 'gtceu:samarskite_dust', eu: UV }, // space LuV
         { tree: 'juniper', fruit: 'productivetrees:juniper_berry', ash: 'scandium_bio_ash', leach: 'gtceu:phosphoric_acid 1000', outItem: 'gtceu:thortveitite_dust', eu: UV }, // space LuV
         { tree: 'buddhas_hand', fruit: 'productivetrees:buddhas_hand', ash: 'tellurium_bio_ash', leach: 'gtceu:aqua_regia 1000', outItem: 'gtceu:calaverite_dust', eu: UV }, // space ZPM

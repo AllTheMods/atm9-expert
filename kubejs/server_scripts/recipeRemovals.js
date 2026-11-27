@@ -199,6 +199,8 @@ ServerEvents.recipes(allthemods => {
     ]
 
     const moreRemovals = [
+        'pneumaticcraft:pressure_gauge',
+        'mekanism:antiprotonic_nucleosynthesizer', 'mekanism:pigment_extractor', 'mekanism:resistive_heater', 'mekanism:control_circuit/basic',        
         'mekanism:processing/refined_obsidian/dust/from_obsidian_dust', 'mekanism:control_circuit/advanced', 'mekanism:control_circuit/elite', 'mekanism:control_circuit/ultimate',
         'mekanism:metallurgic_infusing/alloy/infused', 'mekanism:metallurgic_infusing/alloy/reinforced', 'mekanism:metallurgic_infusing/alloy/atomic',
         'mekanism:infusion_conversion/redstone/from_block', 'mekanism:infusion_conversion/redstone/from_enriched', 'mekanism:infusion_conversion/redstone/from_dust', 'mekanism:enriching/enriched/redstone',

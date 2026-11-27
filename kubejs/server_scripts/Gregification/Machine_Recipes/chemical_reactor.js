@@ -189,7 +189,7 @@ ServerEvents.recipes(allthemods => {
     );
 
     addChemical(
-        'gtceu:atm_star_dust',
+        'gtceu:atm_trio_dust',
         [
             'gtceu:fluoroantimonic_acid 1000',
             'gtceu:diethylenetriamine_pentaacetonitrile 1000',
@@ -335,6 +335,7 @@ ServerEvents.recipes(allthemods => {
         .itemInputs('2x #forge:dusts/sodium', '#forge:dusts/potassium', '#forge:dusts/calcium', '#forge:dusts/magnesium')
         .inputFluids('#forge:distilled_water 6000', '#forge:glycerol 2000')
         .outputFluids('gtceu:artificial_cerebrospinal_fluid 1000')
+        .circuit(7)
         .duration(200)
         .EUt(LuV); // LuV
 

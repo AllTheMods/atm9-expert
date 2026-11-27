@@ -21,6 +21,7 @@ ServerEvents.recipes(allthemods => {
         .duration(200)
         .EUt(EV);
 
+        /*
     allthemods.recipes.gtceu.electrolyzer('gregification:electrowinning/copper')
         .circuit(2)
         .itemInputs('2x #forge:dusts/copper_ii_sulfate')
@@ -31,7 +32,7 @@ ServerEvents.recipes(allthemods => {
         .outputFluids('gtceu:sulfuric_acid 2000', 'gtceu:oxygen 2000')
         .duration(400)
         .EUt(LuV);
-
+*/
     allthemods.recipes.gtceu.electrolyzer('gregification:electrowinning/zinc')
         .circuit(1)
         .itemInputs('2x #forge:dusts/zinc_sulfate')

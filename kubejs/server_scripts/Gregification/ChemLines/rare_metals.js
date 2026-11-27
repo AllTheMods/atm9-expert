@@ -11,7 +11,7 @@ ServerEvents.recipes(allthemods => {
 
 
     allthemods.recipes.gtceu.electric_blast_furnace('gregification:sunnarium/ingot')
-        .itemInputs('#forge:dusts/sunnarium')
+        .itemInputs('#forge:dusts/sunnarium', '#forge:dusts/refined_glowstone')
         .inputFluids('#forge:gold 1296')
         .itemOutputs('gtceu:sunnarium_ingot')
         .blastFurnaceTemp(sunnariumTemp)
@@ -25,6 +25,7 @@ ServerEvents.recipes(allthemods => {
         .blastFurnaceTemp(sunnariumTemp)
         .duration(1200).EUt(sunnariumEU)
 
+        '#forge:foils/polyethylene'
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

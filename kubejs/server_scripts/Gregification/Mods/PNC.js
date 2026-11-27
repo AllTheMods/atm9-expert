@@ -4,6 +4,18 @@
 //@ts-check
 ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
+    
+    allthemods.shaped('pneumaticcraft:pressure_gauge', [
+        'TCT',
+        'CPC',
+        'TST'
+    ], {
+        C: '#forge:plates/brass',
+        S: '#forge:small_springs/steel',
+        T: '#forge:plates/steel',
+        P: 'pneumaticcraft:printed_circuit_board',
+    })
+    
     allthemods.shaped('pneumaticcraft:printed_circuit_board', [
         ' C ',
         'TPT',
