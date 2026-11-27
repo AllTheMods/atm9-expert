@@ -121,25 +121,25 @@ showHotkeys = true
 cheatMode = 0
 
 #Utility mode: the four time of day buttons.
-utilityTime = true
+utilityTime = false
 
 #Utility mode: the rain button.
-utilityRain = true
+utilityRain = false
 
 #Utility mode: the heal button.
-utilityHeal = true
+utilityHeal = false
 
 #Utility mode: the game mode button.
-utilityGamemode = true
+utilityGamemode = false
 
 #The game mode button cycles to creative.
-gamemodeCreative = true
+gamemodeCreative = false
 
 #The game mode button cycles to adventure.
-gamemodeAdventure = true
+gamemodeAdventure = false
 
 #Also find items by their English name when the game is not in English (NEI itemUntranslator). Applies after the next JEI reload.
-itemUntranslator = false
+itemUntranslator = true
 
 #Show a search field under JEI's recipe screen that filters the recipes shown (NEI recipe search syntax).
 recipeSearch = true
@@ -191,7 +191,7 @@ bookmarkHandlerIcon = false
 bookmarkHandlerIconScale = 100
 
 #Keep a separate bookmark list for every world and server (NEI worldSpecific).
-bookmarksWorldSpecific = false
+bookmarksWorldSpecific = true
 
 #Show the bookmark panel (NEI bookmarks.enabled). The bookmarks key and the bookmarks button in JEI's button row switch it too.
 bookmarksVisible = true
