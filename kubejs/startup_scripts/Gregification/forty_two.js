@@ -11,12 +11,12 @@ StartupEvents.registry('item', allthemods => {
     allthemods.create('gtceu:digit_7').displayName('Digit 7')
     allthemods.create('gtceu:digit_8').displayName('Digit 8')
     allthemods.create('gtceu:digit_9').displayName('Digit 9')
-    allthemods.create('gtceu:zero').displayName('Zero').tooltip('Nothing, carefully stored')
-    allthemods.create('gtceu:nan').displayName('NaN').tooltip('Not a number')
-    allthemods.create('gtceu:true_nan').displayName('True NaN').tooltip('Not a number, compressed')
+    allthemods.create('gtceu:zero').displayName('Zero').tooltip(Text.translate('item.gtceu.zero.tooltip'))
+    allthemods.create('gtceu:nan').displayName('NaN').tooltip(Text.translate('item.gtceu.nan.tooltip'))
+    allthemods.create('gtceu:true_nan').displayName('True NaN').tooltip(Text.translate('item.gtceu.true_nan.tooltip'))
     allthemods.create('gtceu:infinity_fragment').displayName('Infinity Fragment')
     allthemods.create('gtceu:infinity_sequence').displayName('Infinity Sequence')
-    allthemods.create('gtceu:true_infinity').displayName('True Infinity').tooltip('It does not end')
+    allthemods.create('gtceu:true_infinity').displayName('True Infinity').tooltip(Text.translate('item.gtceu.true_infinity.tooltip'))
 })
 
 StartupEvents.registry('block', allthemods => {

@@ -52,7 +52,7 @@ ServerEvents.recipes(allthemods => {
 	allthemods.shaped('allthetweaks:mini_nether', ['ADA', 'BCB', 'AEA'], {
     A: 'minecraft:obsidian',
     B: 'minecraft:nether_star',
-    C: Item.of('mekanism:teleportation_core', "{HideFlags:1,display:{Name:'[{\"text\":\"Nether Infused Teleportation Core\",\"italic\":false}]'}}").enchant('unbreaking', 1).strongNBT().toJson(),
+    C: Item.of('mekanism:teleportation_core', "{HideFlags:1,display:{Name:'[{\"translate\":\"item.atm9e.nether_infused_teleportation_core\",\"italic\":false}]'}}").enchant('unbreaking', 1).strongNBT().toJson(),
 	D: 'minecraft:wither_skeleton_skull',
 	E: 'minecraft:warped_nylium'
 
@@ -74,14 +74,14 @@ ServerEvents.recipes(allthemods => {
       quanta: 25,
       arcana: -1
     },
-    result: Item.of('mekanism:teleportation_core', "{HideFlags:1,display:{Name:'[{\"text\":\"Nether Infused Teleportation Core\",\"italic\":false}]'}}").enchant('unbreaking', 1).toJson()
+    result: Item.of('mekanism:teleportation_core', "{HideFlags:1,display:{Name:'[{\"translate\":\"item.atm9e.nether_infused_teleportation_core\",\"italic\":false}]'}}").enchant('unbreaking', 1).toJson()
   }).id("allthemods:allthetweaks/nether_core")
   
   // Mini End
 	allthemods.shaped('allthetweaks:mini_end', ['ABA', 'BCB', 'ABA'], {
     A: 'additional_lights:fire_pit_s_end_stone',
     B: 'minecraft:ender_eye',
-    C: Item.of('mekanism:teleportation_core', "{HideFlags:1,display:{Name:'[{\"text\":\"Ender Infused Teleportation Core\",\"italic\":false}]'}}").enchant('unbreaking', 1).strongNBT().toJson()
+    C: Item.of('mekanism:teleportation_core', "{HideFlags:1,display:{Name:'[{\"translate\":\"item.atm9e.ender_infused_teleportation_core\",\"italic\":false}]'}}").enchant('unbreaking', 1).strongNBT().toJson()
 
   }).id('allthemods:allthetweaks/mini_end')
 
@@ -101,14 +101,14 @@ allthemods.custom({
     quanta: 13.5,
     arcana: 37.5
   },
-  result: Item.of('mekanism:teleportation_core', "{HideFlags:1,display:{Name:'[{\"text\":\"Ender Infused Teleportation Core\",\"italic\":false}]'}}").enchant('unbreaking', 1).toJson()
+  result: Item.of('mekanism:teleportation_core', "{HideFlags:1,display:{Name:'[{\"translate\":\"item.atm9e.ender_infused_teleportation_core\",\"italic\":false}]'}}").enchant('unbreaking', 1).toJson()
 }).id("allthemods:allthetweaks/ender_core")
   
 // Mini Exit
 	allthemods.shaped('allthetweaks:mini_exit', ['ABA', 'DCD', 'ADA'], {
     A: 'additional_lights:fire_pit_s_end_stone',
     B: 'minecraft:dragon_egg',
-    C: Item.of('mekanism:teleportation_core', "{HideFlags:1,display:{Name:'[{\"text\":\"Draconic Infused Teleportation Core\",\"italic\":false}]'}}").enchant('unbreaking', 1).strongNBT().toJson(),
+    C: Item.of('mekanism:teleportation_core', "{HideFlags:1,display:{Name:'[{\"translate\":\"item.atm9e.draconic_infused_teleportation_core\",\"italic\":false}]'}}").enchant('unbreaking', 1).strongNBT().toJson(),
 	D: 'minecraft:end_crystal'
 
   }).id('allthemods:allthetweaks/mini_exit')
@@ -129,7 +129,7 @@ allthemods.custom({
     quanta: 50,
     arcana: 100
   },
-  result: Item.of('mekanism:teleportation_core', "{HideFlags:1,display:{Name:'[{\"text\":\"Draconic Infused Teleportation Core\",\"italic\":false}]'}}").enchant('unbreaking', 1).toJson()
+  result: Item.of('mekanism:teleportation_core', "{HideFlags:1,display:{Name:'[{\"translate\":\"item.atm9e.draconic_infused_teleportation_core\",\"italic\":false}]'}}").enchant('unbreaking', 1).toJson()
 }).id("allthemods:allthetweaks/draco_core")
   
 })

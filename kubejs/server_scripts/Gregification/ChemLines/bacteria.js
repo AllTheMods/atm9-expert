@@ -43,27 +43,28 @@ ServerEvents.recipes(allthemods => {
 
     const bacteriaStageItems = (strain) => {
         const nbtTag = `{bacteriaSpecies:"${strain.nbt}"}`;
+        const strainNameText = Text.translate(`atm9e.bacteria.strain.${strain.nbt.toLowerCase()}`);
 
         return {
             base: Item.of('gtceu:bacteria_gene_sample', `{bacteriaSpecies:"${strain.nbt}",speciesName:"${strain.name}",parentName:"${strain.parent}",parent2Name:""}`).strongNBT(),
 
             seedCulture: Item.of('gtceu:bacteria_seed_dust', nbtTag)
-                .withName(Text.of(`${strain.name} Seed Culture`).green()).strongNBT(),
+                .withName(Text.translate('atm9e.bacteria.stage.seed_culture', strainNameText).green()).strongNBT(),
 
             cultivatedBacteria: Item.of('gtceu:bacteria_cultivated_dust', nbtTag)
-                .withName(Text.of(`${strain.name} Cultivated Bacteria`).green()).strongNBT(),
+                .withName(Text.translate('atm9e.bacteria.stage.cultivated_bacteria', strainNameText).green()).strongNBT(),
 
             vegetativeCulture: Item.of('gtceu:bacteria_vegetative_dust', nbtTag)
-                .withName(Text.of(`${strain.name} Vegetative Culture`).green()).strongNBT(),
+                .withName(Text.translate('atm9e.bacteria.stage.vegetative_culture', strainNameText).green()).strongNBT(),
 
             bacterialMatrix: Item.of('gtceu:bacteria_matrix_dust', nbtTag)
-                .withName(Text.of(`${strain.name} Bacterial Matrix`).green()).strongNBT(),
+                .withName(Text.translate('atm9e.bacteria.stage.bacterial_matrix', strainNameText).green()).strongNBT(),
 
             mutatedBacterium: Item.of('gtceu:bacteria_mutated_dust', nbtTag)
-                .withName(Text.of(`${strain.name} Mutated Bacterium`).green()).strongNBT(),
+                .withName(Text.translate('atm9e.bacteria.stage.mutated_bacterium', strainNameText).green()).strongNBT(),
 
             colony: Item.of('gtceu:bacteria_colony_dust', nbtTag)
-                .withName(Text.of(`${strain.name} Colony`).green()).strongNBT(),
+                .withName(Text.translate('atm9e.bacteria.stage.colony', strainNameText).green()).strongNBT(),
         };
     };
 
@@ -145,7 +146,7 @@ ServerEvents.recipes(allthemods => {
         .duration(DUR)
         .EUt(LUV);
 
-    let inputStrain = Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"ApisSymbiont"}').strongNBT();
+    let inputStrain = Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"ApisSymbiont"}').weakNBT();
     allthemods.recipes.gtceu.mixer(`gregification:bacteria/substrate`)
         .itemInputs(inputStrain, '#forge:dusts/treated_wood')
         .inputFluids('#forge:sugar_water 1000')
@@ -234,14 +235,14 @@ ServerEvents.recipes(allthemods => {
         .EUt(LUV);
 
     allthemods.recipes.gtceu.chemical_reactor(`gregification:chemical_reactor/bio_organic_nanocomposite`)
-        .itemInputs('#forge:dusts/potassium_calcium_orthosilicate', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Rhizobacterium"}').strongNBT())
+        .itemInputs('#forge:dusts/potassium_calcium_orthosilicate', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Rhizobacterium"}').weakNBT())
         .inputFluids('#forge:osmium 144')
         .itemOutputs('gtceu:bio_organic_nanocomposite_dust')
         .duration(200)
         .EUt(IV);
 
     allthemods.recipes.gtceu.large_chemical_reactor(`gregification:chemical_reactor/bio_organic_nanocomposite`)
-        .itemInputs('#forge:dusts/phenylalanine', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"CaulobacterCrescentus"}').strongNBT())
+        .itemInputs('#forge:dusts/phenylalanine', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"CaulobacterCrescentus"}').weakNBT())
         .inputFluids('#forge:phenolic_resin 1440')
         .outputFluids('gtceu:organic_polymer 1440')
         .duration(300)
@@ -262,7 +263,7 @@ ServerEvents.recipes(allthemods => {
         else {
             baseFuel = `#forge:rocket_fuel_stage_${index}`;
         }
-        let fuelStrain = Item.of('gtceu:bacteria_colony_dust', `{bacteriaSpecies:"${rocket.nbt}"}`).strongNBT();
+        let fuelStrain = Item.of('gtceu:bacteria_colony_dust', `{bacteriaSpecies:"${rocket.nbt}"}`).weakNBT();
         allthemods.recipes.gtceu.chemical_reactor(`gregification:chemical_reactor/rocket_fuel_stage_${index + 1}`)
             .itemInputs(fuelStrain, rocket.catalyst)
             .inputFluids(`${baseFuel} 1000`)
@@ -272,7 +273,7 @@ ServerEvents.recipes(allthemods => {
     });
 
     
-    let desulfovibrioStrain = Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Desulfovibrio"}').strongNBT();
+    let desulfovibrioStrain = Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Desulfovibrio"}').weakNBT();
 
     allthemods.recipes.gtceu.centrifuge('bacteria/process/spent_nuclear_waste')
         .itemInputs(desulfovibrioStrain)
@@ -284,27 +285,27 @@ ServerEvents.recipes(allthemods => {
         .EUt(LuV);
     
     allthemods.recipes.gtceu.large_chemical_reactor(`gregification:bacteria/living_gaia_plate`)
-        .itemInputs('#forge:double_plates/gaia', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Cyanobacterium"}').strongNBT())
+        .itemInputs('#forge:double_plates/gaia', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Cyanobacterium"}').weakNBT())
         .itemOutputs('gtceu:living_gaia_plate')
         .duration(300)
         .EUt(LuV);
     
     allthemods.recipes.gtceu.chemical_reactor(`gregification:bacteria/slime_waste_water_treatment`)
-        .itemInputs(Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Dehalococcoides"}').strongNBT())
+        .itemInputs(Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Dehalococcoides"}').weakNBT())
         .inputFluids('#forge:water_stage_4 50', '#forge:slime_waste_water 15950')
         .outputFluids('gtceu:water_stage_5 400')
         .duration(200)
         .EUt(IV);
 
     allthemods.recipes.gtceu.large_chemical_reactor(`gregification:bacteria/bacterial_cake_mana`)
-        .itemInputs('minecraft:cake', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Rhodoferax"}').strongNBT())
+        .itemInputs('minecraft:cake', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Rhodoferax"}').weakNBT())
         .inputFluids('#forge:sugar_water 4000', '#forge:glycerol 1000', '#forge:honey 4000')
         .outputFluids('gtceu:mana_essence 432000')
         .duration(600)
         .EUt(LuV);
 
     allthemods.recipes.gtceu.large_chemical_reactor(`gregification:bacteria/bacterial_crude_oil`)
-        .itemInputs('12x #forge:dusts/bone_char', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"AreoMycorrhizalOstrum"}').strongNBT())
+        .itemInputs('12x #forge:dusts/bone_char', Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"AreoMycorrhizalOstrum"}').weakNBT())
         .inputFluids('#forge:biomass 64000', '#forge:hydrogen 64000')
         .outputFluids('gtceu:oil 64000')
         .duration(1200).EUt(IV);

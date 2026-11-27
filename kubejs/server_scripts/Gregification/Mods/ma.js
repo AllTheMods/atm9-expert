@@ -126,7 +126,7 @@ ServerEvents.recipes(allthemods => {
         2000
     );
 
-    const awakenedBlock = Item.of('allthemodium:unobtainium_vibranium_alloy_block', "{HideFlags:1,display:{Name:'[{\"text\":\"Awakened Unobtainium-Vibranium Alloy Block\",\"italic\":false}]'}}").enchant('unbreaking', 1).toJson()
+    const awakenedBlock = Item.of('allthemodium:unobtainium_vibranium_alloy_block', "{HideFlags:1,display:{Name:'[{\"translate\":\"item.atm9e.awakened_unobtainium_vibranium_alloy_block\",\"italic\":false}]'}}").enchant('unbreaking', 1).toJson()
     addMA(
         [            
             '2x #forge:storage_blocks/vibranium',
@@ -194,7 +194,7 @@ ServerEvents.recipes(allthemods => {
         }
     )
 
-    let  Clostridium = Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Clostridium"}').strongNBT();
+    let  Clostridium = Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"Clostridium"}').weakNBT();
 
     allthemods.recipes.gtceu.mixer(`allthemods:gregification/assembler/red_fertilizer_x4`)
         .itemInputs(Clostridium, '#forge:dusts/phosphorus_pentoxide', '#forge:dusts/calcium_nitrate', '#forge:dusts/thallium_sulfate', '#forge:dusts/potassium_carbonate')

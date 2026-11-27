@@ -197,134 +197,135 @@ ItemEvents.tooltip(allthemods => {
 
   //AllTheModium
   allthemods.add('allthemodium:teleport_pad', [
-    Text.of('Place the pad down in the specified Dimension'),
-    Text.of('Sneak Right Click with both hands empty to teleport'),
-    Text.of('§aOverworld TO Mining Dimension').red(),
-    Text.of('§cThe Nether TO The Other').red(),
-    Text.of('§bThe End TO The Beyond')
+    Text.translate('tooltip.atm9e.teleport_pad.1'),
+    Text.translate('tooltip.atm9e.teleport_pad.2'),
+    Text.translate('tooltip.atm9e.teleport_pad.3').red(),
+    Text.translate('tooltip.atm9e.teleport_pad.4').red(),
+    Text.translate('tooltip.atm9e.teleport_pad.5')
   ])
 
   //Mekanism
-  allthemods.add('mekanism:creative_energy_cube', [[Text.of('Needs to be Energized').darkPurple()],])
+  allthemods.add('mekanism:creative_energy_cube', [[Text.translate('tooltip.atm9e.creative_energy_cube.energize').darkPurple()],])
 
   // Mob Grinding Utils
   allthemods.addAdvanced('mob_grinding_utils:rotten_egg', (stack, advanced, text) => {
-    text.add(3, Text.of("Created from Cursed Chicken Feed").yellow())
+    text.add(3, Text.translate('tooltip.atm9e.rotten_egg').yellow())
   })
   allthemods.addAdvanced('mob_grinding_utils:golden_egg', (stack, advanced, text) => {
-    text.add(3, Text.of("Created from Nutritious Chicken Feed").yellow())
+    text.add(3, Text.translate('tooltip.atm9e.golden_egg').yellow())
   })
 
   // RS Infinity Booster
   allthemods.add('rsinfinitybooster:infinity_card', [
-    Text.of('Infinite range for RS wireless'),
-    Text.of('Only works in the same dimension')
+    Text.translate('tooltip.atm9e.rs_infinity.wireless'),
+    Text.translate('tooltip.atm9e.infinity.same_dim')
   ])
   allthemods.add('rsinfinitybooster:dimension_card', [
-    Text.of('Infinite range for RS wireless'),
-    Text.of('Works across dimensions')
+    Text.translate('tooltip.atm9e.rs_infinity.wireless'),
+    Text.translate('tooltip.atm9e.infinity.cross_dim')
   ])
 
   // AE2 Infinity Booster
   allthemods.add('aeinfinitybooster:infinity_card', [
-    Text.of('Infinite range for AE2 wireless'),
-    Text.of('Only works in the same dimension')
+    Text.translate('tooltip.atm9e.ae2_infinity.wireless'),
+    Text.translate('tooltip.atm9e.infinity.same_dim')
   ])
   allthemods.add('aeinfinitybooster:dimension_card', [
-    Text.of('Infinite range for AE2 wireless'),
-    Text.of('Works across dimensions')
+    Text.translate('tooltip.atm9e.ae2_infinity.wireless'),
+    Text.translate('tooltip.atm9e.infinity.cross_dim')
   ])
 
   // Extradisks
-  allthemods.add('extradisks:infinite_storage_disk', [Text.of('Recipe disabled').red()])
-  allthemods.add('extradisks:infinite_storage_block', [Text.of('Recipe disabled').red()])
-  allthemods.add('extradisks:infinite_storage_part', [Text.of('Recipe disabled').red()])
-  allthemods.add('extradisks:infinite_fluid_storage_disk', [Text.of('Recipe disabled').red()])
-  allthemods.add('extradisks:infinite_fluid_storage_block', [Text.of('Recipe disabled').red()])
-  allthemods.add('extradisks:infinite_fluid_storage_part', [Text.of('Recipe disabled').red()])
+  allthemods.add('extradisks:infinite_storage_disk', [Text.translate('tooltip.atm9e.recipe_disabled').red()])
+  allthemods.add('extradisks:infinite_storage_block', [Text.translate('tooltip.atm9e.recipe_disabled').red()])
+  allthemods.add('extradisks:infinite_storage_part', [Text.translate('tooltip.atm9e.recipe_disabled').red()])
+  allthemods.add('extradisks:infinite_fluid_storage_disk', [Text.translate('tooltip.atm9e.recipe_disabled').red()])
+  allthemods.add('extradisks:infinite_fluid_storage_block', [Text.translate('tooltip.atm9e.recipe_disabled').red()])
+  allthemods.add('extradisks:infinite_fluid_storage_part', [Text.translate('tooltip.atm9e.recipe_disabled').red()])
 
   //pipes
   allthemods.add('pipez:item_pipe', [
-    [Text.of('Default:'), ' ', Text.of('4'), ' ', Text.of('items/20t')],
-    [Text.of('Basic:'), ' ', Text.of('8'), ' ', Text.of('items/15t')],
-    [Text.of('Improved:').gold(), ' ', Text.of('16').yellow(), ' ', Text.of('items/10t').gold()],
-    [Text.of('Advanced:').darkAqua(), ' ', Text.of('32').aqua(), ' ', Text.of('items/5t').darkAqua()],
-    [Text.of('Ultimate:').darkGray(), ' ', Text.of('64').gray(), ' ', Text.of('items/t').darkGray()]
+    [Text.translate('tooltip.atm9e.pipez.default'), ' ', Text.of('4'), ' ', Text.translate('tooltip.atm9e.pipez.items_20t')],
+    [Text.translate('tooltip.atm9e.pipez.basic'), ' ', Text.of('8'), ' ', Text.translate('tooltip.atm9e.pipez.items_15t')],
+    [Text.translate('tooltip.atm9e.pipez.improved').gold(), ' ', Text.of('16').yellow(), ' ', Text.translate('tooltip.atm9e.pipez.items_10t').gold()],
+    [Text.translate('tooltip.atm9e.pipez.advanced').darkAqua(), ' ', Text.of('32').aqua(), ' ', Text.translate('tooltip.atm9e.pipez.items_5t').darkAqua()],
+    [Text.translate('tooltip.atm9e.pipez.ultimate').darkGray(), ' ', Text.of('64').gray(), ' ', Text.translate('tooltip.atm9e.pipez.items_1t').darkGray()]
   ])
   allthemods.add('pipez:fluid_pipe', [
-    [Text.of('Default:'), ' ', Text.of('50'), ' ', Text.of('mB/t')],
-    [Text.of('Basic:'), ' ', Text.of('100'), ' ', Text.of('mB/t')],
-    [Text.of('Improved:').gold(), ' ', Text.of('500').yellow(), ' ', Text.of('mB/t').gold()],
-    [Text.of('Advanced:').darkAqua(), ' ', Text.of('2,000').aqua(), ' ', Text.of('mB/t').darkAqua()],
-    [Text.of('Ultimate:').darkGray(), ' ', Text.of('10,000').gray(), ' ', Text.of('mB/t').darkGray()],
+    [Text.translate('tooltip.atm9e.pipez.default'), ' ', Text.of('50'), ' ', Text.of('mB/t')],
+    [Text.translate('tooltip.atm9e.pipez.basic'), ' ', Text.of('100'), ' ', Text.of('mB/t')],
+    [Text.translate('tooltip.atm9e.pipez.improved').gold(), ' ', Text.of('500').yellow(), ' ', Text.of('mB/t').gold()],
+    [Text.translate('tooltip.atm9e.pipez.advanced').darkAqua(), ' ', Text.of('2,000').aqua(), ' ', Text.of('mB/t').darkAqua()],
+    [Text.translate('tooltip.atm9e.pipez.ultimate').darkGray(), ' ', Text.of('10,000').gray(), ' ', Text.of('mB/t').darkGray()],
   ])
   allthemods.add('pipez:gas_pipe', [
-    [Text.of('Default:'), ' ', Text.of('200'), ' ', Text.of('mB/t')],
-    [Text.of('Basic:'), ' ', Text.of('400'), ' ', Text.of('mB/t')],
-    [Text.of('Improved:').gold(), ' ', Text.of('2,000').yellow(), ' ', Text.of('mB/t').gold()],
-    [Text.of('Advanced:').darkAqua(), ' ', Text.of('8,000').aqua(), ' ', Text.of('mB/t').darkAqua()],
-    [Text.of('Ultimate:').darkGray(), ' ', Text.of('40,000').gray(), ' ', Text.of('mB/t').darkGray()]
+    [Text.translate('tooltip.atm9e.pipez.default'), ' ', Text.of('200'), ' ', Text.of('mB/t')],
+    [Text.translate('tooltip.atm9e.pipez.basic'), ' ', Text.of('400'), ' ', Text.of('mB/t')],
+    [Text.translate('tooltip.atm9e.pipez.improved').gold(), ' ', Text.of('2,000').yellow(), ' ', Text.of('mB/t').gold()],
+    [Text.translate('tooltip.atm9e.pipez.advanced').darkAqua(), ' ', Text.of('8,000').aqua(), ' ', Text.of('mB/t').darkAqua()],
+    [Text.translate('tooltip.atm9e.pipez.ultimate').darkGray(), ' ', Text.of('40,000').gray(), ' ', Text.of('mB/t').darkGray()]
   ])
   allthemods.add('pipez:energy_pipe', [
-    [Text.of('Default:'), ' ', Text.of('256'), ' ', Text.of('FE/t')],
-    [Text.of('Basic:'), ' ', Text.of('1,024'), ' ', Text.of('FE/t')],
-    [Text.of('Improved:').gold(), ' ', Text.of('8,192').yellow(), ' ', Text.of('FE/t').gold()],
-    [Text.of('Advanced:').darkAqua(), ' ', Text.of('32,768').aqua(), ' ', Text.of('FE/t').darkAqua()],
-    [Text.of('Ultimate:').darkGray(), ' ', Text.of('131,072').gray(), ' ', Text.of('FE/t').darkGray()]
+    [Text.translate('tooltip.atm9e.pipez.default'), ' ', Text.of('256'), ' ', Text.of('FE/t')],
+    [Text.translate('tooltip.atm9e.pipez.basic'), ' ', Text.of('1,024'), ' ', Text.of('FE/t')],
+    [Text.translate('tooltip.atm9e.pipez.improved').gold(), ' ', Text.of('8,192').yellow(), ' ', Text.of('FE/t').gold()],
+    [Text.translate('tooltip.atm9e.pipez.advanced').darkAqua(), ' ', Text.of('32,768').aqua(), ' ', Text.of('FE/t').darkAqua()],
+    [Text.translate('tooltip.atm9e.pipez.ultimate').darkGray(), ' ', Text.of('131,072').gray(), ' ', Text.of('FE/t').darkGray()]
   ])
 
   //upgrades
   allthemods.add('pipez:basic_upgrade', [
-    [Text.of('Item:'), ' ', Text.of('8'), ' ', Text.of('items/15t')],
-    [Text.of('Fluid:'), ' ', Text.of('100'), ' ', Text.of('mB/t')],
-    [Text.of('Gas:'), ' ', Text.of('400'), ' ', Text.of('mB/t')],
-    [Text.of('Energy:'), ' ', Text.of('1,024'), ' ', Text.of('FE/t')],
+    [Text.translate('tooltip.atm9e.pipez.item'), ' ', Text.of('8'), ' ', Text.translate('tooltip.atm9e.pipez.items_15t')],
+    [Text.translate('tooltip.atm9e.pipez.fluid'), ' ', Text.of('100'), ' ', Text.of('mB/t')],
+    [Text.translate('tooltip.atm9e.pipez.gas'), ' ', Text.of('400'), ' ', Text.of('mB/t')],
+    [Text.translate('tooltip.atm9e.pipez.energy'), ' ', Text.of('1,024'), ' ', Text.of('FE/t')],
   ])
   allthemods.add('pipez:improved_upgrade', [
-    [Text.of('Item:').gold(), ' ', Text.of('16').yellow(), ' ', Text.of('items/10t').gold()],
-    [Text.of('Fluid:').gold(), ' ', Text.of('500').yellow(), ' ', Text.of('mB/t').gold()],
-    [Text.of('Gas:').gold(), ' ', Text.of('2,000').yellow(), ' ', Text.of('mB/t').gold()],
-    [Text.of('Energy:').gold(), ' ', Text.of('8,192').yellow(), ' ', Text.of('FE/t').gold()],
+    [Text.translate('tooltip.atm9e.pipez.item').gold(), ' ', Text.of('16').yellow(), ' ', Text.translate('tooltip.atm9e.pipez.items_10t').gold()],
+    [Text.translate('tooltip.atm9e.pipez.fluid').gold(), ' ', Text.of('500').yellow(), ' ', Text.of('mB/t').gold()],
+    [Text.translate('tooltip.atm9e.pipez.gas').gold(), ' ', Text.of('2,000').yellow(), ' ', Text.of('mB/t').gold()],
+    [Text.translate('tooltip.atm9e.pipez.energy').gold(), ' ', Text.of('8,192').yellow(), ' ', Text.of('FE/t').gold()],
   ])
   allthemods.add('pipez:advanced_upgrade', [
-    [Text.of('Item:').darkAqua(), ' ', Text.of('32').aqua(), ' ', Text.of('items/5t').darkAqua()],
-    [Text.of('Fluid:').darkAqua(), ' ', Text.of('2,000').aqua(), ' ', Text.of('mB/t').darkAqua()],
-    [Text.of('Gas:').darkAqua(), ' ', Text.of('8,000').aqua(), ' ', Text.of('mB/t').darkAqua()],
-    [Text.of('Energy:').darkAqua(), ' ', Text.of('32,768').aqua(), ' ', Text.of('FE/t').darkAqua()],
+    [Text.translate('tooltip.atm9e.pipez.item').darkAqua(), ' ', Text.of('32').aqua(), ' ', Text.translate('tooltip.atm9e.pipez.items_5t').darkAqua()],
+    [Text.translate('tooltip.atm9e.pipez.fluid').darkAqua(), ' ', Text.of('2,000').aqua(), ' ', Text.of('mB/t').darkAqua()],
+    [Text.translate('tooltip.atm9e.pipez.gas').darkAqua(), ' ', Text.of('8,000').aqua(), ' ', Text.of('mB/t').darkAqua()],
+    [Text.translate('tooltip.atm9e.pipez.energy').darkAqua(), ' ', Text.of('32,768').aqua(), ' ', Text.of('FE/t').darkAqua()],
   ])
   allthemods.add('pipez:ultimate_upgrade', [
-    [Text.of('Item:').darkGray(), ' ', Text.of('64').gray(), ' ', Text.of('items/t').darkGray()],
-    [Text.of('Fluid:').darkGray(), ' ', Text.of('10,000').gray(), ' ', Text.of('mB/t').darkGray()],
-    [Text.of('Gas:').darkGray(), ' ', Text.of('40,000').gray(), ' ', Text.of('mB/t').darkGray()],
-    [Text.of('Energy:').darkGray(), ' ', Text.of('131,072').gray(), ' ', Text.of('FE/t').darkGray()],
+    [Text.translate('tooltip.atm9e.pipez.item').darkGray(), ' ', Text.of('64').gray(), ' ', Text.translate('tooltip.atm9e.pipez.items_1t').darkGray()],
+    [Text.translate('tooltip.atm9e.pipez.fluid').darkGray(), ' ', Text.of('10,000').gray(), ' ', Text.of('mB/t').darkGray()],
+    [Text.translate('tooltip.atm9e.pipez.gas').darkGray(), ' ', Text.of('40,000').gray(), ' ', Text.of('mB/t').darkGray()],
+    [Text.translate('tooltip.atm9e.pipez.energy').darkGray(), ' ', Text.of('131,072').gray(), ' ', Text.of('FE/t').darkGray()],
   ])
 
   //GTCEu
   allthemods.add('gtceu:neocube',
     [
-      Text.of('Not an AssLine... A NeoCube')
+      Text.translate('tooltip.atm9e.neocube')
     ]
   )
   allthemods.add('gtceu:neural_node',
     [
-      Text.of('Self-Aware')
+      Text.translate('tooltip.atm9e.neural_node')
     ]
   )
   allthemods.add('gtceu:advanced_large_chemical_reactor',
     [
-      Text.of('ALCR a LCR that can parallelize.')
+      Text.translate('tooltip.atm9e.alcr')
     ]
   )
 
   circuits.forEach((circuit) => {
+    const shortId = circuit.id.split(':')[1]
+    const tierKey = circuit.tier.split('-')[0]
     allthemods.add(circuit.id,
       [
-        Text.of(circuit.text),
-        Text.of(circuit.tier).color(circuit.colour)
+        Text.translate(`tooltip.atm9e.gt_circuit.${shortId}`),
+        Text.translate(`tooltip.atm9e.gt_circuit_tier.${tierKey}`).color(circuit.colour)
       ]
     )
-  }
-  )
+  })
 
   //SophisticatedStorage
 
@@ -337,22 +338,22 @@ ItemEvents.tooltip(allthemods => {
   ]
 
   for (let mat of sophMats) {
-    allthemods.add(`sophisticatedstorage:${mat}_chest`, [Text.of('Combine with Vanilla planks to change wood type.')])
-    allthemods.add(`sophisticatedstorage:${mat}_barrel`, [Text.of('Combine with Vanilla planks to change wood type.')])
-    allthemods.add(`sophisticatedstorage:limited_${mat}_barrel_1`, [Text.of('Combine with Vanilla planks to change wood type.')])
-    allthemods.add(`sophisticatedstorage:limited_${mat}_barrel_2`, [Text.of('Combine with Vanilla planks to change wood type.')])
-    allthemods.add(`sophisticatedstorage:limited_${mat}_barrel_3`, [Text.of('Combine with Vanilla planks to change wood type.')])
-    allthemods.add(`sophisticatedstorage:limited_${mat}_barrel_4`, [Text.of('Combine with Vanilla planks to change wood type.')])
+    allthemods.add(`sophisticatedstorage:${mat}_chest`, [Text.translate('tooltip.atm9e.sophisticatedstorage.wood_change')])
+    allthemods.add(`sophisticatedstorage:${mat}_barrel`, [Text.translate('tooltip.atm9e.sophisticatedstorage.wood_change')])
+    allthemods.add(`sophisticatedstorage:limited_${mat}_barrel_1`, [Text.translate('tooltip.atm9e.sophisticatedstorage.wood_change')])
+    allthemods.add(`sophisticatedstorage:limited_${mat}_barrel_2`, [Text.translate('tooltip.atm9e.sophisticatedstorage.wood_change')])
+    allthemods.add(`sophisticatedstorage:limited_${mat}_barrel_3`, [Text.translate('tooltip.atm9e.sophisticatedstorage.wood_change')])
+    allthemods.add(`sophisticatedstorage:limited_${mat}_barrel_4`, [Text.translate('tooltip.atm9e.sophisticatedstorage.wood_change')])
   }
-  allthemods.add('sophisticatedstorage:chest', [Text.of('Combine with Vanilla planks to change wood type.')])
-  allthemods.add('sophisticatedstorage:barrel', [Text.of('Combine with Vanilla planks to change wood type.')])
-  allthemods.add('sophisticatedstorage:limited_barrel_1', [Text.of('Combine with Vanilla planks to change wood type.')])
-  allthemods.add('sophisticatedstorage:limited_barrel_2', [Text.of('Combine with Vanilla planks to change wood type.')])
-  allthemods.add('sophisticatedstorage:limited_barrel_3', [Text.of('Combine with Vanilla planks to change wood type.')])
-  allthemods.add('sophisticatedstorage:limited_barrel_4', [Text.of('Combine with Vanilla planks to change wood type.')])
+  allthemods.add('sophisticatedstorage:chest', [Text.translate('tooltip.atm9e.sophisticatedstorage.wood_change')])
+  allthemods.add('sophisticatedstorage:barrel', [Text.translate('tooltip.atm9e.sophisticatedstorage.wood_change')])
+  allthemods.add('sophisticatedstorage:limited_barrel_1', [Text.translate('tooltip.atm9e.sophisticatedstorage.wood_change')])
+  allthemods.add('sophisticatedstorage:limited_barrel_2', [Text.translate('tooltip.atm9e.sophisticatedstorage.wood_change')])
+  allthemods.add('sophisticatedstorage:limited_barrel_3', [Text.translate('tooltip.atm9e.sophisticatedstorage.wood_change')])
+  allthemods.add('sophisticatedstorage:limited_barrel_4', [Text.translate('tooltip.atm9e.sophisticatedstorage.wood_change')])
   
   //PHASING OUT FOR REMOVAL
-  allthemods.add(/^generatorgalore:.*/, [Text.of('Generator Galore will be removed in the next major update, replace existing generators until then.').red()])
+  allthemods.add(/^generatorgalore:.*/, [Text.translate('tooltip.atm9e.generatorgalore_removal').red()])
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9.

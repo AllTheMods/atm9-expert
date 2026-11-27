@@ -326,18 +326,19 @@ ServerEvents.recipes(allthemods => {
                 if (i < createDisplayParts.length - 1) createDisplay += ' ';
             }
             //datastick from scanning the certificate
+            const creatureText = Text.translate(`atm9e.hnn.creature.${creature}`);
             const modelCertificate = Item.of('gtceu:stem_cells', `{certificate:{id:"hostilenetworks:${creature}"}}`)
-                .withName(Text.of(`${createDisplay} Neurons`).red())
+                .withName(Text.translate('atm9e.hnn.neurons.name', creatureText).red())
                 .withLore([
-                    Text.of(`Self-Aware ${createDisplay} Neurons`).gold(),
-                    Text.of('These neurons have been certified by the').white(),
-                    Text.of('Hostile Networks Corporation.').white(),
-                    Text.of('It is guaranteed to be self-aware').white(),
+                    Text.translate('atm9e.hnn.neurons.lore.1', creatureText).gold(),
+                    Text.translate('atm9e.hnn.neurons.lore.2').white(),
+                    Text.translate('atm9e.hnn.neurons.lore.3').white(),
+                    Text.translate('atm9e.hnn.neurons.lore.4').white(),
                 ]).strongNBT();
 
             //datastick from scanner
 
-            const bacteria = Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"PichiaPastoris"}').strongNBT()
+            const bacteria = Item.of('gtceu:bacteria_colony_dust', '{bacteriaSpecies:"PichiaPastoris"}').weakNBT()
             allthemods.recipes.gtceu.neuro_interface(`${generatedId}_neural_interface`)
                 .itemInputs(bacteria)
                 .inputItemNbtPredicate(model, modelPredicate)

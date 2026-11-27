@@ -1241,7 +1241,7 @@ StartupEvents.registry('item', allthemods => {
         list.forEach(entry => {
             const item = allthemods.create(`gtceu:${entry.id}`)
                 .displayName(entry.name)
-                .tooltip(entry.tooltip)
+                .tooltip(Text.translate(`item.gtceu.${entry.id}.tooltip`))
                 //.rarity('ie_masterwork')
 
             if (entry.texture) item.texture(entry.texture)
