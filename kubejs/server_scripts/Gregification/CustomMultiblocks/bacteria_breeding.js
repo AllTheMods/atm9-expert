@@ -13,9 +13,9 @@ ServerEvents.recipes(allthemods => {
     };
 
     const vatTiers = {
-        1: { fluid: 'gtceu:sugar_water', coil: vatCoils.rtm_alloy, chance: 35, volts: IV },
-        2: { fluid: 'gtceu:raw_growth_medium', coil: vatCoils.hssg, chance: 25, volts: LuV },
-        3: { fluid: 'gtceu:sterilized_growth_medium', coil: vatCoils.naquadah, chance: 15, volts: ZPM },
+        1: { fluid: '#forge:sugar_water', coil: vatCoils.rtm_alloy, chance: 35, volts: IV },
+        2: { fluid: '#forge:growth_medium', coil: vatCoils.hssg, chance: 25, volts: LuV },
+        3: { fluid: '#forge:sterilized_growth_medium', coil: vatCoils.naquadah, chance: 15, volts: ZPM },
         4: { fluid: '#forge:naquadria_awakened', coil: vatCoils.trinium, chance: 10, volts: UV }
     };
 
@@ -29,7 +29,7 @@ ServerEvents.recipes(allthemods => {
             parent: null,
             children: [],
             origin: 'minecraft:crimson_fungus',
-            catalyst: 'mekanism:hdpe_rod'
+            catalyst: 'gtceu:polytetrafluoroethylene_rod'
             //uses: used to enhance potassium calcium orthosilicate plates to make a new type of composite plating for spate missions however it gets implemented
         },
 
@@ -326,6 +326,7 @@ ServerEvents.recipes(allthemods => {
             .inputFluids(fluids)
             .chancedOutput(bacteriaItems[strain.nbt], tierData.chance * 100, 0)
             .duration(200 * strain.bTier)
+            .addData('ebf_temp', 5400)
             .EUt(tierData.volts);
     });
 
@@ -350,6 +351,7 @@ ServerEvents.recipes(allthemods => {
             .inputFluids(fluids)
             .chancedOutput(bacteriaItems[strain.nbt], tierData.chance * 100, 0)
             .duration(250 * strain.bTier)
+            .addData('ebf_temp', 5400)
             .EUt(tierData.volts);
     });
 

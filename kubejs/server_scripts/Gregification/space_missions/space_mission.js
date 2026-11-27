@@ -24,7 +24,7 @@ ServerEvents.recipes(allthemods => {
         }
         let list = [];
         if (kind === 'fluid') {
-            var fluidId = 'gtceu:' + name;
+            var fluidId = name.indexOf(':') > -1 ? name : 'gtceu:' + name;
             if (fluidOk(fluidId)) return { type: 'fluid', id: fluidId, amount: amount * S.FLUID_BUCKET };
             return null;
         }
@@ -207,7 +207,7 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.assembler('gregification:space/blank_destination_card')
         .itemInputs('1x #forge:plates/aluminum', '2x #forge:foils/copper')
-        .circuit(5)
+        .circuit(21)
         .itemOutputs('4x gtceu:blank_destination_card')
         .duration(100)
         .EUt(HV);
@@ -257,7 +257,7 @@ ServerEvents.recipes(allthemods => {
 
         var hullInputs = [frame];
         hullInputs.push('8x #forge:plates/' + p.hull);
-        addPart('hull_mk' + t, t, hullInputs, 'gtceu:ship_hull_mk' + t, rTherm).circuit(11);
+        addPart('hull_mk' + t, t, hullInputs, 'gtceu:ship_hull_mk' + t, rTherm).circuit(22);
 
         var engineInputs = [frame];
         if (t <= 2) {
@@ -309,7 +309,7 @@ ServerEvents.recipes(allthemods => {
 
         allthemods.recipes.gtceu.assembler('gregification:space/encoder_plate_mk' + t)
             .itemInputs('2x #forge:plates/' + p.hull)
-            .circuit(6)
+            .circuit(23)
             .itemOutputs('4x gtceu:encoder_plate_mk' + t)
             .duration(100)
             .EUt(VOLT[S.SHIP_TIER_VOLTAGE[t]]);
@@ -338,6 +338,37 @@ ServerEvents.recipes(allthemods => {
         .itemOutputs('gtceu:payload_opener')
         .duration(400)
         .EUt(HV);
+
+    const droneDuration = 200;
+    const droneEU = HV;
+    
+    allthemods.recipes.gtceu.destination_encoder_t1('gregification:space/encode/overworld_card')
+        .itemInputs('#gtceu:circuits/hv')
+        .circuit(11)
+        .itemOutputs('gtceu:overworld_destination_card')
+        .duration(droneDuration)
+        .EUt(droneEU);
+   
+    allthemods.recipes.gtceu.destination_encoder_t1('gregification:space/encode/nether_card')
+        .itemInputs('#gtceu:circuits/hv')
+        .circuit(12)
+        .itemOutputs('gtceu:nether_destination_card')
+        .duration(droneDuration)
+        .EUt(droneEU);
+    
+    allthemods.recipes.gtceu.destination_encoder_t1('gregification:space/encode/end_card')
+        .itemInputs('#gtceu:circuits/hv')
+        .circuit(13)
+        .itemOutputs('gtceu:end_destination_card')
+        .duration(droneDuration)
+        .EUt(droneEU);
+
+    allthemods.recipes.gtceu.destination_encoder_t1('gregification:space/encode/twilight_card')
+        .itemInputs('#gtceu:circuits/hv')
+        .circuit(14)
+        .itemOutputs('gtceu:twilight_destination_card')
+        .duration(droneDuration)
+        .EUt(droneEU);
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

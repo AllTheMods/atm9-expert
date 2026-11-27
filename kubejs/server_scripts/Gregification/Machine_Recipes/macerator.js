@@ -82,6 +82,12 @@ allthemods.recipes.gtceu.forge_hammer('gregification:blue_ice_dust')
         .duration(60)
         .EUt(LV);
 
+allthemods.recipes.gtceu.forge_hammer('gregification:dry_ice_dust')
+        .itemInputs('#forge:ices/dry')
+        .itemOutputs('2x gtceu:dry_ice_dust')
+        .duration(60)
+        .EUt(LV);
+
 allthemods.recipes.gtceu.macerator('gregification:magebloom_dust')
         .itemInputs('ars_nouveau:magebloom')
         .itemOutputs('2x gtceu:magebloom_dust')

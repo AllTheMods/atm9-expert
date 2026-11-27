@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#c6bdcf",
+  "particleColor": "#d4c5d2",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/strontium/bee",
+  "flowerTag": "forge:storage_blocks/strontium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

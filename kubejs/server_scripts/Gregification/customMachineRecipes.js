@@ -1,6 +1,7 @@
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
 // As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
 
+//search:machines
 //@ts-check
 ServerEvents.recipes(allthemods => {
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
@@ -147,6 +148,7 @@ ServerEvents.recipes(allthemods => {
         { machine: '_botanical_brewery', startTier: 3, endTier: 8 },
         { machine: '_pure_daisy', startTier: 1, endTier: 8 },
         { machine: '_twilight_layline', startTier: 5, endTier: 8 },
+        { machine: '_bit_processor', startTier: 1, endTier: 8 },
     ]
 
     machineTiers.forEach(tData => {
@@ -161,6 +163,21 @@ ServerEvents.recipes(allthemods => {
         let motor = `gtceu:${tData.tier}_electric_motor`;
 
         customMachines.forEach(mData => {
+            if (mData.machine == '_bit_processor' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
+                allthemods.shaped(`gtceu:${tData.tier}_bit_processor`, [
+                    'TIT',
+                    'MHM',
+                    'CVC'
+                ], {
+                    H: hull,
+                    T: plate,
+                    C: circuit,
+                    I: piston,
+                    M: motor,
+                    V: 'forestry:centrifuge'
+                }).id(`gregification:${tData.tier}_bit_processor`);
+            }
+
             if (mData.machine == '_twilight_layline' && tData.t >= mData.startTier && tData.t <= mData.endTier) {
                 let laylinePlate = {
                     5: '#forge:dense_plates/knightmetal',

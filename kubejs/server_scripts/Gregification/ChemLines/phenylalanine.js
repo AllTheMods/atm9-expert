@@ -56,7 +56,7 @@ ServerEvents.recipes(allthemods => {
     allthemods.recipes.gtceu.chemical_reactor('gregification:chemical_reactor/phenolic_resin')
         .itemInputs('#forge:dusts/phenyl')
         .inputFluids(['#forge:formaldehyde 1000', '#forge:oxygen 1000'])
-        .outputFluids(['gtceu:phenolic_resin 1000', 'gtceu:hydrogen 1000'])
+        .outputFluids(['immersiveengineering:phenolic_resin 1000', 'gtceu:hydrogen 1000'])
         .duration(300)
         .EUt(phenylalanineEU);
 });

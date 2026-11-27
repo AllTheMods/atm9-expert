@@ -1,0 +1,12 @@
+{
+  "primaryColor": "#8acdcd",
+  "particleColor": "#94d2ce",
+  "beeTexture": "productivebees:textures/entity/bee/holmium/bee",
+  "flowerTag": "forge:storage_blocks/holmium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

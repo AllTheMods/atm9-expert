@@ -443,7 +443,7 @@ ServerEvents.recipes(allthemods => {
             'botania:rune_mana',
             'occultism:research_fragment_dust'
 		],
-        '#forge:ethylene 576',
+        '#forge:polyethylene 576',
 		'sophisticatedstorage:controller',		
 		MV,
 		600

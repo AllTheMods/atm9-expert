@@ -63,19 +63,19 @@ ServerEvents.recipes(allthemods => {
     });
 
     addCentrifugeChanced(
-        ['4x thermal:oil_sand'],      // Guaranteed Input
-        null,                              // Fluid In
-        [],          // Guaranteed Output
+        ['4x thermal:oil_sand'],
+        null,
+        [],
         [
-            ['minecraft:sand', 8500], // 85% chance (in basis points)
-            ['gtceu:sulfur_dust', 1000, 500], // 10% base, 5% bonus
-            ['minecraft:gunpowder', 1000, 500], // 10% base, 5% bonus
-            ['thermal:bitumen', 1000, 500], // 10% base, 5% bonus
-            ['gtceu:carbon_dust', 1000, 500], // 10% base, 5% bonus
+            ['minecraft:sand', 8500],
+            ['gtceu:sulfur_dust', 2500, 1500],
+            ['minecraft:gunpowder', 1000, 1500],
+            ['thermal:bitumen', 5000, 2500],
+            ['gtceu:carbon_dust', 2000, 1000],
         ],
-        'gtceu:oil 1000',                              // Fluid Out
-        MV,                                // EUt
-        1200,                                // duration
+        'gtceu:oil 1000',
+        MV,
+        1200,
         'bituminous_sand_processing'
     );
 

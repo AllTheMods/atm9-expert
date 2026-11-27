@@ -1,0 +1,12 @@
+{
+  "primaryColor": "#c6ccd3",
+  "particleColor": "#c1cdd4",
+  "beeTexture": "productivebees:textures/entity/bee/gallium/bee",
+  "flowerTag": "forge:storage_blocks/gallium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

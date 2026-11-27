@@ -1,0 +1,12 @@
+{
+  "primaryColor": "#b0adac",
+  "particleColor": "#ccc9c8",
+  "beeTexture": "productivebees:textures/entity/bee/cadmium/bee",
+  "flowerTag": "forge:storage_blocks/cadmium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

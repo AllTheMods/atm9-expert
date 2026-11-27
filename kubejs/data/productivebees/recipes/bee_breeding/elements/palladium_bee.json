@@ -1,0 +1,26 @@
+{
+  "type": "productivebees:bee_breeding",
+  "parent1": "productivebees:copper",
+  "parent2": "productivebees:nickel",
+  "offspring": [
+    "productivebees:palladium"
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:copper"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:nickel"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:palladium"
+    }
+  ]
+}

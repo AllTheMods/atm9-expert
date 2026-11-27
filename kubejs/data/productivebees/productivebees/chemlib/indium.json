@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#c4cad0",
+  "particleColor": "#c4d4d6",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/indium/bee",
+  "flowerTag": "forge:storage_blocks/indium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

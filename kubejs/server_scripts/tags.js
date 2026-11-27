@@ -4,6 +4,21 @@
 
 ServerEvents.tags('item', allthemods => {
 
+  allthemods.add('ftbultimine:excluded_blocks', [
+    '@waystones',
+    'immersiveengineering:coke_oven', 'immersiveengineering:blast_furnace',
+    'immersiveengineering:advanced_blast_furnace', 'immersiveengineering:alloy_smelter',
+    'immersiveengineering:blastfurnace_preheater', 'immersiveengineering:furnace_heater',
+    'immersiveengineering:arc_furnace', 'immersiveengineering:assembler',
+    'immersiveengineering:auto_workbench', 'immersiveengineering:bottling_machine',
+    'immersiveengineering:crusher', 'immersiveengineering:diesel_generator',
+    'immersiveengineering:excavator', 'immersiveengineering:fermenter',
+    'immersiveengineering:fluid_pump', 'immersiveengineering:lightning_rod',
+    'immersiveengineering:metal_press', 'immersiveengineering:mixer',
+    'immersiveengineering:refinery', 'immersiveengineering:sawmill',
+    'immersiveengineering:silo', 'immersiveengineering:squeezer',
+    'immersiveengineering:tank'
+  ])
 
   allthemods.add('minecraft:boats', /byg:\w+?_boat/)
   allthemods.add('minecraft:chest_boats', /byg:.+?_chest_boat/)
@@ -12,7 +27,7 @@ ServerEvents.tags('item', allthemods => {
   allthemods.add('forge:foils/polyethylene', 'mekanism:hdpe_pellet')
 
   allthemods.add('forge:dusts/ender', 'ae2:ender_dust')
-  allthemods.add('forge:dusts/wood', 'forestry:wood_pulp')  
+  allthemods.add('forge:dusts/wood', 'forestry:wood_pulp')
   allthemods.add('ars_nouveau:golem/shard', ['minecraft:amethyst_shard', 'ae2:certus_quartz_crystal'])
   allthemods.add('forge:raw_materials', ['silentgear:raw_azure_silver', 'silentgear:raw_crimson_iron'])
   allthemods.add('forge:rubber', ['ftbic:rubber', 'industrialforegoing:dryrubber', 'thermal:cured_rubber'])

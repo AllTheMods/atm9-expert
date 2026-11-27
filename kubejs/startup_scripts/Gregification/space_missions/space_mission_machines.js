@@ -41,11 +41,6 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
 })
 
 GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
-    var chanceBoost = Java.loadClass('com.gregtechceu.gtceu.api.recipe.chance.boost.ChanceBoostFunction').OVERCLOCK;
-    ['payload_opener', 'scrap_reclaimer'].forEach(function (name) {
-        GTRecipeTypes.get(name).setChanceFunction(chanceBoost);
-    });
-
     allthemods.create('destination_encoder', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('destination_encoder_t1', 'destination_encoder_t2', 'destination_encoder_t3', 'destination_encoder_t4', 'destination_encoder_t5', 'destination_encoder_t6')

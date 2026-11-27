@@ -7,7 +7,7 @@
 //   - the four circuit stages per family (processor, assembly, computer, mainframe) from global.circuitRecipes
 ServerEvents.recipes(allthemods => {
     const [ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX] = GTValues.VA
-
+    const bouleTemp = 10800
     // step name in the arrays -> recipe type
     const STEP_MACHINE = {
         matrix: 'assembler',
@@ -107,6 +107,7 @@ ServerEvents.recipes(allthemods => {
         r.duration(duration)
         r.EUt(eut)
         if (sterile) r.cleanroom(CleanroomType.STERILE_CLEANROOM)
+        if (type === 'crystal_growth_chamber') r.addData('ebf_temp', bouleTemp)
         if (extra) extra(r)
         return true
     }

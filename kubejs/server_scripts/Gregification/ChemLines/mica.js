@@ -1,3 +1,6 @@
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
+
 ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA;
 
@@ -16,31 +19,22 @@ ServerEvents.recipes(allthemods => {
     const insulatorSheetDuration = 200;
     const insulatorSheetEut = MV;
 
-    const cupronickelCoilDuration = 200;
-    const cupronickelCoilEut = LV;
+    const coils = [
+        { id: 'cupronickel',         wire: 'cupronickel',         foil: 'bronze',             extra: null,                  micaFoils: 4,  fluid: 'tin_alloy',      fluidAmount: 144, duration: 200, eut: LV  },
+        { id: 'kanthal',             wire: 'kanthal',             foil: 'aluminium',          extra: null,                  micaFoils: 4,  fluid: 'copper',         fluidAmount: 144, duration: 300, eut: MV  },
+        { id: 'nichrome',            wire: 'nichrome',            foil: 'stainless_steel',    extra: null,                  micaFoils: 4,  fluid: 'aluminium',      fluidAmount: 144, duration: 400, eut: HV  },
+        { id: 'rtm_alloy',           wire: 'rtm_alloy',           foil: 'vanadium_steel',     extra: null,                  micaFoils: 4,  fluid: 'nichrome',       fluidAmount: 144, duration: 500, eut: EV  },
+        { id: 'hssg',                wire: 'hssg',                foil: 'tungsten_carbide',   extra: null,                  micaFoils: 4,  fluid: 'tungsten',       fluidAmount: 144, duration: 600, eut: IV  },
+        { id: 'naquadah',            wire: 'naquadah',            foil: 'osmium',             extra: null,                  micaFoils: 4,  fluid: 'tungsten_steel', fluidAmount: 144, duration: 700, eut: LuV },
+        { id: 'trinium',             wire: 'trinium',             foil: 'enriched_naquadah',  extra: null,                  micaFoils: 4,  fluid: 'naquadah',       fluidAmount: 144, duration: 800, eut: ZPM },
+        { id: 'tritanium',           wire: 'tritanium',           foil: 'naquadria',          extra: null,                  micaFoils: 4,  fluid: 'trinium',        fluidAmount: 144, duration: 900, eut: UV  },
+        { id: 'draconium',           wire: 'draconium',           foil: 'gaia',               extra: 'holmium',             micaFoils: 16, fluid: 'nobelium',       fluidAmount: 288, duration: 600, eut: UHV },
+        { id: 'draconium_awakened',  wire: 'draconium_awakened',  foil: 'insanite',           extra: 'thulium',             micaFoils: 32, fluid: 'lawrencium',     fluidAmount: 288, duration: 600, eut: UEV },
+        { id: 'etrium',              wire: 'etrium',              foil: 'organic_polymer',    extra: 'ytterbium',           micaFoils: 48, fluid: 'mendelevium',    fluidAmount: 288, duration: 600, eut: UIV },
+        { id: 'infinity',            wire: 'infinity',            foil: 'chaos_plastic',      extra: 'erbium',              micaFoils: 64, fluid: 'roentgenium',    fluidAmount: 288, duration: 600, eut: UXV }
+    ];
 
-    const kanthalCoilDuration = 300;
-    const kanthalCoilEut = MV;
-
-    const nichromeCoilDuration = 400;
-    const nichromeCoilEut = HV;
-
-    const rtmCoilDuration = 500;
-    const rtmCoilEut = EV;
-
-    const hssgCoilDuration = 600;
-    const hssgCoilEut = IV;
-
-    const naquadahCoilDuration = 700;
-    const naquadahCoilEut = LuV;
-
-    const triniumCoilDuration = 800;
-    const triniumCoilEut = ZPM;
-
-    const tritaniumCoilDuration = 900;
-    const tritaniumCoilEut = UV;
-
-    allthemods.remove({ type: 'gtceu:assembler', output: /^gtceu:(cupronickel|kanthal|nichrome|rtm_alloy|hssg|naquadah|trinium|tritanium)_coil_block$/ });
+    allthemods.remove({ type: 'gtceu:assembler', output: /^gtceu:(cupronickel|kanthal|nichrome|rtm_alloy|hssg|naquadah|trinium|tritanium|draconium|draconium_awakened|etrium|infinity)_coil_block$/ });
 
     allthemods.recipes.gtceu.macerator('gregification:mica_block_to_dust')
         .itemInputs('envirocore:mica')
@@ -72,87 +66,23 @@ ServerEvents.recipes(allthemods => {
         .duration(insulatorSheetDuration)
         .EUt(insulatorSheetEut);
 
-    allthemods.recipes.gtceu.assembler('gregification:coil_cupronickel')
-        .itemInputs('8x #gtceu:wires/double/cupronickel', '8x #forge:foils/bronze', '4x #forge:foils/mica_insulator')
-        .inputFluids('#forge:tin_alloy 144')
-        .itemOutputs('gtceu:cupronickel_coil_block')
-        .duration(cupronickelCoilDuration)
-        .EUt(cupronickelCoilEut);
+    coils.forEach(coil => {
+        let inputs = [
+            '8x #gtceu:wires/double/' + coil.wire,
+            '8x #forge:foils/' + coil.foil
+        ];
+        if (coil.extra) {
+            inputs.push('8x #forge:plates/' + coil.extra);
+        }
+        inputs.push(coil.micaFoils + 'x #forge:foils/mica_insulator');
 
-    allthemods.recipes.gtceu.assembler('gregification:coil_kanthal')
-        .itemInputs('8x #gtceu:wires/double/kanthal', '8x #forge:foils/aluminium', '4x #forge:foils/mica_insulator')
-        .inputFluids('#forge:copper 144')
-        .itemOutputs('gtceu:kanthal_coil_block')
-        .duration(kanthalCoilDuration)
-        .EUt(kanthalCoilEut);
-
-    allthemods.recipes.gtceu.assembler('gregification:coil_nichrome')
-        .itemInputs('8x #gtceu:wires/double/nichrome', '8x #forge:foils/stainless_steel', '4x #forge:foils/mica_insulator')
-        .inputFluids('#forge:aluminium 144')
-        .itemOutputs('gtceu:nichrome_coil_block')
-        .duration(nichromeCoilDuration)
-        .EUt(nichromeCoilEut);
-
-    allthemods.recipes.gtceu.assembler('gregification:coil_rtm_alloy')
-        .itemInputs('8x #gtceu:wires/double/rtm_alloy', '8x #forge:foils/vanadium_steel', '4x #forge:foils/mica_insulator')
-        .inputFluids('#forge:nichrome 144')
-        .itemOutputs('gtceu:rtm_alloy_coil_block')
-        .duration(rtmCoilDuration)
-        .EUt(rtmCoilEut);
-
-    allthemods.recipes.gtceu.assembler('gregification:coil_hssg')
-        .itemInputs('8x #gtceu:wires/double/hssg', '8x #forge:foils/tungsten_carbide', '4x #forge:foils/mica_insulator')
-        .inputFluids('#forge:tungsten 144')
-        .itemOutputs('gtceu:hssg_coil_block')
-        .duration(hssgCoilDuration)
-        .EUt(hssgCoilEut);
-
-    allthemods.recipes.gtceu.assembler('gregification:coil_naquadah')
-        .itemInputs('8x #gtceu:wires/double/naquadah', '8x #forge:foils/osmium', '4x #forge:foils/mica_insulator')
-        .inputFluids('#forge:tungsten_steel 144')
-        .itemOutputs('gtceu:naquadah_coil_block')
-        .duration(naquadahCoilDuration)
-        .EUt(naquadahCoilEut);
-
-    allthemods.recipes.gtceu.assembler('gregification:coil_trinium')
-        .itemInputs('8x #gtceu:wires/double/trinium', '8x #forge:foils/enriched_naquadah', '4x #forge:foils/mica_insulator')
-        .inputFluids('#forge:naquadah 144')
-        .itemOutputs('gtceu:trinium_coil_block')
-        .duration(triniumCoilDuration)
-        .EUt(triniumCoilEut);
-
-    allthemods.recipes.gtceu.assembler('gregification:coil_tritanium')
-        .itemInputs('8x #gtceu:wires/double/tritanium', '8x #forge:foils/naquadria', '4x #forge:foils/mica_insulator')
-        .inputFluids('#forge:trinium 144')
-        .itemOutputs('gtceu:tritanium_coil_block')
-        .duration(tritaniumCoilDuration)
-        .EUt(tritaniumCoilEut);
-
-    allthemods.recipes.gtceu.assembler('gregification:coil/draconium')
-        .itemInputs('8x #gtceu:wires/double/draconium', '8x #forge:foils/gaia', '8x #forge:plates/holmium', '16x #forge:foils/mica_insulator')
-        .inputFluids('#forge:nobelium 288')
-        .itemOutputs('gtceu:draconium_coil_block')
-        .duration(600)
-        .EUt(UHV);
-
-    allthemods.recipes.gtceu.assembler('gregification:coil/draconium_awakened')
-        .itemInputs('8x #gtceu:wires/double/draconium_awakened', '8x #forge:foils/insanite', '8x #forge:plates/thulium', '32x #forge:foils/mica_insulator')
-        .inputFluids('#forge:lawrencium 288')
-        .itemOutputs('gtceu:draconium_awakened_coil_block')
-        .duration(600)
-        .EUt(UEV);
-
-    allthemods.recipes.gtceu.assembler('gregification:coil/etrium')
-        .itemInputs('8x #gtceu:wires/double/etrium', '8x #forge:foils/organic_polymer', '8x #forge:plates/ytterbium', '48x #forge:foils/mica_insulator')
-        .inputFluids('#forge:mendelevium 288')
-        .itemOutputs('gtceu:etrium_coil_block')
-        .duration(600)
-        .EUt(UIV);
-
-    allthemods.recipes.gtceu.assembler('gregification:coil/infinity')
-        .itemInputs('8x #gtceu:wires/double/infinity', '8x #forge:foils/chaos_plastic', '8x #forge:plates/erbium', '64x #forge:foils/mica_insulator')
-        .inputFluids('#forge:roentgenium 288')
-        .itemOutputs('gtceu:infinity_coil_block')
-        .duration(600)
-        .EUt(UXV);
+        allthemods.recipes.gtceu.assembler('gregification:coil/' + coil.id)
+            .itemInputs(inputs)
+            .inputFluids('#forge:' + coil.fluid + ' ' + coil.fluidAmount)
+            .itemOutputs('gtceu:' + coil.id + '_coil_block')
+            .duration(coil.duration)
+            .EUt(coil.eut);
+    });
 });
+// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
+// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

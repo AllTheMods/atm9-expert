@@ -43,7 +43,7 @@ ServerEvents.recipes(allthemods => {
 			'8x industrialforegoing:black_hole_controller',
 			'16x ironfurnaces:unobtainium_furnace',
 			//'32x computercraft:computer_advanced',
-			Item.of('exchangers:end_steel_exchanger', 8, '{Energy:50000000}').weakNBT()
+			//Item.of('exchangers:end_steel_exchanger', 8, '{Energy:50000000}').weakNBT()
 		], 
 		[
 			Fluid.of('gtceu:europium', 10000)

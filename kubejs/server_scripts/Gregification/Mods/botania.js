@@ -41,6 +41,7 @@ ServerEvents.recipes(allthemods => {
             .inputFluids('minecraft:lava 1000')
             .inputFluids(`${s.water} 320`)
             .outputFluids(`gtceu:mana_essence ${320 * s.n}`)
+            .addData('ebf_temp', 3600)
             .circuit(1)
             .duration(400);
 
@@ -48,6 +49,7 @@ ServerEvents.recipes(allthemods => {
             .inputFluids('minecraft:lava 1000')
             .inputFluids(`${s.water} 50`)
             .outputFluids(`gtceu:source ${50 * s.n}`)
+            .addData('ebf_temp', 3600)
             .circuit(2)
             .duration(400);
 
@@ -71,6 +73,7 @@ ServerEvents.recipes(allthemods => {
             .itemInputs('minecraft:cake')
             .inputFluids(`${s.water} 10800`)
             .outputFluids(`gtceu:mana_essence ${10800 * s.n}`)
+            .addData('ebf_temp', 3600)
             .circuit(1)
             .duration(14400);
 
@@ -78,6 +81,7 @@ ServerEvents.recipes(allthemods => {
             .itemInputs('minecraft:cake')
             .inputFluids(`${s.water} 1800`)
             .outputFluids(`gtceu:source ${1800 * s.n}`)
+            .addData('ebf_temp', 3600)
             .circuit(2)
             .duration(14400);
     });
@@ -731,11 +735,25 @@ ServerEvents.recipes(allthemods => {
         .chancedOutput('32x gtceu:raw_pyrolusite', 6000, 0)
         .chancedOutput('32x gtceu:raw_pentlandite', 6000, 0)
         .chancedOutput('32x gtceu:raw_sphalerite', 5000, 0)
-        .chancedOutput('32x gtceu:raw_scheelite', 1500, 0)
+        .chancedOutput('32x gtceu:raw_scheelite', 1500, 0)        
         .circuit(3)
         .duration(metalDuration)
         .EUt(metalEut);
 
+    allthemods.recipes.gtceu.orechid_grove('gregification:orechid_grove_metallurgical_2')
+        .itemInputs('64x minecraft:stone', '16x minecraft:netherrack', '16x minecraft:end_stone')
+        .input(GTX.MANA, metalMana)
+        //.chancedOutput('32x gtceu:thorn_rose_dust', 7500, 0)  
+        .chancedOutput('32x gtceu:raw_quartzite', 5000, 0)        
+        .chancedOutput('32x gtceu:raw_talc', 2000, 0)  
+        .chancedOutput('32x gtceu:raw_soapstone', 2000, 0)  
+        .chancedOutput('32x gtceu:raw_electrotine', 1000, 0)          
+        .chancedOutput('32x gtceu:raw_drenched_iron', 500, 0)  
+        .chancedOutput('32x thermal:bitumen', 3500, 0)  
+        .circuit(4)
+        .duration(metalDuration)
+        .EUt(metalEut);
+        
     const brewMana = 4000;
     const brewDuration = 200;
     const brewVoltage = HV;

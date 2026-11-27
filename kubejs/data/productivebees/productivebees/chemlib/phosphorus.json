@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#904456",
+  "particleColor": "#c595a2",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/phosphorus/bee",
+  "flowerTag": "forge:dusts/phosphorus",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

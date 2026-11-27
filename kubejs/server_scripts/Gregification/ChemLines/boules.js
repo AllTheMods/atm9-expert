@@ -16,6 +16,7 @@ ServerEvents.recipes(allthemods => {
         .inputFluids('#forge:zirconium 1296')
         .itemOutputs('gtceu:cubic_zirconia_boule')
         .duration(800)
+        .addData('ebf_temp', 9001)
         .EUt(LuV);
 
     allthemods.recipes.gtceu.chemical_reactor('gregification:yttrium_oxide_dust')
@@ -30,6 +31,7 @@ ServerEvents.recipes(allthemods => {
         .inputFluids('#forge:bismuth_telluride 1296')
         .itemOutputs('gtceu:bismuth_telluride_boule')
         .duration(800)
+        .addData('ebf_temp', 7200)
         .EUt(ZPM);
     
         

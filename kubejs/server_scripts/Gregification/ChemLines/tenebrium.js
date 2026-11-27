@@ -16,6 +16,7 @@ ServerEvents.recipes(allthemods => {
         .itemInputs('#forge:dusts/unrefined_tenebrius')
         .inputFluids('#forge:liquid_chaos 2000')        
         .itemOutputs('gtceu:refined_tenebrius_gem')
+        .addData('ebf_temp', 7200)
         .duration(800)
         .EUt(TenebriumEU);
 

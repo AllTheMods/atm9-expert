@@ -166,84 +166,79 @@ ServerEvents.recipes(allthemods => {
         600
     );
 
-    //upgrade speed
     addAssembler(
         [
-            '4x #forge:plates/osmium',
-            '2x #forge:circuits/ultimate',
-            '2x #forge:plates/alloy_infused',
+            '2x #forge:plates/tungsten',
+            'mekanism:basic_control_circuit',
+            '#forge:plates/alloy_infused',
             'mekanism:energy_tablet'
         ],
         [
-            'gtceu:polytetrafluoroethylene 100'
+            '#forge:polybenzimidazole 144'
         ],
         'mekanism:upgrade_speed',
-        LuV,
-        600
+        IV,
+        400
     );
 
-    //upgrade energy
     addAssembler(
         [
-            '4x #forge:plates/gold',
-            '2x #forge:circuits/ultimate',
-            '2x #forge:plates/alloy_infused',
+            '2x #forge:plates/electrum',
+            'mekanism:basic_control_circuit',
+            '#forge:plates/alloy_infused',
             'mekanism:energy_tablet'
         ],
         [
-            'gtceu:polytetrafluoroethylene 100'
+            '#forge:polybenzimidazole 144'
         ],
         'mekanism:upgrade_energy',
-        LuV,
-        600
+        IV,
+        400
     );
 
-    //upgrade filter
     addAssembler(
         [
-            '4x #forge:plates/tin',
-            '2x #forge:circuits/ultimate',
-            '2x #forge:plates/alloy_infused',
+            '2x #forge:plates/silver',
+            'mekanism:basic_control_circuit',
+            '#forge:plates/alloy_infused',
             'mekanism:energy_tablet'
         ],
         [
-            'gtceu:polytetrafluoroethylene 100'
+            '#forge:polybenzimidazole 144'
         ],
         'mekanism:upgrade_filter',
-        LuV,
-        600
+        IV,
+        400
     );
 
-    //upgrade gas
     addAssembler(
         [
-            '4x #forge:plates/steel',
-            '2x #forge:circuits/ultimate',
-            '2x #forge:plates/alloy_infused',
+            '2x #forge:plates/titanium',
+            'mekanism:basic_control_circuit',
+            '#forge:plates/alloy_infused',
             'mekanism:energy_tablet'
         ],
         [
-            'gtceu:polytetrafluoroethylene 100'
+            '#forge:polybenzimidazole 144'
         ],
         'mekanism:upgrade_gas',
-        LuV,
-        600
+        IV,
+        400
     );
 
-    //upgrade muffler
     addAssembler(
         [
-            '4x #forge:plates/stainless_steel',
-            '2x #forge:circuits/ultimate',
-            '2x #forge:plates/alloy_infused',
+            '2x #forge:plates/steel',
+            'mekanism:basic_control_circuit',
+            '#forge:plates/alloy_infused',
             'mekanism:energy_tablet'
         ],
         [
-            'gtceu:polytetrafluoroethylene 100'
+            '#forge:polybenzimidazole 144'
         ],
         'mekanism:upgrade_muffling',
-        LuV,
-        600
+        IV,
+        400
     );
 
 
@@ -361,6 +356,115 @@ ServerEvents.recipes(allthemods => {
             }).id(`gregification:mekanism_${tier}_${type.name}`);
         });
     });
+
+
+    // Infusion conversion recipes for Mekanism
+
+
+    const setInfusion = (infuseName, sources) => {
+        sources.forEach(source => {
+            allthemods.custom({
+                type: 'mekanism:infusion_conversion',
+                input: { ingredient: { tag: source.tag } },
+                output: { amount: source.amount, infuse_type: 'mekanism:' + infuseName }
+            }).id('gregification:mekanism/infusion/' + infuseName + '/' + source.tag.replace(':', '/'))
+        })
+    }
+
+    setInfusion('redstone', [
+        { tag: 'mekanism:enriched/redstone', amount: 320 }    
+    ])
+
+    setInfusion('diamond', [
+        { tag: 'mekanism:enriched/diamond', amount: 320 }
+    ])
+
+    setInfusion('refined_obsidian', [
+        { tag: 'mekanism:enriched/obsidian', amount: 320 }
+    ])
+
+    allthemods.custom({
+        type: 'mekanism:enriching',
+        input: { ingredient: { tag: 'forge:dusts/infused_redstone' } },
+        output: { item: 'mekanism:enriched_redstone' }
+    }).id('gregification:mekanism/enriched_redstone_from_infused_redstone')
+
+    allthemods.custom({
+        type: 'mekanism:enriching',
+        input: { ingredient: { tag: 'forge:dusts/infused_diamond' } },
+        output: { item: 'mekanism:enriched_diamond' }
+    }).id('gregification:mekanism/enriched_diamond_from_infused_diamond')
+
+    allthemods.custom({
+        type: 'mekanism:enriching',
+        input: { ingredient: { tag: 'forge:dusts/infused_obsidian' } },
+        output: { item: 'mekanism:enriched_refined_obsidian' }
+    }).id('gregification:mekanism/enriched_obsidian_from_infused_obsidian')
+
+    allthemods.custom({
+        type: 'mekanism:metallurgic_infusing',
+        chemicalInput: { amount: 10, tag: 'mekanism:redstone' },
+        itemInput: { ingredient: { tag: 'forge:dusts/delta_plutonium_alloy' } },
+        output: { item: 'mekanism:alloy_infused' }
+    }).id('gregification:mekanism/infused_alloy')
+
+    allthemods.custom({
+        type: 'mekanism:metallurgic_infusing',
+        chemicalInput: { amount: 20, tag: 'mekanism:diamond' },
+        itemInput: { ingredient: { tag: 'forge:dusts/rheni_hafnium_alloy' } },
+        output: { item: 'mekanism:alloy_reinforced' }
+    }).id('gregification:mekanism/reinforced_alloy')
+
+    allthemods.custom({
+        type: 'mekanism:metallurgic_infusing',
+        chemicalInput: { amount: 40, tag: 'mekanism:refined_obsidian' },
+        itemInput: { ingredient: { tag: 'forge:dusts/praseodymium_nitinol_alloy' } },
+        output: { item: 'mekanism:alloy_atomic' }
+    }).id('gregification:mekanism/atomic_alloy') 
+
+    allthemods.recipes.gtceu.circuit_assembler('gregification:mekanism/advanced_control_circuit')
+        .itemInputs([
+            '#gtceu:circuits/luv',
+            'mekanism:alloy_infused',
+            '2x #gtceu:wires/single/samarium_iron_arsenic_oxide'
+        ])
+        .inputFluids('#forge:soldering_alloy 144')
+        .itemOutputs('mekanism:advanced_control_circuit')
+        .duration(200)
+        .EUt(LuV)
+
+    allthemods.recipes.gtceu.circuit_assembler('gregification:mekanism/basic_control_circuit')
+        .itemInputs([
+            '#gtceu:circuits/iv',
+            '#forge:double_plates/osmiridium',
+            '2x #gtceu:wires/single/uranium_triplatinum'
+        ])
+        .inputFluids('#forge:soldering_alloy 144')
+        .itemOutputs('mekanism:basic_control_circuit')
+        .duration(200)
+        .EUt(IV)
+
+    allthemods.recipes.gtceu.circuit_assembler('gregification:mekanism/elite_control_circuit')
+        .itemInputs([
+            '#gtceu:circuits/luv',
+            'mekanism:alloy_reinforced',
+            '2x #gtceu:wires/single/indium_tin_barium_titanium_cuprate'
+        ])
+        .inputFluids('#forge:soldering_alloy 144')
+        .itemOutputs('mekanism:elite_control_circuit')
+        .duration(200)
+        .EUt(ZPM)
+
+    allthemods.recipes.gtceu.circuit_assembler('gregification:mekanism/ultimate_control_circuit')
+        .itemInputs([
+            '#gtceu:circuits/luv',
+            'mekanism:alloy_atomic',
+            '2x #gtceu:wires/single/uranium_rhodium_dinaquadide'
+        ])
+        .inputFluids('#forge:soldering_alloy 144')
+        .itemOutputs('mekanism:ultimate_control_circuit')
+        .duration(200)
+        .EUt(UV)
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

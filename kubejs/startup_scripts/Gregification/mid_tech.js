@@ -61,10 +61,8 @@ GTCEuStartupEvents.registry('gtceu:machine', allthemods => {
             .rotationState(RotationState.NON_Y_AXIS)
             .recipeType("twilight_layline")
             .workableTieredHullModel("gtceu:block/machines/twilight_layline")
-    );
-
-    var chanceBoost = Java.loadClass('com.gregtechceu.gtceu.api.recipe.chance.boost.ChanceBoostFunction').OVERCLOCK;
-    GTRecipeTypes.get('subatomic_projectile_launcher').setChanceFunction(chanceBoost);
+    );    
+        
     allthemods.create('subatomic_projectile_launcher', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('subatomic_projectile_launcher')

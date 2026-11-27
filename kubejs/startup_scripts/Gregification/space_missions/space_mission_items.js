@@ -36,6 +36,10 @@ StartupEvents.registry('item', event => {
     make('kuiper_rock');
     make('kuiper_rock_dust');
     make('circuit_scrap');
+    make('overworld_destination_card', 'Overworld Destination Card');
+    make('nether_destination_card', 'Nether Destination Card');
+    make('end_destination_card', 'End Destination Card');
+    make('twilight_destination_card', 'Twilight Forest Destination Card');
 });
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

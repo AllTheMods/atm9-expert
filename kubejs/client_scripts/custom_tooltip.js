@@ -45,7 +45,7 @@ const bacteriaInfo = {
     Desulfovibrio: { name: "Desulfovibrio", uses: ["Spent nuclear waste processing"], breeds: ["Acidithiobacillus ferrooxidans"] },
     Dehalococcoides: { name: "Dehalococcoides", uses: ["Recycles slime waste water into stage 5 water"], breeds: [] },
     Rhodoferax: { name: "Rhodoferax ferrireducens", uses: ["Bacterial mana production from cake and sugar water"], breeds: [] },
-    LunarCaseous: { name: "Lunar Caseous", uses: [], breeds: [] },
+    LunarCaseous: { name: "Lunar Caseous", uses: ["Galalith Panel Casing (PCB Factory)"], breeds: [] },
     ArcaneMycelial: { name: "Arcane Mycelial", uses: ["Eldritch Spirit (Otherworld Miner)"], breeds: [] },
     CuproSymbiont: { name: "Cupro-Symbiont", uses: ["Dimensional seed"], breeds: [] },
     AreoMycorrhizalOstrum: { name: "Areo-Mycorrhizal Ostrum", uses: ["Crude oil from biomass, hydrogen and bone char"], breeds: [] },
@@ -54,7 +54,7 @@ const bacteriaInfo = {
     PichiaPastoris: { name: "Pichia pastoris", uses: ["Bus and advanced bus circuits", "Neuron model certification"], breeds: [] },
     Methanogenesis: { name: "Methanogenesis Dominus", uses: ["Stage 2 rocket fuel"], breeds: ["Deinococcus radiodurans"] },
     PHABioplastic: { name: "PHA Bioplastic Strain", uses: ["Substrate Board"], breeds: [] },
-    AcidithiobacillusFerrooxidans: { name: "Acidithiobacillus ferrooxidans", uses: [], breeds: [] },
+    AcidithiobacillusFerrooxidans: { name: "Acidithiobacillus ferrooxidans", uses: ["Twilight Layline ore generation"], breeds: [] },
     DeinococcusRadiodurans: { name: "Deinococcus radiodurans", uses: ["Stage 3 rocket fuel"], breeds: ["Sphingomonas"] },
     Sphingomonas: { name: "Sphingomonas", uses: ["Stage 4 rocket fuel"], breeds: [] },    
 };

@@ -1,6 +1,7 @@
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.
 // As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
 
+//search:mixer
 ServerEvents.recipes(allthemods => {
     const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
     // Resolves a voltage from a number, a numeric string ('2048'), or a tier name in any case ('LuV', 'luv', 'LUV')
@@ -33,6 +34,15 @@ ServerEvents.recipes(allthemods => {
     addMixer(['3x #forge:dusts/neodymium', '#forge:dusts/dysprosium'], '4x gtceu:neodymium_dysprosium_dopant_dust', ZPM, 400);
     addMixer(['2x #forge:dusts/neodymium', '#forge:dusts/terbium', '#forge:dusts/dysprosium'], '4x gtceu:neodymium_terbium_dysprosium_dopant_dust', ZPM, 400);
     addMixer(['2x #forge:dusts/neodymium', '#forge:dusts/praseodymium', '#forge:dusts/promethium', '#forge:dusts/terbium', '#forge:dusts/dysprosium'], '6x gtceu:neodymium_rare_earth_dopant_dust', ZPM, 400);
+    addMixer(['5x #forge:dusts/cobalt', '2x #forge:dusts/chromium', '#forge:dusts/molybdenum'], '8x gtceu:vitallium_dust', HV, 800);
+    addMixer(['6x #forge:dusts/copper', '#forge:dusts/beryllium'], '7x gtceu:beryllium_copper_dust', HV, 400);
+    addMixer(['3x #forge:dusts/gold', '#forge:dusts/bismuth'], '4x gtceu:bismuth_gold_dust', HV, 300);
+
+    allthemods.recipes.gtceu.mixer('gregification:arcane_wax_blend')
+        .itemInputs('#forge:dusts/soul_wax', '#forge:dusts/arcane_wax', '#forge:dusts/netherite', '#forge:dusts/source')
+        .itemOutputs('4x gtceu:arcane_wax_blend_dust')
+        .duration(200)
+        .EUt(EV)
 
     // ---- structural ----
     //corrosive_etrium_alloy (blast UHV)
@@ -215,6 +225,8 @@ ServerEvents.recipes(allthemods => {
     addMixer(['2x #forge:dusts/sculk', '5x #forge:dusts/enderium', '2x #forge:dusts/nether_star', '3x #forge:dusts/redstone'], '12x fluxnetworks:flux_dust', HV, 400)
 
 
+    addMixer(['3x #forge:dusts/gold', '#forge:dusts/titanium', '#forge:dusts/palladium'], '5x gtceu:titanium_palladium_gold_dust', IV, 600, 7);
+    addMixer(['3x #forge:dusts/gold', '#forge:dusts/titanium'], '3x gtceu:titanium_gold_dust', EV, 200, 5);
     addMixer(['4x #forge:dusts/titanium_carbonitride', '2x #forge:dusts/nickel', '1x #forge:dusts/molybdenum'],'7x gtceu:cermet_blend_dust',EV, 600)
     addMixer(['3x #forge:dusts/neodymium', '1x #forge:dusts/praseodymium'], 'gtceu:neodymium_praseodymium_dust', LuV, 600);
 
@@ -224,6 +236,81 @@ ServerEvents.recipes(allthemods => {
         '6x gtceu:zirconium_lattice_dust',
         EV,
         600
+    );
+
+    addMixer(
+        [
+            '3x #forge:dusts/plutonium_241',
+            '#forge:dusts/gallium',
+            '#forge:dusts/iridium',
+            '#forge:dusts/hsse'
+        ],
+        '6x gtceu:delta_plutonium_alloy_dust',
+        IV,
+        500
+    );
+
+    addMixer(
+        [
+            '4x #forge:dusts/signalum',
+            '#forge:dusts/zirconium',
+            '2x #forge:dusts/desh',
+            '#forge:dusts/cinnabar',
+            '#forge:dusts/promethium'
+        ],
+        '9x gtceu:infused_redstone_dust',
+        IV,
+        600
+    );
+
+    addMixer(
+        [
+            '#forge:dusts/rhenium_nickel_alloy',
+            '#forge:dusts/hsss',
+            '#forge:dusts/hafnium',
+            '#forge:dusts/scandium'
+        ],
+        '4x gtceu:rheni_hafnium_alloy_dust',
+        LuV,
+        500
+    );
+
+    addMixer(
+        [
+            '#forge:dusts/thorium_berkelium_alloy',
+            '6x #forge:dusts/stabilized_clathrate',
+            '#forge:dusts/ostrum',
+            '#forge:dusts/cerium',
+            '#forge:dusts/beryllium'
+        ],
+        '5x gtceu:infused_diamond_dust',
+        LuV,
+        700
+    );
+
+    addMixer(
+        [
+            '#forge:dusts/praseodymium_yttrium_silicate',
+            '#forge:dusts/bismuth_strontium_calcium_copper_oxide',
+            '#forge:dusts/nitinol'
+        ],
+        '3x gtceu:praseodymium_nitinol_alloy_dust',
+        ZPM,
+        800
+    );
+
+    addMixer(
+        [
+            '#forge:dusts/calorite',
+            '#forge:dusts/samarium_cobalt',
+            '#forge:dusts/ytterbium',
+            '#forge:dusts/caesium',
+            '#forge:dusts/rubidium',
+            '5x #forge:dusts/obsidian'
+        ],
+        '10x gtceu:infused_obsidian_dust',
+        ZPM,
+        900
     );
 
     //hepatizon
@@ -271,7 +358,15 @@ ServerEvents.recipes(allthemods => {
         500
     )
 
-    
+    addMixer(
+        [
+            '#forge:dusts/obsidian',
+            '#forge:dusts/diamond',
+        ],
+        '2x mekanism:dust_refined_obsidian',
+        LuV,
+        500
+    )
 
     //vibrant alloy
     addMixer(
@@ -569,6 +664,12 @@ ServerEvents.recipes(allthemods => {
         .itemInputs('#forge:dusts/bone', '#forge:dusts/enchanted_ash', '#forge:dusts/soda_ash', '#forge:dusts/ash', '#forge:dusts/gypsum', '#forge:dusts/potash')
         .itemOutputs('6x gtceu:bone_char_dust')
         .duration(200).EUt(HV);
+
+    allthemods.recipes.gtceu.mixer('gregification:forestry/refractory_composite_plate')
+        .itemInputs('2x #forge:dusts/refractory_wax', '2x #forge:dusts/brick', '2x #forge:dusts/blazing_pyrotheum')
+        .itemOutputs('6x gtceu:refractory_composite_dust')
+        .duration(400)
+        .EUt(IV)
 
 });
 

@@ -1,0 +1,15 @@
+{
+  "primaryColor": "#aacb46",
+  "particleColor": "#b0d248",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/roentgenium/bee",
+  "size": 0.5,
+  "selfbreed": false,
+  "flowerTag": "forge:storage_blocks/roentgenium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

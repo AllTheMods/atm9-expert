@@ -30,7 +30,7 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.chemical_reactor('allthemods:chemical_reactor/acetaldehyde')
         .inputFluids('#forge:ethanol 1000', '#forge:oxygen 1000')
-        .outputFluids('gtceu:acetaldehyde 1000')
+        .outputFluids('immersiveengineering:acetaldehyde 1000')
         .duration(duration)
         .EUt(EUSimple);
 

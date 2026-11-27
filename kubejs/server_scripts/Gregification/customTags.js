@@ -8,7 +8,7 @@ ServerEvents.tags('fluid', allthemods => {
 	allthemods.add('forge:diesel', 'gtceu:bio_diesel');
 	allthemods.add('forge:bio_diesel', 'pneumaticcraft:biodiesel');
 	allthemods.add('forge:bio_diesel', 'immersiveengineering:biodiesel');
-	allthemods.add('forge:ammonia', 'immersivegeology:fluid_ammonia_solution')
+	
 	allthemods.add('forge:liquid_soul', ['tconstruct:liquid_soul', 'gtceu:liquid_soul']);
 	allthemods.add('forge:blood', ['evilcraft:blood', 'bloodmagic:life_essence_fluid', 'gtceu:sanguine_concentrate']);
 	allthemods.add('forge:meat', 'gtceu:liquid_rotten_flesh');
@@ -25,6 +25,13 @@ ServerEvents.tags('fluid', allthemods => {
 	['corrosive','vengeful','destructive','demon','steadfast'].forEach(tag => {
 		allthemods.add('forge:will', `gtceu:${tag}`);
 	});		
+
+	allthemods.add('forge:mutation_fluid', ['gendustry:mutagen', 'gtceu:mutagen'])
+	allthemods.add('forge:growth_medium', ['gtceu:raw_growth_medium', 'gtceu:protein_growth_medium'])
+
+	Object.keys(global.unifiedFluidTags || {}).forEach(name => {
+		allthemods.add(`forge:${name}`, global.unifiedFluidTags[name]);
+	});
 })
 
 ServerEvents.tags('item', allthemods => {	
@@ -119,7 +126,7 @@ ServerEvents.tags('item', allthemods => {
 	allthemods.add('forge:ingots/alloy_atomic', 'mekanism:alloy_atomic');
 
 	allthemods.remove('forge:ingots/compressed_iron', 'minecraft:iron_ingot')
-
+	
 })
 
 
@@ -128,6 +135,8 @@ ServerEvents.tags('block', allthemods => {
 	allthemods.add('forge:saplings', 'gtceu:rubber_sapling')
 	allthemods.add('bloodmagic:crystal_clusters', 'allthemodium:allthemodium_block')
 	allthemods.add('bloodmagic:crystal_clusters', 'kubejs:allthemodium_crystal_cluster')
+	
+	allthemods.add('forge:mineable/wrench', '#gtceu:casings')
 })
 
 // This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 9 Expert.

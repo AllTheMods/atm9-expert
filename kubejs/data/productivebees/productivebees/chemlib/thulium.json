@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#a8d5bb",
+  "particleColor": "#bbd5c9",
+  "description": "productivebees.ingredient.description.only_spawnegg",
+  "beeTexture": "productivebees:textures/entity/bee/thulium/bee",
+  "flowerTag": "forge:storage_blocks/thulium",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    }
+  ]
+}

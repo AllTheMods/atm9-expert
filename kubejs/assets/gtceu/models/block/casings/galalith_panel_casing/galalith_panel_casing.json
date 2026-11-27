@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtceu:block/casings/galalith_panel_casing/galalith_panel_casing"
+  }
+}

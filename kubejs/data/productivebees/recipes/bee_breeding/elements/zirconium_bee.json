@@ -1,0 +1,26 @@
+{
+  "type": "productivebees:bee_breeding",
+  "parent1": "productivebees:diamond",
+  "parent2": "productivebees:iron",
+  "offspring": [
+    "productivebees:zirconium"
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gtceu"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:diamond"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:iron"
+    },
+    {
+      "type": "productivebees:bee_exists",
+      "bee": "productivebees:zirconium"
+    }
+  ]
+}
