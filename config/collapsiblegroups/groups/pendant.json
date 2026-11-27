@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "pendant",
+  "name": {
+    "translate": "collapsible_groups.group.pendant",
+    "fallback": "Pendant"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "botania:blood_pendant"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "kama",
+  "name": {
+    "translate": "collapsible_groups.group.kama",
+    "fallback": "Kama"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:kama"
+  }
+}

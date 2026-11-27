@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "leggings",
+  "name": {
+    "translate": "collapsible_groups.group.leggings",
+    "fallback": "Leggings"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:plate_leggings"
+  }
+}

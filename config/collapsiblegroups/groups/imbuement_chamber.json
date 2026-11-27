@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "imbuement_chamber",
+  "name": {
+    "translate": "collapsible_groups.group.imbuement_chamber",
+    "fallback": "Imbuement Chamber"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "gtceu:uv_imbument_chamber"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:zpm_imbument_chamber"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:luv_imbument_chamber"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:iv_imbument_chamber"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:ev_imbument_chamber"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:hv_imbument_chamber"
+      }
+    ]
+  }
+}

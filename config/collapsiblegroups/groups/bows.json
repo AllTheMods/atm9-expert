@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "bows",
+  "name": {
+    "translate": "collapsible_groups.group.bows",
+    "fallback": "Bows"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:longbow"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "maille",
+  "name": {
+    "translate": "collapsible_groups.group.maille",
+    "fallback": "maille"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:maille"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "cocoon",
+  "name": {
+    "translate": "collapsible_groups.group.cocoon",
+    "fallback": "Cocoon"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "forestry:cocoon_ge"
+  }
+}

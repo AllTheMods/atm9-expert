@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "cage_light_2",
+  "name": {
+    "translate": "collapsible_groups.group.cage_light_2",
+    "fallback": "Cage Light"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "projectred_illumination:white_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:orange_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:magenta_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_blue_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:yellow_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:lime_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:pink_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:gray_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:light_gray_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:cyan_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:purple_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:blue_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:brown_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:green_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:red_cage_light"
+      },
+      {
+        "type": "item",
+        "id": "projectred_illumination:black_cage_light"
+      }
+    ]
+  }
+}

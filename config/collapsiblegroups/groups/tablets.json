@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "tablets",
+  "name": {
+    "translate": "collapsible_groups.group.tablets",
+    "fallback": "Tablets"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "tombstone:lost_tablet"
+      },
+      {
+        "type": "item",
+        "id": "tombstone:tablet_of_guard"
+      },
+      {
+        "type": "item",
+        "id": "tombstone:tablet_of_cupidity"
+      },
+      {
+        "type": "item",
+        "id": "tombstone:tablet_of_assistance"
+      },
+      {
+        "type": "item",
+        "id": "tombstone:tablet_of_home"
+      },
+      {
+        "type": "item",
+        "id": "tombstone:tablet_of_recall"
+      },
+      {
+        "type": "item",
+        "id": "tombstone:strange_tablet"
+      }
+    ]
+  }
+}

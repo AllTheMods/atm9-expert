@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "axe_head",
+  "name": {
+    "translate": "collapsible_groups.group.axe_head",
+    "fallback": "Axe Head"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:small_axe_head"
+  }
+}

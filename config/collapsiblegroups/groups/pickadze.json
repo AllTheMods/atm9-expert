@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "pickadze",
+  "name": {
+    "translate": "collapsible_groups.group.pickadze",
+    "fallback": "Pickadze"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:pickadze"
+  }
+}

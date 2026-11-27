@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "id": "scrolls",
+  "name": {
+    "translate": "collapsible_groups.group.scrolls",
+    "fallback": "Scrolls"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_preservation\",tag:{enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_preservation\",tag:{ancient:1b,enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_lightning_resistance\",tag:{ancient:1b,enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_lightning_resistance\",tag:{enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_reach\",tag:{ancient:1b,enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_reach\",tag:{enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_true_sight\",tag:{ancient:1b,enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_true_sight\",tag:{enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_purification\",tag:{ancient:1b,enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_purification\",tag:{enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_feather_fall\",tag:{ancient:1b,enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_feather_fall\",tag:{enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_unstable_intangibility\",tag:{ancient:1b,enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_unstable_intangibility\",tag:{enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:magic_scroll\",tag:{magic_effect:{amplifier:4b,id:\"ars_elemental:mana_shield\"}}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_mercy\",tag:{ancient:1b,enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_mercy\",tag:{enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_aquatic_life\",tag:{ancient:1b,enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_aquatic_life\",tag:{enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_frost_resistance\",tag:{ancient:1b,enchant:1b}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:scroll_of_frost_resistance\",tag:{enchant:1b}}"
+        }
+      }
+    ]
+  }
+}

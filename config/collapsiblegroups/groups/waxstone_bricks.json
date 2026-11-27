@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "waxstone_bricks",
+  "name": {
+    "translate": "collapsible_groups.group.waxstone_bricks",
+    "fallback": "Waxstone Bricks"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:waxstone_brick_wall"
+      },
+      {
+        "type": "item",
+        "id": "forestry:waxstone_brick_slab"
+      },
+      {
+        "type": "item",
+        "id": "forestry:waxstone_brick_stairs"
+      },
+      {
+        "type": "item",
+        "id": "forestry:waxstone_bricks"
+      }
+    ]
+  }
+}

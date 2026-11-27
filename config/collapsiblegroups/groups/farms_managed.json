@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "farms_managed",
+  "name": {
+    "translate": "collapsible_groups.group.farms_managed",
+    "fallback": "Farms (Managed)"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:farm_ender_managed"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_nether_managed"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_gourd_managed"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_mushroom_managed"
+      },
+      {
+        "type": "item",
+        "id": "forestry:farm_crops_managed"
+      },
+      {
+        "type": "item",
+        "id": "forestry:peat_bog_managed"
+      },
+      {
+        "type": "item",
+        "id": "forestry:arboretum_managed"
+      }
+    ]
+  }
+}

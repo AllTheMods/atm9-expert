@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "war_picks",
+  "name": {
+    "translate": "collapsible_groups.group.war_picks",
+    "fallback": "War Picks"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:war_pick"
+  }
+}

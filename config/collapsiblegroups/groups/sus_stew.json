@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "sus_stew",
+  "name": {
+    "translate": "collapsible_groups.group.sus_stew",
+    "fallback": "Sus Stew"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "minecraft:suspicious_stew"
+  }
+}

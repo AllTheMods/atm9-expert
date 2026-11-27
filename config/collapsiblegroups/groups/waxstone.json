@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "waxstone",
+  "name": {
+    "translate": "collapsible_groups.group.waxstone",
+    "fallback": "Waxstone"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:chiseled_waxstone"
+      },
+      {
+        "type": "item",
+        "id": "forestry:waxstone_wall"
+      },
+      {
+        "type": "item",
+        "id": "forestry:waxstone_slab"
+      },
+      {
+        "type": "item",
+        "id": "forestry:waxstone_stairs"
+      },
+      {
+        "type": "item",
+        "id": "forestry:waxstone"
+      }
+    ]
+  }
+}

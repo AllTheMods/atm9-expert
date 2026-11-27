@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "tool_binding",
+  "name": {
+    "translate": "collapsible_groups.group.tool_binding",
+    "fallback": "Tool Binding"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:tool_binding"
+  }
+}

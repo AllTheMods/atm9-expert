@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "limited_copper_barrel_iv",
+  "name": {
+    "translate": "collapsible_groups.group.limited_copper_barrel_iv",
+    "fallback": "Limited Copper Barrel IV"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_copper_barrel_4\",tag:{woodType:\"bamboo\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_copper_barrel_4\",tag:{woodType:\"cherry\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_copper_barrel_4\",tag:{woodType:\"mangrove\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_copper_barrel_4\",tag:{woodType:\"warped\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_copper_barrel_4\",tag:{woodType:\"spruce\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_copper_barrel_4\",tag:{woodType:\"jungle\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_copper_barrel_4\",tag:{woodType:\"dark_oak\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_copper_barrel_4\",tag:{woodType:\"crimson\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_copper_barrel_4\",tag:{woodType:\"birch\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_copper_barrel_4\",tag:{woodType:\"acacia\"}}"
+        }
+      }
+    ]
+  }
+}

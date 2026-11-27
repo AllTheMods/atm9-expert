@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "crystal",
+  "name": {
+    "translate": "collapsible_groups.group.crystal",
+    "fallback": "Crystal"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "alltheores:iridium_crystal"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:zinc_crystal"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:uranium_crystal"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:tin_crystal"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:silver_crystal"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:platinum_crystal"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:osmium_crystal"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nickel_crystal"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:lead_crystal"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:copper_crystal"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:aluminum_crystal"
+      }
+    ]
+  }
+}

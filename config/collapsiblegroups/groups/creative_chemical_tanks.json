@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "creative_chemical_tanks",
+  "name": {
+    "translate": "collapsible_groups.group.creative_chemical_tanks",
+    "fallback": "Creative Chemical Tanks"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "mekanism:creative_chemical_tank"
+  }
+}

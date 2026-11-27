@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "javelin",
+  "name": {
+    "translate": "collapsible_groups.group.javelin",
+    "fallback": "Javelin"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:javelin"
+  }
+}

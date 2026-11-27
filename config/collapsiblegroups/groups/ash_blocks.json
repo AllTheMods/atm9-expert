@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "ash_blocks",
+  "name": {
+    "translate": "collapsible_groups.group.ash_blocks",
+    "fallback": "Ash Blocks"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:ash_block"
+      },
+      {
+        "type": "item",
+        "id": "forestry:ash_bricks"
+      },
+      {
+        "type": "item",
+        "id": "forestry:ash_brick_stairs"
+      },
+      {
+        "type": "item",
+        "id": "forestry:ash_brick_slab"
+      },
+      {
+        "type": "item",
+        "id": "forestry:ash_brick_wall"
+      },
+      {
+        "type": "item",
+        "id": "forestry:chiseled_ash_bricks"
+      }
+    ]
+  }
+}

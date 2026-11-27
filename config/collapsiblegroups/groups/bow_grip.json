@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "bow_grip",
+  "name": {
+    "translate": "collapsible_groups.group.bow_grip",
+    "fallback": "Bow Grip"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:bow_grip"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "enchanting_apparatus",
+  "name": {
+    "translate": "collapsible_groups.group.enchanting_apparatus",
+    "fallback": "Enchanting Apparatus"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "gtceu:hv_enchanting_apparatus"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:ev_enchanting_apparatus"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:iv_enchanting_apparatus"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:luv_enchanting_apparatus"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:zpm_enchanting_apparatus"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:uv_enchanting_apparatus"
+      }
+    ]
+  }
+}

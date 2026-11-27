@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "mana_burner",
+  "name": {
+    "translate": "collapsible_groups.group.mana_burner",
+    "fallback": "Mana Burner"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "gtceu:hv_mana_burner"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:ev_mana_burner"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:iv_mana_burner"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:luv_mana_burner"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:zpm_mana_burner"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:uv_mana_burner"
+      }
+    ]
+  }
+}

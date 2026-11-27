@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "basic_chests",
+  "name": {
+    "translate": "collapsible_groups.group.basic_chests",
+    "fallback": "Basic Chests"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:chest\",tag:{woodType:\"bamboo\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:chest\",tag:{woodType:\"cherry\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:chest\",tag:{woodType:\"mangrove\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:chest\",tag:{woodType:\"warped\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:chest\",tag:{woodType:\"spruce\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:chest\",tag:{woodType:\"jungle\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:chest\",tag:{woodType:\"dark_oak\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:chest\",tag:{woodType:\"crimson\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:chest\",tag:{woodType:\"birch\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:chest\",tag:{woodType:\"acacia\"}}"
+        }
+      }
+    ]
+  }
+}

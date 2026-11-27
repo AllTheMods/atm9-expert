@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "unifier",
+  "name": {
+    "translate": "collapsible_groups.group.unifier",
+    "fallback": "Unifier"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "gtceu:mv_unifier"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:hv_unifier"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:uv_unifier"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:zpm_unifier"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:luv_unifier"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:iv_unifier"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:ev_unifier"
+      }
+    ]
+  }
+}

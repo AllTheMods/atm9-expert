@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "backpacks_2",
+  "name": {
+    "translate": "collapsible_groups.group.backpacks_2",
+    "fallback": "Backpacks"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:brewer_bag"
+      },
+      {
+        "type": "item",
+        "id": "forestry:builder_bag"
+      },
+      {
+        "type": "item",
+        "id": "forestry:adventurer_bag"
+      },
+      {
+        "type": "item",
+        "id": "forestry:hunter_bag"
+      },
+      {
+        "type": "item",
+        "id": "forestry:forester_bag"
+      },
+      {
+        "type": "item",
+        "id": "forestry:digger_bag"
+      },
+      {
+        "type": "item",
+        "id": "forestry:miner_bag"
+      },
+      {
+        "type": "item",
+        "id": "forestry:lepidopterist_bag"
+      },
+      {
+        "type": "item",
+        "id": "forestry:arborist_bag"
+      },
+      {
+        "type": "item",
+        "id": "forestry:apiarist_bag"
+      }
+    ]
+  }
+}

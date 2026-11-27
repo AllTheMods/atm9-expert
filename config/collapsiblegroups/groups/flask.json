@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "flask",
+  "name": {
+    "translate": "collapsible_groups.group.flask",
+    "fallback": "Flask"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "botania:brew_flask"
+  }
+}

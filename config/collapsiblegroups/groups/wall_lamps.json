@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "id": "wall_lamps",
+  "name": {
+    "translate": "collapsible_groups.group.wall_lamps",
+    "fallback": "Wall Lamps"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_black"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_blue"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_brown"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_cyan"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_gray"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_green"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_black"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_blue"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_brown"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_cyan"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_gray"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_green"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_light_blue"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_light_gray"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_lime"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_magenta"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_orange"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_yellow"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_white"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_red"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_purple"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_pink"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_orange"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_magenta"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_lime"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_light_gray"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_light_blue"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_yellow"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_white"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_red"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_purple"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:wall_lamp_inverted_pink"
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "petal_apothecary",
+  "name": {
+    "translate": "collapsible_groups.group.petal_apothecary",
+    "fallback": "Petal Apothecary"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "gtceu:uv_petal_apothecary"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:zpm_petal_apothecary"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:luv_petal_apothecary"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:iv_petal_apothecary"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:ev_petal_apothecary"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:hv_petal_apothecary"
+      }
+    ]
+  }
+}

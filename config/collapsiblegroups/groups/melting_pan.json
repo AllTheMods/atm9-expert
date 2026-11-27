@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "melting_pan",
+  "name": {
+    "translate": "collapsible_groups.group.melting_pan",
+    "fallback": "Melting pan"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:melting_pan"
+  }
+}

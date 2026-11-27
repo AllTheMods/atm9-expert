@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "id": "liquids",
+  "name": {
+    "translate": "collapsible_groups.group.liquids",
+    "fallback": "Liquids"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "fluid",
+        "id": "mekanismgenerators:tritium"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanismgenerators:fusion_fuel"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanismgenerators:deuterium"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanismgenerators:bioethanol"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:nutritional_paste"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:heavy_water"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:steam"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:lithium"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:brine"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:superheated_sodium"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:sodium"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:ethene"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:uranium_hexafluoride"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:uranium_oxide"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:hydrofluoric_acid"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:hydrogen_chloride"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:sulfuric_acid"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:sulfur_trioxide"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:sulfur_dioxide"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:chlorine"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:oxygen"
+      },
+      {
+        "type": "fluid",
+        "id": "mekanism:hydrogen"
+      }
+    ]
+  }
+}

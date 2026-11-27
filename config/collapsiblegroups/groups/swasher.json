@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "swasher",
+  "name": {
+    "translate": "collapsible_groups.group.swasher",
+    "fallback": "Swasher"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:swasher"
+  }
+}

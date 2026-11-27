@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "glimmering_flowers",
+  "name": {
+    "translate": "collapsible_groups.group.glimmering_flowers",
+    "fallback": "Glimmering Flowers"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "botania:white_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:light_gray_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:gray_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:black_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:brown_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:pink_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:magenta_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:purple_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:blue_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:light_blue_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:cyan_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:green_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:lime_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:yellow_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:orange_shiny_flower"
+      },
+      {
+        "type": "item",
+        "id": "botania:red_shiny_flower"
+      }
+    ]
+  }
+}

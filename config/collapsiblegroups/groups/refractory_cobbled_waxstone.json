@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "refractory_cobbled_waxstone",
+  "name": {
+    "translate": "collapsible_groups.group.refractory_cobbled_waxstone",
+    "fallback": "Refractory Cobbled Waxstone"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:cobbled_refractory_waxstone_wall"
+      },
+      {
+        "type": "item",
+        "id": "forestry:cobbled_refractory_waxstone_slab"
+      },
+      {
+        "type": "item",
+        "id": "forestry:cobbled_refractory_waxstone_stairs"
+      },
+      {
+        "type": "item",
+        "id": "forestry:cobbled_refractory_waxstone"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "slimecage",
+  "name": {
+    "translate": "collapsible_groups.group.slimecage",
+    "fallback": "Slimecage"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:slimy_chestplate"
+  }
+}

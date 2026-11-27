@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "storage_connectors",
+  "name": {
+    "translate": "collapsible_groups.group.storage_connectors",
+    "fallback": "Storage Connectors"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "sophisticatedstorage:mangrove_storage_connector"
+      },
+      {
+        "type": "item",
+        "id": "sophisticatedstorage:cherry_storage_connector"
+      },
+      {
+        "type": "item",
+        "id": "sophisticatedstorage:bamboo_storage_connector"
+      },
+      {
+        "type": "item",
+        "id": "sophisticatedstorage:warped_storage_connector"
+      },
+      {
+        "type": "item",
+        "id": "sophisticatedstorage:spruce_storage_connector"
+      },
+      {
+        "type": "item",
+        "id": "sophisticatedstorage:jungle_storage_connector"
+      },
+      {
+        "type": "item",
+        "id": "sophisticatedstorage:dark_oak_storage_connector"
+      },
+      {
+        "type": "item",
+        "id": "sophisticatedstorage:crimson_storage_connector"
+      },
+      {
+        "type": "item",
+        "id": "sophisticatedstorage:birch_storage_connector"
+      },
+      {
+        "type": "item",
+        "id": "sophisticatedstorage:acacia_storage_connector"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "fertille_pollen",
+  "name": {
+    "translate": "collapsible_groups.group.fertille_pollen",
+    "fallback": "Fertille Pollen "
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "forestry:pollen_fertile"
+  }
+}

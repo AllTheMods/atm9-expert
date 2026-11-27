@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "shards",
+  "name": {
+    "translate": "collapsible_groups.group.shards",
+    "fallback": "Shards"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "alltheores:aluminum_shard"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:copper_shard"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:lead_shard"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nickel_shard"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:iridium_shard"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:zinc_shard"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:uranium_shard"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:tin_shard"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:silver_shard"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:platinum_shard"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:osmium_shard"
+      }
+    ]
+  }
+}

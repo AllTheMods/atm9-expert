@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "create_potions",
+  "name": {
+    "translate": "collapsible_groups.group.create_potions",
+    "fallback": "Create Potions"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "fluid",
+    "id": "create:potion"
+  }
+}

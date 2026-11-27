@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "shots",
+  "name": {
+    "translate": "collapsible_groups.group.shots",
+    "fallback": "Shots"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "reliquary:bullets/neutral_bullet"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:bullets/exorcism_bullet"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:bullets/blaze_bullet"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:bullets/ender_bullet"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:bullets/concussive_bullet"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:bullets/buster_bullet"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:bullets/seeker_bullet"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:bullets/storm_bullet"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:bullets/sand_bullet"
+      }
+    ]
+  }
+}

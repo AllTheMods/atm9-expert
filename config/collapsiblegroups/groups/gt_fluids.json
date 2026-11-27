@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "gt_fluids",
+  "name": {
+    "translate": "collapsible_groups.group.gt_fluids",
+    "fallback": "GT Fluids"
+  },
+  "enabled": true,
+  "filter": {
+    "all": [
+      {
+        "type": "fluid",
+        "tag": "forge:liquid"
+      },
+      {
+        "type": "fluid",
+        "namespace": "gtceu"
+      }
+    ]
+  }
+}

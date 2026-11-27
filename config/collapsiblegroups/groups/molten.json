@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "id": "molten",
+  "name": {
+    "translate": "collapsible_groups.group.molten",
+    "fallback": "Molten"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_steeleaf"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_nicrosil"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_refined_obsidian"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_refined_glowstone"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_signalum"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_lumium"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_enderium"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_pewter"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_constantan"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_invar"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_electrum"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_brass"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_bronze"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_cadmium"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_chromium"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_uranium"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_osmium"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_tungsten"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_platinum"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_zinc"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_nickel"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_silver"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_lead"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_clay"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_glass"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_obsidian"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_ender"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_emerald"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_quartz"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_amethyst"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_diamond"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_debris"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_iron"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_gold"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_copper"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_cobalt"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_steel"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_knightmetal"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_slimesteel"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_amethyst_bronze"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_rose_gold"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_pig_iron"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_manyullyn"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_hepatizon"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_cinderslime"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_queens_slime"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_netherite"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_knightslime"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_tin"
+      },
+      {
+        "type": "fluid",
+        "id": "tconstruct:molten_aluminum"
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "metal_plating",
+  "name": {
+    "translate": "collapsible_groups.group.metal_plating",
+    "fallback": "Metal Plating"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_netherite"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_bronze"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_tin"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_copper"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_iron"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_gold"
+      }
+    ]
+  }
+}

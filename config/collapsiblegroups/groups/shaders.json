@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "shaders",
+  "name": {
+    "translate": "collapsible_groups.group.shaders",
+    "fallback": "Shaders"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "immersiveengineering:shader"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "pure_daisy",
+  "name": {
+    "translate": "collapsible_groups.group.pure_daisy",
+    "fallback": "Pure Daisy"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "gtceu:lv_pure_daisy"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:mv_pure_daisy"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:hv_pure_daisy"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:ev_pure_daisy"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:iv_pure_daisy"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:luv_pure_daisy"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:zpm_pure_daisy"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:uv_pure_daisy"
+      }
+    ]
+  }
+}

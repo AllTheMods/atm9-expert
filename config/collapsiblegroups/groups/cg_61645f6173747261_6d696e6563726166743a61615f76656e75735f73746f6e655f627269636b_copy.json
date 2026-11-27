@@ -1,0 +1,40 @@
+{
+  "id": "cg_61645f6173747261_6d696e6563726166743a61615f76656e75735f73746f6e655f627269636b_copy",
+  "name": {
+    "translate": "collapsible_groups.group.cg_61645f6173747261_6d696e6563726166743a61615f76656e75735f73746f6e655f627269636b_copy",
+    "fallback": "Venus Stone Brick"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "ad_astra:venus_stone_brick_slab"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:venus_stone_brick_stairs"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:venus_stone_brick_wall"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:venus_stone_bricks"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:cracked_venus_stone_bricks"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:chiseled_venus_stone_bricks"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:venus_pillar"
+      }
+    ]
+  }
+}

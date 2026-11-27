@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "bow_limb",
+  "name": {
+    "translate": "collapsible_groups.group.bow_limb",
+    "fallback": "Bow Limb"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:bow_limb"
+  }
+}

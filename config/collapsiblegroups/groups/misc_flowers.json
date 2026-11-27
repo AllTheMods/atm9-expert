@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "misc_flowers",
+  "name": {
+    "translate": "collapsible_groups.group.misc_flowers",
+    "fallback": "Misc Flowers"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "botania:pure_daisy"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_pure_daisy"
+      },
+      {
+        "type": "item",
+        "id": "botania:manastar"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_manastar"
+      },
+      {
+        "type": "item",
+        "id": "botania:bergamute"
+      },
+      {
+        "type": "item",
+        "id": "botania:floating_bergamute"
+      }
+    ]
+  }
+}

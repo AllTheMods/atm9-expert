@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "plates",
+  "name": {
+    "translate": "collapsible_groups.group.plates",
+    "fallback": "Plates"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "alltheores:aluminum_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:iridium_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:lead_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nickel_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:osmium_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:platinum_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:silver_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:tin_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:uranium_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:zinc_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:steel_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:invar_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:electrum_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:bronze_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:iron_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:gold_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:diamond_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:copper_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:enderium_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:lumium_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:brass_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:constantan_plate"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:signalum_plate"
+      }
+    ]
+  }
+}

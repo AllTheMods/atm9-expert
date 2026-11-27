@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "plastic_brick",
+  "name": {
+    "translate": "collapsible_groups.group.plastic_brick",
+    "fallback": "Plastic Brick"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_black"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_blue"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_brown"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_cyan"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_gray"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_green"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_light_blue"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_light_gray"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_lime"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_magenta"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_orange"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_pink"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_yellow"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_white"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_red"
+      },
+      {
+        "type": "item",
+        "id": "pneumaticcraft:plastic_brick_purple"
+      }
+    ]
+  }
+}

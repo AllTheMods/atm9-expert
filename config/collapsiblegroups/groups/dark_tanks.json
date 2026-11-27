@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "dark_tanks",
+  "name": {
+    "translate": "collapsible_groups.group.dark_tanks",
+    "fallback": "Dark Tanks"
+  },
+  "enabled": true,
+  "filter": {
+    "all": [
+      {
+        "type": "item",
+        "id": "evilcraft:dark_tank"
+      },
+      {
+        "not": {
+          "all": [
+            {
+              "type": "item",
+              "id": "evilcraft:dark_tank"
+            },
+            {
+              "type": "item",
+              "nbt": {
+                "data_format": "minecraft:nbt",
+                "data": "{}"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "bamboo_spikes",
+  "name": {
+    "translate": "collapsible_groups.group.bamboo_spikes",
+    "fallback": "Bamboo Spikes"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "supplementaries:bamboo_spikes_tipped"
+  }
+}

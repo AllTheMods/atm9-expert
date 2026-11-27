@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "lacquered_metal_plating",
+  "name": {
+    "translate": "collapsible_groups.group.lacquered_metal_plating",
+    "fallback": "Lacquered Metal Plating"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_pink"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_magenta"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_purple"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_light_blue"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_blue"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_cyan"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_green"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_lime"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_yellow"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_orange"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_red"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_brown"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_black"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_gray"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_light_gray"
+      },
+      {
+        "type": "item",
+        "id": "forestry:metal_plating_white"
+      }
+    ]
+  }
+}

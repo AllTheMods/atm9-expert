@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "tinted_glass",
+  "name": {
+    "translate": "collapsible_groups.group.tinted_glass",
+    "fallback": "Tinted Glass"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_black"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_blue"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_brown"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_cyan"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_gray"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_green"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_light_blue"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_light_gray"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_lime"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_magenta"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_orange"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_pink"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_purple"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_red"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_white"
+      },
+      {
+        "type": "item",
+        "id": "connectedglass:tinted_borderless_glass_yellow"
+      }
+    ]
+  }
+}

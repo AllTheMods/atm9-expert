@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "pedestal_display",
+  "name": {
+    "translate": "collapsible_groups.group.pedestal_display",
+    "fallback": "Pedestal (Display)"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/white_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/orange_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/magenta_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/light_blue_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/yellow_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/lime_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/pink_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/gray_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/light_gray_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/cyan_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/purple_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/blue_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/brown_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/green_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/red_passive_pedestal"
+      },
+      {
+        "type": "item",
+        "id": "reliquary:pedestals/passive/black_passive_pedestal"
+      }
+    ]
+  }
+}

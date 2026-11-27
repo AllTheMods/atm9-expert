@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "polished_honeystone",
+  "name": {
+    "translate": "collapsible_groups.group.polished_honeystone",
+    "fallback": "Polished Honeystone"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:polished_honeystone"
+      },
+      {
+        "type": "item",
+        "id": "forestry:polished_honeystone_stairs"
+      },
+      {
+        "type": "item",
+        "id": "forestry:polished_honeystone_slab"
+      },
+      {
+        "type": "item",
+        "id": "forestry:polished_honeystone_wall"
+      }
+    ]
+  }
+}

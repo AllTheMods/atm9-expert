@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "liquifier",
+  "name": {
+    "translate": "collapsible_groups.group.liquifier",
+    "fallback": "Liquifier"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "gtceu:mv_liquifier"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:hv_liquifier"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:ev_liquifier"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:iv_liquifier"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:luv_liquifier"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:zpm_liquifier"
+      },
+      {
+        "type": "item",
+        "id": "gtceu:uv_liquifier"
+      }
+    ]
+  }
+}

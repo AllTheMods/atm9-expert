@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "refractory_wax_blocks",
+  "name": {
+    "translate": "collapsible_groups.group.refractory_wax_blocks",
+    "fallback": "Refractory Wax Blocks"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "forestry:chiseled_refractory_wax_bricks"
+      },
+      {
+        "type": "item",
+        "id": "forestry:refractory_wax_brick_wall"
+      },
+      {
+        "type": "item",
+        "id": "forestry:refractory_wax_brick_slab"
+      },
+      {
+        "type": "item",
+        "id": "forestry:refractory_wax_brick_stairs"
+      },
+      {
+        "type": "item",
+        "id": "forestry:refractory_wax_bricks"
+      },
+      {
+        "type": "item",
+        "id": "forestry:wax_block_refractory"
+      }
+    ]
+  }
+}

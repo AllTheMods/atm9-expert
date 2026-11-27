@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "gt_plasma",
+  "name": {
+    "translate": "collapsible_groups.group.gt_plasma",
+    "fallback": "GT Plasma"
+  },
+  "enabled": true,
+  "filter": {
+    "all": [
+      {
+        "type": "fluid",
+        "namespace": "gtceu"
+      },
+      {
+        "type": "fluid",
+        "tag": "forge:plasmatic"
+      }
+    ]
+  }
+}

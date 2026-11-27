@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "id": "basic_barrel",
+  "name": {
+    "translate": "collapsible_groups.group.basic_barrel",
+    "fallback": "Basic Barrel"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{woodType:\"acacia\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{woodType:\"birch\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{woodType:\"crimson\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{woodType:\"dark_oak\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{woodType:\"jungle\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{woodType:\"spruce\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{woodType:\"warped\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{woodType:\"mangrove\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{woodType:\"cherry\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{woodType:\"bamboo\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{woodType:\"gtceu:rubber\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:16383998,mainColor:16383998}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:16351261,mainColor:16351261}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:13061821,mainColor:13061821}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:3847130,mainColor:3847130}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:16701501,mainColor:16701501}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:8439583,mainColor:8439583}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:15961002,mainColor:15961002}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:4673362,mainColor:4673362}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:10329495,mainColor:10329495}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:1481884,mainColor:1481884}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:8991416,mainColor:8991416}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:3949738,mainColor:3949738}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:8606770,mainColor:8606770}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:6192150,mainColor:6192150}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:11546150,mainColor:11546150}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:1908001,mainColor:1908001}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{accentColor:8439583,mainColor:16701501}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:barrel\",tag:{flatTop:1b,woodType:\"acacia\"}}"
+        }
+      }
+    ]
+  }
+}

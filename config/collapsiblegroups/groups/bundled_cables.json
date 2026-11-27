@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "bundled_cables",
+  "name": {
+    "translate": "collapsible_groups.group.bundled_cables",
+    "fallback": "Bundled Cables"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "projectred_transmission:neutral_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:white_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:orange_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:magenta_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:light_blue_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:yellow_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:lime_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:pink_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:gray_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:light_gray_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:cyan_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:purple_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:blue_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:brown_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:green_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:red_bundled_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:black_bundled_wire"
+      }
+    ]
+  }
+}

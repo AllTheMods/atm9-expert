@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "dagger",
+  "name": {
+    "translate": "collapsible_groups.group.dagger",
+    "fallback": "Dagger"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:dagger"
+  }
+}

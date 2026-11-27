@@ -1,0 +1,8 @@
+fov:0.5
+renderDistance:8
+simulationDistance:6
+entityDistanceScaling:1.0
+guiScale:3
+maxFps:60
+graphicsMode:1
+resourcePacks:["vanilla","mod_resources","Moonlight Mods Dynamic Assets","file/GTCEuM Indicators-1.1.0b.zip"]

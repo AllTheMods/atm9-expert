@@ -1,0 +1,501 @@
+{
+  "schema_version": 1,
+  "id": "track",
+  "name": {
+    "translate": "collapsible_groups.group.track",
+    "fallback": "Track"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_electric_junction_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_electric_turnout_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_electric_wye_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_electric_transition_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_electric_throttle_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_electric_locomotive_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_electric_whistle_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_electric_locking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_electric_detector_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_electric_booster_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_electric_activator_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_junction_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_turnout_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_wye_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_transition_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_throttle_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_locomotive_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_whistle_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_wye_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_turnout_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_junction_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_activator_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_booster_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_buffer_stop_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_coupler_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_control_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_detector_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_embarking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_disembarking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_dumping_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_gated_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_launcher_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_locking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_whistle_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_locomotive_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_throttle_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_routing_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_one_way_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_wye_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_locking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_whistle_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_locomotive_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_throttle_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_routing_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_one_way_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_locking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_detector_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_booster_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:high_speed_activator_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_junction_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:electric_turnout_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_locking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_launcher_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_whistle_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_locomotive_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_throttle_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_routing_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_one_way_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_wye_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_turnout_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_junction_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_activator_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_booster_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_buffer_stop_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_coupler_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_control_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_detector_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_embarking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_disembarking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_dumping_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_gated_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:reinforced_launcher_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_gated_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_dumping_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_disembarking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_embarking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_detector_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_control_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_coupler_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_buffer_stop_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_booster_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:strap_iron_activator_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_junction_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_turnout_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_control_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_coupler_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_detector_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_embarking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_disembarking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_dumping_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_gated_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_launcher_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_locking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_whistle_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_locomotive_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_throttle_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_routing_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_one_way_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_wye_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_booster_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_buffer_stop_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:iron_activator_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_junction_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_turnout_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_wye_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_one_way_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_routing_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_locking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_launcher_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_gated_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_dumping_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_disembarking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_embarking_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_detector_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_control_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_coupler_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_buffer_stop_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_booster_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_activator_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_whistle_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_locomotive_track"
+      },
+      {
+        "type": "item",
+        "id": "railcraft:abandoned_throttle_track"
+      }
+    ]
+  }
+}

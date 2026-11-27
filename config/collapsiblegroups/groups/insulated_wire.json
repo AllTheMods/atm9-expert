@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "insulated_wire",
+  "name": {
+    "translate": "collapsible_groups.group.insulated_wire",
+    "fallback": "Insulated Wire"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "projectred_transmission:white_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:orange_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:magenta_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:light_blue_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:yellow_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:lime_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:pink_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:gray_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:light_gray_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:cyan_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:purple_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:blue_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:brown_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:black_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:red_insulated_wire"
+      },
+      {
+        "type": "item",
+        "id": "projectred_transmission:green_insulated_wire"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "flags",
+  "name": {
+    "translate": "collapsible_groups.group.flags",
+    "fallback": "Flags"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "ad_astra:black_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:red_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:green_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:brown_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:blue_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:purple_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:cyan_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:light_gray_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:gray_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:pink_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:lime_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:yellow_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:light_blue_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:magenta_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:orange_flag"
+      },
+      {
+        "type": "item",
+        "id": "ad_astra:white_flag"
+      }
+    ]
+  }
+}

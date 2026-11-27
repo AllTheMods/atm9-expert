@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "string_boots",
+  "name": {
+    "translate": "collapsible_groups.group.string_boots",
+    "fallback": "String boots"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:slime_boots"
+  }
+}

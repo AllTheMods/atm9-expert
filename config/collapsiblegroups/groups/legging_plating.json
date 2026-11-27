@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "legging_plating",
+  "name": {
+    "translate": "collapsible_groups.group.legging_plating",
+    "fallback": "Legging Plating"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:leggings_plating"
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "schema_version": 1,
+  "id": "crates",
+  "name": {
+    "translate": "collapsible_groups.group.crates",
+    "fallback": "Crates"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "productivetrees:red_delicious_apple_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:star_anise_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:nutmeg_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:cinnamon_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:clove_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:coffee_bean_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:roasted_coffee_bean_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:roasted_walnut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:roasted_pistachio_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:citron_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:lemon_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:orange_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:mandarin_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:buddhas_hand_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:almond_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:beechnut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:brazil_nut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:butternut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:candlenut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:cashew_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:chestnut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:ginkgo_nut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:hazelnut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:pecan_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:pistachio_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:walnut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:roasted_almond_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:roasted_beechnut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:roasted_brazil_nut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:roasted_butternut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:roasted_candlenut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:roasted_cashew_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:roasted_chestnut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:roasted_ginkgo_nut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:roasted_hazelnut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:roasted_pecan_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:finger_lime_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:key_lime_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:lime_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:baobab_fruit_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:soursop_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:hala_fruit_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:jackfruit_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:cempedak_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:copoazu_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:breadfruit_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:papaya_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:plantain_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:mango_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:coconut_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:sweetsop_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:tangerine_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:star_fruit_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:snake_fruit_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:satsuma_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:sand_pear_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:pomegranate_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:pomelo_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:persimmon_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:pear_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:peach_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:nectarine_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:grapefruit_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:elderberry_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:juniper_berry_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:sloe_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:haw_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:asai_berry_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:rowan_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:apricot_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:black_cherry_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:cherry_plum_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:date_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:fig_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:kumquat_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:olive_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:osange_orange_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:plum_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:sour_cherry_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:sparkling_cherry_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:wild_cherry_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:golden_delicious_apple_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:granny_smith_apple_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:beliy_naliv_apple_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:avocado_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:banana_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:red_banana_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:sweet_crabapple_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:prairie_crabapple_crate"
+      },
+      {
+        "type": "item",
+        "id": "productivetrees:flowering_crabapple_crate"
+      }
+    ]
+  }
+}

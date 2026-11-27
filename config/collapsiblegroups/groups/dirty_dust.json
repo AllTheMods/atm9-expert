@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "dirty_dust",
+  "name": {
+    "translate": "collapsible_groups.group.dirty_dust",
+    "fallback": "Dirty Dust"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "alltheores:dirty_iridium_dust"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:dirty_zinc_dust"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:dirty_uranium_dust"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:dirty_tin_dust"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:dirty_silver_dust"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:dirty_platinum_dust"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:dirty_osmium_dust"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:dirty_nickel_dust"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:dirty_lead_dust"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:dirty_copper_dust"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:dirty_aluminum_dust"
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "gears",
+  "name": {
+    "translate": "collapsible_groups.group.gears",
+    "fallback": "Gears"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "alltheores:brass_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:constantan_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:signalum_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:lumium_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:enderium_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:copper_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:diamond_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:gold_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:iron_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:bronze_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:electrum_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:invar_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:steel_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:zinc_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:uranium_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:tin_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:silver_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:platinum_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:osmium_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:nickel_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:lead_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:iridium_gear"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:aluminum_gear"
+      }
+    ]
+  }
+}

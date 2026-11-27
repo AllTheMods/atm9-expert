@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "dirty_slurry_2",
+  "name": {
+    "translate": "collapsible_groups.group.dirty_slurry_2",
+    "fallback": "Dirty Slurry"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:dirty_copper"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:dirty_gold"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:dirty_iron"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:dirty_lead"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:dirty_osmium"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:dirty_tin"
+      },
+      {
+        "type": "mekanism.api.chemical.slurry.SlurryStack",
+        "id": "mekanism:dirty_uranium"
+      }
+    ]
+  }
+}

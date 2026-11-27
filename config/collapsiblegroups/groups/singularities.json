@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "singularities",
+  "name": {
+    "translate": "collapsible_groups.group.singularities",
+    "fallback": "Singularities"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "tag": "forge:singularities"
+  }
+}

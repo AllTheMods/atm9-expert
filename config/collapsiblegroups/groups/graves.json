@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "id": "graves",
+  "name": {
+    "translate": "collapsible_groups.group.graves",
+    "fallback": "Graves"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_original\",tag:{model_texture:4}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_original\",tag:{model_texture:3}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_original\",tag:{model_texture:2}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_simple\",tag:{model_texture:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_simple\",tag:{model_texture:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_simple\",tag:{model_texture:2}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_simple\",tag:{model_texture:3}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_simple\",tag:{model_texture:4}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_normal\",tag:{model_texture:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_normal\",tag:{model_texture:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_normal\",tag:{model_texture:2}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_normal\",tag:{model_texture:3}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_normal\",tag:{model_texture:4}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_cross\",tag:{model_texture:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_cross\",tag:{model_texture:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_cross\",tag:{model_texture:2}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_cross\",tag:{model_texture:3}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_cross\",tag:{model_texture:4}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_tombstone\",tag:{model_texture:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_tombstone\",tag:{model_texture:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_tombstone\",tag:{model_texture:2}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_tombstone\",tag:{model_texture:3}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_tombstone\",tag:{model_texture:4}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_subaraki_grave\",tag:{model_texture:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_subaraki_grave\",tag:{model_texture:1}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_subaraki_grave\",tag:{model_texture:2}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_subaraki_grave\",tag:{model_texture:3}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_subaraki_grave\",tag:{model_texture:4}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_original\",tag:{model_texture:0}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"tombstone:decorative_grave_original\",tag:{model_texture:1}}"
+        }
+      }
+    ]
+  }
+}

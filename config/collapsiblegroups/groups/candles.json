@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "candles",
+  "name": {
+    "translate": "collapsible_groups.group.candles",
+    "fallback": "Candles"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_cyan"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_green"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_lime"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_yellow"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_orange"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_red"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_brown"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_black"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_gray"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_light_gray"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_white"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_pink"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_magenta"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_purple"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_blue"
+      },
+      {
+        "type": "item",
+        "id": "supplementaries:candle_holder_light_blue"
+      }
+    ]
+  }
+}

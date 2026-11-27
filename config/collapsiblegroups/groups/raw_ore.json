@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "raw_ore",
+  "name": {
+    "translate": "collapsible_groups.group.raw_ore",
+    "fallback": "Raw Ore"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "alltheores:raw_iridium"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:raw_zinc"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:raw_uranium"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:raw_tin"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:raw_silver"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:raw_platinum"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:raw_osmium"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:raw_nickel"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:raw_lead"
+      },
+      {
+        "type": "item",
+        "id": "alltheores:raw_aluminum"
+      }
+    ]
+  }
+}

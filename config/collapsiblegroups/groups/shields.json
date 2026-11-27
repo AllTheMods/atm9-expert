@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "shields",
+  "name": {
+    "translate": "collapsible_groups.group.shields",
+    "fallback": "Shields"
+  },
+  "enabled": true,
+  "filter": {
+    "type": "item",
+    "id": "tconstruct:travelers_shield"
+  }
+}

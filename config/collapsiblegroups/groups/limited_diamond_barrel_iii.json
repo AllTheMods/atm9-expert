@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "limited_diamond_barrel_iii",
+  "name": {
+    "translate": "collapsible_groups.group.limited_diamond_barrel_iii",
+    "fallback": "Limited Diamond Barrel III"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_diamond_barrel_3\",tag:{woodType:\"acacia\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_diamond_barrel_3\",tag:{woodType:\"birch\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_diamond_barrel_3\",tag:{woodType:\"crimson\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_diamond_barrel_3\",tag:{woodType:\"dark_oak\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_diamond_barrel_3\",tag:{woodType:\"jungle\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_diamond_barrel_3\",tag:{woodType:\"spruce\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_diamond_barrel_3\",tag:{woodType:\"warped\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_diamond_barrel_3\",tag:{woodType:\"mangrove\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_diamond_barrel_3\",tag:{woodType:\"cherry\"}}"
+        }
+      },
+      {
+        "type": "item",
+        "stack": {
+          "data_format": "minecraft:nbt",
+          "data": "{Count:1b,id:\"sophisticatedstorage:limited_diamond_barrel_3\",tag:{woodType:\"bamboo\"}}"
+        }
+      }
+    ]
+  }
+}

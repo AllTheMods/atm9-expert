@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "valve_handles",
+  "name": {
+    "translate": "collapsible_groups.group.valve_handles",
+    "fallback": "Valve Handles"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "create:black_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:red_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:green_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:brown_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:blue_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:purple_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:cyan_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:light_gray_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:gray_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:pink_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:lime_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:yellow_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:light_blue_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:magenta_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:orange_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:white_valve_handle"
+      },
+      {
+        "type": "item",
+        "id": "create:copper_valve_handle"
+      }
+    ]
+  }
+}

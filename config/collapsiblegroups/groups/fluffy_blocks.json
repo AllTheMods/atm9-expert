@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "fluffy_blocks",
+  "name": {
+    "translate": "collapsible_groups.group.fluffy_blocks",
+    "fallback": "Fluffy Blocks"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "item",
+        "id": "silentgear:black_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:red_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:green_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:brown_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:blue_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:purple_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:cyan_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:light_gray_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:gray_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:pink_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:lime_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:yellow_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:light_blue_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:magenta_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:orange_fluffy_block"
+      },
+      {
+        "type": "item",
+        "id": "silentgear:white_fluffy_block"
+      }
+    ]
+  }
+}
