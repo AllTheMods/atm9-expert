@@ -215,7 +215,7 @@ ServerEvents.recipes(allthemods => {
 
     allthemods.recipes.gtceu.mixer(`allthemods:gregification/assembler/green_fertilizer_x4`)
         .itemInputs(Clostridium, '#forge:dusts/phosphorus_pentoxide', '#forge:dusts/calcium_nitrate', '#forge:dusts/thallium_sulfate', '#forge:dusts/potassium_carbonate')
-        .itemOutputs('4x farmingforblockheads:red_fertilizer')
+        .itemOutputs('4x farmingforblockheads:green_fertilizer')
         .inputFluids('#forge:liquid_fertilizer 1000')
         .duration(120)
         .circuit(3)
@@ -224,7 +224,7 @@ ServerEvents.recipes(allthemods => {
     // better recipe
     allthemods.recipes.gtceu.mixer(`allthemods:gregification/assembler/green_fertilizer_16x`)
         .itemInputs(Clostridium, '#forge:dusts/phosphorus_pentoxide', '#forge:dusts/calcium_nitrate', '#forge:dusts/thallium_sulfate', '#forge:dusts/potash', '#forge:dusts/iron_hydroxide')
-        .itemOutputs('16x farmingforblockheads:red_fertilizer')
+        .itemOutputs('16x farmingforblockheads:green_fertilizer')
         .inputFluids('#forge:liquid_fertilizer 1000')
         .duration(120)
         .circuit(4)
