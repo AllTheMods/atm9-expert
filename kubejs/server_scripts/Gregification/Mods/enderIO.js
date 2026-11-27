@@ -42,7 +42,7 @@ ServerEvents.recipes(allthemods => {
          'RGR',
          'PCP'],
         {P: '#forge:plates/vibrant_alloy',
-         C: 'enderio:octadic_capacitor',
+         C: 'enderio:double_layer_capacitor',
          G: 'enderio:grains_of_infinity',
          R: 'gtceu:ram_chip'
         }
